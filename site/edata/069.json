@@ -1,0 +1,70 @@
+{
+ "num": 69,
+ "id": "연세대학교(자연계열)수시-5",
+ "univ": "연세대학교(자연계열) 수시",
+ "n": 5,
+ "title": "문제 5",
+ "head": "아래의 물음에 답하시오. (단, $e>2$ 이다.)",
+ "points": null,
+ "minutes": 18,
+ "info": {
+  "concepts": "집합, 조합, 확률분포, 이산확률변수의 평균, 이항정리, 시행, 이산확률변수, 기댓값, $lim_{n``->``inf} a_n`$ , $e`$ , 판별식, 미분계수, 정적분, 이계도함수, 쌍곡선, 매개변수, 함수의 몫의 미분법, 점과 직선 사이의 거리, 사잇값 정리, 몫의 미분법, 함수의 최대와 최소",
+  "min": "수능 최저학력기준: 적용하지 않음",
+  "field": "수학(5문항, 8문제)",
+  "time": "90분"
+ },
+ "pre": [],
+ "passage": [],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[문제 5-1]",
+   "points": 11,
+   "text": [
+    "실수 전체의 집합에서 정의된 함수 $f(x)=\\frac{\\left(e^x+x \\right)\\left(1-x e^x \\right)}{\\left(e^2 x+1 \\right)\\left(x^2+1 \\right)}$ 의 최솟값을 구하시오. [11점]"
+   ],
+   "answer": [
+    "$\\left(e^x+x \\right)\\left(1-x e^x \\right)\\ne 0$ 인 경우",
+    "$\\left(e^2 x+1 \\right)\\left(x^2+1 \\right)$ $=x^2 e^2 x+e^2 x+x^2+1$ $=\\left(e^x+x \\right)^2+\\left(1-x e^x \\right)^2>0$ 이고",
+    "$\\left(e^x+x \\right)\\left(1-x e^x \\right)=0$ 인 경우 $f(x)=0$ 이므로,",
+    "함수 $f(x)$ 는 $\\left(e^x+x \\right)\\left(1-x e^x \\right)<0$ 일 때 최솟값을 갖는다.",
+    "이때, $-\\frac{1}{f}(x)=\\frac{e^x+x}{x e^x-1}+\\frac{x e^x-1}{e^x+x}$ 이고, $\\frac{e^x+x}{x e^x-1}>0$ 이다.",
+    "한편, $h(x)=\\frac{e^x+x}{x e^x-1}$ , $p(t)=t+\\frac{1}{t}$ ( $t>0$ )이라 하면 $-\\frac{1}{f(x)}=p \\left(h(x)\\right)$",
+    "$p'(t)=\\frac{t^2-1}{t^2}$ 이므로 함수 $p(t)$ 는 구간 $(0,\\infty)$ 에서 $t=1$ 일 때 최솟값 $2$ 를 갖는다.",
+    "따라서, $h(\\alpha)=1$ 인 실수 $\\alpha$ 가 존재한다면 함수 $f(x)$ 는 $x=\\alpha$ 에서 최솟값 $-\\frac{1}{2}$ 을 갖는다.",
+    "한편, 방정식 $h(x)=1$ 에서 $\\frac{e^x+x}{x e^x-1}=1$ , $x e^x-e^x-x-1=0$ 이므로",
+    "$q(x)=x e^x-e^x-x-1$ 이라 하면 $q(x)$ 는 연속함수이고 $q(1)=-2<0$ , $q(2)=e^2-3>0$ 이므로 사잇값 정리에 의하여 $q(\\alpha)=0$ , 즉 $h(\\alpha)=-1$ 인 $\\alpha$ 가 열린구간 $(1,2)$ 에 적어도 하나 존재한다.",
+    "따라서 $x=\\alpha$ 일 때 $f(x)$ 는 최솟값 $-\\frac{1}{2}$ 을 갖는다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "[문제 5-2]",
+   "points": 9,
+   "text": [
+    "실수 전체의 집합에서 정의된 함수 $f(x)=\\frac{\\left(2 e^x+\\cos x \\right)\\left(2-e^x \\cos x \\right)}{\\left(e^2 x+1 \\right)\\left(\\cos^2 x+4 \\right)}$ 의 최댓값을 구하시오. [9점]"
+   ],
+   "answer": [
+    "$\\left(2 e^x+\\cos x \\right)\\left(2-e^x \\cos x \\right)\\ne 0$ 인 경우",
+    "$\\left(e^2 x+1 \\right)\\left(\\cos^2 x+4 \\right)$ $=e^2 x \\cos^2 x+4 e^2 x+\\cos^2 x+4$ $=\\left(2 e^x+\\cos x \\right)^2+\\left(2-e^x \\cos x \\right)^2>0$ 이고",
+    "$\\left(2 e^x+\\cos x \\right)\\left(2-e^x \\cos x \\right)=0$ 인 경우 $f(x)=0$ 이므로",
+    "함수 $f(x)$ 는 $\\left(2 e^x+\\cos x \\right)\\left(2-e^x \\cos x \\right)>0$ 일 때 최댓값을 갖는다.",
+    "이때, $\\frac{1}{f(x)}=\\frac{2 e^x+\\cos x}{2-e^x \\cos x}+\\frac{2-e^x \\cos x}{2 e^x+\\cos x}$ 이고 $\\frac{2 e^x+\\cos x}{2-e^x \\cos x}>0$ 이다.",
+    "한편, $h(x)=\\frac{2 e^x+\\cos x}{2-e^x \\cos x}$ , $p(t)=t+\\frac{1}{t}$ ( $t>0$ )이라 하면 $\\frac{1}{f(x)}=p \\left(h(x)\\right)$",
+    "$p'(t)=\\frac{t^2-1}{t^2}$ 이므로 함수 $p(t)$ 는 구간 $(0,\\infty)$ 에서 $t=1$ 일 때 최솟값 $2$ 를 갖는다.",
+    "따라서, $h(\\alpha)=1$ 인 실수 $\\alpha$ 가 존재한다면 함수 $f(x)$ 는 $x=\\alpha$ 에서 최댓값 $\\frac{1}{2}$ 을 갖는다.",
+    "한편, 방정식 $h(x)=1$ 에서 $\\frac{2 e^x+\\cos x}{2-e^x \\cos x}=1$ , $e^x \\cos x+2 e^x+\\cos x-2=0$ 이므로",
+    "$q(x)=e^x \\cos x+2 e^x+\\cos x-2$ 라 하면 $q(x)$ 는 연속함수이고",
+    "$q(0)=2>0$ , $q \\left(-\\frac{\\pi}{2}\\right)$ $=2 e^{-\\frac{\\pi}{2}}-2$ $=2 \\left(e^{-\\frac{\\pi}{2}}-e^0 \\right)<0$ 이므로,",
+    "사잇값 정리에 의하여 $q(\\alpha)=0$ , 즉 $h(\\alpha)=1$ 인 $\\alpha$ 가 열린구간 $\\left(-\\frac{\\pi}{2},0 \\right)$ 에 적어도 하나 존재한다.",
+    "따라서 $x=\\alpha$ 일 때 $f(x)$ 는 최댓값 $\\frac{1}{2}$ 을 갖는다.",
+    "이화여자대학교 홈페이지"
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "집합"
+}

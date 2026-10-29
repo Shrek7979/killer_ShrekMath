@@ -1,0 +1,114 @@
+{
+ "num": 64,
+ "id": "성균관대학교(수리형3)수시-3",
+ "univ": "성균관대학교(수리형3) 수시",
+ "n": 3,
+ "title": "문제 3 · 40점",
+ "head": "다음 <제시문 1> ～ <제시문 3>을 읽고 [문제 3-ⅰ]∼[문제 3-ⅲ]을 문항별로 풀이와 함께 답하시오. (40점)",
+ "points": 40,
+ "minutes": 33,
+ "info": {
+  "concepts": "함수의 극대와 극소, 미분가능, 함수의 연속, 사인법칙, 코사인법칙, 이차부등식, 함수의 극한, 도함수, 직선의 방정식, 정적분",
+  "min": "- 자연과학계열, 전자전기공학부, 공학계열, 건설환경공학부 : 국어, 수학, 영어, 탐구, 탐구 5개 영역/과목 중 3개 등급합 6등급 이내",
+  "field": "- 반도체시스템공학, 소프트웨어학, 글로벌바이오메디컬공학, 지능형소프트웨어학, 약학, 반도체융합공학, 에너지학 : 국어, 수학, 영어, 탐구, 탐구 5개 영역/과목 중 3개 등급합 5등급 이내 - 의예 : 국어, 수학, 영어, 탐구(2개과목 평균) 4개 영역 중 3개 등급합 4등급 이내 수학(3문항, 9문제)",
+  "time": "100분"
+ },
+ "pre": [],
+ "passage": [
+  "<제시문 1>",
+  "함수 $f \\left(x \\right)$ 에서 $x$ 의 값이 $a$ 보다 크면서 $a$ 에 한없이 가까워질 때, $f \\left(x \\right)$ 의 값이 일정한 값 $L$ 에 한없이 가까워지는 것을 기호로 $\\lim_{x \\to a+}{f \\left(x \\right)=L}$ 과 같이 나타내고, $L$ 을 함수 $f \\left(x \\right)$ 의 $x=a$ 에서의 우극한이라고 한다.",
+  "또한, 함수 $f \\left(x \\right)$ 에서 $x$ 의 값이 $a$ 보다 작으면서 $a$ 에 한없이 가까워질 때, $f \\left(x \\right)$ 의 값이 일정한 값 $M$ 에 한없이 가까워지는 것을 기호로 $\\lim_{x \\to a-}{f \\left(x \\right)=M}$ 과 같이 나타내고, $M$ 을 함수 $f \\left(x \\right)$ 의 $x=a$ 에서의 좌극한이라고 한다.",
+  "<제시문 2>",
+  "주어진 실수 $x$ 에 대하여, 집합 $\\left\\{1,2,3 \\right\\}$ 에서 서로 다른 세 수 $a$ , $b$ , $c$ 를 선택하여 $\\left(x^{2}-a x+b \\right)\\left(x-c \\right)$ 의 값이 최대가 되도록 하고 이 최댓값을 $g \\left(x \\right)$ 로 정의한다. 이 경우 함수 $g \\left(x \\right)$ 는 모든 실수 $x$ 에서 연속이 된다.",
+  "예를 들어, $x=1$ 이면 $\\left(1-a+b \\right)\\left(1-c \\right)$ 의 값은 $\\left(a,b,c \\right)=\\left(3,1,2 \\right)$ 일 경우 최대이고 $g \\left(1 \\right)=1$ 이다. $x=0$ 이면 $b \\left(-c \\right)$ 의 값은 $\\left(a,b,c \\right)=\\left(3,1,2 \\right)$ 또는 $\\left(a,b,c \\right)=\\left(3,2,1 \\right)$ 일 경우 최대이고 $g \\left(0 \\right)=-2$ 이다.",
+  "<제시문 3>",
+  "실수 $r$ 에 대하여 좌표평면 위의 정사각형 $\\mathrm{ABCD}$ 의 한변의 길이는 $12$ 이고 네 꼭짓점은 다음과 같다.",
+  "$\\mathrm{A}\\left(-2,r \\right)$ , $\\mathrm{B}\\left(-2,r+12 \\right)$ , $\\mathrm{C}\\left(-14,r+12 \\right)$ , $\\mathrm{D}\\left(-14,r \\right)$"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[문제 3-ⅰ]",
+   "points": null,
+   "text": [
+    "<제시문 2>의 함수 $g \\left(x \\right)$ 에 대하여 정적분 $\\int_{-1}^{1}{g \\left(x \\right)dx}$ 의 값을 구하고 그 이유를 논하시오."
+   ],
+   "answer": [
+    "실수 $x$ 와 $b>0$ 이 고정되었을 경우",
+    "$x^{3}-a x^{2}-c x^{2}+b x+a c x-b c=\\left(x^{3}+b x+a c x-\\left(a+c \\right)x^{2}\\right)-b c$",
+    "가 최댓값을 가지려면, $x^{3}+b x+a c x-\\left(a+c \\right)x^{2}$ 가 고정된 값이므로 $a>c$ 가 성립하여야 한다. 이 경우 $\\left(a,b,c \\right)$ 는 $\\left(3,1,2 \\right)$ , $\\left(3,2,1 \\right)$ , $\\left(2,3,1 \\right)$ 세 가지 중 하나이다.",
+    "따라서 $x$ 가 주어졌을 때,",
+    "$P \\left(x \\right)=\\left(x^{2}-3 x+1 \\right)\\left(x-2 \\right)=x^{3}-5 x^{2}+7 x-2$",
+    "$Q \\left(x \\right)=\\left(x^{2}-3 x+2 \\right)\\left(x-1 \\right)=x^{3}-4 x^{2}+5 x-2$",
+    "$R \\left(x \\right)=\\left(x^{2}-2 x+3 \\right)\\left(x-1 \\right)=x^{3}-3 x^{2}+5 x-3$",
+    "중 가장 큰 값이 $g \\left(x \\right)$ 가 된다. 세 부등식",
+    "$P \\left(x \\right)>Q \\left(x \\right)$ , $Q \\left(x \\right)>R \\left(x \\right)$ , $P \\left(x \\right)>R \\left(x \\right)$",
+    "은 모두 이차부등식이 되며, 이를 풀면 각각",
+    "$0<x<2$ , $-1<x<1$ , $\\frac{1-\\sqrt{3}}{2}<x<\\frac{1+\\sqrt{3}}{2}$",
+    "이 된다. 따라서 $P \\left(x \\right)$ 의 값이 가장 큰 경우는 $0<x<\\frac{1+\\sqrt{3}}{2}$ 이고, $Q \\left(x \\right)$ 의 값이 가장 큰 경우는 $-1<x<0$ 이고, $R \\left(x \\right)$ 의 값이 가장 큰 경우는 $x<-1$ 또는 $x>\\frac{1+\\sqrt{3}}{2}$ 이다. 함수 $g \\left(x \\right)$ 가 모든 실수에서 연속임을 고려하여 종합하면",
+    "$g \\left(x \\right)={\\begin{cases}x^{3}-3 x^{2}+5 x-3&\\left(x \\le-1 \\right)\\\\ x^{3}-4 x^{2}+5 x-2&\\left(-1<x \\le 0 \\right)\\\\ x^{3}-5 x^{2}+7 x-2&\\left(0<x \\le \\frac{1+\\sqrt{3}}{2}\\right)\\\\ x^{3}-3 x^{2}+5 x-3&\\left(x>\\frac{1+\\sqrt{3}}{2}\\right)\\end{cases}}$",
+    "이다. 그러므로",
+    "$\\int_{-1}^{1}{g \\left(x \\right)dx=\\int_{-1}^{0}{g \\left(x \\right)dx+\\int_{0}^{1}{g \\left(x \\right)dx=\\int_{-1}^{0}{\\left(x^{3}-4 x^{2}+5 x-2 \\right)dx+\\int_{0}^{1}{\\left(x^{3}-5 x^{2}+7 x-2 \\right)dx=-6}}}}}$",
+    "이다."
+   ],
+   "rubric": [
+    "(10점) 이차부등식을 이용하여 함숫값의 크기를 비교하고, 관련 정적분의 값을 구할 수 있다."
+   ]
+  },
+  {
+   "k": "2",
+   "label": "[문제 3-ⅱ]",
+   "points": null,
+   "text": [
+    "<제시문 2>의 함수 $g \\left(x \\right)$ 가 열린구간 $\\left(x_{0}-\\frac{1}{2},x_{0}\\right)$ 와 $\\left(x_{0},x_{0}+\\frac{1}{2}\\right)$ 에서 미분가능하도록 하는 실수 $x_{0}$ 에 대하여",
+    "$\\left|\\lim_{x \\to x_{0}-}{g' \\left(x \\right)-\\lim_{x \\to x_{0}+}{g' \\left(x \\right)}}\\right|$",
+    "이 될 수 있는 값을 모두 구하고 그 이유를 논하시오."
+   ],
+   "answer": [
+    "[문제 3-ⅰ]의 함수 $g \\left(x \\right)$ 에 대하여",
+    "$g' \\left(x \\right)={\\begin{cases}3 x^{2}-6 x+5&\\left(x<-1 \\right)\\\\ 3 x^{2}-8 x+5&\\left(-1<x<0 \\right)\\\\ 3 x^{2}-10 x+7&\\left(0<x<\\frac{1+\\sqrt{3}}{2}\\right)\\\\ 3 x^{2}-6 x+5&\\left(x>\\frac{1+\\sqrt{3}}{2}\\right)\\end{cases}}$",
+    "이 성립한다. 따라서 $x_{0}$ 가 $-1$ , $0$ , $\\frac{1+\\sqrt{3}}{2}$ 이외의 값일 경우에는",
+    "$\\left|\\lim_{x \\to x_{0}-}{g' \\left(x \\right)-\\lim_{x \\to x_{0}+}{g' \\left(x \\right)}}\\right|=\\left|g' \\left(x_{0}\\right)-g' \\left(x_{0}\\right)\\right|=0$",
+    "이 된다. 또한",
+    "$\\left|\\lim_{x \\rightarrow-1-}{g' \\left(x \\right)-\\lim_{x \\rightarrow-1+}{g' \\left(x \\right)}}\\right|=2$",
+    "$\\left|\\lim_{x \\to 0-}{g' \\left(x \\right)-\\lim_{x \\to 0+}{g' \\left(x \\right)}}\\right|=2$",
+    "$\\left|\\lim_{x \\to \\frac{1+\\sqrt{3}}{2}-}{g' \\left(x \\right)-\\lim_{x \\to \\frac{1+\\sqrt{3}}{2}+}{g' \\left(x \\right)}}\\right|=2 \\sqrt{3}$",
+    "이므로 답은 $0$ , $2$ , $2 \\sqrt{3}$ 이다."
+   ],
+   "rubric": [
+    "(10점) 이차부등식을 이용하여 함숫값의 크기를 비교하고, 우극한과 좌극한의 정의를 정확히 이해하고 있다."
+   ]
+  },
+  {
+   "k": "3",
+   "label": "[문제 3-ⅲ]",
+   "points": null,
+   "text": [
+    "점 $\\mathrm{Q}\\left(x_{1},y_{1}\\right)$ 은 <제시문 2>의 함수 $y=g \\left(x \\right)$ 의 그래프 위를 움직이고, 점 $\\mathrm{R}\\left(x_{2},y_{2}\\right)$ 는 <제시문 3>의 $r$ 에 대하여 정사각형 $\\mathrm{ABCD}$ 의 네 변 위를 움직인다. 아래의 두 조건 (1), (2)를 모두 만족하는 두 점 $\\mathrm{Q}\\left(x_{1},y_{1}\\right)$ 과 $\\mathrm{R}\\left(x_{2},y_{2}\\right)$ 가 존재하면 정사각형 $\\mathrm{ABCD}$ 의 네 변 위에서 $\\mathrm{R}\\left(x_{2},y_{2}\\right)$ 가 놓일 수 있는 부분의 길이를 $k \\left(r \\right)$ 이라 하고, 그러한 점들이 존재하지 않으면 $k \\left(r \\right)=0$ 으로 정의한다.",
+    "(1) $0 \\le x_{1}\\le 1$",
+    "(2) $y_{1}\\left(x_{2}-1 \\right)+y_{2}\\left(x_{1}+1 \\right)=2 \\left(x_{1}+x_{2}\\right)$",
+    "이때 $k \\left(r \\right)$ 의 최댓값을 구하고 그 이유를 논하시오."
+   ],
+   "answer": [
+    "점 $\\mathrm{Q}\\left(x_{1},y_{1}\\right)$ 가 $0 \\le x_{1}\\le 1$ 인 경우만 고려되고, [문제 3-ⅰ]에서 $0 \\le x \\le 1$ 인 경우",
+    "$g \\left(x \\right)=\\left(x^{2}-3 x+1 \\right)\\left(x-2 \\right)=x^{3}-5 x^{2}+7 x-2$",
+    "임을 확인하였다. 정사각형 $\\mathrm{ABCD}$ 를 $y$ 축에 대칭시킨 정사각형 $\\mathrm{A'B'C'D'}$ 를 고려하자. 그러면 점 $\\mathrm{R}\\left(x_{2},y_{2}\\right)$ 를 $y$ 축에 대칭한 점 $\\mathrm{R'}\\left(-x_{2},y_{2}\\right)$ 는 정사각형 $\\mathrm{A'B'C'D'}$ 의 네 변 위에 놓이게 된다. 주어진 조건 $y_{1}\\left(x_{2}-1 \\right)+y_{2}\\left(x_{1}+1 \\right)=2 \\left(x_{1}+x_{2}\\right)$ 는 $\\frac{y_{2}-2}{-x_{2}+1}=\\frac{y_{1}-2}{x_{1}+1}$ 이므로, 세 점 $\\mathrm{Q}\\left(x_{1},y_{1}\\right)$ , $\\mathrm{R}' \\left(-x_{2},y_{2}\\right)$ , $\\mathrm{S}\\left(-1,2 \\right)$ 가 한 직선 위에 놓이게 됨을 의미한다. 즉,",
+    "점 $\\mathrm{Q}\\left(x_{1},y_{1}\\right)$ 이 $y=g \\left(x \\right)$ $\\left(0 \\le x \\le 1 \\right)$ 의 그래프 위를 움직일 때, 두 점 $\\mathrm{Q}\\left(x_{1},y_{1}\\right)$ 과 $\\mathrm{S}\\left(-1,2 \\right)$ 를 지나는 직선 $l$ 이 정사각형 $\\mathrm{A'B'C'D'}$ 과 만날 때의 교점이 $\\mathrm{R'}\\left(-x_{2},y_{2}\\right)$ 가 된다. 따라서 실수 $r$ 이 고정되었을 때 모든 $\\mathrm{Q}\\left(x_{1},y_{1}\\right)$ 에 대하여 직선 $l$ 과 정사각형 $\\mathrm{A'B'C'D'}$ 이 만나지 않을 경우 $k \\left(r \\right)=0$ 이고, 그렇지 않을 경우 정사각형 $\\mathrm{A'B'C'D'}$ 의 네 변 위에서 점 $\\mathrm{R'}\\left(-x_{2},y_{2}\\right)$ 가 놓일 수 있는 부분의 길이가 $k(r)$ 이 된다. 아래 그림에서 정사각형 $\\mathrm{A'B'C'D'}$ 위의 빨간색 선이 $\\mathrm{R'}\\left(-x_{2},y_{2}\\right)$ 이 놓일 수 있는 부분이므로, 빨간색 선의 길이가 $k \\left(r \\right)$ 이 된다.",
+    "[그림]",
+    "$r$ 의 값에 따라 정사각형 $\\mathrm{A'B'C'D'}$ 는 두 직선 $x=2$ 와 $x=14$ 사이에서 위 아래로 움직일 수 있으므로 $k \\left(r \\right)$ 이 최댓값이 되기 위해선",
+    "1. 점 $\\mathrm{A'}$ 이 직선 $y=-4 x-2$ 보다 위에 위치하면 안되고",
+    "2. 점 $\\mathrm{C'}$ 이 직선 $y=-\\frac{1}{2}x+\\frac{3}{2}$ 보다 밑에 위치하면 안된다.",
+    "이를 고려하면 $r \\le-10$ 과 $r+12 \\ge-\\frac{11}{2}$ 이 성립해야 하고, 따라서 $-\\frac{35}{2}\\le r \\le-10$ 범위에서 $k \\left(r \\right)$ 의 최댓값이 가능하다. 이때",
+    "$k \\left(r \\right)=\\left(14+\\frac{r+2}{4}\\right)+\\left(-\\frac{11}{2}-r \\right)+\\left(-2 r-23 \\right)+\\left(r+22 \\right)=-\\frac{7}{4}r+8$",
+    "이므로 $-\\frac{35}{2}\\le r \\le-10$ 범위에서 $k \\left(-\\frac{35}{2}\\right)=\\frac{245}{8}+8=\\frac{309}{8}$ 가 최댓값이 된다."
+   ],
+   "rubric": [
+    "(20점) 주어진 식의 기하학적 의미를 올바르게 파악하고, 이를 활용하여 문제를 올바르게 해결할 수 있다.",
+    "연세대학교 홈페이지"
+   ]
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "함수의 극대와 극소"
+}

@@ -1,0 +1,45 @@
+{
+ "num": 66,
+ "id": "연세대학교(자연계열)수시-2",
+ "univ": "연세대학교(자연계열) 수시",
+ "n": 2,
+ "title": "문제 2 · 20점",
+ "head": "앞면에는 $1$ 부터 $n$ 까지의 자연수가 하나씩 적혀 있고 뒷면에는 모두 $0$ 이 하나씩 적혀있는 $n$ 장의 카드가 있다. 이 $n$ 장의 카드를 사용하여 다음 시행을 한다.처음에 이 $n$ 장의 카드는 모두 $0$ 이 보이도록 놓여 있을 때, 이 시행을 $n$ 번 반복한 후 $n$ 장의 카드에 보이는 모든 수의 합의 기댓값을 $a_n$ 이라 하자. $\\lim_{n \\to \\infty}\\frac{a_n}{n^2}$ 의 값을 구하시오. (단, 시행을 반복할 때 같은 카드가 여러 번 뒤집힐 수 있고, $\\lim_{n \\to \\infty}\\left(1+\\frac{1}{n}\\right)^n=e$ 이다.) [20점]",
+ "points": 20,
+ "minutes": 18,
+ "info": {
+  "concepts": "집합, 조합, 확률분포, 이산확률변수의 평균, 이항정리, 시행, 이산확률변수, 기댓값, $lim_{n``->``inf} a_n`$ , $e`$ , 판별식, 미분계수, 정적분, 이계도함수, 쌍곡선, 매개변수, 함수의 몫의 미분법, 점과 직선 사이의 거리, 사잇값 정리, 몫의 미분법, 함수의 최대와 최소",
+  "min": "수능 최저학력기준: 적용하지 않음",
+  "field": "수학(5문항, 8문제)",
+  "time": "90분"
+ },
+ "pre": [],
+ "passage": [
+  "(Ⅰ) $f(x)>0$ 인 실수 $x$ 가 존재한다.",
+  "(Ⅱ) $1 \\le i \\le 6$ 인 모든 자연수 $i$ 와 $s<t$ 인 모든 실수 $s$ , $t$ 에 대하여 $\\int_s^t g_i(x)dx \\le \\int_s^t f(x)dx$ 가 성립한다."
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[답안]",
+   "points": 20,
+   "text": [],
+   "answer": [
+    "어떤 자연수 $a$ ( $1 \\le a \\le n$ )에 대하여 $n$ 번의 시행 후 자연수 $a$ 가 보이게 뒤집어져 있을 확률을 $\\ P(a)$ 라 하면",
+    "$\\ P(a)$ $=_n \\ C_1 \\left(\\frac{1}{n}\\right)^1 \\left(1-\\frac{1}{n}\\right)^n-1+_n \\ C_3 \\left(\\frac{1}{n}\\right)^3 \\left(1-\\frac{1}{n}\\right)^n-3+_n \\ C_5 \\left(\\frac{1}{n}\\right)^5 \\left(1-\\frac{1}{n}\\right)^n-5+$ $\\cdots+_n \\ C_{m}\\left(\\frac{1}{n}\\right)^m \\left(1-\\frac{1}{n}\\right)^n-m$ (단, $m$ 은 $n$ 이하의 자연수 중 최대인 홀수)",
+    "이고, 이항정리에 의하여",
+    "$\\ P(a)$ $=\\frac{1}{2}\\left\\{\\sum_k=0^n_n \\ C_{k}\\left(\\frac{1}{n}\\right)^k \\left(1-\\frac{1}{n}\\right)^n-k-\\sum_k=0^n(-1)^k_n \\ C_{k}\\left(\\frac{1}{n}\\right)^k \\left(1-\\frac{1}{n}\\right)^n-k \\right\\}$",
+    "한편, $\\sum_k=0^n_n \\ C_{k}\\left(\\frac{1}{n}\\right)^k \\left(1-\\frac{1}{n}\\right)^n-k$ $=\\left(\\frac{1}{n}+1-\\frac{1}{n}\\right)^n=1$ 이고",
+    "$\\sum_k=0^n(-1)^k_n \\ C_{k}\\left(\\frac{1}{n}\\right)^k \\left(1-\\frac{1}{n}\\right)^n-k$ $=\\sum_k=0^n_n \\ C_{k}\\left(-\\frac{1}{n}\\right)^k \\left(1-\\frac{1}{n}\\right)^n-k$ $=\\left(-\\frac{1}{n}+1-\\frac{1}{n}\\right)^n$ $=\\left(1-\\frac{2}{n}\\right)^n$",
+    "이므로 $\\ P(a)$ $=\\frac{1-\\left(1-\\frac{2}{n}\\right)^n}{2}$ 이다.",
+    "따라서",
+    "$a_n$ $=\\sum_a=1^n \\left\\{a \\times \\frac{1-\\left(1-\\frac{2}{n}\\right)^n}{2}\\right\\}$ $=\\frac{n(n+1)}{2}\\times \\frac{1-\\left(1-\\frac{2}{n}\\right)^n}{2}$",
+    "이므로 $\\lim_{n \\to \\infty}\\frac{a_n}{n^2}$ $=\\lim_{n \\to \\infty}\\left\\{\\frac{n(n+1)}{2 n^2}\\times \\frac{1-\\left(1-\\frac{2}{n}\\right)^n}{2}\\right\\}$ $=\\frac{e^2-1}{4 e^2}$"
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "집합"
+}

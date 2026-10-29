@@ -1,0 +1,156 @@
+{
+ "num": 63,
+ "id": "2cha-29",
+ "subject": "미적분Ⅱ",
+ "topic": "등차수열과 각의 급수",
+ "type": "29번형",
+ "typeDesc": "미적분Ⅱ · 수능 29번형 자리의 고난도",
+ "stars": 4,
+ "standards": [
+  "[12미적Ⅱ-01-04] 급수의 수렴과 발산",
+  "[12미적Ⅱ-01-02] 수열의 극한값",
+  "[12미적Ⅱ-02-02] 삼각함수의 덧셈정리"
+ ],
+ "source": "ShrekMath 창작 · 수능 29번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 6,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "첫째항과 공차가 모두 양수인 등차수열 $\\left\\{a_{n}\\right\\}$ 과 자연수 $n$ 에 대하여 좌표평면 위의 점 $\\mathrm{A}_{n}(1,\\,a_{n})$ 이 있다.",
+    "$\\angle \\mathrm{A}_{n}\\mathrm{O}\\mathrm{A}_{n+1}=\\theta_{n}$ 이라 할 때, 다음 조건을 만족시킨다."
+   ]
+  },
+  {
+   "t": "box",
+   "items": [
+    "(가) $\\tan \\theta_{1}=\\frac{1}{3}$",
+    "(나) 급수 $\\sum_{n=1}^{\\infty}\\theta_{n}$ 의 합을 $\\alpha$ 라 할 때, $\\tan \\alpha=\\frac{1}{2}$ 이다."
+   ]
+  },
+  {
+   "t": "p",
+   "sents": [
+    "$\\lim_{n \\to \\infty}n^{2}\\tan \\theta_{n}=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오.",
+    "(단, $\\mathrm{O}$ 는 원점이고, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "첫째항과 공차가 모두 양수인 등차수열 $\\left\\{a_{n}\\right\\}$ 과 자연수 $n$ 에 대하여 좌표평면 위의 점 $\\mathrm{A}_{n}(1,\\,a_{n})$ 이 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "$\\angle \\mathrm{A}_{n}\\mathrm{O}\\mathrm{A}_{n+1}=\\theta_{n}$ 이라 할 때, 다음 조건을 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    1,
+    0
+   ],
+   "text": "(가) $\\tan \\theta_{1}=\\frac{1}{3}$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    1,
+    1
+   ],
+   "text": "(나) 급수 $\\sum_{n=1}^{\\infty}\\theta_{n}$ 의 합을 $\\alpha$ 라 할 때, $\\tan \\alpha=\\frac{1}{2}$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    2,
+    0
+   ],
+   "text": "$\\lim_{n \\to \\infty}n^{2}\\tan \\theta_{n}=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C6",
+   "at": [
+    2,
+    1
+   ],
+   "text": "(단, $\\mathrm{O}$ 는 원점이고, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "급수의 각 항이 각의 크기이고, 부분합이 도형에서 하나의 각으로 합쳐진다. 급수의 합 자체는 특수각이 아니지만 탄젠트 값은 정확히 결정된다."
+ ],
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "직선 $\\mathrm{OA}_{n}$ 이 $x$ 축의 양의 방향과 이루는 각의 크기를 $\\beta_{n}$ 이라 하면 $\\tan \\beta_{n}=a_{n}$ , $\\theta_{n}=\\beta_{n+1}-\\beta_{n}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "부분합은 $\\sum_{k=1}^{n}\\theta_{k}=\\beta_{n+1}-\\beta_{1}$ 이고, $n \\to \\infty$ 일 때 $\\beta_{n+1}\\to \\frac{\\pi}{2}$ 이므로 $\\alpha=\\frac{\\pi}{2}-\\beta_{1}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$\\tan \\alpha=\\frac{1}{\\tan \\beta_{1}}=\\frac{1}{a_{1}}=\\frac{1}{2}$ 에서 $a_{1}=2$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "공차를 $d$ 라 하면 덧셈정리에서 $\\tan \\theta_{n}=\\frac{a_{n+1}-a_{n}}{1+a_{n}a_{n+1}}=\\frac{d}{1+a_{n}a_{n+1}}$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "(가)에서 $\\frac{d}{1+2(2+d)}=\\frac{1}{3}$ 이므로 $d=5$ , $a_{n}=5 n-3$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "$\\lim_{n \\to \\infty}n^{2}\\tan \\theta_{n}=\\lim_{n \\to \\infty}\\frac{5 n^{2}}{1+(5 n-3)(5 n+2)}=\\frac{1}{5}$ 이므로 $p+q=6$",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

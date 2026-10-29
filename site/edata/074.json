@@ -1,0 +1,74 @@
+{
+ "num": 74,
+ "id": "인하대학교(의예과)모의-3",
+ "univ": "인하대학교(의예과) 모의",
+ "n": 3,
+ "title": "문제 3 · 35점",
+ "head": "[35점] 다음 제시문을 읽고 물음에 답하시오.",
+ "points": 35,
+ "minutes": 50,
+ "info": {
+  "concepts": "접선의 방정식, 함수의 극한, 함수의 연속",
+  "min": "의예과: 국어, 수학, 영어, 과학탐구(2과목) 중 3개 영역 각 1등급 이내",
+  "field": "※과학탐구는 2개 과목 평균(소수점 첫째자리에서 올림) 적용, 2개 과목 평균등급이 1등급이면 1등급, 2등급 이내이면 2등급으로 함. 수학(3문항, 10문제)",
+  "time": "100분"
+ },
+ "pre": [],
+ "passage": [
+  "(가) 함수 $f \\left(x \\right)$ 의 $x=a$ 에서의 우극한과 좌극한이 모두 존재하고, 그 값이 모두 $L$ 이 되면 $\\lim_{x \\to a}{f \\left(x \\right)=L}$ 이다. 즉, 다음이 성립한다.",
+  "$\\lim_{x \\to a}{f \\left(x \\right)=L}$ $\\leftrightarrow$ $\\lim_{x \\rightarrow a+}{f \\left(x \\right)=\\lim_{x \\to a-}{f \\left(x \\right)=}L}$",
+  "(나) 함수 $f \\left(x \\right)$ 가 실수 $a$ 에 대하여 다음 조건을 모두 만족시킬 때, 함수 $f \\left(x \\right)$ 는 $x=a$ 에서 연속이라고 한다.",
+  "(ⅰ) 함수 $f \\left(x \\right)$ 는 $x=a$ 에서 정의되어 있다.",
+  "(ⅱ) 극한값 $\\lim_{x \\to a}{f \\left(x \\right)}$ 가 존재한다.",
+  "(ⅲ) $\\lim_{x \\to a}{f \\left(x \\right)=f \\left(a \\right)}$",
+  "함수 $f \\left(x \\right)$ 가 $x=a$ 에서 연속이 아닐 때, 함수 $f \\left(x \\right)$ 는 $x=a$ 에서 불연속이라고 한다.",
+  "(※) 구간 $[0,\\infty)$ 에서 연속인 함수 $f \\left(x \\right)$ 는 모든 양의 정수 $n$ 에 대하여 닫힌구간 $\\left[n-1,n \\right]$ 에서 그래프가 선분이고, $f \\left(0 \\right)=0$ 을 만족한다. 임의의 음이 아닌 실수 $x$ 에 대하여 $0 \\le t \\le x$ 인 모든 실수 $t$ 에 대하여 $f \\left(t \\right)\\le f \\left(\\alpha \\right)$ 가 되도록 하는 $\\alpha$ 의 최댓값을 $g \\left(x \\right)$ 라고 하자. 또한 임의의 음이 아닌 실수 $x$ 에 대하여 $0 \\le t \\le x$ 인 모든 실수 $t$ 에 대하여 $f \\left(t \\right)\\ge f \\left(\\alpha \\right)$ 가 되도록 하는 $\\alpha$ 의 최댓값을 $h \\left(x \\right)$ 라고 하자. (단, $0 \\le \\alpha \\le x$ )",
+  "(3-1) $f \\left(x \\right)=2 x$ 일 때, 함수 $g \\left(x \\right)$ 와 $h \\left(x \\right)$ 의 값을 $x$ $\\left(x \\ge 0 \\right)$ 의 식으로 나타내시오. [6점]",
+  "(3-2) 모든 양의 정수 $n$ 에 대하여 $f \\left(n \\right)=\\left(-2 \\right)^{n-1}$ 일 때, 함수 $y=g \\left(x \\right)$ 가 $x=a$ 에서 불연속이 되도록 하는 양의 실수 $a$ 중에서 $a<10$ 인 것을 모두 구하시오. [13점]",
+  "(3-3) $n$ 이 $8$ 이하의 홀수일 때 열린구간 $\\left(n-1,n \\right)$ 에서 함수 $y=g \\left(x \\right)-h \\left(x \\right)$ 의 그래프는 기울기가 $0$ 인 직선의 일부이고, $n$ 이 $8$ 이하의 짝수일 때는 열린구간 $\\left(n-1,n \\right)$ 에서 $y=g \\left(x \\right)-h \\left(x \\right)$ 의 그래프는 기울기가 $\\left(-1 \\right)^{\\frac{n}{2}+1}$ 인 직선의 일부이다. $n$ 이 $1 \\le n \\le 8$ 인 정수일 때 각각의 구간 $\\left[n-1,n \\right]$ 에서 $f \\left(x \\right)$ 의 그래프는 기울기가 $0$ , $\\pm 1$ , $\\pm 2$ 중 하나인 선분이다.",
+  "(a) $\\int_{0}^{8}{f \\left(x \\right)dx}$ 의 값이 최대가 되도록 하는 함수 $y=f \\left(x \\right)$ $\\left(0 \\le x \\le 8 \\right)$ 의 그래프의 개형을 그리시오. [8점]",
+  "(b) $\\int_{0}^{8}{f \\left(x \\right)dx}$ 의 값이 최소가 되도록 하는 함수 $y=f \\left(x \\right)$ $\\left(0 \\le x \\le 8 \\right)$ 의 그래프의 개형을 그리시오. [8점]"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[답안]",
+   "points": 35,
+   "text": [],
+   "answer": [
+    "(3-1) (6점)",
+    "함수 $f \\left(x \\right)=2 x$ 는 정의역 $[0,\\infty)$ 에서 증가함수이다. $x \\ge 0$ 일 때, 구간 $\\left[0,x \\right]$ 에서 함수 $f \\left(t \\right)$ 의 최댓값은 $t=x$ 일 때 $2 x$ 이고, 최솟값은 $t=0$ 일 때 $0$ 이다. $g \\left(x \\right)$ 와 $h \\left(x \\right)$ 의 정의에 의하여 $g \\left(x \\right)=x$ , $h \\left(x \\right)=0$ 이다. 따라서 문제의 조건에서 $f(x)=0$ 이다."
+   ],
+   "rubric": [
+    "(3점) $g \\left(x \\right)$ 의 식을 구하면",
+    "(3점) $h \\left(x \\right)$ 의 식을 구하면 위 식들이 구해진 이유를 논리적으로 서술하지 않았을 때 최대 4점 감점",
+    "(3-2) (13점)",
+    "함수 $y=f \\left(x \\right)$ 의 그래프의 개형은 $0 \\le x \\le 10$ 일 때 대략 다음과 같다. ( $y$ 축 방향으로 축소해서 그림)",
+    "[그림] $n=1,2,3,4$ 에 대하여 구간 $\\left[2 n,2 n+1 \\right]$ 의 값 중 $f \\left(t \\right)=f \\left(2 n-1 \\right)=2^{2 \\left(n-1 \\right)}$ 을 만족하는 $t$ 의 값을 $a_{n}$ 이라고 하자. $x \\in \\left[2 n,2 n+1 \\right]$ 일 때 $f \\left(x \\right)=\\left(2^{2 n}+2^{2 n-1}\\right)\\left(x-2 n \\right)-2^{2 n-1}$ 이므로 $\\left(2^{2 n}+2^{2 n-1}\\right)\\left(a_{n}-2 n \\right)-2^{2 n-1}=2^{2 \\left(n-1 \\right)}$ . 즉 $\\left(4+2 \\right)\\left(a_{n}-2 n \\right)-2=1$ 이다. 따라서 $a_{n}=2 n+\\frac{1}{2}$ 이다. 이때 함수 $g \\left(x \\right)$ 는 구간별로 다음 식을 만족한다.",
+    "$0 \\le x \\le 1$ 일 때 $g \\left(x \\right)=x$ $2 n-1<x<a_{n}$ 일 때 $g \\left(x \\right)=2 n-1$ ( $n=1,2,3,4$ )",
+    "$a_{n}\\le x \\le 2 n+1$ 일 때 $g \\left(x \\right)=x$ ( $n=1,2,3,4$ )",
+    "$9<x \\le 10$ 이면 $g \\left(x \\right)=9$ 따라서 $g \\left(x \\right)$ 는 $x=a_{1},a_{2},a_{3},a_{4}$ 일 때 불연속이다. 그러므로 구하려는 $a$ 의 값은 $2.5$ , $4.5$ , $6.5$ , $8.5$ 이다.",
+    "(3점) $y=f \\left(x \\right)$ 의 그래프의 개형을 파악하면",
+    "(6점) 구간별로 $g \\left(x \\right)$ 의 식을 구하면",
+    "(4점) 불연속점을 모두 구하면",
+    "(3-3) (16점)",
+    "$0<x<1$ 일 때 $f \\left(x \\right)=0$ 이면 $g \\left(x \\right)=h \\left(x \\right)=x$ , $f \\left(x \\right)$ 가 구간 $\\left[0,1 \\right]$ 에서 증가이면 $g \\left(x \\right)=x$ , $h \\left(x \\right)=0$ 이고, $f \\left(x \\right)$ 가 구간 $\\left[0,1 \\right]$ 에서 감소이면 $g \\left(x \\right)=0$ , $h \\left(x \\right)=x$ 이다.",
+    "$1<x<2$ 일 때 $g \\left(x \\right)-h \\left(x \\right)$ 의 그래프는 기울기가 $1$ 인 직선의 일부이므로 $g \\left(x \\right)=x$ 이고 $h \\left(x \\right)$ 는 상수이므로 $f \\left(x \\right)$ 는 상수함수 또는 증가함수이다. 그런데, $f \\left(x \\right)$ 가 이 구간에서 상수라면 $f \\left(x \\right)=0$ 이 되어야 하므로 $h \\left(x \\right)=x$ 를 의미하고 이는 문제의 조건을 만족하지 않는다. 따라서 이 구간에서 $f \\left(x \\right)=x+b$ 또는 $f \\left(x \\right)=2 x+b$ 이다. (단, $b$ 는 상수)",
+    "$2<x<3$ 일 때 $g \\left(x \\right)$ 와 $h \\left(x \\right)$ 모두 상수이므로 함수 $f \\left(x \\right)$ 의 구간 $\\left(0,3 \\right)$ 에서의 최댓값과 최솟값은 모두 구간 $\\left[0,2 \\right]$ 의 값일 때 얻어진다.",
+    "$3<x<4$ 일 때 $g \\left(x \\right)$ 는 상수이고, $h \\left(x \\right)=x$ 이므로, $f \\left(3 \\right)$ 은 $f \\left(x \\right)$ 의 구간 $\\left[0,3 \\right]$ 에서의 최솟값이고, $f \\left(x \\right)$ 는 이 구간에서 감소함수이거나 상수함수이어야 한다.",
+    "$4<x<5$ 일 때 $g \\left(x \\right)$ 와 $h \\left(x \\right)$ 모두 상수이므로 함수 $f \\left(x \\right)$ 의 구간 $\\left(0,5 \\right)$ 에서의 최댓값과 최솟값은 모두 구간 $\\left[0,4 \\right]$ 의 값일 때 얻어진다.",
+    "$5<x<6$ 일 때 $g \\left(x \\right)=x$ 이고 $h \\left(x \\right)$ 는 상수이므로 $f \\left(x \\right)$ 는 상수함수 또는 증가함수이고, $f \\left(5 \\right)$ 는 함수 $f \\left(x \\right)$ 의 구간 $\\left[0,5 \\right]$ 에서의 최댓값이어야 한다.",
+    "$6<x<7$ 일 때 $g \\left(x \\right)$ 와 $h \\left(x \\right)$ 모두 상수이므로 함수 $f \\left(x \\right)$ 의 구간 $\\left(0,7 \\right)$ 에서의 최댓값과 최솟값은 모두 구간 $\\left[0,6 \\right]$ 의 값일 때 얻어진다.",
+    "$7<x<8$ 일 때 $g \\left(x \\right)$ 는 상수이고, $h \\left(x \\right)=x$ 이므로, $f \\left(7 \\right)$ 은 $f \\left(x \\right)$ 의 구간 $\\left[0,7 \\right]$ 에서의 최솟값이고, $f \\left(x \\right)$ 는 이 구간에서 감소함수이거나 상수함수이어야 한다.",
+    "이 사실들을 고려하면 함수 $y=f \\left(x \\right)$ $\\left(0 \\le x \\le 8 \\right)$ 의 그래프의 개형은 각각의 경우와 같다.",
+    "[그림]",
+    "(4점) 각각의 구간에서 $g \\left(x \\right)$ 와 $h \\left(x \\right)$ 가 만족해야 하는 성질을 파악하면",
+    "(4점) 각각의 구간에서 $f \\left(x \\right)$ 가 만족해야 하는 성질을 파악하면",
+    "(8점) (a), (b)의 각각의 경우 함수 $y=f \\left(x \\right)$ 의 그래프의 개형을 그리면 함수의 개형이 구간별로 틀린 부분이 있는 경우 구간 당 2점 감점 인하대학교 입학처 홈페이지"
+   ]
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "접선의 방정식"
+}

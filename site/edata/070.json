@@ -1,0 +1,59 @@
+{
+ "num": 70,
+ "id": "인하대학교(자연계열)모의-1",
+ "univ": "인하대학교(자연계열) 모의",
+ "n": 1,
+ "title": "문제 1 · 35점",
+ "head": "[35점] 다음 제시문을 읽고 물음에 답하시오.",
+ "points": 35,
+ "minutes": 33,
+ "info": {
+  "concepts": "미분계수, 합성함수의 미분법, 미분가능한 함수, 역함수의 미분법, 삼각함수의 도함수, 정적분의 치환적분법, 삼각함수의 덧셈정리",
+  "min": "없음",
+  "field": "수학(3문항, 9문제)",
+  "time": "100분"
+ },
+ "pre": [],
+ "passage": [
+  "(가) (접선의 방정식)",
+  "곡선 $y=f \\left(x \\right)$ 위의 점 $\\left(a,f \\left(a \\right)\\right)$ 에서의 접선의 방정식은",
+  "$y-f \\left(a \\right)=f' \\left(a \\right)\\left(x-a \\right)$",
+  "(나) (함수의 증가와 감소)",
+  "어떤 열린구간에서 미분가능할 때, 그 열린구간에 속하는 모든 $x$ 에 대하여",
+  "(1) $f' \\left(x \\right)>0$ 이면 $f \\left(x \\right)$ 는 그 열린구간에서 증가한다.",
+  "(2) $f' \\left(x \\right)<0$ 이면 $f \\left(x \\right)$ 는 그 열린구간에서 감소한다.",
+  "(※) 함수 $f \\left(x \\right)=x^{4}+17 x^{2}+3$ 이 있다.",
+  "(1-1) 곡선 $y=f \\left(x \\right)$ 위의 점 $\\left(3,f \\left(3 \\right)\\right)$ 에서의 접선에 평행하며 점 $\\left(0,3 \\right)$ 을 지나는 직선과 곡선 $y=f \\left(x \\right)$ 의 교점 중 $x$ 좌표가 $3$ 보다 큰 점의 $x$ 좌표를 구하시오. [10점]",
+  "(1-2) 양수 $t$ 에 대하여, 곡선 $y=f \\left(x \\right)$ 위의 점 $\\left(t,f \\left(t \\right)\\right)$ 에서의 접선에 평행하며 점 $\\left(0,3 \\right)$ 을 지나는 직선과 곡선 $y=f \\left(x \\right)$ 의 교점 중 $x$ 좌표가 $t$ 보다 큰 점의 $x$ 좌표를 $h \\left(t \\right)$ 라고 하면 함수 $h \\left(t \\right)$ 는 양의 실수의 집합에서 미분가능하다. 함수 $h \\left(t \\right)$ 가 열린구간 $\\left(0,\\infty \\right)$ 에서 증가함을 증명하시오. [10점]",
+  "(1-3) (1-2)에서 구한 함수 $s=h \\left(t \\right)$ 의 역함수 $t=h^{-1}\\left(s \\right)$ 도 미분가능하다. $a=h \\left(3 \\right)$ 일 때, 미분계수 $\\left(h^{-1}\\right)' \\left(a \\right)$ 를 구하시오. [15점]"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[답안]",
+   "points": 35,
+   "text": [],
+   "answer": [
+    "(1-1) (10점)",
+    "$f' \\left(x \\right)=4 x^{3}+34 x$ 이므로 $f' \\left(3 \\right)=4 \\times 3^{3}+34 \\times 3=210$ 이다. 따라서 직선의 방정식은 $y=210 x+3$ 이다. 교점을 구하는 방정식을 정리하면 $x^{4}+17 x^{2}-210 x=0$ 이고 구하고자 하는 $x$ 좌표는 $3$ 보다 크므로 $x^{3}+17 x-210=0$ 이다. 이때, $210$ 의 약수 중, $x=5$ 가 방정식을 만족하고 $x^{3}+17 x-210=\\left(x-5 \\right)\\left(x^{2}+5 x+42 \\right)$ 이므로 $x=5$ 가 구하고자 하는 교점의 $x$ 좌표이다."
+   ],
+   "rubric": [
+    "(5점) 직선의 방정식을 구하면",
+    "(5점) 교점의 $x$ 좌표를 구하면",
+    "(1-2) (10점)",
+    "$h \\left(t \\right)$ 에 대한 식은 $\\frac{f \\left(h \\left(t \\right)\\right)-f \\left(0 \\right)}{h \\left(t \\right)}=f' \\left(t \\right)$ 이다. 주어진 조건에 의하여 모든 양수 $t$ 에 대하여 $h \\left(t \\right)>t>0$ 이므로 $h \\left(t \\right)$ 는 항상 양수이고 $f \\left(h \\left(t \\right)\\right)-f \\left(0 \\right)=f' \\left(t \\right)h \\left(t \\right)$ 가 성립한다. 양변을 $t$ 에 대하여 미분하면 $h' \\left(t \\right)\\left(f' \\left(h \\left(t \\right)\\right)\\right)=f'' \\left(t \\right)h \\left(t \\right)+f' \\left(t \\right)h' \\left(t \\right)$ 이다. 모든 양수 $t$ 에 대해, $f'' \\left(t \\right)>0$ 이고 $h \\left(t \\right)>t$ 이므로 제시문 (나)에 의해 $f' \\left(h \\left(t \\right)\\right)-f' \\left(t \\right)>0$ 이고 $h' \\left(t \\right)=\\frac{f'' \\left(t \\right)h \\left(t \\right)}{f' \\left(h \\left(t \\right)\\right)-f' \\left(t \\right)}$ 로 표현할 수 있고 $h' \\left(t \\right)>0$ 임을 알 수 있다. 제시문 (나)에 의하여 $h \\left(t \\right)$ 는 구간 $\\left(0,\\infty \\right)$ 에서 증가한다.",
+    "(3점) $t$ 와 $h \\left(t \\right)$ 에 대한 식을 구하면",
+    "(4점) 합성함수의 미분법을 이용하여, $h' \\left(t \\right)\\left(f' \\left(h \\left(t \\right)\\right)\\right)=f'' \\left(t \\right)h \\left(t \\right)+f' \\left(t \\right)h' \\left(t \\right)$ 를 구하면",
+    "(3점) $h' \\left(t \\right)$ 의 부호를 정확히 판별하고 증가함을 보이면",
+    "(1-3) (15점)",
+    "(1-2)에서와 같이 $h \\left(t \\right)$ 에 대한 식은 $\\frac{f \\left(h \\left(t \\right)\\right)-f \\left(0 \\right)}{h \\left(t \\right)}=f' \\left(t \\right)$ 이다. 주어진 식에 대해서 $t=h^{-1}\\left(s \\right)$ 를 대입하면 $f \\left(s \\right)-f \\left(0 \\right)=s f' \\left(h^{-1}\\left(s \\right)\\right)$ 이 된다. $s$ 에 대하여 합성함수 미분을 적용하면 $f' \\left(s \\right)=f' \\left(h^{-1}\\left(s \\right)\\right)+s f'' \\left(h^{-1}\\left(s \\right)\\right)\\left(h^{-1}\\right)' \\left(s \\right)$ 가 된다. (1-1)에서 $s=5$ 임을 알 수 있고, $h^{-1}\\left(5 \\right)=3$ 이고, $f' \\left(x \\right)=4 x^{3}+34 x$ , $f'' \\left(x \\right)=12 x^{2}+34$ 이다. 이를 모두 대입하면 $\\left(h^{-1}\\right)' \\left(5 \\right)=\\frac{46}{71}$ 이다.",
+    "(4점) $s$ 와 $h^{-1}\\left(s \\right)$ 에 대한 식을 구하면",
+    "(8점) 합성함수의 미분법을 적용하여, $\\left(h^{-1}\\right)' \\left(s \\right)$ 를 구하면",
+    "(3점) 미분계수 $\\left(h^{-1}\\right)' \\left(5 \\right)$ 를 구하면"
+   ]
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "미분계수"
+}

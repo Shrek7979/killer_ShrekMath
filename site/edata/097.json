@@ -1,0 +1,79 @@
+{
+ "num": 97,
+ "id": "한양대학교(오후1)수시-2",
+ "univ": "한양대학교(오후1) 수시",
+ "n": 2,
+ "title": "문제 2 · 50점",
+ "head": "다음 제시문을 읽고 물음에 답하시오. (50점)",
+ "points": 50,
+ "minutes": 45,
+ "info": {
+  "concepts": "지수함수, 로그함수, 수열의 귀납적 정의, 삼각함수의 덧셈정리, 함수의 그래프, 함수의 증가와 감소, 극대와 극소, 여러 가지 함수의 적분, 공간도형과 공간좌표, 삼수선의 정리, 정사영",
+  "min": "- 전체(의예과 제외) : 국어, 수학, 영어, 탐구(상위 1개 과목) 중 3개 영역 등급합 7 이내",
+  "field": "- 의예과 : 국어, 수학, 영어, 탐구(2개과목 평균) 중 3개 영역 등급합 4이내 수학(2문항, 6문제)",
+  "time": "90분"
+ },
+ "pre": [],
+ "passage": [
+  "[그림]",
+  "<가> 오른쪽 그림과 같이 ${\\overline{A B}}={\\overline{A C}}=\\overline{A D}=a$ 이고",
+  "${\\overline{B C}}={\\overline{C D}}={\\overline{D B}}=6$ 인 사면체 $\\mathrm{ABCD}$ 가 있다.",
+  "점 $\\mathrm{A}$ 에서 삼각형 $\\mathrm{BCD}$ 에 내린 수선의 발을 $\\mathrm{O}$ ,",
+  "점 $\\mathrm{O}$ 를 지나고 직선 $\\mathrm{BC}$ 에 평행한 직선이",
+  "선분 $\\mathrm{CD}$ 와 만나는 점을 $\\mathrm{P}$ 라 하자. (단, $a>2 \\sqrt{3}$ )",
+  "< [그림] 나> 제시문 <가>에서 주어진 사면체 $\\mathrm{ABCD}$ 에 대하여 정육면체 $\\mathrm{EFGH}-I J K L$ 은",
+  "다음 조건을 만족시킨다.",
+  "(1) 정사각형 $\\mathrm{IJKL}$ 은 면 $\\mathrm{BCD}$ 에 포함되고,",
+  "직선 $\\mathrm{IJ}$ 와 직선 $\\mathrm{BC}$ 는 서로 평행하다.",
+  "(2) 선분 $\\mathrm{EF}$ 는 면 $\\mathrm{ABC}$ 에 포함된다.",
+  "(3) 점 $\\mathrm{G}$ 는 면 $\\mathrm{ACD}$ 에, 점 $\\mathrm{H}$ 는 면 $\\mathrm{ABD}$ 에 포함된다.",
+  "1. 네 삼각형 $\\mathrm{DOP},A O D,A O P,A P D$ 의 넓이의 곱을 $a$ 에 관한 식으로 표현하시오.",
+  "2. 평면 $\\mathrm{ACD}$ 가 평면 $\\mathrm{EFGH}$ 와 이루는 예각의 크기를 $\\theta_1$ , 평면 $\\mathrm{ACD}$ 가 평면 $\\mathrm{FJKG}$ 와 이루는 예각의 크기를 $\\theta_{2}$ , 평면 $\\mathrm{ACD}$ 가 평면 $\\mathrm{EIJF}$ 와 이루는 예각의 크기를 $\\theta_{3}$ 이라 하자. $\\theta_1$ , $\\theta_{2}$ , $\\theta_{3}$ 중 가장 작은 것을 $\\theta$ 라 할 때, $\\cos \\theta=\\frac{\\sqrt{6}}{3}$ 이 되도록 하는 $a$ 의 값을 모두 구하시오.",
+  "3. $a=4$ 일 때 정사각형 $\\mathrm{EIJF}$ 의 평면 $\\mathrm{ACD}$ 위로의 정사영의 넓이를 구하시오,"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[답안]",
+   "points": 50,
+   "text": [],
+   "answer": [
+    "1. (15점)",
+    "점 $\\mathrm{O}$ 에서 점 $\\mathrm{B},C,D$ 까지의 거리가 모두 같으므로 점 $\\mathrm{O}$ 는 삼각형 $\\mathrm{BCD}$ 의 외심이고, 삼각형 $\\mathrm{BCD}$ 는 정삼각형이므로 점 $\\mathrm{O}$ 는 삼각형 $\\mathrm{BCD}$ 의 무게중심이다. 점 $\\mathrm{D}$ 에서 선분 $\\mathrm{BC}$ 에 내린 수선의 발을 $\\mathrm{M}$ 이라 하면 직선 $\\mathrm{AO}$ 와 직선 $\\mathrm{DM}$ 은 서로 수직이고 점 $\\mathrm{O}$ 에서 만난다. 삼수선의 정리에 의해 직선 $\\mathrm{AM}$ 과 직선 $\\mathrm{BC}$ 는 서로 수직이다.",
+    "${\\overline{D M}}=\\sqrt{{\\overline{C D}}^{2}-{\\overline{M C}}^{2}}=3 \\sqrt{3}$ 이고, $\\overline{\\mathrm{DM}}:\\overline{D O}=\\overline{D C}:\\overline{D P}=\\overline{M C}:\\overline{O P}=3:2$ 이므로",
+    "$\\overline{\\mathrm{DO}}=2 \\sqrt{3},\\overline{D P}=4,\\overline{O P}=2$ 이다. 또한, $\\overline{\\mathrm{OM}}=\\overline{D M}-\\overline{D O}=\\sqrt{3}$ 이고",
+    "${\\overline{A M}}=\\sqrt{{\\overline{A C}}^{2}-{\\overline{M C}}^{2}}=\\sqrt{a^{2}-9}$ 이므로 ${\\overline{A O}}=\\sqrt{{\\overline{A M}}^{2}-{\\overline{O M}}^{2}}=\\sqrt{a^{2}-12}$ 이다.",
+    "따라서, $\\triangle D O P=\\frac{1}{2}\\times{\\overline{D O}}\\times{\\overline{O P}}=2 \\sqrt{3}$ ,",
+    "$\\triangle A O D=\\frac{1}{2}\\times{\\overline{D O}}\\times{\\overline{A O}}=\\sqrt{3(a^{2}-12)}$ ,",
+    "$\\triangle A O P=\\frac{1}{2}\\times{\\overline{A O}}\\times{\\overline{O P}}=\\sqrt{a^{2}-12}$ ,",
+    "$\\triangle A P D=\\frac{2}{3}\\triangle A C D=\\frac{2}{3}\\triangle A B C=\\frac{2}{3}\\times \\frac{1}{2}\\times{\\overline{A M}}\\times{\\overline{B C}}=2 \\sqrt{a^{2}-9}$",
+    "이고 삼각형 $\\mathrm{DOP},A O D,A O P,A P D$ 의 넓이의 곱은 $12(a^{2}-12)\\sqrt{a^{2}-9}$ 이다."
+   ],
+   "rubric": [
+    "(5점) 삼수선의 정리를 이용하여 주어진 공간도형을 이해하였는가?",
+    "(10점) 삼각형 $\\mathrm{DOP},A O D,A O P,A P D$ 의 넓이의 곱을 구하였는가?",
+    "2. (15점)",
+    "$\\theta_1$ , $\\theta_{2}$ , $\\theta_{3}$ 중 가장 작은 것이 $\\theta$ 이므로 $\\cos \\theta_{1}$ , $\\cos \\theta_{2}$ , $\\cos \\theta_{3}$ 중 가장 큰 것이다.",
+    "$\\cos \\theta_{1}=\\frac{\\triangle D O P}{\\triangle A P D}=\\frac{\\sqrt{3}}{\\sqrt{a^{2}-9}}$ , $\\cos \\theta_{2}=\\frac{\\triangle A O D}{\\triangle A P D}=\\frac{\\sqrt{3(a^{2}-12)}}{\\sqrt{a^{2}-9}}$ , $\\cos \\theta_{3}=\\frac{\\triangle A O P}{\\triangle A P D}=\\frac{\\sqrt{a^{2}-12}}{\\sqrt{a^{2}-9}}$ 이므로 $\\cos \\theta_{2}>\\cos \\theta_{3}$ 이다.",
+    "한편, $\\cos \\theta_{1}>\\cos \\theta_{2}$ ⇔ $2>\\sqrt{a^{2}-12}$ ⇔ $4>{a^{2}-12}$ ⇔ $a<4$ 이다.",
+    "(ⅰ) $2 \\sqrt{3}<a<4$ 일 때, $\\frac{\\sqrt{6}}{3}=\\cos \\theta_{1}=\\frac{\\sqrt{3}}{\\sqrt{a^{2}-9}}$ 이므로 $a^{2}-9=\\frac{9}{2}$ 이고 $a=\\frac{3 \\sqrt{6}}{2}$ 이다.",
+    "(ⅱ) $a \\ge 4$ 일 때, $\\frac{\\sqrt{6}}{3}=\\cos \\theta_{2}=\\frac{\\sqrt{3(a^{2}-12)}}{2 \\sqrt{a^{2}-9}}$ 이므로 $24(a^{2}-9)=27(a^{2}-12)$ 이고 $a=6$ 이다.",
+    "따라서 $a=\\frac{3 \\sqrt{6}}{2}$ 또는 $a=6$ 이다.",
+    "(5점) $\\cos \\theta_{1},\\cos \\theta_{2},\\cos \\theta_{3}$ 을 구하였는가?",
+    "(10점) $a$ 의 값을 모두 구하였는가?",
+    "3. (20점)",
+    "평면 $\\mathrm{EFGH}$ 가 선분 $\\mathrm{AB}$ , 선분 $\\mathrm{BC}$ , 선분 $\\mathrm{AD}$ 와 만나는 점을 각각 $\\mathrm{B}',C',D'$ 이라 하고, 선분 $\\mathrm{AM}$ 과 선분 $\\mathrm{B}' C'$ 이 만나는 점을 $\\mathrm{M}'$ 이라 하자. 정육면체 $\\mathrm{EFGH}-I J K L$ 의 한 변의 길이를 $x$ 라 하면 삼각형 $\\mathrm{B}' C' D'$ 이 정삼각형이므로 ${\\overline{M' D'}}=\\left(1+\\frac{\\sqrt{3}}{2}\\right)x$ 이다.",
+    "한편, 점 $\\mathrm{M}'$ 에서 선분 $\\mathrm{DM}$ 에 내린 수선의 발을 $\\mathrm{N}$ 이라 하면 삼수선의 정리에 의하여 직선 $\\mathrm{MN}$ 과 직선 $\\mathrm{BC}$ 는 서로 수직이므로 점 $\\mathrm{N}$ 은 선분 $\\mathrm{MO}$ 위의 점이다. 두 삼각형 $\\mathrm{AMO}$ 와 $\\mathrm{M}' M N$ 은 닯음이므로 ${\\overline{M' M}}:{\\overline{M' N}}={\\overline{A M}}:{\\overline{A O}}=\\sqrt{7}:2$ 로부터 ${\\overline{M' M}}=\\frac{\\sqrt{7}}{2}x$ 를 얻는다.",
+    "따라서 ${\\overline{A M'}}={\\overline{A M}}-{\\overline{M' M}}=\\sqrt{7}\\left(1-\\frac{x}{2}\\right)$ 이다.",
+    "또한 두 삼각형 $\\mathrm{AMD}$ 와 $\\mathrm{AM}' D'$ 는 닮음이므로 $\\sqrt{7}\\left(1-\\frac{x}{2}\\right):\\left(1+\\frac{\\sqrt{3}}{2}\\right)x={\\overline{A M'}}:{\\overline{M' D'}}={\\overline{A M}}:{\\overline{M D}}=\\sqrt{7}:3 \\sqrt{3}$ 이다.",
+    "즉, $\\left(1+\\frac{\\sqrt{3}}{2}\\right)x=3 \\sqrt{3}\\left(1-\\frac{x}{2}\\right)$ 이고 이를 정리하면 $x=\\frac{3 \\sqrt{3}}{2 \\sqrt{3}+1}=\\frac{18-3 \\sqrt{3}}{11}$ 이다.",
+    "따라사 정사각형 $\\mathrm{EIJF}$ 의 평면 $\\mathrm{ACD}$ 위로의 정사영의 넓이는 $x^{2}\\cos \\theta_{3}=\\left(\\frac{18-3 \\sqrt{3}}{11}\\right)^{2}\\times \\frac{1}{\\sqrt{7}}=\\frac{351 \\sqrt{7}-108 \\sqrt{21}}{847}$ 이다.",
+    "(10점) 정사각형 $\\mathrm{EIJF}$ 의 넓이를 구하였는가?",
+    "(10점) 정사각형 $\\mathrm{EIJF}$ 의 평면 $\\mathrm{ACD}$ 위로의 정사영의 넓이를 구하였는가? 한양대학교 홈페이지"
+   ]
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "지수함수"
+}

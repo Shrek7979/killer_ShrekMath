@@ -1,0 +1,244 @@
+"""킬러 해부학 · 수학 — 사이트 빌드 스크립트
+
+입력
+  src/bank/q*_final.json   수능형 창작문항 은행 (한글 수식 문법)
+  anatomy/<문항id>.json    교사가 쓰는 완전 해부 파일 (LaTeX 문법, 선택)
+  template.html            앱 템플릿
+
+출력
+  site/index.html, site/list.json, site/data/NNN.json   → 정적 호스팅(Cloudflare Pages/Workers 등)용
+  killer-math.html                                        → 데이터를 한 파일에 넣은 단일 파일(공유·아티팩트용)
+
+실행:  python3 build.py
+"""
+import json, re, glob, os, html
+from hwptex import convert_text, hwp2tex
+
+ROOT = os.path.dirname(os.path.abspath(__file__))
+BANK = sorted(glob.glob(os.path.join(ROOT, 'src/bank/q*_final.json'))) + sorted(glob.glob(os.path.join(ROOT, 'src/bank/x_*.json')))
+ANAT = os.path.join(ROOT, 'anatomy')
+SITE = os.path.join(ROOT, 'site')
+
+MIN_STARS = 3   # 이 난도 이상만 사이트에 올린다 (완전 해부 파일이 있는 문항은 항상 포함)
+TYPE_OF = {'20': '20번형', '21': '21번형', '29': '29번형', '30': '30번형'}
+TYPE_DESC = {
+    '20': '공통 4점 · 대수 고난도', '21': '공통 4점 · 미적분Ⅰ 최고난도',
+    '29': '선택 단답형 · 미적분Ⅱ', '30': '선택 단답형 · 미적분Ⅱ 최고난도',
+}
+
+# 문장 분리: "…다. ", "…자. ", "…시오. " 뒤에서 자른다. 수식 안의 소수점은 공백이 따라오지 않아 안전하다.
+SENT = re.compile(r'(?<=[다자오])\.\s+(?=\S)')
+
+
+def split_sentences(p):
+    parts = SENT.split(p)
+    # 잘린 자리에 마침표 복원
+    parts = [s if (i == len(parts) - 1 or s.endswith(('.', '?', ']', ')'))) else s + '.' for i, s in enumerate(parts)]
+    # "[4점]" 같은 배점 표시는 앞 문장에 붙인다
+    out = []
+    for s in parts:
+        if re.fullmatch(r'\[\d점\]', s) and out:
+            out[-1] += ' ' + s
+        else:
+            out.append(s)
+    return out
+
+
+def conv_block(b):
+    """은행 블록 → 사이트 블록 (수식 LaTeX로 변환)"""
+    kind = b[0]
+    if kind == 'p':
+        return {'t': 'p', 'sents': split_sentences(convert_text(b[1]))}
+    if kind == 'eq':
+        return {'t': 'eq', 'tex': hwp2tex(b[1])}
+    if kind == 'box':
+        return {'t': 'box', 'items': [convert_text(x) for x in b[1]]}
+    if kind == 'table':
+        return {'t': 'table', 'rows': [[convert_text(c) for c in r] for r in b[1]]}
+    return {'t': 'p', 'sents': [convert_text(str(b[1]))]}
+
+
+def build_conds(blocks):
+    """본문의 문장 하나하나를 조건 C1, C2…로 번호 붙인다 (풀이 단계·함정 카드와 연결용)"""
+    conds = []
+    for bi, b in enumerate(blocks):
+        if b['t'] == 'p':
+            for si, s in enumerate(b['sents']):
+                conds.append({'id': f'C{len(conds)+1}', 'at': [bi, si], 'text': s})
+        elif b['t'] == 'box':
+            for si, s in enumerate(b['items']):
+                conds.append({'id': f'C{len(conds)+1}', 'at': [bi, si], 'text': s})
+        elif b['t'] == 'eq':
+            conds.append({'id': f'C{len(conds)+1}', 'at': [bi, 0], 'text': '$' + b['tex'] + '$'})
+    return conds
+
+
+def load_overlay(qid):
+    p = os.path.join(ANAT, qid + '.json')
+    if os.path.exists(p):
+        with open(p, encoding='utf-8') as f:
+            return json.load(f)
+    return {}
+
+
+def make_item(num, q, type_code):
+    ov = load_overlay(q['id'])
+    qtype = q.get('type') or TYPE_OF.get(type_code, (type_code or '') + '번형')
+    tdesc = TYPE_DESC[type_code] if type_code in TYPE_DESC else f"{q['subject']} · 수능 {qtype} 자리의 고난도"
+    blocks = [conv_block(b) for b in q['body']]
+    conds = build_conds(blocks)
+    for c in conds:                       # 교사 해부 파일의 조건 설명 합치기
+        o = ov.get('conds', {}).get(c['id'], {})
+        c['label'] = o.get('label', '')
+        c['why'] = o.get('why', '')
+        c['uses'] = o.get('uses', [])
+
+    if ov.get('steps'):
+        steps = [{'n': i + 1, 'text': s['text'], 'uses': s.get('uses', []), 'title': s.get('title', '')}
+                 for i, s in enumerate(ov['steps'])]
+    else:
+        steps = []
+        for i, b in enumerate(q['solution']):
+            cb = conv_block(b)
+            text = ' '.join(cb['sents']) if cb['t'] == 'p' else ('$$' + cb['tex'] + '$$' if cb['t'] == 'eq' else ' / '.join(cb['items']))
+            steps.append({'n': i + 1, 'text': text, 'uses': [], 'title': ''})
+
+    full = bool(ov.get('traps')) and bool(ov.get('conds'))
+    return {
+        'num': num, 'id': q['id'], 'subject': q['subject'], 'topic': q['topic'],
+        'type': qtype, 'typeDesc': tdesc, 'stars': q.get('stars', 3),
+        'standards': q.get('standards', []),
+        'source': ov.get('source', q.get('source', f'ShrekMath 창작 · 수능 {qtype}')),
+        'rate': ov.get('rate', ''), 'wrong': ov.get('wrong', ''),
+        'answer': q['answer'], 'full': full,
+        'body': blocks, 'conds': conds,
+        'intro': ov.get('intro', q.get('intro', [])),
+        'concepts': ov.get('concepts', []),
+        'steps': steps,
+        'traps': ov.get('traps', []),
+        'variants': ov.get('variants', []),
+        'line': ov.get('line', ''),
+        'note': ov.get('note', ''),
+    }
+
+
+def joinlines(ls):
+    """채점 기준: 줄이 중간에 끊긴 문장은 이어 붙인다"""
+    out = []
+    for t in ls:
+        if out and not re.match(r'^[-·•(\d○※]', t) and not re.search(r'[.다함음임됨\)]\s*$', out[-1]):
+            out[-1] += ' ' + t
+        else:
+            out.append(t)
+    return out
+
+
+def essay_items():
+    """src/essay/items_*.json (parse_essay.py 결과) → 사이트용 논술 문항"""
+    out = []
+    for f in sorted(glob.glob(os.path.join(ROOT, 'src/essay/items_*.json'))):
+        with open(f, encoding='utf-8') as fp:
+            for it in json.load(fp):
+                ct = convert_text
+                subs = []
+                for sub in it['subs']:
+                    subs.append({'k': sub['k'], 'label': sub['label'], 'points': sub['points'],
+                                 'text': [ct(t) for t in sub['text']],
+                                 'answer': [ct(t) for t in sub['answer']], 'rubric': [ct(t) for t in joinlines(sub['rubric'])]})
+                head = re.sub(r'^\[[^\]]*\]\s*', '', it['head'] or '')
+                passage = [t for t in it['passage'] if t.strip() != head.strip()]
+                topic = (it['info'] or {}).get('concepts', '')
+                out.append({
+                    'num': len(out) + 1, 'id': it['id'], 'univ': it['univ'], 'n': it['n'],
+                    'title': f"문제 {it['n']}" + (f" · {it['points']}점" if it['points'] else ''),
+                    'head': ct(head), 'points': it['points'], 'minutes': it['minutes'], 'info': it['info'],
+                    'pre': [ct(t) for t in it['pre']], 'passage': [ct(t) for t in passage],
+                    'subs': subs, 'answer': [ct(t) for t in it['answer']], 'rubric': [ct(t) for t in joinlines(it['rubric'])],
+                    'field': (topic.split(',')[0].strip() if topic else ''),
+                })
+    return out
+
+
+def encrypt_payload(obj, password):
+    """AES-GCM + PBKDF2. 페이지의 unlockData()와 짝."""
+    import base64, secrets, hashlib
+    from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+    salt = secrets.token_bytes(16); iv = secrets.token_bytes(12); iters = 200000
+    key = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt, iters, 32)
+    data = AESGCM(key).encrypt(iv, json.dumps(obj, ensure_ascii=False).encode('utf-8'), None)
+    b64 = lambda b: base64.b64encode(b).decode()
+    return {'salt': b64(salt), 'iv': b64(iv), 'iter': iters, 'data': b64(data)}
+
+
+def main():
+    import argparse, shutil
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--key', help='접근 코드. 주면 문항 데이터를 암호화해서 넣는다 (학생은 코드를 입력해야 열림)')
+    args = ap.parse_args()
+
+    items = []
+    for f in BANK:
+        mcode = re.search(r'q(\d\d)[AB]_', os.path.basename(f))
+        code = mcode.group(1) if mcode else None
+        with open(f, encoding='utf-8') as fp:
+            for q in json.load(fp):
+                if q.get('stars', 3) < MIN_STARS and not os.path.exists(os.path.join(ANAT, q['id'] + '.json')):
+                    continue
+                items.append(make_item(len(items) + 1, q, code))
+    lst = [{'num': x['num'], 'id': x['id'], 'subject': x['subject'], 'type': x['type'], 'topic': x['topic'],
+            'stars': x['stars'], 'rate': x['rate'], 'full': x['full'], 'nconds': len(x['conds']), 'nsteps': len(x['steps'])}
+           for x in items]
+    essays = essay_items()
+    elst = [{'num': e['num'], 'id': e['id'], 'univ': e['univ'], 'n': e['n'], 'title': e['title'], 'points': e['points'],
+             'minutes': e['minutes'], 'nsubs': len(e['subs']), 'field': e['field']} for e in essays]
+
+    with open(os.path.join(ROOT, 'template.html'), encoding='utf-8') as f:
+        tpl = f.read()
+    with open(os.path.join(ROOT, 'src/katex.inline.css'), encoding='utf-8') as f:
+        tpl = tpl.replace('/*__KATEX_CSS__*/', f.read())
+
+    for d in ('data', 'edata'):
+        shutil.rmtree(os.path.join(SITE, d), ignore_errors=True)
+    for fn in ('list.json', 'elist.json', 'enc.json'):
+        p = os.path.join(SITE, fn)
+        if os.path.exists(p): os.remove(p)
+    os.makedirs(SITE, exist_ok=True)
+    dump = lambda obj, p: json.dump(obj, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+    if args.key:
+        payload = {'list': lst, 'data': {x['num']: x for x in items}, 'elist': elst, 'edata': {e['num']: e for e in essays}}
+        enc = encrypt_payload(payload, args.key)
+        dump(enc, os.path.join(SITE, 'enc.json'))
+        data_js = 'window.__ENC__=' + json.dumps(enc) + ';'
+        mode = f'암호화(접근 코드 사용)'
+    else:
+        os.makedirs(os.path.join(SITE, 'data')); os.makedirs(os.path.join(SITE, 'edata'))
+        dump(lst, os.path.join(SITE, 'list.json')); dump(elst, os.path.join(SITE, 'elist.json'))
+        for x in items: dump(x, os.path.join(SITE, 'data', f"{x['num']:03d}.json"))
+        for e in essays: dump(e, os.path.join(SITE, 'edata', f"{e['num']:03d}.json"))
+        data_js = ('window.__LIST__=' + json.dumps(lst, ensure_ascii=False) + ';\n' +
+                   'window.__DATA__=' + json.dumps({x['num']: x for x in items}, ensure_ascii=False) + ';\n' +
+                   'window.__ELIST__=' + json.dumps(elst, ensure_ascii=False) + ';\n' +
+                   'window.__EDATA__=' + json.dumps({e['num']: e for e in essays}, ensure_ascii=False) + ';')
+        mode = '공개'
+    data_js = data_js.replace('</', '<\\/')
+    # 정적 호스팅(Vercel 등)용: 완전한 HTML 뼈대로 감싼다 (아티팩트용 파일은 뼈대 없이)
+    skeleton = ('<!doctype html>\n<html lang="ko">\n<head>\n<meta charset="utf-8">\n'
+                '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n'
+                '<meta name="description" content="수능 킬러 문항 해부와 대학별 수리논술 기출 · 킬러 ShrekMath">\n'
+                '<meta name="theme-color" content="#0d1511">\n'
+                '<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}</style>\n'
+                '</head>\n<body>\n__BODY__\n</body>\n</html>\n')
+    with open(os.path.join(SITE, 'index.html'), 'w', encoding='utf-8') as f:
+        f.write(skeleton.replace('__BODY__', tpl.replace('/*__INLINE_DATA__*/', '')))
+    with open(os.path.join(SITE, 'vercel.json'), 'w', encoding='utf-8') as f:
+        json.dump({'cleanUrls': True, 'headers': [{'source': '/(.*)\\.json', 'headers': [{'key': 'Cache-Control', 'value': 'public, max-age=300'}]}]}, f, indent=1)
+    with open(os.path.join(ROOT, 'killer-math.html'), 'w', encoding='utf-8') as f:
+        f.write(tpl.replace('/*__INLINE_DATA__*/', data_js))
+
+    nfull = sum(1 for x in items if x['full'])
+    print(f'킬러 {len(items)}개 (완전 해부 {nfull}개) · 논술 {len(essays)}개 · {mode} → site/, killer-math.html')
+
+
+if __name__ == '__main__':
+    main()

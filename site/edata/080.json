@@ -1,0 +1,100 @@
+{
+ "num": 80,
+ "id": "인하대학교(자연계열_오후)수시-3",
+ "univ": "인하대학교(자연계열_오후) 수시",
+ "n": 3,
+ "title": "문제 3 · 35점",
+ "head": "다음 제시문을 읽고 물음에 답하시오. (35점)",
+ "points": 35,
+ "minutes": 33,
+ "info": {
+  "concepts": "함수의 극대와 극소, 함수의 곱의 미분법, 삼각함수의 도함수, 수열의 극한, 직선의 방정식, 극댓값, 정적분의 치환적분법, 미분계수, 삼각함수의 극한",
+  "min": "미적용",
+  "field": "수학(3문항, 8문제)",
+  "time": "100분"
+ },
+ "pre": [],
+ "passage": [
+  "(가) (정적분의 치환적분법)",
+  "함수 $f \\left(x \\right)$ 가 닫힌구간 $\\left[a,b \\right]$ 에서 연속이고 미분가능한 함수 $x=g \\left(t \\right)$ 에 대하여 $a=g \\left(\\alpha \\right)$ , $b=g \\left(\\beta \\right)$ 일 때 도함수 $g' \\left(t \\right)$ 가 $\\alpha$ , $\\beta$ 를 포함하는 구간에서 연속이면",
+  "$\\int_{a}^{b}{f \\left(x \\right)}dx=\\int_{\\alpha}^{\\beta}{f \\left(g \\left(t \\right)\\right)g' \\left(t \\right)}dt$",
+  "(나) (나누어진 구간에서의 정적분)",
+  "임의의 세 실수 $a$ , $b$ , $c$ 를 포함하는 구간에서 함수 $f \\left(t \\right)$ 가 연속일 때",
+  "$\\int_{a}^{c}{f \\left(t \\right)}dt+\\int_{c}^{b}{f \\left(t \\right)}dt=\\int_{a}^{b}{f \\left(t \\right)}dt$"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[문제 3-ⅰ]",
+   "points": 10,
+   "text": [
+    "$0<a<\\frac{\\pi}{2}$ 인 실수 $a$ 에 대하여 $\\int_{0}^{a}{\\frac{1}{1+\\sin t}}dt$ 를 구하시오. (10점)"
+   ],
+   "answer": [
+    "$0<a<\\frac{\\pi}{2}$ 인 실수 $a$ 에 대하여",
+    "$\\int_{0}^{a}{\\frac{1}{1+\\sin t}}dt=\\int_{0}^{a}{\\frac{1-\\sin t}{\\left(1+\\sin t \\right)\\left(1-\\sin t \\right)}dt=\\int_{0}^{a}{\\frac{1-\\sin t}{1-\\sin^2 t}}dt=\\int_{0}^{a}{\\frac{1-\\sin t}{\\cos^2 t}}dt}$",
+    "$=\\int_{0}^{a}{\\left(\\sec^2 t-\\tan t \\sec t \\right)}dt=\\left[\\tan t-\\sec t \\right]_0^a=\\tan a-\\sec a+1$",
+    "이다."
+   ],
+   "rubric": [
+    "(3점) 함수의 분자와 분모에 $1-\\sin t$ 를 곱하여 식을 변형하면",
+    "(3점) $\\sin^2 t+\\cos^2 t=1$ 을 활용하여 주어진 함수를 $\\sec^2 t+\\sec t \\tan t$ 로 변형하면",
+    "(4점) $\\sec^2 t+\\sec t \\tan t$ 의 적분값을 구하면"
+   ]
+  },
+  {
+   "k": "2",
+   "label": "[문제 3-ⅱ]",
+   "points": 10,
+   "text": [
+    "$0<a<\\frac{\\pi}{2}$ 인 실수 $a$ 에 대하여 $\\int_{0}^{a}{\\frac{t \\sin t}{1+\\sin t}}dt+\\int_{\\pi-a}^{\\pi}{\\frac{t \\sin t}{1+\\sin t}}dt$ 를 구하시오. (10점)"
+   ],
+   "answer": [
+    "$0<a<\\frac{\\pi}{2}$ 인 실수 $a$ 에 대하여, 제시문 (가)에 의하면 ( $t=\\pi-y$ )",
+    "$\\int_{0}^{a}{\\frac{t \\sin t}{1+\\sin t}}dt=\\int_{\\pi-a}^{\\pi}{\\frac{\\left(\\pi-y \\right)\\sin y}{1+\\sin y}}dy=\\pi \\int_{\\pi-a}^{\\pi}{\\frac{\\sin y}{1+\\sin y}}dy-\\int_{\\pi-a}^{\\pi}{\\frac{y \\sin y}{1+\\sin y}}dy$",
+    "이다. [문제 3-ⅰ]과 제시문 (가)에 의하여 ( $y=\\pi-t$ )",
+    "$\\int_{0}^{a}{\\frac{t \\sin t}{1+\\sin t}}dt+\\int_{\\pi-a}^{\\pi}{\\frac{t \\sin t}{1+\\sin t}}dt=\\pi \\int_{\\pi-a}^{\\pi}{\\frac{\\sin y}{1+\\sin y}}dy=\\pi \\int_{0}^{a}{\\frac{\\sin t}{1+\\sin t}}dt$",
+    "$=\\pi \\int_{0}^{a}{\\left(1-\\frac{1}{1+\\sin t}\\right)}dt=\\pi a-\\pi \\int_{0}^{a}{\\frac{1}{1+\\sin t}}dt$",
+    "$=\\pi \\left(a-\\tan a+\\sec a-1 \\right)$",
+    "이다."
+   ],
+   "rubric": [
+    "(5점) 정적분의 치환적분법을 사용하여 주어진 정적분을 $\\int_{0}^{x}{\\frac{\\sin t}{1+\\sin t}}dt$ 에 관한 식으로 표현하면",
+    "(5점) 주어진 정적분의 값을 구하면"
+   ]
+  },
+  {
+   "k": "3",
+   "label": "[문제 3-ⅲ]",
+   "points": 15,
+   "text": [
+    "$0 \\le x \\le \\pi$ 인 실수 $x$ 에 대하여 $f \\left(x \\right)=\\int_{0}^{x}{\\frac{t \\sin t}{1+\\sin t}}dt$ 라 할 때, 극한",
+    "$\\lim_{h \\to 0+}{\\frac{1}{2 h}\\left(f \\left(\\frac{\\pi}{2}+h \\right)-f \\left(\\frac{\\pi}{2}-h \\right)\\right)}$ 의 값을 구한 후, $f \\left(\\pi \\right)$ 의 값을 구하시오. (15점)"
+   ],
+   "answer": [
+    "미분계수의 정의와 적분과 미분의 관계에 의하여,",
+    "$\\lim_{h \\to 0+}{\\frac{1}{2 h}\\left(f \\left(\\frac{\\pi}{2}+h \\right)-f \\left(\\frac{\\pi}{2}-h \\right)\\right)}=\\lim_{h \\to 0+}{\\frac{f \\left(\\frac{\\pi}{2}+h \\right)-f \\left(\\frac{\\pi}{2}\\right)}{2 h}}+\\lim_{h \\to 0+}{\\frac{f \\left(\\frac{\\pi}{2}-h \\right)-f \\left(\\frac{\\pi}{2}\\right)}{2 \\left(-h \\right)}}=f' \\left(\\frac{\\pi}{2}\\right)$",
+    "$=\\frac{\\frac{\\pi}{2}\\sin \\frac{\\pi}{2}}{1+\\sin \\frac{\\pi}{2}}=\\frac{\\pi}{4}$",
+    "이다. 따라서",
+    "$\\lim_{h \\to 0}{\\int_{\\frac{\\pi}{2}-h}^{\\frac{\\pi}{2}+h}{\\frac{t \\sin t}{1+\\sin t}}}dt=\\lim_{h \\to 0+}{\\left(f \\left(\\frac{\\pi}{2}+h \\right)-f \\left(\\frac{\\pi}{2}-h \\right)\\right)}=0$",
+    "이다. 제시문 (나)와 [문제 3-ⅱ]에 의하여 $\\left(a=\\frac{\\pi}{2}-h \\right)$",
+    "$f \\left(\\pi \\right)=\\lim_{h \\to 0+}{f \\left(\\pi \\right)}=\\lim_{h \\to 0+}{\\left(\\int_{0}^{\\frac{\\pi}{2}-h}{\\frac{t \\sin t}{1+\\sin t}dt+\\int_{\\frac{\\pi}{2}-h}^{\\frac{\\pi}{2}+h}{\\frac{t \\sin t}{1+\\sin t}}dt+\\int_{\\frac{\\pi}{2}+h}^{\\pi}{\\frac{t \\sin t}{1+\\sin t}}dt \\right)}}$",
+    "$=\\lim_{h \\to 0+}{\\left(\\int_{0}^{\\frac{\\pi}{2}-h}{\\frac{t \\sin t}{1+\\sin t}}dt+\\int_{\\frac{\\pi}{2}+h}^{\\pi}{\\frac{t \\sin t}{1+\\sin t}}dt \\right)}+\\lim_{h \\to 0+}{\\int_{\\frac{\\pi}{2}-h}^{\\frac{\\pi}{2}+h}{\\frac{t \\sin t}{1+\\sin t}}dt}$",
+    "$=\\lim_{h \\to 0+}{\\left\\{\\pi \\left(\\frac{\\pi}{2}-h \\right)-\\pi \\tan \\left(\\frac{\\pi}{2}-h \\right)+\\pi \\sec \\left(\\frac{\\pi}{2}-h \\right)-\\pi \\right\\}}$",
+    "$=\\frac{\\pi^2}{2}-\\pi-\\pi \\lim_{h \\to 0+}{\\frac{\\sin \\left(\\frac{\\pi}{2}-h \\right)-1}{\\cos \\left(\\frac{\\pi}{2}-h \\right)}}=\\frac{\\pi^2}{2}-\\pi-\\pi \\lim_{h \\to 0+}{\\frac{\\cos h-1}{\\sin h}}$",
+    "$=\\frac{\\pi^2}{2}-\\pi-\\pi \\lim_{h \\to 0+}{\\frac{\\left(\\cos h-1 \\right)\\left(\\cos h+1 \\right)}{\\sin h \\left(\\cos h+1 \\right)}}=\\frac{\\pi^2}{2}-\\pi+\\pi \\lim_{h \\to 0+}{\\frac{\\sin h}{\\cos h+1}}=\\frac{\\pi^2}{2}-\\pi$",
+    "이다."
+   ],
+   "rubric": [
+    "(3점) 미분계수의 정의와 적분과 미분의 관계를 사용하여 주어진 극한값을 구하면",
+    "(4점) 이를 활용하여 $\\lim_{h \\to 0+}{\\int_{\\frac{\\pi}{2}-h}^{\\frac{\\pi}{2}+h}{\\frac{t \\sin t}{1+\\sin t}}dt}=0$ 임을 확인하면",
+    "(4점) $f \\left(\\pi \\right)=\\int_{0}^{\\frac{\\pi}{2}-h}{\\frac{t \\sin t}{1+\\sin t}}dt+\\int_{\\frac{\\pi}{2}-h}^{\\frac{\\pi}{2}+h}{\\frac{t \\sin t}{1+\\sin t}}dt+\\int_{\\frac{\\pi}{2}+h}^{\\pi}{\\frac{t \\sin t}{1+\\sin t}}dt$ 로 표현하면",
+    "(4점) 삼각함수의 극한값을 계산하여 $f \\left(\\pi \\right)$ 를 구하면",
+    "(최대 4점 감점) $\\int_{\\frac{\\pi}{2}-h}^{\\frac{\\pi}{2}+h}{\\frac{t \\sin t}{1+\\sin t}}dt$ 를 고려하지 않고 $f \\left(\\pi \\right)$ 의 값을 구하면 인하대학교 입학처 홈페이지"
+   ]
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "함수의 극대와 극소"
+}

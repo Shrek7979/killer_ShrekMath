@@ -1,0 +1,93 @@
+{
+ "num": 82,
+ "id": "인하대학교(의예과)수시-2",
+ "univ": "인하대학교(의예과) 수시",
+ "n": 2,
+ "title": "문제 2 · 35점",
+ "head": "다음 제시문을 읽고 물음에 답하시오. (35점)",
+ "points": 35,
+ "minutes": 33,
+ "info": {
+  "concepts": "정적분의 치환적분법, 미분계수, 삼각함수의 극한, 지수함수, 로그함수, 평행이동, 대칭이동, 미분가능, 증가, 감소",
+  "min": "국어(화법과 작문, 언어와 매체 중 택1), 수학(확률과 통계, 미적분, 기하 중 택1), 영어, 과학탐구(과학 8과목 중 택2) 중 3개 영역 각 1등급 이내",
+  "field": "※ 과학탐구는 2개 과목 평균(소수점 첫째자리에서 올림*) 적용 *2개 과목 평균등급이 1등급이면 1등급, 2등급 이내이면 2등급을 함 수학(3문항, 8문제)",
+  "time": "100분"
+ },
+ "pre": [],
+ "passage": [
+  "일반적으로 $a>0$ , $a \\ne 1$ 일 때, 로그함수 $y=\\log_a x$ 의 그래프는 지수함수 $y=a^x$ 의 그래프와 직선 $y=x$ 에 대하여 대칭이다.",
+  "(※) 곡선 $y=2^x$ 위의 점 $\\mathrm{A}$ 를 직선 $y=x$ 에 대하여 대칭이동한 점을 $\\mathrm{B}$ 라 하고, 곡선 $y=\\log_2 \\left(x-4 \\right)+1$ 위의 점 $\\mathrm{C}$ 에서 직선 $y=x$ 에 내린 수선의 발을 $\\mathrm{D}$ 라 할 때, 네 점 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ , $\\mathrm{D}$ 는",
+  "(직선 $\\mathrm{AB}$ 의 $u$ 절편) $=$ (직선 $\\mathrm{CD}$ 의 $y$ 절편) $-5$",
+  "를 만족한다."
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[문제 2-ⅰ]",
+   "points": 10,
+   "text": [
+    "점 $\\mathrm{A}$ 의 좌표가 $\\left(a,b \\right)$ 일 때, 점 $\\mathrm{P}\\left(a+1,b+4 \\right)$ 는 직선 $\\mathrm{CD}$ 와곡선 $y=2^x-1+4$ 의 교점임을 보이시오. (10점)"
+   ],
+   "answer": [
+    "직선 $\\mathrm{AB}$ 의 기울기는 $-1$ 이고 직선 $\\mathrm{AB}$ 는 점 $\\mathrm{A}\\left(a,b \\right)$ 를 지나므로, 직선 $\\mathrm{AB}$ 의 방정식은 $y=-\\left(x-a \\right)+b$ 이고 직선 $\\mathrm{CD}$ 의 방정식은",
+    "$y=-\\left(x-a \\right)+\\left(b+5 \\right)$ … ㉠",
+    "이다. 점 $\\mathrm{A}\\left(a,b \\right)$ 는 곡선 $y=2^x$ 위의 점이므로 $b=2^a$ 이고,",
+    "$b+4=2{\\left(a+1 \\right)-1}+4$ … ㉡",
+    "이다. ㉠에 의하여 점 $\\mathrm{P}\\left(a+1,b+4 \\right)$ 는 직선 $\\mathrm{CD}$ 위에 있고, ㉡에 의하여 점 $\\mathrm{P}$ 는 곡선 $y=2^x-1+4$ 위에 있으므로, 점 $\\mathrm{P}$ 는 직선 $\\mathrm{CD}$ 와 곡선 $y=2^x-1+4$ 의 교점이다."
+   ],
+   "rubric": [
+    "(5점) 점 $\\mathrm{P}$ 가 직선 $\\mathrm{CD}$ 위에 있음을 보이면",
+    "(5점) 점 $\\mathrm{P}$ 가 곡선 $y=2^x-1+4$ 위에 있음을 보이면"
+   ]
+  },
+  {
+   "k": "2",
+   "label": "[문제 2-ⅱ]",
+   "points": 10,
+   "text": [
+    "점 $\\mathrm{A}$ 의 좌표가 $\\left(3,8 \\right)$ 일 때, 두 선분 $\\mathrm{AC}$ 와 $\\mathrm{BD}$ 의 길이를 구하시오. (10점)"
+   ],
+   "answer": [
+    "$y=2^x-1+4$ 의 그래프와 $y=\\log_2 \\left(x-4 \\right)+1$ 의 그래프는 직선 $y=x$ 에 의하여 대칭이므로, 점 $\\mathrm{C}$ 는 점 $\\mathrm{P}$ 를 대칭이동한 점이다. [문제 2-ⅰ]에 의하여, 점 $\\mathrm{A}$ 의 좌표가 $\\left(a,b \\right)$ 이면 점 $\\mathrm{P}$ 의 좌표는 $\\left(a+1,b+4 \\right)$ 이고 점 $\\mathrm{C}$ 는 $\\mathrm{C}\\left(b+4,a+1 \\right)$ 이다. 점 $\\mathrm{B}$ 는 점 $\\mathrm{A}\\left(a,b \\right)$ 를 직선 $y=x$ 에 의하여 대칭이동한 점이므로 $\\mathrm{B}\\left(b,a \\right)$ 이고, 점 $\\mathrm{D}$ 는 점 $\\mathrm{C}\\left(b+4,a+1 \\right)$ 에서 직선 $y=x$ 에 내린 수선의 발이므로 $\\mathrm{D}\\left(a+b+\\frac{5}{2},a+b+\\frac{5}{2}\\right)$ 이다.",
+    "따라서 $\\mathrm{A}$ 의 좌표가 $\\left(3,8 \\right)$ 이면 $a=3$ , $b=8$ 이므로 $\\mathrm{B}\\left(8,3 \\right)$ , $\\mathrm{C}\\left(12,4 \\right)$ , $\\mathrm{D}\\left(8,8 \\right)$ 이고,",
+    "$\\overline{\\mathrm{AC}}=\\sqrt{\\left(12-3 \\right)^2+\\left(4-8 \\right)^2}=\\sqrt{97}$ , $\\overline{\\mathrm{BD}}=\\sqrt{\\left(8-8 \\right)^2+\\left(8-3 \\right)^2}=5$",
+    "이다."
+   ],
+   "rubric": [
+    "(2점) 점 $\\mathrm{B}$ 의 좌표를 구하면",
+    "(2점) 점 $\\mathrm{C}$ 의 좌표를 구하면",
+    "(2점) 점 $\\mathrm{D}$ 의 좌표를 구하면",
+    "(2점) 선분 $\\mathrm{AC}$ 의 길이를 구하면",
+    "(2점) 선분 $\\mathrm{BD}$ 의 길이를 구하면"
+   ]
+  },
+  {
+   "k": "3",
+   "label": "[문제 2-ⅲ]",
+   "points": 15,
+   "text": [
+    "사각형 $\\mathrm{ABCD}$ 가 평행사변혀일 때, 사각형 $\\mathrm{ABCD}$ 의 넓이를 구하시오.",
+    "(15점)"
+   ],
+   "answer": [
+    "사각형 $\\mathrm{ABCD}$ 가 평행사변형이므로 사각형의 두 대각선 $\\mathrm{AC}$ 와 $\\mathrm{BD}$ 의 중점은 서로 같다.",
+    "$\\left(a+b+\\frac{4}{2},a+b+\\frac{1}{2}\\right)=\\left(a+3 b+\\frac{5}{4},3 a+b+\\frac{5}{4}\\right)$",
+    "그러므로 $b-a=3$ 이다. 선분 $\\mathrm{AB}$ 의 길이는",
+    "$\\overline{\\mathrm{AB}}=\\sqrt{\\left(a-b \\right)^2+\\left(b-a \\right)^2}=\\left|b-a \\right|\\times \\sqrt{2}=3 \\sqrt{2}$ 이고, 두 직선 $\\mathrm{AB}$ 와 $\\mathrm{CD}$ 사이의 거리는",
+    "$\\left|\\left(직 선 \\,\\mathrm{AB}의 \\,y 절 편 \\right)-\\left(직 선 \\,\\mathrm{CD}의 \\,y 절 편 \\right)\\right|\\times \\frac{\\sqrt{2}}{2}=5 \\times \\frac{\\sqrt{2}}{2}=\\frac{5}{2}\\sqrt{2}$",
+    "이므로, 사각형 $\\mathrm{ABCD}$ 의 넓이는 $3 \\sqrt{2}\\times \\frac{5}{2}\\sqrt{2}=15$ 이다.",
+    "(참고) 주어진 조건을 만족하는 사각형 $\\mathrm{ABCD}$ 는 두 가지가 있고, 두 경우 모두 넓이는 $15$ 이다.",
+    "[그림]"
+   ],
+   "rubric": [
+    "(5점) 평행사변형일 조건인 $b-a=3$ 을 구하면",
+    "(5점) 선분 $\\mathrm{AB}$ 의 길이(또는 선분 $\\mathrm{CD}$ 의 길이)를 구하면",
+    "(5점) 두 직선 $\\mathrm{AB}$ 와 $\\mathrm{CD}$ 사이의 거리를 구하면",
+    "(최대 3점 감점) 사각형 $\\mathrm{ABCD}$ 의 넓이를 구하지 못했으면"
+   ]
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "정적분의 치환적분법"
+}

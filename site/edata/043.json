@@ -1,0 +1,81 @@
+{
+ "num": 43,
+ "id": "서울과학기술대학교(자연계열)수시-2",
+ "univ": "서울과학기술대학교(자연계열) 수시",
+ "n": 2,
+ "title": "문제 2 · 30점",
+ "head": "다음 제시문을 읽고 물음에 답하시오. (30점)",
+ "points": 30,
+ "minutes": 33,
+ "info": {
+  "concepts": "지수, 로그, 부등식, 직선의 방정식, 코사인법칙, 등차수열, 정적분, 경우의 수, 삼각함수, 도함수, 접선의 방정식, 원과 직선의 관계, 평행이동, 함수의 극대와 극소, 선분의 내분점, 근과 계수의 관계, 넓이, 함수의 극한",
+  "min": "없음",
+  "field": "수학(3문항, 10문제)",
+  "time": "100분"
+ },
+ "pre": [],
+ "passage": [
+  "(가) 실수 $k$ 에 대하여 $\\sin \\alpha=\\sin \\beta=k$ 와 $4 \\sin \\left(\\alpha+2 \\beta \\right)=3 \\cos \\left(2 \\alpha+\\beta \\right)$ 가 성립한다.(단, $0<\\alpha<\\beta<\\pi$ )",
+  "(나) 아래 그림과 같이, 기울기가 $-\\frac{3}{4}$ 인 직선 $l$ 은 $x$ 축 위의 점 $\\mathrm{A}$ 와 $y$ 축 위의 점 $\\mathrm{B}$ 를 지나며 곡선 $y=\\frac{3}{8}x^{2}+5 k$ 와 점 $\\mathrm{P}$ 에서 접한다.",
+  "(다) 삼각형 $\\mathrm{OAB}$ 에 내접하고 반지름의 길이가 $r$ 인 원을 $x$ 축의 방향으로 $a$ 만큼, $y$ 축의 방향으로 $b$ 만큼 평행이동한 도형은 $x$ 축과 직선 $l$ 에 동시에 접한다.(단, $0<a<5$ , $b<0$ )",
+  "[그림]"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[2.1]",
+   "points": 6,
+   "text": [
+    "제시문 (가)의 실수 $k$ 의 값을 구하시오. (6점)",
+    "※ 문항 [2.2]와 [2.3]은 [2.1]에서 구한 $\\mathbf{k}$ 를 이용하시오."
+   ],
+   "answer": [
+    "$\\sin \\alpha=\\sin \\beta$ 이고 $0<\\alpha<\\beta<\\pi$ 이므로 $\\alpha+\\beta=\\pi$ 이다.",
+    "$\\sin \\left(\\alpha+2 \\beta \\right)=\\sin \\left(\\pi+\\beta \\right)=-\\sin \\beta=-\\sin \\alpha$ , $\\cos \\left(2 \\alpha+\\beta \\right)=\\cos \\left(\\pi+\\alpha \\right)=-\\cos \\alpha$",
+    "이므로 $4 \\sin \\left(\\alpha+2 \\beta \\right)=3 \\cos \\left(2 \\alpha+\\beta \\right)$ 에서 $\\tan \\alpha=\\frac{3}{4}$ 이다. 따라서 $k=\\sin \\alpha=\\frac{3}{5}$ 이다."
+   ],
+   "rubric": [
+    "(3점) $\\alpha$ 와 $\\beta$ 의 관계식을 구할 수 있다.",
+    "(3점) 실수 $k$ 의 값을 구할 수 있다."
+   ]
+  },
+  {
+   "k": "2",
+   "label": "[2.2]",
+   "points": 12,
+   "text": [
+    "반지름의 길이 $r$ 의 값을 구하시오. (12점)"
+   ],
+   "answer": [
+    "$y=\\frac{3}{8}x^{2}+3$ 에서 $y'=\\frac{3}{4}x$ 이고, 점 $\\mathrm{P}$ 의 $x$ 좌표를 $t$ 라 하면 직선 $l$ 의 기울기는 $-\\frac{3}{4}$ 이므로 $\\frac{3}{4}t=-\\frac{3}{4}$ , 즉, $t=-1$ 이다. 직선 $l$ 은 점 $\\mathrm{P}\\left(-1,\\frac{27}{8}\\right)$ 을 지나므로 직선 $l$ 의 방정식은 $y=-\\frac{3}{4}x+\\frac{21}{8}$ 이고 $\\mathrm{A}\\left(\\frac{7}{2},0 \\right)$ , $\\mathrm{B}\\left(0,\\frac{21}{8}\\right)$ 이다. 직각삼각형 $\\mathrm{OAB}$ 의 각 변의 길이의 비는 ${\\overline{\\mathrm{OA}}}:{\\overline{O B}}:{\\overline{A B}}=4:3:5$ 이므로 ${\\overline{\\mathrm{AB}}}=\\frac{35}{8}$ 이다. 따라서, 직각삼각형 $\\mathrm{OAB}$ 에 내접하는 원의 반지름의 길이는",
+    "$r=\\frac{\\frac{7}{2}+\\frac{21}{8}-\\frac{35}{8}}{2}=\\frac{7}{8}$",
+    "이다."
+   ],
+   "rubric": [
+    "(4점) 점 $\\mathrm{P}$ 의 $x$ 좌표를 구할 수 있다.",
+    "(4점) 직선 $l$ 의 방정식을 구할 수 있다.",
+    "(4점) $r$ 의 값을 구할 수 있다."
+   ]
+  },
+  {
+   "k": "3",
+   "label": "[2.3]",
+   "points": 12,
+   "text": [
+    "상수 $a$ 와 $b$ 의 값을 각각 구하시오. (12점)"
+   ],
+   "answer": [
+    "직각삼각형 $\\mathrm{OAB}$ 에 내접하는 원의 중심은 $\\left(\\frac{7}{8},\\frac{7}{8}\\right)$ 이다. $b<0$ 이고 평행이동한 원은 $x$ 축에 접하므로 중심은 $\\left(c,-\\frac{7}{8}\\right)$ 이라 할 수 있고 $b=-2 r=-\\frac{7}{4}$ 이다. 또 평행이동한 원은 직선 $l$ 에 접하므로 원의 중심 $\\left(c,-\\frac{7}{8}\\right)$ 에서 직선 $l:6 x+8 y-21=0$ 까지의 거리는 $r$ 과 같아야 한다. 따라서",
+    "$\\frac{\\left|6 c-8 \\times \\frac{7}{8}-21 \\right|}{\\sqrt{6^{2}+8^{2}}}=\\frac{\\left|6 c-28 \\right|}{10}=\\frac{7}{8}$",
+    "이므로 $c=\\frac{49}{8}$ , $\\frac{77}{24}$ 이다. 이때 $a=c-r=\\frac{21}{4}$ , $\\frac{7}{3}$ 이므로 $0<a<5$ 를 만족하는 $a=\\frac{7}{3}$ 이다."
+   ],
+   "rubric": [
+    "(4점) 상수 $b$ 의 값을 구할 수 있다.",
+    "(8점) 평행이동한 원의 중심의 좌표 및 상수 $a$ 의 값을 구할 수 있다."
+   ]
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "지수"
+}

@@ -1,0 +1,77 @@
+{
+ "num": 6,
+ "id": "가톨릭대학교(자연공학,간호학과)수시-3",
+ "univ": "가톨릭대학교(자연공학, 간호학과) 수시",
+ "n": 3,
+ "title": "문제 3 · 40점",
+ "head": "다음 제시문을 읽고 문제(논제 1, 논제 2)에 답하시오. (40점)",
+ "points": 40,
+ "minutes": 30,
+ "info": {
+  "concepts": "인수분해, 접선의 방정식, 이차방정식, 삼차방정식, 함수, 함수의 극한과 연속, 정적분, 치환적분, 집합, 삼각함수",
+  "min": "자연과학・공학계열(없음)",
+  "field": "간호학과 (국어, 수학(미적분 /기하 / 확통), 영어, 탐구(1과목) 중 3개 영역 등급 합 7 이내) 수학(3문항, 6문제)",
+  "time": "90분"
+ },
+ "pre": [],
+ "passage": [
+  "(ㄱ) 삼각형 $\\mathrm{ABC}$ 는 다음 조건을 만족시킨다.",
+  "(가) 세 변의 길이 중 가장 짧은 변의 길이는 3이다.",
+  "(나) $\\sin 2 B=\\sin 2 C$ 또는 $\\cos 2 \\mathrm{B}=\\cos 2 \\mathrm{C}$",
+  "(ㄴ) 제시문 (ㄱ)의 삼각형 $\\mathrm{ABC}$ 에 대하여 집합 $M$ 은 다음과 같다.",
+  "집합 $M$ 은 $\\cos B=\\frac{1}{3}$ 일 때 $\\overline{\\mathrm{BC}}$ 가 가질 수 있는 모든 값의 모임이다.",
+  "(ㄷ) 제시문 (ㄱ)의 삼각형 $\\mathrm{ABC}$ 에 대하여 상수 $p,\\,q,\\,r$ 은 다음과 같다.",
+  "(가) 선분 $\\mathrm{AB}$ 의 중점을 $\\mathrm{P}$ 라 할 때, 삼각형 $\\mathrm{APC}$ 의 외접원의 넓이를 $S_1$ , 삼각형 $\\mathrm{BPC}$ 의 외접원의 넓이를 $S_2$ 라 하자.",
+  "(나) $\\frac{S_1}{S_2}$ 의 값이 $\\frac{1}{8}$ 일 때 $\\overline{\\mathrm{BC}}$ 의 최솟값을 $p$ , $\\frac{S_1}{S_2}$ 의 값이 $\\frac{3}{8}$ 일 때 $\\overline{\\mathrm{BC}}$ 의 최솟값을 $q$ , $\\frac{S_1}{S_2}$ 의 값이 $\\frac{5}{8}$ 일 때 $\\overline{\\mathrm{BC}}$ 의 최솟값을 $r$ 이라 하자.",
+  "논제 1. (15점) 제시문의 집합 $M$ 을 구하고 그 근거를 논술하시오.",
+  "논제 2. (25점) 제시문의 상수 $p,\\,q,\\,r$ 의 값을 구하고 그 근거를 논술하시오."
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[답안]",
+   "points": 40,
+   "text": [],
+   "answer": [
+    "[논제1] 제시문 (ㄱ)의 (나)에 의하면 $\\sin 2 B=\\sin 2 C$ 이거나 $\\cos 2 B=\\cos 2 C$ 이다. 삼각형의 각은 $0$ 보다 크고 $\\pi$ 보다 작으므로 $\\sin 2 B=\\sin 2 C$ 이면 $2 B=2 C$ 이거나 $2 B=\\pi-2 C$ 이고, $\\cos 2 B=\\cos 2 C$ 이면 $2 B=2 C$ 이거나 $2 B=\\pi-2 C$ 이다. 한편 $A+B+C=\\pi$ 를 만족하려면 $2 B=\\pi-2 C$ 는 성립할 수 없다. 따라서 가능한 경우는 $A=B+C=\\frac{\\pi}{2}$ 인 직각삼각형과 $B=C$ 인 이등변삼각형 두 가지가 있다.",
+    "집합 $M$ 을 구하기 위해 $\\cos B=\\frac{1}{3}$ 이라고 하자.",
+    "ⅰ) 직각삼각형일 경우, $A=\\frac{\\pi}{2}$ 이고 $B$ 는 $\\frac{\\pi}{4}$ 이상이므로 $B>C$ 이고, $\\overline{\\mathrm{AB}}$ 가 가장 짧은 변이 되어 길이가 $3$ 이다. 따라서 $\\overline{\\mathrm{BC}}=\\frac{\\overline{\\mathrm{AB}}}{\\cos B}=3 \\times 3=9$ 이다.",
+    "ⅱ) 이등변삼각형일 경우, $B$ 는 $\\frac{\\pi}{3}$ 이상이므로 $A<B=C$ 이고, $\\overline{\\mathrm{BC}}$ 가 가장 짧은 변이 되어 길이가 $3$ 이다.",
+    "따라서 ⅰ), ⅱ)에 의해 $M=\\left\\{3,9 \\right\\}$ 이다.",
+    "[논제2] 삼각형 $\\mathrm{APC}$ 의 외접원의 반지름을 $R_1$ , 삼각형 $\\mathrm{BPC}$ 의 외접원의 반지름을 $R_2$ 라고 하자. $\\overline{\\mathrm{PC}}$ 를 기준으로 사인법칙을 적용하면 $2 R_1=\\frac{\\overline{\\mathrm{PC}}}{\\sin A}$ , $2 R_2=\\frac{\\overline{\\mathrm{PC}}}{\\sin B}$ 가 된다. 따라서 $\\frac{S_1}{S_2}=\\frac{R_1^2}{R_2^2}=\\frac{\\sin^2 B}{\\sin^2 A}$ 이다.",
+    "이때 삼각형 $\\mathrm{ABC}$ 의 외접원의 반지름을 $R$ 이라 하면 사인법칙에 의해",
+    "$2 R=\\frac{\\overline{\\mathrm{BC}}}{\\sin A}=\\frac{\\overline{\\mathrm{AC}}}{\\sin B}$ 에서 $\\frac{S_1}{S_2}=\\frac{\\sin^2 B}{\\sin^2 A}={\\frac{{\\overline{\\mathrm{AC}}}^{2}}{{\\overline{\\mathrm{BC}}}^{2}}}$ 이다. 삼각형 $\\mathrm{ABC}$ 가 직각삼각형일 경우",
+    "${\\overline{\\mathrm{AB}}}^{2}+{\\overline{\\mathrm{AC}}}^{2}={\\overline{\\mathrm{BC}}}^{2}$ 이고 이등변삼각형이면 $\\cos B=\\frac{\\overline{\\mathrm{BC}}}{2 \\overline{\\mathrm{AC}}}$ 이므로 $\\frac{S_1}{S_2}=\\frac{{\\overline{\\mathrm{AC}}}^{2}}{{\\overline{\\mathrm{BC}}}^{2}}=\\frac{1}{4 \\cos^2 B}$ 이다.",
+    "ⅰ) $\\frac{S_1}{S_2}=\\frac{1}{8}$ 인 경우:",
+    "직각삼각형이면 ${\\overline{\\mathrm{AC}}}^{2}:{\\overline{\\mathrm{AB}}}^{2}:{\\overline{\\mathrm{BC}}}^{2}=1:7:8$ 이다. ${\\overline{\\mathrm{AC}}}<{\\overline{\\mathrm{AB}}}<{\\overline{\\mathrm{BC}}}$ 이므로 $\\overline{\\mathrm{AC}}=3$ 이고",
+    "$\\overline{\\mathrm{BC}}=3 \\times{2 \\sqrt{2}}=6 \\sqrt{2}$ 이다. 이등변삼각형일 때에는 $\\frac{S_1}{S_2}=\\frac{1}{4 \\cos^2 B}$ 이 $\\frac{1}{4}$ 미만일 수 없으므로 그러한 삼각형은 존재하지 않는다. 따라서 $p=6 \\sqrt{2}$ 이다.",
+    "ⅱ) $\\frac{S_1}{S_2}=\\frac{3}{8}$ 인 경우:",
+    "직각삼각형이면 ${\\overline{\\mathrm{AC}}}^{2}:{\\overline{\\mathrm{AB}}}^{2}:{\\overline{\\mathrm{BC}}}^{2}=3:5:8$ 이다. 마찬가지로 $\\overline{\\mathrm{AC}}=3$ 이고",
+    "$\\overline{\\mathrm{BC}}=3 \\times \\frac{2 \\sqrt{6}}{3}=2 \\sqrt{6}$ 이다. 이등변삼각형일 때에는 $\\frac{S_1}{S_2}=\\frac{\\sin^2 B}{\\sin^2 A}=\\frac{3}{8}<1$ 이므로 $B<A$ 에서 $\\overline{\\mathrm{AB}}=3$ 이고, $\\frac{S_1}{S_2}=\\frac{1}{4 \\cos^2 B}=\\frac{3}{8}$ 이므로 $\\cos B=\\frac{\\sqrt{6}}{3}$ 이 되어 $\\overline{\\mathrm{BC}}=6 \\cos B=2 \\sqrt{6}$ 이다. 따라서 $\\overline{\\mathrm{BC}}$ 의 최솟값은 $q=2 \\sqrt{6}$ 이다.",
+    "ⅲ) $\\frac{S_1}{S_2}=\\frac{5}{8}$ 인 경우:",
+    "직각삼각형이면 ${\\overline{\\mathrm{AC}}}^{2}:{\\overline{\\mathrm{AB}}}^{2}:{\\overline{\\mathrm{BC}}}^{2}=5:3:8$ 이다. $\\overline{\\mathrm{AC}}>\\overline{\\mathrm{AB}}$ 이므로 $\\overline{\\mathrm{AB}}=3$ 이고",
+    "$\\overline{\\mathrm{BC}}=3 \\times \\frac{2 \\sqrt{6}}{3}=2 \\sqrt{6}$ 이다. 이등변삼각형일 때에는 $\\frac{S_1}{S_2}=\\frac{\\sin^2 B}{\\sin^2 A}=\\frac{5}{8}<1$ 이므로 $B<A$ 에서 $\\overline{\\mathrm{AB}}=3$ 이고, $\\frac{S_1}{S_2}=\\frac{1}{4 \\cos^2 B}=\\frac{5}{8}$ 이므로 $\\cos B=\\frac{\\sqrt{10}}{5}$ 이 되어 $\\overline{\\mathrm{BC}}=6 \\cos B=\\frac{6 \\sqrt{10}}{5}$ 이다. $2 \\sqrt{6}$ 보다 작으므로, $\\overline{\\mathrm{BC}}$ 의 최솟값은 $r=\\frac{6 \\sqrt{10}}{5}$ 이다.",
+    "따라서 ⅰ), ⅱ), ⅲ)을 종합하면 $p=6 \\sqrt{2}$ , $q=2 \\sqrt{6}$ , $r=\\frac{6 \\sqrt{10}}{5}$ 이다.",
+    "하위",
+    "문항"
+   ],
+   "rubric": [
+    "배점 논제1 제시문 (ㄱ)의 (나)에 의하면 $\\sin 2 \\mathrm{B}=\\sin 2 \\mathrm{C}$ 이거나 $\\cos 2 \\mathrm{B}=\\cos 2 \\mathrm{C}$ 이다. 삼각형의 각은 $0$ 보다 크고 $\\pi$ 보다 작으므로 $\\sin 2 \\mathrm{B}=\\sin 2 \\mathrm{C}$ 이면 $2 \\mathrm{B}=2 \\mathrm{C}$ 이거나 $2 \\mathrm{B}=\\pi-2 \\mathrm{C}$ 이고, $\\cos 2 \\mathrm{B}=\\cos 2 \\mathrm{C}$ 이면 $2 \\mathrm{B}=2 \\mathrm{C}$ 이거나 $2 \\mathrm{B}=2 \\pi-2 \\mathrm{C}$ 이다. 한편 $\\mathrm{A}+B+C=\\pi$ 를 만족하려면 $2 \\mathrm{B}=2 \\pi-2 \\mathrm{C}$ 는 성립할 수 없다. 따라서 가능한 경우는 $\\mathrm{A}=B+C=\\frac{\\pi}{2}$ 인 직각삼각형과 $\\mathrm{B}=C$ 인 이등변삼각형 두 가지가 있다.",
+    "집합 $M$ 을 구하기 위해 $\\cos \\mathrm{B}=\\frac{1}{3}$ 이라고 하자.",
+    "5 ⅰ) 직각삼각형일 경우, $\\mathrm{A}=\\frac{\\pi}{2}$ 이고 $\\mathrm{B}$ 는 $\\frac{\\pi}{4}$ 이상이므로 $\\mathrm{B}>C$ 이고, $\\overline{\\mathrm{AB}}$ 가 가장 짧은 변이 되어 길이가 $3$ 이다. 따라서 $\\overline{\\mathrm{BC}}=\\frac{\\overline{\\mathrm{AB}}}{\\cos \\mathrm{B}}=3 \\times 3=9$ 이다.",
+    "5 ⅱ) 이등변삼각형일 경우, $B$ 는 $\\frac{\\pi}{3}$ 이상이므로 $\\mathrm{A}<B=C$ 이고, $\\overline{\\mathrm{BC}}$ 가 가장 짧은 변이 되어 길이가 $3$ 이다.",
+    "따라서 ⅰ), ⅱ)에 의해 $M=\\left\\{3,9 \\right\\}$ 이다.",
+    "5 논제2 삼각형 APC의 외접원의 반지름을 $R_1$ , 삼각형 BPC의 외접원의 반지름을 $R_2$ 라고 하자. $\\overline{\\mathrm{PC}}$ 를 기준으로 사인법칙을 적용하면 $2 R_1=\\frac{\\overline{\\mathrm{PC}}}{\\sin \\mathrm{A}}$ , $2 R_2=\\frac{\\overline{\\mathrm{PC}}}{\\sin \\mathrm{B}}$ 가 된다. 따라서 $\\frac{S_1}{S_2}=\\frac{R_1^2}{R_2^2}=\\frac{\\sin^2 \\mathrm{B}}{\\sin^2 \\mathrm{A}}$ 이다.",
+    "이때 삼각형 ABC의 외접원의 반지름을 $R$ 이라 하면 사인법칙에 의해 $2 R=\\frac{\\overline{\\mathrm{BC}}}{\\sin \\mathrm{A}}=\\frac{\\overline{\\mathrm{AC}}}{\\sin \\mathrm{B}}$ 에서 $\\frac{S_1}{S_2}=\\frac{\\sin^2 \\mathrm{B}}{\\sin^2 \\mathrm{A}}={\\frac{{\\overline{\\mathrm{AC}}}^{2}}{{\\overline{\\mathrm{BC}}}^{2}}}$ 이다. 삼각형 ABC가 직각삼각형일 경우 ${\\overline{\\mathrm{AB}}}^{2}+{\\overline{\\mathrm{AC}}}^{2}={\\overline{\\mathrm{BC}}}^{2}$ 이고 이등변삼각형이면 $\\cos \\mathrm{B}=\\frac{\\overline{\\mathrm{BC}}}{2 \\overline{\\mathrm{AC}}}$ 이므로 $\\frac{S_1}{S_2}=\\frac{{\\overline{\\mathrm{AC}}}^{2}}{{\\overline{\\mathrm{BC}}}^{2}}=\\frac{1}{4 \\cos^2 \\mathrm{B}}$ 이다.",
+    "10 ⅰ) $\\frac{S_1}{S_2}=\\frac{1}{8}$ 인 경우: 직각삼각형이면 ${\\overline{\\mathrm{AC}}}^{2}:{\\overline{\\mathrm{AB}}}^{2}:{\\overline{\\mathrm{BC}}}^{2}=1:7:8$ 이다. ${\\overline{\\mathrm{AC}}}<{\\overline{\\mathrm{AB}}}<{\\overline{\\mathrm{BC}}}$ 마찬가지로 $\\overline{\\mathrm{AC}}=3$ 이고 $\\overline{\\mathrm{BC}}=3 \\times{2 \\sqrt{2}}=6 \\sqrt{2}$ 이다. 이등변삼각형일 때에는 $\\frac{S_1}{S_2}=\\frac{1}{4 \\cos^2 \\mathrm{B}}$ 이 $\\frac{1}{4}$ 미만일 수 업승므로 그러한 삼각형은 존재하지 않는다. 따라서 $p=6 \\sqrt{2}$ 이다.",
+    "5 ⅱ) $\\frac{S_1}{S_2}=\\frac{3}{8}$ 인 경우: 직각삼각형이면 ${\\overline{\\mathrm{AC}}}^{2}:{\\overline{\\mathrm{AB}}}^{2}:{\\overline{\\mathrm{BC}}}^{2}=3:5:8$ 이다. 마찬가지로 $\\overline{\\mathrm{AC}}=3$ 이고 $\\overline{\\mathrm{BC}}=3 \\times \\frac{2 \\sqrt{6}}{3}=2 \\sqrt{6}$ 이다. 이등변삼각형일 때에는 $\\frac{S_1}{S_2}=\\frac{\\sin^2 \\mathrm{B}}{\\sin^2 \\mathrm{A}}=\\frac{3}{8}<1$ 이므로 $\\mathrm{B}<A$ 에서 $\\overline{\\mathrm{AB}}=3$ 이고, $\\frac{S_1}{S_2}=\\frac{1}{4 \\cos^2 \\mathrm{B}}=\\frac{3}{8}$ 이므로 $\\cos \\mathrm{B}=\\frac{\\sqrt{6}}{3}$ 이 되어 $\\overline{\\mathrm{BC}}=6 \\cos \\mathrm{B}=2 \\sqrt{6}$ 이다. 따라서 $\\overline{\\mathrm{BC}}$ 의 최솟값은 $q=2 \\sqrt{6}$ 이다.",
+    "5 ⅲ) $\\frac{S_1}{S_2}=\\frac{5}{8}$ 인 경우: 직각삼각형이면 ${\\overline{\\mathrm{AC}}}^{2}:{\\overline{\\mathrm{AB}}}^{2}:{\\overline{\\mathrm{BC}}}^{2}=5:3:8$ 이다. $\\overline{\\mathrm{AC}}>\\overline{\\mathrm{AB}}$ 이므로 $\\overline{\\mathrm{AB}}=3$ 이고 $\\overline{\\mathrm{BC}}=3 \\times \\frac{2 \\sqrt{6}}{3}=2 \\sqrt{6}$ 이다. 이등변삼각형일 때에는 $\\frac{S_1}{S_2}=\\frac{\\sin^2 \\mathrm{B}}{\\sin^2 \\mathrm{A}}=\\frac{5}{8}<1$ 이므로 $\\mathrm{B}<A$ 에서 $\\overline{\\mathrm{AB}}=3$ 이고, $\\frac{S_1}{S_2}=\\frac{1}{4 \\cos^2 \\mathrm{B}}=\\frac{5}{8}$ 이므로 $\\cos \\mathrm{B}=\\frac{\\sqrt{10}}{5}$ 이 되어 $\\overline{\\mathrm{BC}}=6 \\cos \\mathrm{B}=\\frac{6 \\sqrt{10}}{5}$ 이다. $2 \\sqrt{6}$ 보다 작으므로, $\\overline{\\mathrm{BC}}$ 의 최솟값은 $r=\\frac{6 \\sqrt{10}}{5}$ 이다.",
+    "따라서 ⅰ), ⅱ), ⅲ)을 종합하면 $p=6 \\sqrt{2}$ , $q=2 \\sqrt{6}$ , $r=\\frac{6 \\sqrt{10}}{5}$ 이다.",
+    "5 가톨릭대학교 홈페이지"
+   ]
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "인수분해"
+}

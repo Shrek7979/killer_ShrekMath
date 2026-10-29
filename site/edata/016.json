@@ -1,0 +1,66 @@
+{
+ "num": 16,
+ "id": "경북대학교(자연계열1)수시-1",
+ "univ": "경북대학교(자연계열1) 수시",
+ "n": 1,
+ "title": "문제 1",
+ "head": "다음 제시문을 읽고 문항별로 풀이와 함께 답하시오.",
+ "points": null,
+ "minutes": 25,
+ "info": {
+  "concepts": "내분점, 닮음비, 이차함수, 미분계수, 합성함수의 미분법,",
+  "min": "함수의 증가와 감소, 부정적분, 정적분",
+  "field": "IT대학 국어, 영어, 사회/과학탐구 영역 중 상위 1개 등급과 수학 영역 등급 합 5 이내 수학 (2문항) 100분 경상대학, 사범대학, 간호대학, 행정학부, 자율전공학부 국어, 수학, 영어, 사회/과학탐구 영역 중 상위 2개 영역 등급 합 공과대학, 첨단기술융합대학, 공학첨단자율학부 국어, 영어, 사회/과학탐구 영역 중 상위 1개 등급과 수학 영역 등급 합 6 이내 인문대학, 사회과학대학, 자연과학대학,농업생명과학대학, 생활과학대학",
+  "time": "국어, 수학, 영어, 사회/과학탐구영역 중 상위 2개 영역 등급 합"
+ },
+ "pre": [],
+ "passage": [
+  "(가) 좌표평면 위의 두 점 $\\mathrm{A}(x_{1},y_{1})$ , $\\mathrm{B}(x_{2},y_{2})$ 를 이은 선분 $\\mathrm{AB}$ 를",
+  "$m:n(m>0,n>0)$ 으로 내분하는 점 P의 좌표는",
+  "$\\mathrm{P}\\left(\\frac{m x_{2}+n x_{1}}{m+n},\\frac{m y_{2}+n y_{1}}{m+n}\\right)$",
+  "(나) 삼각형 $\\mathrm{ABC}$ 와 변 $\\mathrm{BC}$ 위의 점 $\\mathrm{D}$ 에 대하여 $\\frac{{\\overline{\\mathrm{BD}}}}{{\\overline{\\mathrm{CD}}}}=\\frac{m}{n}(m>0,n>0)$ 이면",
+  "$\\frac{삼 각 형 \\,\\mathrm{ABC}의 \\,넓 이}{삼 각 형 \\,\\mathrm{ACD}의 \\,넓 이}=\\frac{m}{n}$ 이다.",
+  "[그림]",
+  "※ 모든 문항에서 풀이 과정을 반드시 기술하시오.",
+  "좌표평면 위의 세 점 $\\mathrm{P},Q,R$ 에 대하여 세 점 $\\mathrm{P},Q,R$ 을 꼭짓점 으로 하는 삼각형의 넓이를 $S_{\\mathrm{PQR}}$ 이라고 하자. (단, 세 점이 한 직선 위에 있는 경우 $S_{\\mathrm{PQR}}=0$ 으로 정의한다.)",
+  "세 점 $\\mathrm{A}(1,4),B(-2,-3),C(7,2)$ 를 꼭짓점으로 하는 삼각형 $\\mathrm{ABC}$ 에 대하여, 점 $\\mathrm{F}$ 가 삼각형 $\\mathrm{ABC}$ 의 내부 또는 세 변 위에 있을 때,",
+  "$\\frac{S_{\\mathrm{BCF}}}{S_{\\mathrm{ABC}}}=a,\\frac{S_{\\mathrm{CAF}}}{S_{\\mathrm{ABC}}}=b,\\frac{S_{\\mathrm{ABF}}}{S_{\\mathrm{ABC}}}=c$",
+  "라고 하자.",
+  "점 $\\mathrm{F}$ 를 지나고 변 $\\mathrm{BC}$ 에 평행한 직선이 변 $\\mathrm{AB}$ , 변 $\\mathrm{AC}$ 와 만나는 점을 각각 점 $\\mathrm{D}$ , 점 $\\mathrm{E}$ 라 하자.",
+  "【1-1】 $a=\\frac{1}{3},b=\\frac{1}{2},c=\\frac{1}{6}$ 일 때, $\\frac{{\\overline{\\mathrm{DF}}}}{{\\overline{\\mathrm{EF}}}}$ 의 값을 구하시오. (30점)",
+  "【1-2】 점 $\\mathrm{F}(x,y)$ 가 삼각형 $\\mathrm{ABC}$ 의 내부를 움직일 때,",
+  "$x=㉠\\times a+㉡\\times b+㉢\\times c,$ $y=㉣\\times a+㉤\\times b+㉥\\times c$",
+  "가 성립한다. 실수 ㉠, ㉡, ㉢, ㉣, ㉤, ㉥의 값을 구하시오. (40점)",
+  "【1-3】 삼각형 $\\mathrm{ABC}$ 의 내부 또는 그 세 변 위의 점 $\\mathrm{J},K,L$ 에 대하여 점 $\\mathrm{A},J,K,L$ 이 사각형 $\\mathrm{AJKL}$ 을 이룬다. 점 $\\mathrm{F}$ 가 사각형 $\\mathrm{AJKL}$ 의 내부에 있을 때, 항상 $2 a \\ge b,2 a \\ge c$ 를 만족시킨다. 가능한 사각형 $\\mathrm{AJKL}$ 의 넓이의 최댓값이 $r S_{\\mathrm{ABC}}$ 일 때, 실수 $r$ 의 값을 구하시오. (50점)"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[답안]",
+   "points": null,
+   "text": [],
+   "answer": [
+    "【1-1】",
+    "문제로부터 $a \\ne 0,b \\ne 0,c \\ne 0$ 이므로 점 $\\mathrm{F}$ 가 삼각형 $\\mathrm{ABC}$ 의 세 변 위에 있지 않다. 따라서 점 $\\mathrm{F}$ 가 삼각형 $\\mathrm{ABC}$ 의 내부에 있다고 하자. $\\mathrm{AF}$ 가 변 $\\mathrm{BC}$ 와 만나는 점을 $\\mathrm{P}$ 라 하자. 직선 $\\mathrm{DE}$ 는 직선 $\\mathrm{BC}$ 에 평행하므로, 두 삼각형 $\\mathrm{ADF},A B P$ 는 닮음이고, 두 삼각형 $\\mathrm{AEF},A C P$ 역시 닮음이며, 두 경우 모두 닮음비는 ${\\overline{\\mathrm{AF}}}:{\\overline{\\mathrm{AP}}}$ 이다. 따라서 ${\\overline{\\mathrm{DF}}}:{\\overline{\\mathrm{EF}}}={\\overline{\\mathrm{BP}}}:{\\overline{\\mathrm{CP}}}$ 이다. 두 삼각형 $\\mathrm{ABP},C A F$ 의 넓이비는 $c:b$ 인데, 두 삼각형이 변 $\\mathrm{AF}$ 를 공통변으로 가지므로, 넓이비 $c:b$ 는 공통변에서 각 꼭짓점 $\\mathrm{B}$ 와 꼭짓점 $\\mathrm{C}$ 까지의 높이비와 같다. 이 높이비는 두 삼각형 $\\mathrm{ABP},A C P$ 에서 변 $\\mathrm{AP}$ 를 밑변으로 한 높이비와 같다. 따라서 두 삼각형 $\\mathrm{ABP},A C P$ 의 넓이의 비는 $c:b$ 이다. 제시문 (나)에 의하여 ${\\overline{\\mathrm{BP}}}:{\\overline{\\mathrm{CP}}}={\\overline{\\mathrm{DF}}}:{\\overline{\\mathrm{EF}}}=c:b$ 이고, 문제로부터 $b=\\frac{1}{2}$ 이고 $c=\\frac{1}{6}$ 이므로 $\\frac{{\\overline{\\mathrm{DF}}}}{{\\overline{\\mathrm{EF}}}}=\\frac{1}{3}$ 이다."
+   ],
+   "rubric": [
+    "배점 답 $\\frac{1}{3}$ 이 맞으면",
+    "( ${\\overline{\\mathrm{DE}}}:{\\overline{\\mathrm{EF}}}=1:3$ 까지만 구한 경우 10점)",
+    "30 【1-2】 점 $\\mathrm{A}(x_{1},y_{1}),\\mathrm{B}(x_{2},y_{2}),\\mathrm{C}(x_{3},y_{3}),\\mathrm{D}(x_{4},y_{4}),\\mathrm{E}(x_{5},y_{5}),\\mathrm{F}(x,y)$ 에 대하여 다음을 계산한다. 점 $\\mathrm{P}$ 는 【1-1】의 풀이에서의 점과 같이 정의한다. 두 삼각형 $\\mathrm{ABC},F B C$ 의 넓이의 비 $1:a$ 는 변 $\\mathrm{BC}$ 에서 점 $\\mathrm{A}$ 와 점 $\\mathrm{F}$ 까지의 높이비이다. 이 높이비는 두 삼각형 $\\mathrm{ABP},A D F$ 의 닮음비이고 따라서 ${\\overline{\\mathrm{AF}}}:{\\overline{\\mathrm{FP}}}=b+c:a$ 이다. 삼각형의 닮음을 이용하면, 점 $\\mathrm{D}$ 는 선분 $\\mathrm{AB}$ 를 $b+c:a$ 로 내분하는 점, 점 $\\mathrm{E}$ 는 선분 $\\mathrm{AC}$ 를 $b+c:a$ 로 내분하는 점, 점 $\\mathrm{F}$ 는 선분 $\\mathrm{DE}$ 를 $c:b$ 로 내분하는 점임을 알 수 있다. 따라서, $\\mathrm{D}(x_{4},y_{4})=(a x_{1}+(b+c)x_{2},a y_{1}+(b+c)y_{2}),$ $\\mathrm{E}(x_{5},y_{5})=(a x_{1}+(b+c)x_{3},a y_{1}+(b+c)y_{3}),$ $\\mathrm{F}(x,y)=(a x_{1}+b x_{2}+c x_{3},a y_{1}+b y_{2}+c y_{3})$ 이다. 문제로부터 $㉠=1$ , $㉡=-2$ , $㉢=7$ , $㉣=4$ , $㉤=-3$ , $㉥=2$ 이다.",
+    "배점 답을 구하기 위한 과정 설명이 있고 타당한 경우: 경우 1: 직선의 방정식 이용 경우 2: 점 $\\mathrm{D}$ 는 선분 $\\mathrm{AB}$ 를 $b+c:a$ 로 내분하는 점, 점 $\\mathrm{E}$ 는 선분 $\\mathrm{AC}$ 를 $b+c:a$ 로 내분하는 점, 점 $\\mathrm{F}$ 는 선분 $\\mathrm{DE}$ 를 $c:b$ 로 내분하는 점",
+    "10 답  $㉠=1$ , $㉡=-2$ , $㉢=7$ , $㉣=4$ , $㉤=-3$ , $㉥=2$ 이 맞으면 각 5점",
+    "30 【1-3】 실수 $m,n,k,l$ 이 $m>0,n>0,k>0,l>0$ 을 만족시킨다. 선분 $\\mathrm{AB}$ 를 $m:n$ 으로 내분하는 점을 $\\mathrm{Q}$ 라 하자. 제시문 (나)에 의하여 두 삼각형 $\\mathrm{CAQ},B C Q$ 의 넓이의 비는 $m:n$ 이고, 【1-1】의 풀이와 같이 선분 $\\mathrm{CQ}$ 위의 임의의 점 $\\mathrm{X}$ 에 대하여 (단, $\\mathrm{X}\\ne C$ ) 두 삼각형 $\\mathrm{CAX},B C X$ 의 넓이비도 $m:n$ 이다. 따라서 점 $\\mathrm{F}$ 가 선분 $\\mathrm{CQ}$ 위에 있으면 (단, $\\mathrm{F}\\ne C$ ), $b:a=m:n$ 임을 알 수 있다. 마찬가지로, 선분 $\\mathrm{AC}$ 를 $k:l$ 로 내분하는 점을 $\\mathrm{R}$ 이라 할 때, 점 $\\mathrm{F}$ 가 선분 $\\mathrm{BR}$ 위에 있으면 (단, $\\mathrm{F}\\ne B$ ), $c:a=k:l$ 임을 알 수 있다.",
+    " 따라서 $\\frac{m}{n}\\le 2$ 일 때 $\\mathrm{F}$ 가 선분 $\\mathrm{CQ}$ 위에 있으면 (단, $\\mathrm{F}\\ne C$ ) $b \\le 2 a$ 이고, 반대로 $\\frac{m}{n}>2$ 일 때 점 $\\mathrm{F}$ 가 선분 $\\mathrm{CQ}$ 위에 있으면 (단, $\\mathrm{F}\\ne C$ ) $b>2 a$ 이다. 마찬가지로, $\\frac{k}{l}\\le 2$ 일 때 점 $\\mathrm{F}$ 가 선분 $\\mathrm{BR}$ 위에 있으면 (단, $\\mathrm{F}\\ne B$ ) $c \\le 2 a$ 이고, 반대로 $\\frac{k}{l}>2$ 일 때 점 $\\mathrm{F}$ 가 선분 $\\mathrm{BR}$ 위에 있으면 (단, $\\mathrm{F}\\ne B$ ) $c>2 a$ 이다.",
+    "$m:n=2:1$ 일 때의 점 $\\mathrm{Q}$ 와 $k:l=2:1$ 일 때의 점 $\\mathrm{R}$ 에 대하여, 선분 $\\mathrm{CQ}$ 와 선분 $\\mathrm{BR}$ 의 교점을 $\\mathrm{V}$ 라 하자. 점 $\\mathrm{V}$ 는 두 선분 $\\mathrm{CQ}$ 와 $\\mathrm{BR}$ 의 교점이므로, 점 $\\mathrm{F}$ 가 $\\mathrm{V}$ 일 때 $2 a=b=c$ 이고, $a+b+c=1$ 이므로, 이때, $a=\\frac{1}{5}$ 이다.",
+    "점 $\\mathrm{F}$ 가 사각형 $\\mathrm{AQVR}$ 내부에 있으면 $b \\le 2 a$ 이고, $c \\le 2 a$ 다. 이제 점 $\\mathrm{F}$ 가 사각형 $\\mathrm{AQVR}$ 외부에 있다고 하자. $a=0$ 이면 $b>2 a$ 또는 $c>2 a$ 임이 자명하고, $a>0$ 이면 $b>2 a$ 또는 $c>2 a$ 이다. 따라서 사각형 $\\mathrm{AQVR}$ 이 사각형 $\\mathrm{AJKL}$ 일 때의 사각형 $\\mathrm{AJKL}$ 의 넓이가 최대 넓이이다. 이때 $\\mathrm{Q}=J,R=L,V=K$ 라 하자.",
+    "$\\frac{\\triangle \\mathrm{BCK}의 \\,넓 이}{\\triangle \\mathrm{ABC}의 \\,넓 이}=\\frac{1}{5},\\frac{\\triangle \\mathrm{AJK}의 \\,넓 이}{\\triangle \\mathrm{ABK}의 \\,넓 이}=\\frac{2}{3},\\frac{\\triangle \\mathrm{ALK}의 \\,넓 이}{\\triangle \\mathrm{ACK}의 \\,넓 이}=\\frac{2}{3}$ 이므로 $\\frac{사 각 형 \\,A J K L 의 \\,넓 이}{\\triangle \\mathrm{ABC}의 \\,넓 이}=\\frac{\\triangle A J K 의 \\,넓 이+\\triangle A L K 의 \\,넓 이}{\\triangle \\mathrm{ABC}의 \\,넓 이}=\\left(1-\\frac{1}{5}\\right)\\times \\frac{2}{3}=\\frac{8}{15}$ 이다.",
+    "배점 넓이가 최대인 경우의 사각형을 구했으면,",
+    "30 이 때 넓이가 삼각형 $\\mathrm{ABC}$ 의 넓이가 $\\frac{8}{15}$ 임을 맞게 구했으면",
+    "20"
+   ]
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "내분점"
+}
