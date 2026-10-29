@@ -107,7 +107,7 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 .card{flex:0 0 200px;aspect-ratio:2/3;scroll-snap-align:start;background:linear-gradient(170deg,color-mix(in srgb,var(--dc) 62%,#111),color-mix(in srgb,var(--dc) 18%,#111) 60%,#0d0d0d);border:0;border-radius:6px;padding:14px 14px 12px;text-align:left;display:grid;grid-template-rows:auto 1fr auto;gap:6px;min-width:0;position:relative;transition:transform .2s,box-shadow .2s;color:#fff;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.5)}
 .card::before{content:attr(data-big);position:absolute;right:8px;bottom:6px;font-family:var(--mono);font-weight:700;font-size:1rem;color:rgba(255,255,255,.35);pointer-events:none}
 .card .art{pointer-events:none;overflow:hidden}
-.card .art svg{width:100%;height:100%;display:block}
+.card .art>svg{width:100%;height:100%;display:block}
 .card .art .neon .s,.card .art .neon-soft .s{fill:none;stroke:#fff;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
 .card .art .neon-soft .s,.card .art .neon-soft .a,.card .art .neon-soft .f{stroke:inherit;stroke-width:5}
 .card .art .neon .a{fill:none;stroke:var(--gold);stroke-width:2.2;stroke-linecap:round}
@@ -123,7 +123,19 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 .card{display:flex;flex-direction:column;background:#111}
 .card .topic{margin-top:auto}
 .card::after{content:"";position:absolute;inset:auto 0 0 0;height:50%;background:linear-gradient(180deg,transparent,rgba(0,0,0,.55) 55%,rgba(0,0,0,.85));z-index:0;pointer-events:none}
-.card .art svg{width:100%;max-width:150px;height:auto;filter:drop-shadow(0 4px 10px rgba(0,0,0,.5))}
+.card .art>svg{width:100%;max-width:150px;height:auto;filter:drop-shadow(0 4px 10px rgba(0,0,0,.5))}
+/* 문항 캡처 썸네일: 시험지 한 귀퉁이를 잘라 붙인 느낌. 핵심 수식·조건에 형광펜 */
+.card .art.snap{background:radial-gradient(130% 75% at 30% 0,color-mix(in srgb,var(--hue) 50%,#111),#0c0c0c 72%)}
+.card .art.snap .paper{position:absolute;left:14px;right:-22px;top:40px;height:64%;background:#f5f2e9;color:#1c1c1c;border-radius:2px;padding:12px 12px 0 13px;font-size:10.5px;line-height:1.65;overflow:hidden;transform:rotate(var(--rot));transform-origin:30% 0;box-shadow:0 12px 26px rgba(0,0,0,.6);-webkit-mask-image:linear-gradient(180deg,#000 50%,transparent 96%);mask-image:linear-gradient(180deg,#000 50%,transparent 96%);word-break:keep-all;font-family:'Noto Serif KR','Batang',serif}
+.card .art.snap .paper::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--hue);opacity:.85}
+.card .art.snap .paper p{margin:0 0 5px}
+.card .art.snap .paper .eq{margin:2px 0 6px;padding:2px 3px;white-space:nowrap}
+.card .art.snap .paper .box{margin:2px 0 6px;padding:4px 6px;border:1px solid #555}
+.card .art.snap .paper .box>div{margin:1px 0}
+.card .art.snap .paper .mk{background:linear-gradient(transparent 52%,color-mix(in srgb,var(--hue) 42%,transparent) 52%)}
+.card .art.snap .paper img{display:block;width:250%;max-width:none;height:auto;margin:-36px 0 0 -10px;opacity:1;-webkit-mask-image:none;mask-image:none;object-fit:initial}
+.card .art.snap .paper:has(img){padding:8px 0 0 8px}
+.card .art.snap .cm{position:absolute;left:8px;right:8px;top:32px;height:46%;--c:rgba(255,255,255,.8);background:linear-gradient(var(--c),var(--c)) 0 0/14px 2px,linear-gradient(var(--c),var(--c)) 0 0/2px 14px,linear-gradient(var(--c),var(--c)) 100% 0/14px 2px,linear-gradient(var(--c),var(--c)) 100% 0/2px 14px,linear-gradient(var(--c),var(--c)) 0 100%/14px 2px,linear-gradient(var(--c),var(--c)) 0 100%/2px 14px,linear-gradient(var(--c),var(--c)) 100% 100%/14px 2px,linear-gradient(var(--c),var(--c)) 100% 100%/2px 14px;background-repeat:no-repeat;pointer-events:none}
 .card .art .s{fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
 .card .art .a{fill:none;stroke:var(--gold);stroke-width:2.5;stroke-linecap:round}
 .card .art .g{fill:none;stroke:rgba(255,255,255,.45);stroke-width:1.5}
@@ -567,7 +579,17 @@ function poster(k,seed,hue){
   </g>
 </svg>`;
 }
-function artEl(text,subj,own,seed,hue){const d=el('div','art');const k=picFor(text,subj);const src=own||CATS[k];
+/* 문항 캡처 썸네일: snip(발췌 블록) 또는 img(문제 이미지)를 종이 조각처럼 */
+function snapEl(snip,img,seed,hue){
+  const d=el('div','art img snap');d.style.setProperty('--hue',hue||'var(--gold)');
+  const p=el('div','paper');p.style.setProperty('--rot',(((hash(seed)%7)-3)*.7)+'deg');
+  if(img){const im=el('img');im.src=jimg(img);im.alt='';im.loading='lazy';p.append(im)}
+  else p.innerHTML=snip.map(b=>b.t==='eq'?`<div class="eq"><span class="mk">$\\displaystyle ${esc(b.tex)}$</span></div>`
+    :b.t==='box'?`<div class="box">${b.items.map(s=>`<div><span class="mk">${esc(s)}</span></div>`).join('')}</div>`:`<p>${esc(b.s)}</p>`).join('');
+  d.append(p,el('i','cm'));return d}
+function artEl(text,subj,own,seed,hue,snip,img){
+  if(!own&&((snip&&snip.length)||img)) return snapEl(snip||[],img,seed||text,hue);
+  const d=el('div','art');const k=picFor(text,subj);const src=own||CATS[k];
   d.classList.add('img');
   if(src){const im=el('img');im.src=jimg(src);im.alt='';im.loading='lazy';d.append(im)}
   else d.innerHTML=poster(k,seed||text,hue||'var(--gold)');return d}
@@ -593,7 +615,7 @@ function homeKiller(){
     c.innerHTML=`<div class="top"><span><span class="num">#${String(x.num).padStart(3,'0')}</span> · ${x.type}</span><span class="subj" style="--sc:${SC(x.subject)}">${x.subject}</span></div>
       <div class="topic">${esc(x.topic)}</div>
       <div class="meta"><span><span class="stars">${'★'.repeat(x.stars)}${'☆'.repeat(5-x.stars)}</span><span class="dbadge">${DNAME[x.stars]||''}</span></span><span><span class="tag ${x.full?'full':''}">${x.full?'완전 분석':'풀이 '+x.nsteps+'단계'}</span></span></div>`;
-    c.insertBefore(artEl(x.topic,x.subject,x.art,x.id,DC(x.stars)),c.querySelector('.topic'));
+    c.insertBefore(artEl(x.topic,x.subject,x.art,x.id,DC(x.stars),x.snip),c.querySelector('.topic'));
     if(rec) c.append(el('span','st '+(rec.skip?'skip':rec.ok?'ok':'no'),rec.skip?'열람':rec.ok?'정답 '+mmss(rec.secs):'오답'));
     c.onclick=()=>location.hash='q'+x.num;track.append(c);
   }}
@@ -610,7 +632,7 @@ function homeEssay(){
     c.innerHTML=`<div class="top"><span><span class="num">#E${String(x.num).padStart(3,'0')}</span> · 문제 ${x.n}</span><span class="subj" style="--sc:var(--s6)">${x.points?x.points+'점':'논술'}</span></div>
       <div class="topic">${esc(x.title)}</div>
       <div class="meta"><span>소문항 ${x.nsubs} · 제한 ${x.minutes}분</span><span><span class="tag">${esc(x.field||'')}</span></span></div>`;
-    c.insertBefore(artEl(x.field||'','논술',x.art,x.id,'var(--gold)'),c.querySelector('.topic'));
+    c.insertBefore(artEl(x.field||'','논술',x.art,x.id,'var(--gold)',x.snip),c.querySelector('.topic'));
     if(rec) c.append(el('span','st '+(rec.total?'ok':'skip'),rec.total?`${rec.score}/${rec.total}`:'열람'));
     c.onclick=()=>location.hash='e'+x.num;track.append(c);
   }
@@ -629,7 +651,7 @@ function homeJapan(){
     c.innerHTML=`<div class="top"><span><span class="num">#J${String(x.num).padStart(3,'0')}</span> · ${x.year} · ${x.num0}번</span><span class="subj" style="--sc:${SC(x.subj==='미적분'?'미적분Ⅱ':x.subj)}">${esc(x.subj)}</span></div>
       <div class="topic">${esc(x.univ)} · ${esc(x.track)}</div>
       <div class="meta"><span><span class="stars">${'★'.repeat(x.stars)}${'☆'.repeat(5-x.stars)}</span><span class="dbadge">${x.stars>=5?'최고난도':'고난도'}</span></span><span><span class="tag" style="white-space:normal;line-height:1.3">${esc(x.text.slice(0,30))}…</span></span></div>`;
-    c.insertBefore(artEl(x.text,x.subj,x.art,x.id,DC(x.stars)),c.querySelector('.topic'));
+    c.insertBefore(artEl(x.text,x.subj,x.art,x.id,DC(x.stars),null,x.qimg&&x.qimg[0]),c.querySelector('.topic'));
     if(rec) c.append(el('span','st '+(rec.r==='ok'?'ok':rec.r==='no'?'no':'skip'),rec.r==='ok'?'맞음':rec.r==='part'?'부분':rec.r==='no'?'틀림':'열람'));
     c.onclick=()=>location.hash='j'+x.num;track.append(c);
   }

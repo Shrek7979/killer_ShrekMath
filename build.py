@@ -210,6 +210,25 @@ def copy_art():
     return cats
 
 
+def snip_blocks(body):
+    """카드 썸네일용 문항 발췌: 첫 수식·박스 조건과 그 앞뒤 문장 (없으면 앞 두 문장)"""
+    flat = []
+    for b in body:
+        if b['t'] == 'p':
+            flat += [{'t': 'p', 's': s} for s in b['sents']]
+        elif b['t'] == 'eq':
+            flat.append({'t': 'eq', 'tex': b['tex']})
+        elif b['t'] == 'box':
+            flat.append({'t': 'box', 'items': b['items'][:3]})
+    k = next((i for i, x in enumerate(flat) if x['t'] != 'p'), None)
+    return flat[max(0, k - 1):k + 2] if k is not None else flat[:2]
+
+
+def essay_snip(e):
+    lines = [s for s in e['passage'] if s.strip() and '[그림]' not in s]
+    return [{'t': 'p', 's': s} for s in lines[:4]]
+
+
 def encrypt_payload(obj, password):
     """AES-GCM + PBKDF2. 페이지의 unlockData()와 짝."""
     import base64, secrets, hashlib
@@ -238,12 +257,13 @@ def main():
                 items.append(make_item(len(items) + 1, q, code))
     cats = copy_art()
     lst = [{'num': x['num'], 'id': x['id'], 'subject': x['subject'], 'type': x['type'], 'topic': x['topic'],
-            'stars': x['stars'], 'rate': x['rate'], 'full': x['full'], 'nconds': len(x['conds']), 'nsteps': len(x['steps']), 'art': art_path(x['id'])}
+            'stars': x['stars'], 'rate': x['rate'], 'full': x['full'], 'nconds': len(x['conds']), 'nsteps': len(x['steps']), 'art': art_path(x['id']),
+            'snip': snip_blocks(x['body'])}
            for x in items]
     essays = essay_items()
     japan = japan_items()
     elst = [{'num': e['num'], 'id': e['id'], 'univ': e['univ'], 'n': e['n'], 'title': e['title'], 'points': e['points'],
-             'minutes': e['minutes'], 'nsubs': len(e['subs']), 'field': e['field'], 'art': art_path('essay-' + str(e['num']))} for e in essays]
+             'minutes': e['minutes'], 'nsubs': len(e['subs']), 'field': e['field'], 'art': art_path('essay-' + str(e['num'])), 'snip': essay_snip(e)} for e in essays]
     for j in japan:
         j['art'] = art_path(j['id'])
 
