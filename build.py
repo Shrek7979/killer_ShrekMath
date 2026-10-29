@@ -1,8 +1,8 @@
-"""킬러 해부학 · 수학 — 사이트 빌드 스크립트
+"""킬러 분석학 · 수학 — 사이트 빌드 스크립트
 
 입력
   src/bank/q*_final.json   수능형 창작문항 은행 (한글 수식 문법)
-  anatomy/<문항id>.json    교사가 쓰는 완전 해부 파일 (LaTeX 문법, 선택)
+  anatomy/<문항id>.json    교사가 쓰는 완전 분석 파일 (LaTeX 문법, 선택)
   template.html            앱 템플릿
 
 출력
@@ -19,7 +19,7 @@ BANK = sorted(glob.glob(os.path.join(ROOT, 'src/bank/q*_final.json'))) + sorted(
 ANAT = os.path.join(ROOT, 'anatomy')
 SITE = os.path.join(ROOT, 'site')
 
-MIN_STARS = 3   # 이 난도 이상만 사이트에 올린다 (완전 해부 파일이 있는 문항은 항상 포함)
+MIN_STARS = 3   # 이 난도 이상만 사이트에 올린다 (완전 분석 파일이 있는 문항은 항상 포함)
 TYPE_OF = {'20': '20번형', '21': '21번형', '29': '29번형', '30': '30번형'}
 TYPE_DESC = {
     '20': '공통 4점 · 대수 고난도', '21': '공통 4점 · 미적분Ⅰ 최고난도',
@@ -87,7 +87,7 @@ def make_item(num, q, type_code):
     tdesc = TYPE_DESC[type_code] if type_code in TYPE_DESC else f"{q['subject']} · 수능 {qtype} 자리의 고난도"
     blocks = [conv_block(b) for b in q['body']]
     conds = build_conds(blocks)
-    for c in conds:                       # 교사 해부 파일의 조건 설명 합치기
+    for c in conds:                       # 교사 분석 파일의 조건 설명 합치기
         o = ov.get('conds', {}).get(c['id'], {})
         c['label'] = o.get('label', '')
         c['why'] = o.get('why', '')
@@ -159,6 +159,27 @@ def essay_items():
     return out
 
 
+def japan_items():
+    """src/japan/index.json + img/ → 일본 대학 문제 목록 (★4 이상, 이미지 기반)"""
+    p = os.path.join(ROOT, 'src/japan/index.json')
+    if not os.path.exists(p):
+        return []
+    out = []
+    for x in json.load(open(p, encoding='utf-8')):
+        if x['stars'] < 4:
+            continue
+        q = [f"jp/{x['id']}-q{k}.webp" for k in range(len(x['pages']))]
+        s = [f"jp/{x['id']}-s{k}.webp" for k in range(len(x['spages']))]
+        if not all(os.path.exists(os.path.join(ROOT, 'src/japan/img', os.path.basename(f))) for f in q + s):
+            continue
+        univ, _, track = x['univ'].partition('·')
+        text = re.sub(r'[\u200b\ue000-\uf8ff]', '', x['text']).strip()
+        out.append({'num': len(out) + 1, 'id': x['id'], 'year': x['year'], 'num0': x['num'], 'stars': x['stars'],
+                    'univ': univ.strip(), 'track': track.strip() or '이과', 'subj': x['subj'] or '', 'text': text[:90],
+                    'qimg': q, 'simg': s})
+    return out
+
+
 def encrypt_payload(obj, password):
     """AES-GCM + PBKDF2. 페이지의 unlockData()와 짝."""
     import base64, secrets, hashlib
@@ -189,6 +210,7 @@ def main():
             'stars': x['stars'], 'rate': x['rate'], 'full': x['full'], 'nconds': len(x['conds']), 'nsteps': len(x['steps'])}
            for x in items]
     essays = essay_items()
+    japan = japan_items()
     elst = [{'num': e['num'], 'id': e['id'], 'univ': e['univ'], 'n': e['n'], 'title': e['title'], 'points': e['points'],
              'minutes': e['minutes'], 'nsubs': len(e['subs']), 'field': e['field']} for e in essays]
 
@@ -197,35 +219,46 @@ def main():
     with open(os.path.join(ROOT, 'src/katex.inline.css'), encoding='utf-8') as f:
         tpl = tpl.replace('/*__KATEX_CSS__*/', f.read())
 
-    for d in ('data', 'edata'):
+    for d in ('data', 'edata', 'jp'):
         shutil.rmtree(os.path.join(SITE, d), ignore_errors=True)
-    for fn in ('list.json', 'elist.json', 'enc.json'):
+    for fn in ('list.json', 'elist.json', 'jlist.json', 'enc.json'):
         p = os.path.join(SITE, fn)
         if os.path.exists(p): os.remove(p)
     os.makedirs(SITE, exist_ok=True)
     dump = lambda obj, p: json.dump(obj, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    # 일본 문제 이미지는 암호화 여부와 상관없이 site/jp/ 에 복사 (단일 파일에는 data URI로 인라인)
+    import base64
+    os.makedirs(os.path.join(SITE, 'jp'), exist_ok=True)
+    jimg_js = {}
+    for j in japan:
+        for f in j['qimg'] + j['simg']:
+            src = os.path.join(ROOT, 'src/japan/img', os.path.basename(f))
+            shutil.copy(src, os.path.join(SITE, 'jp', os.path.basename(f)))
+            jimg_js[f] = 'data:image/webp;base64,' + base64.b64encode(open(src, 'rb').read()).decode()
+    jimg_script = 'window.__JIMG__=' + json.dumps(jimg_js) + ';'
 
     if args.key:
-        payload = {'list': lst, 'data': {x['num']: x for x in items}, 'elist': elst, 'edata': {e['num']: e for e in essays}}
+        payload = {'list': lst, 'data': {x['num']: x for x in items}, 'elist': elst, 'edata': {e['num']: e for e in essays}, 'jlist': japan}
         enc = encrypt_payload(payload, args.key)
         dump(enc, os.path.join(SITE, 'enc.json'))
-        data_js = 'window.__ENC__=' + json.dumps(enc) + ';'
+        data_js = 'window.__ENC__=' + json.dumps(enc) + ';' + jimg_script
         mode = f'암호화(접근 코드 사용)'
     else:
         os.makedirs(os.path.join(SITE, 'data')); os.makedirs(os.path.join(SITE, 'edata'))
-        dump(lst, os.path.join(SITE, 'list.json')); dump(elst, os.path.join(SITE, 'elist.json'))
+        dump(lst, os.path.join(SITE, 'list.json')); dump(elst, os.path.join(SITE, 'elist.json')); dump(japan, os.path.join(SITE, 'jlist.json'))
         for x in items: dump(x, os.path.join(SITE, 'data', f"{x['num']:03d}.json"))
         for e in essays: dump(e, os.path.join(SITE, 'edata', f"{e['num']:03d}.json"))
         data_js = ('window.__LIST__=' + json.dumps(lst, ensure_ascii=False) + ';\n' +
                    'window.__DATA__=' + json.dumps({x['num']: x for x in items}, ensure_ascii=False) + ';\n' +
                    'window.__ELIST__=' + json.dumps(elst, ensure_ascii=False) + ';\n' +
-                   'window.__EDATA__=' + json.dumps({e['num']: e for e in essays}, ensure_ascii=False) + ';')
+                   'window.__EDATA__=' + json.dumps({e['num']: e for e in essays}, ensure_ascii=False) + ';\n' +
+                   'window.__JLIST__=' + json.dumps(japan, ensure_ascii=False) + ';' + jimg_script)
         mode = '공개'
     data_js = data_js.replace('</', '<\\/')
     # 정적 호스팅(Vercel 등)용: 완전한 HTML 뼈대로 감싼다 (아티팩트용 파일은 뼈대 없이)
     skeleton = ('<!doctype html>\n<html lang="ko">\n<head>\n<meta charset="utf-8">\n'
                 '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n'
-                '<meta name="description" content="수능 킬러 문항 해부와 대학별 수리논술 기출 · 킬러 ShrekMath">\n'
+                '<meta name="description" content="수능 킬러 문항 분석와 대학별 수리논술 기출 · 킬러 ShrekMath">\n'
                 '<meta name="theme-color" content="#0d1511">\n'
                 '<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}</style>\n'
                 '</head>\n<body>\n__BODY__\n</body>\n</html>\n')
@@ -237,7 +270,7 @@ def main():
         f.write(tpl.replace('/*__INLINE_DATA__*/', data_js))
 
     nfull = sum(1 for x in items if x['full'])
-    print(f'킬러 {len(items)}개 (완전 해부 {nfull}개) · 논술 {len(essays)}개 · {mode} → site/, killer-math.html')
+    print(f'킬러 {len(items)}개 (완전 분석 {nfull}개) · 논술 {len(essays)}개 · 일본 {len(japan)}개 · {mode} → site/, killer-math.html')
 
 
 if __name__ == '__main__':
