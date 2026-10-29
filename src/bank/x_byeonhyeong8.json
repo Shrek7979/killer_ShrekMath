@@ -1,6 +1,6 @@
 [
  {
-  "id": "byeonhyeong8-01",
+  "id": "기출변형-01",
   "subject": "미적분Ⅰ",
   "topic": "정적분으로 정의된 함수의 극값",
   "stars": 4,
@@ -88,7 +88,7 @@
   ]
  },
  {
-  "id": "byeonhyeong8-02",
+  "id": "기출변형-02",
   "subject": "대수",
   "topic": "지수함수와 로그함수의 역함수 관계",
   "stars": 4,
@@ -150,7 +150,7 @@
   ]
  },
  {
-  "id": "byeonhyeong8-03",
+  "id": "기출변형-03",
   "subject": "미적분Ⅱ",
   "topic": "등비급수의 합",
   "stars": 4,
@@ -228,7 +228,7 @@
   ]
  },
  {
-  "id": "byeonhyeong8-04",
+  "id": "기출변형-04",
   "subject": "미적분Ⅱ",
   "topic": "역함수의 복원",
   "stars": 5,
@@ -311,7 +311,7 @@
   ]
  },
  {
-  "id": "byeonhyeong8-05",
+  "id": "기출변형-05",
   "subject": "확률과 통계",
   "topic": "확률의 덧셈정리",
   "stars": 4,
@@ -412,7 +412,7 @@
   ]
  },
  {
-  "id": "byeonhyeong8-06",
+  "id": "기출변형-06",
   "subject": "확률과 통계",
   "topic": "같은 것이 있는 순열과 중복조합",
   "stars": 4,
@@ -490,7 +490,7 @@
   ]
  },
  {
-  "id": "byeonhyeong8-07",
+  "id": "기출변형-07",
   "subject": "기하",
   "topic": "포물선과 타원의 정의",
   "stars": 3,
@@ -537,7 +537,7 @@
   ]
  },
  {
-  "id": "byeonhyeong8-08",
+  "id": "기출변형-08",
   "subject": "기하",
   "topic": "평면벡터의 내적",
   "stars": 4,

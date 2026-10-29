@@ -16,7 +16,7 @@ SOL = re.compile(r'^(\d{1,2})번\s*정답\s*(\d+)')
 SUBJ = {'공통(대수)': '대수', '대수': '대수', '공통(미적분Ⅰ)': '미적분Ⅰ', '미적분Ⅰ': '미적분Ⅰ', '미적분Ⅱ': '미적분Ⅱ',
         '확률과 통계': '확률과 통계', '기하': '기하', '수학Ⅰ': '대수', '수학Ⅱ': '미적분Ⅰ', '미적분': '미적분Ⅱ'}
 # 손으로 붙인 주제 (형식 B에는 주제 줄이 없다)
-TOPICS = {'2cha-20': '회전하는 두 점과 삼각방정식', '2cha-21': '평균값 정리의 c의 개수', '2cha-29': '등차수열과 각의 급수', '2cha-30': '지수곡선의 접선과 반사'}
+TOPICS = {'창작2차-20': '회전하는 두 점과 삼각방정식', '창작2차-21': '평균값 정리의 c의 개수', '창작2차-29': '등차수열과 각의 급수', '창작2차-30': '지수곡선의 접선과 반사'}
 
 
 def blocks_from(lines):
@@ -48,6 +48,7 @@ def blocks_from(lines):
 
 def parse(path):
     name = os.path.splitext(os.path.basename(path))[0]
+    name = {'2cha': '창작2차', 'byeonhyeong8': '기출변형'}.get(name, name)
     L = [l.rstrip('\n') for l in open(path, encoding='utf-8')]
     L = [re.sub(r'[-]', '', l) for l in L]
     L = [l if l.strip() in ('TBL', '/TBL') else l.strip() for l in L]
