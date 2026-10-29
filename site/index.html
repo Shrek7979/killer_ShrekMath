@@ -105,7 +105,11 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 .track{display:flex;gap:10px;overflow-x:auto;padding:16px 4px 22px;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:#444 transparent;margin:0 -4px}
 .track::-webkit-scrollbar{height:6px}.track::-webkit-scrollbar-thumb{background:#444;border-radius:3px}
 .card{flex:0 0 200px;aspect-ratio:2/3;scroll-snap-align:start;background:linear-gradient(170deg,color-mix(in srgb,var(--dc) 62%,#111),color-mix(in srgb,var(--dc) 18%,#111) 60%,#0d0d0d);border:0;border-radius:6px;padding:14px 14px 12px;text-align:left;display:grid;grid-template-rows:auto 1fr auto;gap:6px;min-width:0;position:relative;transition:transform .2s,box-shadow .2s;color:#fff;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.5)}
-.card::before{content:attr(data-big);position:absolute;right:-6px;bottom:-18px;font-family:var(--disp);font-weight:900;font-size:5.5rem;line-height:1;color:rgba(255,255,255,.07);letter-spacing:-.05em;pointer-events:none}
+.card::before{content:attr(data-big);position:absolute;right:8px;bottom:6px;font-family:var(--mono);font-weight:700;font-size:1rem;color:rgba(255,255,255,.35);pointer-events:none}
+.card .art{display:grid;place-items:center;min-height:86px;color:rgba(255,255,255,.92);text-shadow:0 2px 10px rgba(0,0,0,.6);pointer-events:none;overflow:hidden}
+.card .art .katex{font-size:1.9rem}
+.card .art.sm .katex{font-size:1.35rem}
+.card{grid-template-rows:auto auto 1fr auto}
 .card:hover,.card:focus-visible{transform:scale(1.07);z-index:2;box-shadow:0 14px 34px rgba(0,0,0,.7)}
 .card .top{display:flex;justify-content:space-between;align-items:center;font-size:.74rem;color:#ddd;gap:6px}
 .card .top .num{color:#fff;font-weight:700}
@@ -463,12 +467,25 @@ function home(){
   const eg=Object.values(S.erec).filter(r=>r.total);$('#rEssay').textContent=eg.length;
   $('#rEssayAvg').textContent=eg.length?Math.round(eg.reduce((a,b)=>a+b.score/b.total,0)/eg.length*100)+'%':'–';
   japan?homeJapan():essay?homeEssay():homeKiller();
+  tex($('#grid'));
 }
 function mosaic(){
   const m=$('#mosaic');if(m.children.length)return;
   const pool=[...LIST.map(x=>({t:x.topic,c:DC(x.stars),n:'#'+String(x.num).padStart(3,'0')})),...JLIST.slice(0,30).map(x=>({t:x.univ.replace('대학교',''),c:'var(--d'+x.stars+')',n:x.year})),...ELIST.slice(0,30).map(x=>({t:x.univ.replace(/\(.*$/,''),c:'var(--gold)',n:'논술'}))];
   for(let i=0;i<112;i++){const p=pool[(i*7)%pool.length];if(!p)break;const d=el('div',null,esc(p.t));d.dataset.n=p.n;d.style.setProperty('--mc',p.c);m.append(d)}
 }
+const ART=[
+ [/정규분포|표준정규|통계적 추정|신뢰구간/,'N(m,\\sigma^{2})'],[/이항분포/,'\\mathrm{B}(n,p)'],[/확률변수|기댓값|평균과 분산/,'\\mathrm{E}(X)'],
+ [/조건부확률|독립/,'\\mathrm{P}(A\\mid B)'],[/확률|주사위|동전|카드/,'\\mathrm{P}(A)'],[/중복조합|조합/,'{}_n\\mathrm{C}_r'],[/순열|경우의 수|배열|나열|비밀번호/,'{}_n\\mathrm{P}_r'],[/이항정리/,'(a+b)^{n}'],
+ [/변곡점|이계도함수/,"f''(x)"],[/접선|미분가능|도함수|극값|극대|극소|최대|최소|평균값/,"f'(x)"],[/정적분|넓이|부피|적분/,'\\int_{a}^{b}f(x)\\,dx'],[/치환적분|부분적분/,'\\int u\\,dv'],
+ [/급수|무한등비/,'\\sum_{n=1}^{\\infty}a_n'],[/등차|등비|수열|귀납|항|\bΣ\b/,'\\sum_{k=1}^{n}a_k'],[/극한|수렴|발산|lim/,'\\lim_{x\\to a}'],[/연속|불연속/,'\\lim_{x\\to a}f(x)=f(a)'],
+ [/역함수/,'f^{-1}(x)'],[/합성함수/,'(f\\circ g)(x)'],[/지수함수|지수|거듭제곱/,'y=a^{x}'],[/상용로그|로그/,'\\log_{a}x'],[/삼각방정식|사인|코사인|탄젠트|삼각함수|호도법|주기|각/,'\\sin\\theta'],[/덧셈정리/,'\\sin(\\alpha+\\beta)'],
+ [/포물선/,'y^{2}=4px'],[/타원/,'\\tfrac{x^{2}}{a^{2}}+\\tfrac{y^{2}}{b^{2}}=1'],[/쌍곡선/,'\\tfrac{x^{2}}{a^{2}}-\\tfrac{y^{2}}{b^{2}}=1'],[/내적|벡터/,'\\vec a\\cdot\\vec b'],[/정사영|공간|구|평면|정육면체|직선 l/,'x^{2}+y^{2}+z^{2}=r^{2}'],[/원\b|원의|원 위/,'x^{2}+y^{2}=r^{2}'],[/삼각형|사각형|넓이|도형|둘레/,'\\triangle\\mathrm{ABC}'],
+ [/약수|자연수|정수|소수|나머지|홀수|짝수/,'\\mathbb{Z}'],[/유리수|무리수|실수/,'\\mathbb{R}'],[/삼차함수|사차함수|다항|이차함수/,'y=x^{3}+ax^{2}'],[/방정식|실근|근/,'f(x)=0'],[/부등식/,'f(x)\\ge 0'],[/함수/,'y=f(x)'],[/집합/,'A\\cap B'],[/행렬/,'\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}'],
+];
+const ART_SUBJ={'대수':'y=a^{x}','미적분Ⅰ':'\\int f(x)\\,dx','미적분Ⅱ':'e^{x}','미적분':'\\int_{0}^{1}f','확률과 통계':'{}_n\\mathrm{C}_r','기하':'\\vec v','논술':'\\therefore'};
+function artFor(text,subj){for(const [re,tex] of ART){if(re.test(text))return tex}return ART_SUBJ[subj]||'\\infty'}
+function artEl(text,subj){const t=artFor(text,subj);const d=el('div','art'+(t.length>18?' sm':''),'$'+t+'$');return d}
 function newRow(title,count){const grid=$('#grid');const h=el('div','ghead',esc(title)+(count?` <span class="cnt">${count}</span>`:''));const t=el('div','track');grid.append(h,t);return t}
 function buildChips(){
   const sc=$('#subjChips');if(sc.children.length)return;
@@ -491,6 +508,7 @@ function homeKiller(){
     c.innerHTML=`<div class="top"><span><span class="num">#${String(x.num).padStart(3,'0')}</span> · ${x.type}</span><span class="subj" style="--sc:${SC(x.subject)}">${x.subject}</span></div>
       <div class="topic">${esc(x.topic)}</div>
       <div class="meta"><span><span class="stars">${'★'.repeat(x.stars)}${'☆'.repeat(5-x.stars)}</span><span class="dbadge">${DNAME[x.stars]||''}</span></span><span><span class="tag ${x.full?'full':''}">${x.full?'완전 분석':'풀이 '+x.nsteps+'단계'}</span></span></div>`;
+    c.insertBefore(artEl(x.topic,x.subject),c.querySelector('.topic'));
     if(rec) c.append(el('span','st '+(rec.skip?'skip':rec.ok?'ok':'no'),rec.skip?'열람':rec.ok?'정답 '+mmss(rec.secs):'오답'));
     c.onclick=()=>location.hash='q'+x.num;track.append(c);
   }}
@@ -507,6 +525,7 @@ function homeEssay(){
     c.innerHTML=`<div class="top"><span><span class="num">#E${String(x.num).padStart(3,'0')}</span> · 문제 ${x.n}</span><span class="subj" style="--sc:var(--s6)">${x.points?x.points+'점':'논술'}</span></div>
       <div class="topic">${esc(x.title)}</div>
       <div class="meta"><span>소문항 ${x.nsubs} · 제한 ${x.minutes}분</span><span><span class="tag">${esc(x.field||'')}</span></span></div>`;
+    c.insertBefore(artEl(x.field||'','논술'),c.querySelector('.topic'));
     if(rec) c.append(el('span','st '+(rec.total?'ok':'skip'),rec.total?`${rec.score}/${rec.total}`:'열람'));
     c.onclick=()=>location.hash='e'+x.num;track.append(c);
   }
@@ -525,6 +544,7 @@ function homeJapan(){
     c.innerHTML=`<div class="top"><span><span class="num">#J${String(x.num).padStart(3,'0')}</span> · ${x.year} · ${x.num0}번</span><span class="subj" style="--sc:${SC(x.subj==='미적분'?'미적분Ⅱ':x.subj)}">${esc(x.subj)}</span></div>
       <div class="topic">${esc(x.univ)} · ${esc(x.track)}</div>
       <div class="meta"><span><span class="stars">${'★'.repeat(x.stars)}${'☆'.repeat(5-x.stars)}</span><span class="dbadge">${x.stars>=5?'최고난도':'고난도'}</span></span><span><span class="tag" style="white-space:normal;line-height:1.3">${esc(x.text.slice(0,30))}…</span></span></div>`;
+    c.insertBefore(artEl(x.text,x.subj),c.querySelector('.topic'));
     if(rec) c.append(el('span','st '+(rec.r==='ok'?'ok':rec.r==='no'?'no':'skip'),rec.r==='ok'?'맞음':rec.r==='part'?'부분':rec.r==='no'?'틀림':'열람'));
     c.onclick=()=>location.hash='j'+x.num;track.append(c);
   }
