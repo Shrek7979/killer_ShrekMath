@@ -180,6 +180,36 @@ def japan_items():
     return out
 
 
+ART_EXT = ('.webp', '.png', '.jpg', '.jpeg')
+
+
+def art_path(key):
+    """src/art/<key>.<ext> 가 있으면 사이트 경로(art/<key>.<ext>) 반환"""
+    for ext in ART_EXT:
+        p = os.path.join(ROOT, 'src/art', key + ext)
+        if os.path.exists(p):
+            return 'art/' + key + ext
+    return ''
+
+
+def copy_art():
+    """src/art/ (문항별) 와 src/art/cat/ (주제별) 를 site/art/ 로"""
+    import shutil
+    dst = os.path.join(SITE, 'art'); shutil.rmtree(dst, ignore_errors=True)
+    cats = {}
+    for sub in ('', 'cat'):
+        src = os.path.join(ROOT, 'src/art', sub)
+        if not os.path.isdir(src):
+            continue
+        os.makedirs(os.path.join(dst, sub), exist_ok=True)
+        for f in os.listdir(src):
+            if f.lower().endswith(ART_EXT):
+                shutil.copy(os.path.join(src, f), os.path.join(dst, sub, f))
+                if sub == 'cat':
+                    cats[os.path.splitext(f)[0]] = 'art/cat/' + f
+    return cats
+
+
 def encrypt_payload(obj, password):
     """AES-GCM + PBKDF2. 페이지의 unlockData()와 짝."""
     import base64, secrets, hashlib
@@ -206,13 +236,16 @@ def main():
                 if q.get('stars', 3) < MIN_STARS and not os.path.exists(os.path.join(ANAT, q['id'] + '.json')):
                     continue
                 items.append(make_item(len(items) + 1, q, code))
+    cats = copy_art()
     lst = [{'num': x['num'], 'id': x['id'], 'subject': x['subject'], 'type': x['type'], 'topic': x['topic'],
-            'stars': x['stars'], 'rate': x['rate'], 'full': x['full'], 'nconds': len(x['conds']), 'nsteps': len(x['steps'])}
+            'stars': x['stars'], 'rate': x['rate'], 'full': x['full'], 'nconds': len(x['conds']), 'nsteps': len(x['steps']), 'art': art_path(x['id'])}
            for x in items]
     essays = essay_items()
     japan = japan_items()
     elst = [{'num': e['num'], 'id': e['id'], 'univ': e['univ'], 'n': e['n'], 'title': e['title'], 'points': e['points'],
-             'minutes': e['minutes'], 'nsubs': len(e['subs']), 'field': e['field']} for e in essays]
+             'minutes': e['minutes'], 'nsubs': len(e['subs']), 'field': e['field'], 'art': art_path('essay-' + str(e['num']))} for e in essays]
+    for j in japan:
+        j['art'] = art_path(j['id'])
 
     with open(os.path.join(ROOT, 'template.html'), encoding='utf-8') as f:
         tpl = f.read()
@@ -235,24 +268,34 @@ def main():
             src = os.path.join(ROOT, 'src/japan/img', os.path.basename(f))
             shutil.copy(src, os.path.join(SITE, 'jp', os.path.basename(f)))
             jimg_js[f] = 'data:image/webp;base64,' + base64.b64encode(open(src, 'rb').read()).decode()
+    # 카드 그림(art/)도 단일 파일에는 인라인
+    art_dir = os.path.join(SITE, 'art')
+    if os.path.isdir(art_dir):
+        for dp, _, fs in os.walk(art_dir):
+            for fn in fs:
+                if fn.lower().endswith(ART_EXT):
+                    full = os.path.join(dp, fn); rel = os.path.relpath(full, SITE).replace(os.sep, '/')
+                    mime = 'image/webp' if fn.lower().endswith('.webp') else 'image/png' if fn.lower().endswith('.png') else 'image/jpeg'
+                    jimg_js[rel] = f'data:{mime};base64,' + base64.b64encode(open(full, 'rb').read()).decode()
     jimg_script = 'window.__JIMG__=' + json.dumps(jimg_js) + ';'
 
     if args.key:
-        payload = {'list': lst, 'data': {x['num']: x for x in items}, 'elist': elst, 'edata': {e['num']: e for e in essays}, 'jlist': japan}
+        payload = {'list': lst, 'data': {x['num']: x for x in items}, 'elist': elst, 'edata': {e['num']: e for e in essays}, 'jlist': japan, 'cats': cats}
         enc = encrypt_payload(payload, args.key)
         dump(enc, os.path.join(SITE, 'enc.json'))
         data_js = 'window.__ENC__=' + json.dumps(enc) + ';' + jimg_script
         mode = f'암호화(접근 코드 사용)'
     else:
         os.makedirs(os.path.join(SITE, 'data')); os.makedirs(os.path.join(SITE, 'edata'))
-        dump(lst, os.path.join(SITE, 'list.json')); dump(elst, os.path.join(SITE, 'elist.json')); dump(japan, os.path.join(SITE, 'jlist.json'))
+        dump(lst, os.path.join(SITE, 'list.json')); dump(elst, os.path.join(SITE, 'elist.json')); dump(japan, os.path.join(SITE, 'jlist.json')); dump(cats, os.path.join(SITE, 'cats.json'))
         for x in items: dump(x, os.path.join(SITE, 'data', f"{x['num']:03d}.json"))
         for e in essays: dump(e, os.path.join(SITE, 'edata', f"{e['num']:03d}.json"))
         data_js = ('window.__LIST__=' + json.dumps(lst, ensure_ascii=False) + ';\n' +
                    'window.__DATA__=' + json.dumps({x['num']: x for x in items}, ensure_ascii=False) + ';\n' +
                    'window.__ELIST__=' + json.dumps(elst, ensure_ascii=False) + ';\n' +
                    'window.__EDATA__=' + json.dumps({e['num']: e for e in essays}, ensure_ascii=False) + ';\n' +
-                   'window.__JLIST__=' + json.dumps(japan, ensure_ascii=False) + ';' + jimg_script)
+                   'window.__JLIST__=' + json.dumps(japan, ensure_ascii=False) + ';\n' +
+                   'window.__CATS__=' + json.dumps(cats) + ';' + jimg_script)
         mode = '공개'
     data_js = data_js.replace('</', '<\\/')
     # 정적 호스팅(Vercel 등)용: 완전한 HTML 뼈대로 감싼다 (아티팩트용 파일은 뼈대 없이)

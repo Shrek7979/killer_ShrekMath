@@ -90,6 +90,14 @@ killer-math/
 - `steps`를 쓰지 않으면 은행의 `solution` 문단이 그대로 단계가 된다. 쓰면 그걸로 대체된다.
 - `uses`에 적은 조건은 그 카드에서 왼쪽 문항에 자동으로 색칠된다.
 
+## 카드 그림 (ChatGPT·OpenAI 이미지)
+
+카드 삽화는 기본적으로 내장 SVG 선 그림이다. 그림 파일을 넣으면 그걸 우선 쓴다.
+- 문항별: `src/art/<문항id>.png|webp` (예 `20A-02.png`, `2021-035.png`, 논술 `essay-12.png`)
+- 주제별: `src/art/cat/<그림키>.png` — 키는 `parabola, tangent, area, inflect, sine, exp, log, seq, series, limit, inverse, circle, triangle, ellipse, hyper, vector, space, sphere, dice, normal, count, integer, poly, set, ineq, motion, essay`
+- 자동 생성: `pip install openai pillow` → `OPENAI_API_KEY` 설정 → `python gen_images.py --cat` (주제별 27장) / `--killer` / `--all`. 자세한 건 `gen_images.py` 머리말.
+- 넣은 뒤 `python build.py`. 그림은 2:3 세로 비율이 가장 잘 맞는다.
+
 ## 화면 설정
 
 `template.html` 맨 아래 스크립트의 `SITE={author:'…', blog:'…'}`에서 만든이·블로그 링크를 바꾼다.
