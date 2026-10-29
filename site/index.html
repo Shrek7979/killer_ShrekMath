@@ -106,12 +106,23 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 .track::-webkit-scrollbar{height:6px}.track::-webkit-scrollbar-thumb{background:#444;border-radius:3px}
 .card{flex:0 0 200px;aspect-ratio:2/3;scroll-snap-align:start;background:linear-gradient(170deg,color-mix(in srgb,var(--dc) 62%,#111),color-mix(in srgb,var(--dc) 18%,#111) 60%,#0d0d0d);border:0;border-radius:6px;padding:14px 14px 12px;text-align:left;display:grid;grid-template-rows:auto 1fr auto;gap:6px;min-width:0;position:relative;transition:transform .2s,box-shadow .2s;color:#fff;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.5)}
 .card::before{content:attr(data-big);position:absolute;right:8px;bottom:6px;font-family:var(--mono);font-weight:700;font-size:1rem;color:rgba(255,255,255,.35);pointer-events:none}
-.card .art{display:grid;place-items:center;min-height:96px;pointer-events:none;overflow:hidden}
+.card .art{pointer-events:none;overflow:hidden}
+.card .art svg{width:100%;height:100%;display:block}
+.card .art .neon .s,.card .art .neon-soft .s{fill:none;stroke:#fff;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.card .art .neon-soft .s,.card .art .neon-soft .a,.card .art .neon-soft .f{stroke:inherit;stroke-width:5}
+.card .art .neon .a{fill:none;stroke:var(--gold);stroke-width:2.2;stroke-linecap:round}
+.card .art .neon .g{fill:none;stroke:rgba(255,255,255,.5);stroke-width:1.2}
+.card .art .neon .f{fill:rgba(255,255,255,.22);stroke:#fff;stroke-width:1.4}
+.card .art .neon .d{fill:#fff;stroke:none}
+.card .art .neon .d2{fill:none;stroke:var(--gold);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.card .art .neon .t{fill:#fff;font-size:18px;font-weight:700}
+.card .art .neon-soft .d,.card .art .neon-soft .g,.card .art .neon-soft .t,.card .art .neon-soft .d2{opacity:0}
 .card .art.img{position:absolute;inset:0;z-index:0;min-height:0}
 .card .art.img img{width:100%;height:100%;object-fit:cover;opacity:.9;mask-image:linear-gradient(180deg,#000 45%,transparent 92%);-webkit-mask-image:linear-gradient(180deg,#000 45%,transparent 92%)}
 .card>*{position:relative;z-index:1}
-.card:has(.art.img){grid-template-rows:auto 1fr auto}
-.card:has(.art.img) .topic{text-shadow:0 2px 10px rgba(0,0,0,.9)}
+.card{display:flex;flex-direction:column;background:#111}
+.card .topic{margin-top:auto}
+.card::after{content:"";position:absolute;inset:auto 0 0 0;height:50%;background:linear-gradient(180deg,transparent,rgba(0,0,0,.55) 55%,rgba(0,0,0,.85));z-index:0;pointer-events:none}
 .card .art svg{width:100%;max-width:150px;height:auto;filter:drop-shadow(0 4px 10px rgba(0,0,0,.5))}
 .card .art .s{fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
 .card .art .a{fill:none;stroke:var(--gold);stroke-width:2.5;stroke-linecap:round}
@@ -122,10 +133,10 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 .card .art .d2{fill:none;stroke:var(--gold);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
 .card .art .t{fill:#fff;font-size:18px;font-weight:700}
 .card{grid-template-rows:auto auto 1fr auto}
-.card:hover,.card:focus-visible{transform:scale(1.07);z-index:2;box-shadow:0 14px 34px rgba(0,0,0,.7)}
+.card:hover,.card:focus-visible{transform:scale(1.07);z-index:2;box-shadow:0 14px 34px rgba(0,0,0,.7),0 0 0 2px rgba(255,255,255,.25)}
 .card .top{display:flex;justify-content:space-between;align-items:center;font-size:.74rem;color:#ddd;gap:6px}
 .card .top .num{color:#fff;font-weight:700}
-.card .topic{font-family:var(--disp);font-weight:900;font-size:1.25rem;line-height:1.25;color:#fff;align-self:center;text-shadow:0 2px 8px rgba(0,0,0,.5);word-break:keep-all}
+.card .topic{font-family:var(--disp);font-weight:900;font-size:1.25rem;line-height:1.25;color:#fff;align-self:end;text-shadow:0 2px 10px rgba(0,0,0,.95),0 0 24px rgba(0,0,0,.8);word-break:keep-all}
 .card .meta{display:grid;gap:6px;font-size:.78rem;color:#ddd}
 .card .meta>span{display:flex;justify-content:space-between;align-items:center;gap:6px;flex-wrap:wrap}
 .subj{font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:3px;background:color-mix(in srgb,var(--sc) 35%,#000);color:#fff;white-space:nowrap}
@@ -528,9 +539,38 @@ const PICMAP=[
 const PIC_SUBJ={'대수':'exp','미적분Ⅰ':'tangent','미적분Ⅱ':'area','미적분':'area','확률과 통계':'dice','기하':'vector','논술':'essay'};
 function picFor(text,subj){for(const [re,k] of PICMAP){if(re.test(text))return k}return PIC_SUBJ[subj]||'poly'}
 let CATS={};
-function artEl(text,subj,own){const d=el('div','art');const k=picFor(text,subj);const src=own||CATS[k];
-  if(src){d.classList.add('img');const im=el('img');im.src=jimg(src);im.alt='';im.loading='lazy';d.append(im)}
-  else d.innerHTML=`<svg viewBox="0 0 120 80" aria-hidden="true">${PIC[k]}</svg>`;return d}
+const hash=s=>{let h=7;for(const ch of String(s))h=(h*31+ch.charCodeAt(0))>>>0;return h};
+/* 킬러 포스터: 모눈 배경 + 네온 곡선(글로우) + 조준경 + 붉은 사선. 카드마다 seed 로 기울기·위치가 조금씩 다르다 */
+function poster(k,seed,hue){
+  const r=hash(seed);const rot=((r%17)-8);const dx=(r>>3)%10-5;const dy=(r>>6)%14-7;const uid='g'+(r%100000);
+  const body=PIC[k].replace(/class="d"|class="dA"/g,'class="d"');
+  return `<svg viewBox="0 0 120 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs>
+    <linearGradient id="${uid}bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${hue}" stop-opacity=".55"/><stop offset=".55" stop-color="#0b0b0b"/><stop offset="1" stop-color="#000"/></linearGradient>
+    <pattern id="${uid}grid" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M12 0H0V12" fill="none" stroke="rgba(255,255,255,.07)" stroke-width=".6"/></pattern>
+    <filter id="${uid}glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="${uid}soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5"/></filter>
+    <radialGradient id="${uid}spot" cx=".5" cy=".42" r=".55"><stop offset="0" stop-color="${hue}" stop-opacity=".45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="120" height="180" fill="url(#${uid}bg)"/>
+  <rect width="120" height="180" fill="url(#${uid}grid)"/>
+  <rect width="120" height="180" fill="url(#${uid}spot)"/>
+  <path d="M-10 150 L130 110" stroke="var(--red)" stroke-width="2" opacity=".35"/>
+  <path d="M-10 158 L130 118" stroke="var(--red)" stroke-width=".8" opacity=".25"/>
+  <g transform="translate(${60+dx} ${78+dy}) rotate(${rot}) scale(.86) translate(-60 -40)">
+    <g class="neon-soft" filter="url(#${uid}soft)" stroke="${hue}" opacity=".9">${body}</g>
+    <g class="neon" filter="url(#${uid}glow)">${body}</g>
+  </g>
+  <g class="scope" transform="translate(${92+(r%9)} ${30+(r>>4)%10})" opacity=".85">
+    <circle r="11" fill="none" stroke="var(--red)" stroke-width="1.2"/><circle r="4" fill="none" stroke="var(--red)" stroke-width="1"/>
+    <path d="M-14 0H-6M6 0H14M0 -14V-6M0 6V14" stroke="var(--red)" stroke-width="1.2"/>
+  </g>
+</svg>`;
+}
+function artEl(text,subj,own,seed,hue){const d=el('div','art');const k=picFor(text,subj);const src=own||CATS[k];
+  d.classList.add('img');
+  if(src){const im=el('img');im.src=jimg(src);im.alt='';im.loading='lazy';d.append(im)}
+  else d.innerHTML=poster(k,seed||text,hue||'var(--gold)');return d}
 function newRow(title,count){const grid=$('#grid');const h=el('div','ghead',esc(title)+(count?` <span class="cnt">${count}</span>`:''));const t=el('div','track');grid.append(h,t);return t}
 function buildChips(){
   const sc=$('#subjChips');if(sc.children.length)return;
@@ -553,7 +593,7 @@ function homeKiller(){
     c.innerHTML=`<div class="top"><span><span class="num">#${String(x.num).padStart(3,'0')}</span> · ${x.type}</span><span class="subj" style="--sc:${SC(x.subject)}">${x.subject}</span></div>
       <div class="topic">${esc(x.topic)}</div>
       <div class="meta"><span><span class="stars">${'★'.repeat(x.stars)}${'☆'.repeat(5-x.stars)}</span><span class="dbadge">${DNAME[x.stars]||''}</span></span><span><span class="tag ${x.full?'full':''}">${x.full?'완전 분석':'풀이 '+x.nsteps+'단계'}</span></span></div>`;
-    c.insertBefore(artEl(x.topic,x.subject,x.art),c.querySelector('.topic'));
+    c.insertBefore(artEl(x.topic,x.subject,x.art,x.id,DC(x.stars)),c.querySelector('.topic'));
     if(rec) c.append(el('span','st '+(rec.skip?'skip':rec.ok?'ok':'no'),rec.skip?'열람':rec.ok?'정답 '+mmss(rec.secs):'오답'));
     c.onclick=()=>location.hash='q'+x.num;track.append(c);
   }}
@@ -570,7 +610,7 @@ function homeEssay(){
     c.innerHTML=`<div class="top"><span><span class="num">#E${String(x.num).padStart(3,'0')}</span> · 문제 ${x.n}</span><span class="subj" style="--sc:var(--s6)">${x.points?x.points+'점':'논술'}</span></div>
       <div class="topic">${esc(x.title)}</div>
       <div class="meta"><span>소문항 ${x.nsubs} · 제한 ${x.minutes}분</span><span><span class="tag">${esc(x.field||'')}</span></span></div>`;
-    c.insertBefore(artEl(x.field||'','논술',x.art),c.querySelector('.topic'));
+    c.insertBefore(artEl(x.field||'','논술',x.art,x.id,'var(--gold)'),c.querySelector('.topic'));
     if(rec) c.append(el('span','st '+(rec.total?'ok':'skip'),rec.total?`${rec.score}/${rec.total}`:'열람'));
     c.onclick=()=>location.hash='e'+x.num;track.append(c);
   }
@@ -589,7 +629,7 @@ function homeJapan(){
     c.innerHTML=`<div class="top"><span><span class="num">#J${String(x.num).padStart(3,'0')}</span> · ${x.year} · ${x.num0}번</span><span class="subj" style="--sc:${SC(x.subj==='미적분'?'미적분Ⅱ':x.subj)}">${esc(x.subj)}</span></div>
       <div class="topic">${esc(x.univ)} · ${esc(x.track)}</div>
       <div class="meta"><span><span class="stars">${'★'.repeat(x.stars)}${'☆'.repeat(5-x.stars)}</span><span class="dbadge">${x.stars>=5?'최고난도':'고난도'}</span></span><span><span class="tag" style="white-space:normal;line-height:1.3">${esc(x.text.slice(0,30))}…</span></span></div>`;
-    c.insertBefore(artEl(x.text,x.subj,x.art),c.querySelector('.topic'));
+    c.insertBefore(artEl(x.text,x.subj,x.art,x.id,DC(x.stars)),c.querySelector('.topic'));
     if(rec) c.append(el('span','st '+(rec.r==='ok'?'ok':rec.r==='no'?'no':'skip'),rec.r==='ok'?'맞음':rec.r==='part'?'부분':rec.r==='no'?'틀림':'열람'));
     c.onclick=()=>location.hash='j'+x.num;track.append(c);
   }
