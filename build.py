@@ -258,7 +258,7 @@ def main():
     # 정적 호스팅(Vercel 등)용: 완전한 HTML 뼈대로 감싼다 (아티팩트용 파일은 뼈대 없이)
     skeleton = ('<!doctype html>\n<html lang="ko">\n<head>\n<meta charset="utf-8">\n'
                 '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n'
-                '<meta name="description" content="수능 킬러 문항 분석와 대학별 수리논술 기출 · 킬러 ShrekMath">\n'
+                '<meta name="description" content="킬러들의 수학몰 · 수능 킬러 문항 분석, 대학별 수리논술, 일본 대학 입시 수학">\n'
                 '<meta name="theme-color" content="#0d1511">\n'
                 '<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}</style>\n'
                 '</head>\n<body>\n__BODY__\n</body>\n</html>\n')
