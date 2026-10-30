@@ -152,6 +152,7 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 .foot a{color:#aaa}
 .wrap{max-width:1300px}
 
+
 /* ───── 수술실(문항 화면) ───── */
 #op{min-height:100vh;display:flex;flex-direction:column}
 .opbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:linear-gradient(180deg,#000,#141414);border-bottom:1px solid var(--line);padding:10px 0;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
@@ -275,6 +276,72 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 .stable{width:100%;border-collapse:collapse;font-size:.95rem;margin-top:8px}
 .stable td,.stable th{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left}
 .stable td.n{font-family:var(--mono);text-align:right}
+
+/* ───── 모바일 ───── */
+.mob{display:none}
+#fullSheet{position:fixed;inset:0;z-index:40;background:var(--paper);color:var(--ink);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
+#fullSheet .fsbar{display:flex;gap:6px;align-items:center;padding:10px max(14px,env(safe-area-inset-right,0px)) 10px max(14px,env(safe-area-inset-left,0px));border-bottom:1px dashed var(--paper-line);font-family:var(--body);font-size:.85rem;color:#6b6659;background:rgba(0,0,0,.03)}
+#fullSheet .fsbar b{flex:1;font-family:var(--mono);letter-spacing:.12em;font-size:.76rem}
+#fullSheet .fsbar button{border:1px solid var(--paper-line);border-radius:7px;padding:6px 12px;font-size:.9rem;color:#4a4639;background:#fff9}
+#fullSheet .fsbar #fsClose{background:#1b1b1b;color:#fff;border-color:#1b1b1b;font-weight:700}
+#fullSheet .fsexam{flex:1;max-height:none;overflow:auto;padding:18px max(16px,env(safe-area-inset-right,0px)) calc(30px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));font-size:calc(1.2rem * var(--fs));line-height:2}
+#fullSheet .fsexam img.pg{cursor:zoom-in;transition:width .2s}
+#fullSheet .fsexam.zoom{overflow:auto}
+#fullSheet .fsexam.zoom img.pg{width:200%;max-width:none}
+#fullSheet .fsbar .hint{font-size:.72rem;color:#8a8577;margin-right:4px}
+@media (max-width:900px){
+  body{font-size:16px}
+  .mob{display:inline-block}
+  /* 홈 */
+  .topbar{gap:10px;padding:10px 0;flex-wrap:nowrap}
+  .topbar .logo{font-size:1.15rem}
+  .topbar .logo small{display:none}
+  .topbar nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+  .topbar nav::-webkit-scrollbar{display:none}
+  .topbar nav button{white-space:nowrap;padding:7px 10px;font-size:.95rem}
+  .topbar .cta{padding:7px 10px;font-size:.82rem;white-space:nowrap}
+  .hero{min-height:360px;padding:40px 0 36px}
+  .hero h1{font-size:2rem}
+  .hero p{font-size:1rem}
+  .hero .go{font-size:1.1rem;padding:12px 22px}
+  .stats{grid-template-columns:1fr;gap:10px;margin-top:16px}
+  .tile{padding:14px 16px}
+  .card{flex-basis:160px}
+  .card .topic{font-size:1.1rem}
+  /* 문항 화면 */
+  .opbar{gap:8px;padding:8px 0}
+  .opbar .back{padding:5px 9px;font-size:.85rem}
+  .opbar .id{display:none}
+  .opbar .ttl{font-size:1.05rem;order:0;flex:1;flex-basis:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .opbar .diff{font-size:.78rem;padding:4px 9px}
+  .stages{padding:8px 0 2px}
+  .stage{padding:5px 11px 5px 5px;font-size:.84rem}
+  .split{gap:10px;padding:8px 0 20px}
+  /* 문제지: 상단 고정, 접어두고 카드 보기 */
+  .sheet{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--opbar,52px));z-index:4;box-shadow:0 10px 24px rgba(0,0,0,.5)}
+  .topbar .cta{font-size:.8rem}
+  .sheet .tools{padding:7px 10px;gap:5px}
+  .sheet .tools button{padding:4px 8px;font-size:.8rem;white-space:nowrap}
+  .sheet .tools{overflow-x:auto;scrollbar-width:none}
+  .sheet .tools b{white-space:nowrap}
+  .nav{position:static;margin-top:4px}
+  .exam{max-height:30vh;padding:12px 14px 14px;font-size:calc(1.08rem * var(--fs));line-height:1.95}
+  .exam.fold{max-height:0;padding-top:0;padding-bottom:0;overflow:hidden}
+  .exam.fold::after{display:none}
+  .kcard{padding:16px 16px 18px;min-height:200px}
+  .kcard h2{font-size:1.4rem}
+  .kcard p{font-size:1rem}
+  .stepbox{font-size:1.04rem;padding:12px 14px}
+  .timer{font-size:2.4rem}
+  .nav{padding:8px}
+  .nav .btn{white-space:nowrap;padding:8px 12px;font-size:.9rem}
+  .nav .dots{max-width:70px}
+  .nav .cnt{font-size:.74rem}
+  .katex-display{font-size:.95em}
+  .lightmsg{display:none}
+}
+
+
 </style>
 
 <div id="gate" class="wrap" hidden>
@@ -381,7 +448,7 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
       <div class="tools"><b id="sheetLbl">문항</b>
         <button id="fsDown" title="글자 작게">가−</button><button id="fsUp" title="글자 크게">가+</button>
         <button id="numBtn" title="조건 번호 표시">조건 번호</button>
-        <button id="foldBtn">접기</button>
+        <button id="foldBtn">접기</button><button id="fullBtn" class="mob">전체 보기</button>
       </div>
       <div class="exam" id="exam"><div class="examtext" id="examText"></div><div class="veil" id="veil"><div><b>잠겨 있어요</b>‘실전 시작’을 누르면 문항이 열려요.<br>해설은 채점 뒤에 열립니다.</div></div></div>
     </div>
@@ -398,6 +465,7 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 </div>
 <div class="toast" id="toast"></div>
 <div id="lb" hidden><img id="lbimg" alt=""><button id="lbx">✕ 닫기</button></div>
+<div id="fullSheet" hidden><div class="fsbar"><b>문제</b><span class="hint" id="fsHint" hidden>그림을 누르면 확대</span><button id="fsDown2">가−</button><button id="fsUp2">가+</button><button id="fsClose">✕ 닫기</button></div><div class="exam open fsexam" id="fullExam"></div></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
@@ -679,7 +747,7 @@ async function open(n,c){
   $('#opId').innerHTML=`#${String(D.num).padStart(3,'0')} · ${D.id} · ${D.type} <span class="subj" style="--sc:${SC(D.subject)}">${D.subject}</span>`;
   $('#opTitle').textContent=D.topic;$('#opStars').innerHTML=`<span class="diff" style="--dc:${DC(D.stars)}">${'★'.repeat(D.stars)} ${DNAME[D.stars]||''}</span>`;
   $('#sheetLbl').textContent='문항';$('#numBtn').hidden=false;
-  renderExam();buildPages();go(Math.min(c||0,pages.length-1),true);
+  renderExam();buildPages();go(Math.min(c||0,pages.length-1),true);requestAnimationFrame(measureBar);
 }
 function renderExam(){
   const root=$('#examText');root.innerHTML='';
@@ -726,7 +794,7 @@ function go(i,silent){
   $('#prev').disabled=i===0;$('#next').textContent=i===pages.length-1?'목록으로':'다음 →';$('#next').style.setProperty('--kc',`var(--k-${p.k})`);
   $('#cnt').textContent=`${STAGE[p.k][0]} · ${i+1}/${pages.length}`;
   const dots=$('#dots');dots.innerHTML='';pages.forEach((q,j)=>dots.append(el('i',(j===i?'cur':'')+(j>0&&!unlocked?' lk':''))));
-  if(!silent&&window.innerWidth<=900) $('#cardzone').scrollIntoView({behavior:'smooth',block:'start'});
+  if(!silent&&window.innerWidth<=900){const sh=$('.sheet').getBoundingClientRect();const top=window.scrollY+$('#cardzone').getBoundingClientRect().top-sh.height-parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--opbar')||52)-12;window.scrollTo({top:Math.max(0,top),behavior:'smooth'})}
   $('#exam').classList.toggle('shownum',p.k==='cond');$('#numBtn').classList.toggle('on',p.k==='cond');
 }
 $('#prev').onclick=()=>go(cur-1);$('#next').onclick=()=>cur===pages.length-1?(location.hash=''):go(cur+1);
@@ -795,7 +863,7 @@ function solveBody(){
   const tm=el('div','timer num','00:00');b.append(tm);const lm=el('div','lead num',`제한 ${mmss(lim*60)}`);b.append(lm);
   const row=el('div','btnrow');const st=el('button','btn','실전 시작');const skip=el('button','btn ghost sm','채점 없이 분석만 볼래요');row.append(st,skip);b.append(row);
   const ai=el('div','ansin');ai.hidden=true;const inp=el('input');inp.type='number';inp.min=1;inp.max=999;inp.id='answer';inp.placeholder='정답';const gb=el('button','btn','채점');ai.append(el('span',null,'내 답'),inp,gb);b.append(ai);
-  st.onclick=()=>{unlocked=false;$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;ai.hidden=false;inp.focus();t0=Date.now();stopTimer();
+  st.onclick=()=>{unlocked=false;$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;ai.hidden=false;if(window.innerWidth>900)inp.focus();else{$('#fullBtn').click()}t0=Date.now();stopTimer();
     timer=setInterval(()=>{const s=Math.floor((Date.now()-t0)/1000);tm.textContent=mmss(s);if(s>lim*60){tm.classList.add('over');lm.textContent='제한시간 초과 · 끝까지 풀어도 됩니다'}},500)};
   const grade=()=>{if(inp.value==='')return;stopTimer();const secs=Math.floor((Date.now()-t0)/1000);const ok=String(inp.value).trim()==String(D.answer);
     S.rec[D.num]={ok,ans:inp.value,answer:D.answer,secs,date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(0)};
@@ -815,7 +883,7 @@ async function openEssay(n,c){
   $('#opId').innerHTML=`#E${String(E.num).padStart(3,'0')} · 문제 ${E.n} <span class="subj" style="--sc:var(--s6)">${E.points?E.points+'점':'논술'}</span>`;
   $('#opTitle').textContent=E.univ;$('#opStars').innerHTML=`<span class="diff" style="--dc:var(--gold)">제한 ${E.minutes}분</span>`;
   $('#sheetLbl').textContent='제시문 · 문제';$('#numBtn').hidden=true;
-  renderEssaySheet();buildPages();go(Math.min(c||0,pages.length-1),true);
+  renderEssaySheet();buildPages();go(Math.min(c||0,pages.length-1),true);requestAnimationFrame(measureBar);
 }
 function renderEssaySheet(){
   const root=$('#examText');root.innerHTML='';
@@ -836,7 +904,7 @@ function renderEssayCard(p){
     b.append(el('p','lead',`시작을 누르면 제시문과 문제가 열리고 시간이 갑니다. 제한시간 <b>${E.minutes}분</b>(대학 시험시간 ÷ 문항 수). 답안은 실제 시험처럼 종이에 쓰고, 다 쓰면 ‘작성 완료’를 누르세요.`));
     const tm=el('div','timer num','00:00');b.append(tm);const lm=el('div','lead num',`제한 ${mmss(E.minutes*60)}`);b.append(lm);
     const row=el('div','btnrow');const st=el('button','btn','실전 시작');const done=el('button','btn','답안 작성 완료');done.hidden=true;const skip=el('button','btn ghost sm','답안 없이 보기만 할래요');row.append(st,done,skip);b.append(row);
-    st.onclick=()=>{$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;done.hidden=false;t0=Date.now();stopTimer();
+    st.onclick=()=>{$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;done.hidden=false;if(window.innerWidth<=900)$('#fullBtn').click();t0=Date.now();stopTimer();
       timer=setInterval(()=>{const s=Math.floor((Date.now()-t0)/1000);tm.textContent=mmss(s);if(s>E.minutes*60){tm.classList.add('over');lm.textContent='제한시간 초과 · 끝까지 써도 됩니다'}},500)};
     done.onclick=()=>{stopTimer();S.erec[E.num]={secs:Math.floor((Date.now()-t0)/1000),score:0,total:0,sub:{},date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(1)};
     skip.onclick=()=>{S.erec[E.num]={skip:true,secs:0,score:0,total:0,sub:{},date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(1)};
@@ -884,7 +952,7 @@ async function openJapan(n,c){
   $('#sheetLbl').textContent='문제';$('#numBtn').hidden=true;
   const root=$('#examText');root.innerHTML='';J.qimg.forEach(p=>{const im=el('img','pg');im.src=jimg(p);im.alt='문제';root.append(im)});
   $('#exam').classList.toggle('open',unlocked);$('#exam').classList.remove('fold');$('#foldBtn').textContent='접기';
-  buildPages();go(Math.min(c||0,pages.length-1),true);
+  buildPages();go(Math.min(c||0,pages.length-1),true);requestAnimationFrame(measureBar);
 }
 function renderJapanCard(p){
   const w=el('div');const rec=S.jrec[J.num];const lim=JLIMIT[J.stars]||25;
@@ -895,7 +963,7 @@ function renderJapanCard(p){
     b.append(el('p','lead',`일본 대학 입시는 전부 서술형입니다. 시작을 누르면 문제가 열리고 시간이 갑니다. 제한시간 <b>${lim}분</b>. 풀이를 종이에 쓰고 ‘풀이 완료’를 누르면 해설이 열려요.`));
     const tm=el('div','timer num','00:00');b.append(tm);const lm=el('div','lead num',`제한 ${mmss(lim*60)}`);b.append(lm);
     const row=el('div','btnrow');const st=el('button','btn','실전 시작');const done=el('button','btn','풀이 완료');done.hidden=true;const skip=el('button','btn ghost sm','풀지 않고 해설만 볼래요');row.append(st,done,skip);b.append(row);
-    st.onclick=()=>{$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;done.hidden=false;t0=Date.now();stopTimer();
+    st.onclick=()=>{$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;done.hidden=false;if(window.innerWidth<=900)$('#fullBtn').click();t0=Date.now();stopTimer();
       timer=setInterval(()=>{const s=Math.floor((Date.now()-t0)/1000);tm.textContent=mmss(s);if(s>lim*60){tm.classList.add('over');lm.textContent='제한시간 초과 · 끝까지 풀어도 됩니다'}},500)};
     done.onclick=()=>{stopTimer();S.jrec[J.num]={secs:Math.floor((Date.now()-t0)/1000),r:'',date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(1)};
     skip.onclick=()=>{S.jrec[J.num]={skip:true,secs:0,r:'',date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(1)};
@@ -916,7 +984,14 @@ function renderJapanCard(p){
 }
 
 document.addEventListener('click',e=>{const im=e.target.closest('img.pg');if(im){$('#lbimg').src=im.src;$('#lb').hidden=false}});
-$('#lbx').onclick=()=>$('#lb').hidden=true;$('#lb').onclick=e=>{if(e.target.id==='lb')$('#lb').hidden=true};
+$('#lbx').onclick=()=>$('#lb').hidden=true;
+function measureBar(){const h=$('#op .opbar').getBoundingClientRect().height;document.documentElement.style.setProperty('--opbar',h+'px')}
+window.addEventListener('resize',measureBar);
+$('#fullExam').addEventListener('click',e=>{if(e.target.closest('img.pg')){e.stopPropagation();$('#fullExam').classList.toggle('zoom')}},true);
+$('#fullBtn').onclick=()=>{if(!$('#exam').classList.contains('open')){toast('먼저 실전 시작을 눌러 문항을 여세요');return}$('#fullExam').innerHTML=$('#examText').innerHTML;$('#fullExam').classList.remove('zoom');$('#fsHint').hidden=!$('#fullExam').querySelector('img.pg');$('#fullSheet').hidden=false;document.body.style.overflow='hidden'};
+$('#fsClose').onclick=()=>{$('#fullSheet').hidden=true;document.body.style.overflow=''};
+$('#fsUp2').onclick=()=>$('#fsUp').click();$('#fsDown2').onclick=()=>$('#fsDown').click();
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#fullSheet').hidden){$('#fsClose').click();e.stopImmediatePropagation()}},true);$('#lb').onclick=e=>{if(e.target.id==='lb')$('#lb').hidden=true};
 
 /* ───────── 라우팅 ───────── */
 function route(){const m=location.hash.match(/^#([qej])(\d+)(?:-(\d+))?$/);if(m){(m[1]==='q'?open:m[1]==='e'?openEssay:openJapan)(+m[2],+(m[3]||0))}else home()}
