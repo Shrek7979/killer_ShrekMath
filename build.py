@@ -322,11 +322,18 @@ def main():
     skeleton = ('<!doctype html>\n<html lang="ko">\n<head>\n<meta charset="utf-8">\n'
                 '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n'
                 '<meta name="description" content="킬러들의 수학몰 · 수능 킬러 문항 분석, 대학별 수리논술, 일본 대학 입시 수학">\n'
-                '<meta name="theme-color" content="#0d1511">\n'
+                '<meta name="theme-color" content="#141414">\n'
+                '<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="수학몰">\n'
+                '<link rel="manifest" href="manifest.json">\n'
                 '<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}</style>\n'
                 '</head>\n<body>\n__BODY__\n</body>\n</html>\n')
     with open(os.path.join(SITE, 'index.html'), 'w', encoding='utf-8') as f:
         f.write(skeleton.replace('__BODY__', tpl.replace('/*__INLINE_DATA__*/', '')))
+    with open(os.path.join(SITE, 'manifest.json'), 'w', encoding='utf-8') as f:
+        json.dump({'name': '킬러들의 수학몰', 'short_name': '수학몰', 'start_url': './', 'display': 'standalone', 'background_color': '#141414', 'theme_color': '#141414',
+                   'icons': [{'src': 'icon.svg', 'sizes': 'any', 'type': 'image/svg+xml'}]}, f, ensure_ascii=False, indent=1)
+    with open(os.path.join(SITE, 'icon.svg'), 'w', encoding='utf-8') as f:
+        f.write('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="#141414"/><circle cx="50" cy="50" r="28" fill="none" stroke="#e50914" stroke-width="6"/><circle cx="50" cy="50" r="10" fill="none" stroke="#e50914" stroke-width="5"/><path d="M50 8v18M50 74v18M8 50h18M74 50h18" stroke="#e50914" stroke-width="6" stroke-linecap="round"/></svg>')
     with open(os.path.join(SITE, 'vercel.json'), 'w', encoding='utf-8') as f:
         json.dump({'cleanUrls': True, 'headers': [{'source': '/(.*)\\.json', 'headers': [{'key': 'Cache-Control', 'value': 'public, max-age=300'}]}]}, f, indent=1)
     with open(os.path.join(ROOT, 'killer-math.html'), 'w', encoding='utf-8') as f:

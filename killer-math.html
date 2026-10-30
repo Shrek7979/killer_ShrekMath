@@ -50,7 +50,8 @@ p{word-break:keep-all}
 .topbar nav button{color:#e5e5e5;font-weight:700;font-size:1rem;padding:8px 12px;border-radius:6px;opacity:.75}
 .topbar nav button.on{opacity:1;color:#fff;background:rgba(255,255,255,.08)}
 .topbar nav button .n{font-family:var(--mono);font-size:.72rem;color:var(--mute);margin-left:4px}
-.topbar .cta{background:var(--red);color:#fff;font-weight:700;padding:8px 16px;border-radius:4px;font-size:.95rem}
+.topbar .cta{background:var(--red);color:#fff;font-weight:700;padding:8px 16px;border-radius:4px;font-size:.95rem;white-space:nowrap}
+.topbar .cta.ghostc{background:rgba(255,255,255,.12);color:#fff}
 .hero{position:relative;min-height:520px;display:grid;place-items:center;text-align:center;padding:70px 0 60px;margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px))) 0 calc(-1 * max(16px,env(safe-area-inset-right,0px)));overflow:hidden;border-bottom:8px solid #232323}
 .mosaic{position:absolute;inset:-25% -8%;display:grid;grid-template-columns:repeat(16,1fr);gap:8px;transform:rotate(-6deg) scale(1.06);opacity:.5;pointer-events:none}
 @media (max-width:700px){.mosaic{grid-template-columns:repeat(7,1fr)}}
@@ -147,7 +148,7 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 .tag{font-size:.72rem;padding:2px 8px;border-radius:3px;border:1px solid rgba(255,255,255,.3);color:#eee;white-space:nowrap}
 .tag.full{border-color:var(--red);color:#fff;background:var(--red)}
 .st{position:absolute;top:10px;right:10px;font-family:var(--mono);font-size:.72rem;padding:3px 7px;border-radius:3px;font-weight:700}
-.st.ok{background:var(--green);color:#000} .st.no{background:var(--red);color:#fff} .st.skip{background:#555;color:#fff}
+.st.ok{background:var(--green);color:#000} .st.late{background:#ff9f3a;color:#000} .st.no{background:var(--red);color:#fff} .st.skip{background:#555;color:#fff}
 .empty{color:var(--mute);padding:40px 0;text-align:center}
 .foot{margin-top:44px;color:#777;font-size:.84rem;line-height:1.8;border-top:1px solid #2a2a2a;padding-top:20px}
 .foot a{color:#aaa}
@@ -283,7 +284,8 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 #fullSheet{position:fixed;inset:0;z-index:40;background:var(--paper);color:var(--ink);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
 #fullSheet .fsbar{display:flex;gap:6px;align-items:center;padding:10px max(14px,env(safe-area-inset-right,0px)) 10px max(14px,env(safe-area-inset-left,0px));border-bottom:1px dashed var(--paper-line);font-family:var(--body);font-size:.85rem;color:#6b6659;background:rgba(0,0,0,.03)}
 #fullSheet .fsbar b{flex:1;font-family:var(--mono);letter-spacing:.12em;font-size:.76rem}
-#fullSheet .fsbar button{border:1px solid var(--paper-line);border-radius:7px;padding:6px 12px;font-size:.9rem;color:#4a4639;background:#fff9}
+#fullSheet .fsbar button{border:1px solid var(--paper-line);border-radius:7px;padding:6px 12px;font-size:.9rem;color:#4a4639;background:#fff9;white-space:nowrap;flex:none}
+#fullSheet .fsbar .tmr{flex:none}
 #fullSheet .fsbar #fsClose{background:#1b1b1b;color:#fff;border-color:#1b1b1b;font-weight:700}
 #fullSheet .fsexam{flex:1;max-height:none;overflow:auto;padding:18px max(16px,env(safe-area-inset-right,0px)) calc(30px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));font-size:calc(1.2rem * var(--fs));line-height:2}
 #fullSheet .fsexam img.pg{cursor:zoom-in;transition:width .2s}
@@ -291,6 +293,13 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 #fullSheet .fsexam.zoom img.pg{width:200%;max-width:none}
 #fullSheet .fsbar .tmr,.sheet .tools .tmr{font-family:var(--mono);font-weight:700;font-size:1.05rem;color:#1b1b1b;background:var(--gold);padding:3px 10px;border-radius:8px;letter-spacing:.04em;white-space:nowrap}
 #fullSheet .fsbar .tmr.over,.sheet .tools .tmr.over{background:var(--red);color:#fff}
+#fullSheet .fsbar .tmr.warn,.sheet .tools .tmr.warn{background:#ff9f3a;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:.55}}
+.timer.warn{color:#ff9f3a}
+#pauseVeil{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.92);display:grid;place-items:center;text-align:center;color:#fff;padding:20px}
+#pauseVeil b{font-family:var(--disp);font-size:2.4rem;display:block;margin-bottom:8px}
+#pauseVeil p{color:#bbb;margin:0 0 18px}
+#pauseVeil .btn{--kc:var(--red);font-size:1.2rem;padding:14px 26px}
 #fullSheet .fsbar .tmr{font-size:1.25rem;padding:5px 14px}
 #fullSheet .fsbar .hint{font-size:.72rem;color:#8a8577;margin-right:4px}
 @media (max-width:900px){
@@ -304,13 +313,19 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
   .topbar nav::-webkit-scrollbar{display:none}
   .topbar nav button{white-space:nowrap;padding:7px 10px;font-size:.95rem}
   .topbar .cta{padding:7px 10px;font-size:.82rem;white-space:nowrap}
+  .topbar .cta .lbl{display:none}
+  #fullSheet .fsbar{gap:5px;padding-left:10px;padding-right:10px}
+  #fullSheet .fsbar b,#fullSheet .fsbar .hint{display:none}
+  #fullSheet .fsbar .tmr{font-size:1.1rem;padding:4px 10px;margin-right:auto}
+  #fullSheet .fsbar button{padding:6px 9px;font-size:.84rem}
+  #fsPause .lbl,#fsAnswer .lbl{display:none}
   .hero{min-height:360px;padding:40px 0 36px}
   .hero h1{font-size:2rem}
   .hero p{font-size:1rem}
   .hero .go{font-size:1.1rem;padding:12px 22px}
-  .stats{grid-template-columns:1fr;gap:10px;margin-top:16px}
+  .stats{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin-top:16px}
   .tile{padding:14px 16px}
-  .card{flex-basis:160px}
+  .card{flex-basis:170px}
   .card .topic{font-size:1.1rem}
   /* 문항 화면 */
   .opbar{gap:8px;padding:8px 0}
@@ -367,7 +382,7 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
       <button data-tab="essay">논술관<span class="n" id="nEssay">0</span></button>
       <button data-tab="japan">일본관<span class="n" id="nJapan">0</span></button>
     </nav>
-    <button class="cta" id="exportBtn">영수증 뽑기</button>
+    <button class="cta ghostc" id="randBtn" title="아직 안 푼 문제 중 하나">🎲<span class="lbl"> 아무거나</span></button><button class="cta" id="exportBtn">🧾<span class="lbl"> 영수증 뽑기</span></button>
   </div>
   <div class="hero">
     <div class="mosaic" id="mosaic"></div>
@@ -389,6 +404,7 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
     </div>
     <div class="tile" style="--tc:var(--gold)">
       <div class="lbl">영수증 · 실전 기록</div>
+      <div class="row"><span>오늘 <b id="rToday">0</b>문항</span><span>연속 <b id="rStreak">0</b>일</span><span>복습 필요 <b id="rReview">0</b></span></div>
       <div class="row"><span>킬러 <b id="rSolved">0</b></span><span>정답률 <b id="rAcc">–</b></span><span>평균 <b id="rAvg">–</b></span><span>논술 <b id="rEssay">0</b></span><span>논술 평균 <b id="rEssayAvg">–</b></span></div>
       <div class="sub">채점을 거친 문항만 셉니다. 기록은 이 브라우저에만 저장돼요.</div>
       <textarea class="copybox" id="exportBox" hidden readonly></textarea>
@@ -410,6 +426,7 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
     <button class="chip" data-k="hard" data-v="1">어려운 순</button>
     <button class="chip" data-k="full" data-v="1">완전 분석만</button>
     <button class="chip" data-k="wrong" data-v="1">틀린 문항만</button>
+    <button class="chip" data-k="review" data-v="1">복습 필요 (오답·시간초과)</button>
     <button class="chip" data-k="todo" data-v="1">안 푼 문항만</button>
   </div>
   <div class="filters" id="efilters" hidden>
@@ -449,7 +466,7 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
   <div class="stages" id="stages"></div>
   <div class="split">
     <div class="sheet">
-      <div class="tools"><b id="sheetLbl">문항</b><span class="tmr" id="sheetTimer" hidden>00:00</span>
+      <div class="tools"><b id="sheetLbl">문항</b><span class="tmr" id="sheetTimer" hidden>00:00</span><button id="sheetPause" hidden title="일시정지 (P)">⏸</button>
         <button id="fsDown" title="글자 작게">가−</button><button id="fsUp" title="글자 크게">가+</button>
         <button id="numBtn" title="조건 번호 표시">조건 번호</button>
         <button id="foldBtn">접기</button><button id="fullBtn" class="mob">전체 보기</button>
@@ -469,7 +486,8 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 </div>
 <div class="toast" id="toast"></div>
 <div id="lb" hidden><img id="lbimg" alt=""><button id="lbx">✕ 닫기</button></div>
-<div id="fullSheet" hidden><div class="fsbar"><b>문제</b><span class="tmr" id="fsTimer" hidden>00:00</span><span class="hint" id="fsHint" hidden>그림을 누르면 확대</span><button id="fsDown2">가−</button><button id="fsUp2">가+</button><button id="fsAnswer" hidden>답 입력</button><button id="fsClose">✕ 닫기</button></div><div class="exam open fsexam" id="fullExam"></div></div>
+<div id="pauseVeil" hidden><div><b>일시정지</b><p>시계가 멈췄어요. 계속하려면 아래를 누르세요.</p><button class="btn" id="pauseResume">▶ 계속 풀기</button></div></div>
+<div id="fullSheet" hidden><div class="fsbar"><b>문제</b><span class="tmr" id="fsTimer" hidden>00:00</span><button id="fsPause" hidden>⏸<span class="lbl"> 일시정지</span></button><span class="hint" id="fsHint" hidden>그림을 누르면 확대</span><button id="fsDown2">가−</button><button id="fsUp2">가+</button><button id="fsAnswer" hidden>✎ 답</button><button id="fsClose">✕ 닫기</button></div><div class="exam open fsexam" id="fullExam"></div></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
@@ -512,7 +530,7 @@ const md=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
 
 /* ───────── 데이터 ───────── */
 let LIST=[],ELIST=[],JLIST=[],D=null,E=null,J=null,pages=[],cur=0,unlocked=false,timer=null,t0=0,mode='killer';
-let filt={subj:'',type:'',hard:false,full:false,wrong:false,todo:false}, efilt={univ:'',round:'',todo:false}, jfilt={univ:'',year:'',subj:'',track:'',five:false,todo:false};
+let filt={subj:'',type:'',hard:false,full:false,wrong:false,review:false,todo:false}, efilt={univ:'',round:'',todo:false}, jfilt={univ:'',year:'',subj:'',track:'',five:false,todo:false};
 const JLIMIT={4:25,5:35};
 async function loadJSON(name){ return (await fetch(name)).json() }
 async function loadList(){ if(window.__LIST__) return window.__LIST__; return loadJSON('list.json') }
@@ -566,6 +584,10 @@ function home(){
   $('#rankBar').style.width=(nx?((g.length-r[0])/(nx[0]-r[0])*100):100)+'%';
   $('#rSolved').textContent=g.length;$('#rAcc').textContent=g.length?Math.round(ok/g.length*100)+'%':'–';
   $('#rAvg').textContent=g.length?mmss(Math.round(g.reduce((a,b)=>a+b.secs,0)/g.length)):'–';
+  const all=[...Object.values(S.rec),...Object.values(S.erec),...Object.values(S.jrec)].filter(r=>r.date&&!r.skip);
+  const today=new Date().toISOString().slice(0,10);$('#rToday').textContent=all.filter(r=>r.date===today).length;
+  const days=new Set(all.map(r=>r.date));let streak=0;for(let d=new Date();;d.setDate(d.getDate()-1)){const k=d.toISOString().slice(0,10);if(days.has(k))streak++;else if(k!==today)break;else continue;}$('#rStreak').textContent=streak;
+  $('#rReview').textContent=g.filter(r=>!r.ok||r.over).length;
   const eg=Object.values(S.erec).filter(r=>r.total);$('#rEssay').textContent=eg.length;
   $('#rEssayAvg').textContent=eg.length?Math.round(eg.reduce((a,b)=>a+b.score/b.total,0)/eg.length*100)+'%':'–';
   japan?homeJapan():essay?homeEssay():homeKiller();
@@ -672,7 +694,7 @@ function homeKiller(){
   buildChips();
   const grid=$('#grid');grid.innerHTML='';
   let L=LIST.filter(x=>(!filt.subj||x.subject===filt.subj)&&(!filt.type||x.type===filt.type)&&(!filt.full||x.full)
-    &&(!filt.wrong||(S.rec[x.num]&&!S.rec[x.num].skip&&!S.rec[x.num].ok))&&(!filt.todo||!S.rec[x.num]||S.rec[x.num].skip));
+    &&(!filt.wrong||(S.rec[x.num]&&!S.rec[x.num].skip&&!S.rec[x.num].ok))&&(!filt.review||(S.rec[x.num]&&!S.rec[x.num].skip&&(!S.rec[x.num].ok||S.rec[x.num].over)))&&(!filt.todo||!S.rec[x.num]||S.rec[x.num].skip));
   if(filt.hard) L=[...L].sort((a,b)=>b.stars-a.stars||a.num-b.num);
   if(!L.length){grid.append(el('div','empty','조건에 맞는 문항이 없어요'));return}
   const groups=filt.hard?[['어려운 순',L]]:[...new Set(L.map(x=>x.type))].sort((a,b)=>parseInt(a)-parseInt(b)).map(t=>[t,L.filter(x=>x.type===t)]);
@@ -682,7 +704,7 @@ function homeKiller(){
       <div class="topic">${esc(x.topic)}</div>
       <div class="meta"><span><span class="stars">${'★'.repeat(x.stars)}${'☆'.repeat(5-x.stars)}</span><span class="dbadge">${DNAME[x.stars]||''}</span></span><span><span class="tag ${x.full?'full':''}">${x.full?'완전 분석':'풀이 '+x.nsteps+'단계'}</span></span></div>`;
     c.insertBefore(artEl(x.topic,x.subject,x.art,x.id,DC(x.stars),x.snip),c.querySelector('.topic'));
-    if(rec) c.append(el('span','st '+(rec.skip?'skip':rec.ok?'ok':'no'),rec.skip?'열람':rec.ok?'정답 '+mmss(rec.secs):'오답'));
+    if(rec) c.append(el('span','st '+(rec.skip?'skip':rec.ok?(rec.over?'late':'ok'):'no'),rec.skip?'열람':rec.ok?(rec.over?'정답·초과 ':'정답 ')+mmss(rec.secs):'오답'));
     c.onclick=()=>location.hash='q'+x.num;track.append(c);
   }}
 }
@@ -728,6 +750,8 @@ $('#jfilters').onclick=e=>{const b=e.target.closest('button.chip');if(!b||!b.dat
   home()};
 $('#jUnivSel').onchange=e=>{jfilt.univ=e.target.value;home()};$('#jYearSel').onchange=e=>{jfilt.year=e.target.value;home()};
 $('#goList').onclick=()=>$('#filters').hidden?($('#efilters').hidden?$('#jfilters'):$('#efilters')).scrollIntoView({behavior:'smooth',block:'start'}):$('#filters').scrollIntoView({behavior:'smooth',block:'start'});
+$('#randBtn').onclick=()=>{let pool,pre;if(S.tab==='essay'){pool=ELIST.filter(x=>!S.erec[x.num]);pre='e'}else if(S.tab==='japan'){pool=JLIST.filter(x=>!S.jrec[x.num]);pre='j'}else{pool=LIST.filter(x=>!S.rec[x.num]);pre='q'}
+  if(!pool.length){toast('이 관의 상품은 다 털었어요!');return}const x=pool[Math.floor(Math.random()*pool.length)];location.hash=pre+x.num};
 $('#tabs').onclick=e=>{const b=e.target.closest('button');if(!b)return;S.tab=b.dataset.tab;save();home()};
 $('#filters').onclick=e=>{const b=e.target.closest('.chip');if(!b||!b.dataset.k)return;const k=b.dataset.k;
   if(k==='subj'||k==='type'){filt[k]=(filt[k]===b.dataset.v&&k==='type')?'':b.dataset.v;
@@ -804,7 +828,7 @@ function go(i,silent){
   $('#prev').disabled=i===0;$('#next').textContent=i===pages.length-1?'목록으로':'다음 →';$('#next').style.setProperty('--kc',`var(--k-${p.k})`);
   $('#cnt').textContent=`${STAGE[p.k][0]} · ${i+1}/${pages.length}`;
   const dots=$('#dots');dots.innerHTML='';pages.forEach((q,j)=>dots.append(el('i',(j===i?'cur':'')+(j>0&&!unlocked?' lk':''))));
-  if(!silent&&window.innerWidth<=900){const sh=$('.sheet').getBoundingClientRect();const top=window.scrollY+$('#cardzone').getBoundingClientRect().top-sh.height-parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--opbar')||52)-12;window.scrollTo({top:Math.max(0,top),behavior:'smooth'})}
+  if(!silent&&window.innerWidth<=900){const sh=$('.sheet').getBoundingClientRect().height;const ob=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--opbar'))||52;const kc=$('#kcard');kc.style.scrollMarginTop=(sh+ob+10)+'px';kc.scrollIntoView({behavior:'smooth',block:'start'})}
   $('#exam').classList.toggle('shownum',p.k==='cond');$('#numBtn').classList.toggle('on',p.k==='cond');
 }
 $('#prev').onclick=()=>go(cur-1);$('#next').onclick=()=>cur===pages.length-1?(location.hash=''):go(cur+1);
@@ -814,7 +838,7 @@ $('#fsDown').onclick=()=>{S.fs=Math.max(.8,+(S.fs-0.1).toFixed(2));save();docume
 $('#numBtn').onclick=e=>{const on=$('#exam').classList.toggle('shownum');e.target.classList.toggle('on',on)};
 $('#foldBtn').onclick=e=>{const f=$('#exam').classList.toggle('fold');e.target.textContent=f?'펼치기':'접기'};
 document.addEventListener('keydown',e=>{if($('#op').hidden||/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;
-  if(e.key==='ArrowRight')$('#next').click();if(e.key==='ArrowLeft'&&cur>0)go(cur-1);if(e.key==='Escape')location.hash=''});
+  if(e.key==='p'||e.key==='P')togglePause();if(e.key==='ArrowRight')$('#next').click();if(e.key==='ArrowLeft'&&cur>0)go(cur-1);if(e.key==='Escape')location.hash=''});
 (()=>{let x0=null,y0=0;const z=document.getElementById('cardzone');z.addEventListener('touchstart',e=>{x0=e.touches[0].clientX;y0=e.touches[0].clientY},{passive:true});
   z.addEventListener('touchend',e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;x0=null;if(Math.abs(dx)>70&&Math.abs(dx)>Math.abs(dy)*1.6){dx<0?$('#next').click():(cur>0&&go(cur-1))}},{passive:true})})();
 
@@ -874,18 +898,30 @@ function solveBody(){
   const row=el('div','btnrow');const st=el('button','btn','실전 시작');const skip=el('button','btn ghost sm','채점 없이 분석만 볼래요');row.append(st,skip);b.append(row);
   const ai=el('div','ansin');ai.hidden=true;const inp=el('input');inp.type='number';inp.min=1;inp.max=999;inp.id='answer';inp.placeholder='정답';const gb=el('button','btn','채점');ai.append(el('span',null,'내 답'),inp,gb);b.append(ai);
   st.onclick=()=>{unlocked=false;$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;ai.hidden=false;t0=Date.now();stopTimer();
-    timer=setInterval(()=>showTime(Math.floor((Date.now()-t0)/1000),lim*60,tm,lm,'제한시간 초과 · 끝까지 풀어도 됩니다'),500);showTime(0,lim*60,tm,lm,'');if(window.innerWidth>900)inp.focus();else{$('#fullBtn').click()}};
+    startTimer(lim*60,tm,lm,'제한시간 초과 · 끝까지 풀어도 됩니다');if(window.innerWidth>900)inp.focus();else{$('#fullBtn').click()}};
   const grade=()=>{if(inp.value==='')return;stopTimer();const secs=Math.floor((Date.now()-t0)/1000);const ok=String(inp.value).trim()==String(D.answer);
-    S.rec[D.num]={ok,ans:inp.value,answer:D.answer,secs,date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(0)};
+    S.rec[D.num]={ok,ans:inp.value,answer:D.answer,secs,over:secs>lim*60,date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(0)};
   gb.onclick=grade;inp.onkeydown=e=>{if(e.key==='Enter')grade()};
   skip.onclick=()=>{S.rec[D.num]={skip:true,date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(1)};
   return b;
 }
-function resultBox(rec){const r=el('div','result '+(rec.ok?'ok':'no'));r.innerHTML=`<div class="big">${rec.ok?'정답입니다':'오답입니다'}</div><div>내 답 <b class="num">${esc(rec.ans)}</b> · 정답 <b class="num">${esc(rec.answer)}</b> · 걸린 시간 <b class="num">${mmss(rec.secs)}</b></div><div class="lead">${rec.ok?'맞았어도 조건을 어디서 썼는지 설명할 수 있어야 진짜 내 것. 분석로 확인하세요.':'어느 조건에서 길을 잃었는지 조건 분석부터 따라가 보세요.'}</div>`;return r}
-function showTime(s,limSec,tm,lm,overMsg){const t=mmss(s);tm.textContent=t;const over=s>limSec;tm.classList.toggle('over',over);if(over&&lm)lm.textContent=overMsg;
-  for(const id of ['fsTimer','sheetTimer']){const e=$('#'+id);e.hidden=false;e.textContent=t;e.classList.toggle('over',over)}}
-function hideTimers(){for(const id of ['fsTimer','sheetTimer'])$('#'+id).hidden=true}
-function stopTimer(){if(timer){clearInterval(timer);timer=null}}
+function resultBox(rec){const r=el('div','result '+(rec.ok?'ok':'no'));r.innerHTML=`<div class="big">${rec.ok?'정답입니다':'오답입니다'}</div><div>내 답 <b class="num">${esc(rec.ans)}</b> · 정답 <b class="num">${esc(rec.answer)}</b> · 걸린 시간 <b class="num">${mmss(rec.secs)}</b>${rec.over?' <span class="dbadge" style="--dc:#ff9f3a">제한시간 초과</span>':''}</div><div class="lead">${rec.ok?'맞았어도 조건을 어디서 썼는지 설명할 수 있어야 진짜 내 것. 분석로 확인하세요.':'어느 조건에서 길을 잃었는지 조건 분석부터 따라가 보세요.'}</div>`;return r}
+let warned=false,paused=false,pausedAt=0;
+function showTime(s,limSec,tm,lm,overMsg){const t=mmss(s);const left=limSec-s;const over=left<0;const warn=!over&&left<=60;
+  tm.textContent=t;tm.classList.toggle('over',over);tm.classList.toggle('warn',warn);
+  if(lm)lm.textContent=over?overMsg:`남은 시간 ${mmss(left)} / 제한 ${mmss(limSec)}`;
+  if(warn&&!warned){warned=true;try{navigator.vibrate&&navigator.vibrate([120,60,120])}catch(e){}toast('1분 남았어요')}
+  if(over&&warned!=='over'){warned='over';try{navigator.vibrate&&navigator.vibrate(300)}catch(e){}}
+  for(const id of ['fsTimer','sheetTimer']){const e=$('#'+id);e.hidden=false;e.textContent=(over?'+':'')+mmss(Math.abs(left));e.classList.toggle('over',over);e.classList.toggle('warn',warn)}
+  $('#fsPause').hidden=false;$('#sheetPause').hidden=false;}
+function startTimer(limSec,tm,lm,overMsg){stopTimer();warned=false;paused=false;t0=Date.now();
+  timer=setInterval(()=>{if(paused)return;showTime(Math.floor((Date.now()-t0)/1000),limSec,tm,lm,overMsg)},500);showTime(0,limSec,tm,lm,overMsg);wake(true)}
+function togglePause(){if(!timer)return;paused=!paused;if(paused){pausedAt=Date.now();$('#pauseVeil').hidden=false}else{t0+=Date.now()-pausedAt;$('#pauseVeil').hidden=true}
+  $('#fsPause').innerHTML=paused?'▶<span class="lbl"> 계속</span>':'⏸<span class="lbl"> 일시정지</span>';$('#sheetPause').textContent=paused?'▶':'⏸'}
+let wakeLock=null;async function wake(on){try{if(on&&'wakeLock' in navigator){wakeLock=await navigator.wakeLock.request('screen')}else if(!on&&wakeLock){await wakeLock.release();wakeLock=null}}catch(e){}}
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&timer&&!wakeLock)wake(true)});
+function hideTimers(){for(const id of ['fsTimer','sheetTimer','fsPause','sheetPause'])$('#'+id).hidden=true;$('#pauseVeil').hidden=true}
+function stopTimer(){if(timer){clearInterval(timer);timer=null}paused=false;$('#pauseVeil').hidden=true;$('#fsPause').hidden=true;$('#sheetPause').hidden=true;wake(false)}
 
 /* ───────── 논술 ───────── */
 async function openEssay(n,c){
@@ -917,8 +953,7 @@ function renderEssayCard(p){
     b.append(el('p','lead',`시작을 누르면 제시문과 문제가 열리고 시간이 갑니다. 제한시간 <b>${E.minutes}분</b>(대학 시험시간 ÷ 문항 수). 답안은 실제 시험처럼 종이에 쓰고, 다 쓰면 ‘작성 완료’를 누르세요.`));
     const tm=el('div','timer num','00:00');b.append(tm);const lm=el('div','lead num',`제한 ${mmss(E.minutes*60)}`);b.append(lm);
     const row=el('div','btnrow');const st=el('button','btn','실전 시작');const done=el('button','btn','답안 작성 완료');done.hidden=true;const skip=el('button','btn ghost sm','답안 없이 보기만 할래요');row.append(st,done,skip);b.append(row);
-    st.onclick=()=>{$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;done.hidden=false;if(window.innerWidth<=900)$('#fullBtn').click();t0=Date.now();stopTimer();
-      timer=setInterval(()=>showTime(Math.floor((Date.now()-t0)/1000),E.minutes*60,tm,lm,'제한시간 초과 · 끝까지 써도 됩니다'),500)};
+    st.onclick=()=>{$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;done.hidden=false;startTimer(E.minutes*60,tm,lm,'제한시간 초과 · 끝까지 써도 됩니다');if(window.innerWidth<=900)$('#fullBtn').click()};
     done.onclick=()=>{stopTimer();S.erec[E.num]={secs:Math.floor((Date.now()-t0)/1000),score:0,total:0,sub:{},date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(1)};
     skip.onclick=()=>{S.erec[E.num]={skip:true,secs:0,score:0,total:0,sub:{},date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(1)};
     w.append(b);return w}
@@ -976,8 +1011,7 @@ function renderJapanCard(p){
     b.append(el('p','lead',`일본 대학 입시는 전부 서술형입니다. 시작을 누르면 문제가 열리고 시간이 갑니다. 제한시간 <b>${lim}분</b>. 풀이를 종이에 쓰고 ‘풀이 완료’를 누르면 해설이 열려요.`));
     const tm=el('div','timer num','00:00');b.append(tm);const lm=el('div','lead num',`제한 ${mmss(lim*60)}`);b.append(lm);
     const row=el('div','btnrow');const st=el('button','btn','실전 시작');const done=el('button','btn','풀이 완료');done.hidden=true;const skip=el('button','btn ghost sm','풀지 않고 해설만 볼래요');row.append(st,done,skip);b.append(row);
-    st.onclick=()=>{$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;done.hidden=false;if(window.innerWidth<=900)$('#fullBtn').click();t0=Date.now();stopTimer();
-      timer=setInterval(()=>showTime(Math.floor((Date.now()-t0)/1000),lim*60,tm,lm,'제한시간 초과 · 끝까지 풀어도 됩니다'),500)};
+    st.onclick=()=>{$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;done.hidden=false;startTimer(lim*60,tm,lm,'제한시간 초과 · 끝까지 풀어도 됩니다');if(window.innerWidth<=900)$('#fullBtn').click()};
     done.onclick=()=>{stopTimer();S.jrec[J.num]={secs:Math.floor((Date.now()-t0)/1000),r:'',date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(1)};
     skip.onclick=()=>{S.jrec[J.num]={skip:true,secs:0,r:'',date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(1)};
     w.append(b);return w}
@@ -1003,6 +1037,7 @@ window.addEventListener('resize',measureBar);
 $('#fullExam').addEventListener('click',e=>{if(e.target.closest('img.pg')){e.stopPropagation();$('#fullExam').classList.toggle('zoom')}},true);
 $('#fullBtn').onclick=()=>{if(!$('#exam').classList.contains('open')){toast('먼저 실전 시작을 눌러 문항을 여세요');return}$('#fullExam').innerHTML=$('#examText').innerHTML;$('#fullExam').classList.remove('zoom');$('#fsHint').hidden=!$('#fullExam').querySelector('img.pg');$('#fsAnswer').hidden=!(mode==='killer'&&timer);$('#fullSheet').hidden=false;document.body.style.overflow='hidden'};
 $('#fsClose').onclick=()=>{$('#fullSheet').hidden=true;document.body.style.overflow=''};
+$('#fsPause').onclick=togglePause;$('#sheetTimer').onclick=togglePause;$('#sheetPause').onclick=togglePause;$('#sheetTimer').title='누르면 일시정지';$('#pauseResume').onclick=togglePause;
 $('#fsAnswer').onclick=()=>{$('#fsClose').click();const i=$('#answer');if(i){i.scrollIntoView({block:'center'});i.focus()}};
 $('#fsUp2').onclick=()=>$('#fsUp').click();$('#fsDown2').onclick=()=>$('#fsDown').click();
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#fullSheet').hidden){$('#fsClose').click();e.stopImmediatePropagation()}},true);$('#lb').onclick=e=>{if(e.target.id==='lb')$('#lb').hidden=true};
