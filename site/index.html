@@ -308,6 +308,9 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 #fullSheet .fsbar .tmr.warn,.sheet .tools .tmr.warn{background:#ff9f3a;animation:blink 1s steps(2) infinite}
 @keyframes blink{50%{opacity:.55}}
 .timer.warn{color:#ff9f3a}
+#setResult{position:fixed;inset:0;z-index:45;background:rgba(0,0,0,.85);display:grid;place-items:center;padding:16px;overflow:auto}
+.setbar{background:var(--red);color:#fff;font-weight:700;padding:6px 12px;border-radius:6px;font-size:.9rem;display:flex;gap:10px;align-items:center;margin:8px 0 0}
+.setbar .n{font-family:var(--mono)}
 #pauseVeil{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.92);display:grid;place-items:center;text-align:center;color:#fff;padding:20px}
 #pauseVeil b{font-family:var(--disp);font-size:2.4rem;display:block;margin-bottom:8px}
 #pauseVeil p{color:#bbb;margin:0 0 18px}
@@ -415,7 +418,8 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
       <div class="bar"><i id="rankBar"></i></div>
     </div>
     <div class="tile" style="--tc:var(--gold)">
-      <div class="lbl">영수증 · 실전 기록</div>
+      <div class="lbl">영수증 · 실전 기록 <button class="link" id="nameBtn" style="margin:0 0 0 8px;font-size:.78rem"></button></div>
+      <div id="nameBox" hidden style="display:flex;gap:6px;margin:6px 0"><input id="nameInp" placeholder="이름 (학번 이름)" style="font:inherit;font-size:1rem;padding:6px 10px;border-radius:6px;border:1px solid #555;background:#111;color:#fff;flex:1;min-width:0"><button class="btn sm" id="nameSave" style="--kc:var(--red)">저장</button></div>
       <div class="row"><span>오늘 <b id="rToday">0</b>문항</span><span>연속 <b id="rStreak">0</b>일</span><span>복습 필요 <b id="rReview">0</b></span></div>
       <div class="row"><span>킬러 <b id="rSolved">0</b></span><span>정답률 <b id="rAcc">–</b></span><span>평균 <b id="rAvg">–</b></span><span>논술 <b id="rEssay">0</b></span><span>논술 평균 <b id="rEssayAvg">–</b></span></div>
       <div class="sub">채점을 거친 문항만 셉니다. 기록은 이 브라우저에만 저장돼요.</div>
@@ -439,6 +443,8 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
     <button class="chip" data-k="full" data-v="1">완전 분석만</button>
     <button class="chip" data-k="wrong" data-v="1">틀린 문항만</button>
     <button class="chip" data-k="review" data-v="1">복습 필요 (오답·시간초과)</button>
+    <span class="chip sep">|</span>
+    <button class="chip" id="setBtn" style="border-color:var(--red);color:#fff;background:var(--red)">🎯 모의 세트 (4문항 연속)</button>
     <button class="chip" data-k="todo" data-v="1">안 푼 문항만</button>
   </div>
   <div class="filters" id="efilters" hidden>
@@ -498,6 +504,7 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 </div>
 <div class="toast" id="toast"></div>
 <div id="lb" hidden><img id="lbimg" alt=""><button id="lbx">✕ 닫기</button></div>
+<div id="setResult" hidden><div class="kcard" style="--kc:var(--red);max-width:620px;width:100%"><div class="head"><div class="kind">모의 세트 · 결과</div><button class="btn ghost sm" id="setClose">닫기</button></div><div class="body" style="max-width:none"></div></div></div>
 <div id="pauseVeil" hidden><div><b>일시정지</b><p>시계가 멈췄어요. 계속하려면 아래를 누르세요.</p><button class="btn" id="pauseResume">▶ 계속 풀기</button></div></div>
 <div id="fullSheet" hidden><div class="fsbar"><b>문제</b><span class="tmr" id="fsTimer" hidden>00:00</span><button id="fsPause" hidden>⏸<span class="lbl"> 일시정지</span></button><span class="hint" id="fsHint" hidden>그림을 누르면 확대</span><button id="fsDown2">가−</button><button id="fsUp2">가+</button><button id="fsAnswer" hidden>✎ 답</button><button id="fsClose">✕ 닫기</button></div><div class="exam open fsexam" id="fullExam"></div></div>
 
@@ -506,7 +513,9 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 <script></script>
 <script>
 /* ───────── 설정 ───────── */
-const SITE={author:'ShrekMath', blog:''};   // 블로그 주소를 넣으면 바이라인에 링크가 생깁니다
+const SITE={author:'ShrekMath', blog:'', sheetUrl:''};   // sheetUrl: Apps Script 웹 앱 URL (apps_script.gs 참고). 비우면 수집 안 함
+const SET_TYPES=['20번형','21번형','29번형','30번형'];   // 모의 세트 구성(없는 유형은 다른 문항으로 채움)
+const REVIEW_DAYS=[3,7,14];   // 오답·시간초과 문항 복습 주기(일)
 const RANKS=[[0,'손님'],[3,'단골'],[10,'VIP'],[25,'점원'],[45,'매니저'],[72,'사장']];   // 마지막 기준은 전체 문항 수로 자동 조정
 const LIMIT={5:13,4:10,3:8,2:8};   // 제한시간(분): 킬러 13 · 고난도 10 · 준킬러 8
 const STAGE={solve:['실전','시험처럼 먼저 풀기'],intro:['진단','문항 프로필'],cond:['조건','조건을 문장 단위로 쪼개기'],concept:['개념','문항을 떠받치는 원리'],
@@ -524,10 +533,15 @@ const ccol=id=>COLORS[(parseInt(String(id).slice(1))-1)%COLORS.length];
 const mmss=t=>String(Math.floor(t/60)).padStart(2,'0')+':'+String(t%60).padStart(2,'0');
 
 /* ───────── 저장 ───────── */
-let S={rec:{},erec:{},jrec:{},fs:1,tab:'killer'};
+let S={rec:{},erec:{},jrec:{},fs:1,tab:'killer',name:'',queue:[],set:null};
 try{S=Object.assign(S,JSON.parse(localStorage.getItem(KEY)||'{}'))}catch(e){}
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
 const graded=()=>Object.values(S.rec).filter(r=>!r.skip);
+/* 교사 수집: Apps Script 로 전송. 실패하면 큐에 두고 다음에 재시도 */
+function report(row){if(!SITE.sheetUrl)return;row.name=S.name||'';row.ua=/Mobi|Android/i.test(navigator.userAgent)?'mobile':'pc';S.queue=S.queue||[];S.queue.push(row);save();flush()}
+async function flush(){if(!SITE.sheetUrl||!S.queue||!S.queue.length)return;const batch=S.queue.slice();try{await fetch(SITE.sheetUrl,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(batch)});S.queue=S.queue.filter(x=>!batch.includes(x));save()}catch(e){}}
+window.addEventListener('online',flush);
+function askName(){const box=$('#nameBox');box.hidden=!box.hidden;if(!box.hidden)$('#nameInp').focus()}
 function rankOf(n){RANKS[RANKS.length-1][0]=LIST.length||RANKS[RANKS.length-1][0];let r=RANKS[0],nx=null;for(let i=0;i<RANKS.length;i++){if(n>=RANKS[i][0]){r=RANKS[i];nx=RANKS[i+1]||null}}return [r,nx]}
 function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),1800)}
 
@@ -579,6 +593,7 @@ function home(){
   $('#nKiller').textContent=LIST.length;$('#nEssay').textContent=ELIST.length;$('#nJapan').textContent=JLIST.length;
   document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.tab===S.tab));
   const essay=S.tab==='essay', japan=S.tab==='japan';
+  const sb=$('#setBtn');if(S.set&&!S.set.done){sb.textContent=`🎯 세트 이어서 (${S.set.idx+1}/${S.set.items.length})`;sb.onclick=()=>location.hash='q'+S.set.items[S.set.idx]}else{sb.textContent='🎯 모의 세트 (4문항 연속)';sb.onclick=makeSet}
   $('#filters').hidden=essay||japan;$('#efilters').hidden=!essay;$('#jfilters').hidden=!japan;
   $('#footKiller').hidden=essay||japan;$('#footEssay').hidden=!essay;$('#footJapan').hidden=!japan;
   $('#flowKiller').hidden=essay||japan;$('#flowEssay').hidden=!essay;$('#flowJapan').hidden=!japan;
@@ -594,7 +609,8 @@ function home(){
   const all=[...Object.values(S.rec),...Object.values(S.erec),...Object.values(S.jrec)].filter(r=>r.date&&!r.skip);
   const today=new Date().toISOString().slice(0,10);$('#rToday').textContent=all.filter(r=>r.date===today).length;
   const days=new Set(all.map(r=>r.date));let streak=0;for(let d=new Date();;d.setDate(d.getDate()-1)){const k=d.toISOString().slice(0,10);if(days.has(k))streak++;else if(k!==today)break;else continue;}$('#rStreak').textContent=streak;
-  $('#rReview').textContent=g.filter(r=>!r.ok||r.over).length;
+  $('#rReview').textContent=g.filter(r=>!r.ok||r.over).length;const dueN=dueReview().length;if(dueN)$('#rReview').textContent+=` (오늘 ${dueN})`;
+  $('#nameBtn').textContent=SITE.sheetUrl?(S.name?`👤 ${S.name} · 변경`:'👤 이름 입력 (교사 전송용)'):'';$('#nameInp').value=S.name||'';flush();
   const eg=Object.values(S.erec).filter(r=>r.total);$('#rEssay').textContent=eg.length;
   $('#rEssayAvg').textContent=eg.length?Math.round(eg.reduce((a,b)=>a+b.score/b.total,0)/eg.length*100)+'%':'–';
   japan?homeJapan():essay?homeEssay():homeKiller();
@@ -689,6 +705,9 @@ function artEl(text,subj,own,seed,hue,snip,img){
   if(src){const im=el('img');im.src=jimg(src);im.alt='';im.loading='lazy';d.append(im)}
   else d.innerHTML=poster(k,seed||text,hue||'var(--gold)');return d}
 function newRow(title,count){const grid=$('#grid');const h=el('div','ghead',esc(title)+(count?` <span class="cnt">${count}</span>`:''));const t=el('div','track');grid.append(h,t);return t}
+/* 간격 복습: 오답·시간초과 문항은 3·7·14일 뒤에 '오늘의 복습'으로 */
+function daysSince(d){return Math.floor((Date.now()-new Date(d+'T00:00:00'))/86400000)}
+function dueReview(){return LIST.filter(x=>{const r=S.rec[x.num];if(!r||r.skip||(r.ok&&!r.over))return false;const k=r.reviews||0;const due=REVIEW_DAYS[Math.min(k,REVIEW_DAYS.length-1)];return daysSince(r.date)>=due})}
 function buildChips(){
   const sc=$('#subjChips');if(sc.children.length)return;
   const subs=SUBJ_ORDER.filter(x=>LIST.some(y=>y.subject===x)).concat([...new Set(LIST.map(x=>x.subject))].filter(x=>!SUBJ_ORDER.includes(x)));
@@ -704,6 +723,7 @@ function homeKiller(){
     &&(!filt.wrong||(S.rec[x.num]&&!S.rec[x.num].skip&&!S.rec[x.num].ok))&&(!filt.review||(S.rec[x.num]&&!S.rec[x.num].skip&&(!S.rec[x.num].ok||S.rec[x.num].over)))&&(!filt.todo||!S.rec[x.num]||S.rec[x.num].skip));
   if(filt.hard) L=[...L].sort((a,b)=>b.stars-a.stars||a.num-b.num);
   if(!L.length){grid.append(el('div','empty','조건에 맞는 문항이 없어요'));return}
+  const due=dueReview();if(due.length&&!filt.hard&&!filt.subj&&!filt.type&&!filt.full&&!filt.wrong&&!filt.review&&!filt.todo){const tr=newRow('🔁 오늘의 복습 · 틀렸거나 늦었던 문항, 다시',due.length);for(const x of due){const c=el('button','card');c.style.setProperty('--dc','var(--d5)');c.dataset.big='R';c.innerHTML=`<div class="top"><span><span class="num">#${String(x.num).padStart(3,'0')}</span> · ${x.type}</span><span class="subj" style="--sc:${SC(x.subject)}">${x.subject}</span></div><div class="topic">${esc(x.topic)}</div><div class="meta"><span><span class="stars">${'★'.repeat(x.stars)}</span></span><span><span class="tag">${S.rec[x.num].ok?'시간 초과':'오답'} · ${daysSince(S.rec[x.num].date)}일 전</span></span></div>`;c.insertBefore(artEl(x.topic,x.subject,x.art,x.id,'var(--d5)'),c.querySelector('.topic'));c.onclick=()=>{const r=S.rec[x.num];S.rec[x.num]={skip:true,reviews:(r.reviews||0)+1,prev:r,date:r.date};delete S.rec[x.num];S._rv={num:x.num,reviews:(r.reviews||0)+1};save();location.hash='q'+x.num};tr.append(c)}}
   const groups=filt.hard?[['어려운 순',L]]:[...new Set(L.map(x=>x.type))].sort((a,b)=>parseInt(a)-parseInt(b)).map(t=>[t,L.filter(x=>x.type===t)]);
   for(const [g,items] of groups){const track=newRow(g==='어려운 순'?g:`수능 ${g}`,items.length);for(const x of items){
     const c=el('button','card');const rec=S.rec[x.num];c.style.setProperty('--dc',DC(x.stars));c.dataset.big=x.type.replace('번형','');
@@ -757,6 +777,24 @@ $('#jfilters').onclick=e=>{const b=e.target.closest('button.chip');if(!b||!b.dat
   home()};
 $('#jUnivSel').onchange=e=>{jfilt.univ=e.target.value;home()};$('#jYearSel').onchange=e=>{jfilt.year=e.target.value;home()};
 $('#goList').onclick=()=>$('#filters').hidden?($('#efilters').hidden?$('#jfilters'):$('#efilters')).scrollIntoView({behavior:'smooth',block:'start'}):$('#filters').scrollIntoView({behavior:'smooth',block:'start'});
+$('#nameBtn').onclick=askName;$('#nameSave').onclick=()=>{S.name=$('#nameInp').value.trim();save();$('#nameBox').hidden=true;flush();home();toast(S.name?'이름을 저장했어요':'이름을 지웠어요')};$('#nameInp').onkeydown=e=>{if(e.key==='Enter')$('#nameSave').click()};
+/* 모의 세트: 유형별 1문항씩, 제한시간 합산, 한 시계로 연속 풀이 */
+function makeSet(){const items=[];const used=new Set();
+  for(const t of SET_TYPES){const pool=LIST.filter(x=>x.type===t&&!S.rec[x.num]&&!used.has(x.num));const pick=pool.length?pool[Math.floor(Math.random()*pool.length)]:null;if(pick){items.push(pick.num);used.add(pick.num)}}
+  while(items.length<SET_TYPES.length){const pool=LIST.filter(x=>!S.rec[x.num]&&!used.has(x.num));if(!pool.length)break;const p=pool[Math.floor(Math.random()*pool.length)];items.push(p.num);used.add(p.num)}
+  if(items.length<2){toast('세트를 만들 미해결 문항이 부족해요');return}
+  const total=items.reduce((a,n)=>a+(LIMIT[LIST.find(x=>x.num===n).stars]||10),0)*60;
+  S.set={id:'S'+Date.now().toString(36),items,idx:0,total,start:Date.now(),results:[],done:false};save();location.hash='q'+items[0]}
+function setNext(ok,secs){const st=S.set;st.results.push({num:D.num,ok,secs});st.idx++;save();
+  if(st.idx<st.items.length){toast(`${st.idx}/${st.items.length} 완료 · 다음 문항`);location.hash='q'+st.items[st.idx]}
+  else{st.done=true;save();stopTimer();showSetResult()}}
+function showSetResult(){const st=S.set;const box=$('#setResult');const ok=st.results.filter(r=>r.ok).length;const used=st.results.reduce((a,r)=>a+r.secs,0);
+  box.querySelector('.body').innerHTML=`<div class="scoresum">${ok} / ${st.results.length} 정답</div><p class="lead">사용 시간 ${mmss(used)} / 제한 ${mmss(st.total)} ${used>st.total?'<span class="dbadge" style="--dc:#ff9f3a">초과</span>':''}</p>
+   <table class="stable"><tr><th>문항</th><th>결과</th><th>시간</th><th></th></tr>${st.results.map(r=>{const x=LIST.find(y=>y.num===r.num)||{};return `<tr><td>#${String(r.num).padStart(3,'0')} ${esc(x.topic||'')}</td><td>${r.ok?'<b style="color:var(--green)">정답</b>':'<b style="color:var(--red)">오답</b>'}</td><td class="n">${mmss(r.secs)}</td><td><button class="btn ghost sm" data-go="${r.num}">분석</button></td></tr>`}).join('')}</table>`;
+  box.hidden=false;report({kind:'세트',num:'',id:st.id,title:st.items.map(n=>'#'+n).join(' '),result:`${ok}/${st.results.length}`,secs:used,limit:st.total,over:used>st.total,set:st.id})}
+$('#setResult').addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b){$('#setResult').hidden=true;S.set=null;save();location.hash='q'+b.dataset.go}});
+$('#setClose').onclick=()=>{$('#setResult').hidden=true;S.set=null;save();location.hash=''};
+$('#setBtn').onclick=makeSet;
 $('#randBtn').onclick=()=>{let pool,pre;if(S.tab==='essay'){pool=ELIST.filter(x=>!S.erec[x.num]);pre='e'}else if(S.tab==='japan'){pool=JLIST.filter(x=>!S.jrec[x.num]);pre='j'}else{pool=LIST.filter(x=>!S.rec[x.num]);pre='q'}
   if(!pool.length){toast('이 관의 상품은 다 털었어요!');return}const x=pool[Math.floor(Math.random()*pool.length)];location.hash=pre+x.num};
 $('#tabs').onclick=e=>{const b=e.target.closest('button');if(!b)return;S.tab=b.dataset.tab;save();home()};
@@ -899,6 +937,18 @@ function solveBody(){
   if(rec&&!rec.skip){b.append(resultBox(rec));const row=el('div','btnrow');const g=el('button','btn','분석 시작 →');g.onclick=()=>go(1);const re=el('button','btn ghost','다시 풀기');re.onclick=()=>{delete S.rec[D.num];save();unlocked=false;open(D.num,0)};row.append(g,re);b.append(row);return b}
   if(rec&&rec.skip){b.append(el('p','lead','채점 없이 열람한 문항이에요. 기록에 넣으려면 다시 풀어 보세요.'));const g=el('button','btn','분석 보기 →');g.onclick=()=>go(1);const re=el('button','btn ghost','풀어 보기');re.onclick=()=>{delete S.rec[D.num];save();unlocked=false;open(D.num,0)};const r2=el('div','btnrow');r2.append(g,re);b.append(r2);return b}
   const lim=LIMIT[D.stars]||10;
+  const SS=S.set;const inSet=SS&&!SS.done&&SS.items[SS.idx]===D.num;
+  if(inSet){b.append(el('div','setbar',`🎯 모의 세트 <span class="n">${SS.idx+1}/${SS.items.length}</span> · 전체 제한 <span class="n">${mmss(SS.total)}</span> · 한 시계로 연속 풀이`));
+    b.append(el('h2',null,'바로 풀기 시작'));const tm=el('div','timer num','00:00');b.append(tm);const lm=el('div','lead num','');b.append(lm);
+    const ai=el('div','ansin');const inp=el('input');inp.type='number';inp.min=1;inp.max=999;inp.id='answer';inp.placeholder='정답';const gb=el('button','btn','채점 · 다음');ai.append(el('span',null,'내 답'),inp,gb);b.append(ai);
+    const itemStart=Date.now();$('#exam').classList.add('open');
+    stopTimer();warned=false;paused=false;t0=SS.start;timer=setInterval(()=>{if(paused)return;showTime(Math.floor((Date.now()-t0)/1000),SS.total,tm,lm,'전체 제한시간 초과 · 끝까지 풀어도 됩니다')},500);showTime(Math.floor((Date.now()-t0)/1000),SS.total,tm,lm,'');wake(true);
+    const grade=()=>{if(inp.value==='')return;const secs=Math.floor((Date.now()-itemStart)/1000);const ok=String(inp.value).trim()==String(D.answer);
+      S.rec[D.num]={ok,ans:inp.value,answer:D.answer,secs,over:false,set:SS.id,date:new Date().toISOString().slice(0,10)};save();
+      report({kind:'킬러',num:D.num,id:D.id,title:D.topic,result:ok?'정답':'오답',ans:inp.value,answer:D.answer,secs,limit:lim*60,set:SS.id});setNext(ok,secs)};
+    gb.onclick=grade;inp.onkeydown=e=>{if(e.key==='Enter')grade()};
+    if(window.innerWidth>900)setTimeout(()=>inp.focus(),50);else setTimeout(()=>$('#fullBtn').click(),100);
+    return b}
   b.append(el('h2',null,'해설 없이, 시험처럼'));
   b.append(el('p','lead',`시작을 누르면 문항이 열리고 시간이 갑니다. ${DNAME[D.stars]||''} 문항 제한시간은 <b>${lim}분</b>. 넘어도 멈추진 않지만 기록에 남아요. 답은 1~999 자연수.`));
   const tm=el('div','timer num','00:00');b.append(tm);const lm=el('div','lead num',`제한 ${mmss(lim*60)}`);b.append(lm);
@@ -907,7 +957,10 @@ function solveBody(){
   st.onclick=()=>{unlocked=false;$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;ai.hidden=false;t0=Date.now();stopTimer();
     startTimer(lim*60,tm,lm,'제한시간 초과 · 끝까지 풀어도 됩니다');if(window.innerWidth>900)inp.focus();else{$('#fullBtn').click()}};
   const grade=()=>{if(inp.value==='')return;stopTimer();const secs=Math.floor((Date.now()-t0)/1000);const ok=String(inp.value).trim()==String(D.answer);
-    S.rec[D.num]={ok,ans:inp.value,answer:D.answer,secs,over:secs>lim*60,date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(0)};
+    S.rec[D.num]={ok,ans:inp.value,answer:D.answer,secs,over:secs>lim*60,date:new Date().toISOString().slice(0,10),reviews:(S._rv&&S._rv.num===D.num)?S._rv.reviews:0};S._rv=null;save();
+    report({kind:'킬러',num:D.num,id:D.id,title:D.topic,result:ok?'정답':'오답',ans:inp.value,answer:D.answer,secs,limit:lim*60,over:secs>lim*60,set:S.set&&S.set.items.includes(D.num)?S.set.id:''});
+    if(S.set&&!S.set.done&&S.set.items.includes(D.num)){setNext(ok,secs);return}
+    unlocked=true;buildPages();go(0)};
   gb.onclick=grade;inp.onkeydown=e=>{if(e.key==='Enter')grade()};
   skip.onclick=()=>{S.rec[D.num]={skip:true,date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(1)};
   return b;
@@ -923,7 +976,7 @@ function showTime(s,limSec,tm,lm,overMsg){const t=mmss(s);const left=limSec-s;co
   $('#fsPause').hidden=false;$('#sheetPause').hidden=false;}
 function startTimer(limSec,tm,lm,overMsg){stopTimer();warned=false;paused=false;t0=Date.now();
   timer=setInterval(()=>{if(paused)return;showTime(Math.floor((Date.now()-t0)/1000),limSec,tm,lm,overMsg)},500);showTime(0,limSec,tm,lm,overMsg);wake(true)}
-function togglePause(){if(!timer)return;paused=!paused;if(paused){pausedAt=Date.now();$('#pauseVeil').hidden=false}else{t0+=Date.now()-pausedAt;$('#pauseVeil').hidden=true}
+function togglePause(){if(!timer)return;paused=!paused;if(paused){pausedAt=Date.now();$('#pauseVeil').hidden=false}else{const d=Date.now()-pausedAt;t0+=d;if(S.set&&!S.set.done){S.set.start+=d;save()}$('#pauseVeil').hidden=true}
   $('#fsPause').innerHTML=paused?'▶<span class="lbl"> 계속</span>':'⏸<span class="lbl"> 일시정지</span>';$('#sheetPause').textContent=paused?'▶':'⏸'}
 let wakeLock=null;async function wake(on){try{if(on&&'wakeLock' in navigator){wakeLock=await navigator.wakeLock.request('screen')}else if(!on&&wakeLock){await wakeLock.release();wakeLock=null}}catch(e){}}
 document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&timer&&!wakeLock)wake(true)});
@@ -983,7 +1036,8 @@ function renderEssayCard(p){
     const sc=el('div','score');const inp=el('input');inp.type='number';inp.min=0;inp.max=max;inp.id='sc'+p.i;const cur0=rec&&rec.sub&&rec.sub[s.k];inp.value=cur0!=null?cur0:'';
     sc.append(el('span',null,'내 점수'),inp,el('span','max','/ '+max+'점'));const ok=el('button','btn sm','저장');
     ok.onclick=()=>{let v=Math.max(0,Math.min(max,+inp.value||0));if(!S.erec[E.num])S.erec[E.num]={secs:0,sub:{},date:new Date().toISOString().slice(0,10)};const r=S.erec[E.num];r.sub=r.sub||{};r.sub[s.k]=v;
-      r.score=Object.values(r.sub).reduce((a,x)=>a+x,0);r.total=E.subs.reduce((a,x)=>a+(x.points||Math.round((E.points||30)/E.subs.length)),0);delete r.skip;save();toast(`저장: ${v}/${max}점 · 합계 ${r.score}/${r.total}`)};
+      r.score=Object.values(r.sub).reduce((a,x)=>a+x,0);r.total=E.subs.reduce((a,x)=>a+(x.points||Math.round((E.points||30)/E.subs.length)),0);delete r.skip;save();toast(`저장: ${v}/${max}점 · 합계 ${r.score}/${r.total}`);
+      report({kind:'논술',num:E.num,id:E.id,title:E.univ+' 문제 '+E.n+' '+s.label,result:'자기채점',score:v,total:max,secs:r.secs,limit:E.minutes*60})};
     inp.onkeydown=e=>{if(e.key==='Enter')ok.click()};sc.append(ok);b.append(sc);w.append(b);return w}
   if(p.k==='end'){w.append(head('end'));const b=el('div','body');
     const r=S.erec[E.num];const tot=E.subs.reduce((a,x)=>a+(x.points||Math.round((E.points||30)/E.subs.length)),0);
@@ -1029,7 +1083,7 @@ function renderJapanCard(p){
     const im=el('img','pg');im.src=jimg(J.simg[p.i]);im.alt='해설';b.append(im);w.append(b);return w}
   if(p.k==='end'){w.append(head('end'));const b=el('div','body');b.append(el('h2',null,'스스로 점검'));
     b.append(el('p','lead','해설과 내 풀이를 비교해서 하나를 고르세요. 기록에 남고, 목록에서 색으로 표시됩니다.'));
-    const sc=el('div','selfchk');[['ok','맞았다'],['part','부분적으로 맞았다'],['no','틀렸다']].forEach(([v,t])=>{const bt=el('button',rec&&rec.r===v?'on':'',t);bt.onclick=()=>{if(!S.jrec[J.num])S.jrec[J.num]={secs:0,date:new Date().toISOString().slice(0,10)};S.jrec[J.num].r=v;delete S.jrec[J.num].skip;save();[...sc.children].forEach(x=>x.classList.toggle('on',x===bt));toast('저장했어요')};sc.append(bt)});b.append(sc);
+    const sc=el('div','selfchk');[['ok','맞았다'],['part','부분적으로 맞았다'],['no','틀렸다']].forEach(([v,t])=>{const bt=el('button',rec&&rec.r===v?'on':'',t);bt.onclick=()=>{if(!S.jrec[J.num])S.jrec[J.num]={secs:0,date:new Date().toISOString().slice(0,10)};S.jrec[J.num].r=v;delete S.jrec[J.num].skip;save();[...sc.children].forEach(x=>x.classList.toggle('on',x===bt));toast('저장했어요');report({kind:'일본',num:J.num,id:J.id,title:J.univ+' '+J.year+' '+J.num0,result:{ok:'맞음',part:'부분',no:'틀림'}[v],secs:S.jrec[J.num].secs,limit:(JLIMIT[J.stars]||25)*60})};sc.append(bt)});b.append(sc);
     if(rec&&rec.secs)b.append(el('p','lead',`걸린 시간 ${mmss(rec.secs)} (제한 ${lim}분)`));
     const row=el('div','btnrow');const nx=JLIST.find(x=>x.num>J.num);if(nx){const nb=el('button','btn','다음 문제 → '+esc(nx.univ)+' '+nx.year);nb.onclick=()=>location.hash='j'+nx.num;row.append(nb)}
     const re=el('button','btn ghost','다시 풀기');re.onclick=()=>{delete S.jrec[J.num];save();unlocked=false;openJapan(J.num,0)};row.append(re);
