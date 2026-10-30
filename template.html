@@ -288,6 +288,9 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 #fullSheet .fsexam img.pg{cursor:zoom-in;transition:width .2s}
 #fullSheet .fsexam.zoom{overflow:auto}
 #fullSheet .fsexam.zoom img.pg{width:200%;max-width:none}
+#fullSheet .fsbar .tmr,.sheet .tools .tmr{font-family:var(--mono);font-weight:700;font-size:1.05rem;color:#1b1b1b;background:var(--gold);padding:3px 10px;border-radius:8px;letter-spacing:.04em;white-space:nowrap}
+#fullSheet .fsbar .tmr.over,.sheet .tools .tmr.over{background:var(--red);color:#fff}
+#fullSheet .fsbar .tmr{font-size:1.25rem;padding:5px 14px}
 #fullSheet .fsbar .hint{font-size:.72rem;color:#8a8577;margin-right:4px}
 @media (max-width:900px){
   body{font-size:16px}
@@ -445,7 +448,7 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
   <div class="stages" id="stages"></div>
   <div class="split">
     <div class="sheet">
-      <div class="tools"><b id="sheetLbl">문항</b>
+      <div class="tools"><b id="sheetLbl">문항</b><span class="tmr" id="sheetTimer" hidden>00:00</span>
         <button id="fsDown" title="글자 작게">가−</button><button id="fsUp" title="글자 크게">가+</button>
         <button id="numBtn" title="조건 번호 표시">조건 번호</button>
         <button id="foldBtn">접기</button><button id="fullBtn" class="mob">전체 보기</button>
@@ -465,7 +468,7 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 </div>
 <div class="toast" id="toast"></div>
 <div id="lb" hidden><img id="lbimg" alt=""><button id="lbx">✕ 닫기</button></div>
-<div id="fullSheet" hidden><div class="fsbar"><b>문제</b><span class="hint" id="fsHint" hidden>그림을 누르면 확대</span><button id="fsDown2">가−</button><button id="fsUp2">가+</button><button id="fsClose">✕ 닫기</button></div><div class="exam open fsexam" id="fullExam"></div></div>
+<div id="fullSheet" hidden><div class="fsbar"><b>문제</b><span class="tmr" id="fsTimer" hidden>00:00</span><span class="hint" id="fsHint" hidden>그림을 누르면 확대</span><button id="fsDown2">가−</button><button id="fsUp2">가+</button><button id="fsAnswer" hidden>답 입력</button><button id="fsClose">✕ 닫기</button></div><div class="exam open fsexam" id="fullExam"></div></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
@@ -785,6 +788,7 @@ function buildPages(){
 }
 function go(i,silent){
   if(i<0||i>=pages.length)return;
+  if(!timer)hideTimers();
   if(i>0&&!unlocked){i=0;toast(mode==='killer'?'먼저 풀고 채점해야 분석이 열려요':'먼저 풀고 완료를 눌러야 열려요')}
   cur=i;const p=pages[i];
   history.replaceState(null,'',`#${mode==='killer'?'q'+D.num:mode==='essay'?'e'+E.num:'j'+J.num}${i?'-'+i:''}`);
@@ -863,8 +867,8 @@ function solveBody(){
   const tm=el('div','timer num','00:00');b.append(tm);const lm=el('div','lead num',`제한 ${mmss(lim*60)}`);b.append(lm);
   const row=el('div','btnrow');const st=el('button','btn','실전 시작');const skip=el('button','btn ghost sm','채점 없이 분석만 볼래요');row.append(st,skip);b.append(row);
   const ai=el('div','ansin');ai.hidden=true;const inp=el('input');inp.type='number';inp.min=1;inp.max=999;inp.id='answer';inp.placeholder='정답';const gb=el('button','btn','채점');ai.append(el('span',null,'내 답'),inp,gb);b.append(ai);
-  st.onclick=()=>{unlocked=false;$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;ai.hidden=false;if(window.innerWidth>900)inp.focus();else{$('#fullBtn').click()}t0=Date.now();stopTimer();
-    timer=setInterval(()=>{const s=Math.floor((Date.now()-t0)/1000);tm.textContent=mmss(s);if(s>lim*60){tm.classList.add('over');lm.textContent='제한시간 초과 · 끝까지 풀어도 됩니다'}},500)};
+  st.onclick=()=>{unlocked=false;$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;ai.hidden=false;t0=Date.now();stopTimer();
+    timer=setInterval(()=>showTime(Math.floor((Date.now()-t0)/1000),lim*60,tm,lm,'제한시간 초과 · 끝까지 풀어도 됩니다'),500);showTime(0,lim*60,tm,lm,'');if(window.innerWidth>900)inp.focus();else{$('#fullBtn').click()}};
   const grade=()=>{if(inp.value==='')return;stopTimer();const secs=Math.floor((Date.now()-t0)/1000);const ok=String(inp.value).trim()==String(D.answer);
     S.rec[D.num]={ok,ans:inp.value,answer:D.answer,secs,date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(0)};
   gb.onclick=grade;inp.onkeydown=e=>{if(e.key==='Enter')grade()};
@@ -872,6 +876,9 @@ function solveBody(){
   return b;
 }
 function resultBox(rec){const r=el('div','result '+(rec.ok?'ok':'no'));r.innerHTML=`<div class="big">${rec.ok?'정답입니다':'오답입니다'}</div><div>내 답 <b class="num">${esc(rec.ans)}</b> · 정답 <b class="num">${esc(rec.answer)}</b> · 걸린 시간 <b class="num">${mmss(rec.secs)}</b></div><div class="lead">${rec.ok?'맞았어도 조건을 어디서 썼는지 설명할 수 있어야 진짜 내 것. 분석로 확인하세요.':'어느 조건에서 길을 잃었는지 조건 분석부터 따라가 보세요.'}</div>`;return r}
+function showTime(s,limSec,tm,lm,overMsg){const t=mmss(s);tm.textContent=t;const over=s>limSec;tm.classList.toggle('over',over);if(over&&lm)lm.textContent=overMsg;
+  for(const id of ['fsTimer','sheetTimer']){const e=$('#'+id);e.hidden=false;e.textContent=t;e.classList.toggle('over',over)}}
+function hideTimers(){for(const id of ['fsTimer','sheetTimer'])$('#'+id).hidden=true}
 function stopTimer(){if(timer){clearInterval(timer);timer=null}}
 
 /* ───────── 논술 ───────── */
@@ -905,7 +912,7 @@ function renderEssayCard(p){
     const tm=el('div','timer num','00:00');b.append(tm);const lm=el('div','lead num',`제한 ${mmss(E.minutes*60)}`);b.append(lm);
     const row=el('div','btnrow');const st=el('button','btn','실전 시작');const done=el('button','btn','답안 작성 완료');done.hidden=true;const skip=el('button','btn ghost sm','답안 없이 보기만 할래요');row.append(st,done,skip);b.append(row);
     st.onclick=()=>{$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;done.hidden=false;if(window.innerWidth<=900)$('#fullBtn').click();t0=Date.now();stopTimer();
-      timer=setInterval(()=>{const s=Math.floor((Date.now()-t0)/1000);tm.textContent=mmss(s);if(s>E.minutes*60){tm.classList.add('over');lm.textContent='제한시간 초과 · 끝까지 써도 됩니다'}},500)};
+      timer=setInterval(()=>showTime(Math.floor((Date.now()-t0)/1000),E.minutes*60,tm,lm,'제한시간 초과 · 끝까지 써도 됩니다'),500)};
     done.onclick=()=>{stopTimer();S.erec[E.num]={secs:Math.floor((Date.now()-t0)/1000),score:0,total:0,sub:{},date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(1)};
     skip.onclick=()=>{S.erec[E.num]={skip:true,secs:0,score:0,total:0,sub:{},date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(1)};
     w.append(b);return w}
@@ -964,7 +971,7 @@ function renderJapanCard(p){
     const tm=el('div','timer num','00:00');b.append(tm);const lm=el('div','lead num',`제한 ${mmss(lim*60)}`);b.append(lm);
     const row=el('div','btnrow');const st=el('button','btn','실전 시작');const done=el('button','btn','풀이 완료');done.hidden=true;const skip=el('button','btn ghost sm','풀지 않고 해설만 볼래요');row.append(st,done,skip);b.append(row);
     st.onclick=()=>{$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;done.hidden=false;if(window.innerWidth<=900)$('#fullBtn').click();t0=Date.now();stopTimer();
-      timer=setInterval(()=>{const s=Math.floor((Date.now()-t0)/1000);tm.textContent=mmss(s);if(s>lim*60){tm.classList.add('over');lm.textContent='제한시간 초과 · 끝까지 풀어도 됩니다'}},500)};
+      timer=setInterval(()=>showTime(Math.floor((Date.now()-t0)/1000),lim*60,tm,lm,'제한시간 초과 · 끝까지 풀어도 됩니다'),500)};
     done.onclick=()=>{stopTimer();S.jrec[J.num]={secs:Math.floor((Date.now()-t0)/1000),r:'',date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(1)};
     skip.onclick=()=>{S.jrec[J.num]={skip:true,secs:0,r:'',date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(1)};
     w.append(b);return w}
@@ -988,8 +995,9 @@ $('#lbx').onclick=()=>$('#lb').hidden=true;
 function measureBar(){const h=$('#op .opbar').getBoundingClientRect().height;document.documentElement.style.setProperty('--opbar',h+'px')}
 window.addEventListener('resize',measureBar);
 $('#fullExam').addEventListener('click',e=>{if(e.target.closest('img.pg')){e.stopPropagation();$('#fullExam').classList.toggle('zoom')}},true);
-$('#fullBtn').onclick=()=>{if(!$('#exam').classList.contains('open')){toast('먼저 실전 시작을 눌러 문항을 여세요');return}$('#fullExam').innerHTML=$('#examText').innerHTML;$('#fullExam').classList.remove('zoom');$('#fsHint').hidden=!$('#fullExam').querySelector('img.pg');$('#fullSheet').hidden=false;document.body.style.overflow='hidden'};
+$('#fullBtn').onclick=()=>{if(!$('#exam').classList.contains('open')){toast('먼저 실전 시작을 눌러 문항을 여세요');return}$('#fullExam').innerHTML=$('#examText').innerHTML;$('#fullExam').classList.remove('zoom');$('#fsHint').hidden=!$('#fullExam').querySelector('img.pg');$('#fsAnswer').hidden=!(mode==='killer'&&timer);$('#fullSheet').hidden=false;document.body.style.overflow='hidden'};
 $('#fsClose').onclick=()=>{$('#fullSheet').hidden=true;document.body.style.overflow=''};
+$('#fsAnswer').onclick=()=>{$('#fsClose').click();const i=$('#answer');if(i){i.scrollIntoView({block:'center'});i.focus()}};
 $('#fsUp2').onclick=()=>$('#fsUp').click();$('#fsDown2').onclick=()=>$('#fsDown').click();
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#fullSheet').hidden){$('#fsClose').click();e.stopImmediatePropagation()}},true);$('#lb').onclick=e=>{if(e.target.id==='lb')$('#lb').hidden=true};
 
