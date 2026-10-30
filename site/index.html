@@ -300,6 +300,12 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 #fullSheet .fsbar .tmr{flex:none}
 #fullSheet .fsbar #fsClose{background:#1b1b1b;color:#fff;border-color:#1b1b1b;font-weight:700}
 #fullSheet .fsexam{flex:1;max-height:none;overflow:auto;padding:18px max(16px,env(safe-area-inset-right,0px)) calc(30px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));font-size:calc(1.2rem * var(--fs));line-height:2}
+#fullSheet .fsfoot{border-top:1px dashed var(--paper-line);background:rgba(0,0,0,.035);padding:10px max(14px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px));display:flex;justify-content:center;align-items:center;gap:10px}
+#fullSheet .fsfoot .ansin{margin:0;justify-content:center}
+#fullSheet .fsfoot .ansin span{color:#4a4639;font-weight:700}
+#fullSheet .fsfoot input{background:#fff;color:#111;border-color:#bbb;font-size:1.4rem}
+#fullSheet .fsfoot .btn{--kc:var(--red);font-size:1.1rem;padding:12px 22px}
+.exam.open .examtext{cursor:zoom-in}
 #fullSheet .fsexam img.pg{cursor:zoom-in;transition:width .2s}
 #fullSheet .fsexam.zoom{overflow:auto}
 #fullSheet .fsexam.zoom img.pg{width:200%;max-width:none}
@@ -489,7 +495,7 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
         <button id="numBtn" title="조건 번호 표시">조건 번호</button>
         <button id="foldBtn">접기</button><button id="fullBtn" class="mob">전체 보기</button>
       </div>
-      <div class="exam" id="exam"><div class="examtext" id="examText"></div><div class="veil" id="veil"><div><b>잠겨 있어요</b>‘실전 시작’을 누르면 문항이 열려요.<br>해설은 채점 뒤에 열립니다.</div></div></div>
+      <div class="exam" id="exam"><div class="examtext" id="examText"></div><div class="veil" id="veil"><div><b>잠겨 있어요</b>‘실전 시작’을 누르면 문항이 열려요.<br>열린 문항을 누르면 큰 화면으로 봅니다.</div></div></div>
     </div>
     <div class="cardzone" id="cardzone">
       <div class="kcard" id="kcard"></div>
@@ -506,7 +512,8 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 <div id="lb" hidden><img id="lbimg" alt=""><button id="lbx">✕ 닫기</button></div>
 <div id="setResult" hidden><div class="kcard" style="--kc:var(--red);max-width:620px;width:100%"><div class="head"><div class="kind">모의 세트 · 결과</div><button class="btn ghost sm" id="setClose">닫기</button></div><div class="body" style="max-width:none"></div></div></div>
 <div id="pauseVeil" hidden><div><b>일시정지</b><p>시계가 멈췄어요. 계속하려면 아래를 누르세요.</p><button class="btn" id="pauseResume">▶ 계속 풀기</button></div></div>
-<div id="fullSheet" hidden><div class="fsbar"><b>문제</b><span class="tmr" id="fsTimer" hidden>00:00</span><button id="fsPause" hidden>⏸<span class="lbl"> 일시정지</span></button><span class="hint" id="fsHint" hidden>그림을 누르면 확대</span><button id="fsDown2">가−</button><button id="fsUp2">가+</button><button id="fsAnswer" hidden>✎ 답</button><button id="fsClose">✕ 닫기</button></div><div class="exam open fsexam" id="fullExam"></div></div>
+<div id="fullSheet" hidden><div class="fsbar"><b>문제</b><span class="tmr" id="fsTimer" hidden>00:00</span><button id="fsPause" hidden>⏸<span class="lbl"> 일시정지</span></button><span class="hint" id="fsHint" hidden>그림을 누르면 확대</span><button id="fsDown2">가−</button><button id="fsUp2">가+</button><button id="fsAnswer" hidden>✎ 답</button><button id="fsClose">✕ 닫기</button></div><div class="exam open fsexam" id="fullExam"></div>
+<div class="fsfoot" id="fsFoot" hidden><div class="ansin" id="fsAnsRow"><span>내 답</span><input id="fsAns" type="number" inputmode="numeric" min="1" max="999" placeholder="정답"><button class="btn" id="fsGrade">채점</button></div><button class="btn" id="fsDone" hidden>풀이 완료 → 해설 보기</button></div></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
@@ -1091,13 +1098,17 @@ function renderJapanCard(p){
   return w;
 }
 
-document.addEventListener('click',e=>{const im=e.target.closest('img.pg');if(im){$('#lbimg').src=im.src;$('#lb').hidden=false}});
+document.addEventListener('click',e=>{const im=e.target.closest('img.pg');if(!im)return;if(im.closest('#examText')){$('#fullBtn').click();return}if(im.closest('#fullExam'))return;$('#lbimg').src=im.src;$('#lb').hidden=false});
 $('#lbx').onclick=()=>$('#lb').hidden=true;
 function measureBar(){const h=$('#op .opbar').getBoundingClientRect().height;document.documentElement.style.setProperty('--opbar',h+'px')}
 window.addEventListener('resize',measureBar);
 $('#fullExam').addEventListener('click',e=>{if(e.target.closest('img.pg')){e.stopPropagation();$('#fullExam').classList.toggle('zoom')}},true);
-$('#fullBtn').onclick=()=>{if(!$('#exam').classList.contains('open')){toast('먼저 실전 시작을 눌러 문항을 여세요');return}$('#fullExam').innerHTML=$('#examText').innerHTML;$('#fullExam').classList.remove('zoom');$('#fsHint').hidden=!$('#fullExam').querySelector('img.pg');$('#fsAnswer').hidden=!(mode==='killer'&&timer);$('#fullSheet').hidden=false;document.body.style.overflow='hidden'};
+$('#examText').addEventListener('click',e=>{if(!$('#exam').classList.contains('open'))return;if(e.target.closest('img.pg'))return;$('#fullBtn').click()});
+$('#fullBtn').onclick=()=>{if(!$('#exam').classList.contains('open')){toast('먼저 실전 시작을 눌러 문항을 여세요');return}$('#fullExam').innerHTML=$('#examText').innerHTML;$('#fullExam').classList.remove('zoom');$('#fsHint').hidden=!$('#fullExam').querySelector('img.pg');$('#fsAnswer').hidden=true;const solving=!!timer&&!unlocked;$('#fsFoot').hidden=!solving;$('#fsAnsRow').hidden=!(solving&&mode==='killer');$('#fsDone').hidden=!(solving&&mode!=='killer');$('#fsDone').textContent=mode==='essay'?'답안 작성 완료 → 예시답안':'풀이 완료 → 해설 보기';$('#fsAns').value='';$('#fullSheet').hidden=false;if(solving&&mode==='killer'&&window.innerWidth>900)setTimeout(()=>$('#fsAns').focus(),50);document.body.style.overflow='hidden'};
 $('#fsClose').onclick=()=>{$('#fullSheet').hidden=true;document.body.style.overflow=''};
+$('#fsGrade').onclick=()=>{const v=$('#fsAns').value.trim();if(!v){$('#fsAns').focus();return}const a=$('#answer');if(!a){toast('채점할 수 없어요');return}a.value=v;$('#fsClose').click();a.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}))};
+$('#fsAns').onkeydown=e=>{if(e.key==='Enter')$('#fsGrade').click()};
+$('#fsDone').onclick=()=>{$('#fsClose').click();const b=[...document.querySelectorAll('#kcard button.btn')].find(x=>/완료/.test(x.textContent)&&!x.hidden);if(b)b.click()};
 $('#fsPause').onclick=togglePause;$('#sheetTimer').onclick=togglePause;$('#sheetPause').onclick=togglePause;$('#sheetTimer').title='누르면 일시정지';$('#pauseResume').onclick=togglePause;
 $('#fsAnswer').onclick=()=>{$('#fsClose').click();const i=$('#answer');if(i){i.scrollIntoView({block:'center'});i.focus()}};
 $('#fsUp2').onclick=()=>$('#fsUp').click();$('#fsDown2').onclick=()=>$('#fsDown').click();
