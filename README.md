@@ -76,6 +76,14 @@ killer-math/
 2. `python parse_hwpx_bank.py` → `src/bank/x_이름.json`
 3. `python build.py`
 
+## 수능창작문항 폴더 자동 반영 (`sync_bank.py`)
+
+`python sync_bank.py <hwpx 폴더>` 는 폴더의 hwpx 를 `src/bank_src/manifest.json`(sha1)과 비교해 **새 파일·바뀐 파일만** 추출·파싱하고,
+본문이 이미 은행에 있는 문항은 버린다(중복 금지). 결과는 `src/bank/x_<파일이름>.json`. 마지막 줄에 `CHANGED`/`NOCHANGE` 를 찍는다.
+- 지원 형식: `NN. [과목] 난이도 ★…`, `NN. [과목]`, `NN. 난이도 ★…`(머리말 "…20번형 선별 …(대수)"에서 과목·유형) + "정답 및 해설" 뒤 `NN번 정답 X`
+- 건너뛸 파일은 manifest 의 `ignore` 에 파일명 일부를 적는다(기본: "1차" = 2015 교육과정).
+- 예약 작업(1시간마다)이 내 PC의 `02_수능·모의고사/수능관련문항/수능창작문항/` 을 이 스크립트로 확인해 바로 빌드·푸시한다.
+
 ## 문항 추가·수정
 
 1. `src/bank/`의 JSON을 고치거나 새 파일(`qNN?_final.json` 이름 규칙)을 넣는다. 수식은 한글 수식 문법 그대로.

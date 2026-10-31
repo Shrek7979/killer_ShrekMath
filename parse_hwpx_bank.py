@@ -11,7 +11,7 @@
 import re, json, glob, os, sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-HEAD = re.compile(r'^(\d{1,2})\.\s*\[([^\]]+)\]\s*(?:난이도\s*([★☆]+))?')
+HEAD = re.compile(r'^(\d{1,2})\.\s*(?:\[([^\]]+)\])?\s*(?:난이도\s*([★☆]+))?\s*$')
 SOL = re.compile(r'^(\d{1,2})번\s*정답\s*(\d+)')
 SUBJ = {'공통(대수)': '대수', '대수': '대수', '공통(미적분Ⅰ)': '미적분Ⅰ', '미적분Ⅰ': '미적분Ⅰ', '미적분Ⅱ': '미적분Ⅱ',
         '확률과 통계': '확률과 통계', '기하': '기하', '수학Ⅰ': '대수', '수학Ⅱ': '미적분Ⅰ', '미적분': '미적분Ⅱ'}
@@ -46,19 +46,24 @@ def blocks_from(lines):
     return out
 
 
-def parse(path):
-    name = os.path.splitext(os.path.basename(path))[0]
-    name = {'2cha': '창작2차', 'byeonhyeong8': '기출변형'}.get(name, name)
+def parse(path, name=None):
+    name = name or os.path.splitext(os.path.basename(path))[0]
+    name = {'2cha': '창작2차', 'byeonhyeong8': '기출변형', '2차': '창작2차', '기출_심화_변형_8제': '기출변형'}.get(name, name)
     L = [l.rstrip('\n') for l in open(path, encoding='utf-8')]
     L = [re.sub(r'[-]', '', l) for l in L]
     L = [l if l.strip() in ('TBL', '/TBL') else l.strip() for l in L]
     L = [l.strip() if l.strip() in ('TBL', '/TBL') else l for l in L]
-    si = next((i for i, l in enumerate(L) if l.startswith('정답 및 해설')), len(L))
+    si = next((i for i, l in enumerate(L) if '정답 및 해설' in l and len(l) < 30), len(L))
+    # 형식 C: 머리말 "수능형 창작 문항 20번형 선별 15제 (대수)" 에서 과목·유형 기본값
+    hsubj, htype = '', ''
+    for l in L[:5]:
+        m = re.search(r'(\d{2})번형.*?\(([^)]+)\)', l)
+        if m: htype, hsubj = m.group(1) + '번형', m.group(2).strip(); break
     probs, cur = {}, None
     for l in L[:si]:
         m = HEAD.match(l)
         if m:
-            n = int(m.group(1)); cur = {'n': n, 'subj': m.group(2), 'stars': (m.group(3) or '').count('★') or 4, 'lines': [], 'note': ''}
+            n = int(m.group(1)); cur = {'n': n, 'subj': m.group(2) or hsubj or '공통', 'stars': (m.group(3) or '').count('★') or 4, 'lines': [], 'note': ''}
             probs[n] = cur; continue
         if cur is None:
             continue
@@ -101,7 +106,7 @@ def parse(path):
         subj = SUBJ.get(p['subj'].strip(), p['subj'].strip())
         src = p['note']
         mt = re.search(r'(\d+)번', src)
-        qtype = (mt.group(1) if mt else str(n)) + '번형'
+        qtype = (mt.group(1) + '번형') if mt else (htype or f'{n}번형')
         topic = s['topic'].split(',')[0].strip() if s['topic'] else TOPICS.get(qid, f'{subj} {n}번')
         items.append({
             'id': qid, 'subject': subj, 'topic': topic, 'stars': p['stars'], 'type': qtype,
