@@ -1,0 +1,15 @@
+{
+ "name": "킬러들의 수학몰",
+ "short_name": "수학몰",
+ "start_url": "./",
+ "display": "standalone",
+ "background_color": "#141414",
+ "theme_color": "#141414",
+ "icons": [
+  {
+   "src": "icon.svg",
+   "sizes": "any",
+   "type": "image/svg+xml"
+  }
+ ]
+}

@@ -1,0 +1,155 @@
+# 킬러들의 수학몰 (킬러 ShrekMath)
+
+수능 20·21·29·30번형 창작문항을 "먼저 풀기 → 채점 → 조건 분석 → 핵심 개념 → 풀이 단계 → 함정 → 변형 → 한 줄" 순으로 분석하는 학습 페이지.
+(국어 '킬러 분석학' 사이트의 구조를 수학용으로 옮기고, 조건 하이라이트·KaTeX·변형 문항·기록 내보내기를 더했습니다.)
+
+## 배포 (Vercel)
+
+저장소 루트의 `vercel.json`이 `site/`를 정적 사이트로 서비스하도록 되어 있다.
+Vercel → Add New → Project → 이 저장소 Import → 설정 그대로 Deploy. 이후 `main`에 푸시할 때마다 자동 배포.
+(Vercel은 Python을 돌리지 않으므로 `python build.py`는 로컬에서 실행하고 `site/`를 함께 커밋한다.)
+
+`src/essay/season18.txt`(책 전체 추출본)는 용량 때문에 저장소에 넣지 않았다. 논술 문항은 `src/essay/items_18.json`에 이미 정리되어 있어 빌드에는 필요 없다.
+
+## 수리 논술 탭
+
+`src/essay/` 에 수리논술 나침반(hwpx)에서 뽑은 문제가 들어 있다.
+
+1. `python src/essay/extract_hwpx.py "…/수리논술나침반 시즌 18 한글(2026).hwpx" > src/essay/season18.txt`
+2. `python parse_essay.py src/essay/season18.txt` → `src/essay/items_18.json` (대학 세트 → 문제 → 소문항·예시답안·채점기준)
+3. `python build.py`
+
+다른 시즌도 같은 방법으로 `season17.txt` → `items_17.json`을 만들면 자동으로 합쳐진다. (책마다 형식이 조금씩 달라 파서가 놓치는 문제가 있을 수 있다. 그림은 `[그림]`으로만 표시된다.)
+
+## 기출관 (평가원 기출 킬러, 이미지 기반)
+
+`src/past/` 에 2022~2026학년도 평가원(6월·9월 모의평가, 수능) 문제지에서 잘라낸 14·15·20·21·22번, 미적분 28·29·30번, 확통·기하 30번 이미지가 들어 있다(홀수형).
+
+1. `python src/past/render_past.py "공통.pdf" "확통.pdf" "미적.pdf" "기하.pdf"` → `src/past/img/*.webp`, `src/past/index.json`
+   (문제지 PDF는 2단 레이아웃. 문항 번호 단어의 위치로 세로 구간을 잘라내고 아래 흰 여백을 다듬는다.)
+2. `src/past/answers.json` 에 정답을 넣는다 (평가원 정답표 기준, 객관식은 1~5). `null` 이면 자기 점검 문항으로 올라간다.
+3. `python build.py` → `site/past/`, `jlist.json`(일본관과 같은 구조, `kind:"past"`)
+
+난이도·제한시간: 22번·선택 30번 ★5(13분), 15·21·28·29번 ★4(10분), 14·20번·확통/기하 30번 ★3(8분). `render_past.py` 의 `PLAN` 에서 바꾼다.
+해설은 싣지 않는다(저작권·분량). 진단 카드에서 EBSi 해설을 안내하고, 같은 번호 자리의 창작 문항(킬러관)으로 이어 준다.
+
+## 단일 파일 크기 줄이기
+
+`python build.py --imgbase https://killershrekmath.vercel.app/` 로 빌드하면 `killer-math.html` 에 일본관·기출관 이미지를 인라인하지 않고 그 주소에서 불러온다 (17MB → 1.5MB). `site/` 결과물은 똑같다.
+
+## 접근 코드로 잠그기 (문항 유출 방지)
+
+```
+pip install cryptography        # 처음 한 번
+python build.py --key 늪2026
+```
+
+문항·해설·논술 데이터 전체가 AES-GCM으로 암호화되어 들어가고, 페이지를 열면 코드 입력창이 먼저 뜬다.
+코드를 모르면 소스 보기·파일 다운로드로도 문항을 꺼낼 수 없다. 코드를 바꾸려면 다시 빌드하면 된다.
+(코드를 아는 학생이 화면을 캡처하거나 코드를 퍼뜨리는 것까지는 막지 못한다. 그건 어떤 방식도 못 막는다.)
+
+## 폴더
+
+```
+killer-math/
+├─ build.py            빌드 스크립트  (python3 build.py)
+├─ hwptex.py           한글(HWP) 수식 → LaTeX 변환기
+├─ template.html       앱 템플릿 (화면·동작 전부 여기)
+├─ src/bank/           문항 은행 원본 (.claude/tools/bank 의 q*_final.json 복사본)
+├─ src/katex.*         KaTeX (폰트 인라인 CSS, JS 로컬 사본)
+├─ anatomy/            ★ 완전 분석 파일 (문항 id별 JSON, LaTeX 문법)
+├─ parse_essay.py      수리논술 텍스트 → 문제 JSON
+├─ src/essay/          논술 원문 추출본(seasonNN.txt)·문제 JSON(items_NN.json)·추출 스크립트
+├─ src/japan/          일본 대학 입시 문제·해설 이미지(img/)·index.json
+├─ src/past/           평가원 기출 킬러 이미지(img/)·index.json·answers.json·render_past.py
+├─ site/               정적 호스팅용 결과물 (index.html + list.json + data/NNN.json)
+└─ killer-math.html    단일 파일 결과물 (데이터 포함, 그냥 열면 됨 · 아티팩트용)
+
+`site/`에는 `elist.json`, `edata/NNN.json`(논술), `jlist.json`+`jp/`(일본)+`past/`(기출)도 생긴다. `--key`로 빌드하면 대신 `enc.json` 하나만 생긴다.
+```
+
+## 한글 파일에서 문항 가져오기 (`src/bank_src/`)
+
+`수능창작문항/*.hwpx` 처럼 "NN. [과목] 난이도 ★★★★☆ … 정답 및 해설 … NN번 정답 X" 형식의 한글 파일은 자동으로 읽는다.
+
+1. `python src/essay/extract_hwpx.py 파일.hwpx > src/bank_src/이름.txt`
+2. `python parse_hwpx_bank.py` → `src/bank/x_이름.json`
+3. `python build.py`
+
+## 수능창작문항 폴더 자동 반영 (`sync_bank.py`)
+
+`python sync_bank.py <hwpx 폴더>` 는 폴더의 hwpx 를 `src/bank_src/manifest.json`(sha1)과 비교해 **새 파일·바뀐 파일만** 추출·파싱하고,
+본문이 이미 은행에 있는 문항은 버린다(중복 금지). 결과는 `src/bank/x_<파일이름>.json`. 마지막 줄에 `CHANGED`/`NOCHANGE` 를 찍는다.
+- 지원 형식: `NN. [과목] 난이도 ★…`, `NN. [과목]`, `NN. 난이도 ★…`(머리말 "…20번형 선별 …(대수)"에서 과목·유형) + "정답 및 해설" 뒤 `NN번 정답 X`
+- 건너뛸 파일은 manifest 의 `ignore` 에 파일명 일부를 적는다(기본: "1차" = 2015 교육과정).
+- 예약 작업(1시간마다)이 내 PC의 `02_수능·모의고사/수능관련문항/수능창작문항/` 을 이 스크립트로 확인해 바로 빌드·푸시한다.
+
+## 문항 추가·수정
+
+1. `src/bank/`의 JSON을 고치거나 새 파일(`qNN?_final.json` 이름 규칙)을 넣는다. 수식은 한글 수식 문법 그대로.
+2. `python3 build.py`
+3. `site/`를 Cloudflare Pages / GitHub Pages 등에 올리거나, `killer-math.html` 한 파일을 공유한다.
+
+번호(#001…)는 파일명 순(20A→20B→21A→…)·파일 안 순서로 자동 매겨진다.
+
+## 완전 분석 파일 쓰기 (`anatomy/<문항id>.json`)
+
+분석 파일이 없으면 "부분 분석"(조건 번호 + 은행의 풀이 단계만)로 올라간다.
+`conds`와 `traps`가 있으면 "완전 분석" 배지가 붙는다. 수식은 **LaTeX**(`$…$`), 굵게는 `**…**`.
+
+```json
+{
+ "source": "출처 표시",
+ "rate": "정답률 12% (있을 때만)",
+ "wrong": "많이 고른 오답 설명",
+ "intro": ["진단 카드 문단", "…"],
+ "conds": { "C1": {"label": "정의", "why": "이 조건이 말하는 것", "uses": [1,2]} },
+ "concepts": [ {"h": "개념 제목", "p": ["문단", "…"]} ],
+ "steps": [ {"title": "단계 제목", "text": "풀이", "uses": ["C1","C3"]} ],
+ "traps": [ {"h": "함정 제목", "cond": "C2", "text": ["문단", "…"]} ],
+ "variants": [ {"h": "변형 1", "lead": "안내", "body": ["문항 본문"], "answer": 97, "hint": "힌트·풀이"} ],
+ "line": "오늘의 한 줄"
+}
+```
+
+- 조건 번호 `C1, C2…`는 빌드가 본문을 **문장 단위**로 자동으로 매긴다. 먼저 `python3 build.py` 후 `site/data/NNN.json`의 `conds`에서 번호를 확인하고 분석 파일을 쓴다.
+- `steps`를 쓰지 않으면 은행의 `solution` 문단이 그대로 단계가 된다. 쓰면 그걸로 대체된다.
+- `uses`에 적은 조건은 그 카드에서 왼쪽 문항에 자동으로 색칠된다.
+
+## 카드 그림 (ChatGPT·OpenAI 이미지)
+
+카드 삽화는 기본적으로 내장 SVG 선 그림이다. 그림 파일을 넣으면 그걸 우선 쓴다.
+- 문항별: `src/art/<문항id>.png|webp` (예 `20A-02.png`, `2021-035.png`, 논술 `essay-12.png`)
+- 주제별: `src/art/cat/<그림키>.png` — 키는 `parabola, tangent, area, inflect, sine, exp, log, seq, series, limit, inverse, circle, triangle, ellipse, hyper, vector, space, sphere, dice, normal, count, integer, poly, set, ineq, motion, essay`
+- 자동 생성: `pip install openai pillow` → `OPENAI_API_KEY` 설정 → `python gen_images.py --cat` (주제별 27장) / `--killer` / `--all`. 자세한 건 `gen_images.py` 머리말.
+- 넣은 뒤 `python build.py`. 그림은 2:3 세로 비율이 가장 잘 맞는다.
+
+## 화면 설정
+
+`template.html` 맨 아래 스크립트의 `SITE={author:'…', blog:'…'}`에서 만든이·블로그 링크를 바꾼다.
+등급 기준은 `RANKS`, 단계 이름은 `STAGE`.
+
+## 실전 모드 기능
+
+- 제한시간(킬러 13·고난도 10·준킬러 8분, 논술은 시험시간÷문항, 일본 ★4 25분·★5 35분). 남은 시간이 문제지 상단에 표시되고 1분 전 경고(진동·안내), 초과 시 빨강. 초과해도 계속 풀 수 있고 기록에 '시간 초과'가 남는다.
+- 일시정지(⏸, PC는 P키): 시계가 멈추고 문제가 가려진다.
+- 실전 중 화면 꺼짐 방지(Wake Lock, 지원 브라우저).
+- 🎲 아무거나: 현재 관에서 아직 안 푼 문제를 하나 고른다.
+- 통계: 오늘 푼 수, 연속 학습일, 복습 필요(오답·시간초과). 킬러관 필터 '복습 필요'.
+- 홈 화면에 추가(PWA 메타·manifest) 가능.
+
+## 교사용 자동 수집 (Google 시트)
+
+1. 구글 스프레드시트 새로 만들기 → 확장 프로그램 → Apps Script → `apps_script.gs` 내용 붙여넣기 → 저장
+2. 배포 → 새 배포 → 웹 앱 → 실행 "나", 액세스 "모든 사용자" → 배포 → **웹 앱 URL** 복사
+3. `template.html` 의 `SITE.sheetUrl` 에 붙여넣고 `python build.py` → 푸시
+4. 학생은 홈의 "👤 이름 입력"에 학번·이름을 한 번 넣는다. 이후 채점·자기채점·세트 결과가 시트 '기록' 탭에 한 줄씩 쌓인다. (오프라인이면 큐에 뒀다가 다음에 보냄)
+
+## 모의 세트 · 간격 복습
+
+- **🎯 모의 세트**: 20·21·29·30번형에서 안 푼 문항 1개씩(없으면 다른 문항) 4개를 뽑아 제한시간 합산(예 34분) 한 시계로 연속 풀이. 채점하면 바로 다음 문항, 끝나면 결과표. 중간에 나가도 "세트 이어서"로 복귀. 구성은 `SET_TYPES`.
+- **🔁 오늘의 복습**: 오답·시간초과 문항은 3일 → 7일 → 14일 뒤 킬러관 맨 위 행에 다시 뜬다(`REVIEW_DAYS`). 다시 풀어 제한시간 안에 맞히면 복습 대상에서 빠진다.
+
+## 학생 기록
+
+브라우저 localStorage(`km:v1`)에만 저장된다. 홈의 "기록 내보내기"를 누르면 탭 구분 텍스트가 복사되어 엑셀·구글시트에 바로 붙여넣을 수 있다 (교사 제출용).

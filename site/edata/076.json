@@ -1,0 +1,105 @@
+{
+ "num": 76,
+ "id": "인하대학교(자연계열_오전)수시-2",
+ "univ": "인하대학교(자연계열_오전) 수시",
+ "n": 2,
+ "title": "문제 2 · 35점",
+ "head": "다음 제시문을 읽고 물음에 답하시오. (35점)",
+ "points": 35,
+ "minutes": 33,
+ "info": {
+  "concepts": "정적분, 미분과적분의 관계, 치환적분법, 극한, 연속, 미분가능, 평균변화율, 도함수",
+  "min": "미적용",
+  "field": "수학(3문항, 8문제)",
+  "time": "100분"
+ },
+ "pre": [],
+ "passage": [
+  "함수 $f \\left(x \\right)$ 에 대하여 좌극한 $\\lim_{x \\to a-}{\\frac{f \\left(x \\right)-f \\left(a \\right)}{x}-a}$ 와 우극한 $\\lim_{x \\to a+}{\\frac{f \\left(x \\right)-f \\left(a \\right)}{x}-a}$ 가 각각 존재하고, 그 값이 서로 같다면 $f \\left(x \\right)$ 는 $x=a$ 에서 미분가능하다고 한다.",
+  "(※) 다항함수 $f \\left(x \\right)$ 는 $f \\left(2 \\right)=4$ 를 만족하고, 함수 $g \\left(x \\right)$ 는 다음과 같다.",
+  "$g \\left(x \\right)=\\begin{cases}\\left|x+1 \\right|&\\,\\left(x \\le 0 \\right)\\\\&\\\\\\frac{\\,\\,1}{x}&\\,\\left(0<x \\le 1 \\right)\\\\&\\\\\\,\\,x&\\,\\left(x>1 \\right)\\end{cases}$"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[문제 2-ⅰ]",
+   "points": 10,
+   "text": [
+    "함수 $f \\left(x \\right)g \\left(x \\right)$ 가 실수 전체의 집합에서 연속이 되도록 하는 $f \\left(x \\right)$ 중 차수가 최소인 것을 구하시오. (10점)"
+   ],
+   "answer": [
+    "$g \\left(x \\right)$ 는 $x \\ne 0$ 일 때, 연속이다. 따라서 임의의 다항식 $f \\left(x \\right)$ 에 대해서 $f \\left(x \\right)g \\left(x \\right)$ 는 $x \\ne 0$ 에서 연속이다. 또한 만일 $f \\left(0 \\right)\\ne 0$ 이고 $f \\left(x \\right)g \\left(x \\right)$ 가 $x=0$ 에서 연속이면",
+    "$\\lim_{x \\to 0-}{g \\left(x \\right)}=\\frac{\\lim_{x \\to 0-}{f \\left(x \\right)g \\left(x \\right)}}{\\lim_{x \\to 0-}{f \\left(x \\right)}}=\\lim_{x \\to 0+}{g \\left(x \\right)}$",
+    "가 되어 $g \\left(x \\right)$ 가 $x=0$ 에서 연속임을 의미하므로 $f \\left(0 \\right)=0$ 이어야 한다. 그러므로 주어진 조건으로부터 다항식 $f \\left(x \\right)=x^n h \\left(x \\right)$ ( $n \\ge 1$ , $h \\left(x \\right)$ 는 $h \\left(0 \\right)\\ne 0$ 인 다항식)의 형태이어야 한다. $f \\left(x \\right)g \\left(x \\right)$ 가 $x=0$ 에서 연속이므로",
+    "$\\lim_{x \\to 0-}{f \\left(x \\right)g \\left(x \\right)}=\\lim_{x \\to 0-}{x^n \\left(x+1 \\right)h \\left(x \\right)}=0=\\lim_{x \\to 0+}{x^n-1 h \\left(x \\right)}=\\lim_{x \\to 0+}{f \\left(x \\right)g \\left(x \\right)}$",
+    "이다. 따라서 $n \\ge 2$ 이고 $f \\left(x \\right)$ 의 차수는 $2$ 이상이다. $f \\left(x \\right)=x^2$ 이 $f \\left(x \\right)=4$ 와 문제의 조건을 만족하므로 이 함수가 구하려는 다항함수이다."
+   ],
+   "rubric": [
+    "(3점) $g \\left(x \\right)$ 가 $x=0$ 에서 불연속임을 확인하면",
+    "(3점) $f \\left(x \\right)$ 를 구하면",
+    "(4점) 구한 $f \\left(x \\right)$ 의 차수가 최소이고 $f \\left(x \\right)g \\left(x \\right)$ 가 연속임을 확인하면"
+   ]
+  },
+  {
+   "k": "2",
+   "label": "[문제 2-ⅱ]",
+   "points": 15,
+   "text": [
+    "함수 $f \\left(x \\right)g \\left(x \\right)$ 가 실수 전체의 집합에서 미분가능하도록 하는 $f \\left(x \\right)$ 중 차수가 최소인 것을 구하시오. (15점)"
+   ],
+   "answer": [
+    "$g \\left(x \\right)$ 는 $x=-1$ , $0$ , $1$ 이외의 모든 실수에서 미분가능하다. 임의의 다항함수 $f \\left(x \\right)$ 에 대하여 $f \\left(x \\right)g \\left(x \\right)$ 는 $x=-1$ , $0$ , $1$ 이외의 실수에서 미분가능하다. [문제 2-ⅰ]로부터 $f \\left(0 \\right)=0$ 이다. $f \\left(1 \\right)\\ne 0$ 이라고 가정하자. $f \\left(x \\right)g \\left(x \\right)$ 가 $x=1$ 에서 미분가능하므로",
+    "$\\lim_{x \\to 1-}{\\frac{g \\left(x \\right)-g \\left(1 \\right)}{x}-1}=\\lim_{x \\to 1-}{\\left(\\frac{f \\left(x \\right)g \\left(x \\right)-f \\left(1 \\right)g \\left(1 \\right)}{f \\left(x \\right)\\left(x-1 \\right)}-\\frac{f \\left(x \\right)g \\left(1 \\right)-f \\left(1 \\right)g \\left(1 \\right)}{f \\left(x \\right)\\left(x-1 \\right)}\\right)}$",
+    "$=\\lim_{x \\to 1-}{\\left(\\frac{f \\left(x \\right)g \\left(x \\right)-f \\left(1 \\right)g \\left(1 \\right)}{f \\left(x \\right)\\left(x-1 \\right)}\\right)}-\\frac{f' \\left(1 \\right)g \\left(1 \\right)}{f \\left(1 \\right)}$",
+    "$=\\lim_{x \\to 1+}{\\left(\\frac{f \\left(x \\right)g \\left(x \\right)-f \\left(1 \\right)g \\left(1 \\right)}{f \\left(x \\right)\\left(x-1 \\right)}\\right)}-\\frac{f' \\left(1 \\right)g \\left(1 \\right)}{f \\left(1 \\right)}=\\lim_{x \\to 1+}{\\frac{g \\left(x \\right)-g \\left(1 \\right)}{x}-1}$",
+    "이다. 따라서 제시문에 의하여 $g \\left(x \\right)$ 가 $m x=1$ 에서 미분가능하므로 모순이다. 그러므로 $f \\left(1 \\right)=0$ 이고 마찬가지 방법으로 $f \\left(-1 \\right)=0$ 이다.",
+    "따라서 $f \\left(x \\right)=x^a \\left(x-1 \\right)^b \\left(x+1 \\right)^c h \\left(x \\right)$ ( $a$ , $b$ , $c \\ge 1$ , $h \\left(x \\right)$ 는 $h \\left(-1 \\right)h \\left(0 \\right)h \\left(1 \\right)\\ne 0$ 인 다항함수)이다.",
+    "(ⅰ) $x=-1$ 에서 미분가능할 필요충분조건은 제시문에 의하여 다음 두 극한값이 같은 것이다.",
+    "$\\lim_{x \\to-1-}{\\frac{f \\left(x \\right)g \\left(x \\right)-f \\left(-1 \\right)g \\left(-1 \\right)}{x}+1}=-f \\left(-1 \\right)$",
+    "$\\lim_{x \\to-1+}{\\frac{f \\left(x \\right)g \\left(x \\right)-f \\left(-1 \\right)g \\left(-1 \\right)}{x}+1}=f \\left(-1 \\right)$",
+    "따라서 $f \\left(x \\right)g \\left(x \\right)$ 가 $x=-1$ 에서 미분가능할 필요충분조건은 $c \\ge 1$ 이다.",
+    "(ⅱ) $x=0$ 에서 미분가능한 함수는 연속이므로 [문제 2-ⅰ]로부터 $a \\ge 2$ 임을 알 수 있다. 따라서",
+    "$\\lim_{x \\to 0-}{\\frac{f \\left(x \\right)g \\left(x \\right)-f \\left(0 \\right)g \\left(0 \\right)}{x}}=0$ ,",
+    "$\\lim_{x \\to 0+}{\\frac{f \\left(x \\right)g \\left(x \\right)-f \\left(0 \\right)g \\left(0 \\right)}{x}}=\\lim_{x \\to 0+}{\\frac{f \\left(x \\right)g \\left(x \\right)}{x}}=\\lim_{x \\to 0+}{x^a-2 \\left(x-1 \\right)^b \\left(x+1 \\right)h \\left(x \\right)}$",
+    "이다. 제시문에 의하여 두 값이 같아야 하므로 $f \\left(x \\right)g \\left(x \\right)$ 가 $x=0$ 에서 미분가능할 필요충분조건은 $a \\ge 3$ 이다.",
+    "(ⅲ) $x=1$ 에서 미분가능할 필요충분조건은 제시문에 의하여 다음 두 극한값이 같은 것이다.",
+    "$\\lim_{x \\to 1-}{\\frac{f \\left(x \\right)g \\left(x \\right)-f \\left(1 \\right)g \\left(1 \\right)}{x}-1}=\\lim_{x \\to 1-}{x^2 \\left(x-1 \\right)^b-1 \\left(x+1 \\right)h \\left(x \\right)}$",
+    "$\\lim_{x \\to 1+}{\\frac{f \\left(x \\right)g \\left(x \\right)-f \\left(1 \\right)g \\left(1 \\right)}{x}-1}=\\lim_{x \\to 1+}{x^4 \\left(x-1 \\right)^b-1 \\left(x+1 \\right)h \\left(x \\right)}$",
+    "따라서 $f \\left(x \\right)g \\left(x \\right)$ 가 $x=1$ 에서 미분가능할 필요충분조건은 $b \\ge 1$ 이다.",
+    "그러므로 주어진 조건 $f \\left(2 \\right)=4$ 를 만족하는 다항함수 $f \\left(x \\right)$ 는 $h \\left(x \\right)=\\frac{1}{6}$ 일 때",
+    "$f \\left(x \\right)=\\frac{1}{6}x^3 \\left(x-1 \\right)\\left(x+1 \\right)$",
+    "이다."
+   ],
+   "rubric": [
+    "(5점) $g \\left(x \\right)$ 가 $x=-1$ , $0$ , $1$ 에서만 미분가능하지 않음을 확인하면",
+    "(3점) $f \\left(x \\right)$ 를 구하면",
+    "(7점) 구한 $f \\left(x \\right)$ 의 차수가 최소이고 $f \\left(x \\right)g \\left(x \\right)$ 가 미분가능함을 확인하면"
+   ]
+  },
+  {
+   "k": "3",
+   "label": "[문제 2-ⅲ]",
+   "points": 10,
+   "text": [
+    "[문제 2-ⅱ]에서 구한 함수 $f \\left(x \\right)$ 에 대하여 다음 세 극한값을 구하시오.(10점)",
+    "$\\lim_{x \\to 1-}{\\left(f \\left(x \\right)g \\left(x \\right)\\right)}'$ , $\\lim_{x \\to 1+}{\\left(f \\left(x \\right)g \\left(x \\right)\\right)}'$ , $\\lim_{x \\to \\infty}{\\frac{\\ln \\left(1+\\left|f \\left(x \\right)\\right|\\right)}{\\ln x}}$"
+   ],
+   "answer": [
+    "$x=1$ 근처에서 $f \\left(x \\right)g \\left(x \\right)$ 는 다음과 같다.",
+    "$f \\left(x \\right)g \\left(x \\right)=\\begin{cases}\\frac{1}{6}x^2 \\left(x^2-1 \\right)&\\,\\left(0<x \\le 1 \\right)\\\\&\\\\\\frac{1}{6}x^4 \\left(x^2-1 \\right)&\\,\\left(x>1 \\right)\\end{cases}$",
+    "따라서",
+    "$\\lim_{x \\to 1-}{\\left(f \\left(x \\right)g \\left(x \\right)\\right)'}=\\lim_{x \\to 1-}{\\left\\{\\frac{1}{3}x \\left(x^2-1 \\right)+\\frac{1}{3}x^3 \\right\\}}=\\frac{1}{3}$ , $\\lim_{x \\to 1+}{\\left(f \\left(x \\right)g \\left(x \\right)\\right)'}=\\lim_{x \\to 1+}{\\left\\{\\frac{2}{3}x^3 \\left(x^2-1 \\right)+\\frac{1}{3}x^5 \\right\\}}=\\frac{1}{3}$",
+    "이다. $f \\left(x \\right)=\\frac{1}{6}x^3 \\left(x-1 \\right)\\left(x+1 \\right)$ 이므로 구하고자 하는 값은 다음과 같다.",
+    "$\\lim_{x \\to \\infty}{\\frac{\\ln \\left(1+\\left|f \\left(x \\right)\\right|\\right)}{\\ln x}}=\\lim_{x \\to \\infty}{\\frac{5 \\ln x+\\ln \\left(\\frac{1}{x^5}+\\left|\\frac{1}{6}\\left(1-\\frac{1}{x^2}\\right)\\right|\\right)}{\\ln x}}=5$"
+   ],
+   "rubric": [
+    "(3점) $\\lim_{x \\to 1-}{\\left(f \\left(x \\right)g \\left(x \\right)\\right)'}$ 을 구하면",
+    "(3점) $\\lim_{x \\to 1+}{\\left(f \\left(x \\right)g \\left(x \\right)\\right)'}$ 을 구하면",
+    "(4점) $\\lim_{x \\to \\infty}{\\frac{\\ln \\left(1+\\left|f \\left(x \\right)\\right|\\right)}{\\ln x}}$ 를 구하면"
+   ]
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "정적분"
+}

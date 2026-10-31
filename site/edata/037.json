@@ -1,0 +1,124 @@
+{
+ "num": 37,
+ "id": "서강대학교(자연계열1차)수시-2",
+ "univ": "서강대학교(자연계열 1차) 수시",
+ "n": 2,
+ "title": "문제 2",
+ "head": "$0<t<\\pi$ 일 때, 점 $\\mathrm{P}(2 \\cos t,2 \\sin t)$ 에 대하여 점 $\\mathrm{P}$ 와 점 $(-1,0)$ 을 지나는 직선과 점 $\\mathrm{P}$ 와 점 $(-2,0)$ 을 지나는 직선이 이루는 예각의 크기를 $\\theta(t)$ 라고 하자. 열린구간 $(0,\\pi)$ 에서 정의된 함수 $f(t)=\\tan \\theta(t)$ 에 대하여 제시문 [가]～[다]를 참고하여 문항 [2-1]～[2-4]에 답하시오. (단, $\\theta(t)$ 의 단위는 라디안)",
+ "points": null,
+ "minutes": 50,
+ "info": {
+  "concepts": "점과 직선 사이의 거리, 원과 직선, 경우의 수, 수열의 합, 함수의 극한, 함수의 연속, 미분계수, 접선의 방정식, 함수의 그래프의 개형, 정적분과 미분의 관계, 치환적분법, 지수함수의 미분, 로그함수의 미분, 변곡점, 삼각함수의 성질, 삼각함수의 덧셈정리",
+  "min": "국어 수학 영어 탐구(1과목) 4개 영역 중 3개 영역 등급 합 7 이내, 한국사 4등급 이내",
+  "field": "수학, 수학I, 수학Ⅱ, 미적분",
+  "time": "100분"
+ },
+ "pre": [],
+ "passage": [],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[2-1]",
+   "points": null,
+   "text": [
+    "함수 $f(t)$ 가 $t=\\frac{2 \\pi}{3}$ 에서 연속임을 보이시오."
+   ],
+   "answer": [
+    "점 $\\mathrm{P}$ 와 점 $(-1,0)$ 을 지나는 직선을 $l_1$ , 점 $\\mathrm{P}$ 와 점 $(-2,0)$ 을 지나는 직선을 $l_2$ 라고 하자. 오른쪽 그림과 같이 두 직선이 $x$ 축과 이루는 각의 크기를 각각 $\\alpha,\\beta$ 라고 하면 $\\theta(t)=\\alpha-\\beta$ 이다.",
+    "[그림] (ⅰ) $t \\ne \\frac{2 \\pi}{3}$ 일 때",
+    "직선 $l_1$ 의 기울기는 $\\tan \\alpha=\\frac{2 \\sin t}{2 \\cos t+1}$ , 직선 $l_2$ 의 기울기는 $\\tan \\beta=\\frac{2 \\sin t}{2 \\cos t+2}$ 이다.",
+    "제시문 [다]에 의해",
+    "$f(t)=\\tan \\theta(t)=\\tan(\\alpha-\\beta)=\\frac{\\frac{2 \\sin t}{2 \\cos t+1}-\\frac{\\sin t}{\\cos t+1}}{1+\\frac{2 \\sin t}{2 \\cos t+1}\\times \\frac{\\sin t}{\\cos t+1}}$",
+    "$=\\frac{\\sin t}{(2 \\cos t+1)(\\cos t+1)+2 \\sin^2 t}$",
+    "$=\\frac{\\sin t}{3(1+\\cos t)}$",
+    "[그림] (ⅱ) $t=\\frac{2 \\pi}{3}$ 일 때",
+    "두 점 $(-1,0)$ , $(-2,0)$ 을 각각 $\\mathrm{A},B$ 라고 하자.",
+    "오른쪽 그림과 같이 삼각형 $\\mathrm{APB}$ 는 직각삼각형이므로",
+    "$f \\left(\\frac{2 \\pi}{3}\\right)=\\tan \\theta \\left(\\frac{2 \\pi}{3}\\right)=\\overline \\frac{\\mathrm{AB}}{\\overline{\\mathrm{AP}}}=\\frac{1}{\\sqrt{3}}=\\frac{\\sqrt{3}}{3}$",
+    "따라서 (ⅰ)과 (ⅱ)에 의해",
+    "$\\lim_{t \\to \\frac{2 \\pi}{3}}f(t)=\\lim_{t \\to \\frac{2 \\pi}{3}}\\frac{\\sin t}{3(1+\\cos t)}=\\frac{\\sqrt{3}}{3}=f \\left(\\frac{2 \\pi}{3}\\right)$",
+    "이므로 제시문 [나]에 의하여 함수 $f(t)$ 는 $t=\\frac{2 \\pi}{3}$ 에서 연속이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "[2-2]",
+   "points": null,
+   "text": [
+    "$\\sin \\alpha=\\frac{\\sqrt{2}}{4}$ 일 때, $\\int_2 \\alpha^{\\frac{2 \\pi}{3}}f(t)dt$ 의 값을 구하시오. $\\left(단,0<\\alpha<\\frac{\\pi}{2}\\right)$"
+   ],
+   "answer": [
+    "문항 [2-1]의 풀이로부터 $f(t)=\\frac{\\sin t}{3(1+\\cos t)}$ 이다. $\\int_2 \\alpha^{\\frac{2 \\pi}{3}}f(t)dt$ 에서 $1+\\cos t=s$ 라 놓으면 $\\frac{ds}{d t}=-\\sin t$ 이고, $t=2 \\alpha$ 일 때 $s=1+\\cos 2 \\alpha$ , $t=\\frac{2 \\pi}{3}$ 일 때 $s=\\frac{1}{2}$ 이므로",
+    "$\\int_2 \\alpha^{\\frac{2 \\pi}{3}}f(t)dt=-\\frac{1}{3}\\int_{1+\\cos 2 \\alpha}^{\\frac{1}{2}}\\frac{1}{s}ds$",
+    "제시문 [다]에 의해 $1+\\cos 2 \\alpha=1+\\cos^2 \\alpha-\\sin^2 \\alpha=2-2 \\sin^2 \\alpha=\\frac{7}{4}$ 이므로",
+    "$\\int_2 \\alpha^{\\frac{2 \\pi}{3}}f(t)dt=-\\frac{1}{3}\\left[\\ln s \\right]_{1+\\cos 2 \\alpha}^{\\frac{1}{2}}=-\\frac{1}{3}\\left(\\ln \\frac{1}{2}-\\ln \\frac{7}{4}\\right)=\\frac{1}{3}\\ln \\frac{7}{2}$"
+   ],
+   "rubric": []
+  },
+  {
+   "k": "3",
+   "label": "[2-3]",
+   "points": null,
+   "text": [
+    "열린구간 $\\left(0,\\frac{\\pi}{2}\\right)$ 에서 정의된 함수 $g(x)=\\frac{f(x)}{\\left\\{f(2 x)\\right\\}^3}$ 에 대하여 $\\lim_x \\to 0+\\frac{g \\left(\\frac{\\pi}{2}-x \\right)}{x^n}$ 가 수렴하는 자연수 $n$ 을 모두 구하고, 수렴하는 모든 $n$ 에 대하여 그 극한값을 구하시오."
+   ],
+   "answer": [
+    "문항 [2-1]의 풀이로부터 $f(t)=\\frac{\\sin t}{3(1+\\cos t)}$ 이므로",
+    "$g(x)=\\frac{\\sin x}{3(1+\\cos x)}\\times \\frac{3^3(1+\\cos 2 x)^3}{\\sin^3 2 x}$ 이다. 제시문 [다]에 의해 $\\sin 2 x=2 \\sin x \\cos x$ 이고",
+    "$\\cos 2 x=\\cos^2 x-\\sin^2 x=2 \\cos^2 x-1$ 이므로",
+    "$g(x)=9 \\times \\frac{\\sin x}{1+\\cos x}\\times \\frac{8 \\cos^6 x}{8 \\sin^3 x \\cos^3 x}=\\frac{9 \\cos^3 x}{(1+\\cos x)\\sin^2 x}$",
+    "제시문 [가]에 의해",
+    "$g \\left(\\frac{\\pi}{2}-x \\right)=\\frac{9 \\sin^3 x}{(1+\\sin x)\\cos^2 x}$",
+    "이고",
+    "$\\frac{g \\left(\\frac{\\pi}{2}-x \\right)}{x^n}=\\frac{9}{(1+\\sin x)\\cos^2 x}\\times \\left(\\frac{\\sin x}{x}\\right)^3 \\times x^3-n$",
+    "$\\lim_x \\to 0+\\frac{9}{(1+\\sin x)\\cos^2 x}=9$ , $\\lim_x \\to 0+\\frac{\\sin x}{x}=1$ 이므로 $\\lim_x \\to 0+\\frac{g \\left(\\frac{\\pi}{2}-x \\right)}{x^n}$ 이 수렴할 필요충분조건은 $\\lim_x \\to 0+x^3-n$ 이 수렴하는 것이다.",
+    "(ⅰ) $n=1,2$ 일 때, $\\lim_x \\to 0+x^3-n=0$ 이므로 주어진 극한은 수렴하고 그 극한값은 $0$ 이다.",
+    "(ⅱ) $n=3$ 일 때, $\\lim_x \\to 0+x^3-n=1$ 이므로 주어진 극한은 수렴하고 그 극한값은 $9$ 이다.",
+    "(ⅲ) $n>3$ 일 때, $\\lim_x \\to 0+x^3-n=\\infty$ 이므로 주어진 극한은 발산한다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "4",
+   "label": "[2-4]",
+   "points": null,
+   "text": [
+    "곡선 $y=f(x)\\left(0<x<\\frac{2 \\pi}{3}\\right)$ 와 직선 $y=\\frac{1}{3}x+k$ 의 교점의 개수를 실수 $k$ 의 값에 따라 조사하시오."
+   ],
+   "answer": [
+    "$h(x)=f(x)-\\frac{x}{3}$ 라 하자. 그러면 곡선 $y=f(x)\\left(0<x<\\frac{2 \\pi}{3}\\right)$ 와 직선 $y=\\frac{1}{3}x+k$ 의 교점의 개수는 곡선 $y=h(x)\\left(0<x<\\frac{2 \\pi}{3}\\right)$ 와 직선 $y=k$ 의 교점의 개수와 같다. 함수 $h(x)$ 의 도함수는",
+    "$h'(x)=\\frac{1}{3}\\frac{\\cos x(1+\\cos x)-\\sin x(-\\sin x)}{(1+\\cos x)^2}-\\frac{1}{3}=-\\frac{\\cos x}{3(1+\\cos x)}$",
+    "$x=\\frac{\\pi}{2}$ 에서 $h'(x)=0$ 이고, 열린구간 $\\left(0,\\frac{2 \\pi}{3}\\right)$ 에서 함수 $h(x)$ 의 증가와 감소를 표로 나타내면 다음과 같다.",
+    "$x$",
+    "$0$",
+    "$\\cdots$",
+    "$\\frac{\\pi}{2}$",
+    "$\\cdots$",
+    "$\\frac{2 \\pi}{3}$",
+    "$h'(x)$",
+    "-",
+    "$0$",
+    "$+$",
+    "$h(t)$",
+    "↘",
+    "$\\frac{2-\\pi}{6}$",
+    "↗",
+    "또한, $\\lim_x \\to 0+h(x)=0$ , $\\lim_{x \\to \\frac{2 \\pi}{3}-}h(x)=\\frac{3 \\sqrt{3}-2 \\pi}{9}$ 이고, $3 \\sqrt{3}<3 \\times 2=6$ , $2 \\pi>6$ 이므로",
+    "[그림] $\\frac{2-\\pi}{6}<\\frac{3 \\sqrt{3}-2 \\pi}{9}<0$ 이다.",
+    "따라서 함수 $h(x)$ 의 그래프의 개형을 그리면 오른쪽 그림과 같다.",
+    "그러므로 실수 $k$ 에 대하여",
+    "곡선 $y=h(x)\\left(0<x<\\frac{2 \\pi}{3}\\right)$ 와 직선 $y=k$ 의",
+    "교점의 개수는 다음과 같다.",
+    "(ⅰ) $\\frac{2-\\pi}{6}<k<\\frac{{3 \\sqrt{3}}-2 \\pi}{9}$ 이면 교점의 개수는 $2$ 개",
+    "(ⅱ) $k=\\frac{2-\\pi}{6}$ 이거나 $\\frac{{3 \\sqrt{3}}-2 \\pi}{9}\\le k<0$ 이면 교점의 개수는 $1$ 개",
+    "(ⅲ) $k<\\frac{2-\\pi}{6}$ 이거나 $k \\ge 0$ 이면 교점의 개수는 $0$ 개",
+    "서강대학교 홈페이지"
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "점과 직선 사이의 거리"
+}

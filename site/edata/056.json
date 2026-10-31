@@ -1,0 +1,101 @@
+{
+ "num": 56,
+ "id": "성균관대학교(수리형1)수시-1",
+ "univ": "성균관대학교(수리형1) 수시",
+ "n": 1,
+ "title": "문제 1 · 30점",
+ "head": "다음 <제시문 1>과 <제시문 2>을 읽고 [문제 1-ⅰ]∼[문제 1-ⅲ]을 문항별로 풀이와 함께 답하시오. (30점)",
+ "points": 30,
+ "minutes": 33,
+ "info": {
+  "concepts": "직선의 방정식, 삼차함수, 등차수열, 등차수열의 합, 정적분, 수열의 합, 코사인법칙, 평면좌표",
+  "min": "- 자연과학계열, 전자전기공학부, 공학계열, 건설환경공학부 : 국어, 수학, 영어, 탐구, 탐구 5개 영역/과목 중 3개 등급합 6등급 이내",
+  "field": "- 반도체시스템공학, 소프트웨어학, 글로벌바이오메디컬공학, 지능형소프트웨어학, 약학, 반도체융합공학, 에너지학 : 국어, 수학, 영어, 탐구, 탐구 5개 영역/과목 중 3개 등급합 5등급 이내 - 의예 : 국어, 수학, 영어, 탐구(2개과목 평균) 4개 영역 중 3개 등급합 4등급 이내 수학(3문항, 9문제)",
+  "time": "100분"
+ },
+ "pre": [],
+ "passage": [
+  "<제시문 1>",
+  "닫힌구간 $\\left[a,b \\right]$ 에서 연속인 함수 $h \\left(x \\right)$ 의 한 부정적분을 $H \\left(x \\right)$ 라고 하면",
+  "$\\int_{a}^{b}{h \\left(x \\right)dx=H \\left(b \\right)-H \\left(a \\right)}$",
+  "이다.",
+  "<제시문 2>",
+  "미분가능한 함수 $f \\left(x \\right)$ 가 주어졌을 때, 닫힌구간 $\\left[-2,2 \\right]$ 위에서 정의되는 연속함수 $g \\left(x \\right)$ 는 다음과 같다.",
+  "$g \\left(x \\right)={\\begin{cases}f' \\left(-1 \\right)\\left(x+1 \\right)+f \\left(-1 \\right)&\\left(-2 \\le x \\le-1 \\right)\\\\ f \\left(x \\right)&\\left(-1 \\le x \\le 1 \\right)\\\\ f' \\left(1 \\right)\\left(x-1 \\right)+f \\left(1 \\right)&\\left(1 \\le x \\le 2 \\right)\\end{cases}}$"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[문제 1-ⅰ]",
+   "points": null,
+   "text": [
+    "<제시문 2>에서 $f \\left(x \\right)=-2 x^{2}+1$ 일 때, 정적분 $\\int_{-2}^{2}{g \\left(x \\right)dx}$ 의 값을 구하고 그 이유를 논하시오."
+   ],
+   "answer": [
+    "주어진 $f \\left(x \\right)=-2 x^{2}+1$ 에 대하여 함수 $g \\left(x \\right)$ 를 계산하면 다음과 같다.",
+    "$g \\left(x \\right)={\\begin{cases}4 x+3&\\left(-2 \\le x \\le-1 \\right)\\\\-2 x^{2}+1&\\left(-1<x<1 \\right)\\\\-4 x+3&\\left(1<x \\le 2 \\right)\\end{cases}}$",
+    "따라서 이를 적분하면",
+    "$\\int_{-2}^{2}{g \\left(x \\right)dx=2 \\int_{0}^{2}{g \\left(x \\right)dx=2 \\left(\\int_{0}^{1}{\\left(-2 x^{2}+1 \\right)dx+\\int_{1}^{2}{\\left(-4 x+3 \\right)dx}}\\right)=-\\frac{16}{3}}}$"
+   ],
+   "rubric": [
+    "(6점) 문제에서 요구하는 함수를 제시문의 정의에 맞게 정확히 계산하고, 이를 이용하여 정적분의 값을 계산할 수 있다."
+   ]
+  },
+  {
+   "k": "2",
+   "label": "[문제 1-ⅱ]",
+   "points": null,
+   "text": [
+    "<제시문 2>에서 $f \\left(x \\right)$ 는 다음의 두 조건을 모두 만족하는 이차함수이다.",
+    "(1) $f \\left(1 \\right)$ , $f \\left(-1 \\right)\\in \\left[-1,1 \\right]$",
+    "(2) $f' \\left(1 \\right)=\\frac{1}{3}$ , $f' \\left(-1 \\right)=-\\frac{1}{2}$",
+    "이때 $y=g \\left(x \\right)$ , $y=-2$ 및 $x=-2$ , $x=2$ 로 둘러싸인 도형의 가능한 넓이 중에서 최솟값을 구하고 그 이유를 논하시오."
+   ],
+   "answer": [
+    "$f \\left(x \\right)$ 는 이차함수이므로, $f \\left(x \\right)=a x^{2}+b x+c \\left(a \\ne 0 \\right)$ 이라 할 수 있다.",
+    "$f' \\left(x \\right)=2 a x+b$ 임을 이용하여, (2)번 조건에 의해 $f' \\left(1 \\right)=2 a+b=\\frac{1}{3}$",
+    "그리고 $f' \\left(-1 \\right)=-2 a+b=-\\frac{1}{2}$ 이다. 따라서 $a=\\frac{5}{24}$ , $b=-\\frac{1}{12}$ 임을 알 수 있다.",
+    "$f \\left(x \\right)=\\frac{5}{24}x^{2}-\\frac{1}{12}x+c$ 이므로 (1)번 조건에 의해 상수 $c$ 는 다음의 두 범위 안에 모두 속해야 한다.",
+    "$-1 \\le f \\left(1 \\right)=\\frac{1}{8}+c \\le 1 \\leftrightarrow-\\frac{9}{8}\\le c \\le \\frac{7}{8}$",
+    "$-1 \\le f \\left(-1 \\right)=\\frac{7}{24}+c \\le 1 \\leftrightarrow-\\frac{31}{24}\\le c \\le \\frac{17}{24}$",
+    "이를 종합하면 $-\\frac{9}{8}\\le c \\le \\frac{17}{24}$ 이다.",
+    "이 범위 안에서 $f \\left(x \\right)\\ge c-\\frac{1}{120}>-2$ 이므로, $y=g \\left(x \\right)$ , $y=-2$ , $x=-2$ , $x=2$ 로 둘러싸인 도형의 넓이는 $c$ 가 가장 작을 때, 즉 $c=-\\frac{9}{8}$ 일 때 최솟값을 가지게 된다. 따라서, $f \\left(x \\right)=\\frac{5}{24}x^{2}-\\frac{1}{12}x-\\frac{9}{8}$ 일 때 도형의 넓이를 구하자. 이 경우에 도형은 다음의 세 부분 $A$ , $B$ , $C$ 로 이루어져 있다.",
+    "$A:$ $\\left(-1,-\\frac{5}{6}\\right)$ , $\\left(-2,-\\frac{1}{3}\\right)$ , $\\left(-2,-2 \\right)$ , $\\left(-1,-2 \\right)$ 를 꼭짓점으로 갖는 사다리꼴",
+    "$B:$ $y=f \\left(x \\right)$ , $y=-2$ , $x=-1$ , $x=1$ 로 둘러싸인 도형",
+    "$C:$ $\\left(2,-\\frac{2}{3}\\right)$ , $\\left(1,-1 \\right)$ , $\\left(1,-2 \\right)$ , $\\left(2,-2 \\right)$ 를 꼭짓점으로 갖는 사다리꼴",
+    "$A$ , $B$ , $C$ 각각의 넓이를 기하 혹은 적분을 이용하여 구하면 다음과 같다.",
+    "$A$ 의 넓이 $=\\left(\\frac{7}{6}+\\frac{5}{3}\\right)\\times 1 \\times \\frac{1}{2}=\\frac{17}{12}$",
+    "$B$ 의 넓이 $=\\int_{-1}^{1}{\\left(\\frac{5}{24}x^{2}-\\frac{1}{12}x-\\frac{9}{8}+2 \\right)dx=\\frac{17}{9}}$",
+    "$C$ 의 넓이 $=\\left(1+\\frac{4}{3}\\right)\\times 1 \\times \\frac{1}{2}=\\frac{7}{6}$",
+    "따라서 정답은 $\\frac{17}{12}+\\frac{17}{9}+\\frac{7}{6}=\\frac{161}{36}$ 이다."
+   ],
+   "rubric": [
+    "(12점) 문제에서 제시된 조건을 바탕으로 이차함수의 그래프의 형태를 추론하고, 이를 이용하여 제시된 도형의 형태를 정적분으로서 해석한 후, 문제에서 질문하고 있는 도형이 언제 최소화되는지 이해하여 넓이의 최솟값을 구할 수 있다."
+   ]
+  },
+  {
+   "k": "3",
+   "label": "[문제 1-ⅲ]",
+   "points": null,
+   "text": [
+    "상수 $c \\,$ 에 대하여 <제시문 2>에서 $f \\left(x \\right)=c x \\left(x-1 \\right)$ 이라 하자. 이때 연속함수 $G \\left(x \\right)$ 를 다음과 같이 정의한다. $g \\left(x \\right)\\le 2$ 이면 $G \\left(x \\right)=g \\left(x \\right)$ 이고, $g \\left(x \\right)>2$ 이면 $G \\left(x \\right)=2$ 이다. 정적분 $\\int_{-2}^{2}{\\left(G \\left(x \\right)+2 \\right)dx}$ 의 값이 $\\frac{109}{10}$ 가 되도록 하는 $c$ 를 구하고 그 이유를 논하시오. (단, $0<c \\le 1$ )"
+   ],
+   "answer": [
+    "$f \\left(x \\right)=c x^{2}-c x$ 이므로 $f' \\left(x \\right)=2 c x-c$ 이다. 따라서 $f \\left(1 \\right)=0$ , $f \\left(-1 \\right)=2 c$ , $f' \\left(1 \\right)=c$ , $f' \\left(-1 \\right)=-3 c$",
+    "이를 이용하여 $g \\left(x \\right)$ 를 계산하면 다음과 같다.",
+    "$g \\left(x \\right)={\\begin{cases}-3 c x-c&\\left(-2 \\le x \\le-1 \\right)\\\\ c x^{2}-c x&(-1<x<1)\\\\ c x-c&(1<x \\le 2)\\end{cases}}$",
+    "따라서 $y=g \\left(x \\right)$ 의 그래프는 점 $\\left(-2,5 c \\right)$ 를 지난다. $c$ 의 구간을 나누어 $G \\left(x \\right)$ 를 계산하면 다음과 같다.",
+    "(1) $c \\in \\left(0,\\frac{2}{5}\\right]$ 인 경우: $G \\left(x \\right)=g \\left(x \\right)$ 이다. 따라서 $\\int_{-2}^{2}{\\left(G \\left(x \\right)+2 \\right)}dx=\\frac{14}{3}c+8$ 이며, 이때 $\\left(0,\\frac{2}{5}\\right]$ 의 구간 안에 있으면서 $\\frac{14}{3}c+8=\\frac{109}{10}$ 가 되도록 하는 $c$ 는 존재하지 않는다.",
+    "(2) $c \\in \\left(\\frac{2}{5},1 \\right]$ 인 경우: $G \\left(x \\right)={\\begin{cases}2&\\left(-2 \\le x \\le-\\frac{1}{3}-\\frac{2}{3 c}\\right)\\\\-3 c x-c&\\left(-\\frac{1}{3}-\\frac{2}{3 c}<x \\le-1 \\right)\\\\ c x^{2}-c x&\\left(-1<x<1 \\right)\\\\ c x-c&\\left(1<x \\le 2 \\right)\\end{cases}}$",
+    "이다. 따라서 $\\int_{-2}^{2}{\\left(G \\left(x \\right)+2 \\right)dx=\\frac{34}{3}+\\frac{1}{2}c-\\frac{2}{3 c}}$ 이며, $c=\\frac{4}{5}$ 일 때 그 값이 $\\frac{109}{10}$ 가 된다.",
+    "따라서 정답은 $c=\\frac{4}{5}$ 이다."
+   ],
+   "rubric": [
+    "(12점) 문제에서 정의하는 함수의 형태를 상수의 범위를 나눠 정확하게 파악하고, 정적분의 넓이로서의 해석을 이용하여 복잡한 정적분의 계산을 정확하게 할 수 있다."
+   ]
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "직선의 방정식"
+}

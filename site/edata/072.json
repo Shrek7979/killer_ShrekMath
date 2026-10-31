@@ -1,0 +1,65 @@
+{
+ "num": 72,
+ "id": "인하대학교(자연계열)모의-3",
+ "univ": "인하대학교(자연계열) 모의",
+ "n": 3,
+ "title": "문제 3 · 30점",
+ "head": "[30점] 다음 제시문을 읽고 물음에 답하시오.",
+ "points": 30,
+ "minutes": 33,
+ "info": {
+  "concepts": "미분계수, 합성함수의 미분법, 미분가능한 함수, 역함수의 미분법, 삼각함수의 도함수, 정적분의 치환적분법, 삼각함수의 덧셈정리",
+  "min": "없음",
+  "field": "수학(3문항, 9문제)",
+  "time": "100분"
+ },
+ "pre": [],
+ "passage": [
+  "(가) (삼각함수의 도함수)",
+  "$y=\\tan x$ 이면 $y'=\\sec^{2}x$",
+  "(나) (정적분의 치환적분법)",
+  "미분가능한 함수 $g \\left(x \\right)$ 의 도함수 $g' \\left(x \\right)$ 가 닫힌구간 $\\left[a,b \\right]$ 를 포함하는 열린구간에서 연속이고, $g \\left(a \\right)=\\alpha$ , $g \\left(b \\right)=\\beta$ 에 대하여 함수 $f \\left(x \\right)$ 가 $\\alpha$ 와 $\\beta$ 를 양 끝으로 하는 닫힌구간에서 연속일 때",
+  "$\\int_{a}^{b}{f \\left(g \\left(x \\right)\\right)g' \\left(x \\right)dx=\\int_{\\alpha}^{\\beta}{f \\left(t \\right)dt}}$",
+  "(다) (탄젠트함수의 덧셈정리)",
+  "$\\tan \\left(\\alpha+\\beta \\right)=\\frac{\\tan \\alpha+\\tan \\beta}{1-\\tan \\alpha \\tan \\beta}$ , $\\tan \\left(\\alpha-\\beta \\right)=\\frac{\\tan \\alpha-\\tan \\beta}{1+\\tan \\alpha \\tan \\beta}$",
+  "(※) 함수 $f \\left(\\theta \\right)$ 를 닫힌구간 $\\left[0,\\frac{\\pi}{4}\\right]$ 에서 다음과 같이 정의하자.",
+  "$f \\left(\\theta \\right)=\\frac{1}{\\cos \\theta \\left(\\sin \\theta+\\cos \\theta \\right)}$",
+  "(3-1) 정적분 $\\int_{0}^{\\frac{\\pi}{4}}{f \\left(\\theta \\right)d \\theta}$ 의 값을 구하시오. [10점]",
+  "(3-2) 닫힌구간 $\\left[0,\\frac{\\pi}{4}\\right]$ 에 속하는 모든 $\\theta$ 에 대해서, $f \\left(\\theta \\right)=f \\left(\\frac{\\pi}{4}-\\theta \\right)$ 가 성립함을 보이시오. [10점]",
+  "(3-3) 정적분 $\\int_{0}^{1}{\\frac{\\ln \\left(1+x \\right)}{1+x^{2}}dx}$ 의 값을 구하시오. [10점]"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[답안]",
+   "points": 30,
+   "text": [],
+   "answer": [
+    "(3-1) (10점)",
+    "$f \\left(\\theta \\right)$ 의 분모와 분자를 $\\cos^{2}\\theta$ 로 나누면 $f \\left(\\theta \\right)=\\frac{\\frac{1}{\\cos^{2}\\theta}}{1+\\frac{\\sin \\theta}{\\cos \\theta}}=\\frac{\\sec^{2}\\theta}{1+\\tan \\theta}$ 가 된다. 따라서 제시문 (가)에 의하여 $\\int_{0}^{\\frac{\\pi}{4}}{f \\left(\\theta \\right)d \\theta=\\int_{0}^{\\frac{\\pi}{4}}{\\frac{\\sec^{2}\\theta}{1+\\tan \\theta}d \\theta=\\left[\\ln \\left|1+\\tan \\theta \\right|\\right]_{0}^{\\frac{\\pi}{4}}}=\\ln 2}$ 이다."
+   ],
+   "rubric": [
+    "(5점) 주어진 함수 $f \\left(\\theta \\right)$ 를 적분가능한 형태로 변형하면",
+    "(5점) 주어진 정적분의 값을 올바르게 구하면",
+    "(3-2) (10점)",
+    "$F \\left(\\theta \\right)=\\ln \\left(1+\\tan \\theta \\right)$ 라고 하면, 제시문 (다)에 의하여 $F \\left(\\frac{\\pi}{4}-\\theta \\right)=\\ln \\left(1+\\frac{1-\\tan \\theta}{1+\\tan \\theta}\\right)=\\ln \\left(\\frac{2}{1+\\tan \\theta}\\right)=\\ln 2-\\ln \\left(1+\\tan \\theta \\right)=\\ln 2-F \\left(\\theta \\right)$ 이다. 여기서 양변을 $\\theta$ 에 대해 미분하면 $f \\left(\\frac{\\pi}{4}-\\theta \\right)=f \\left(\\theta \\right)$ 이다.",
+    "(별해1) 제시문 (다)에 의하여 $\\tan \\left(\\frac{\\pi}{4}-\\theta \\right)=\\frac{1-\\tan \\theta}{1+\\tan \\theta}$ 이고, $\\sec^{2}\\left(\\frac{\\pi}{4}-\\theta \\right)=1+\\tan^{2}\\left(\\frac{\\pi}{4}-\\theta \\right)=\\frac{2 \\left(1+\\tan^{2}\\theta \\right)}{\\left(1+\\tan \\theta \\right)^{2}}$ 이다.",
+    "따라서 $f \\left(\\frac{\\pi}{4}-\\theta \\right)=\\frac{\\sec^{2}\\left(\\frac{\\pi}{4}-\\theta \\right)}{1+\\tan \\left(\\frac{\\pi}{4}-\\theta \\right)}=\\frac{\\frac{2 \\left(1+\\tan^{2}\\theta \\right)}{\\left(1+\\tan \\theta \\right)^{2}}}{1+\\frac{1-\\tan \\theta}{1+\\tan \\theta}}=\\frac{\\sec^{2}\\theta}{1+\\tan \\theta}=f \\left(\\theta \\right)$ 이다.",
+    "(별해2) 삼각함수의 덧셈정리에 의하여 $\\sin \\theta+\\cos \\theta=\\sqrt{2}\\cos \\left(\\frac{\\pi}{4}-\\theta \\right)$ 이다.",
+    "따라서 $f \\left(\\theta \\right)=\\frac{1}{\\cos \\theta \\left(\\sin \\theta+\\cos \\theta \\right)}=\\frac{1}{\\sqrt{2}\\cos \\theta \\cos \\left(\\frac{\\pi}{4}-\\theta \\right)}=f \\left(\\frac{\\pi}{4}-\\theta \\right)$ 이다.",
+    "(3점) 삼각함수의 덧셈정리를 사용하면",
+    "(7점) 주어진 항등식을 올바르게 증명하면",
+    "(3-3) (10점)",
+    "주어진 정적분에서 변수를 $x=\\tan \\theta$ 로 치환하면, 제시문 (나)에 의하여 $\\int_{0}^{1}{\\frac{\\ln \\left(1+x \\right)}{1+x^{2}}dx=\\int_{0}^{\\frac{\\pi}{4}}{\\frac{\\ln \\left(1+\\tan \\theta \\right)}{1+\\tan^{2}\\theta}\\sec^{2}\\theta d \\theta}=\\int_{0}^{\\frac{\\pi}{4}}{\\ln \\left(1+\\tan \\theta \\right)d \\theta}}$ 이다. 여기서 $F \\left(\\theta \\right)=\\ln \\left(1+\\tan \\theta \\right)$ 라고 하면 $\\int_{0}^{\\frac{\\pi}{4}}{F \\left(\\theta \\right)d \\theta=\\int_{0}^{\\frac{\\pi}{4}}{F \\left(\\frac{\\pi}{4}-\\theta \\right)d \\theta=}\\int_{0}^{\\frac{\\pi}{4}}{\\left(\\ln 2-F \\left(\\theta \\right)\\right)d \\theta=\\frac{\\pi}{4}\\ln 2-\\int_{0}^{\\frac{\\pi}{4}}{F \\left(\\theta \\right)d \\theta}}}$ 이므로 $\\int_{0}^{\\frac{\\pi}{4}}{F \\left(\\theta \\right)d \\theta=\\frac{\\pi}{8}\\ln 2}$ 이다.",
+    "(별해) 주어진 정적분에서 변수를 $x=\\tan \\theta$ 로 치환하면, 제시문 (나)와 정적분의 부분적분법에 의해서 $\\int_{0}^{1}{\\frac{\\ln \\left(1+x \\right)}{1+x^{2}}dx=\\int_{0}^{\\frac{\\pi}{4}}{\\frac{\\ln \\left(1+\\tan \\theta \\right)}{1+\\tan^{2}\\theta}\\sec^{2}\\theta d \\theta}=\\int_{0}^{\\frac{\\pi}{4}}{\\ln \\left(1+\\tan \\theta \\right)d \\theta}}=\\frac{\\pi}{4}\\ln 2-\\int_{0}^{\\frac{\\pi}{4}}{\\frac{\\theta \\sec^{2}\\theta}{1+\\tan \\theta}d \\theta}$ 이다. 이제 앞의 결과에서 $I=\\int_{0}^{\\frac{\\pi}{4}}{\\frac{\\theta \\sec^{2}\\theta}{1+\\tan \\theta}d \\theta=\\int_{0}^{\\frac{\\pi}{4}}{\\theta f \\left(\\theta \\right)d \\theta}}$ 라고 하면, 문항 (3-1)과 문항 (3-2)에 의하여 $I=\\int_{0}^{\\frac{\\pi}{4}}{\\left(\\frac{\\pi}{4}-\\theta \\right)f \\left(\\frac{\\pi}{4}-\\theta \\right)d \\theta=\\frac{\\pi}{4}\\int_{0}^{\\frac{\\pi}{4}}{f \\left(\\theta \\right)d \\theta-I=\\frac{\\pi}{4}\\ln 2-I}}$ 이다. 따라서 $I=\\frac{\\pi}{8}\\ln 2$ 이고, $\\int_{0}^{1}{\\frac{\\ln \\left(1+x \\right)}{1+x^{2}}dx=\\frac{\\pi}{4}\\ln 2-\\frac{\\pi}{8}\\ln 2=\\frac{\\pi}{8}\\ln 2}$ 이다.",
+    "(2점) $x=\\tan \\theta$ 로 치환하면",
+    "(3점) $\\int_{0}^{1}{\\frac{\\ln \\left(1+x \\right)}{1+x^{2}}dx=\\int_{0}^{\\frac{\\pi}{4}}{\\ln \\left(1+\\tan \\theta \\right)d \\theta}}$ 임을 보이면",
+    "(5점) $\\int_{0}^{\\frac{\\pi}{4}}{\\ln \\left(1+\\tan \\theta \\right)d \\theta}$ 의 값을 올바르게 구하면 풀이는 맞았는데 사소한 계산 실수가 있는 경우 최대 3점 감점.",
+    "인하대학교 홈페이지, 의예과 [문제1]은 자연계열 [문제3]과 같음."
+   ]
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "미분계수"
+}

@@ -1,0 +1,121 @@
+{
+ "num": 60,
+ "id": "성균관대학교(수리형2)수시-2",
+ "univ": "성균관대학교(수리형2) 수시",
+ "n": 2,
+ "title": "문제 2 · 40점",
+ "head": "다음 <제시문 1> ∼ <제시문 3>을 읽고 [문제 2-ⅰ]∼[문제 2-ⅲ]을 문항별로 풀이와 함께 답하시오. (40점)",
+ "points": 40,
+ "minutes": 33,
+ "info": {
+  "concepts": "직선의 방정식, 도형의 이동, 주기함수, 도함수의 활용, 부정적분과 정적분, 함수의 그래프, 접선, 사잇값의 정리",
+  "min": "- 자연과학계열, 전자전기공학부, 공학계열, 건설환경공학부 : 국어, 수학, 영어, 탐구, 탐구 5개 영역/과목 중 3개 등급합 6등급 이내",
+  "field": "- 반도체시스템공학, 소프트웨어학, 글로벌바이오메디컬공학, 지능형소프트웨어학, 약학, 반도체융합공학, 에너지학 : 국어, 수학, 영어, 탐구, 탐구 5개 영역/과목 중 3개 등급합 5등급 이내 - 의예 : 국어, 수학, 영어, 탐구(2개과목 평균) 4개 영역 중 3개 등급합 4등급 이내 수학(3문항, 9문제)",
+  "time": "100분"
+ },
+ "pre": [],
+ "passage": [
+  "<제시문 1>",
+  "미분가능한 함수 $f \\left(x \\right)$ 에 대하여 $f' \\left(a \\right)=0$ 이고 $x=a$ 의 좌우에서 $f' \\left(x \\right)$ 의 부호가",
+  "(1) 양에서 음으로 바뀌면 $f \\left(x \\right)$ 는 $x=a$ 에서 극대이고, 극댓값 $f \\left(a \\right)$ 를 갖는다.",
+  "(2) 음에서 양으로 바뀌면 $f \\left(x \\right)$ 는 $x=a$ 에서 극소이고, 극솟값 $f \\left(a \\right)$ 를 갖는다.",
+  "<제시문 2>",
+  "함수 $f \\left(x \\right)$ 가 두 실수 $a$ , $b$ 를 포함하는 구간에서 연속일 때, $f \\left(x \\right)$ 의 한 부정적분을 $F \\left(x \\right)$ 라고 하면 $f \\left(x \\right)$ 의 $a$ 에서 $b$ 까지의 정적분은 다음과 같다.",
+  "$\\int_{a}^{b}{f \\left(x \\right)dx=\\left[F \\left(x \\right)\\right]_{a}^{b}=F \\left(b \\right)-F \\left(a \\right)}$",
+  "<제시문 3>",
+  "연속함수 $f \\left(x \\right)$ 에 대하여 함수 $g \\left(x \\right)$ 는 $g \\left(x+4 \\right)=g \\left(x \\right)$ 와",
+  "$g \\left(x \\right)={\\begin{cases}f \\left(x \\right)&\\left(-2 \\le x \\le 0 \\right)\\\\ f \\left(-x \\right)&\\left(0<x<2 \\right)\\end{cases}}$",
+  "를 만족한다. 그리고 함수 $h \\left(x \\right)=g \\left(x-1 \\right)\\left|g \\left(x \\right)-g \\left(x-1 \\right)\\right|$ 로 정의한다.",
+  "예를 들어, $f \\left(x \\right)=-x-\\frac{1}{2}$ 일 때, $g \\left(\\frac{1}{4}\\right)=-\\frac{1}{4}$ 과 $g \\left(-\\frac{3}{4}\\right)=\\frac{1}{4}$ 이므로 $h \\left(\\frac{1}{4}\\right)=\\frac{1}{8}$ 이다."
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[문제 2-ⅰ]",
+   "points": null,
+   "text": [
+    "<제시문 3>에서 $f \\left(x \\right)=x+1$ 일 때, $2 \\le x \\le 2026$ 인 $x$ 에 대하여 $\\int_{1}^{x}{h \\left(t \\right)dt=0}$ 을 만족하는 $x$ 의 개수를 구하고 그 이유를 논하시오."
+   ],
+   "answer": [
+    "$g \\left(x+4 \\right)=g \\left(x \\right)$ 이므로 $h \\left(x+4 \\right)=h \\left(x \\right)$ 이다.",
+    "또한, $\\left|g \\left(x \\right)-g \\left(x-1 \\right)\\right|={\\begin{cases}\\left|1-2 x \\right|&\\left(0 \\le x \\le 1 \\right)\\\\ 1&\\left(1<x<2 \\right)\\end{cases}}$ 이므로, $h \\left(x \\right)={\\begin{cases}x \\left|1-2 x \\right|&\\left(0 \\le x \\le 1 \\right)\\\\ 2-x&\\left(1 \\le x \\le 2 \\right)\\end{cases}}$ 이다.",
+    "마찬가지로, $h \\left(x \\right)={\\begin{cases}\\left(2-x \\right)\\left|5-2 x \\right|&\\left(2 \\le x \\le 3 \\right)\\\\ x-4&\\left(3 \\le x \\le 4 \\right)\\end{cases}}$ 이다.",
+    "이제 $H \\left(x \\right)=\\int_{1}^{x}{h \\left(t \\right)dt}$ 라고 하면 $H' \\left(x \\right)=h \\left(x \\right)$ 이므로, 함수 $H \\left(x \\right)$ 는 다음 표와 같은 증감표를 가진다.",
+    "$x$",
+    "$1$",
+    "$\\cdots$",
+    "$2$",
+    "$\\cdots$",
+    "$3$",
+    "$\\cdots$",
+    "$4$",
+    "$\\cdots$",
+    "$5$",
+    "$H' \\left(x \\right)=h \\left(x \\right)$",
+    "$1$",
+    "$+$",
+    "$0$",
+    "$-$",
+    "$-1$",
+    "$-$",
+    "$0$",
+    "$+$",
+    "$1$",
+    "$H \\left(x \\right)$",
+    "$\\ne A R R O W$",
+    "$S E A R R O W$",
+    "$S E A R R O W$",
+    "$\\ne A R R O W$",
+    "또한 $\\alpha=\\int_{4}^{5}{h \\left(t \\right)dt=\\int_{0}^{1}{h \\left(t \\right)dt=\\int_{0}^{1}{t \\left|1-2 t \\right|dt=\\frac{1}{4}}}}$ 이고, $\\beta=\\int_{1}^{2}{h \\left(t \\right)dt=\\frac{1}{2}}$ 이다.",
+    "그리고 $\\int_{2}^{3}{h \\left(t \\right)dt=-\\alpha=-\\frac{1}{4}}$ 이고 $\\int_{3}^{4}{h \\left(t \\right)dt=-\\beta=-\\frac{1}{2}}$ 이다. 이로부터",
+    "$H \\left(1 \\right)=0$ , $H \\left(2 \\right)=\\frac{1}{2}$ , $H \\left(3 \\right)=\\frac{1}{2}-\\frac{1}{4}=\\frac{1}{4}$ , $H \\left(4 \\right)=\\frac{1}{4}-\\frac{1}{2}=-\\frac{1}{4}$ , $H \\left(5 \\right)=0$",
+    "을 얻게 된다. 따라서, $\\int_{1}^{5}{h \\left(t \\right)dt=0}$ 이고 모든 정수 $k$ 에 대해 $\\int_{1}^{4 k+1}{h \\left(t \\right)dt=0}$ 이다.",
+    "위의 증감표와 사잇값 정리로부터 닫힌구간 $\\left[3,4 \\right]$ 에서 $\\int_{1}^{x}{h \\left(t \\right)dt=0}$ 를 만족하는 유일한 $x$ 가 존재한다. 따라서, 모든 정수 $k$ 에 대해 구간 $\\left(4 k-3,4 k+1 \\right]$ 위에 $\\int_{1}^{x}{h \\left(t \\right)dt=0}$ 을 만족하는 $x$ 가 정확히 두 개 존재한다. 이로부터 닫힌구간 $[2,2026]$ 에서 $\\int_{1}^{x}{h \\left(t \\right)dt=0}$ 을 만족하는 $x$ 는 $506 \\times 2=1012$ 개 존재한다."
+   ],
+   "rubric": [
+    "(10점) 평행이동과 대칭이동을 통해 얻어진 함수의 그래프의 개형을 그릴 수 있고, 미분과 적분의 관계를 통해 함수의 증가, 감소를 판단할 수 있다."
+   ]
+  },
+  {
+   "k": "2",
+   "label": "[문제 2-ⅱ]",
+   "points": null,
+   "text": [
+    "<제시문 3>에서 $f \\left(x \\right)=\\left(x+1 \\right)^{2}$ 일 때, 정적분 $\\int_{0}^{\\frac{2025}{2}}{h \\left(x \\right)dx}$ 의 값을 구하고 그 이유를 논하시오."
+   ],
+   "answer": [
+    "$f \\left(x \\right)=\\left(x+1 \\right)^{2}$ 일 때, $g \\left(x+2 \\right)=g \\left(x \\right)$ 이고 $h \\left(x+2 \\right)=h \\left(x \\right)$ 이다.",
+    "그리고 $\\left|g \\left(x \\right)-g \\left(x-1 \\right)\\right|={\\begin{cases}\\left|1-2 x \\right|&\\left(0 \\le x \\le 1 \\right)\\\\\\left|3-2 x \\right|&\\left(1<x<2 \\right)\\end{cases}}$ 이므로, $h \\left(x \\right)={\\begin{cases}x^{2}\\left|1-2 x \\right|&\\left(0 \\le x \\le 1 \\right)\\\\\\left(x-2 \\right)^{2}\\left|3-2 x \\right|&\\left(1 \\le x \\le 2 \\right)\\end{cases}}$ 이다. 구하고자하는 정적분은 다음과 같다.",
+    "$\\int_{0}^{\\frac{2025}{2}}{h \\left(x \\right)dx=\\int_{0}^{2}{h \\left(x \\right)dx+\\int_{2}^{4}{h \\left(x \\right)dx+\\cdots+\\int_{1010}^{1012}{h \\left(x \\right)dx+\\int_{1012}^{\\frac{2025}{2}}{h \\left(x \\right)dx}}}}}$",
+    "$=506 \\left(\\int_{0}^{1}{h \\left(x \\right)dx+\\int_{1}^{2}{h \\left(x \\right)dx}}\\right)+\\int_{0}^{\\frac{1}{2}}{h \\left(x \\right)dx}$",
+    "$\\int_{0}^{\\frac{1}{2}}{h \\left(x \\right)dx=\\int_{\\frac{3}{2}}^{2}{h \\left(x \\right)dx=\\frac{1}{96}}}$ 과 $\\int_{\\frac{1}{2}}^{1}{h \\left(x \\right)dx=\\int_{1}^{\\frac{3}{2}}{h \\left(x \\right)dx=\\frac{17}{96}}}$ 이므로,",
+    "$\\int_{0}^{\\frac{2025}{2}}{h \\left(x \\right)dx=506 \\left(\\frac{1}{96}+\\frac{17}{96}+\\frac{17}{96}+\\frac{1}{96}\\right)+\\frac{1}{96}=\\frac{18217}{96}}$ 이다."
+   ],
+   "rubric": [
+    "(10점) 평행이동과 대칭이동을 통해 얻어진 함수의 정적분 값을 구할 수 있다."
+   ]
+  },
+  {
+   "k": "3",
+   "label": "[문제 2-ⅲ]",
+   "points": null,
+   "text": [
+    "<제시문 3>에서 $f \\left(x \\right)=a x+b$ (단, $a$ , $b$ 는 $1 \\le a<b \\le 10$ 을 만족하는 자연수)이고, 정적분 $\\int_{2023}^{2025}{h \\left(x \\right)dx}$ 의 값이 $0$ 보다 작다고 한다. 이때 가능한 순서쌍 $\\left(a,b \\right)$ 를 모두 구하고 그 이유를 논하시오."
+   ],
+   "answer": [
+    "$g \\left(x+4 \\right)=g \\left(x \\right)$ 이므로 $h \\left(x+4 \\right)=h \\left(x \\right)$ 를 얻게 되어 $\\int_{2023}^{2025}{h \\left(x \\right)dx=\\int_{-1}^{1}{h \\left(x \\right)dx}}$ 이다.",
+    "$\\left|g \\left(x \\right)-g \\left(x-1 \\right)\\right|={\\begin{cases}a&\\left(-1 \\le x \\le 0 \\right)\\\\ a \\left|1-2 x \\right|&\\left(0<x<1 \\right)\\end{cases}}$ 이므로 $h \\left(x \\right)={\\begin{cases}a \\left(a x+\\left(b-a \\right)\\right)&\\left(-1 \\le x \\le 0 \\right)\\\\ a \\left|1-2 x \\right|\\left(a x+\\left(b-a \\right)\\right)&\\left(0 \\le x \\le 1 \\right)\\end{cases}}$ 이다.",
+    "$\\int_{-1}^{1}{h \\left(x \\right)dx=\\int_{-1}^{0}{h \\left(x \\right)dx+\\int_{0}^{\\frac{1}{2}}{h \\left(x \\right)dx+\\int_{\\frac{1}{2}}^{1}{h \\left(x \\right)dx}}}}$",
+    "$=a \\left[\\left(b-\\frac{3}{2}a \\right)+\\left(-\\frac{5}{24}a+\\frac{1}{4}b \\right)+\\left(-\\frac{1}{24}a+\\frac{1}{4}b \\right)\\right]$",
+    "$=a \\left(-\\frac{7}{4}a+\\frac{3}{2}b \\right)<0$",
+    "으로부터 $a<b<\\frac{7}{6}a$ 를 얻게 된다. 이를 만족하는 순서쌍은 $\\left(7,8 \\right)$ , $\\left(8,9 \\right)$ , $\\left(9,10 \\right)$ 이다."
+   ],
+   "rubric": [
+    "(10점) 평행이동과 대칭이동을 통해 얻어진 함수의 정적분 값을 구할 수 있다."
+   ]
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "직선의 방정식"
+}
