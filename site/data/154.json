@@ -1,0 +1,100 @@
+{
+ "num": 154,
+ "id": "추가29·기하-18",
+ "subject": "기하",
+ "type": "29번형",
+ "typeDesc": "기하 · 수능 29번형 자리의 고난도",
+ "stars": 3,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2023학년도 6월 모의평가 29번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 100,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "초점이 ${\\mathrm{F}}$ 인 포물선 $C_{1}:\\,y^{2}=4 p x$ $(p>0)$ 위의 점 중 제 $1$ 사분면에 있고 $x$ 좌표가 $12$ 인 점을 ${\\mathrm{P}}$ 라 하고, 점 ${\\mathrm{P}}$ 에서 포물선 $C_{1}$ 의 준선에 내린 수선의 발을 ${\\mathrm{H}}$ 라 하자.",
+    "점 ${\\mathrm{H}}$ 를 초점으로 하고 점 ${\\mathrm{P}}$ 를 꼭짓점으로 하는 포물선 $C_{2}$ 가 포물선 $C_{1}$ 과 만나는 점 중 ${\\mathrm{P}}$ 가 아닌 점을 ${\\mathrm{Q}}$ 라 하자.",
+    "사각형 ${\\mathrm{PHQF}}$ 의 둘레의 길이가 $60$ 일 때, 사각형 ${\\mathrm{PHQF}}$ 의 넓이를 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "초점이 ${\\mathrm{F}}$ 인 포물선 $C_{1}:\\,y^{2}=4 p x$ $(p>0)$ 위의 점 중 제 $1$ 사분면에 있고 $x$ 좌표가 $12$ 인 점을 ${\\mathrm{P}}$ 라 하고, 점 ${\\mathrm{P}}$ 에서 포물선 $C_{1}$ 의 준선에 내린 수선의 발을 ${\\mathrm{H}}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "점 ${\\mathrm{H}}$ 를 초점으로 하고 점 ${\\mathrm{P}}$ 를 꼭짓점으로 하는 포물선 $C_{2}$ 가 포물선 $C_{1}$ 과 만나는 점 중 ${\\mathrm{P}}$ 가 아닌 점을 ${\\mathrm{Q}}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "사각형 ${\\mathrm{PHQF}}$ 의 둘레의 길이가 $60$ 일 때, 사각형 ${\\mathrm{PHQF}}$ 의 넓이를 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "두 번째 포물선의 초점을 준선 위의 점 ${\\mathrm{H}}$ 로 바꾸어 $\\overline{{\\mathrm{QF}}}+\\overline{{\\mathrm{QH}}}=2 \\overline{{\\mathrm{PF}}}$ (둘레 $=4 \\overline{{\\mathrm{PF}}}$ )를 발견하게 함"
+ ],
+ "topic": "포물선",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "${\\mathrm{P}}(12,\\,y_{1})$ , ${\\mathrm{H}}(-p,\\,y_{1})$ 이고 $\\overline{{\\mathrm{PF}}}=\\overline{{\\mathrm{PH}}}=12+p$ 이다. 포물선 $C_{2}$ 는 축이 직선 $y=y_{1}$ 이고 왼쪽으로 열린 포물선이며, 꼭짓점 ${\\mathrm{P}}$ 와 초점 ${\\mathrm{H}}$ 사이의 거리가 $12+p$ 이므로 $C_{2}$ 의 준선은 $x=24+p$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "점 ${\\mathrm{Q}}$ 는 두 포물선 위에 있으므로 $\\overline{{\\mathrm{QF}}}=x_{{\\mathrm{Q}}}+p$ , $\\overline{{\\mathrm{QH}}}=24+p-x_{{\\mathrm{Q}}}$ 이고 $\\overline{{\\mathrm{QF}}}+\\overline{{\\mathrm{QH}}}=24+2 p=2 \\overline{{\\mathrm{PF}}}$ 이다. 따라서 사각형 ${\\mathrm{PHQF}}$ 의 둘레는 $4 \\overline{{\\mathrm{PF}}}=4(12+p)=60$ , $p=3$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "${\\mathrm{P}}(12,\\,12)$ , ${\\mathrm{H}}(-3,\\,12)$ , $C_{2}:\\,(y-12)^{2}=-60(x-12)$ 이다. $x=\\frac{y^{2}}{12}$ 를 대입하면 $(y-12)^{2}=-5 y^{2}+720$ , $y^{2}-4 y-96=0$ , $(y-12)(y+8)=0$ 이므로 ${\\mathrm{Q}}\\left(\\frac{16}{3},\\,-8 \\right)$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "사각형을 대각선 ${\\mathrm{HF}}$ 로 나누면 삼각형 ${\\mathrm{PHF}}$ 의 넓이는 $\\frac{1}{2}\\times 15 \\times 12=90$ 이다. $\\vec{{\\mathrm{FH}}}=(-6,\\,12)$ , $\\vec{{\\mathrm{FQ}}}=\\left(\\frac{7}{3},\\,-8 \\right)$ 이므로 삼각형 ${\\mathrm{HQF}}$ 의 넓이는 $\\frac{1}{2}\\left|(-6)\\times(-8)-12 \\times \\frac{7}{3}\\right|=10$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "따라서 넓이는 $90+10=100$",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

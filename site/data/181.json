@@ -1,0 +1,88 @@
+{
+ "num": 181,
+ "id": "추가29·기하-45",
+ "subject": "기하",
+ "type": "29번형",
+ "typeDesc": "기하 · 수능 29번형 자리의 고난도",
+ "stars": 5,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2026학년도 6월 모의평가 29번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 136,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "두 초점이 ${\\mathrm{F}}(4,\\,0)$ , ${\\mathrm{F'}}(-4,\\,0)$ 인 타원 $\\frac{x^{2}}{64}+\\frac{y^{2}}{48}=1$ 위의 점 중 제 $1$ 사분면에 있는 점 ${\\mathrm{P}}$ 에 대하여 삼각형 ${\\mathrm{PF'F}}$ 의 내접원의 중심이 직선 $y=x$ 위에 있다.",
+    "$\\overline{{\\mathrm{PF}}}^{2}+\\overline{{\\mathrm{PF'}}}^{2}$ 의 값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "두 초점이 ${\\mathrm{F}}(4,\\,0)$ , ${\\mathrm{F'}}(-4,\\,0)$ 인 타원 $\\frac{x^{2}}{64}+\\frac{y^{2}}{48}=1$ 위의 점 중 제 $1$ 사분면에 있는 점 ${\\mathrm{P}}$ 에 대하여 삼각형 ${\\mathrm{PF'F}}$ 의 내접원의 중심이 직선 $y=x$ 위에 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "$\\overline{{\\mathrm{PF}}}^{2}+\\overline{{\\mathrm{PF'}}}^{2}$ 의 값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "초점삼각형의 내심의 좌표를 내접원의 반지름과 접선의 길이로 직접 구하게 하여 조건을 점 ${\\mathrm{P}}$ 의 좌표에 대한 식으로 바꾸게 함"
+ ],
+ "topic": "타원",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "$a=8$ , $c=4$ 이다. ${\\mathrm{P}}(x_{1},\\,y_{1})$ 이라 하면 $\\overline{{\\mathrm{PF}}}=8-\\frac{x_{1}}{2}$ , $\\overline{{\\mathrm{PF'}}}=8+\\frac{x_{1}}{2}$ 이다. (두 식의 합이 $16$ , 제곱의 차가 $16 x_{1}$ 이다.)",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "삼각형 ${\\mathrm{PF'F}}$ 의 둘레는 $2 a+2 c=24$ 이고 넓이는 $\\frac{1}{2}\\times 8 \\times y_{1}=4 y_{1}$ 이므로 내접원의 반지름은 $\\frac{4 y_{1}}{12}=\\frac{y_{1}}{3}$ 이다. 또 내접원이 변 ${\\mathrm{F'F}}$ 와 접하는 점을 ${\\mathrm{K}}$ 라 하면 접선의 길이의 성질에 의하여 $\\overline{{\\mathrm{F'K}}}=12-\\overline{{\\mathrm{PF}}}=4+\\frac{x_{1}}{2}$ 이므로 ${\\mathrm{K}}\\left(\\frac{x_{1}}{2},\\,0 \\right)$ 이다. 따라서 내심은",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$${\\mathrm{I}}\\left(\\frac{x_{1}}{2},\\,\\frac{y_{1}}{3}\\right)$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "이다. 내심이 직선 $y=x$ 위에 있으므로 $y_{1}=\\frac{3}{2}x_{1}$ 이고, $\\frac{x_{1}^{2}}{64}+\\frac{9 x_{1}^{2}}{4 \\times 48}=1$ 에서 $x_{1}^{2}=16$ , $x_{1}=4$ , $y_{1}=6$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$\\overline{{\\mathrm{PF}}}=6$ , $\\overline{{\\mathrm{PF'}}}=10$ 이므로 $\\overline{{\\mathrm{PF}}}^{2}+\\overline{{\\mathrm{PF'}}}^{2}=136$",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

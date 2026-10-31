@@ -1,0 +1,82 @@
+{
+ "num": 163,
+ "id": "추가29·기하-27",
+ "subject": "기하",
+ "type": "29번형",
+ "typeDesc": "기하 · 수능 29번형 자리의 고난도",
+ "stars": 4,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2023학년도 6월 모의평가 29번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 20,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "초점이 ${\\mathrm{F}}$ 인 포물선 $y^{2}=4 p x$ $(p>0)$ 위의 점 중 제 $1$ 사분면에 있는 점 ${\\mathrm{A}}$ 에서의 접선이 $x$ 축, $y$ 축과 만나는 점을 각각 ${\\mathrm{T}}$ , ${\\mathrm{S}}$ 라 하자.",
+    "$\\overline{{\\mathrm{AT}}}^{2}=320$ 이고 삼각형 ${\\mathrm{AFT}}$ 의 넓이가 $40$ 일 때, 삼각형 ${\\mathrm{AFS}}$ 의 넓이를 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "초점이 ${\\mathrm{F}}$ 인 포물선 $y^{2}=4 p x$ $(p>0)$ 위의 점 중 제 $1$ 사분면에 있는 점 ${\\mathrm{A}}$ 에서의 접선이 $x$ 축, $y$ 축과 만나는 점을 각각 ${\\mathrm{T}}$ , ${\\mathrm{S}}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "$\\overline{{\\mathrm{AT}}}^{2}=320$ 이고 삼각형 ${\\mathrm{AFT}}$ 의 넓이가 $40$ 일 때, 삼각형 ${\\mathrm{AFS}}$ 의 넓이를 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "접선의 두 절편을 이용해 $\\overline{{\\mathrm{FT}}}=\\overline{{\\mathrm{FA}}}$ 와 '점 ${\\mathrm{S}}$ 는 선분 ${\\mathrm{AT}}$ 의 중점'을 함께 쓰게 함"
+ ],
+ "topic": "포물선의 접선",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "${\\mathrm{A}}(a,\\,b)$ 라 하면 접선 $b y=2 p(x+a)$ 에서 ${\\mathrm{T}}(-a,\\,0)$ , ${\\mathrm{S}}\\left(0,\\,\\frac{b}{2}\\right)$ 이므로 ${\\mathrm{S}}$ 는 선분 ${\\mathrm{AT}}$ 의 중점이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$\\overline{{\\mathrm{AT}}}^{2}=4 a^{2}+b^{2}=4 a^{2}+4 p a=4 a(a+p)=320$ 에서 $a(a+p)=80$ 이다. $\\overline{{\\mathrm{FT}}}=a+p$ 이므로 삼각형 ${\\mathrm{AFT}}$ 의 넓이는 $\\frac{1}{2}(a+p)b=(a+p)\\sqrt{p a}=40$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "두 식을 나누면 $\\frac{\\sqrt{p a}}{a}=\\frac{1}{2}$ , $p=\\frac{a}{4}$ 이고 $a \\times \\frac{5 a}{4}=80$ 에서 $a=8$ , $p=2$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "${\\mathrm{S}}$ 가 선분 ${\\mathrm{AT}}$ 의 중점이므로 삼각형 ${\\mathrm{AFS}}$ 의 넓이는 삼각형 ${\\mathrm{AFT}}$ 의 넓이의 $\\frac{1}{2}$ 인 $20$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

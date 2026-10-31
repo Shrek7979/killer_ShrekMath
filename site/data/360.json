@@ -1,0 +1,76 @@
+{
+ "num": 360,
+ "id": "추가30·미적분Ⅱ-36",
+ "subject": "미적분Ⅱ",
+ "type": "30번형",
+ "typeDesc": "미적분Ⅱ · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2025학년도 대학수학능력시험 30번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 24,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "함수 $f(x)=\\sin(x+2 \\sin x)$ 에 대하여 열린구간 $(0,\\,4 \\pi)$ 에서 함수 $f(x)$ 가 극값을 갖는 $x$ 의 개수를 $n$ , 극값을 갖는 모든 $x$ 의 값의 합을 $S$ 라 할 때, $n+\\frac{S}{\\pi}$ 의 값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "함수 $f(x)=\\sin(x+2 \\sin x)$ 에 대하여 열린구간 $(0,\\,4 \\pi)$ 에서 함수 $f(x)$ 가 극값을 갖는 $x$ 의 개수를 $n$ , 극값을 갖는 모든 $x$ 의 값의 합을 $S$ 라 할 때, $n+\\frac{S}{\\pi}$ 의 값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "안쪽 함수 $x+2 \\sin x$ 가 증가와 감소를 반복하도록 하여, $\\cos({안 쪽 함 수})=0$ 인 점과 안쪽 함수의 극값점을 모두 판정하게 함"
+ ],
+ "topic": "도함수의 활용",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "$v a r \\phi(x)=x+2 \\sin x$ 라 하면 $f'(x)=\\cos v a r \\phi(x)\\times(1+2 \\cos x)$ 이다. $(0,\\,2 \\pi)$ 에서 $v a r \\phi(x)$ 는 $\\left(0,\\,\\frac{2 \\pi}{3}\\right)$ 에서 증가, $\\left(\\frac{2 \\pi}{3},\\,\\frac{4 \\pi}{3}\\right)$ 에서 감소, $\\left(\\frac{4 \\pi}{3},\\,2 \\pi \\right)$ 에서 증가하고",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$v a r \\phi \\left(\\frac{2 \\pi}{3}\\right)=\\frac{2 \\pi}{3}+\\sqrt{3}\\in \\left(\\pi,\\,\\frac{3 \\pi}{2}\\right)$ , $v a r \\phi \\left(\\frac{4 \\pi}{3}\\right)=\\frac{4 \\pi}{3}-\\sqrt{3}\\in \\left(\\frac{\\pi}{2},\\,\\pi \\right)$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$\\cos v a r \\phi(x)=0$ 인 점은 첫 구간의 $v a r \\phi=\\frac{\\pi}{2}$ , 셋째 구간의 $v a r \\phi=\\frac{3 \\pi}{2}$ 인 두 점이고(둘째 구간에는 없다), $x=\\frac{2 \\pi}{3}$ , $\\frac{4 \\pi}{3}$ 에서는 $\\cos v a r \\phi \\ne 0$ 이고 $1+2 \\cos x$ 의 부호가 바뀌므로 극값을 갖는다. $x=2 \\pi$ 에서는 $f'$ 의 부호가 바뀌지 않는다. 따라서 $(0,\\,2 \\pi)$ 에서 $4$ 개이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$v a r \\phi(x+2 \\pi)=v a r \\phi(x)+2 \\pi$ 이므로 $f(x)$ 는 주기가 $2 \\pi$ 이고 $n=8$ 이다. 또 $v a r \\phi(2 \\pi-x)=2 \\pi-v a r \\phi(x)$ 에서 $f(2 \\pi-x)=-f(x)$ 이므로 $(0,\\,2 \\pi)$ 의 네 점은 $x=\\pi$ 에 대하여 대칭이고 합은 $4 \\pi$ , $(2 \\pi,\\,4 \\pi)$ 의 네 점의 합은 $4 \\pi+8 \\pi=12 \\pi$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$S=16 \\pi$ 이므로 $n+\\frac{S}{\\pi}=24$",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

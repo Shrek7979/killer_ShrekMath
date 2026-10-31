@@ -105,14 +105,15 @@ def make_item(num, q, type_code):
 
     full = bool(ov.get('traps')) and bool(ov.get('conds'))
     return {
-        'num': num, 'id': q['id'], 'subject': q['subject'], 'topic': q['topic'],
+        'num': num, 'id': q['id'], 'subject': q['subject'],
         'type': qtype, 'typeDesc': tdesc, 'stars': q.get('stars', 3),
         'standards': q.get('standards', []),
         'source': ov.get('source', q.get('source', f'ShrekMath 창작 · 수능 {qtype}')),
         'rate': ov.get('rate', ''), 'wrong': ov.get('wrong', ''),
         'answer': q['answer'], 'full': full,
         'body': blocks, 'conds': conds,
-        'intro': ov.get('intro', q.get('intro', [])),
+        'intro': ov.get('intro', [convert_text(x) for x in q.get('intro', [])]),
+        'topic': convert_text(q['topic']) if '$' in q['topic'] else q['topic'],
         'concepts': ov.get('concepts', []),
         'steps': steps,
         'traps': ov.get('traps', []),

@@ -1,0 +1,157 @@
+{
+ "num": 313,
+ "id": "추가30·기하-39",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2024학년도 6월 모의평가 30번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 18,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "한 변의 길이가 $6$ 인 정삼각형 ${\\mathrm{ABC}}$ 에서 선분 ${\\mathrm{AB}}$ , ${\\mathrm{BC}}$ , ${\\mathrm{CA}}$ 를 각각 $1:2$ 로 내분하는 점을 ${\\mathrm{D}}$ , ${\\mathrm{E}}$ , ${\\mathrm{F}}$ 라 하자.",
+    "네 점 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ , ${\\mathrm{R}}$ , ${\\mathrm{X}}$ 가 다음 조건을 만족시킨다."
+   ]
+  },
+  {
+   "t": "p",
+   "sents": [
+    "(가) $|\\vec{{\\mathrm{DP}}}|=1$ , $|\\vec{{\\mathrm{EQ}}}|=2$ , $|\\vec{{\\mathrm{FR}}}|=3$"
+   ]
+  },
+  {
+   "t": "p",
+   "sents": [
+    "(나) $\\vec{{\\mathrm{AX}}}=\\vec{{\\mathrm{PB}}}+\\vec{{\\mathrm{QC}}}+\\vec{{\\mathrm{RA}}}$"
+   ]
+  },
+  {
+   "t": "p",
+   "sents": [
+    "$|\\vec{{\\mathrm{AX}}}|$ 의 값이 최대가 되도록 하는 네 점 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ , ${\\mathrm{R}}$ , ${\\mathrm{X}}$ 에 대하여 삼각형 ${\\mathrm{PQR}}$ 의 넓이의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M \\times m$ 의 값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "한 변의 길이가 $6$ 인 정삼각형 ${\\mathrm{ABC}}$ 에서 선분 ${\\mathrm{AB}}$ , ${\\mathrm{BC}}$ , ${\\mathrm{CA}}$ 를 각각 $1:2$ 로 내분하는 점을 ${\\mathrm{D}}$ , ${\\mathrm{E}}$ , ${\\mathrm{F}}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "네 점 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ , ${\\mathrm{R}}$ , ${\\mathrm{X}}$ 가 다음 조건을 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    1,
+    0
+   ],
+   "text": "(가) $|\\vec{{\\mathrm{DP}}}|=1$ , $|\\vec{{\\mathrm{EQ}}}|=2$ , $|\\vec{{\\mathrm{FR}}}|=3$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    0
+   ],
+   "text": "(나) $\\vec{{\\mathrm{AX}}}=\\vec{{\\mathrm{PB}}}+\\vec{{\\mathrm{QC}}}+\\vec{{\\mathrm{RA}}}$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    3,
+    0
+   ],
+   "text": "$|\\vec{{\\mathrm{AX}}}|$ 의 값이 최대가 되도록 하는 네 점 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ , ${\\mathrm{R}}$ , ${\\mathrm{X}}$ 에 대하여 삼각형 ${\\mathrm{PQR}}$ 의 넓이의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M \\times m$ 의 값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "세 원의 반지름을 $1,2,3$ 으로 달리하여 최대일 때의 배치가 하나로 정해지지 않게 하고, 그 배치들에서 넓이가 변하는 범위를 묻도록 확장"
+ ],
+ "topic": "평면벡터",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "$\\vec{{\\mathrm{PB}}}=\\vec{{\\mathrm{DB}}}-\\vec{{\\mathrm{DP}}}$ , $\\vec{{\\mathrm{QC}}}=\\vec{{\\mathrm{EC}}}-\\vec{{\\mathrm{EQ}}}$ , $\\vec{{\\mathrm{RA}}}=\\vec{{\\mathrm{FA}}}-\\vec{{\\mathrm{FR}}}$ 이고 $\\vec{{\\mathrm{DB}}}+\\vec{{\\mathrm{EC}}}+\\vec{{\\mathrm{FA}}}=\\frac{2}{3}(\\vec{{\\mathrm{AB}}}+\\vec{{\\mathrm{BC}}}+\\vec{{\\mathrm{CA}}})=\\vec{0}$ 이므로",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$$\\vec{{\\mathrm{AX}}}=-(\\vec{{\\mathrm{DP}}}+\\vec{{\\mathrm{EQ}}}+\\vec{{\\mathrm{FR}}}),|\\vec{{\\mathrm{AX}}}|\\le 1+2+3=6$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "등호는 어떤 단위벡터 $\\vec{e}$ 에 대하여 $\\vec{{\\mathrm{DP}}}=\\vec{e}$ , $\\vec{{\\mathrm{EQ}}}=2 \\vec{e}$ , $\\vec{{\\mathrm{FR}}}=3 \\vec{e}$ 일 때 성립하고, $\\vec{e}$ 의 방향은 자유롭다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "${\\mathrm{A}}(0,0)$ , ${\\mathrm{B}}(6,0)$ , ${\\mathrm{C}}(3,3 \\sqrt{3})$ 으로 놓으면 ${\\mathrm{D}}(2,0)$ , ${\\mathrm{E}}(5,\\sqrt{3})$ , ${\\mathrm{F}}(2,2 \\sqrt{3})$ 이고 $\\vec{e}=(\\cos \\theta,\\sin \\theta)$ 에 대하여",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$$\\vec{{\\mathrm{PQ}}}=(3+\\cos \\theta,\\sqrt{3}+\\sin \\theta),\\vec{{\\mathrm{PR}}}=(2 \\cos \\theta,2 \\sqrt{3}+2 \\sin \\theta)$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "삼각형 ${\\mathrm{PQR}}$ 의 넓이는",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "$$\\frac{1}{2}\\left|(3+\\cos \\theta)(2 \\sqrt{3}+2 \\sin \\theta)-(\\sqrt{3}+\\sin \\theta)\\times 2 \\cos \\theta \\right|=3|\\sqrt{3}+\\sin \\theta|$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 8,
+   "text": "따라서 $M=3 \\sqrt{3}+3$ , $m=3 \\sqrt{3}-3$ 이고 $M \\times m=27-9=18$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

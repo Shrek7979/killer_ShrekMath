@@ -1,0 +1,100 @@
+{
+ "num": 180,
+ "id": "추가29·기하-44",
+ "subject": "기하",
+ "type": "29번형",
+ "typeDesc": "기하 · 수능 29번형 자리의 고난도",
+ "stars": 5,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2023학년도 대학수학능력시험 29번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 243,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "타원 $\\frac{x^{2}}{121}+\\frac{y^{2}}{72}=1$ 과 쌍곡선 $\\frac{x^{2}}{4}-\\frac{y^{2}}{45}=1$ 은 두 초점 ${\\mathrm{F}}(7,\\,0)$ , ${\\mathrm{F'}}(-7,\\,0)$ 을 공유한다.",
+    "타원 위의 점 중 제 $2$ 사분면에 있는 점 ${\\mathrm{P}}$ 에 대하여 선분 ${\\mathrm{PF}}$ 가 쌍곡선과 만나는 점 중 $x$ 좌표가 음수인 점을 ${\\mathrm{Q}}$ 라 할 때, $\\overline{{\\mathrm{PQ}}}=\\overline{{\\mathrm{QF'}}}$ 이다.",
+    "삼각형 ${\\mathrm{PQF'}}$ 의 넓이를 $S$ 라 할 때, $S^{2}$ 의 값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "타원 $\\frac{x^{2}}{121}+\\frac{y^{2}}{72}=1$ 과 쌍곡선 $\\frac{x^{2}}{4}-\\frac{y^{2}}{45}=1$ 은 두 초점 ${\\mathrm{F}}(7,\\,0)$ , ${\\mathrm{F'}}(-7,\\,0)$ 을 공유한다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "타원 위의 점 중 제 $2$ 사분면에 있는 점 ${\\mathrm{P}}$ 에 대하여 선분 ${\\mathrm{PF}}$ 가 쌍곡선과 만나는 점 중 $x$ 좌표가 음수인 점을 ${\\mathrm{Q}}$ 라 할 때, $\\overline{{\\mathrm{PQ}}}=\\overline{{\\mathrm{QF'}}}$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "삼각형 ${\\mathrm{PQF'}}$ 의 넓이를 $S$ 라 할 때, $S^{2}$ 의 값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "두 쌍곡선을 타원과 쌍곡선으로 바꾸고, 등차수열 조건 대신 이등변 조건을 주어 두 삼각형에서 같은 각의 코사인을 비교하게 함"
+ ],
+ "topic": "타원과 쌍곡선",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "점 ${\\mathrm{Q}}$ 는 쌍곡선의 왼쪽 부분 위에 있으므로 $\\overline{{\\mathrm{QF}}}-\\overline{{\\mathrm{QF'}}}=4$ 이다. $\\overline{{\\mathrm{PQ}}}=\\overline{{\\mathrm{QF'}}}=u$ 라 하면 $\\overline{{\\mathrm{QF}}}=u+4$ , $\\overline{{\\mathrm{PF}}}=2 u+4$ 이고 타원의 정의에 의하여 $\\overline{{\\mathrm{PF'}}}=22-(2 u+4)=18-2 u$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "두 삼각형 ${\\mathrm{QF'F}}$ , ${\\mathrm{PF'F}}$ 에서 $\\angle{\\mathrm{QFF'}}=\\angle{\\mathrm{PFF'}}$ 이므로 코사인법칙에 의하여",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$$\\frac{(u+4)^{2}+196-u^{2}}{2 \\times 14(u+4)}=\\frac{(2 u+4)^{2}+196-(18-2 u)^{2}}{2 \\times 14(2 u+4)}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "이다. 정리하면 $(8 u+212)(2 u+4)=(88 u-112)(u+4)$ , $u^{2}-3 u-18=0$ , $u=6$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$\\overline{{\\mathrm{PQ}}}=\\overline{{\\mathrm{QF'}}}=\\overline{{\\mathrm{PF'}}}=6$ 이므로 삼각형 ${\\mathrm{PQF'}}$ 은 정삼각형이고 $S=\\frac{\\sqrt{3}}{4}\\times 36=9 \\sqrt{3}$ 이다. 따라서 $S^{2}=243$",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

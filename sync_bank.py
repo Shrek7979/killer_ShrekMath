@@ -31,7 +31,7 @@ def norm(blocks):
         if b[0] in ('p', 'eq'): flat.append(str(b[1]))
         elif b[0] in ('box', 'table'): flat.append(' '.join(' '.join(r) if isinstance(r, list) else str(r) for r in b[1]))
     s = re.sub(r'[^0-9A-Za-z가-힣]', '', ''.join(flat))
-    return s[:120]
+    return s
 
 
 def bank_fingerprints(exclude_file=None):
@@ -49,8 +49,8 @@ def bank_fingerprints(exclude_file=None):
 def slug_of(fname):
     stem = os.path.splitext(os.path.basename(fname))[0]
     s = re.sub(r'^수능형\s*창작문항[_\s-]*', '', stem).strip()
-    s = re.sub(r'\(.*?\)', '', s).strip()           # 괄호 설명 제거
-    s = re.sub(r'\s+', '_', s)
+    s = re.sub(r'[()]', ' ', s).strip()             # 괄호는 공백으로 (과목 구분이 괄호 안에 있으므로 남긴다)
+    s = re.sub(r'[\s_]+', '_', s)
     return s or hashlib.sha1(stem.encode()).hexdigest()[:8]
 
 
