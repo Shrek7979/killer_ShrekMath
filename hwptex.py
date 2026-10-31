@@ -21,7 +21,8 @@ WORDS = {
     'sin': r'\sin', 'cos': r'\cos', 'tan': r'\tan', 'sec': r'\sec', 'csc': r'\csc', 'cot': r'\cot',
     'log': r'\log', 'ln': r'\ln', 'exp': r'\exp',
     'lim': r'\lim', 'sum': r'\sum', 'int': r'\int', 'prod': r'\prod', 'max': r'\max', 'min': r'\min',
-    'sqrt': r'\sqrt', 'bar': r'\overline', 'vec': r'\vec', 'hat': r'\hat', 'dot': r'\dot', 'tilde': r'\tilde',
+    'sqrt': r'\sqrt', 'bar': r'\overline', 'overline': r'\overline', 'underline': r'\underline',
+    'lbrace': r'\{', 'rbrace': r'\}', 'langle': r'\langle', 'rangle': r'\rangle', 'vec': r'\vec', 'hat': r'\hat', 'dot': r'\dot', 'tilde': r'\tilde',
     'bold': r'\mathbf',
     'angle': r'\angle', 'triangle': r'\triangle', 'parallel': r'\parallel', 'perp': r'\perp',
     'approx': r'\approx', 'equiv': r'\equiv', 'sim': r'\sim', 'in': r'\in', 'notin': r'\notin',
@@ -45,6 +46,7 @@ TOK = re.compile(r"""
 
 def _pre(s):
     s = s.replace('`', ' ')                       # 한글 수식의 작은 공백
+    s = re.sub(r'"([^"]*)"', lambda m: ' ' + ' '.join(m.group(1)) + ' ', s)   # rm "OF" 처럼 따옴표 문자열: 글자 사이를 띄워 키워드(of, in …)로 오인하지 않게 (\mathrm 안 공백은 무시됨)
     s = s.replace('×', ' times ').replace('÷', ' div ').replace('·', ' cdot ').replace('≤', ' le ').replace('≥', ' ge ').replace('≠', ' ne ').replace('∞', ' inf ').replace('π', ' pi ').replace('°', ' deg ').replace('√', ' sqrt ')
     s = re.sub(r'[_^]\{\s*\}', ' ', s)                       # ^{} _{} 빈 첨자
     s = re.sub(r'[_^]\{\s*(?:[_^]\{\s*)*[_^]*\s*(?:\}\s*)*\}', ' ', s)   # _{_{_}} 같은 공백 꼼수
@@ -211,7 +213,7 @@ def _struct(nodes):
         if _kw(n, 'cases') and i + 1 < len(nodes) and nodes[i + 1][0] == 'g':
             out.append(('cases', _struct(nodes[i + 1][1]), True)); i += 2
             continue
-        if _kw(n, 'bar', 'vec', 'hat', 'sqrt', 'bold') and i + 1 < len(nodes) and nodes[i + 1][0] != 'g':
+        if _kw(n, 'bar', 'vec', 'hat', 'sqrt', 'bold', 'overline', 'underline') and i + 1 < len(nodes) and nodes[i + 1][0] != 'g':
             # bar PQ (그룹 없이) → \overline{PQ}: 다음 덩어리를 그룹으로
             right, i2 = _take_right(nodes, i + 1)
             out.append(n); out.append(('g', [right] if right[0] != 'g' else right[1], True)); i = i2

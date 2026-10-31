@@ -12,7 +12,7 @@ import re, json, glob, os, sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 HEAD = re.compile(r'^(\d{1,2})\.\s*(?:\[([^\]]+)\])?\s*(?:난이도\s*([★☆]+))?\s*$')
-SOL = re.compile(r'^(\d{1,2})번\s*정답\s*(\d+)')
+SOL = re.compile(r'^(\d{1,2})(?:번|\.)\s*정답\s*\$?\s*(\d+)')
 SUBJ = {'공통(대수)': '대수', '대수': '대수', '공통(미적분Ⅰ)': '미적분Ⅰ', '미적분Ⅰ': '미적분Ⅰ', '미적분Ⅱ': '미적분Ⅱ',
         '확률과 통계': '확률과 통계', '기하': '기하', '수학Ⅰ': '대수', '수학Ⅱ': '미적분Ⅰ', '미적분': '미적분Ⅱ'}
 # 손으로 붙인 주제 (형식 B에는 주제 줄이 없다)
@@ -49,25 +49,30 @@ def blocks_from(lines):
 def parse(path, name=None):
     name = name or os.path.splitext(os.path.basename(path))[0]
     name = {'2cha': '창작2차', 'byeonhyeong8': '기출변형', '2차': '창작2차', '기출_심화_변형_8제': '기출변형'}.get(name, name)
+    mm = re.match(r'(\d\d)번형_추가_\d+제_(.+)$', name)   # "20번형_추가_50제_대수" → "추가20·대수"
+    if mm: name = f'추가{mm.group(1)}·{mm.group(2)}'
     L = [l.rstrip('\n') for l in open(path, encoding='utf-8')]
     L = [re.sub(r'[-]', '', l) for l in L]
     L = [l if l.strip() in ('TBL', '/TBL') else l.strip() for l in L]
     L = [l.strip() if l.strip() in ('TBL', '/TBL') else l for l in L]
-    si = next((i for i, l in enumerate(L) if '정답 및 해설' in l and len(l) < 30), len(L))
+    si = next((i for i, l in enumerate(L) if ('정답 및 해설' in l and len(l) < 30) or l.strip() == '해설'), len(L))
+    qi = next((i for i, l in enumerate(L[:si]) if l.strip() == '빠른 정답'), si)   # 형식 D: 문제 끝에 빠른 정답 표
     # 형식 C: 머리말 "수능형 창작 문항 20번형 선별 15제 (대수)" 에서 과목·유형 기본값
     hsubj, htype = '', ''
     for l in L[:5]:
         m = re.search(r'(\d{2})번형.*?\(([^)]+)\)', l)
         if m: htype, hsubj = m.group(1) + '번형', m.group(2).strip(); break
     probs, cur = {}, None
-    for l in L[:si]:
+    for l in L[:qi]:
         m = HEAD.match(l)
         if m:
-            n = int(m.group(1)); cur = {'n': n, 'subj': m.group(2) or hsubj or '공통', 'stars': (m.group(3) or '').count('★') or 4, 'lines': [], 'note': ''}
+            n = int(m.group(1)); br = (m.group(2) or '').strip()
+            # 대괄호가 과목이면 과목, 아니면(형식 D: [수열]) 주제 힌트이고 과목은 머리말에서
+            cur = {'n': n, 'subj': br if br in SUBJ else (hsubj or '공통'), 'hint': '' if br in SUBJ else br, 'stars': (m.group(3) or '').count('★') or 4, 'lines': [], 'note': ''}
             probs[n] = cur; continue
         if cur is None:
             continue
-        if l.startswith('▶'):
+        if l.startswith('▶') or l.startswith('소재 기출:'):
             cur['note'] = l.lstrip('▶ ').strip(); continue
         cur['lines'].append(l)
     sols, cur = {}, None
@@ -106,15 +111,15 @@ def parse(path, name=None):
         subj = SUBJ.get(p['subj'].strip(), p['subj'].strip())
         src = p['note']
         mt = re.search(r'(\d+)번', src)
-        qtype = (mt.group(1) + '번형') if mt else (htype or f'{n}번형')
-        topic = s['topic'].split(',')[0].strip() if s['topic'] else TOPICS.get(qid, f'{subj} {n}번')
+        qtype = htype or ((mt.group(1) + '번형') if mt else f'{n}번형')
+        topic = s['topic'].split(',')[0].strip() if s['topic'] else TOPICS.get(qid, p.get('hint') or f'{subj} {n}번')
         items.append({
             'id': qid, 'subject': subj, 'topic': topic, 'stars': p['stars'], 'type': qtype,
             'standards': s['standards'], 'answer': s['answer'],
             'body': blocks_from(p['lines']),
             'solution': blocks_from(s['lines']),
-            'source': ('2026 수능 기출 변형 · ' + src.split('→')[0].replace('소재:', '').strip()) if src else 'ShrekMath 창작 · 수능 ' + qtype,
-            'intro': [x for x in [s['intent'], (src.split('→', 1)[1].strip() if '→' in src else '')] if x],
+            'source': (('ShrekMath 창작 · ' + re.split(r'→|/ 변형 포인트:', src)[0].replace('소재:', '').replace('소재 기출:', '').strip() + ' 변형') if src else 'ShrekMath 창작 · 수능 ' + qtype),
+            'intro': [x for x in [s['intent'], (re.split(r'→|/ 변형 포인트:', src, 1)[1].strip() if re.search(r'→|/ 변형 포인트:', src) else '')] if x],
         })
     return items
 

@@ -1,0 +1,100 @@
+{
+ "num": 185,
+ "id": "추가29·기하-49",
+ "subject": "기하",
+ "type": "29번형",
+ "typeDesc": "기하 · 수능 29번형 자리의 고난도",
+ "stars": 5,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2022학년도 6월 모의평가 29번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 125,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "포물선 $y^{2}=16 x$ 의 초점 ${\\mathrm{F}}$ 를 지나는 직선이 이 포물선과 만나는 두 점 중 제 $1$ 사분면에 있는 점을 ${\\mathrm{A}}$ , 다른 점을 ${\\mathrm{B}}$ 라 하자.",
+    "두 점 ${\\mathrm{A}}$ , ${\\mathrm{B}}$ 에서의 포물선의 접선이 만나는 점을 ${\\mathrm{T}}$ 라 하자.",
+    "$\\overline{{\\mathrm{AF}}}=4 \\overline{{\\mathrm{BF}}}$ 일 때, 삼각형 ${\\mathrm{TAB}}$ 의 넓이를 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "포물선 $y^{2}=16 x$ 의 초점 ${\\mathrm{F}}$ 를 지나는 직선이 이 포물선과 만나는 두 점 중 제 $1$ 사분면에 있는 점을 ${\\mathrm{A}}$ , 다른 점을 ${\\mathrm{B}}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "두 점 ${\\mathrm{A}}$ , ${\\mathrm{B}}$ 에서의 포물선의 접선이 만나는 점을 ${\\mathrm{T}}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "$\\overline{{\\mathrm{AF}}}=4 \\overline{{\\mathrm{BF}}}$ 일 때, 삼각형 ${\\mathrm{TAB}}$ 의 넓이를 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "초점을 지나는 직선의 두 교점에서의 접선이 준선 위에서 수직으로 만나고 두 직선 ${\\mathrm{TF}}$ , ${\\mathrm{AB}}$ 가 서로 수직임을 발견하여 직각삼각형의 닮음으로 넓이를 구하게 함"
+ ],
+ "topic": "포물선의 접선",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "$p=4$ 이다. 직선 ${\\mathrm{AB}}$ 를 $x=t y+4$ 라 하고 대입하면 $y^{2}-16 t y-64=0$ 이므로 $y_{{\\mathrm{A}}}y_{{\\mathrm{B}}}=-64$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "${\\mathrm{A}}$ , ${\\mathrm{B}}$ 에서의 접선 $y_{{\\mathrm{A}}}y=8(x+x_{{\\mathrm{A}}})$ , $y_{{\\mathrm{B}}}y=8(x+x_{{\\mathrm{B}}})$ 의 기울기의 곱은 $\\frac{64}{y_{{\\mathrm{A}}}y_{{\\mathrm{B}}}}=-1$ 이므로 $\\angle{\\mathrm{ATB}}=\\frac{\\pi}{2}$ 이다. 두 접선의 교점은 ${\\mathrm{T}}\\left(\\frac{y_{{\\mathrm{A}}}y_{{\\mathrm{B}}}}{16},\\,\\frac{y_{{\\mathrm{A}}}+y_{{\\mathrm{B}}}}{2}\\right)=(-4,\\,8 t)$ 이고, $\\vec{{\\mathrm{FT}}}=(-8,\\,8 t)$ 는 직선 ${\\mathrm{AB}}$ 의 방향벡터 $(t,\\,1)$ 과 수직이므로 두 직선 ${\\mathrm{TF}}$ , ${\\mathrm{AB}}$ 가 서로 수직이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "또 $\\overline{{\\mathrm{AF}}}\\times \\overline{{\\mathrm{BF}}}=(x_{{\\mathrm{A}}}+4)(x_{{\\mathrm{B}}}+4)$ , $\\overline{{\\mathrm{AF}}}+\\overline{{\\mathrm{BF}}}=x_{{\\mathrm{A}}}+x_{{\\mathrm{B}}}+8$ 이고 $x_{{\\mathrm{A}}}x_{{\\mathrm{B}}}=\\frac{(y_{{\\mathrm{A}}}y_{{\\mathrm{B}}})^{2}}{256}=16$ 이므로 $\\overline{{\\mathrm{AF}}}\\times \\overline{{\\mathrm{BF}}}=4(\\overline{{\\mathrm{AF}}}+\\overline{{\\mathrm{BF}}})$ 이다. $\\overline{{\\mathrm{BF}}}=s$ , $\\overline{{\\mathrm{AF}}}=4 s$ 를 대입하면 $4 s^{2}=20 s$ , $s=5$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$\\overline{{\\mathrm{AB}}}=25$ 이고 직각삼각형 ${\\mathrm{ATB}}$ 에서 $\\overline{{\\mathrm{TF}}}^{2}=\\overline{{\\mathrm{AF}}}\\times \\overline{{\\mathrm{BF}}}=100$ , $\\overline{{\\mathrm{TF}}}=10$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "따라서 삼각형 ${\\mathrm{TAB}}$ 의 넓이는 $\\frac{1}{2}\\times 25 \\times 10=125$",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

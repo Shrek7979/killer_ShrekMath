@@ -1,0 +1,100 @@
+{
+ "num": 168,
+ "id": "추가29·기하-32",
+ "subject": "기하",
+ "type": "29번형",
+ "typeDesc": "기하 · 수능 29번형 자리의 고난도",
+ "stars": 4,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2022학년도 6월 모의평가 29번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 100,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "양수 $p$ 에 대하여 포물선 $y^{2}=4 p x$ 의 초점 ${\\mathrm{F}}$ 를 지나는 직선이 포물선과 서로 다른 두 점 ${\\mathrm{A}}$ , ${\\mathrm{B}}$ 에서 만난다.",
+    "선분 ${\\mathrm{AB}}$ 를 지름으로 하는 원의 반지름의 길이가 $10$ 이고, 이 원이 포물선의 준선과 점 $(-p,\\,4)$ 에서 접한다.",
+    "이를 만족시키는 모든 $p$ 에 대하여 $\\overline{{\\mathrm{AF}}}\\times \\overline{{\\mathrm{BF}}}$ 의 값의 합을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "양수 $p$ 에 대하여 포물선 $y^{2}=4 p x$ 의 초점 ${\\mathrm{F}}$ 를 지나는 직선이 포물선과 서로 다른 두 점 ${\\mathrm{A}}$ , ${\\mathrm{B}}$ 에서 만난다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "선분 ${\\mathrm{AB}}$ 를 지름으로 하는 원의 반지름의 길이가 $10$ 이고, 이 원이 포물선의 준선과 점 $(-p,\\,4)$ 에서 접한다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "이를 만족시키는 모든 $p$ 에 대하여 $\\overline{{\\mathrm{AF}}}\\times \\overline{{\\mathrm{BF}}}$ 의 값의 합을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "초점을 지나는 직선과 포물선의 두 교점을 지름의 양 끝으로 하는 원이 준선에 접함을 발견하게 하고, 조건을 만족시키는 $p$ 가 두 개인 경우를 모두 처리"
+ ],
+ "topic": "포물선",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "${\\mathrm{A}}$ , ${\\mathrm{B}}$ 에서 준선에 내린 수선의 발을 ${\\mathrm{A'}}$ , ${\\mathrm{B'}}$ , 선분 ${\\mathrm{AB}}$ 의 중점을 ${\\mathrm{M}}$ 이라 하면 ${\\mathrm{M}}$ 과 준선 사이의 거리는 $\\frac{\\overline{{\\mathrm{AA'}}}+\\overline{{\\mathrm{BB'}}}}{2}=\\frac{\\overline{{\\mathrm{AF}}}+\\overline{{\\mathrm{BF}}}}{2}=\\frac{\\overline{{\\mathrm{AB}}}}{2}$ 이므로, 선분 ${\\mathrm{AB}}$ 를 지름으로 하는 원은 항상 준선에 접하고 접점의 $y$ 좌표는 ${\\mathrm{M}}$ 의 $y$ 좌표이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "따라서 $\\overline{{\\mathrm{AB}}}=20$ , ${\\mathrm{M}}$ 의 $y$ 좌표는 $4$ 이고, ${\\mathrm{M}}$ 의 $x$ 좌표는 $10-p$ 이다. 직선 ${\\mathrm{AB}}$ 를 $x=t y+p$ 라 하고 $y^{2}=4 p x$ 에 대입하면 $y^{2}-4 p t y-4 p^{2}=0$ 이므로 $y_{{\\mathrm{A}}}+y_{{\\mathrm{B}}}=4 p t=8$ , $y_{{\\mathrm{A}}}y_{{\\mathrm{B}}}=-4 p^{2}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "${\\mathrm{M}}$ 이 직선 위에 있으므로 $10-p=4 t+p$ , 즉 $10-2 p=\\frac{8}{p}$ 에서 $p^{2}-5 p+4=0$ , $p=1$ 또는 $p=4$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$$\\overline{{\\mathrm{AF}}}\\times \\overline{{\\mathrm{BF}}}=(x_{{\\mathrm{A}}}+p)(x_{{\\mathrm{B}}}+p)=x_{{\\mathrm{A}}}x_{{\\mathrm{B}}}+p(x_{{\\mathrm{A}}}+x_{{\\mathrm{B}}})+p^{2}=\\frac{(y_{{\\mathrm{A}}}y_{{\\mathrm{B}}})^{2}}{16 p^{2}}+p(20-2 p)+p^{2}=20 p$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "이므로 구하는 합은 $20+80=100$",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

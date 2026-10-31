@@ -1,0 +1,2576 @@
+[
+ {
+  "id": "추가30·기하-01",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 3,
+  "type": "30번형",
+  "standards": [],
+  "answer": 128,
+  "body": [
+   [
+    "p",
+    "좌표평면에서 $overline {{rm \"AB\" it}} = 6$ , $overline {{rm \"BC\" it}} = 8$ 인 직사각형 ${rm \"ABCD\" it}$ 가 있다."
+   ],
+   [
+    "eq",
+    "| vec {{rm \"XA\" it}} + vec {{rm \"XB\" it}} | = | vec {{rm \"XA\" it}} - vec {{rm \"XB\" it}} |"
+   ],
+   [
+    "p",
+    "를 만족시키는 점 ${rm \"X\" it}$ 가 나타내는 도형을 $S$ 라 하자. 도형 $S$ 위의 점 ${rm \"P\" it}$ 에 대하여 $vec {{rm \"PC\" it}} cdot vec {{rm \"PD\" it}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M + m$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$| vec {{rm \"XA\" it}} + vec {{rm \"XB\" it}} | ^{2} = | vec {{rm \"XA\" it}} - vec {{rm \"XB\" it}} | ^{2}$ 에서 $vec {{rm \"XA\" it}} cdot vec {{rm \"XB\" it}} = 0$ 이므로 $S$ 는 선분 ${rm \"AB\" it}$ 를 지름으로 하는 원, 즉 선분 ${rm \"AB\" it}$ 의 중점 ${rm \"K\" it}$ 를 중심으로 하고 반지름의 길이가 $3$ 인 원이다."
+   ],
+   [
+    "p",
+    "선분 ${rm \"CD\" it}$ 의 중점을 ${rm \"N\" it}$ 이라 하면 $vec {{rm \"NC\" it}} = - vec {{rm \"ND\" it}}$ , $| vec {{rm \"NC\" it}} | = 3$ 이므로"
+   ],
+   [
+    "eq",
+    "vec {{rm \"PC\" it}} cdot vec {{rm \"PD\" it}} = ( vec {{rm \"PN\" it}} + vec {{rm \"NC\" it}} ) cdot ( vec {{rm \"PN\" it}} - vec {{rm \"NC\" it}} ) = | vec {{rm \"PN\" it}} | ^{2} - 9"
+   ],
+   [
+    "p",
+    "$overline {{rm \"KN\" it}} = 8$ 이므로 $8 - 3 leq | vec {{rm \"PN\" it}} | leq 8 + 3$ , 즉 $5 leq | vec {{rm \"PN\" it}} | leq 11$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $M = 121 - 9 = 112$ , $m = 25 - 9 = 16$ 이고 $M + m = 128$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2025학년도 대학수학능력시험 30번 변형",
+  "intro": [
+   "정사각형을 직사각형으로 바꾸고, 원 위의 점에 대한 내적을 '중점까지의 거리'로 바꾸어 보는 핵심만 남겨 최댓값·최솟값의 합을 묻도록 단순화"
+  ]
+ },
+ {
+  "id": "추가30·기하-02",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 3,
+  "type": "30번형",
+  "standards": [],
+  "answer": 80,
+  "body": [
+   [
+    "p",
+    "좌표평면에서 $overline {{rm \"AB\" it}} = 6$ , $overline {{rm \"BC\" it}} = 8$ 인 직사각형 ${rm \"ABCD\" it}$ 가 있다. 선분 ${rm \"BC\" it}$ 위를 움직이는 점 ${rm \"P\" it}$ 에 대하여 점 ${rm \"Q\" it}$ 가"
+   ],
+   [
+    "eq",
+    "vec {{rm \"QP\" it}} cdot vec {{rm \"QD\" it}} = 0"
+   ],
+   [
+    "p",
+    "을 만족시킬 때, $vec {{rm \"AQ\" it}} cdot vec {{rm \"AD\" it}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 하자. $M + m$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "${rm \"B\" it} ( 0 , ` 0 )$ , ${rm \"C\" it} ( 8 , ` 0 )$ , ${rm \"D\" it} ( 8 , ` 6 )$ , ${rm \"A\" it} ( 0 , ` 6 )$ 으로 놓으면 $vec {{rm \"AD\" it}} = ( 8 , ` 0 )$ 이므로 $vec {{rm \"AQ\" it}} cdot vec {{rm \"AD\" it}}$ 의 값은 점 ${rm \"Q\" it}$ 의 $x$ 좌표의 $8$ 배이다."
+   ],
+   [
+    "p",
+    "$vec {{rm \"QP\" it}} cdot vec {{rm \"QD\" it}} = 0$ 이므로 점 ${rm \"Q\" it}$ 는 선분 ${rm \"PD\" it}$ 를 지름으로 하는 원 위에 있다. ${rm \"P\" it} ( t , ` 0 ) ` ( 0 leq t leq 8 )$ 이면 이 원의 중심의 $x$ 좌표는 ${t + 8} over {2}$ , 반지름의 길이는 ${sqrt {( 8 - t ) ^{2} + 36}} over {2}$ 이므로 점 ${rm \"Q\" it}$ 의 $x$ 좌표의 최댓값과 최솟값은"
+   ],
+   [
+    "eq",
+    "{t + 8 + sqrt {( 8 - t ) ^{2} + 36}} over {2} , ` ` ` ` {t + 8 - sqrt {( 8 - t ) ^{2} + 36}} over {2}"
+   ],
+   [
+    "p",
+    "이다. $t$ 가 증가할 때 $sqrt {( 8 - t ) ^{2} + 36}$ 의 감소량은 $t$ 의 증가량보다 작으므로 두 식은 모두 $t$ 에 대하여 증가한다."
+   ],
+   [
+    "p",
+    "따라서 점 ${rm \"Q\" it}$ 의 $x$ 좌표의 최댓값은 $t = 8$ 일 때 ${16 + 6} over {2} = 11$ , 최솟값은 $t = 0$ 일 때 ${8 - 10} over {2} = - 1$ 이다."
+   ],
+   [
+    "p",
+    "$M = 88$ , $m = - 8$ 이므로 $M + m = 80$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2026학년도 6월 모의평가 30번 변형",
+  "intro": [
+   "' $vec {{rm \"PQ\" it}} cdot ( vec {{rm \"PQ\" it}} - vec {{rm \"AB\" it}} ) = 0$ '을 '선분 PD를 지름으로 하는 원'으로 바꾸어 원의 중심과 반지름이 함께 변하게 하고, 최솟값만이 아니라 최댓값까지 묻도록 변형"
+  ]
+ },
+ {
+  "id": "추가30·기하-03",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 3,
+  "type": "30번형",
+  "standards": [],
+  "answer": 250,
+  "body": [
+   [
+    "p",
+    "좌표평면 위의 두 점 ${rm \"A\" it} ( 4 , ` 0 )$ , ${rm \"B\" it} ( 0 , ` 2 )$ 와 원 $x ^{2} + y ^{2} = 5$ 위를 움직이는 점 ${rm \"P\" it}$ 가 있다. $vec {{rm \"PA\" it}} cdot vec {{rm \"PB\" it}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M ^{2} + m ^{2}$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "선분 ${rm \"AB\" it}$ 의 중점을 ${rm \"K\" it} ( 2 , ` 1 )$ 이라 하면 $vec {{rm \"KA\" it}} = - vec {{rm \"KB\" it}}$ , $| vec {{rm \"KA\" it}} | ^{2} = {| vec {{rm \"AB\" it}} | ^{2}} over {4} = 5$ 이므로"
+   ],
+   [
+    "eq",
+    "vec {{rm \"PA\" it}} cdot vec {{rm \"PB\" it}} = | vec {{rm \"PK\" it}} | ^{2} - 5"
+   ],
+   [
+    "p",
+    "점 ${rm \"K\" it}$ 는 원 $x ^{2} + y ^{2} = 5$ 위에 있으므로 $0 leq | vec {{rm \"PK\" it}} | leq 2 sqrt {5}$ 이다(최댓값은 지름의 길이)."
+   ],
+   [
+    "p",
+    "따라서 $M = 20 - 5 = 15$ , $m = 0 - 5 = - 5$ 이고 $M ^{2} + m ^{2} = 225 + 25 = 250$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2022학년도 9월 모의평가 30번 변형",
+  "intro": [
+   "원 위의 점과 두 정점에 대한 내적을 선분 AB의 중점 하나로 모으는 구조로 바꾸고, 원이 그 중점을 지나도록 설계해 최솟값이 '거리 0'에서 생기게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-04",
+  "subject": "기하",
+  "topic": "이차곡선과 벡터",
+  "stars": 3,
+  "type": "30번형",
+  "standards": [],
+  "answer": 13,
+  "body": [
+   [
+    "p",
+    "두 초점이 ${rm \"F\" it} ( 4 , ` 0 )$ , ${rm \"F\" it} ' ( - 4 , ` 0 )$ 인 타원 ${x ^{2}} over {25} + {y ^{2}} over {9} = 1$ 위의 점 중 $y$ 좌표가 양수인 점 ${rm \"P\" it}$ 에 대하여 점 ${rm \"Q\" it}$ 가"
+   ],
+   [
+    "eq",
+    "( 10 - | vec {{rm \"PF\" it}} | ) ` vec {{rm \"F\" it} ' {rm \"Q\" it}} = 3 ` vec {{rm \"F\" it} ' {rm \"P\" it}}"
+   ],
+   [
+    "p",
+    "를 만족시킨다. 점 ${rm \"A\" it} ( 2 , ` - 8 )$ 에 대하여 $| vec {{rm \"AQ\" it}} |$ 의 최댓값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "타원의 정의에서 $| vec {{rm \"PF\" it}} | + | vec {{rm \"P\" it} {rm \"F\" it} '} | = 10$ 이므로 $10 - | vec {{rm \"PF\" it}} | = | vec {{rm \"P\" it} {rm \"F\" it} '} |$ 이다. 따라서"
+   ],
+   [
+    "eq",
+    "vec {{rm \"F\" it} ' {rm \"Q\" it}} = {3} over {| vec {{rm \"F\" it} ' {rm \"P\" it}} |} vec {{rm \"F\" it} ' {rm \"P\" it}}"
+   ],
+   [
+    "p",
+    "이므로 점 ${rm \"Q\" it}$ 는 반직선 ${rm \"F ' P\" it}$ 위에서 $| vec {{rm \"F\" it} ' {rm \"Q\" it}} | = 3$ 인 점이다. 점 ${rm \"F\" it} '$ 은 타원의 내부에 있으므로 ${rm \"F\" it} '$ 에서 위쪽(y좌표가 양수인 쪽)으로 향하는 모든 반직선은 타원의 위쪽 부분과 한 점에서 만난다. 즉 점 ${rm \"Q\" it}$ 가 나타내는 도형은 중심이 ${rm \"F\" it} ' ( - 4 , ` 0 )$ , 반지름의 길이가 $3$ 인 원 중 $y > 0$ 인 부분(반원)이다."
+   ],
+   [
+    "p",
+    "$vec {{rm \"A\" it} {rm \"F\" it} '} = ( - 6 , ` 8 )$ , $| vec {{rm \"A\" it} {rm \"F\" it} '} | = 10$ 이고, 점 ${rm \"A\" it}$ 에서 가장 먼 원 위의 점은 ${rm \"F\" it} ' + 3 times {( - 6 , ` 8 )} over {10} = LEFT ( - {29} over {5} , ` {12} over {5} RIGHT )$ 로 $y$ 좌표가 양수이므로 반원 위에 있다."
+   ],
+   [
+    "p",
+    "따라서 $| vec {{rm \"AQ\" it}} |$ 의 최댓값은 $10 + 3 = 13$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2025학년도 6월 모의평가 30번 변형",
+  "intro": [
+   "쌍곡선을 타원으로 바꾸어 '두 초점까지의 거리의 합'으로 $| vec {{rm \"F ' Q\" it}} |$ 가 일정함을 끌어내고, 점 Q가 반원 위에만 있다는 조건을 확인하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-05",
+  "subject": "기하",
+  "topic": "공간도형과 공간좌표",
+  "stars": 3,
+  "type": "30번형",
+  "standards": [],
+  "answer": 32,
+  "body": [
+   [
+    "p",
+    "좌표공간에서 구 $S : ` ( x - 1 ) ^{2} + ( y - 2 ) ^{2} + ( z - 2 ) ^{2} = 16$ 위를 움직이는 점 ${rm \"P\" it}$ 와 두 점 ${rm \"A\" it} ( 5 , ` 1 , ` 3 )$ , ${rm \"B\" it} ( 1 , ` - 1 , ` - 1 )$ 이 있다. $vec {{rm \"PA\" it}} cdot vec {{rm \"PB\" it}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M + m$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "구의 중심을 ${rm \"C\" it} ( 1 , ` 2 , ` 2 )$ , 선분 ${rm \"AB\" it}$ 의 중점을 ${rm \"K\" it} ( 3 , ` 0 , ` 1 )$ 이라 하면 $| vec {{rm \"KA\" it}} | = {1} over {2} | ( 4 , ` 2 , ` 4 ) | = 3$ 이므로"
+   ],
+   [
+    "eq",
+    "vec {{rm \"PA\" it}} cdot vec {{rm \"PB\" it}} = | vec {{rm \"PK\" it}} | ^{2} - 9"
+   ],
+   [
+    "p",
+    "$| vec {{rm \"CK\" it}} | = | ( 2 , ` - 2 , ` - 1 ) | = 3 < 4$ 이므로 점 ${rm \"K\" it}$ 는 구의 내부에 있고 $4 - 3 leq | vec {{rm \"PK\" it}} | leq 4 + 3$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $M = 49 - 9 = 40$ , $m = 1 - 9 = - 8$ 이고 $M + m = 32$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2022학년도 대학수학능력시험 30번 변형",
+  "intro": [
+   "구 위의 점에 대한 문제를 공간벡터의 내적으로 바꾸어, 평면에서의 '중점까지의 거리' 방법을 공간으로 확장하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-06",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 3,
+  "type": "30번형",
+  "standards": [],
+  "answer": 21,
+  "body": [
+   [
+    "p",
+    "한 변의 길이가 $6$ 인 정삼각형 ${rm \"ABC\" it}$ 의 세 변 위를 움직이는 점 ${rm \"P\" it}$ 와 $| vec {{rm \"AQ\" it}} | = 1$ 을 만족시키는 점 ${rm \"Q\" it}$ 에 대하여 점 ${rm \"X\" it}$ 가"
+   ],
+   [
+    "eq",
+    "vec {{rm \"AX\" it}} = {1} over {3} vec {{rm \"AP\" it}} + vec {{rm \"AQ\" it}}"
+   ],
+   [
+    "p",
+    "를 만족시킨다. $| vec {{rm \"BX\" it}} |$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M times m$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$vec {{rm \"A\" it} {rm \"P\" it} '} = {1} over {3} vec {{rm \"AP\" it}}$ 인 점 ${rm \"P\" it} '$ 을 잡으면 점 ${rm \"P\" it} '$ 은 선분 ${rm \"AB\" it}$ , ${rm \"AC\" it}$ 를 $1 : 2$ 로 내분하는 점 ${rm \"B\" it} '$ , ${rm \"C\" it} '$ 에 대하여 정삼각형 ${rm \"AB ' C '\" it}$ (한 변의 길이 $2$ )의 변 위를 움직이고, $vec {{rm \"P\" it} ' {rm \"X\" it}} = vec {{rm \"AQ\" it}}$ 이므로 $| vec {{rm \"P\" it} ' {rm \"X\" it}} | = 1$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $| vec {{rm \"B\" it} {rm \"P\" it} '} | - 1 leq | vec {{rm \"BX\" it}} | leq | vec {{rm \"B\" it} {rm \"P\" it} '} | + 1$ 이고, 등호가 성립하도록 점 ${rm \"Q\" it}$ 를 잡을 수 있다."
+   ],
+   [
+    "p",
+    "삼각형 ${rm \"AB ' C '\" it}$ 의 변 위의 점 중 점 ${rm \"B\" it}$ 에서 가장 먼 점은 ${rm \"A\" it}$ ( $| vec {{rm \"BA\" it}} | = 6$ ), 가장 가까운 점은 ${rm \"B\" it} '$ ( $| vec {{rm \"B\" it} {rm \"B\" it} '} | = 4$ )이다. ( $| vec {{rm \"B\" it} {rm \"C\" it} '} | = sqrt {28}$ 이고, 변 ${rm \"B ' C '\" it}$ 위의 점은 ${rm \"B\" it} '$ 보다 ${rm \"B\" it}$ 에서 멀다.)"
+   ],
+   [
+    "p",
+    "따라서 $M = 6 + 1 = 7$ , $m = 4 - 1 = 3$ 이고 $M times m = 21$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2023학년도 6월 모의평가 30번 변형",
+  "intro": [
+   "정육각형을 정삼각형으로, 축소 중심을 꼭짓점 A로 바꾸고 '축소한 도형 + 단위원' 구조에서 고정점까지의 거리의 최대·최소를 묻도록 재구성"
+  ]
+ },
+ {
+  "id": "추가30·기하-07",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 3,
+  "type": "30번형",
+  "standards": [],
+  "answer": 144,
+  "body": [
+   [
+    "p",
+    "좌표평면에서 $overline {{rm \"AB\" it}} = 6$ , $overline {{rm \"AD\" it}} = 8$ 인 직사각형 ${rm \"ABCD\" it}$ 와 두 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ 가"
+   ],
+   [
+    "eq",
+    "| vec {{rm \"BP\" it}} | = 1 , ` ` ` ` | vec {{rm \"DQ\" it}} | = 1"
+   ],
+   [
+    "p",
+    "을 만족시킨다. 점 ${rm \"X\" it}$ 가 $vec {{rm \"AX\" it}} = vec {{rm \"AP\" it}} + vec {{rm \"AQ\" it}}$ 를 만족시킬 때, $| vec {{rm \"AX\" it}} |$ 의 값이 최대가 되도록 하는 두 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ 에 대하여 삼각형 ${rm \"APQ\" it}$ 의 넓이를 $S$ 라 하자. $5 S$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$vec {{rm \"AX\" it}} = vec {{rm \"AB\" it}} + vec {{rm \"BP\" it}} + vec {{rm \"AD\" it}} + vec {{rm \"DQ\" it}} = vec {{rm \"AC\" it}} + ( vec {{rm \"BP\" it}} + vec {{rm \"DQ\" it}} )$ 이고 $| vec {{rm \"AC\" it}} | = 10$ 이므로"
+   ],
+   [
+    "eq",
+    "| vec {{rm \"AX\" it}} | leq 10 + | vec {{rm \"BP\" it}} | + | vec {{rm \"DQ\" it}} | = 12"
+   ],
+   [
+    "p",
+    "이며, 등호는 $vec {{rm \"BP\" it}} = vec {{rm \"DQ\" it}} = {1} over {10} vec {{rm \"AC\" it}}$ 일 때 성립한다."
+   ],
+   [
+    "p",
+    "${rm \"A\" it} ( 0 , ` 0 )$ , ${rm \"B\" it} ( 6 , ` 0 )$ , ${rm \"D\" it} ( 0 , ` 8 )$ 로 놓으면 ${1} over {10} vec {{rm \"AC\" it}} = LEFT ( {3} over {5} , ` {4} over {5} RIGHT )$ 이므로 ${rm \"P\" it} LEFT ( {33} over {5} , ` {4} over {5} RIGHT )$ , ${rm \"Q\" it} LEFT ( {3} over {5} , ` {44} over {5} RIGHT )$ 이다."
+   ],
+   [
+    "eq",
+    "S = {1} over {2} LEFT | {33} over {5} times {44} over {5} - {4} over {5} times {3} over {5} RIGHT | = {1} over {2} times {1440} over {25} = {144} over {5}"
+   ],
+   [
+    "p",
+    "따라서 $5 S = 144$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2024학년도 6월 모의평가 30번 변형",
+  "intro": [
+   "세 단위원 대신 두 단위원으로 줄이고, 벡터의 합이 대각선 벡터 $vec {{rm \"AC\" it}}$ 로 모이는 구조에서 최대 조건(같은 방향)을 찾게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-08",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 3,
+  "type": "30번형",
+  "standards": [],
+  "answer": 198,
+  "body": [
+   [
+    "p",
+    "좌표평면에서 $overline {{rm \"AB\" it}} = overline {{rm \"AC\" it}} = 6$ 이고 $angle {rm \"BAC\" it} = {pi} over {2}$ 인 직각삼각형 ${rm \"ABC\" it}$ 가 있다. 선분 ${rm \"BC\" it}$ 위를 움직이는 점 ${rm \"X\" it}$ 에 대하여 $| vec {{rm \"XA\" it}} + vec {{rm \"XB\" it}} + vec {{rm \"XC\" it}} |$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M ^{2} + m ^{2}$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "${rm \"A\" it} ( 0 , ` 0 )$ , ${rm \"B\" it} ( 6 , ` 0 )$ , ${rm \"C\" it} ( 0 , ` 6 )$ 으로 놓고 삼각형 ${rm \"ABC\" it}$ 의 무게중심을 ${rm \"G\" it} ( 2 , ` 2 )$ 라 하면 $vec {{rm \"XA\" it}} + vec {{rm \"XB\" it}} + vec {{rm \"XC\" it}} = 3 vec {{rm \"XG\" it}}$ 이다."
+   ],
+   [
+    "p",
+    "직선 ${rm \"BC\" it}$ : $x + y = 6$ 과 점 ${rm \"G\" it}$ 사이의 거리는 ${| 2 + 2 - 6 |} over {sqrt {2}} = sqrt {2}$ 이고, 수선의 발 $( 3 , ` 3 )$ 은 선분 ${rm \"BC\" it}$ 위에 있으므로 $m = 3 sqrt {2}$ 이다."
+   ],
+   [
+    "p",
+    "$| vec {{rm \"XG\" it}} |$ 는 끝점에서 최대이고 $| vec {{rm \"BG\" it}} | = | vec {{rm \"CG\" it}} | = sqrt {20}$ 이므로 $M = 3 sqrt {20}$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $M ^{2} + m ^{2} = 180 + 18 = 198$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2024학년도 9월 모의평가 30번 변형",
+  "intro": [
+   "두 벡터의 합 대신 세 벡터의 합을 무게중심으로 모으고, 선분 위 점까지의 거리의 최댓값(끝점)과 최솟값(수선의 발)을 함께 묻도록 변형"
+  ]
+ },
+ {
+  "id": "추가30·기하-09",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 3,
+  "type": "30번형",
+  "standards": [],
+  "answer": 19,
+  "body": [
+   [
+    "p",
+    "직선 $3 x + y = 0$ 위를 움직이는 점 ${rm \"P\" it}$ 와 타원 $x ^{2} + {y ^{2}} over {4} = 1$ 위를 움직이는 점 ${rm \"Q\" it}$ 에 대하여"
+   ],
+   [
+    "eq",
+    "vec {{rm \"OX\" it}} = vec {{rm \"OP\" it}} + vec {{rm \"OQ\" it}}"
+   ],
+   [
+    "p",
+    "를 만족시키고, $x$ 좌표와 $y$ 좌표가 모두 $0$ 이상인 모든 점 ${rm \"X\" it}$ 가 나타내는 영역의 넓이는 ${q} over {p}$ 이다. $p + q$ 의 값을 구하시오. (단, ${rm \"O\" it}$ 는 원점이고, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$vec {{rm \"OX\" it}} = vec {{rm \"OP\" it}} + vec {{rm \"OQ\" it}}$ 에서 점 ${rm \"P\" it}$ 의 좌표를 $( p _{1} , ` p _{2} )$ 라 하면 $3 p _{1} + p _{2} = 0$ 이므로, 점 ${rm \"X\" it} ( x , ` y )$ 에 대하여 $3 x + y$ 의 값은 점 ${rm \"Q\" it}$ 의 $3 x + y$ 의 값과 같다."
+   ],
+   [
+    "p",
+    "${rm \"Q\" it} ( cos theta , ` 2 sin theta )$ 로 놓으면 $3 cos theta + 2 sin theta$ 의 값의 범위는 $- sqrt {13}$ 이상 $sqrt {13}$ 이하이다."
+   ],
+   [
+    "p",
+    "역으로 $| 3 x + y | leq sqrt {13}$ 인 점 ${rm \"X\" it}$ 에 대하여 $3 x + y$ 의 값이 같은 점 ${rm \"Q\" it}$ 를 타원 위에서 잡으면 $vec {{rm \"OP\" it}} = vec {{rm \"OX\" it}} - vec {{rm \"OQ\" it}}$ 인 점 ${rm \"P\" it}$ 는 직선 $3 x + y = 0$ 위에 있다. 즉 점 ${rm \"X\" it}$ 전체는 $| 3 x + y | leq sqrt {13}$ 인 띠 모양 영역이다."
+   ],
+   [
+    "p",
+    "$x geq 0$ , $y geq 0$ 인 부분은 세 점 $( 0 , ` 0 )$ , $LEFT ( {sqrt {13}} over {3} , ` 0 RIGHT )$ , $( 0 , ` sqrt {13} )$ 을 꼭짓점으로 하는 삼각형이므로 넓이는 ${1} over {2} times {sqrt {13}} over {3} times sqrt {13} = {13} over {6}$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $p + q = 6 + 13 = 19$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2023학년도 대학수학능력시험 30번 변형",
+  "intro": [
+   "직선과 타원을 바꾸어 '직선 방향으로는 자유, 법선 방향으로는 타원의 폭'이라는 핵심을 다시 사용하게 하고, 영역이 삼각형이 되도록 설계"
+  ]
+ },
+ {
+  "id": "추가30·기하-10",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 3,
+  "type": "30번형",
+  "standards": [],
+  "answer": 39,
+  "body": [
+   [
+    "p",
+    "좌표평면에서 길이가 $10$ 인 선분 ${rm \"AB\" it}$ 를 지름으로 하는 원 위의 두 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ 가"
+   ],
+   [
+    "eq",
+    "( vec {{rm \"PA\" it}} + vec {{rm \"PB\" it}} ) cdot ( vec {{rm \"QA\" it}} + vec {{rm \"QB\" it}} ) = 2 | vec {{rm \"PQ\" it}} | ^{2}"
+   ],
+   [
+    "p",
+    "을 만족시킨다. $| vec {{rm \"PA\" it}} | = 8$ 일 때, 가능한 모든 $| vec {{rm \"AQ\" it}} |$ 의 값의 곱을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "원의 중심을 ${rm \"O\" it}$ 라 하면 $vec {{rm \"PA\" it}} + vec {{rm \"PB\" it}} = 2 vec {{rm \"PO\" it}}$ , $vec {{rm \"QA\" it}} + vec {{rm \"QB\" it}} = 2 vec {{rm \"QO\" it}}$ 이므로 주어진 식은"
+   ],
+   [
+    "eq",
+    "4 vec {{rm \"OP\" it}} cdot vec {{rm \"OQ\" it}} = 2 | vec {{rm \"OQ\" it}} - vec {{rm \"OP\" it}} | ^{2} = 2 ( 50 - 2 vec {{rm \"OP\" it}} cdot vec {{rm \"OQ\" it}} )"
+   ],
+   [
+    "p",
+    "즉 $vec {{rm \"OP\" it}} cdot vec {{rm \"OQ\" it}} = {25} over {2}$ 이고 $cos ( angle {rm \"POQ\" it} ) = {1} over {2}$ , $angle {rm \"POQ\" it} = {pi} over {3}$ 이다."
+   ],
+   [
+    "p",
+    "$angle {rm \"POB\" it} = theta$ 라 하면 $angle {rm \"APB\" it} = {pi} over {2}$ 에서 $| vec {{rm \"PA\" it}} | = 10 cos {theta} over {2} = 8$ , $| vec {{rm \"PB\" it}} | = 10 sin {theta} over {2} = 6$ 이다."
+   ],
+   [
+    "p",
+    "점 ${rm \"Q\" it}$ 에 대하여 $angle {rm \"QOB\" it} = theta +- {pi} over {3}$ 이므로 $| vec {{rm \"AQ\" it}} | = 10 LEFT | cos LEFT ( {theta} over {2} +- {pi} over {6} RIGHT ) RIGHT |$ 이고, 두 값은"
+   ],
+   [
+    "eq",
+    "10 LEFT ( {4} over {5} cdot {sqrt {3}} over {2} - {3} over {5} cdot {1} over {2} RIGHT ) = 4 sqrt {3} - 3 , ` ` ` ` 10 LEFT ( {4} over {5} cdot {sqrt {3}} over {2} + {3} over {5} cdot {1} over {2} RIGHT ) = 4 sqrt {3} + 3"
+   ],
+   [
+    "p",
+    "이다. 따라서 구하는 곱은 $( 4 sqrt {3} ) ^{2} - 3 ^{2} = 39$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2026학년도 대학수학능력시험 30번 변형",
+  "intro": [
+   "같은 ' $vec {{rm \"PA\" it}} + vec {{rm \"PB\" it}} = 2 vec {{rm \"PO\" it}}$ ' 아이디어를 두 점 P, Q 모두에 적용해 $angle {rm \"POQ\" it}$ 를 결정하게 하고, Q의 두 위치를 모두 고려하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-11",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 64,
+  "body": [
+   [
+    "p",
+    "좌표평면에서 $overline {{rm \"AB\" it}} = overline {{rm \"AC\" it}} = 10$ , $overline {{rm \"BC\" it}} = 12$ 인 삼각형 ${rm \"ABC\" it}$ 가 있다. 선분 ${rm \"AB\" it}$ 위의 점 ${rm \"P\" it}$ , 선분 ${rm \"BC\" it}$ 위의 점 ${rm \"Q\" it}$ , 선분 ${rm \"CA\" it}$ 위의 점 ${rm \"R\" it}$ 가 다음 조건을 만족시킨다."
+   ],
+   [
+    "p",
+    "(가) $( vec {{rm \"PB\" it}} + vec {{rm \"PQ\" it}} ) cdot vec {{rm \"BC\" it}} = 0$ , $( vec {{rm \"RC\" it}} + vec {{rm \"RQ\" it}} ) cdot vec {{rm \"BC\" it}} = 0$"
+   ],
+   [
+    "p",
+    "(나) $| vec {{rm \"PQ\" it}} | = 2 | vec {{rm \"QR\" it}} |$"
+   ],
+   [
+    "p",
+    "$| vec {{rm \"XP\" it}} + vec {{rm \"XQ\" it}} + vec {{rm \"XR\" it}} | = 4$ 를 만족시키는 점 ${rm \"X\" it}$ 에 대하여 $| vec {{rm \"AX\" it}} |$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M ^{2} + m ^{2}$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$vec {{rm \"PB\" it}} + vec {{rm \"PQ\" it}} = 2 vec {{rm \"PK\" it}}$ ( ${rm \"K\" it}$ 는 선분 ${rm \"BQ\" it}$ 의 중점)이고 이것이 $vec {{rm \"BC\" it}}$ 에 수직이므로 점 ${rm \"P\" it}$ 에서 직선 ${rm \"BC\" it}$ 에 내린 수선의 발이 ${rm \"K\" it}$ 이다. 즉 $overline {{rm \"PB\" it}} = overline {{rm \"PQ\" it}}$ 이고, 같은 방법으로 $overline {{rm \"RC\" it}} = overline {{rm \"RQ\" it}}$ 이다."
+   ],
+   [
+    "p",
+    "${rm \"B\" it} ( 0 , ` 0 )$ , ${rm \"C\" it} ( 12 , ` 0 )$ , ${rm \"A\" it} ( 6 , ` 8 )$ , ${rm \"Q\" it} ( q , ` 0 )$ 으로 놓으면 직선 ${rm \"AB\" it}$ 는 $y = {4} over {3} x$ , 직선 ${rm \"AC\" it}$ 는 $y = {4} over {3} ( 12 - x )$ 이므로"
+   ],
+   [
+    "eq",
+    "{rm \"P\" it} LEFT ( {q} over {2} , ` {2 q} over {3} RIGHT ) , ` ` ` ` {rm \"R\" it} LEFT ( {q + 12} over {2} , ` {2 ( 12 - q )} over {3} RIGHT ) , ` ` ` ` overline {{rm \"PQ\" it}} = {5 q} over {6} , ` ` ` ` overline {{rm \"QR\" it}} = {5 ( 12 - q )} over {6}"
+   ],
+   [
+    "p",
+    "(나)에서 $q = 2 ( 12 - q )$ , $q = 8$ 이므로 ${rm \"P\" it} LEFT ( 4 , ` {16} over {3} RIGHT )$ , ${rm \"Q\" it} ( 8 , ` 0 )$ , ${rm \"R\" it} LEFT ( 10 , ` {8} over {3} RIGHT )$ 이다."
+   ],
+   [
+    "p",
+    "삼각형 ${rm \"PQR\" it}$ 의 무게중심 ${rm \"G\" it} LEFT ( {22} over {3} , ` {8} over {3} RIGHT )$ 에 대하여 $| vec {{rm \"XP\" it}} + vec {{rm \"XQ\" it}} + vec {{rm \"XR\" it}} | = 3 | vec {{rm \"XG\" it}} | = 4$ 이므로 점 ${rm \"X\" it}$ 는 중심이 ${rm \"G\" it}$ , 반지름의 길이가 ${4} over {3}$ 인 원 위에 있다."
+   ],
+   [
+    "p",
+    "$| vec {{rm \"AG\" it}} | ^{2} = LEFT ( {4} over {3} RIGHT ) ^{2} + LEFT ( {16} over {3} RIGHT ) ^{2} = {272} over {9}$ 이고 $M = | vec {{rm \"AG\" it}} | + {4} over {3}$ , $m = | vec {{rm \"AG\" it}} | - {4} over {3}$ 이므로"
+   ],
+   [
+    "eq",
+    "M ^{2} + m ^{2} = 2 LEFT ( {272} over {9} + {16} over {9} RIGHT ) = 64"
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2026학년도 9월 모의평가 30번 변형",
+  "intro": [
+   "조건 (가)의 해석(이등변삼각형)은 유지하되 (나)를 길이의 비로 바꾸어 Q의 위치를 정하게 하고, 마지막 자취를 삼각형 PQR의 무게중심을 중심으로 하는 원으로 바꿈"
+  ]
+ },
+ {
+  "id": "추가30·기하-12",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 72,
+  "body": [
+   [
+    "p",
+    "좌표평면에서 $overline {{rm \"AB\" it}} = 6$ , $overline {{rm \"BC\" it}} = 8$ 인 직사각형 ${rm \"ABCD\" it}$ 가 있다. 선분 ${rm \"BD\" it}$ 위를 움직이는 점 ${rm \"P\" it}$ 에 대하여 점 ${rm \"Q\" it}$ 가 다음 조건을 만족시킨다."
+   ],
+   [
+    "p",
+    "(가) $vec {{rm \"PQ\" it}} cdot ( vec {{rm \"PQ\" it}} - vec {{rm \"BC\" it}} ) = 0$"
+   ],
+   [
+    "p",
+    "(나) 점 ${rm \"Q\" it}$ 는 직사각형 ${rm \"ABCD\" it}$ 의 내부 또는 둘레 위에 있다."
+   ],
+   [
+    "p",
+    "$vec {{rm \"AQ\" it}} cdot vec {{rm \"AC\" it}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M - m$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "${rm \"B\" it} ( 0 , ` 0 )$ , ${rm \"C\" it} ( 8 , ` 0 )$ , ${rm \"D\" it} ( 8 , ` 6 )$ , ${rm \"A\" it} ( 0 , ` 6 )$ 으로 놓자. (가)에서 $vec {{rm \"PQ\" it}} cdot ( vec {{rm \"PQ\" it}} - vec {{rm \"P\" it} {rm \"P\" it} '} ) = 0$ ( $vec {{rm \"P\" it} {rm \"P\" it} '} = vec {{rm \"BC\" it}}$ )이므로 점 ${rm \"Q\" it}$ 는 선분 ${rm \"PP '\" it}$ 을 지름으로 하는 원, 즉 중심이 ${rm \"P\" it} + ( 4 , ` 0 )$ 이고 반지름의 길이가 $4$ 인 원 위에 있다."
+   ],
+   [
+    "p",
+    "$vec {{rm \"AC\" it}} = ( 8 , ` - 6 )$ 이므로 $vec {{rm \"AQ\" it}} cdot vec {{rm \"AC\" it}} = 8 x - 6 y + 36$ (점 ${rm \"Q\" it} ( x , ` y )$ )이다."
+   ],
+   [
+    "p",
+    "최댓값: (나)에서 점 ${rm \"Q\" it}$ 는 직사각형 위에 있으므로 $8 x - 6 y leq 8 times 8 - 6 times 0 = 64$ 이고, 등호는 ${rm \"Q\" it} = {rm \"C\" it}$ 일 때이다. ${rm \"P\" it} ( 8 s , ` 6 s )$ 라 하면 ${rm \"C\" it}$ 가 원 위에 있을 조건은 $( 8 s - 4 ) ^{2} + ( 6 s ) ^{2} = 16$ , 즉 $s = {16} over {25}$ 이므로 가능하다. 따라서 $M = 100$ 이다."
+   ],
+   [
+    "p",
+    "최솟값: 원 위에서 $8 x - 6 y$ 의 최솟값은 (중심에서의 값) $- 4 times 10 = 28 s + 32 - 40 = 28 s - 8$ 이므로 $s = 0$ 일 때 $- 8$ 이 가장 작다. 이때의 점 ${rm \"Q\" it} = ( 4 , ` 0 ) + 4 LEFT ( - {4} over {5} , ` {3} over {5} RIGHT ) = LEFT ( {4} over {5} , ` {12} over {5} RIGHT )$ 는 직사각형 내부에 있으므로 $m = - 8 + 36 = 28$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $M - m = 72$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2026학년도 6월 모의평가 30번 변형",
+  "intro": [
+   "점 P를 대각선 위로 옮기고 점 Q가 직사각형 안에 있어야 한다는 제한을 추가하여, 최댓값이 '원의 접점'이 아니라 '직사각형의 꼭짓점'에서 생기는 경우를 판단하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-13",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 288,
+  "body": [
+   [
+    "p",
+    "좌표평면에서 한 변의 길이가 $6$ 인 정사각형 ${rm \"ABCD\" it}$ 에 대하여"
+   ],
+   [
+    "eq",
+    "| vec {{rm \"XB\" it}} + vec {{rm \"XC\" it}} | = | vec {{rm \"XB\" it}} - vec {{rm \"XC\" it}} |"
+   ],
+   [
+    "p",
+    "를 만족시키는 점 ${rm \"X\" it}$ 가 나타내는 도형을 $S$ 라 하자. 도형 $S$ 위의 점 ${rm \"P\" it}$ 에 대하여"
+   ],
+   [
+    "eq",
+    "3 vec {{rm \"PQ\" it}} = vec {{rm \"PA\" it}} + vec {{rm \"PC\" it}}"
+   ],
+   [
+    "p",
+    "를 만족시키는 점을 ${rm \"Q\" it}$ 라 할 때, $vec {{rm \"DQ\" it}} cdot vec {{rm \"DA\" it}}$ 의 최댓값과 최솟값의 곱을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$| vec {{rm \"XB\" it}} + vec {{rm \"XC\" it}} | = | vec {{rm \"XB\" it}} - vec {{rm \"XC\" it}} |$ 에서 $vec {{rm \"XB\" it}} cdot vec {{rm \"XC\" it}} = 0$ 이므로 $S$ 는 선분 ${rm \"BC\" it}$ 를 지름으로 하는 원이다."
+   ],
+   [
+    "p",
+    "$3 ( vec {{rm \"OQ\" it}} - vec {{rm \"OP\" it}} ) = vec {{rm \"OA\" it}} + vec {{rm \"OC\" it}} - 2 vec {{rm \"OP\" it}}$ 에서 $vec {{rm \"OQ\" it}} = {1} over {3} ( vec {{rm \"OP\" it}} + vec {{rm \"OA\" it}} + vec {{rm \"OC\" it}} )$ 이다."
+   ],
+   [
+    "p",
+    "${rm \"A\" it} ( 0 , ` 6 )$ , ${rm \"B\" it} ( 0 , ` 0 )$ , ${rm \"C\" it} ( 6 , ` 0 )$ , ${rm \"D\" it} ( 6 , ` 6 )$ 으로 놓으면 ${rm \"Q\" it} LEFT ( {x + 6} over {3} , ` {y + 6} over {3} RIGHT )$ ( ${rm \"P\" it} ( x , ` y )$ )이고 $vec {{rm \"DA\" it}} = ( - 6 , ` 0 )$ 이므로"
+   ],
+   [
+    "eq",
+    "vec {{rm \"DQ\" it}} cdot vec {{rm \"DA\" it}} = - 6 LEFT ( {x + 6} over {3} - 6 RIGHT ) = 24 - 2 x"
+   ],
+   [
+    "p",
+    "원 $S$ 위의 점의 $x$ 좌표의 범위는 $0 leq x leq 6$ 이므로 $12 leq vec {{rm \"DQ\" it}} cdot vec {{rm \"DA\" it}} leq 24$ 이고, 구하는 곱은 $288$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2025학년도 대학수학능력시험 30번 변형",
+  "intro": [
+   "점 Q를 정하는 벡터식의 계수를 바꾸어 'Q는 P를 ${1} over {3}$ 로 축소·이동한 점'이 되게 하고, 묻는 내적을 바꿔 원 위 점의 $x$ 좌표 범위로 귀결시킴"
+  ]
+ },
+ {
+  "id": "추가30·기하-14",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 76,
+  "body": [
+   [
+    "p",
+    "좌표평면 위에 여섯 점"
+   ],
+   [
+    "eq",
+    "{rm \"A\" it} ( 6 , ` 0 ) , ` {rm \"B\" it} ( 0 , ` 6 ) , ` {rm \"C\" it} ( 1 , ` 2 ) , ` {rm \"D\" it} ( 1 , ` 4 ) , ` {rm \"E\" it} ( 3 , ` 4 ) , ` {rm \"F\" it} ( 4 , ` 1 )"
+   ],
+   [
+    "p",
+    "이 있다. 삼각형 ${rm \"AOB\" it}$ 의 변 위를 움직이는 점 ${rm \"P\" it}$ 와 삼각형 ${rm \"CDE\" it}$ 의 변 위를 움직이는 점 ${rm \"Q\" it}$ 에 대하여 $| vec {{rm \"PQ\" it}} + vec {{rm \"OF\" it}} | ^{2}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M + m$ 의 값을 구하시오. (단, ${rm \"O\" it}$ 는 원점이다.) [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$vec {{rm \"PQ\" it}} + vec {{rm \"OF\" it}} = ( vec {{rm \"OQ\" it}} + vec {{rm \"OF\" it}} ) - vec {{rm \"OP\" it}}$ 이다. $vec {{rm \"OW\" it}} = vec {{rm \"OQ\" it}} + vec {{rm \"OF\" it}}$ 인 점 ${rm \"W\" it}$ 는 삼각형 ${rm \"CDE\" it}$ 를 $( 4 , ` 1 )$ 만큼 평행이동한 삼각형, 즉 세 점 $( 5 , ` 3 )$ , $( 5 , ` 5 )$ , $( 7 , ` 5 )$ 를 꼭짓점으로 하는 삼각형의 변 위를 움직이므로 구하는 값은 $| vec {{rm \"PW\" it}} | ^{2}$ 이다."
+   ],
+   [
+    "p",
+    "최댓값: 두 볼록 도형 위의 점 사이의 거리는 꼭짓점끼리에서 최대가 되므로 꼭짓점 쌍을 비교하면 $( 7 , ` 5 )$ 와 ${rm \"O\" it}$ 사이에서 $49 + 25 = 74$ 가 가장 크다. $M = 74$"
+   ],
+   [
+    "p",
+    "최솟값: 점 ${rm \"W\" it}$ 가 움직이는 삼각형은 모두 $x + y geq 8$ 인 영역에 있고 삼각형 ${rm \"AOB\" it}$ 는 $x + y leq 6$ 인 영역에 있으므로 가장 가까운 점은 $( 5 , ` 3 )$ 과 빗변 $x + y = 6$ 위의 수선의 발 $( 4 , ` 2 )$ 이다. 거리는 ${| 5 + 3 - 6 |} over {sqrt {2}} = sqrt {2}$ 이므로 $m = 2$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $M + m = 76$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2025학년도 9월 모의평가 30번 변형",
+  "intro": [
+   "두 도형을 모두 삼각형으로 바꾸고, 평행이동한 삼각형과 삼각형 사이의 최단거리가 빗변까지의 수선의 길이로 정해지도록 설계"
+  ]
+ },
+ {
+  "id": "추가30·기하-15",
+  "subject": "기하",
+  "topic": "이차곡선과 벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 9,
+  "body": [
+   [
+    "p",
+    "두 초점이 ${rm \"F\" it} ( 5 , ` 0 )$ , ${rm \"F\" it} ' ( - 5 , ` 0 )$ 인 쌍곡선 ${x ^{2}} over {16} - {y ^{2}} over {9} = 1$ 위의 점 중 $x$ 좌표가 양수인 점 ${rm \"P\" it}$ 에 대하여 점 ${rm \"Q\" it}$ 가"
+   ],
+   [
+    "eq",
+    "( | vec {{rm \"PF\" it}} | + 8 ) ` vec {{rm \"F\" it} ' {rm \"Q\" it}} = 4 ` vec {{rm \"F\" it} ' {rm \"P\" it}}"
+   ],
+   [
+    "p",
+    "를 만족시킨다. 점 ${rm \"A\" it} ( 7 , ` 5 )$ 에 대하여 $| vec {{rm \"AQ\" it}} |$ 의 최솟값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "쌍곡선의 정의에서 $| vec {{rm \"P\" it} {rm \"F\" it} '} | - | vec {{rm \"PF\" it}} | = 8$ 이므로 $| vec {{rm \"PF\" it}} | + 8 = | vec {{rm \"P\" it} {rm \"F\" it} '} |$ 이고"
+   ],
+   [
+    "eq",
+    "vec {{rm \"F\" it} ' {rm \"Q\" it}} = {4} over {| vec {{rm \"F\" it} ' {rm \"P\" it}} |} vec {{rm \"F\" it} ' {rm \"P\" it}}"
+   ],
+   [
+    "p",
+    "즉 점 ${rm \"Q\" it}$ 는 반직선 ${rm \"F ' P\" it}$ 위에서 $| vec {{rm \"F\" it} ' {rm \"Q\" it}} | = 4$ 인 점이다."
+   ],
+   [
+    "p",
+    "점 ${rm \"F\" it} '$ 을 지나고 기울기가 $k$ 인 직선이 오른쪽 가지와 만나려면 $| k | < {3} over {4}$ 이어야 하고, 이때 ${rm \"F\" it} '$ 에서 오른쪽으로 향하는 반직선은 오른쪽 가지와 반드시 만난다."
+   ],
+   [
+    "p",
+    "$vec {{rm \"F\" it} ' {rm \"A\" it}} = ( 12 , ` 5 )$ 의 기울기는 ${5} over {12} < {3} over {4}$ 이므로 반직선 ${rm \"F ' A\" it}$ 위의 $| vec {{rm \"F\" it} ' {rm \"Q\" it}} | = 4$ 인 점이 점 ${rm \"Q\" it}$ 가 될 수 있다."
+   ],
+   [
+    "p",
+    "따라서 $| vec {{rm \"AQ\" it}} | geq | vec {{rm \"A\" it} {rm \"F\" it} '} | - | vec {{rm \"F\" it} ' {rm \"Q\" it}} | = 13 - 4 = 9$ 이고 최솟값은 $9$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2025학년도 6월 모의평가 30번 변형",
+  "intro": [
+   "계수를 바꾸어 $| vec {{rm \"F ' Q\" it}} | = 4$ 가 되게 하고, 최댓값 대신 최솟값을 물어 '점근선의 기울기로 제한되는 방향'에 A의 방향이 포함되는지 확인하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-16",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 90,
+  "body": [
+   [
+    "p",
+    "좌표평면에서 $overline {{rm \"AB\" it}} = overline {{rm \"AC\" it}} = 6$ 이고 $angle {rm \"BAC\" it} = {pi} over {2}$ 인 직각삼각형 ${rm \"ABC\" it}$ 에 대하여 두 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ 가 다음 조건을 만족시킨다."
+   ],
+   [
+    "p",
+    "(가) 삼각형 ${rm \"APQ\" it}$ 는 한 변의 길이가 $4$ 인 정삼각형이다."
+   ],
+   [
+    "p",
+    "(나) 양수 $k$ 에 대하여 $vec {{rm \"PQ\" it}} = k ` vec {{rm \"CB\" it}}$ 이다."
+   ],
+   [
+    "p",
+    "(다) $vec {{rm \"AB\" it}} cdot vec {{rm \"AP\" it}} > 0$ , $vec {{rm \"AC\" it}} cdot vec {{rm \"AP\" it}} > 0$ , $vec {{rm \"AB\" it}} cdot vec {{rm \"AQ\" it}} > 0$ , $vec {{rm \"AC\" it}} cdot vec {{rm \"AQ\" it}} > 0$"
+   ],
+   [
+    "p",
+    "선분 ${rm \"AP\" it}$ 위의 점 ${rm \"X\" it}$ 에 대하여 $| vec {{rm \"XB\" it}} + vec {{rm \"XC\" it}} |$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M ^{2} + m ^{2}$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "${rm \"A\" it} ( 0 , ` 0 )$ , ${rm \"B\" it} ( 6 , ` 0 )$ , ${rm \"C\" it} ( 0 , ` 6 )$ 으로 놓자. (다)에서 두 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ 는 모두 제1사분면에 있고 $| vec {{rm \"AP\" it}} | = | vec {{rm \"AQ\" it}} | = 4$ , $angle {rm \"PAQ\" it} = {pi} over {3}$ 이다."
+   ],
+   [
+    "p",
+    "(나)에서 $vec {{rm \"PQ\" it}}$ 는 $vec {{rm \"CB\" it}} = ( 6 , ` - 6 )$ 과 같은 방향이므로 직선 ${rm \"PQ\" it}$ 는 직선 $y = x$ 에 수직이고, ${rm \"P\" it}$ , ${rm \"Q\" it}$ 는 직선 $y = x$ 에 대하여 대칭이며 ${rm \"Q\" it}$ 가 $x$ 축에 더 가깝다. 따라서 $vec {{rm \"AP\" it}}$ , $vec {{rm \"AQ\" it}}$ 가 $x$ 축의 양의 방향과 이루는 각은 각각 ${5 pi} over {12}$ , ${pi} over {12}$ 이다."
+   ],
+   [
+    "p",
+    "${rm \"K\" it} ( 3 , ` 3 )$ 을 선분 ${rm \"BC\" it}$ 의 중점이라 하면 $| vec {{rm \"XB\" it}} + vec {{rm \"XC\" it}} | = 2 | vec {{rm \"XK\" it}} |$ 이다. $| vec {{rm \"AK\" it}} | = 3 sqrt {2}$ 이고 선분 ${rm \"AK\" it}$ 와 선분 ${rm \"AP\" it}$ 가 이루는 각은 ${5 pi} over {12} - {pi} over {4} = {pi} over {6}$ 이다."
+   ],
+   [
+    "p",
+    "점 ${rm \"K\" it}$ 에서 직선 ${rm \"AP\" it}$ 까지의 거리는 $3 sqrt {2} sin {pi} over {6} = {3 sqrt {2}} over {2}$ 이고 수선의 발까지의 거리 $3 sqrt {2} cos {pi} over {6} = {3 sqrt {6}} over {2} < 4$ 이므로 수선의 발은 선분 ${rm \"AP\" it}$ 위에 있다. 따라서 $m = 3 sqrt {2}$ 이다."
+   ],
+   [
+    "p",
+    "$| vec {{rm \"XK\" it}} |$ 는 ${rm \"X\" it} = {rm \"A\" it}$ 일 때 $3 sqrt {2}$ , ${rm \"X\" it} = {rm \"P\" it}$ 일 때 $sqrt {18 + 16 - 24 sqrt {2} cos {pi} over {6}} < 3 sqrt {2}$ 이므로 $M = 6 sqrt {2}$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $M ^{2} + m ^{2} = 72 + 18 = 90$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2024학년도 9월 모의평가 30번 변형",
+  "intro": [
+   "정삼각형 APQ의 위치를 '변 PQ의 방향' 조건으로 정하게 바꾸고, 선분 위 점에 대한 벡터의 합의 크기의 최댓값과 최솟값을 함께 묻도록 변형"
+  ]
+ },
+ {
+  "id": "추가30·기하-17",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 42,
+  "body": [
+   [
+    "p",
+    "한 변의 길이가 $4$ 인 정사각형 ${rm \"ABCD\" it}$ 에서 선분 ${rm \"AB\" it}$ , ${rm \"BC\" it}$ , ${rm \"CD\" it}$ 를 각각 $1 : 3$ 으로 내분하는 점을 ${rm \"E\" it}$ , ${rm \"F\" it}$ , ${rm \"G\" it}$ 라 하자. 네 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ , ${rm \"R\" it}$ , ${rm \"X\" it}$ 가 다음 조건을 만족시킨다."
+   ],
+   [
+    "p",
+    "(가) $| vec {{rm \"EP\" it}} | = 1$ , $| vec {{rm \"FQ\" it}} | = 2$ , $| vec {{rm \"GR\" it}} | = 1$"
+   ],
+   [
+    "p",
+    "(나) $vec {{rm \"AX\" it}} = vec {{rm \"PB\" it}} + vec {{rm \"QC\" it}} + vec {{rm \"RD\" it}}$"
+   ],
+   [
+    "p",
+    "$| vec {{rm \"AX\" it}} |$ 의 최댓값을 $M$ 이라 하고, $| vec {{rm \"AX\" it}} | = M$ 일 때 삼각형 ${rm \"PQR\" it}$ 의 넓이를 $S$ 라 하자. $M times S$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$vec {{rm \"PB\" it}} = vec {{rm \"EB\" it}} - vec {{rm \"EP\" it}}$ , $vec {{rm \"QC\" it}} = vec {{rm \"FC\" it}} - vec {{rm \"FQ\" it}}$ , $vec {{rm \"RD\" it}} = vec {{rm \"GD\" it}} - vec {{rm \"GR\" it}}$ 이므로"
+   ],
+   [
+    "eq",
+    "vec {{rm \"AX\" it}} = ( vec {{rm \"EB\" it}} + vec {{rm \"FC\" it}} + vec {{rm \"GD\" it}} ) - ( vec {{rm \"EP\" it}} + vec {{rm \"FQ\" it}} + vec {{rm \"GR\" it}} )"
+   ],
+   [
+    "p",
+    "${rm \"A\" it} ( 0 , ` 4 )$ , ${rm \"B\" it} ( 0 , ` 0 )$ , ${rm \"C\" it} ( 4 , ` 0 )$ , ${rm \"D\" it} ( 4 , ` 4 )$ 로 놓으면 ${rm \"E\" it} ( 0 , ` 3 )$ , ${rm \"F\" it} ( 1 , ` 0 )$ , ${rm \"G\" it} ( 4 , ` 1 )$ 이고 $vec {{rm \"EB\" it}} + vec {{rm \"FC\" it}} + vec {{rm \"GD\" it}} = ( 0 , ` - 3 ) + ( 3 , ` 0 ) + ( 0 , ` 3 ) = ( 3 , ` 0 )$ 이다."
+   ],
+   [
+    "p",
+    "$| vec {{rm \"EP\" it}} + vec {{rm \"FQ\" it}} + vec {{rm \"GR\" it}} | leq 1 + 2 + 1 = 4$ 이므로 $| vec {{rm \"AX\" it}} | leq 3 + 4 = 7$ 이고, 등호는 세 벡터가 모두 $( - 1 , ` 0 )$ 방향일 때, 즉 $vec {{rm \"EP\" it}} = ( - 1 , ` 0 )$ , $vec {{rm \"FQ\" it}} = ( - 2 , ` 0 )$ , $vec {{rm \"GR\" it}} = ( - 1 , ` 0 )$ 일 때 성립한다. $M = 7$"
+   ],
+   [
+    "p",
+    "이때 ${rm \"P\" it} ( - 1 , ` 3 )$ , ${rm \"Q\" it} ( - 1 , ` 0 )$ , ${rm \"R\" it} ( 3 , ` 1 )$ 이므로 $S = {1} over {2} times 3 times 4 = 6$ (밑변 ${rm \"PQ\" it}$ 의 길이 $3$ , 높이 $4$ )이다."
+   ],
+   [
+    "p",
+    "따라서 $M times S = 42$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2024학년도 6월 모의평가 30번 변형",
+  "intro": [
+   "정삼각형을 정사각형으로, 세 원의 반지름을 서로 다르게 바꾸어 고정 벡터가 $vec {0}$ 이 아니게 하고, 최대일 때의 세 점의 위치를 직접 정해 넓이를 구하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-18",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 29,
+  "body": [
+   [
+    "p",
+    "원 $x ^{2} + y ^{2} = 1$ 위를 움직이는 점 ${rm \"P\" it}$ 와 네 점 $( 0 , ` 0 )$ , $( 4 , ` 0 )$ , $( 4 , ` 4 )$ , $( 0 , ` 4 )$ 를 꼭짓점으로 하는 정사각형의 네 변 위를 움직이는 점 ${rm \"Q\" it}$ 에 대하여"
+   ],
+   [
+    "eq",
+    "vec {{rm \"OX\" it}} = vec {{rm \"OP\" it}} + vec {{rm \"OQ\" it}}"
+   ],
+   [
+    "p",
+    "를 만족시키는 모든 점 ${rm \"X\" it}$ 가 나타내는 영역의 넓이가 $a + b pi$ 일 때, $a + b$ 의 값을 구하시오. (단, ${rm \"O\" it}$ 는 원점이고, $a$ 와 $b$ 는 유리수이다.) [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$vec {{rm \"QX\" it}} = vec {{rm \"OP\" it}}$ 이므로 점 ${rm \"X\" it}$ 는 정사각형의 둘레 위의 어떤 점 ${rm \"Q\" it}$ 로부터 거리가 정확히 $1$ 인 점이다."
+   ],
+   [
+    "p",
+    "정사각형의 둘레까지의 거리가 $1$ 이하인 점 ${rm \"X\" it}$ 에 대해서는 둘레 위에서 ${rm \"X\" it}$ 와의 거리가 $1$ 이하인 점과 $1$ 이상인 점(예: 반대쪽 변 위의 점)이 모두 있으므로, 둘레를 따라 움직이면 거리가 정확히 $1$ 인 점 ${rm \"Q\" it}$ 가 존재한다. 역으로 거리가 $1$ 보다 크면 불가능하다."
+   ],
+   [
+    "p",
+    "따라서 점 ${rm \"X\" it}$ 전체는 '둘레까지의 거리가 $1$ 이하인 점'의 영역이다. 이는 정사각형을 바깥으로 $1$ 만큼 넓힌 모서리가 둥근 도형에서 안쪽의 정사각형 $LBRACE 1 < x < 3 , ` 1 < y < 3 RBRACE$ 을 뺀 것이므로 넓이는"
+   ],
+   [
+    "eq",
+    "( 16 + 4 times 4 times 1 + pi times 1 ^{2} ) - 2 ^{2} = 28 + pi"
+   ],
+   [
+    "p",
+    "이다. 따라서 $a + b = 28 + 1 = 29$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2023학년도 대학수학능력시험 30번 변형",
+  "intro": [
+   "'직선 + 타원'을 '원 + 정사각형의 둘레'로 바꾸어, 영역이 띠가 아니라 가운데가 뚫린 도형이 됨을 판단하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-19",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 11,
+  "body": [
+   [
+    "p",
+    "좌표평면 위의 두 점 ${rm \"A\" it} ( - 2 , ` 0 )$ , ${rm \"B\" it} ( 2 , ` 0 )$ 에 대하여"
+   ],
+   [
+    "eq",
+    "( | vec {{rm \"AX\" it}} | - 2 ) ( | vec {{rm \"BX\" it}} | - 2 ) = 0 , ` ` ` ` | vec {{rm \"OX\" it}} | geq 2"
+   ],
+   [
+    "p",
+    "를 만족시키는 점 ${rm \"X\" it}$ 가 나타내는 도형 위의 두 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ 가 $vec {{rm \"PQ\" it}} = vec {{rm \"AB\" it}}$ 를 만족시킨다. $vec {{rm \"OY\" it}} = vec {{rm \"OP\" it}} + vec {{rm \"OQ\" it}}$ 를 만족시키는 점 ${rm \"Y\" it}$ 가 나타내는 도형의 길이가 ${q} over {p} pi$ 일 때, $p + q$ 의 값을 구하시오. (단, ${rm \"O\" it}$ 는 원점이고, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$vec {{rm \"PQ\" it}} = vec {{rm \"AB\" it}} = ( 4 , ` 0 )$ 이므로 ${rm \"Q\" it} = {rm \"P\" it} + ( 4 , ` 0 )$ 이다."
+   ],
+   [
+    "p",
+    "점 ${rm \"P\" it}$ 가 원 $| vec {{rm \"BX\" it}} | = 2$ 위에 있으면 점 ${rm \"Q\" it}$ 는 중심이 $( 6 , ` 0 )$ , 반지름의 길이가 $2$ 인 원 위에 있고, 이 원이 주어진 도형과 만나는 점은 $( 4 , ` 0 )$ 뿐인데 그때 ${rm \"P\" it} = {rm \"O\" it}$ 가 되어 $| vec {{rm \"OP\" it}} | geq 2$ 에 모순이다."
+   ],
+   [
+    "p",
+    "따라서 점 ${rm \"P\" it}$ 는 원 $| vec {{rm \"AX\" it}} | = 2$ 위에 있고, $vec {{rm \"AP\" it}} = vec {{rm \"BQ\" it}} = 2 vec {u}$ ( $| vec {u} | = 1$ )로 놓으면 점 ${rm \"Q\" it}$ 는 원 $| vec {{rm \"BX\" it}} | = 2$ 위에 있다. $vec {u} = ( cos theta , ` sin theta )$ 라 하면"
+   ],
+   [
+    "eq",
+    "| vec {{rm \"OP\" it}} | ^{2} = 8 - 8 cos theta geq 4 , ` ` ` ` | vec {{rm \"OQ\" it}} | ^{2} = 8 + 8 cos theta geq 4"
+   ],
+   [
+    "p",
+    "이므로 $- {1} over {2} leq cos theta leq {1} over {2}$ 이다."
+   ],
+   [
+    "p",
+    "$vec {{rm \"OY\" it}} = vec {{rm \"OA\" it}} + vec {{rm \"OB\" it}} + 4 vec {u} = 4 vec {u}$ 이므로 점 ${rm \"Y\" it}$ 는 원 $x ^{2} + y ^{2} = 16$ 위에서 중심각의 합이 ${pi} over {3} + {pi} over {3} = {2 pi} over {3}$ 인 두 호를 그린다. 길이는 $4 times {2 pi} over {3} = {8} over {3} pi$ 이므로 $p + q = 3 + 8 = 11$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2023학년도 9월 모의평가 30번 변형",
+  "intro": [
+   "두 원을 원점에서 접하게 하고, P, Q의 관계를 '평행이동' 조건으로 바꾸어 두 제한 조건이 동시에 걸리는 호를 찾게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-20",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 108,
+  "body": [
+   [
+    "p",
+    "한 변의 길이가 $2$ 인 정육각형 ${rm \"ABCDEF\" it}$ 의 변 위를 움직이는 점 ${rm \"P\" it}$ 와 $| vec {{rm \"DQ\" it}} | = 1$ 을 만족시키는 점 ${rm \"Q\" it}$ 에 대하여 점 ${rm \"X\" it}$ 가"
+   ],
+   [
+    "eq",
+    "vec {{rm \"AX\" it}} = {1} over {2} ( vec {{rm \"AP\" it}} + vec {{rm \"AQ\" it}} )"
+   ],
+   [
+    "p",
+    "를 만족시킨다. $vec {{rm \"AX\" it}} cdot vec {{rm \"AD\" it}}$ 의 최댓값과 최솟값의 곱을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$vec {{rm \"AX\" it}} cdot vec {{rm \"AD\" it}} = {1} over {2} LEFT ( vec {{rm \"AP\" it}} cdot vec {{rm \"AD\" it}} + vec {{rm \"AQ\" it}} cdot vec {{rm \"AD\" it}} RIGHT )$ 이고, 두 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ 는 서로 독립적으로 움직인다."
+   ],
+   [
+    "p",
+    "$overline {{rm \"AD\" it}} = 4$ 이고 정육각형의 모든 점은 직선 ${rm \"AD\" it}$ 위로의 정사영이 선분 ${rm \"AD\" it}$ 위에 있으므로 $0 leq vec {{rm \"AP\" it}} cdot vec {{rm \"AD\" it}} leq 16$ 이다( ${rm \"P\" it} = {rm \"A\" it}$ 일 때 $0$ , ${rm \"P\" it} = {rm \"D\" it}$ 일 때 $16$ )."
+   ],
+   [
+    "p",
+    "$vec {{rm \"AQ\" it}} cdot vec {{rm \"AD\" it}} = | vec {{rm \"AD\" it}} | ^{2} + vec {{rm \"DQ\" it}} cdot vec {{rm \"AD\" it}} = 16 + vec {{rm \"DQ\" it}} cdot vec {{rm \"AD\" it}}$ 이고 $- 4 leq vec {{rm \"DQ\" it}} cdot vec {{rm \"AD\" it}} leq 4$ 이므로 $12 leq vec {{rm \"AQ\" it}} cdot vec {{rm \"AD\" it}} leq 20$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $6 leq vec {{rm \"AX\" it}} cdot vec {{rm \"AD\" it}} leq 18$ 이고 구하는 곱은 $108$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2023학년도 6월 모의평가 30번 변형",
+  "intro": [
+   "정육각형과 원을 그대로 쓰되 원의 중심을 D로 옮기고, 자취 대신 정사영(내적)의 범위를 두 부분으로 나누어 구하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-21",
+  "subject": "기하",
+  "topic": "공간도형과 공간좌표",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 142,
+  "body": [
+   [
+    "p",
+    "좌표공간에서 구 $S : ` x ^{2} + y ^{2} + z ^{2} = 25$ 와 평면 $z = 3$ 이 만나서 생기는 원 위를 움직이는 점 ${rm \"P\" it}$ 와 구 $S$ 위를 움직이는 점 ${rm \"Q\" it}$ 가 $| vec {{rm \"PQ\" it}} | = 6$ 을 만족시킨다. 점 ${rm \"Q\" it}$ 의 $z$ 좌표의 최댓값이 ${q} over {p}$ 일 때, $p + q$ 의 값을 구하시오. (단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$| vec {{rm \"OP\" it}} | = | vec {{rm \"OQ\" it}} | = 5$ , $| vec {{rm \"PQ\" it}} | = 6$ 이므로 $36 = 25 + 25 - 2 vec {{rm \"OP\" it}} cdot vec {{rm \"OQ\" it}}$ , 즉 $vec {{rm \"OP\" it}} cdot vec {{rm \"OQ\" it}} = 7$ 이다."
+   ],
+   [
+    "p",
+    "${rm \"P\" it} ( 4 cos t , ` 4 sin t , ` 3 )$ , ${rm \"Q\" it} ( a , ` b , ` z )$ 라 하면 $4 ( a cos t + b sin t ) + 3 z = 7$ 이고 $a ^{2} + b ^{2} = 25 - z ^{2}$ 이다. $t$ 를 적당히 잡으면 $a cos t + b sin t$ 는 $- sqrt {25 - z ^{2}}$ 이상 $sqrt {25 - z ^{2}}$ 이하의 모든 값을 가지므로, $z$ 좌표가 가능할 조건은"
+   ],
+   [
+    "eq",
+    "| 7 - 3 z | leq 4 sqrt {25 - z ^{2}}"
+   ],
+   [
+    "p",
+    "이다. 양변을 제곱하면 $25 z ^{2} - 42 z - 351 leq 0$ , $( 25 z - 117 ) ( z + 3 ) leq 0$ 이므로 $- 3 leq z leq {117} over {25}$ 이다."
+   ],
+   [
+    "p",
+    "따라서 최댓값은 ${117} over {25}$ 이고 $p + q = 25 + 117 = 142$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2022학년도 대학수학능력시험 30번 변형",
+  "intro": [
+   "'구와 평면이 만나서 생기는 원' 위의 점을 그대로 쓰되, 정사영 넓이 대신 두 점 사이 거리 조건을 내적 $vec {{rm \"OP\" it}} cdot vec {{rm \"OQ\" it}}$ 로 바꾸어 $z$ 좌표의 범위를 구하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-22",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 58,
+  "body": [
+   [
+    "p",
+    "좌표평면 위의 두 점 ${rm \"A\" it} ( 5 , ` 0 )$ , ${rm \"B\" it} ( 1 , ` 3 )$ 에 대하여 두 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ 가"
+   ],
+   [
+    "eq",
+    "| vec {{rm \"AP\" it}} | = 1 , ` ` ` ` | vec {{rm \"BQ\" it}} | = 2"
+   ],
+   [
+    "p",
+    "를 만족시키고, 점 ${rm \"P\" it}$ 의 $y$ 좌표는 $0$ 이상이다. $vec {{rm \"AP\" it}} cdot vec {{rm \"AQ\" it}}$ 의 값이 최소가 되도록 하는 두 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ 를 각각 ${rm \"P\" it} _{0}$ , ${rm \"Q\" it} _{0}$ 이라 할 때, $| vec {{rm \"P\" it} _{0} {rm \"Q\" it} _{0}} | ^{2}$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$vec {{rm \"AQ\" it}} = vec {{rm \"AB\" it}} + vec {{rm \"BQ\" it}}$ 이므로"
+   ],
+   [
+    "eq",
+    "vec {{rm \"AP\" it}} cdot vec {{rm \"AQ\" it}} = vec {{rm \"AP\" it}} cdot vec {{rm \"AB\" it}} + vec {{rm \"AP\" it}} cdot vec {{rm \"BQ\" it}} geq vec {{rm \"AP\" it}} cdot vec {{rm \"AB\" it}} - 2"
+   ],
+   [
+    "p",
+    "이고, 등호는 $vec {{rm \"BQ\" it}} = - 2 vec {{rm \"AP\" it}}$ 일 때 성립한다."
+   ],
+   [
+    "p",
+    "$vec {{rm \"AP\" it}} = ( cos t , ` sin t )$ 라 하면 점 ${rm \"P\" it}$ 의 $y$ 좌표가 $0$ 이상이므로 $0 leq t leq pi$ 이고, $vec {{rm \"AB\" it}} = ( - 4 , ` 3 )$ 에서"
+   ],
+   [
+    "eq",
+    "vec {{rm \"AP\" it}} cdot vec {{rm \"AB\" it}} = - 4 cos t + 3 sin t"
+   ],
+   [
+    "p",
+    "$0 leq t leq pi$ 에서 $sin t geq 0$ 이므로 이 값은 $- 4 cos t geq - 4$ 이상이고, $t = 0$ 일 때 최솟값 $- 4$ 를 갖는다."
+   ],
+   [
+    "p",
+    "따라서 $vec {{rm \"A\" it} {rm \"P\" it} _{0}} = ( 1 , ` 0 )$ , $vec {{rm \"B\" it} {rm \"Q\" it} _{0}} = ( - 2 , ` 0 )$ 이므로 ${rm \"P\" it} _{0} ( 6 , ` 0 )$ , ${rm \"Q\" it} _{0} ( - 1 , ` 3 )$ 이고 $| vec {{rm \"P\" it} _{0} {rm \"Q\" it} _{0}} | ^{2} = 49 + 9 = 58$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2022학년도 9월 모의평가 30번 변형",
+  "intro": [
+   "$vec {{rm \"AQ\" it}} = vec {{rm \"AB\" it}} + vec {{rm \"BQ\" it}}$ 로 분해하는 핵심은 유지하고, 점 P의 제한을 '반원'으로 바꾸어 최소가 끝점에서 생기는지 판단하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-23",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 52,
+  "body": [
+   [
+    "p",
+    "좌표평면 위의 네 점 ${rm \"A\" it} ( 4 , ` 0 )$ , ${rm \"B\" it} ( 0 , ` 4 )$ , ${rm \"C\" it} ( - 4 , ` 0 )$ , ${rm \"D\" it} ( 0 , ` - 4 )$ 를 꼭짓점으로 하는 정사각형 ${rm \"ABCD\" it}$ 의 네 변 위의 두 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ 가 다음 조건을 만족시킨다."
+   ],
+   [
+    "p",
+    "(가) $( vec {{rm \"PQ\" it}} cdot vec {{rm \"AB\" it}} ) ( vec {{rm \"PQ\" it}} cdot vec {{rm \"AD\" it}} ) = 0$"
+   ],
+   [
+    "p",
+    "(나) $vec {{rm \"OA\" it}} cdot vec {{rm \"OP\" it}} geq 8$"
+   ],
+   [
+    "p",
+    "(다) $vec {{rm \"OB\" it}} cdot vec {{rm \"OQ\" it}} geq 8$"
+   ],
+   [
+    "p",
+    "점 ${rm \"R\" it} ( 5 , ` 5 )$ 에 대하여 $vec {{rm \"RP\" it}} cdot vec {{rm \"RQ\" it}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M + m$ 의 값을 구하시오. (단, ${rm \"O\" it}$ 는 원점이다.) [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "(가)에서 $vec {{rm \"PQ\" it}}$ 는 $vec {{rm \"AD\" it}}$ 와 평행하거나 $vec {{rm \"AB\" it}}$ 와 평행하다(영벡터 포함). (나)에서 점 ${rm \"P\" it}$ 의 $x$ 좌표는 $2$ 이상, (다)에서 점 ${rm \"Q\" it}$ 의 $y$ 좌표는 $2$ 이상이다."
+   ],
+   [
+    "p",
+    "즉 ${rm \"P\" it}$ 는 변 ${rm \"AB\" it}$ 위의 ${rm \"P\" it} ( 4 - s , ` s )$ $( 0 leq s leq 2 )$ 또는 변 ${rm \"DA\" it}$ 위의 ${rm \"P\" it} ( 4 - s , ` - s )$ $( 0 < s leq 2 )$ 이고, ${rm \"Q\" it}$ 는 변 ${rm \"AB\" it}$ 위의 ${rm \"Q\" it} ( 4 - t , ` t )$ $( 2 leq t leq 4 )$ 또는 변 ${rm \"BC\" it}$ 위의 ${rm \"Q\" it} ( - t , ` 4 - t )$ $( 0 < t leq 2 )$ 이다."
+   ],
+   [
+    "p",
+    "(i) ${rm \"P\" it}$ , ${rm \"Q\" it}$ 가 모두 변 ${rm \"AB\" it}$ 위: $vec {{rm \"PQ\" it}}$ 는 항상 $vec {{rm \"AB\" it}}$ 와 평행하다."
+   ],
+   [
+    "eq",
+    "vec {{rm \"RP\" it}} cdot vec {{rm \"RQ\" it}} = ( 1 + s ) ( 1 + t ) + ( 5 - s ) ( 5 - t ) = 26 - 4 s - 4 t + 2 st"
+   ],
+   [
+    "p",
+    "는 $s$ , $t$ 각각에 대하여 일차식이므로 $s in LBRACE 0 , 2 RBRACE$ , $t in LBRACE 2 , 4 RBRACE$ 에서 비교하면 $18 , ` 10 , ` 18 , ` 18$ 이다. 범위는 $10$ 이상 $18$ 이하."
+   ],
+   [
+    "p",
+    "(ii) ${rm \"P\" it}$ 가 변 ${rm \"DA\" it}$ , ${rm \"Q\" it}$ 가 변 ${rm \"BC\" it}$ 위: $vec {{rm \"PQ\" it}} = ( s - t - 4 , ` 4 + s - t )$ 가 $vec {{rm \"AB\" it}}$ 와 평행하려면 $s = t$ , $vec {{rm \"AD\" it}}$ 와 평행하려면 $- 4 = 4$ 로 불가능하다. $s = t$ 이면"
+   ],
+   [
+    "eq",
+    "vec {{rm \"RP\" it}} cdot vec {{rm \"RQ\" it}} = 2 ( 1 + s ) ( 5 + s )"
+   ],
+   [
+    "p",
+    "이므로 범위는 $10$ 초과 $42$ 이하이다."
+   ],
+   [
+    "p",
+    "(iii) 나머지 경우( ${rm \"P\" it}$ 는 ${rm \"AB\" it}$ , ${rm \"Q\" it}$ 는 ${rm \"BC\" it}$ 위 등)는 평행 조건에서 ${rm \"Q\" it} = {rm \"B\" it}$ 또는 ${rm \"P\" it} = {rm \"A\" it}$ 가 되어 (i)에 포함된다."
+   ],
+   [
+    "p",
+    "따라서 $M = 42$ , $m = 10$ 이고 $M + m = 52$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2022학년도 6월 모의평가 30번 변형",
+  "intro": [
+   "조건 (나), (다)를 바꾸어 P, Q가 같은 변 위에 함께 놓이는 경우가 생기게 하고, 경우를 나누어 내적을 일차식·이차식으로 정리하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-24",
+  "subject": "기하",
+  "topic": "공간도형과 공간좌표",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 15,
+  "body": [
+   [
+    "p",
+    "한 모서리의 길이가 $6$ 인 정사면체 ${rm \"ABCD\" it}$ 가 있다. 삼각형 ${rm \"BCD\" it}$ 의 내부 또는 둘레 위를 움직이는 점 ${rm \"P\" it}$ 에 대하여 $vec {{rm \"PA\" it}} cdot vec {{rm \"PB\" it}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M + m$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "선분 ${rm \"AB\" it}$ 의 중점을 ${rm \"K\" it}$ 라 하면 $vec {{rm \"PA\" it}} cdot vec {{rm \"PB\" it}} = | vec {{rm \"PK\" it}} | ^{2} - 9$ 이다."
+   ],
+   [
+    "p",
+    "점 ${rm \"A\" it}$ 에서 평면 ${rm \"BCD\" it}$ 에 내린 수선의 발은 삼각형 ${rm \"BCD\" it}$ 의 무게중심 ${rm \"G\" it}$ 이고 $overline {{rm \"AG\" it}} = sqrt {36 - 12} = 2 sqrt {6}$ 이다. 점 ${rm \"K\" it}$ 에서 평면 ${rm \"BCD\" it}$ 에 내린 수선의 발 ${rm \"K\" it} '$ 은 선분 ${rm \"BG\" it}$ 의 중점이고 $overline {{rm \"K\" it} {rm \"K\" it} '} = sqrt {6}$ 이므로"
+   ],
+   [
+    "eq",
+    "| vec {{rm \"PK\" it}} | ^{2} = 6 + | vec {{rm \"P\" it} {rm \"K\" it} '} | ^{2}"
+   ],
+   [
+    "p",
+    "${rm \"K\" it} '$ 은 삼각형 ${rm \"BCD\" it}$ 의 내부에 있으므로 $| vec {{rm \"P\" it} {rm \"K\" it} '} |$ 의 최솟값은 $0$ 이고, 최댓값은 꼭짓점에서 생긴다. $overline {{rm \"B\" it} {rm \"K\" it} '} = sqrt {3}$ 이고, $angle {rm \"CGK '\" it} = {2 pi} over {3}$ 이므로 코사인법칙에서 $overline {{rm \"C\" it} {rm \"K\" it} '} ^{2} = overline {{rm \"D\" it} {rm \"K\" it} '} ^{2} = 12 + 3 - 2 times 2 sqrt {3} times sqrt {3} times LEFT ( - {1} over {2} RIGHT ) = 21$ 이므로 최댓값은 $sqrt {21}$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $M = 6 + 21 - 9 = 18$ , $m = 6 - 9 = - 3$ 이고 $M + m = 15$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2024학년도 대학수학능력시험 30번 변형",
+  "intro": [
+   "정사면체와 내적을 결합하여, 공간에서 '중점까지의 거리' 방법과 정사영(수선의 발) 개념을 함께 쓰게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-25",
+  "subject": "기하",
+  "topic": "공간도형과 공간좌표",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 88,
+  "body": [
+   [
+    "p",
+    "좌표공간에서 구 $x ^{2} + y ^{2} + z ^{2} = 25$ 와 평면 $3 x + 4 z = 15$ 가 만나서 생기는 원을 $C$ 라 하자. 원 $C$ 의 $xy$ 평면 위로의 정사영으로 둘러싸인 부분의 넓이를 $k pi$ , 원 $C$ 위의 점과 $xy$ 평면 사이의 거리의 최댓값을 $M$ 이라 할 때, $5 ( k + M )$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "원점에서 평면 $3 x + 4 z = 15$ 까지의 거리는 ${15} over {5} = 3$ 이므로 원 $C$ 의 반지름의 길이는 $sqrt {25 - 9} = 4$ 이고, 중심은 원점에서 평면에 내린 수선의 발 $LEFT ( {9} over {5} , ` 0 , ` {12} over {5} RIGHT )$ 이다."
+   ],
+   [
+    "p",
+    "평면 $3 x + 4 z = 15$ 와 $xy$ 평면이 이루는 각을 $theta$ 라 하면 두 법선벡터 $( 3 , ` 0 , ` 4 )$ , $( 0 , ` 0 , ` 1 )$ 에서 $cos theta = {4} over {5}$ 이므로 정사영의 넓이는 $16 pi times {4} over {5} = {64} over {5} pi$ , $k = {64} over {5}$ 이다."
+   ],
+   [
+    "p",
+    "평면 위에서 $z$ 좌표가 가장 빨리 증가하는 방향의 단위벡터는 $LEFT ( - {4} over {5} , ` 0 , ` {3} over {5} RIGHT )$ 이므로 원 위의 점의 $z$ 좌표의 최댓값은 ${12} over {5} + 4 times {3} over {5} = {24} over {5}$ , 최솟값은 ${12} over {5} - {12} over {5} = 0$ 이다. 따라서 $M = {24} over {5}$ 이다."
+   ],
+   [
+    "eq",
+    "5 ( k + M ) = 64 + 24 = 88"
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2022학년도 대학수학능력시험 30번 변형",
+  "intro": [
+   "구의 단면인 원을 기울어진 평면에서 만들고, 정사영의 넓이(두 평면이 이루는 각)와 원 위의 점의 높이의 최댓값을 함께 구하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-26",
+  "subject": "기하",
+  "topic": "이차곡선과 벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 60,
+  "body": [
+   [
+    "p",
+    "초점이 ${rm \"F\" it}$ 인 포물선 $y ^{2} = 8 x$ 위의 점 중 제 $1$ 사분면에 있는 점 ${rm \"P\" it}$ 에서 포물선의 준선에 내린 수선의 발을 ${rm \"H\" it}$ 라 하자. $| vec {{rm \"PF\" it}} | = 10$ 이고, 두 조건"
+   ],
+   [
+    "eq",
+    "vec {{rm \"XF\" it}} cdot vec {{rm \"XH\" it}} = 0 , ` ` ` ` vec {{rm \"PX\" it}} cdot vec {{rm \"FH\" it}} = 0"
+   ],
+   [
+    "p",
+    "을 모두 만족시키는 서로 다른 두 점 ${rm \"X\" it}$ 를 ${rm \"X\" it} _{1}$ , ${rm \"X\" it} _{2}$ 라 할 때, $vec {{rm \"P\" it} {rm \"X\" it} _{1}} cdot vec {{rm \"P\" it} {rm \"X\" it} _{2}}$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "포물선 $y ^{2} = 8 x$ 의 초점은 ${rm \"F\" it} ( 2 , ` 0 )$ , 준선은 $x = - 2$ 이다. $| vec {{rm \"PF\" it}} |$ 는 점 ${rm \"P\" it}$ 의 $x$ 좌표에 $2$ 를 더한 값이고 이 값이 $10$ 이므로 ${rm \"P\" it} ( 8 , ` 8 )$ , ${rm \"H\" it} ( - 2 , ` 8 )$ 이다."
+   ],
+   [
+    "p",
+    "$vec {{rm \"XF\" it}} cdot vec {{rm \"XH\" it}} = 0$ 이므로 점 ${rm \"X\" it}$ 는 선분 ${rm \"FH\" it}$ 를 지름으로 하는 원 위에 있고, 그 중심은 선분 ${rm \"FH\" it}$ 의 중점 ${rm \"N\" it} ( 0 , ` 4 )$ , 반지름의 길이는 ${overline {{rm \"FH\" it}}} over {2} = {sqrt {80}} over {2} = 2 sqrt {5}$ 이다."
+   ],
+   [
+    "p",
+    "포물선의 정의에서 $overline {{rm \"PF\" it}} = overline {{rm \"PH\" it}}$ 이므로 $vec {{rm \"PN\" it}} cdot vec {{rm \"FH\" it}} = 0$ 이다. 따라서 $vec {{rm \"PX\" it}} cdot vec {{rm \"FH\" it}} = 0$ 을 만족시키는 점 ${rm \"X\" it}$ 는 직선 ${rm \"PN\" it}$ 위에 있고, ${rm \"X\" it} _{1}$ , ${rm \"X\" it} _{2}$ 는 이 직선이 원과 만나는 두 점이므로 $vec {{rm \"N\" it} {rm \"X\" it} _{2}} = - vec {{rm \"N\" it} {rm \"X\" it} _{1}}$ 이다."
+   ],
+   [
+    "eq",
+    "vec {{rm \"P\" it} {rm \"X\" it} _{1}} cdot vec {{rm \"P\" it} {rm \"X\" it} _{2}} = ( vec {{rm \"PN\" it}} + vec {{rm \"N\" it} {rm \"X\" it} _{1}} ) cdot ( vec {{rm \"PN\" it}} - vec {{rm \"N\" it} {rm \"X\" it} _{1}} ) = | vec {{rm \"PN\" it}} | ^{2} - 20 = 80 - 20 = 60"
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2026학년도 대학수학능력시험 29번(포물선)과 30번(원 위의 두 점과 내적) 변형",
+  "intro": [
+   "포물선의 정의 $overline {{rm \"PF\" it}} = overline {{rm \"PH\" it}}$ 에서 이등변삼각형을 읽고, 지름 FH의 원과 수직 조건을 결합해 두 점을 만들게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-27",
+  "subject": "기하",
+  "topic": "이차곡선과 벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 10,
+  "body": [
+   [
+    "p",
+    "두 초점이 ${rm \"F\" it} ( 5 , ` 0 )$ , ${rm \"F\" it} ' ( - 5 , ` 0 )$ 인 쌍곡선 ${x ^{2}} over {9} - {y ^{2}} over {16} = 1$ 위의 점 중 $x$ 좌표가 양수인 점 ${rm \"P\" it}$ 에 대하여 선분 ${rm \"PF '\" it}$ 위의 점 ${rm \"X\" it}$ 가 $| vec {{rm \"PX\" it}} | = | vec {{rm \"PF\" it}} |$ 를 만족시킨다. 선분 ${rm \"FX\" it}$ 의 중점을 ${rm \"M\" it}$ 이라 할 때, 점 ${rm \"A\" it} ( 12 , ` 5 )$ 에 대하여 $| vec {{rm \"AM\" it}} |$ 의 최솟값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$| vec {{rm \"P\" it} {rm \"F\" it} '} | - | vec {{rm \"PF\" it}} | = 6$ 이고 $| vec {{rm \"PX\" it}} | = | vec {{rm \"PF\" it}} |$ 이므로 $| vec {{rm \"F\" it} ' {rm \"X\" it}} | = 6$ 이다."
+   ],
+   [
+    "p",
+    "원점 ${rm \"O\" it}$ 는 선분 ${rm \"FF '\" it}$ 의 중점, ${rm \"M\" it}$ 은 선분 ${rm \"FX\" it}$ 의 중점이므로 $vec {{rm \"OM\" it}} = {1} over {2} vec {{rm \"F\" it} ' {rm \"X\" it}}$ , 즉 $| vec {{rm \"OM\" it}} | = 3$ 이고 $vec {{rm \"OM\" it}}$ 은 $vec {{rm \"F\" it} ' {rm \"P\" it}}$ 와 같은 방향이다."
+   ],
+   [
+    "p",
+    "점 ${rm \"F\" it} '$ 에서 오른쪽 가지 위의 점으로 향하는 방향은 기울기의 절댓값이 ${4} over {3}$ (점근선의 기울기)보다 작은 오른쪽 방향 전체이다. $vec {{rm \"OA\" it}} = ( 12 , ` 5 )$ 의 기울기 ${5} over {12}$ 는 이 범위에 있으므로 $vec {{rm \"OM\" it}} = {3} over {13} ( 12 , ` 5 )$ 인 점 ${rm \"M\" it}$ 이 존재한다."
+   ],
+   [
+    "p",
+    "따라서 최솟값은 $| vec {{rm \"OA\" it}} | - 3 = 13 - 3 = 10$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2025학년도 6월 모의평가 30번 변형",
+  "intro": [
+   "쌍곡선의 정의로 $| vec {{rm \"F ' X\" it}} |$ 가 일정함을 얻은 뒤, 삼각형의 중점연결 정리로 점 M이 원점 중심의 원 위에 있음을 다시 한 번 찾게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-28",
+  "subject": "기하",
+  "topic": "이차곡선과 벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 17,
+  "body": [
+   [
+    "p",
+    "두 초점이 ${rm \"F\" it} ( 4 , ` 0 )$ , ${rm \"F\" it} ' ( - 4 , ` 0 )$ 인 타원 ${x ^{2}} over {25} + {y ^{2}} over {9} = 1$ 위의 점 중 $x$ 좌표가 $0$ 이상이고 $y$ 좌표가 양수인 점 ${rm \"P\" it}$ 에 대하여 점 ${rm \"X\" it}$ 가"
+   ],
+   [
+    "eq",
+    "vec {{rm \"PX\" it}} = {| vec {{rm \"PF\" it}} |} over {| vec {{rm \"P\" it} {rm \"F\" it} '} |} ` vec {{rm \"F\" it} ' {rm \"P\" it}}"
+   ],
+   [
+    "p",
+    "를 만족시킨다. 선분 ${rm \"FX\" it}$ 의 중점을 ${rm \"M\" it}$ 이라 할 때, 점 ${rm \"B\" it} ( - 1 , ` 7 )$ 에 대하여 $vec {{rm \"OM\" it}} cdot vec {{rm \"OB\" it}}$ 의 최댓값을 구하시오. (단, ${rm \"O\" it}$ 는 원점이다.) [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$vec {{rm \"F\" it} ' {rm \"X\" it}} = vec {{rm \"F\" it} ' {rm \"P\" it}} + vec {{rm \"PX\" it}} = LEFT ( 1 + {| vec {{rm \"PF\" it}} |} over {| vec {{rm \"P\" it} {rm \"F\" it} '} |} RIGHT ) vec {{rm \"F\" it} ' {rm \"P\" it}}$ 이므로 $| vec {{rm \"F\" it} ' {rm \"X\" it}} | = | vec {{rm \"P\" it} {rm \"F\" it} '} | + | vec {{rm \"PF\" it}} | = 10$ 이다."
+   ],
+   [
+    "p",
+    "${rm \"O\" it}$ 는 선분 ${rm \"FF '\" it}$ 의 중점이므로 $vec {{rm \"OM\" it}} = {1} over {2} vec {{rm \"F\" it} ' {rm \"X\" it}}$ , 즉 $vec {{rm \"OM\" it}} = 5 ( cos theta , ` sin theta )$ ( $theta$ 는 $vec {{rm \"F\" it} ' {rm \"P\" it}}$ 가 $x$ 축의 양의 방향과 이루는 각)이다."
+   ],
+   [
+    "p",
+    "점 ${rm \"P\" it}$ 의 $x$ 좌표가 $0$ 이상이고 $y$ 좌표가 양수이므로 $0 < theta leq theta _{0}$ 이고, $theta _{0}$ 은 ${rm \"P\" it} ( 0 , ` 3 )$ 일 때로 $vec {{rm \"F\" it} ' {rm \"P\" it}} = ( 4 , ` 3 )$ 에서 $cos theta _{0} = {4} over {5}$ , $sin theta _{0} = {3} over {5}$ 이다."
+   ],
+   [
+    "p",
+    "$vec {{rm \"OM\" it}} cdot vec {{rm \"OB\" it}} = 5 ( - cos theta + 7 sin theta )$ 는 $0 < theta leq theta _{0}$ 에서 증가하므로 ( $- cos theta$ 와 $sin theta$ 모두 증가) $theta = theta _{0}$ , 즉 ${rm \"M\" it} ( 4 , ` 3 )$ 일 때 최댓값 $- 4 + 21 = 17$ 을 갖는다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2025학년도 6월 모의평가 30번 변형",
+  "intro": [
+   "타원의 정의로 $| vec {{rm \"F ' X\" it}} | = 10$ 을 얻고 중점 M이 원 위의 호를 그림을 파악한 뒤, 호의 끝점에서 최댓값이 생기는 경우를 판단하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-29",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 32,
+  "body": [
+   [
+    "p",
+    "좌표평면 위의 세 점 ${rm \"A\" it} ( 0 , ` 6 )$ , ${rm \"B\" it} ( - 2 , ` 0 )$ , ${rm \"C\" it} ( 4 , ` 0 )$ 에 대하여 점 ${rm \"X\" it}$ 가"
+   ],
+   [
+    "eq",
+    "vec {{rm \"XA\" it}} cdot vec {{rm \"XB\" it}} = vec {{rm \"XB\" it}} cdot vec {{rm \"XC\" it}} = vec {{rm \"XC\" it}} cdot vec {{rm \"XA\" it}}"
+   ],
+   [
+    "p",
+    "를 만족시킨다. 선분 ${rm \"BC\" it}$ 위를 움직이는 점 ${rm \"P\" it}$ 에 대하여 $vec {{rm \"PX\" it}} cdot vec {{rm \"PA\" it}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M + m$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$vec {{rm \"XA\" it}} cdot vec {{rm \"XB\" it}} = vec {{rm \"XB\" it}} cdot vec {{rm \"XC\" it}}$ 에서 $vec {{rm \"XB\" it}} cdot ( vec {{rm \"XA\" it}} - vec {{rm \"XC\" it}} ) = vec {{rm \"XB\" it}} cdot vec {{rm \"CA\" it}} = 0$ 이므로 점 ${rm \"X\" it}$ 는 점 ${rm \"B\" it}$ 를 지나고 직선 ${rm \"CA\" it}$ 에 수직인 직선 위에 있다. 같은 방법으로 점 ${rm \"C\" it}$ 를 지나고 직선 ${rm \"AB\" it}$ 에 수직인 직선 위에도 있으므로 ${rm \"X\" it}$ 는 삼각형 ${rm \"ABC\" it}$ 의 수심이다."
+   ],
+   [
+    "p",
+    "점 ${rm \"A\" it}$ 를 지나고 ${rm \"BC\" it}$ 에 수직인 직선은 $x = 0$ 이고, 점 ${rm \"B\" it}$ 를 지나고 $vec {{rm \"CA\" it}} = ( - 4 , ` 6 )$ 에 수직인 직선은 $- 4 ( x + 2 ) + 6 y = 0$ 이므로 ${rm \"X\" it} LEFT ( 0 , ` {4} over {3} RIGHT )$ 이다."
+   ],
+   [
+    "p",
+    "선분 ${rm \"XA\" it}$ 의 중점 ${rm \"K\" it} LEFT ( 0 , ` {11} over {3} RIGHT )$ 에 대하여 $vec {{rm \"PX\" it}} cdot vec {{rm \"PA\" it}} = | vec {{rm \"PK\" it}} | ^{2} - LEFT ( {7} over {3} RIGHT ) ^{2}$ 이다. ${rm \"P\" it} ( t , ` 0 )$ $( - 2 leq t leq 4 )$ 이면 $| vec {{rm \"PK\" it}} | ^{2} = t ^{2} + {121} over {9}$ 이므로"
+   ],
+   [
+    "eq",
+    "vec {{rm \"PX\" it}} cdot vec {{rm \"PA\" it}} = t ^{2} + 8"
+   ],
+   [
+    "p",
+    "따라서 $m = 8$ ( $t = 0$ ), $M = 24$ ( $t = 4$ )이고 $M + m = 32$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2026학년도 9월 모의평가 30번 변형",
+  "intro": [
+   "삼각형에 대한 벡터 조건을 '수심'이 되도록 바꾸어 특수점을 먼저 찾게 하고, 선분 위 점에 대한 내적의 범위로 연결"
+  ]
+ },
+ {
+  "id": "추가30·기하-30",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 92,
+  "body": [
+   [
+    "p",
+    "좌표평면 위의 네 점 ${rm \"A\" it} ( 4 , ` 0 )$ , ${rm \"B\" it} ( 0 , ` 4 )$ , ${rm \"C\" it} ( - 4 , ` 0 )$ , ${rm \"D\" it} ( 0 , ` - 4 )$ 를 꼭짓점으로 하는 정사각형 ${rm \"ABCD\" it}$ 의 네 변 위의 두 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ 가 다음 조건을 만족시킨다."
+   ],
+   [
+    "p",
+    "(가) $( vec {{rm \"PQ\" it}} cdot vec {{rm \"OA\" it}} ) ( vec {{rm \"PQ\" it}} cdot vec {{rm \"OB\" it}} ) = 0$"
+   ],
+   [
+    "p",
+    "(나) $vec {{rm \"OA\" it}} cdot vec {{rm \"OP\" it}} geq 4$ 이고 $vec {{rm \"OB\" it}} cdot vec {{rm \"OP\" it}} geq 0$ 이다."
+   ],
+   [
+    "p",
+    "(다) $vec {{rm \"OA\" it}} cdot vec {{rm \"OQ\" it}} geq - 4$ 이고 $vec {{rm \"OB\" it}} cdot vec {{rm \"OQ\" it}} leq 0$ 이다."
+   ],
+   [
+    "p",
+    "점 ${rm \"R\" it} ( - 1 , ` 6 )$ 에 대하여 $vec {{rm \"RP\" it}} cdot vec {{rm \"RQ\" it}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M + m$ 의 값을 구하시오. (단, ${rm \"O\" it}$ 는 원점이다.) [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "(가)에서 선분 ${rm \"PQ\" it}$ 는 $y$ 축에 평행하거나 $x$ 축에 평행하다(또는 ${rm \"P\" it} = {rm \"Q\" it}$ )."
+   ],
+   [
+    "p",
+    "(나)에서 점 ${rm \"P\" it}$ 는 $x geq 1$ , $y geq 0$ 이므로 변 ${rm \"AB\" it}$ 위의 점 ${rm \"P\" it} ( p , ` 4 - p )$ $( 1 leq p leq 4 )$ 이다."
+   ],
+   [
+    "p",
+    "(다)에서 점 ${rm \"Q\" it}$ 는 $x geq - 1$ , $y leq 0$ 인 둘레 위의 점이다."
+   ],
+   [
+    "p",
+    "(i) $vec {{rm \"PQ\" it}}$ 가 $y$ 축에 평행: ${rm \"Q\" it}$ 의 $x$ 좌표가 $p geq 1$ 이므로 ${rm \"Q\" it}$ 는 변 ${rm \"DA\" it}$ 위의 ${rm \"Q\" it} ( p , ` p - 4 )$ 이다."
+   ],
+   [
+    "eq",
+    "vec {{rm \"RP\" it}} cdot vec {{rm \"RQ\" it}} = ( p + 1 ) ^{2} + ( - 2 - p ) ( p - 10 ) = 10 p + 21"
+   ],
+   [
+    "p",
+    "이므로 범위는 $31$ 이상 $61$ 이하이다."
+   ],
+   [
+    "p",
+    "(ii) $vec {{rm \"PQ\" it}}$ 가 $x$ 축에 평행: 두 점의 $y$ 좌표가 같은데 ${rm \"P\" it}$ 는 $y geq 0$ , ${rm \"Q\" it}$ 는 $y leq 0$ 이므로 $y = 0$ 이고 ${rm \"P\" it} = {rm \"A\" it}$ , ${rm \"Q\" it} = {rm \"A\" it}$ ( ${rm \"C\" it}$ 는 $x < - 1$ )이다. 이때 값은 $| vec {{rm \"RA\" it}} | ^{2} = 25 + 36 = 61$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $M = 61$ , $m = 31$ 이고 $M + m = 92$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2022학년도 6월 모의평가 30번 변형",
+  "intro": [
+   "조건 (가)를 '선분 PQ가 좌표축에 평행'으로 바꾸고, P와 Q가 놓일 수 있는 변을 조건 (나), (다)로 좁혀 경우를 나누게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-31",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 98,
+  "body": [
+   [
+    "p",
+    "좌표평면 위에 여덟 점"
+   ],
+   [
+    "eq",
+    "{rm \"A\" it} ( 8 , ` 0 ) , ` {rm \"B\" it} ( 0 , ` 6 ) , ` {rm \"C\" it} ( 1 , ` 1 ) , ` {rm \"D\" it} ( 3 , ` 1 ) , ` {rm \"E\" it} ( 3 , ` 3 ) , ` {rm \"F\" it} ( 1 , ` 3 ) , ` {rm \"G\" it} ( 6 , ` 1 )"
+   ],
+   [
+    "p",
+    "과 원점 ${rm \"O\" it}$ 가 있다. 삼각형 ${rm \"OAB\" it}$ 의 변 위를 움직이는 점 ${rm \"P\" it}$ 와 사각형 ${rm \"CDEF\" it}$ 의 변 위를 움직이는 점 ${rm \"Q\" it}$ 에 대하여 $| vec {{rm \"PQ\" it}} + vec {{rm \"OG\" it}} | ^{2}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M + m$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$vec {{rm \"PQ\" it}} + vec {{rm \"OG\" it}} = ( vec {{rm \"OQ\" it}} + vec {{rm \"OG\" it}} ) - vec {{rm \"OP\" it}}$ 이다. $vec {{rm \"OW\" it}} = vec {{rm \"OQ\" it}} + vec {{rm \"OG\" it}}$ 인 점 ${rm \"W\" it}$ 는 네 점 $( 7 , ` 2 )$ , $( 9 , ` 2 )$ , $( 9 , ` 4 )$ , $( 7 , ` 4 )$ 를 꼭짓점으로 하는 정사각형의 변 위를 움직이므로 구하는 값은 $| vec {{rm \"PW\" it}} | ^{2}$ 이다."
+   ],
+   [
+    "p",
+    "최댓값: 꼭짓점끼리 비교하면 $( 9 , ` 4 )$ 와 ${rm \"O\" it}$ 사이에서 $81 + 16 = 97$ 이 가장 크다. $M = 97$"
+   ],
+   [
+    "p",
+    "최솟값: 빗변 ${rm \"AB\" it}$ 의 방정식은 $3 x + 4 y = 24$ 이고 정사각형은 $3 x + 4 y geq 29$ 인 영역에 있으므로 가장 가까운 점은 $( 7 , ` 2 )$ 이다. 거리는 ${| 21 + 8 - 24 |} over {5} = 1$ 이고 수선의 발 $LEFT ( {32} over {5} , ` {6} over {5} RIGHT )$ 은 선분 ${rm \"AB\" it}$ 위에 있다. 또 점 ${rm \"A\" it} ( 8 , ` 0 )$ 과 정사각형 사이의 거리는 $2$ 로 더 크므로 $m = 1$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $M + m = 98$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2025학년도 9월 모의평가 30번 변형",
+  "intro": [
+   "한 도형을 정사각형으로 바꾸고 빗변의 기울기를 $- {3} over {4}$ 로 하여, 최단거리가 꼭짓점과 기울어진 변 사이에서 생기도록 설계"
+  ]
+ },
+ {
+  "id": "추가30·기하-32",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 891,
+  "body": [
+   [
+    "p",
+    "좌표평면 위의 네 점 ${rm \"A\" it} ( 0 , ` 0 )$ , ${rm \"B\" it} ( 6 , ` 0 )$ , ${rm \"C\" it} ( 6 , ` 6 )$ , ${rm \"D\" it} ( 0 , ` 6 )$ 에 대하여"
+   ],
+   [
+    "eq",
+    "| vec {{rm \"XB\" it}} + vec {{rm \"XC\" it}} | = | vec {{rm \"XB\" it}} - vec {{rm \"XC\" it}} |"
+   ],
+   [
+    "p",
+    "를 만족시키는 점 ${rm \"X\" it}$ 가 나타내는 도형 중 정사각형 ${rm \"ABCD\" it}$ 의 내부 또는 둘레 위에 있는 부분을 $S$ 라 하자. 도형 $S$ 위의 점 ${rm \"P\" it}$ 에 대하여"
+   ],
+   [
+    "eq",
+    "4 vec {{rm \"PQ\" it}} = vec {{rm \"PA\" it}} + 2 vec {{rm \"PD\" it}}"
+   ],
+   [
+    "p",
+    "를 만족시키는 점을 ${rm \"Q\" it}$ 라 하자. 점 ${rm \"E\" it} ( 2 , ` 3 )$ 에 대하여 $vec {{rm \"BQ\" it}} cdot vec {{rm \"BE\" it}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M times m$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$| vec {{rm \"XB\" it}} + vec {{rm \"XC\" it}} | = | vec {{rm \"XB\" it}} - vec {{rm \"XC\" it}} |$ 에서 $vec {{rm \"XB\" it}} cdot vec {{rm \"XC\" it}} = 0$ 이므로 $S$ 는 중심이 $( 6 , ` 3 )$ , 반지름의 길이가 $3$ 인 원 중 $x leq 6$ 인 반원이다."
+   ],
+   [
+    "p",
+    "$4 ( vec {{rm \"OQ\" it}} - vec {{rm \"OP\" it}} ) = vec {{rm \"OA\" it}} + 2 vec {{rm \"OD\" it}} - 3 vec {{rm \"OP\" it}}$ 에서 $vec {{rm \"OQ\" it}} = {1} over {4} ( vec {{rm \"OP\" it}} + vec {{rm \"OA\" it}} + 2 vec {{rm \"OD\" it}} )$ 이다. $vec {w} = vec {{rm \"BE\" it}} = ( - 4 , ` 3 )$ 이라 하면"
+   ],
+   [
+    "eq",
+    "vec {{rm \"BQ\" it}} cdot vec {w} = {1} over {4} LEFT ( vec {{rm \"OP\" it}} cdot vec {w} + 36 RIGHT ) + 24"
+   ],
+   [
+    "p",
+    "$vec {{rm \"OP\" it}} cdot vec {w} = - 15 + vec {{rm \"KP\" it}} cdot vec {w}$ ( ${rm \"K\" it} ( 6 , ` 3 )$ )이고 $vec {{rm \"KP\" it}} = 3 ( cos t , ` sin t )$ , ${pi} over {2} leq t leq {3 pi} over {2}$ 이다."
+   ],
+   [
+    "p",
+    "$vec {{rm \"KP\" it}} cdot vec {w}$ 의 최댓값은 $vec {{rm \"KP\" it}}$ 가 $vec {w}$ 와 같은 방향일 때 $15$ 이고 이때 ${rm \"P\" it} LEFT ( {18} over {5} , ` {24} over {5} RIGHT )$ 는 반원 위에 있다. 최솟값은 반원의 끝점 중 $vec {w}$ 와 이루는 각이 큰 쪽 ${rm \"P\" it} = {rm \"B\" it}$ 에서 $( 0 , ` - 3 ) cdot ( - 4 , ` 3 ) = - 9$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $vec {{rm \"OP\" it}} cdot vec {w}$ 의 범위는 $- 24$ 이상 $0$ 이하이고, $m = {12} over {4} + 24 = 27$ , $M = {36} over {4} + 24 = 33$ 이다."
+   ],
+   [
+    "eq",
+    "M times m = 891"
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2025학년도 대학수학능력시험 30번 변형",
+  "intro": [
+   "도형 S를 반원으로 제한하고 내적의 방향 벡터를 $( - 4 , ` 3 )$ 으로 잡아, 최댓값은 접점에서, 최솟값은 반원의 끝점에서 생기도록 설계"
+  ]
+ },
+ {
+  "id": "추가30·기하-33",
+  "subject": "기하",
+  "topic": "공간도형과 공간좌표",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 16,
+  "body": [
+   [
+    "p",
+    "좌표공간에서 여섯 개의 평면 $x = 0$ , $x = 4$ , $y = 0$ , $y = 4$ , $z = 0$ , $z = 4$ 에 모두 접하는 구 위를 움직이는 점 ${rm \"P\" it}$ 와 두 점 ${rm \"A\" it} ( 0 , ` 0 , ` 0 )$ , ${rm \"B\" it} ( 4 , ` 0 , ` 0 )$ 에 대하여 $vec {{rm \"PA\" it}} cdot vec {{rm \"PB\" it}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M + m$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "구는 중심이 ${rm \"K\" it} ( 2 , ` 2 , ` 2 )$ , 반지름의 길이가 $2$ 이다. 선분 ${rm \"AB\" it}$ 의 중점을 ${rm \"N\" it} ( 2 , ` 0 , ` 0 )$ 이라 하면"
+   ],
+   [
+    "eq",
+    "vec {{rm \"PA\" it}} cdot vec {{rm \"PB\" it}} = | vec {{rm \"PN\" it}} | ^{2} - 4"
+   ],
+   [
+    "p",
+    "$| vec {{rm \"KN\" it}} | = 2 sqrt {2} > 2$ 이므로 $2 sqrt {2} - 2 leq | vec {{rm \"PN\" it}} | leq 2 sqrt {2} + 2$ 이다."
+   ],
+   [
+    "eq",
+    "M + m = ( 2 sqrt {2} + 2 ) ^{2} + ( 2 sqrt {2} - 2 ) ^{2} - 8 = 24 - 8 = 16"
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2024학년도 대학수학능력시험 30번 변형",
+  "intro": [
+   "정육면체에 내접하는 구를 좌표로 표현하고, 모서리의 중점과 구의 중심 사이 거리가 무리수가 되어도 최댓값과 최솟값의 합은 정수가 됨을 이용"
+  ]
+ },
+ {
+  "id": "추가30·기하-34",
+  "subject": "기하",
+  "topic": "이차곡선과 벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 153,
+  "body": [
+   [
+    "p",
+    "포물선 $y ^{2} = 8 x$ 의 초점을 ${rm \"F\" it}$ 라 하자. 이 포물선 위의 두 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ 에 대하여 세 점 ${rm \"P\" it}$ , ${rm \"F\" it}$ , ${rm \"Q\" it}$ 가 한 직선 위에 있고"
+   ],
+   [
+    "eq",
+    "vec {{rm \"FP\" it}} cdot vec {{rm \"FQ\" it}} = - 18"
+   ],
+   [
+    "p",
+    "이다. 삼각형 ${rm \"OPQ\" it}$ 의 넓이를 $S$ 라 할 때, $S ^{2} + | vec {{rm \"PQ\" it}} | ^{2}$ 의 값을 구하시오. (단, ${rm \"O\" it}$ 는 원점이다.) [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "포물선의 초점은 ${rm \"F\" it} ( 2 , ` 0 )$ , 준선은 $x = - 2$ 이다. $vec {{rm \"FP\" it}} cdot vec {{rm \"FQ\" it}} < 0$ 이므로 점 ${rm \"F\" it}$ 는 선분 ${rm \"PQ\" it}$ 위에 있고 $overline {{rm \"FP\" it}} times overline {{rm \"FQ\" it}} = 18$ 이다."
+   ],
+   [
+    "p",
+    "직선 ${rm \"PQ\" it}$ 를 $x = ky + 2$ 로 놓으면 $y ^{2} - 8 ky - 16 = 0$ 이므로 두 점의 $y$ 좌표 $y _{1}$ , $y _{2}$ 에 대하여 $y _{1} y _{2} = - 16$ 이고, $x$ 좌표 $x _{1}$ , $x _{2}$ 에 대하여 $x _{1} x _{2} = {( y _{1} y _{2} ) ^{2}} over {64} = 4$ 이다."
+   ],
+   [
+    "p",
+    "포물선의 정의에서 $overline {{rm \"FP\" it}} = x _{1} + 2$ , $overline {{rm \"FQ\" it}} = x _{2} + 2$ 이므로 $( x _{1} + 2 ) ( x _{2} + 2 ) = 4 + 2 ( x _{1} + x _{2} ) + 4 = 18$ , $x _{1} + x _{2} = 5$ 이다."
+   ],
+   [
+    "p",
+    "$overline {{rm \"PQ\" it}} = overline {{rm \"FP\" it}} + overline {{rm \"FQ\" it}} = x _{1} + x _{2} + 4 = 9$ 이다."
+   ],
+   [
+    "p",
+    "$S = {1} over {2} times overline {{rm \"OF\" it}} times | y _{1} - y _{2} | = | y _{1} - y _{2} |$ 이고 $( y _{1} - y _{2} ) ^{2} = y _{1} ^{2} + y _{2} ^{2} - 2 y _{1} y _{2} = 8 ( x _{1} + x _{2} ) + 32 = 72$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $S ^{2} + | vec {{rm \"PQ\" it}} | ^{2} = 72 + 81 = 153$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2026학년도 대학수학능력시험 29번 변형",
+  "intro": [
+   "포물선의 정의(초점까지의 거리 = 준선까지의 거리)를 초점을 지나는 현에 적용하고, 내적의 부호로 F가 두 점 사이에 있음을 읽게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-35",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 4,
+  "type": "30번형",
+  "standards": [],
+  "answer": 64,
+  "body": [
+   [
+    "p",
+    "좌표평면에서 길이가 $10$ 인 선분 ${rm \"AB\" it}$ 를 지름으로 하는 원 위의 두 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ 가"
+   ],
+   [
+    "eq",
+    "9 ( vec {{rm \"PA\" it}} + vec {{rm \"PB\" it}} ) cdot ( vec {{rm \"QA\" it}} + vec {{rm \"QB\" it}} ) = 7 | vec {{rm \"PQ\" it}} | ^{2}"
+   ],
+   [
+    "p",
+    "을 만족시킨다. $vec {{rm \"AP\" it}} cdot vec {{rm \"AQ\" it}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M + m$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "원의 중심을 ${rm \"O\" it}$ 라 하면 $vec {{rm \"PA\" it}} + vec {{rm \"PB\" it}} = - 2 vec {{rm \"OP\" it}}$ , $vec {{rm \"QA\" it}} + vec {{rm \"QB\" it}} = - 2 vec {{rm \"OQ\" it}}$ 이므로"
+   ],
+   [
+    "eq",
+    "36 ` vec {{rm \"OP\" it}} cdot vec {{rm \"OQ\" it}} = 7 ( 50 - 2 vec {{rm \"OP\" it}} cdot vec {{rm \"OQ\" it}} )"
+   ],
+   [
+    "p",
+    "에서 $vec {{rm \"OP\" it}} cdot vec {{rm \"OQ\" it}} = 7$ 이다."
+   ],
+   [
+    "eq",
+    "vec {{rm \"AP\" it}} cdot vec {{rm \"AQ\" it}} = ( vec {{rm \"OP\" it}} - vec {{rm \"OA\" it}} ) cdot ( vec {{rm \"OQ\" it}} - vec {{rm \"OA\" it}} ) = 7 + 25 - vec {{rm \"OA\" it}} cdot ( vec {{rm \"OP\" it}} + vec {{rm \"OQ\" it}} )"
+   ],
+   [
+    "p",
+    "선분 ${rm \"PQ\" it}$ 의 중점을 ${rm \"L\" it}$ 이라 하면 $vec {{rm \"OP\" it}} + vec {{rm \"OQ\" it}} = 2 vec {{rm \"OL\" it}}$ 이고 $| vec {{rm \"OL\" it}} | ^{2} = {1} over {4} ( 25 + 25 + 2 times 7 ) = 16$ , $| vec {{rm \"OL\" it}} | = 4$ 이다. 점 ${rm \"L\" it}$ 은 원점 중심, 반지름 $4$ 인 원 위의 모든 점이 될 수 있으므로 $- 40 leq vec {{rm \"OA\" it}} cdot ( vec {{rm \"OP\" it}} + vec {{rm \"OQ\" it}} ) leq 40$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $M = 32 + 40 = 72$ , $m = 32 - 40 = - 8$ 이고 $M + m = 64$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2026학년도 대학수학능력시험 30번 변형",
+  "intro": [
+   "원의 중심 O로 식을 옮겨 $cos ( angle {rm \"POQ\" it} )$ 를 결정하게 하고, 현 PQ의 중점이 그리는 원을 이용해 내적의 범위를 구하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-36",
+  "subject": "기하",
+  "topic": "공간도형과 공간좌표",
+  "stars": 5,
+  "type": "30번형",
+  "standards": [],
+  "answer": 89,
+  "body": [
+   [
+    "p",
+    "한 모서리의 길이가 $6$ 인 정사면체 ${rm \"ABCD\" it}$ 가 있다. 선분 ${rm \"BC\" it}$ 의 중점을 중심으로 하고 점 ${rm \"B\" it}$ 를 지나는 구를 $S$ 라 하자. 구 $S$ 가 선분 ${rm \"AB\" it}$ 와 만나는 점 중 ${rm \"B\" it}$ 가 아닌 점을 ${rm \"P\" it}$ , 선분 ${rm \"AC\" it}$ 와 만나는 점 중 ${rm \"C\" it}$ 가 아닌 점을 ${rm \"Q\" it}$ , 선분 ${rm \"DB\" it}$ 와 만나는 점 중 ${rm \"B\" it}$ 가 아닌 점을 ${rm \"R\" it}$ 라 하고, 점 ${rm \"P\" it}$ 에서 구 $S$ 에 접하는 평면을 $alpha$ 라 하자. 삼각형 ${rm \"PQR\" it}$ 의 평면 $alpha$ 위로의 정사영의 넓이를 $k$ 라 할 때, $k ^{2} = {q} over {p}$ 이다. $p + q$ 의 값을 구하시오. (단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$overline {{rm \"BC\" it}}$ 가 구 $S$ 의 지름이므로 구 위의 점 ${rm \"P\" it}$ ( $neq {rm \"B\" it}$ , ${rm \"C\" it}$ )에 대하여 $angle {rm \"BPC\" it} = {pi} over {2}$ 이다. 정삼각형 ${rm \"ABC\" it}$ 에서 ${rm \"C\" it}$ 에서 ${rm \"AB\" it}$ 에 내린 수선의 발은 ${rm \"AB\" it}$ 의 중점이므로 ${rm \"P\" it}$ 는 ${rm \"AB\" it}$ 의 중점이다. 같은 방법으로 ${rm \"Q\" it}$ 는 ${rm \"AC\" it}$ 의 중점, ${rm \"R\" it}$ 는 ${rm \"DB\" it}$ 의 중점이다."
+   ],
+   [
+    "p",
+    "한 모서리의 길이가 $3 sqrt {2}$ 인 정육면체의 꼭짓점을 이용하여 ${rm \"A\" it} ( 0 , ` 0 , ` 0 )$ , ${rm \"B\" it} ( a , ` a , ` 0 )$ , ${rm \"C\" it} ( a , ` 0 , ` a )$ , ${rm \"D\" it} ( 0 , ` a , ` a )$ ( $a = 3 sqrt {2}$ )로 놓자."
+   ],
+   [
+    "p",
+    "$vec {{rm \"PQ\" it}} = {1} over {2} vec {{rm \"BC\" it}}$ , $vec {{rm \"PR\" it}} = {1} over {2} vec {{rm \"AD\" it}}$ 이고 $vec {{rm \"BC\" it}} cdot vec {{rm \"AD\" it}} = 0$ 이므로 삼각형 ${rm \"PQR\" it}$ 는 $angle {rm \"QPR\" it} = {pi} over {2}$ , $overline {{rm \"PQ\" it}} = overline {{rm \"PR\" it}} = 3$ 인 직각이등변삼각형이고 넓이는 ${9} over {2}$ 이다."
+   ],
+   [
+    "p",
+    "평면 ${rm \"PQR\" it}$ 는 $vec {{rm \"BC\" it}} = ( 0 , ` - a , ` a )$ , $vec {{rm \"AD\" it}} = ( 0 , ` a , ` a )$ 에 평행하므로 법선벡터는 $( 1 , ` 0 , ` 0 )$ 이다. 평면 $alpha$ 의 법선벡터는 $vec {{rm \"MP\" it}}$ ( ${rm \"M\" it}$ 은 ${rm \"BC\" it}$ 의 중점)이고 $vec {{rm \"MP\" it}} = {1} over {2} vec {{rm \"CA\" it}}$ 이므로 $( 1 , ` 0 , ` 1 )$ 방향이다."
+   ],
+   [
+    "p",
+    "두 평면이 이루는 각을 $theta$ 라 하면 $cos theta = {1} over {sqrt {2}}$ 이므로 $k = {9} over {2} times {1} over {sqrt {2}}$ , $k ^{2} = {81} over {8}$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $p + q = 8 + 81 = 89$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2024학년도 대학수학능력시험 30번 변형",
+  "intro": [
+   "구의 중심을 모서리 BC의 중점으로 옮겨 '지름에 대한 원주각'으로 교점이 모서리의 중점임을 찾게 하고, 두 평면의 법선벡터(중점연결선)로 정사영의 넓이를 구하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-37",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 5,
+  "type": "30번형",
+  "standards": [],
+  "answer": 272,
+  "body": [
+   [
+    "p",
+    "좌표평면 위의 두 점 ${rm \"A\" it} ( 6 , ` 0 )$ , ${rm \"B\" it} ( 0 , ` 8 )$ 에 대하여 두 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ 가"
+   ],
+   [
+    "eq",
+    "| vec {{rm \"AP\" it}} | = 2 , ` ` ` ` | vec {{rm \"BQ\" it}} | = 2 , ` ` ` ` vec {{rm \"OA\" it}} cdot vec {{rm \"OP\" it}} leq 36"
+   ],
+   [
+    "p",
+    "을 만족시킨다. $vec {{rm \"AP\" it}} cdot vec {{rm \"AQ\" it}}$ 의 값이 최소가 되도록 하는 두 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ 를 각각 ${rm \"P\" it} _{0}$ , ${rm \"Q\" it} _{0}$ 이라 하자. 선분 ${rm \"A\" it} {rm \"P\" it} _{0}$ 위를 움직이는 점 ${rm \"X\" it}$ 에 대하여 $vec {{rm \"XB\" it}} cdot vec {{rm \"X\" it} {rm \"Q\" it} _{0}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M + m$ 의 값을 구하시오. (단, ${rm \"O\" it}$ 는 원점이다.) [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$vec {{rm \"AP\" it}} cdot vec {{rm \"AQ\" it}} = vec {{rm \"AP\" it}} cdot vec {{rm \"AB\" it}} + vec {{rm \"AP\" it}} cdot vec {{rm \"BQ\" it}} geq vec {{rm \"AP\" it}} cdot vec {{rm \"AB\" it}} - 4$ 이고 등호는 $vec {{rm \"BQ\" it}} = - vec {{rm \"AP\" it}}$ 일 때 성립한다."
+   ],
+   [
+    "p",
+    "$vec {{rm \"AP\" it}} = 2 ( cos t , ` sin t )$ 라 하면 $vec {{rm \"OA\" it}} cdot vec {{rm \"OP\" it}} = 6 ( 6 + 2 cos t ) leq 36$ 에서 $cos t leq 0$ , 즉 ${pi} over {2} leq t leq {3 pi} over {2}$ 이다. $vec {{rm \"AB\" it}} = ( - 6 , ` 8 )$ 이므로"
+   ],
+   [
+    "eq",
+    "vec {{rm \"AP\" it}} cdot vec {{rm \"AB\" it}} = - 12 cos t + 16 sin t = 20 sin ( t - alpha ) ` ` ` ` LEFT ( cos alpha = {4} over {5} , ` sin alpha = {3} over {5} RIGHT )"
+   ],
+   [
+    "p",
+    "${pi} over {2} - alpha leq t - alpha leq {3 pi} over {2} - alpha$ 에서 $sin ( t - alpha )$ 는 $t = {3 pi} over {2}$ 일 때 최솟값 $- {4} over {5}$ 를 가지므로 최솟값은 $- 16$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $vec {{rm \"A\" it} {rm \"P\" it} _{0}} = ( 0 , ` - 2 )$ , $vec {{rm \"B\" it} {rm \"Q\" it} _{0}} = ( 0 , ` 2 )$ 이고 ${rm \"P\" it} _{0} ( 6 , ` - 2 )$ , ${rm \"Q\" it} _{0} ( 0 , ` 10 )$ 이다."
+   ],
+   [
+    "p",
+    "선분 ${rm \"A\" it} {rm \"P\" it} _{0}$ 위의 점 ${rm \"X\" it} ( 6 , ` y )$ $( - 2 leq y leq 0 )$ 에 대하여"
+   ],
+   [
+    "eq",
+    "vec {{rm \"XB\" it}} cdot vec {{rm \"X\" it} {rm \"Q\" it} _{0}} = ( - 6 , ` 8 - y ) cdot ( - 6 , ` 10 - y ) = 36 + ( 8 - y ) ( 10 - y )"
+   ],
+   [
+    "p",
+    "는 $y$ 가 감소할수록 증가하므로 $m = 36 + 80 = 116$ ( $y = 0$ ), $M = 36 + 120 = 156$ ( $y = - 2$ )이다."
+   ],
+   [
+    "p",
+    "따라서 $M + m = 272$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2022학년도 9월 모의평가 30번 변형",
+  "intro": [
+   "두 원의 반지름과 P의 제한 조건을 바꾸어 최소가 제한 영역의 경계에서 생기게 하고, 두 번째 단계에서 선분 위 점에 대한 내적의 최대·최소를 함께 묻도록 확장"
+  ]
+ },
+ {
+  "id": "추가30·기하-38",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 5,
+  "type": "30번형",
+  "standards": [],
+  "answer": 197,
+  "body": [
+   [
+    "p",
+    "좌표평면 위의 두 점 ${rm \"A\" it} ( 8 , ` 0 )$ , ${rm \"B\" it} ( 0 , ` 6 )$ 과 원점 ${rm \"O\" it}$ 에 대하여 삼각형 ${rm \"OAB\" it}$ 의 변 위를 움직이는 점 ${rm \"P\" it}$ 와 원 $x ^{2} + y ^{2} = 4$ 위의 점 중 $x$ 좌표가 $0$ 이상인 점 ${rm \"Q\" it}$ 가 있다. 점 ${rm \"E\" it} ( - 4 , ` 5 )$ 에 대하여 $| vec {{rm \"PQ\" it}} + vec {{rm \"OE\" it}} | ^{2}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M + m$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$vec {{rm \"PQ\" it}} + vec {{rm \"OE\" it}} = ( vec {{rm \"OQ\" it}} + vec {{rm \"OE\" it}} ) - vec {{rm \"OP\" it}}$ 이다. $vec {{rm \"OW\" it}} = vec {{rm \"OQ\" it}} + vec {{rm \"OE\" it}}$ 인 점 ${rm \"W\" it}$ 는 중심이 ${rm \"K\" it} ( - 4 , ` 5 )$ , 반지름의 길이가 $2$ 인 원 중 $x geq - 4$ 인 반원 위를 움직인다. 구하는 값은 $| vec {{rm \"PW\" it}} | ^{2}$ 이다."
+   ],
+   [
+    "p",
+    "최솟값: 점 ${rm \"K\" it}$ 와 삼각형 ${rm \"OAB\" it}$ 의 변 사이의 거리는 변 ${rm \"OB\" it}$ ( $x = 0$ )까지의 거리 $4$ 이고 수선의 발 $( 0 , ` 5 )$ 는 변 위에 있다. 따라서 $| vec {{rm \"PW\" it}} | geq 4 - 2 = 2$ 이고, ${rm \"W\" it} ( - 2 , ` 5 )$ (반원 위), ${rm \"P\" it} ( 0 , ` 5 )$ 일 때 등호가 성립한다. $m = 4$"
+   ],
+   [
+    "p",
+    "최댓값: 고정된 ${rm \"W\" it}$ 에 대하여 $| vec {{rm \"PW\" it}} |$ 는 삼각형의 꼭짓점에서 최대이다. 꼭짓점 ${rm \"V\" it}$ 에 대하여 $vec {{rm \"KW\" it}} = 2 ( cos t , ` sin t )$ $LEFT ( - {pi} over {2} leq t leq {pi} over {2} RIGHT )$ 로 놓으면"
+   ],
+   [
+    "eq",
+    "| vec {{rm \"VW\" it}} | ^{2} = | vec {{rm \"VK\" it}} | ^{2} + 4 + 4 ` vec {{rm \"VK\" it}} cdot ( cos t , ` sin t )"
+   ],
+   [
+    "p",
+    "${rm \"V\" it} = {rm \"A\" it}$ : $vec {{rm \"AK\" it}} = ( - 12 , ` 5 )$ , $- 12 cos t + 5 sin t$ 는 $cos t geq 0$ 에서 $t = {pi} over {2}$ 일 때 최대 $5$ 이므로 $169 + 4 + 20 = 193$ ."
+   ],
+   [
+    "p",
+    "${rm \"V\" it} = {rm \"O\" it}$ : $vec {{rm \"OK\" it}} = ( - 4 , ` 5 )$ 이므로 최대 $41 + 4 + 20 = 65$ . ${rm \"V\" it} = {rm \"B\" it}$ : $vec {{rm \"BK\" it}} = ( - 4 , ` - 1 )$ 이므로 최대 $17 + 4 + 4 = 25$ ."
+   ],
+   [
+    "p",
+    "따라서 $M = 193$ 이고 $M + m = 197$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2025학년도 9월 모의평가 30번 변형",
+  "intro": [
+   "한 도형을 반원으로 바꾸어, 최솟값은 원의 중심에서 변까지의 거리로, 최댓값은 반원의 제한 때문에 접점이 아닌 끝점에서 생기도록 설계"
+  ]
+ },
+ {
+  "id": "추가30·기하-39",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 5,
+  "type": "30번형",
+  "standards": [],
+  "answer": 18,
+  "body": [
+   [
+    "p",
+    "한 변의 길이가 $6$ 인 정삼각형 ${rm \"ABC\" it}$ 에서 선분 ${rm \"AB\" it}$ , ${rm \"BC\" it}$ , ${rm \"CA\" it}$ 를 각각 $1 : 2$ 로 내분하는 점을 ${rm \"D\" it}$ , ${rm \"E\" it}$ , ${rm \"F\" it}$ 라 하자. 네 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ , ${rm \"R\" it}$ , ${rm \"X\" it}$ 가 다음 조건을 만족시킨다."
+   ],
+   [
+    "p",
+    "(가) $| vec {{rm \"DP\" it}} | = 1$ , $| vec {{rm \"EQ\" it}} | = 2$ , $| vec {{rm \"FR\" it}} | = 3$"
+   ],
+   [
+    "p",
+    "(나) $vec {{rm \"AX\" it}} = vec {{rm \"PB\" it}} + vec {{rm \"QC\" it}} + vec {{rm \"RA\" it}}$"
+   ],
+   [
+    "p",
+    "$| vec {{rm \"AX\" it}} |$ 의 값이 최대가 되도록 하는 네 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ , ${rm \"R\" it}$ , ${rm \"X\" it}$ 에 대하여 삼각형 ${rm \"PQR\" it}$ 의 넓이의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M times m$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$vec {{rm \"PB\" it}} = vec {{rm \"DB\" it}} - vec {{rm \"DP\" it}}$ , $vec {{rm \"QC\" it}} = vec {{rm \"EC\" it}} - vec {{rm \"EQ\" it}}$ , $vec {{rm \"RA\" it}} = vec {{rm \"FA\" it}} - vec {{rm \"FR\" it}}$ 이고 $vec {{rm \"DB\" it}} + vec {{rm \"EC\" it}} + vec {{rm \"FA\" it}} = {2} over {3} ( vec {{rm \"AB\" it}} + vec {{rm \"BC\" it}} + vec {{rm \"CA\" it}} ) = vec {0}$ 이므로"
+   ],
+   [
+    "eq",
+    "vec {{rm \"AX\" it}} = - ( vec {{rm \"DP\" it}} + vec {{rm \"EQ\" it}} + vec {{rm \"FR\" it}} ) , ` ` ` ` | vec {{rm \"AX\" it}} | leq 1 + 2 + 3 = 6"
+   ],
+   [
+    "p",
+    "등호는 어떤 단위벡터 $vec {e}$ 에 대하여 $vec {{rm \"DP\" it}} = vec {e}$ , $vec {{rm \"EQ\" it}} = 2 vec {e}$ , $vec {{rm \"FR\" it}} = 3 vec {e}$ 일 때 성립하고, $vec {e}$ 의 방향은 자유롭다."
+   ],
+   [
+    "p",
+    "${rm \"A\" it} ( 0 , ` 0 )$ , ${rm \"B\" it} ( 6 , ` 0 )$ , ${rm \"C\" it} ( 3 , ` 3 sqrt {3} )$ 으로 놓으면 ${rm \"D\" it} ( 2 , ` 0 )$ , ${rm \"E\" it} ( 5 , ` sqrt {3} )$ , ${rm \"F\" it} ( 2 , ` 2 sqrt {3} )$ 이고 $vec {e} = ( cos theta , ` sin theta )$ 에 대하여"
+   ],
+   [
+    "eq",
+    "vec {{rm \"PQ\" it}} = ( 3 + cos theta , ` sqrt {3} + sin theta ) , ` ` ` ` vec {{rm \"PR\" it}} = ( 2 cos theta , ` 2 sqrt {3} + 2 sin theta )"
+   ],
+   [
+    "p",
+    "삼각형 ${rm \"PQR\" it}$ 의 넓이는"
+   ],
+   [
+    "eq",
+    "{1} over {2} LEFT | ( 3 + cos theta ) ( 2 sqrt {3} + 2 sin theta ) - ( sqrt {3} + sin theta ) times 2 cos theta RIGHT | = 3 | sqrt {3} + sin theta |"
+   ],
+   [
+    "p",
+    "따라서 $M = 3 sqrt {3} + 3$ , $m = 3 sqrt {3} - 3$ 이고 $M times m = 27 - 9 = 18$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2024학년도 6월 모의평가 30번 변형",
+  "intro": [
+   "세 원의 반지름을 $1 , ` 2 , ` 3$ 으로 달리하여 최대일 때의 배치가 하나로 정해지지 않게 하고, 그 배치들에서 넓이가 변하는 범위를 묻도록 확장"
+  ]
+ },
+ {
+  "id": "추가30·기하-40",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 5,
+  "type": "30번형",
+  "standards": [],
+  "answer": 60,
+  "body": [
+   [
+    "p",
+    "한 변의 길이가 $4$ 인 정사각형 ${rm \"ABCD\" it}$ 에서 선분 ${rm \"AB\" it}$ , ${rm \"BC\" it}$ , ${rm \"CD\" it}$ , ${rm \"DA\" it}$ 를 각각 $1 : 3$ 으로 내분하는 점을 ${rm \"E\" it}$ , ${rm \"F\" it}$ , ${rm \"G\" it}$ , ${rm \"H\" it}$ 라 하자. 다섯 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ , ${rm \"R\" it}$ , ${rm \"T\" it}$ , ${rm \"X\" it}$ 가 다음 조건을 만족시킨다."
+   ],
+   [
+    "p",
+    "(가) $| vec {{rm \"EP\" it}} | = 1$ , $| vec {{rm \"FQ\" it}} | = 2$ , $| vec {{rm \"GR\" it}} | = 3$ , $| vec {{rm \"HT\" it}} | = 4$"
+   ],
+   [
+    "p",
+    "(나) $vec {{rm \"AX\" it}} = vec {{rm \"PB\" it}} + vec {{rm \"QC\" it}} + vec {{rm \"RD\" it}} + vec {{rm \"TA\" it}}$"
+   ],
+   [
+    "p",
+    "$| vec {{rm \"AX\" it}} |$ 의 값이 최대가 되도록 하는 다섯 점에 대하여 사각형 ${rm \"PQRT\" it}$ 의 넓이의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M times m$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$vec {{rm \"PB\" it}} + vec {{rm \"QC\" it}} + vec {{rm \"RD\" it}} + vec {{rm \"TA\" it}} = ( vec {{rm \"EB\" it}} + vec {{rm \"FC\" it}} + vec {{rm \"GD\" it}} + vec {{rm \"HA\" it}} ) - ( vec {{rm \"EP\" it}} + vec {{rm \"FQ\" it}} + vec {{rm \"GR\" it}} + vec {{rm \"HT\" it}} )$ 이고 $vec {{rm \"EB\" it}} + vec {{rm \"FC\" it}} + vec {{rm \"GD\" it}} + vec {{rm \"HA\" it}} = {3} over {4} ( vec {{rm \"AB\" it}} + vec {{rm \"BC\" it}} + vec {{rm \"CD\" it}} + vec {{rm \"DA\" it}} ) = vec {0}$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $| vec {{rm \"AX\" it}} | leq 1 + 2 + 3 + 4 = 10$ 이고, 등호는 단위벡터 $vec {e} = ( cos theta , ` sin theta )$ 에 대하여 $vec {{rm \"EP\" it}} = vec {e}$ , $vec {{rm \"FQ\" it}} = 2 vec {e}$ , $vec {{rm \"GR\" it}} = 3 vec {e}$ , $vec {{rm \"HT\" it}} = 4 vec {e}$ 일 때 성립한다."
+   ],
+   [
+    "p",
+    "${rm \"A\" it} ( 0 , ` 4 )$ , ${rm \"B\" it} ( 0 , ` 0 )$ , ${rm \"C\" it} ( 4 , ` 0 )$ , ${rm \"D\" it} ( 4 , ` 4 )$ 로 놓으면 ${rm \"E\" it} ( 0 , ` 3 )$ , ${rm \"F\" it} ( 1 , ` 0 )$ , ${rm \"G\" it} ( 4 , ` 1 )$ , ${rm \"H\" it} ( 3 , ` 4 )$ 이고 두 대각선은"
+   ],
+   [
+    "eq",
+    "vec {{rm \"PR\" it}} = ( 4 , ` - 2 ) + 2 vec {e} , ` ` ` ` vec {{rm \"QT\" it}} = ( 2 , ` 4 ) + 2 vec {e}"
+   ],
+   [
+    "p",
+    "사각형 ${rm \"PQRT\" it}$ 의 넓이는 두 대각선 벡터로 만든 평행사변형의 넓이의 ${1} over {2}$ 이므로"
+   ],
+   [
+    "eq",
+    "{1} over {2} LEFT | ( 4 + 2 cos theta ) ( 4 + 2 sin theta ) - ( - 2 + 2 sin theta ) ( 2 + 2 cos theta ) RIGHT | = | 10 + 6 cos theta + 2 sin theta |"
+   ],
+   [
+    "p",
+    "$6 cos theta + 2 sin theta$ 의 범위는 $- 2 sqrt {10}$ 이상 $2 sqrt {10}$ 이하이므로 $M = 10 + 2 sqrt {10}$ , $m = 10 - 2 sqrt {10}$ 이고 $M times m = 100 - 40 = 60$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2024학년도 6월 모의평가 30번 변형",
+  "intro": [
+   "정사각형과 네 원으로 확장하고, 사각형의 넓이를 두 대각선 벡터로 나타내어 방향에 따른 넓이의 범위를 구하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-41",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 5,
+  "type": "30번형",
+  "standards": [],
+  "answer": 65,
+  "body": [
+   [
+    "p",
+    "좌표평면에서 $overline {{rm \"AB\" it}} = overline {{rm \"AC\" it}} = 10$ , $overline {{rm \"BC\" it}} = 16$ 인 삼각형 ${rm \"ABC\" it}$ 가 있다. 선분 ${rm \"AB\" it}$ 위의 점 ${rm \"P\" it}$ , 선분 ${rm \"BC\" it}$ 위의 점 ${rm \"Q\" it}$ , 선분 ${rm \"CA\" it}$ 위의 점 ${rm \"R\" it}$ 가 다음 조건을 만족시킨다."
+   ],
+   [
+    "p",
+    "(가) $( vec {{rm \"PB\" it}} + vec {{rm \"PQ\" it}} ) cdot vec {{rm \"BC\" it}} = 0$ , $( vec {{rm \"RC\" it}} + vec {{rm \"RQ\" it}} ) cdot vec {{rm \"BC\" it}} = 0$"
+   ],
+   [
+    "p",
+    "(나) $| vec {{rm \"PQ\" it}} | = 3 | vec {{rm \"QR\" it}} |$"
+   ],
+   [
+    "p",
+    "$| vec {{rm \"XP\" it}} + vec {{rm \"XR\" it}} | = 4 | vec {{rm \"XQ\" it}} |$ 를 만족시키는 점 ${rm \"X\" it}$ 에 대하여 $| vec {{rm \"AX\" it}} |$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M times m$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "문항 11과 같이 (가)에서 $overline {{rm \"PB\" it}} = overline {{rm \"PQ\" it}}$ , $overline {{rm \"RC\" it}} = overline {{rm \"RQ\" it}}$ 이다. ${rm \"B\" it} ( 0 , ` 0 )$ , ${rm \"C\" it} ( 16 , ` 0 )$ , ${rm \"A\" it} ( 8 , ` 6 )$ , ${rm \"Q\" it} ( q , ` 0 )$ 으로 놓으면 직선 ${rm \"AB\" it}$ 는 $y = {3} over {4} x$ , 직선 ${rm \"AC\" it}$ 는 $y = {3} over {4} ( 16 - x )$ 이므로"
+   ],
+   [
+    "eq",
+    "{rm \"P\" it} LEFT ( {q} over {2} , ` {3 q} over {8} RIGHT ) , ` ` ` ` {rm \"R\" it} LEFT ( {q + 16} over {2} , ` {3 ( 16 - q )} over {8} RIGHT ) , ` ` ` ` overline {{rm \"PQ\" it}} = {5 q} over {8} , ` ` ` ` overline {{rm \"QR\" it}} = {5 ( 16 - q )} over {8}"
+   ],
+   [
+    "p",
+    "(나)에서 $q = 3 ( 16 - q )$ , $q = 12$ 이므로 ${rm \"P\" it} LEFT ( 6 , ` {9} over {2} RIGHT )$ , ${rm \"Q\" it} ( 12 , ` 0 )$ , ${rm \"R\" it} LEFT ( 14 , ` {3} over {2} RIGHT )$ 이다."
+   ],
+   [
+    "p",
+    "선분 ${rm \"PR\" it}$ 의 중점 ${rm \"N\" it} ( 10 , ` 3 )$ 에 대하여 $| vec {{rm \"XP\" it}} + vec {{rm \"XR\" it}} | = 2 | vec {{rm \"XN\" it}} |$ 이므로 조건은 $| vec {{rm \"XN\" it}} | = 2 | vec {{rm \"XQ\" it}} |$ , 즉 $( x - 10 ) ^{2} + ( y - 3 ) ^{2} = 4 LBRACE ( x - 12 ) ^{2} + y ^{2} RBRACE$ 이고 정리하면"
+   ],
+   [
+    "eq",
+    "x ^{2} + y ^{2} - {76} over {3} x + 2 y + {467} over {3} = 0"
+   ],
+   [
+    "p",
+    "즉"
+   ],
+   [
+    "eq",
+    "LEFT ( x - {38} over {3} RIGHT ) ^{2} + ( y + 1 ) ^{2} = {52} over {9}"
+   ],
+   [
+    "p",
+    "중심을 ${rm \"K\" it}$ , 반지름의 길이를 $r$ 이라 하면 $M times m = ( overline {{rm \"AK\" it}} + r ) ( overline {{rm \"AK\" it}} - r ) = overline {{rm \"AK\" it}} ^{2} - r ^{2}$ 이고"
+   ],
+   [
+    "eq",
+    "overline {{rm \"AK\" it}} ^{2} - r ^{2} = LEFT ( {14} over {3} RIGHT ) ^{2} + 7 ^{2} - {52} over {9} = {196 + 441 - 52} over {9} = 65"
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2026학년도 9월 모의평가 30번 변형",
+  "intro": [
+   "마지막 조건을 '두 점까지의 거리의 비가 일정한 점(아폴로니오스의 원)'으로 바꾸어 원의 방정식을 직접 세우고, 원 밖의 점에서의 최대·최소의 곱을 구하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-42",
+  "subject": "기하",
+  "topic": "이차곡선과 벡터",
+  "stars": 5,
+  "type": "30번형",
+  "standards": [],
+  "answer": 800,
+  "body": [
+   [
+    "p",
+    "두 초점이 ${rm \"F\" it} ( 3 , ` 0 )$ , ${rm \"F\" it} ' ( - 3 , ` 0 )$ 인 타원 ${x ^{2}} over {25} + {y ^{2}} over {16} = 1$ 위의 점 중 $x$ 좌표와 $y$ 좌표가 모두 $0$ 이상인 점 ${rm \"P\" it}$ 에 대하여 점 ${rm \"X\" it}$ 가"
+   ],
+   [
+    "eq",
+    "vec {{rm \"PX\" it}} = {| vec {{rm \"PF\" it}} |} over {| vec {{rm \"P\" it} {rm \"F\" it} '} |} ` vec {{rm \"F\" it} ' {rm \"P\" it}}"
+   ],
+   [
+    "p",
+    "를 만족시킨다. 선분 ${rm \"FX\" it}$ 의 중점을 ${rm \"N\" it}$ 이라 할 때, 두 점 ${rm \"A\" it} ( 9 , ` 8 )$ , ${rm \"B\" it} ( 7 , ` 4 )$ 에 대하여 $vec {{rm \"NA\" it}} cdot vec {{rm \"NB\" it}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 하자. $M times m$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$vec {{rm \"F\" it} ' {rm \"X\" it}} = vec {{rm \"F\" it} ' {rm \"P\" it}} + vec {{rm \"PX\" it}} = LEFT ( 1 + {| vec {{rm \"PF\" it}} |} over {| vec {{rm \"P\" it} {rm \"F\" it} '} |} RIGHT ) vec {{rm \"F\" it} ' {rm \"P\" it}}$ 이므로 $| vec {{rm \"F\" it} ' {rm \"X\" it}} | = | vec {{rm \"P\" it} {rm \"F\" it} '} | + | vec {{rm \"PF\" it}} | = 10$ 이다. ${rm \"O\" it}$ 는 선분 ${rm \"FF '\" it}$ 의 중점이므로 $vec {{rm \"ON\" it}} = {1} over {2} vec {{rm \"F\" it} ' {rm \"X\" it}} = 5 ( cos theta , ` sin theta )$ ( $theta$ 는 $vec {{rm \"F\" it} ' {rm \"P\" it}}$ 의 방향각)이다."
+   ],
+   [
+    "p",
+    "점 ${rm \"P\" it}$ 가 $( 5 , ` 0 )$ 에서 $( 0 , ` 4 )$ 까지 움직이므로 $0 leq theta leq theta _{0}$ , $cos theta _{0} = {3} over {5}$ , $sin theta _{0} = {4} over {5}$ 이다."
+   ],
+   [
+    "p",
+    "선분 ${rm \"AB\" it}$ 의 중점 ${rm \"K\" it} ( 8 , ` 6 )$ 에 대하여 $vec {{rm \"NA\" it}} cdot vec {{rm \"NB\" it}} = | vec {{rm \"NK\" it}} | ^{2} - 5$ 이고"
+   ],
+   [
+    "eq",
+    "| vec {{rm \"NK\" it}} | ^{2} = 25 + 100 - 2 vec {{rm \"ON\" it}} cdot vec {{rm \"OK\" it}} = 125 - 100 cos ( theta - beta ) ` ` ` ` LEFT ( cos beta = {4} over {5} , ` sin beta = {3} over {5} RIGHT )"
+   ],
+   [
+    "p",
+    "$0 < beta < theta _{0}$ 이므로 $cos ( theta - beta )$ 의 최댓값은 $1$ , 최솟값은 끝점에서 $theta = 0$ 일 때 ${4} over {5}$ , $theta = theta _{0}$ 일 때 ${24} over {25}$ 중 작은 ${4} over {5}$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $25 leq | vec {{rm \"NK\" it}} | ^{2} leq 45$ , $20 leq vec {{rm \"NA\" it}} cdot vec {{rm \"NB\" it}} leq 40$ 이고 $M times m = 800$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2025학년도 6월 모의평가 30번 변형",
+  "intro": [
+   "타원의 정의와 중점연결 정리로 점 N이 원 위의 호를 그림을 찾은 뒤, 내적을 '중점까지의 거리'로 바꾸어 호의 내부 점과 끝점을 비교하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-43",
+  "subject": "기하",
+  "topic": "이차곡선과 벡터",
+  "stars": 5,
+  "type": "30번형",
+  "standards": [],
+  "answer": 160,
+  "body": [
+   [
+    "p",
+    "두 초점이 ${rm \"F\" it} ( 5 , ` 0 )$ , ${rm \"F\" it} ' ( - 5 , ` 0 )$ 인 쌍곡선 ${x ^{2}} over {16} - {y ^{2}} over {9} = 1$ 위의 점 중 $x$ 좌표가 양수이고 $y$ 좌표가 $0$ 이상인 점 ${rm \"P\" it}$ 에 대하여 선분 ${rm \"PF '\" it}$ 위의 점 ${rm \"Q\" it}$ 가 $| vec {{rm \"PQ\" it}} | = | vec {{rm \"PF\" it}} |$ 를 만족시킨다. 선분 ${rm \"FQ\" it}$ 의 중점을 ${rm \"N\" it}$ 이라 할 때, 두 점 ${rm \"A\" it} ( 14 , ` 6 )$ , ${rm \"B\" it} ( 10 , ` 4 )$ 에 대하여 $vec {{rm \"NA\" it}} cdot vec {{rm \"NB\" it}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 하자. $M + m$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$| vec {{rm \"P\" it} {rm \"F\" it} '} | - | vec {{rm \"PF\" it}} | = 8$ 이고 $| vec {{rm \"PQ\" it}} | = | vec {{rm \"PF\" it}} |$ 이므로 $| vec {{rm \"F\" it} ' {rm \"Q\" it}} | = 8$ , $vec {{rm \"ON\" it}} = {1} over {2} vec {{rm \"F\" it} ' {rm \"Q\" it}}$ 에서 $| vec {{rm \"ON\" it}} | = 4$ 이고 $vec {{rm \"ON\" it}}$ 은 $vec {{rm \"F\" it} ' {rm \"P\" it}}$ 와 같은 방향이다."
+   ],
+   [
+    "p",
+    "${rm \"P\" it}$ 가 꼭짓점 $( 4 , ` 0 )$ 에서 출발하여 오른쪽 가지의 위쪽을 따라 움직이면 $vec {{rm \"F\" it} ' {rm \"P\" it}}$ 의 방향각 $theta$ 는 $0$ 에서 점근선의 방향각 $alpha$ ( $tan alpha = {3} over {4}$ )에 한없이 가까워지므로 $0 leq theta < alpha$ 이다."
+   ],
+   [
+    "p",
+    "선분 ${rm \"AB\" it}$ 의 중점 ${rm \"K\" it} ( 12 , ` 5 )$ 에 대하여 $vec {{rm \"NA\" it}} cdot vec {{rm \"NB\" it}} = | vec {{rm \"NK\" it}} | ^{2} - 5$ 이고"
+   ],
+   [
+    "eq",
+    "| vec {{rm \"NK\" it}} | ^{2} = 16 + 169 - 8 times 13 cos ( theta - beta ) = 185 - 104 cos ( theta - beta ) ` ` ` ` LEFT ( tan beta = {5} over {12} RIGHT )"
+   ],
+   [
+    "p",
+    "$0 < beta < alpha$ 이므로 $cos ( theta - beta )$ 의 최댓값은 $1$ ( $theta = beta$ )이다. 최솟값은 $theta = 0$ 일 때 ${12} over {13} = {60} over {65}$ 이고, $theta -> alpha$ 일 때의 극한 ${4} over {5} cdot {12} over {13} + {3} over {5} cdot {5} over {13} = {63} over {65}$ 보다 작으므로 최솟값 ${12} over {13}$ 은 실제로 얻어진다."
+   ],
+   [
+    "p",
+    "따라서 $81 leq | vec {{rm \"NK\" it}} | ^{2} leq 89$ , $76 leq vec {{rm \"NA\" it}} cdot vec {{rm \"NB\" it}} leq 84$ 이고 $M + m = 160$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2025학년도 6월 모의평가 30번 변형",
+  "intro": [
+   "점 N의 자취가 점근선 방향에서 끊기는 열린 호가 되도록 하고, 최댓값·최솟값이 실제로 존재하는지(끝점의 포함 여부)까지 판단하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-44",
+  "subject": "기하",
+  "topic": "공간도형과 공간좌표",
+  "stars": 5,
+  "type": "30번형",
+  "standards": [],
+  "answer": 432,
+  "body": [
+   [
+    "p",
+    "한 모서리의 길이가 $6$ 인 정사면체 ${rm \"ABCD\" it}$ 가 있다. 평면 ${rm \"BCD\" it}$ 위의 점 ${rm \"X\" it}$ 가"
+   ],
+   [
+    "eq",
+    "| vec {{rm \"XA\" it}} | ^{2} + | vec {{rm \"XB\" it}} | ^{2} + | vec {{rm \"XC\" it}} | ^{2} + | vec {{rm \"XD\" it}} | ^{2} = 96"
+   ],
+   [
+    "p",
+    "을 만족시킬 때, $vec {{rm \"XA\" it}} cdot vec {{rm \"XB\" it}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 하자. $( M - m ) ^{2}$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "정사면체의 무게중심을 ${rm \"O\" it}$ 라 하면 $vec {{rm \"OA\" it}} + vec {{rm \"OB\" it}} + vec {{rm \"OC\" it}} + vec {{rm \"OD\" it}} = vec {0}$ 이므로"
+   ],
+   [
+    "eq",
+    "sum | vec {{rm \"XA\" it}} | ^{2} = 4 | vec {{rm \"XO\" it}} | ^{2} + sum | vec {{rm \"OA\" it}} | ^{2} = 4 | vec {{rm \"XO\" it}} | ^{2} + 4 times {27} over {2}"
+   ],
+   [
+    "p",
+    "( $| vec {{rm \"OA\" it}} | = {3} over {4} times 2 sqrt {6} = {3 sqrt {6}} over {2}$ ). 따라서 $| vec {{rm \"XO\" it}} | ^{2} = {21} over {2}$ 이다."
+   ],
+   [
+    "p",
+    "삼각형 ${rm \"BCD\" it}$ 의 무게중심 ${rm \"G\" it}$ 에 대하여 $overline {{rm \"OG\" it}} = {1} over {4} times 2 sqrt {6} = {sqrt {6}} over {2}$ 이고 $vec {{rm \"OG\" it}}$ 는 평면 ${rm \"BCD\" it}$ 에 수직이므로 $| vec {{rm \"XG\" it}} | ^{2} = {21} over {2} - {3} over {2} = 9$ , 즉 점 ${rm \"X\" it}$ 는 평면 ${rm \"BCD\" it}$ 위에서 중심이 ${rm \"G\" it}$ , 반지름의 길이가 $3$ 인 원 위에 있다."
+   ],
+   [
+    "p",
+    "선분 ${rm \"AB\" it}$ 의 중점 ${rm \"K\" it}$ 에 대하여 $vec {{rm \"XA\" it}} cdot vec {{rm \"XB\" it}} = | vec {{rm \"XK\" it}} | ^{2} - 9$ 이고, ${rm \"K\" it}$ 의 평면 ${rm \"BCD\" it}$ 위로의 정사영 ${rm \"K\" it} '$ 은 선분 ${rm \"BG\" it}$ 의 중점, $overline {{rm \"K\" it} {rm \"K\" it} '} = sqrt {6}$ , $overline {{rm \"G\" it} {rm \"K\" it} '} = sqrt {3}$ 이다."
+   ],
+   [
+    "p",
+    "$| vec {{rm \"XK\" it}} | ^{2} = 6 + | vec {{rm \"X\" it} {rm \"K\" it} '} | ^{2}$ 이고 $3 - sqrt {3} leq | vec {{rm \"X\" it} {rm \"K\" it} '} | leq 3 + sqrt {3}$ 이므로"
+   ],
+   [
+    "eq",
+    "M = 6 + ( 3 + sqrt {3} ) ^{2} - 9 = 9 + 6 sqrt {3} , ` ` ` ` m = 9 - 6 sqrt {3}"
+   ],
+   [
+    "p",
+    "따라서 $( M - m ) ^{2} = ( 12 sqrt {3} ) ^{2} = 432$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2024학년도 대학수학능력시험 30번 변형",
+  "intro": [
+   "거리의 제곱의 합이 일정한 점이 무게중심을 중심으로 하는 구 위에 있음을 이용하고, 그 구와 평면의 교선(원) 위에서 내적의 범위를 구하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-45",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 5,
+  "type": "30번형",
+  "standards": [],
+  "answer": 72,
+  "body": [
+   [
+    "p",
+    "원 $x ^{2} + y ^{2} = 25$ 위의 세 점 ${rm \"A\" it} ( 0 , ` 5 )$ , ${rm \"B\" it} ( - 4 , ` - 3 )$ , ${rm \"C\" it} ( 4 , ` - 3 )$ 에 대하여 점 ${rm \"X\" it}$ 가"
+   ],
+   [
+    "eq",
+    "vec {{rm \"XA\" it}} cdot vec {{rm \"XB\" it}} = vec {{rm \"XB\" it}} cdot vec {{rm \"XC\" it}} = vec {{rm \"XC\" it}} cdot vec {{rm \"XA\" it}}"
+   ],
+   [
+    "p",
+    "를 만족시킨다. 원 $x ^{2} + y ^{2} = 25$ 위의 점 중 $y$ 좌표가 $- 3$ 이하인 점 ${rm \"P\" it}$ 에 대하여 $vec {{rm \"PA\" it}} cdot vec {{rm \"PX\" it}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M + m$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "문항 29와 같이 점 ${rm \"X\" it}$ 는 삼각형 ${rm \"ABC\" it}$ 의 수심이다. 점 ${rm \"A\" it}$ 를 지나고 ${rm \"BC\" it}$ 에 수직인 직선은 $x = 0$ , 점 ${rm \"B\" it}$ 를 지나고 $vec {{rm \"CA\" it}} = ( - 4 , ` 8 )$ 에 수직인 직선은 $- 4 ( x + 4 ) + 8 ( y + 3 ) = 0$ 이므로 ${rm \"X\" it} ( 0 , ` - 1 )$ 이다."
+   ],
+   [
+    "p",
+    "선분 ${rm \"AX\" it}$ 의 중점 ${rm \"K\" it} ( 0 , ` 2 )$ 에 대하여 $vec {{rm \"PA\" it}} cdot vec {{rm \"PX\" it}} = | vec {{rm \"PK\" it}} | ^{2} - 9$ 이다."
+   ],
+   [
+    "p",
+    "${rm \"P\" it} ( x , ` y )$ 가 원 위에 있으므로 $| vec {{rm \"PK\" it}} | ^{2} = x ^{2} + ( y - 2 ) ^{2} = 25 - y ^{2} + y ^{2} - 4 y + 4 = 29 - 4 y$"
+   ],
+   [
+    "p",
+    "$- 5 leq y leq - 3$ 이므로 $41 leq | vec {{rm \"PK\" it}} | ^{2} leq 49$ , $32 leq vec {{rm \"PA\" it}} cdot vec {{rm \"PX\" it}} leq 40$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $M + m = 72$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2026학년도 대학수학능력시험 30번 변형",
+  "intro": [
+   "원 위의 점에 대한 내적 문제에 '수심' 조건을 결합하여, 특수점을 찾은 뒤 원 위 점의 $y$ 좌표만으로 내적이 결정됨을 보이게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-46",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 5,
+  "type": "30번형",
+  "standards": [],
+  "answer": 700,
+  "body": [
+   [
+    "p",
+    "좌표평면 위의 세 점 ${rm \"A\" it} ( 0 , ` 0 )$ , ${rm \"B\" it} ( 12 , ` 0 )$ , ${rm \"C\" it} ( 0 , ` 9 )$ 에 대하여 삼각형 ${rm \"ABC\" it}$ 의 내부 또는 둘레 위의 점 ${rm \"X\" it}$ 가"
+   ],
+   [
+    "eq",
+    "| vec {{rm \"XA\" it}} | ^{2} + | vec {{rm \"XB\" it}} | ^{2} + | vec {{rm \"XC\" it}} | ^{2} = 198"
+   ],
+   [
+    "p",
+    "을 만족시킨다. $vec {{rm \"XB\" it}} cdot vec {{rm \"XC\" it}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M times m$ 의 값을 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "삼각형 ${rm \"ABC\" it}$ 의 무게중심 ${rm \"G\" it} ( 4 , ` 3 )$ 에 대하여 $sum | vec {{rm \"XA\" it}} | ^{2} = 3 | vec {{rm \"XG\" it}} | ^{2} + ( 25 + 73 + 52 ) = 3 | vec {{rm \"XG\" it}} | ^{2} + 150$ 이므로 $| vec {{rm \"XG\" it}} | = 4$ 이다."
+   ],
+   [
+    "p",
+    "선분 ${rm \"BC\" it}$ 의 중점 ${rm \"N\" it} LEFT ( 6 , ` {9} over {2} RIGHT )$ 에 대하여 $vec {{rm \"XB\" it}} cdot vec {{rm \"XC\" it}} = | vec {{rm \"XN\" it}} | ^{2} - {225} over {4}$ 이고, $| vec {{rm \"GN\" it}} | = {5} over {2}$ 이다."
+   ],
+   [
+    "p",
+    "최댓값: $| vec {{rm \"XN\" it}} |$ 이 최대인 점은 ${rm \"X\" it} = {rm \"G\" it} - 4 times {vec {{rm \"GN\" it}}} over {| vec {{rm \"GN\" it}} |} = LEFT ( {4} over {5} , ` {3} over {5} RIGHT )$ 으로 삼각형 내부에 있으므로 $| vec {{rm \"XN\" it}} | = {13} over {2}$ , $M = {169} over {4} - {225} over {4} = - 14$ 이다."
+   ],
+   [
+    "p",
+    "최솟값: $| vec {{rm \"XN\" it}} |$ 이 최소인 원 위의 점 $LEFT ( {36} over {5} , ` {27} over {5} RIGHT )$ 은 $3 x + 4 y > 36$ 이므로 삼각형 밖에 있다. 원과 직선 ${rm \"BC\" it}$ ( $3 x + 4 y = 36$ )의 교점은 $( 8 , ` 3 )$ , $LEFT ( {72} over {25} , ` {171} over {25} RIGHT )$ 이고, 원 중 삼각형 밖으로 나가는 부분은 이 두 점 사이의 호이다. $| vec {{rm \"XN\" it}} |$ 은 $vec {{rm \"GX\" it}}$ 와 $vec {{rm \"GN\" it}}$ 이 이루는 각이 작을수록 작으므로 남은 호에서는 끝점 $( 8 , ` 3 )$ 에서 최소이다. ( $vec {{rm \"GX\" it}} = ( 4 , ` 0 )$ 과 $vec {{rm \"GN\" it}}$ 이 이루는 각의 코사인은 ${4} over {5}$ 로, 다른 끝점보다 크다. 또 $y < 0$ 인 부분은 $vec {{rm \"GN\" it}}$ 과 이루는 각이 더 크다.)"
+   ],
+   [
+    "p",
+    "$| vec {{rm \"XN\" it}} | ^{2} = 4 + {9} over {4} = {25} over {4}$ 이므로 $m = {25} over {4} - {225} over {4} = - 50$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $M times m = 700$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2026학년도 9월 모의평가 30번 변형",
+  "intro": [
+   "삼각형과 벡터 조건으로 점의 자취(무게중심을 중심으로 하는 원)를 찾게 하고, 삼각형 밖으로 나가는 호를 제외해야 최솟값이 바뀌도록 설계"
+  ]
+ },
+ {
+  "id": "추가30·기하-47",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 5,
+  "type": "30번형",
+  "standards": [],
+  "answer": 189,
+  "body": [
+   [
+    "p",
+    "좌표평면 위의 두 점 ${rm \"A\" it} ( 3 , ` 0 )$ , ${rm \"B\" it} ( 0 , ` 4 )$ 에 대하여 두 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ 가"
+   ],
+   [
+    "eq",
+    "| vec {{rm \"AP\" it}} | = 1 , ` ` ` ` | vec {{rm \"BQ\" it}} | = 2 , ` ` ` ` vec {{rm \"AP\" it}} cdot vec {{rm \"OB\" it}} geq 0"
+   ],
+   [
+    "p",
+    "을 만족시킨다. $vec {{rm \"AP\" it}} cdot vec {{rm \"AQ\" it}}$ 의 값이 최소가 되도록 하는 두 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ 를 각각 ${rm \"P\" it} _{0}$ , ${rm \"Q\" it} _{0}$ 이라 하자. 선분 ${rm \"A\" it} {rm \"P\" it} _{0}$ 위의 점 ${rm \"X\" it}$ 에 대하여 $vec {{rm \"BX\" it}} cdot vec {{rm \"B\" it} {rm \"Q\" it} _{0}} geq - 7$ 일 때, $| vec {{rm \"Q\" it} _{0} {rm \"X\" it}} | ^{2}$ 의 최댓값은 ${q} over {p}$ 이다. $p + q$ 의 값을 구하시오. (단, ${rm \"O\" it}$ 는 원점이고, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "$vec {{rm \"AP\" it}} cdot vec {{rm \"AQ\" it}} = vec {{rm \"AP\" it}} cdot vec {{rm \"AB\" it}} + vec {{rm \"AP\" it}} cdot vec {{rm \"BQ\" it}} geq vec {{rm \"AP\" it}} cdot vec {{rm \"AB\" it}} - 2$ (등호: $vec {{rm \"BQ\" it}} = - 2 vec {{rm \"AP\" it}}$ )"
+   ],
+   [
+    "p",
+    "$vec {{rm \"AP\" it}} = ( cos t , ` sin t )$ 라 하면 $vec {{rm \"AP\" it}} cdot vec {{rm \"OB\" it}} = 4 sin t geq 0$ 에서 $0 leq t leq pi$ 이고, $vec {{rm \"AB\" it}} = ( - 3 , ` 4 )$ 에서"
+   ],
+   [
+    "eq",
+    "vec {{rm \"AP\" it}} cdot vec {{rm \"AB\" it}} = - 3 cos t + 4 sin t geq - 3 cos t geq - 3"
+   ],
+   [
+    "p",
+    "이므로 $t = 0$ 일 때 최솟값 $- 3$ 이다. 따라서 ${rm \"P\" it} _{0} ( 4 , ` 0 )$ , ${rm \"Q\" it} _{0} ( 0 , ` 4 ) + ( - 2 , ` 0 ) = ( - 2 , ` 4 )$ 이다."
+   ],
+   [
+    "p",
+    "선분 ${rm \"A\" it} {rm \"P\" it} _{0}$ 위의 점 ${rm \"X\" it} ( 3 + s , ` 0 )$ $( 0 leq s leq 1 )$ 에 대하여 $vec {{rm \"BX\" it}} cdot vec {{rm \"B\" it} {rm \"Q\" it} _{0}} = ( 3 + s , ` - 4 ) cdot ( - 2 , ` 0 ) = - 6 - 2 s geq - 7$ 에서 $s leq {1} over {2}$ 이다."
+   ],
+   [
+    "p",
+    "$| vec {{rm \"Q\" it} _{0} {rm \"X\" it}} | ^{2} = ( 5 + s ) ^{2} + 16$ 은 $s = {1} over {2}$ 일 때 최대 ${121} over {4} + 16 = {185} over {4}$ 이다."
+   ],
+   [
+    "p",
+    "따라서 $p + q = 4 + 185 = 189$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2022학년도 9월 모의평가 30번 변형",
+  "intro": [
+   "두 원의 위치와 반지름, P의 제한 조건(반원)을 바꾸고, 두 번째 단계의 조건을 일차부등식으로 바꾸어 선분의 일부에서 최댓값을 찾게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-48",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 5,
+  "type": "30번형",
+  "standards": [],
+  "answer": 26,
+  "body": [
+   [
+    "p",
+    "좌표평면에서 길이가 $10$ 인 선분 ${rm \"AB\" it}$ 를 지름으로 하는 원 중 직선 ${rm \"AB\" it}$ 의 한쪽에 있는 반원(양 끝점 포함) 위의 두 점 ${rm \"P\" it}$ , ${rm \"Q\" it}$ 가"
+   ],
+   [
+    "eq",
+    "9 ( vec {{rm \"PA\" it}} + vec {{rm \"PB\" it}} ) cdot ( vec {{rm \"QA\" it}} + vec {{rm \"QB\" it}} ) = 7 | vec {{rm \"PQ\" it}} | ^{2}"
+   ],
+   [
+    "p",
+    "을 만족시킨다. $vec {{rm \"BP\" it}} cdot vec {{rm \"AQ\" it}}$ 의 값이 될 수 있는 모든 정수의 개수를 구하시오. [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "문항 35와 같이 $vec {{rm \"OP\" it}} cdot vec {{rm \"OQ\" it}} = 7$ 이므로 $cos ( angle {rm \"POQ\" it} ) = {7} over {25}$ 이고, $angle {rm \"POQ\" it} = 2 gamma$ 라 하면 $cos gamma = {4} over {5}$ , $sin gamma = {3} over {5}$ 이다."
+   ],
+   [
+    "p",
+    "${rm \"A\" it} ( - 5 , ` 0 )$ , ${rm \"B\" it} ( 5 , ` 0 )$ , 반원을 $y geq 0$ 인 부분으로 놓고 ${rm \"P\" it} ( 5 cos a , ` 5 sin a )$ , ${rm \"Q\" it} ( 5 cos b , ` 5 sin b )$ $( 0 leq a , ` b leq pi$ , $| a - b | = 2 gamma )$ 라 하면"
+   ],
+   [
+    "eq",
+    "vec {{rm \"BP\" it}} cdot vec {{rm \"AQ\" it}} = vec {{rm \"OP\" it}} cdot vec {{rm \"OQ\" it}} - vec {{rm \"OP\" it}} cdot vec {{rm \"OA\" it}} - vec {{rm \"OB\" it}} cdot vec {{rm \"OQ\" it}} + vec {{rm \"OA\" it}} cdot vec {{rm \"OB\" it}} = 5 ( x _{P} - x _{Q} ) - 18"
+   ],
+   [
+    "p",
+    "$x _{P} - x _{Q} = 5 ( cos a - cos b ) = - 10 sin {a + b} over {2} sin {a - b} over {2}$ 이고 ${a + b} over {2}$ 는 $gamma$ 이상 $pi - gamma$ 이하의 모든 값을 가지므로 $sin {a + b} over {2}$ 의 범위는 ${3} over {5}$ 이상 $1$ 이하이다."
+   ],
+   [
+    "p",
+    "$a - b = 2 gamma$ 이면 $x _{P} - x _{Q} = - 6 sin {a + b} over {2}$ 의 범위는 $- 6$ 이상 $- {18} over {5}$ 이하, $a - b = - 2 gamma$ 이면 ${18} over {5}$ 이상 $6$ 이하이다."
+   ],
+   [
+    "p",
+    "따라서 $vec {{rm \"BP\" it}} cdot vec {{rm \"AQ\" it}}$ 의 값의 범위는 $- 48$ 이상 $- 36$ 이하 또는 $0$ 이상 $12$ 이하이고, 정수의 개수는 $13 + 13 = 26$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2026학년도 대학수학능력시험 30번 변형",
+  "intro": [
+   "같은 벡터 조건에서 두 점을 반원 위로 제한하여, 내적이 될 수 있는 값의 범위가 두 구간으로 나뉨을 발견하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-49",
+  "subject": "기하",
+  "topic": "공간도형과 공간좌표",
+  "stars": 5,
+  "type": "30번형",
+  "standards": [],
+  "answer": 633,
+  "body": [
+   [
+    "p",
+    "한 모서리의 길이가 $6$ 인 정사면체 ${rm \"ABCD\" it}$ 에서 삼각형 ${rm \"BCD\" it}$ 의 무게중심을 ${rm \"G\" it}$ 라 하자. 점 ${rm \"G\" it}$ 를 중심으로 하고 반지름의 길이가 $3$ 인 구 $S$ 는 세 모서리 ${rm \"AB\" it}$ , ${rm \"AC\" it}$ , ${rm \"AD\" it}$ 와 각각 두 점에서 만난다. 이 교점들 중 모서리 ${rm \"AB\" it}$ , ${rm \"AC\" it}$ , ${rm \"AD\" it}$ 위에서 점 ${rm \"A\" it}$ 로부터 더 먼 점을 각각 ${rm \"P\" it}$ , ${rm \"Q\" it}$ , ${rm \"R\" it}$ 라 하고, 모서리 ${rm \"AB\" it}$ 위에서 점 ${rm \"A\" it}$ 에 더 가까운 점을 ${rm \"T\" it}$ 라 하자. 점 ${rm \"T\" it}$ 에서 구 $S$ 에 접하는 평면을 $alpha$ 라 할 때, 삼각형 ${rm \"PQR\" it}$ 의 평면 $alpha$ 위로의 정사영의 넓이를 $k$ 라 하자. $k ^{2} = {q} over {p}$ 일 때, $p + q$ 의 값을 구하시오. (단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "${rm \"B\" it} ( 0 , ` 0 , ` 0 )$ , ${rm \"C\" it} ( 6 , ` 0 , ` 0 )$ , ${rm \"D\" it} ( 3 , ` 3 sqrt {3} , ` 0 )$ , ${rm \"G\" it} ( 3 , ` sqrt {3} , ` 0 )$ , ${rm \"A\" it} ( 3 , ` sqrt {3} , ` 2 sqrt {6} )$ 으로 놓자."
+   ],
+   [
+    "p",
+    "모서리 ${rm \"BA\" it}$ 위의 점을 ${rm \"B\" it}$ 로부터의 거리 $d$ 로 나타내면 $vec {{rm \"BG\" it}} cdot {vec {{rm \"BA\" it}}} over {6} = {9 + 3} over {6} = 2$ 이므로 점 ${rm \"G\" it}$ 에서 직선 ${rm \"AB\" it}$ 에 내린 수선의 발은 $d = 2$ 인 점이고, 수선의 길이는 $sqrt {12 - 4} = 2 sqrt {2}$ 이다. 구와 만나는 점은 $( d - 2 ) ^{2} + 8 = 9$ 에서 $d = 1$ , $d = 3$ 이다. 대칭성에 의해 다른 두 모서리도 같다."
+   ],
+   [
+    "p",
+    "따라서 ${rm \"T\" it}$ 는 ${rm \"AB\" it}$ 의 중점 ( $d = 3$ )이고, ${rm \"P\" it}$ , ${rm \"Q\" it}$ , ${rm \"R\" it}$ 는 ${rm \"B\" it}$ , ${rm \"C\" it}$ , ${rm \"D\" it}$ 로부터 거리 $1$ 인 점이므로 $vec {{rm \"PQ\" it}} = {5} over {6} vec {{rm \"BC\" it}}$ 등에서 삼각형 ${rm \"PQR\" it}$ 는 평면 ${rm \"BCD\" it}$ 에 평행하고 한 변의 길이가 $5$ 인 정삼각형이다. 넓이는 ${25 sqrt {3}} over {4}$ 이다."
+   ],
+   [
+    "p",
+    "평면 $alpha$ 의 법선벡터는 $vec {{rm \"GT\" it}}$ 이고 ${rm \"T\" it} LEFT ( {3} over {2} , ` {sqrt {3}} over {2} , ` sqrt {6} RIGHT )$ 이므로 $| vec {{rm \"GT\" it}} | = 3$ , $vec {{rm \"GT\" it}}$ 의 $z$ 성분은 $sqrt {6}$ 이다. 평면 ${rm \"PQR\" it}$ 의 법선벡터는 $( 0 , ` 0 , ` 1 )$ 이므로 두 평면이 이루는 각 $theta$ 에 대하여 $cos theta = {sqrt {6}} over {3}$ 이다."
+   ],
+   [
+    "eq",
+    "k = {25 sqrt {3}} over {4} times {sqrt {6}} over {3} = {25 sqrt {2}} over {4} , ` ` ` ` k ^{2} = {625} over {8}"
+   ],
+   [
+    "p",
+    "따라서 $p + q = 8 + 625 = 633$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2024학년도 대학수학능력시험 30번 변형",
+  "intro": [
+   "구의 중심(무게중심 G)은 유지하고 반지름을 바꾸어 한 모서리와 두 점에서 만나게 한 뒤, 교점의 위치를 거리 계산으로 찾고 접평면과 밑면의 각을 이용하게 함"
+  ]
+ },
+ {
+  "id": "추가30·기하-50",
+  "subject": "기하",
+  "topic": "평면벡터",
+  "stars": 5,
+  "type": "30번형",
+  "standards": [],
+  "answer": 65,
+  "body": [
+   [
+    "p",
+    "좌표평면 위의 세 점 ${rm \"A\" it} ( 6 , ` 0 )$ , ${rm \"B\" it} ( 0 , ` 6 )$ , ${rm \"C\" it} ( 2 , ` 1 )$ 과 원점 ${rm \"O\" it}$ 에 대하여 선분 ${rm \"OC\" it}$ 위를 움직이는 점 ${rm \"P\" it}$ 와 삼각형 ${rm \"OAB\" it}$ 의 변 위를 움직이는 점 ${rm \"Q\" it}$ 가 있다."
+   ],
+   [
+    "eq",
+    "vec {{rm \"OX\" it}} = vec {{rm \"OP\" it}} + vec {{rm \"OQ\" it}}"
+   ],
+   [
+    "p",
+    "를 만족시키는 모든 점 ${rm \"X\" it}$ 가 나타내는 영역의 넓이가 ${q} over {p}$ 일 때, $p + q$ 의 값을 구하시오. (단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   ]
+  ],
+  "solution": [
+   [
+    "p",
+    "삼각형 ${rm \"OAB\" it}$ 의 둘레를 $T$ , $vec {v} = vec {{rm \"OC\" it}} = ( 2 , ` 1 )$ 이라 하자. 점 ${rm \"X\" it}$ 는 $T$ 를 $t vec {v}$ $( 0 leq t leq 1 )$ 만큼 평행이동한 도형 위의 점들 전체이다."
+   ],
+   [
+    "p",
+    "점 ${rm \"X\" it}$ 가 영역에 속할 필요충분조건은 선분 $LBRACE {rm \"X\" it} - t vec {v} ~|~ 0 leq t leq 1 RBRACE$ 이 $T$ 와 만나는 것이다. 이 선분이 삼각형 ${rm \"OAB\" it}$ 와 만나지 않거나, 양 끝점이 모두 삼각형의 내부에 있으면(이때 선분 전체가 내부에 있음) $T$ 와 만나지 않는다."
+   ],
+   [
+    "p",
+    "따라서 영역은 '삼각형 ${rm \"OAB\" it}$ 를 $vec {v}$ 방향으로 쓸고 지나간 볼록 도형'에서 '삼각형 ${rm \"OAB\" it}$ 의 내부와 이를 $vec {v}$ 만큼 평행이동한 삼각형의 내부의 공통부분'을 뺀 것이다."
+   ],
+   [
+    "p",
+    "쓸고 지나간 도형은 다섯 점 $( 0 , ` 0 )$ , $( 6 , ` 0 )$ , $( 8 , ` 1 )$ , $( 2 , ` 7 )$ , $( 0 , ` 6 )$ 을 꼭짓점으로 하는 오각형이고 넓이는 $36$ 이다."
+   ],
+   [
+    "p",
+    "평행이동한 삼각형은 $x geq 2$ , $y geq 1$ , $x + y leq 9$ 이므로 공통부분은 $x geq 2$ , $y geq 1$ , $x + y leq 6$ 인 직각이등변삼각형(등변의 길이 $3$ )이고 넓이는 ${9} over {2}$ 이다."
+   ],
+   [
+    "p",
+    "따라서 넓이는 $36 - {9} over {2} = {63} over {2}$ 이고 $p + q = 2 + 63 = 65$ 이다."
+   ]
+  ],
+  "source": "ShrekMath 창작 · 2023학년도 대학수학능력시험 30번 변형",
+  "intro": [
+   "직선 대신 선분, 타원 대신 삼각형의 둘레를 써서 '평행이동하며 쓸고 지나간 영역'에서 가운데의 비는 부분을 찾아 빼게 함"
+  ]
+ }
+]

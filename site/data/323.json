@@ -1,0 +1,142 @@
+{
+ "num": 323,
+ "id": "추가30·기하-49",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2024학년도 대학수학능력시험 30번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 633,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "한 모서리의 길이가 $6$ 인 정사면체 ${\\mathrm{ABCD}}$ 에서 삼각형 ${\\mathrm{BCD}}$ 의 무게중심을 ${\\mathrm{G}}$ 라 하자.",
+    "점 ${\\mathrm{G}}$ 를 중심으로 하고 반지름의 길이가 $3$ 인 구 $S$ 는 세 모서리 ${\\mathrm{AB}}$ , ${\\mathrm{AC}}$ , ${\\mathrm{AD}}$ 와 각각 두 점에서 만난다.",
+    "이 교점들 중 모서리 ${\\mathrm{AB}}$ , ${\\mathrm{AC}}$ , ${\\mathrm{AD}}$ 위에서 점 ${\\mathrm{A}}$ 로부터 더 먼 점을 각각 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ , ${\\mathrm{R}}$ 라 하고, 모서리 ${\\mathrm{AB}}$ 위에서 점 ${\\mathrm{A}}$ 에 더 가까운 점을 ${\\mathrm{T}}$ 라 하자.",
+    "점 ${\\mathrm{T}}$ 에서 구 $S$ 에 접하는 평면을 $\\alpha$ 라 할 때, 삼각형 ${\\mathrm{PQR}}$ 의 평면 $\\alpha$ 위로의 정사영의 넓이를 $k$ 라 하자.",
+    "$k^{2}=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오.",
+    "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "한 모서리의 길이가 $6$ 인 정사면체 ${\\mathrm{ABCD}}$ 에서 삼각형 ${\\mathrm{BCD}}$ 의 무게중심을 ${\\mathrm{G}}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "점 ${\\mathrm{G}}$ 를 중심으로 하고 반지름의 길이가 $3$ 인 구 $S$ 는 세 모서리 ${\\mathrm{AB}}$ , ${\\mathrm{AC}}$ , ${\\mathrm{AD}}$ 와 각각 두 점에서 만난다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "이 교점들 중 모서리 ${\\mathrm{AB}}$ , ${\\mathrm{AC}}$ , ${\\mathrm{AD}}$ 위에서 점 ${\\mathrm{A}}$ 로부터 더 먼 점을 각각 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ , ${\\mathrm{R}}$ 라 하고, 모서리 ${\\mathrm{AB}}$ 위에서 점 ${\\mathrm{A}}$ 에 더 가까운 점을 ${\\mathrm{T}}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    0,
+    3
+   ],
+   "text": "점 ${\\mathrm{T}}$ 에서 구 $S$ 에 접하는 평면을 $\\alpha$ 라 할 때, 삼각형 ${\\mathrm{PQR}}$ 의 평면 $\\alpha$ 위로의 정사영의 넓이를 $k$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    0,
+    4
+   ],
+   "text": "$k^{2}=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C6",
+   "at": [
+    0,
+    5
+   ],
+   "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "구의 중심(무게중심 G)은 유지하고 반지름을 바꾸어 한 모서리와 두 점에서 만나게 한 뒤, 교점의 위치를 거리 계산으로 찾고 접평면과 밑면의 각을 이용하게 함"
+ ],
+ "topic": "공간도형과 공간좌표",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "${\\mathrm{B}}(0,0,0)$ , ${\\mathrm{C}}(6,0,0)$ , ${\\mathrm{D}}(3,3 \\sqrt{3},0)$ , ${\\mathrm{G}}(3,\\sqrt{3},0)$ , ${\\mathrm{A}}(3,\\sqrt{3},2 \\sqrt{6})$ 으로 놓자.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "모서리 ${\\mathrm{BA}}$ 위의 점을 ${\\mathrm{B}}$ 로부터의 거리 $d$ 로 나타내면 $\\vec{{\\mathrm{BG}}}\\cdot \\frac{\\vec{{\\mathrm{BA}}}}{6}=\\frac{9+3}{6}=2$ 이므로 점 ${\\mathrm{G}}$ 에서 직선 ${\\mathrm{AB}}$ 에 내린 수선의 발은 $d=2$ 인 점이고, 수선의 길이는 $\\sqrt{12-4}=2 \\sqrt{2}$ 이다. 구와 만나는 점은 $(d-2)^{2}+8=9$ 에서 $d=1$ , $d=3$ 이다. 대칭성에 의해 다른 두 모서리도 같다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "따라서 ${\\mathrm{T}}$ 는 ${\\mathrm{AB}}$ 의 중점 ( $d=3$ )이고, ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ , ${\\mathrm{R}}$ 는 ${\\mathrm{B}}$ , ${\\mathrm{C}}$ , ${\\mathrm{D}}$ 로부터 거리 $1$ 인 점이므로 $\\vec{{\\mathrm{PQ}}}=\\frac{5}{6}\\vec{{\\mathrm{BC}}}$ 등에서 삼각형 ${\\mathrm{PQR}}$ 는 평면 ${\\mathrm{BCD}}$ 에 평행하고 한 변의 길이가 $5$ 인 정삼각형이다. 넓이는 $\\frac{25 \\sqrt{3}}{4}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "평면 $\\alpha$ 의 법선벡터는 $\\vec{{\\mathrm{GT}}}$ 이고 ${\\mathrm{T}}\\left(\\frac{3}{2},\\frac{\\sqrt{3}}{2},\\sqrt{6}\\right)$ 이므로 $|\\vec{{\\mathrm{GT}}}|=3$ , $\\vec{{\\mathrm{GT}}}$ 의 $z$ 성분은 $\\sqrt{6}$ 이다. 평면 ${\\mathrm{PQR}}$ 의 법선벡터는 $(0,0,1)$ 이므로 두 평면이 이루는 각 $\\theta$ 에 대하여 $\\cos \\theta=\\frac{\\sqrt{6}}{3}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$$k=\\frac{25 \\sqrt{3}}{4}\\times \\frac{\\sqrt{6}}{3}=\\frac{25 \\sqrt{2}}{4},k^{2}=\\frac{625}{8}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "따라서 $p+q=8+625=633$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

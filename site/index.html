@@ -892,7 +892,7 @@ function renderExam(){
     if(b.t==='p'){const p=el('p');if(bi===0)p.append(el('span','qno',D.type.replace('번형','')));
       b.sents.forEach((s,si)=>{const id=condId(bi,si);const sp=el('span','cnd',md(s).replace(/\[(\d)점\]/,'<span class="pts">[$1점]</span>')+(id?`<span class="cn">${id}</span>`:''));if(id){sp.dataset.c=id;sp.style.setProperty('--cc',ccol(id))}p.append(sp,' ')});root.append(p)}
     else if(b.t==='box'){const bx=el('div','box');b.items.forEach((s,si)=>{const id=condId(bi,si);const sp=el('div','cnd',md(s)+(id?`<span class="cn">${id}</span>`:''));if(id){sp.dataset.c=id;sp.style.setProperty('--cc',ccol(id))}bx.append(sp)});root.append(bx)}
-    else if(b.t==='eq'){const id=condId(bi,0);const d=el('div','eq cnd','$$'+b.tex+'$$'+(id?`<span class="cn">${id}</span>`:''));if(id){d.dataset.c=id;d.style.setProperty('--cc',ccol(id))}root.append(d)}
+    else if(b.t==='eq'){const id=condId(bi,0);const d=el('div','eq cnd','$$'+esc(b.tex)+'$$'+(id?`<span class="cn">${id}</span>`:''));if(id){d.dataset.c=id;d.style.setProperty('--cc',ccol(id))}root.append(d)}
     else if(b.t==='table'){const tb=el('table','ztable');b.rows.forEach((r,ri)=>{const tr=el('tr');r.forEach(c=>tr.append(el(ri?'td':'th',null,md(c))));tb.append(tr)});root.append(tb)}
   });
   tex(root);document.documentElement.style.setProperty('--fs',S.fs);

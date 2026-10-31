@@ -1,0 +1,138 @@
+{
+ "num": 202,
+ "id": "추가29·미적분Ⅱ-24",
+ "subject": "미적분Ⅱ",
+ "type": "29번형",
+ "typeDesc": "미적분Ⅱ · 수능 29번형 자리의 고난도",
+ "stars": 3,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2023학년도 6월 모의평가 29번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 12,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "반지름의 길이가 $4$ 이고 중심각의 크기가 $\\frac{\\pi}{2}$ 인 부채꼴 ${\\mathrm{OAB}}$ 가 있다.",
+    "호 ${\\mathrm{AB}}$ 위의 점 ${\\mathrm{P}}$ 에 대하여 $\\angle{\\mathrm{AOP}}=\\theta$ 라 하고, 점 ${\\mathrm{P}}$ 에서 선분 ${\\mathrm{OA}}$ 에 내린 수선의 발을 ${\\mathrm{Q}}$ , 점 ${\\mathrm{P}}$ 에서 호 ${\\mathrm{AB}}$ 에 접하는 직선이 직선 ${\\mathrm{OA}}$ 와 만나는 점을 ${\\mathrm{T}}$ 라 하자.",
+    "삼각형 ${\\mathrm{PQT}}$ 의 넓이를 $f(\\theta)$ , 삼각형 ${\\mathrm{APQ}}$ 의 넓이를 $g(\\theta)$ 라 할 때,"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "\\lim_{\\theta \\to 0+}\\frac{f(\\theta)+g(\\theta)}{\\theta^{3}}"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "의 값을 구하시오.",
+    "(단, $0<\\theta<\\frac{\\pi}{2}$ ) [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "반지름의 길이가 $4$ 이고 중심각의 크기가 $\\frac{\\pi}{2}$ 인 부채꼴 ${\\mathrm{OAB}}$ 가 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "호 ${\\mathrm{AB}}$ 위의 점 ${\\mathrm{P}}$ 에 대하여 $\\angle{\\mathrm{AOP}}=\\theta$ 라 하고, 점 ${\\mathrm{P}}$ 에서 선분 ${\\mathrm{OA}}$ 에 내린 수선의 발을 ${\\mathrm{Q}}$ , 점 ${\\mathrm{P}}$ 에서 호 ${\\mathrm{AB}}$ 에 접하는 직선이 직선 ${\\mathrm{OA}}$ 와 만나는 점을 ${\\mathrm{T}}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "삼각형 ${\\mathrm{PQT}}$ 의 넓이를 $f(\\theta)$ , 삼각형 ${\\mathrm{APQ}}$ 의 넓이를 $g(\\theta)$ 라 할 때,",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$\\lim_{\\theta \\to 0+}\\frac{f(\\theta)+g(\\theta)}{\\theta^{3}}$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    2,
+    0
+   ],
+   "text": "의 값을 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C6",
+   "at": [
+    2,
+    1
+   ],
+   "text": "(단, $0<\\theta<\\frac{\\pi}{2}$ ) [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "수선의 발과 접선을 이용한 두 삼각형의 넓이를 모두 $\\theta^{3}$ 차수로 맞추어 극한값을 구하게 함"
+ ],
+ "topic": "여러 가지 미분법",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "$\\overline{{\\mathrm{PQ}}}=4 \\sin \\theta$ , $\\overline{{\\mathrm{OQ}}}=4 \\cos \\theta$ 이고, $\\angle{\\mathrm{OPT}}=\\frac{\\pi}{2}$ 이므로 $\\overline{{\\mathrm{OT}}}=\\frac{4}{\\cos \\theta}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$\\overline{{\\mathrm{QT}}}=\\frac{4}{\\cos \\theta}-4 \\cos \\theta=\\frac{4 \\sin^{2}\\theta}{\\cos \\theta}$ 이므로 $f(\\theta)=\\frac{1}{2}\\times 4 \\sin \\theta \\times \\frac{4 \\sin^{2}\\theta}{\\cos \\theta}=\\frac{8 \\sin^{3}\\theta}{\\cos \\theta}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$\\overline{{\\mathrm{AQ}}}=4-4 \\cos \\theta$ 이므로 $g(\\theta)=\\frac{1}{2}\\times 4 \\sin \\theta \\times 4(1-\\cos \\theta)=8 \\sin \\theta(1-\\cos \\theta)$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$\\theta \\to 0+$ 일 때 $\\frac{f(\\theta)}{\\theta^{3}}=\\frac{8}{\\cos \\theta}\\left(\\frac{\\sin \\theta}{\\theta}\\right)^{3}\\to 8$ , $\\frac{g(\\theta)}{\\theta^{3}}=8 \\times \\frac{\\sin \\theta}{\\theta}\\times \\frac{1-\\cos \\theta}{\\theta^{2}}\\to 4$ 이므로 구하는 값은 $12$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

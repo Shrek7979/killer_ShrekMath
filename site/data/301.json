@@ -1,0 +1,82 @@
+{
+ "num": 301,
+ "id": "추가30·기하-27",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 4,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2025학년도 6월 모의평가 30번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 10,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "두 초점이 ${\\mathrm{F}}(5,0)$ , ${\\mathrm{F}}'(-5,0)$ 인 쌍곡선 $\\frac{x^{2}}{9}-\\frac{y^{2}}{16}=1$ 위의 점 중 $x$ 좌표가 양수인 점 ${\\mathrm{P}}$ 에 대하여 선분 ${\\mathrm{PF'}}$ 위의 점 ${\\mathrm{X}}$ 가 $|\\vec{{\\mathrm{PX}}}|=|\\vec{{\\mathrm{PF}}}|$ 를 만족시킨다.",
+    "선분 ${\\mathrm{FX}}$ 의 중점을 ${\\mathrm{M}}$ 이라 할 때, 점 ${\\mathrm{A}}(12,5)$ 에 대하여 $|\\vec{{\\mathrm{AM}}}|$ 의 최솟값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "두 초점이 ${\\mathrm{F}}(5,0)$ , ${\\mathrm{F}}'(-5,0)$ 인 쌍곡선 $\\frac{x^{2}}{9}-\\frac{y^{2}}{16}=1$ 위의 점 중 $x$ 좌표가 양수인 점 ${\\mathrm{P}}$ 에 대하여 선분 ${\\mathrm{PF'}}$ 위의 점 ${\\mathrm{X}}$ 가 $|\\vec{{\\mathrm{PX}}}|=|\\vec{{\\mathrm{PF}}}|$ 를 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "선분 ${\\mathrm{FX}}$ 의 중점을 ${\\mathrm{M}}$ 이라 할 때, 점 ${\\mathrm{A}}(12,5)$ 에 대하여 $|\\vec{{\\mathrm{AM}}}|$ 의 최솟값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "쌍곡선의 정의로 $|\\vec{{\\mathrm{F'X}}}|$ 가 일정함을 얻은 뒤, 삼각형의 중점연결 정리로 점 M이 원점 중심의 원 위에 있음을 다시 한 번 찾게 함"
+ ],
+ "topic": "이차곡선과 벡터",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "$|\\vec{{\\mathrm{P}}{\\mathrm{F}}'}|-|\\vec{{\\mathrm{PF}}}|=6$ 이고 $|\\vec{{\\mathrm{PX}}}|=|\\vec{{\\mathrm{PF}}}|$ 이므로 $|\\vec{{\\mathrm{F}}'{\\mathrm{X}}}|=6$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "원점 ${\\mathrm{O}}$ 는 선분 ${\\mathrm{FF'}}$ 의 중점, ${\\mathrm{M}}$ 은 선분 ${\\mathrm{FX}}$ 의 중점이므로 $\\vec{{\\mathrm{OM}}}=\\frac{1}{2}\\vec{{\\mathrm{F}}'{\\mathrm{X}}}$ , 즉 $|\\vec{{\\mathrm{OM}}}|=3$ 이고 $\\vec{{\\mathrm{OM}}}$ 은 $\\vec{{\\mathrm{F}}'{\\mathrm{P}}}$ 와 같은 방향이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "점 ${\\mathrm{F}}'$ 에서 오른쪽 가지 위의 점으로 향하는 방향은 기울기의 절댓값이 $\\frac{4}{3}$ (점근선의 기울기)보다 작은 오른쪽 방향 전체이다. $\\vec{{\\mathrm{OA}}}=(12,5)$ 의 기울기 $\\frac{5}{12}$ 는 이 범위에 있으므로 $\\vec{{\\mathrm{OM}}}=\\frac{3}{13}(12,5)$ 인 점 ${\\mathrm{M}}$ 이 존재한다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "따라서 최솟값은 $|\\vec{{\\mathrm{OA}}}|-3=13-3=10$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

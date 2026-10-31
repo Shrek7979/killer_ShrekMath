@@ -1,0 +1,126 @@
+{
+ "num": 289,
+ "id": "추가30·기하-15",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 4,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2025학년도 6월 모의평가 30번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 9,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "두 초점이 ${\\mathrm{F}}(5,0)$ , ${\\mathrm{F}}'(-5,0)$ 인 쌍곡선 $\\frac{x^{2}}{16}-\\frac{y^{2}}{9}=1$ 위의 점 중 $x$ 좌표가 양수인 점 ${\\mathrm{P}}$ 에 대하여 점 ${\\mathrm{Q}}$ 가"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "(|\\vec{{\\mathrm{PF}}}|+8)\\vec{{\\mathrm{F}}'{\\mathrm{Q}}}=4 \\vec{{\\mathrm{F}}'{\\mathrm{P}}}"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "를 만족시킨다.",
+    "점 ${\\mathrm{A}}(7,5)$ 에 대하여 $|\\vec{{\\mathrm{AQ}}}|$ 의 최솟값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "두 초점이 ${\\mathrm{F}}(5,0)$ , ${\\mathrm{F}}'(-5,0)$ 인 쌍곡선 $\\frac{x^{2}}{16}-\\frac{y^{2}}{9}=1$ 위의 점 중 $x$ 좌표가 양수인 점 ${\\mathrm{P}}$ 에 대하여 점 ${\\mathrm{Q}}$ 가",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$(|\\vec{{\\mathrm{PF}}}|+8)\\vec{{\\mathrm{F}}'{\\mathrm{Q}}}=4 \\vec{{\\mathrm{F}}'{\\mathrm{P}}}$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    2,
+    0
+   ],
+   "text": "를 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    1
+   ],
+   "text": "점 ${\\mathrm{A}}(7,5)$ 에 대하여 $|\\vec{{\\mathrm{AQ}}}|$ 의 최솟값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "계수를 바꾸어 $|\\vec{{\\mathrm{F'Q}}}|=4$ 가 되게 하고, 최댓값 대신 최솟값을 물어 '점근선의 기울기로 제한되는 방향'에 A의 방향이 포함되는지 확인하게 함"
+ ],
+ "topic": "이차곡선과 벡터",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "쌍곡선의 정의에서 $|\\vec{{\\mathrm{P}}{\\mathrm{F}}'}|-|\\vec{{\\mathrm{PF}}}|=8$ 이므로 $|\\vec{{\\mathrm{PF}}}|+8=|\\vec{{\\mathrm{P}}{\\mathrm{F}}'}|$ 이고",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$$\\vec{{\\mathrm{F}}'{\\mathrm{Q}}}=\\frac{4}{|\\vec{{\\mathrm{F}}'{\\mathrm{P}}}|}\\vec{{\\mathrm{F}}'{\\mathrm{P}}}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "즉 점 ${\\mathrm{Q}}$ 는 반직선 ${\\mathrm{F'P}}$ 위에서 $|\\vec{{\\mathrm{F}}'{\\mathrm{Q}}}|=4$ 인 점이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "점 ${\\mathrm{F}}'$ 을 지나고 기울기가 $k$ 인 직선이 오른쪽 가지와 만나려면 $|k|<\\frac{3}{4}$ 이어야 하고, 이때 ${\\mathrm{F}}'$ 에서 오른쪽으로 향하는 반직선은 오른쪽 가지와 반드시 만난다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$\\vec{{\\mathrm{F}}'{\\mathrm{A}}}=(12,5)$ 의 기울기는 $\\frac{5}{12}<\\frac{3}{4}$ 이므로 반직선 ${\\mathrm{F'A}}$ 위의 $|\\vec{{\\mathrm{F}}'{\\mathrm{Q}}}|=4$ 인 점이 점 ${\\mathrm{Q}}$ 가 될 수 있다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "따라서 $|\\vec{{\\mathrm{AQ}}}|\\ge|\\vec{{\\mathrm{A}}{\\mathrm{F}}'}|-|\\vec{{\\mathrm{F}}'{\\mathrm{Q}}}|=13-4=9$ 이고 최솟값은 $9$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

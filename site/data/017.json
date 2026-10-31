@@ -2,7 +2,6 @@
  "num": 17,
  "id": "21A-07",
  "subject": "미적분Ⅰ",
- "topic": "접선과 부등식",
  "type": "21번형",
  "typeDesc": "공통 4점 · 미적분Ⅰ 최고난도",
  "stars": 3,
@@ -93,6 +92,7 @@
   }
  ],
  "intro": [],
+ "topic": "접선과 부등식",
  "concepts": [],
  "steps": [
   {

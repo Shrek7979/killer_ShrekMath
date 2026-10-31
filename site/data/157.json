@@ -1,0 +1,88 @@
+{
+ "num": 157,
+ "id": "추가29·기하-21",
+ "subject": "기하",
+ "type": "29번형",
+ "typeDesc": "기하 · 수능 29번형 자리의 고난도",
+ "stars": 3,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2026학년도 대학수학능력시험 29번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 88,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "초점이 ${\\mathrm{F}}$ 인 포물선 $y^{2}=4 p x$ $(p>0)$ 위의 점 중 제 $1$ 사분면에 있는 점 ${\\mathrm{A}}$ 를 중심으로 하고 점 ${\\mathrm{F}}$ 를 지나는 원이 있다.",
+    "이 원이 포물선의 준선과 접하는 점을 ${\\mathrm{H}}$ , $x$ 축과 만나는 점 중 ${\\mathrm{F}}$ 가 아닌 점을 ${\\mathrm{B}}$ 라 하자.",
+    "$\\overline{{\\mathrm{AF}}}=10$ , $\\overline{{\\mathrm{FB}}}=12$ 일 때, 사각형 ${\\mathrm{AHFB}}$ 의 넓이를 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "초점이 ${\\mathrm{F}}$ 인 포물선 $y^{2}=4 p x$ $(p>0)$ 위의 점 중 제 $1$ 사분면에 있는 점 ${\\mathrm{A}}$ 를 중심으로 하고 점 ${\\mathrm{F}}$ 를 지나는 원이 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "이 원이 포물선의 준선과 접하는 점을 ${\\mathrm{H}}$ , $x$ 축과 만나는 점 중 ${\\mathrm{F}}$ 가 아닌 점을 ${\\mathrm{B}}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "$\\overline{{\\mathrm{AF}}}=10$ , $\\overline{{\\mathrm{FB}}}=12$ 일 때, 사각형 ${\\mathrm{AHFB}}$ 의 넓이를 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "포물선의 정의를 '중심이 포물선 위에 있고 초점을 지나는 원은 준선에 접한다'로 바꾸어 읽게 하고, 원의 대칭성으로 좌표를 결정"
+ ],
+ "topic": "포물선과 원",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "${\\mathrm{A}}(a,\\,b)$ 라 하면 원의 반지름은 $\\overline{{\\mathrm{AF}}}=a+p$ 이고, 이는 점 ${\\mathrm{A}}$ 와 준선 사이의 거리와 같으므로 원은 준선과 점 ${\\mathrm{H}}(-p,\\,b)$ 에서 접한다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "원의 중심 ${\\mathrm{A}}$ 에서 $x$ 축에 내린 수선의 발은 현 ${\\mathrm{FB}}$ 의 중점이므로 ${\\mathrm{B}}(2 a-p,\\,0)$ 이고 $\\overline{{\\mathrm{FB}}}=2|a-p|=12$ 이다. $a+p=10$ 과 연립하면 $(a,\\,p)=(8,\\,2)$ 또는 $(2,\\,8)$ 이고, 어느 경우든 $b^{2}=4 p a=64$ , $b=8$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "사각형 ${\\mathrm{AHFB}}$ 는 두 변 ${\\mathrm{AH}}$ , ${\\mathrm{FB}}$ 가 평행하고 $\\overline{{\\mathrm{AH}}}=10$ , $\\overline{{\\mathrm{FB}}}=12$ , 높이 $8$ 인 사다리꼴이므로 넓이는 $\\frac{1}{2}\\times(10+12)\\times 8=88$",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

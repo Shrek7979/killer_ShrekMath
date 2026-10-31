@@ -1,0 +1,126 @@
+{
+ "num": 302,
+ "id": "추가30·기하-28",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 4,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2025학년도 6월 모의평가 30번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 17,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "두 초점이 ${\\mathrm{F}}(4,0)$ , ${\\mathrm{F}}'(-4,0)$ 인 타원 $\\frac{x^{2}}{25}+\\frac{y^{2}}{9}=1$ 위의 점 중 $x$ 좌표가 $0$ 이상이고 $y$ 좌표가 양수인 점 ${\\mathrm{P}}$ 에 대하여 점 ${\\mathrm{X}}$ 가"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "\\vec{{\\mathrm{PX}}}=\\frac{|\\vec{{\\mathrm{PF}}}|}{|\\vec{{\\mathrm{P}}{\\mathrm{F}}'}|}\\vec{{\\mathrm{F}}'{\\mathrm{P}}}"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "를 만족시킨다.",
+    "선분 ${\\mathrm{FX}}$ 의 중점을 ${\\mathrm{M}}$ 이라 할 때, 점 ${\\mathrm{B}}(-1,7)$ 에 대하여 $\\vec{{\\mathrm{OM}}}\\cdot \\vec{{\\mathrm{OB}}}$ 의 최댓값을 구하시오.",
+    "(단, ${\\mathrm{O}}$ 는 원점이다.) [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "두 초점이 ${\\mathrm{F}}(4,0)$ , ${\\mathrm{F}}'(-4,0)$ 인 타원 $\\frac{x^{2}}{25}+\\frac{y^{2}}{9}=1$ 위의 점 중 $x$ 좌표가 $0$ 이상이고 $y$ 좌표가 양수인 점 ${\\mathrm{P}}$ 에 대하여 점 ${\\mathrm{X}}$ 가",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$\\vec{{\\mathrm{PX}}}=\\frac{|\\vec{{\\mathrm{PF}}}|}{|\\vec{{\\mathrm{P}}{\\mathrm{F}}'}|}\\vec{{\\mathrm{F}}'{\\mathrm{P}}}$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    2,
+    0
+   ],
+   "text": "를 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    1
+   ],
+   "text": "선분 ${\\mathrm{FX}}$ 의 중점을 ${\\mathrm{M}}$ 이라 할 때, 점 ${\\mathrm{B}}(-1,7)$ 에 대하여 $\\vec{{\\mathrm{OM}}}\\cdot \\vec{{\\mathrm{OB}}}$ 의 최댓값을 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    2,
+    2
+   ],
+   "text": "(단, ${\\mathrm{O}}$ 는 원점이다.) [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "타원의 정의로 $|\\vec{{\\mathrm{F'X}}}|=10$ 을 얻고 중점 M이 원 위의 호를 그림을 파악한 뒤, 호의 끝점에서 최댓값이 생기는 경우를 판단하게 함"
+ ],
+ "topic": "이차곡선과 벡터",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "$\\vec{{\\mathrm{F}}'{\\mathrm{X}}}=\\vec{{\\mathrm{F}}'{\\mathrm{P}}}+\\vec{{\\mathrm{PX}}}=\\left(1+\\frac{|\\vec{{\\mathrm{PF}}}|}{|\\vec{{\\mathrm{P}}{\\mathrm{F}}'}|}\\right)\\vec{{\\mathrm{F}}'{\\mathrm{P}}}$ 이므로 $|\\vec{{\\mathrm{F}}'{\\mathrm{X}}}|=|\\vec{{\\mathrm{P}}{\\mathrm{F}}'}|+|\\vec{{\\mathrm{PF}}}|=10$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "${\\mathrm{O}}$ 는 선분 ${\\mathrm{FF'}}$ 의 중점이므로 $\\vec{{\\mathrm{OM}}}=\\frac{1}{2}\\vec{{\\mathrm{F}}'{\\mathrm{X}}}$ , 즉 $\\vec{{\\mathrm{OM}}}=5(\\cos \\theta,\\sin \\theta)$ ( $\\theta$ 는 $\\vec{{\\mathrm{F}}'{\\mathrm{P}}}$ 가 $x$ 축의 양의 방향과 이루는 각)이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "점 ${\\mathrm{P}}$ 의 $x$ 좌표가 $0$ 이상이고 $y$ 좌표가 양수이므로 $0<\\theta \\le \\theta_{0}$ 이고, $\\theta_{0}$ 은 ${\\mathrm{P}}(0,3)$ 일 때로 $\\vec{{\\mathrm{F}}'{\\mathrm{P}}}=(4,3)$ 에서 $\\cos \\theta_{0}=\\frac{4}{5}$ , $\\sin \\theta_{0}=\\frac{3}{5}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$\\vec{{\\mathrm{OM}}}\\cdot \\vec{{\\mathrm{OB}}}=5(-\\cos \\theta+7 \\sin \\theta)$ 는 $0<\\theta \\le \\theta_{0}$ 에서 증가하므로 ( $-\\cos \\theta$ 와 $\\sin \\theta$ 모두 증가) $\\theta=\\theta_{0}$ , 즉 ${\\mathrm{M}}(4,3)$ 일 때 최댓값 $-4+21=17$ 을 갖는다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

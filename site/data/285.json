@@ -1,0 +1,151 @@
+{
+ "num": 285,
+ "id": "추가30·기하-11",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 4,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2026학년도 9월 모의평가 30번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 64,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "좌표평면에서 $\\overline{{\\mathrm{AB}}}=\\overline{{\\mathrm{AC}}}=10$ , $\\overline{{\\mathrm{BC}}}=12$ 인 삼각형 ${\\mathrm{ABC}}$ 가 있다.",
+    "선분 ${\\mathrm{AB}}$ 위의 점 ${\\mathrm{P}}$ , 선분 ${\\mathrm{BC}}$ 위의 점 ${\\mathrm{Q}}$ , 선분 ${\\mathrm{CA}}$ 위의 점 ${\\mathrm{R}}$ 가 다음 조건을 만족시킨다."
+   ]
+  },
+  {
+   "t": "p",
+   "sents": [
+    "(가) $(\\vec{{\\mathrm{PB}}}+\\vec{{\\mathrm{PQ}}})\\cdot \\vec{{\\mathrm{BC}}}=0$ , $(\\vec{{\\mathrm{RC}}}+\\vec{{\\mathrm{RQ}}})\\cdot \\vec{{\\mathrm{BC}}}=0$"
+   ]
+  },
+  {
+   "t": "p",
+   "sents": [
+    "(나) $|\\vec{{\\mathrm{PQ}}}|=2|\\vec{{\\mathrm{QR}}}|$"
+   ]
+  },
+  {
+   "t": "p",
+   "sents": [
+    "$|\\vec{{\\mathrm{XP}}}+\\vec{{\\mathrm{XQ}}}+\\vec{{\\mathrm{XR}}}|=4$ 를 만족시키는 점 ${\\mathrm{X}}$ 에 대하여 $|\\vec{{\\mathrm{AX}}}|$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M^{2}+m^{2}$ 의 값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "좌표평면에서 $\\overline{{\\mathrm{AB}}}=\\overline{{\\mathrm{AC}}}=10$ , $\\overline{{\\mathrm{BC}}}=12$ 인 삼각형 ${\\mathrm{ABC}}$ 가 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "선분 ${\\mathrm{AB}}$ 위의 점 ${\\mathrm{P}}$ , 선분 ${\\mathrm{BC}}$ 위의 점 ${\\mathrm{Q}}$ , 선분 ${\\mathrm{CA}}$ 위의 점 ${\\mathrm{R}}$ 가 다음 조건을 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    1,
+    0
+   ],
+   "text": "(가) $(\\vec{{\\mathrm{PB}}}+\\vec{{\\mathrm{PQ}}})\\cdot \\vec{{\\mathrm{BC}}}=0$ , $(\\vec{{\\mathrm{RC}}}+\\vec{{\\mathrm{RQ}}})\\cdot \\vec{{\\mathrm{BC}}}=0$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    0
+   ],
+   "text": "(나) $|\\vec{{\\mathrm{PQ}}}|=2|\\vec{{\\mathrm{QR}}}|$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    3,
+    0
+   ],
+   "text": "$|\\vec{{\\mathrm{XP}}}+\\vec{{\\mathrm{XQ}}}+\\vec{{\\mathrm{XR}}}|=4$ 를 만족시키는 점 ${\\mathrm{X}}$ 에 대하여 $|\\vec{{\\mathrm{AX}}}|$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M^{2}+m^{2}$ 의 값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "조건 (가)의 해석(이등변삼각형)은 유지하되 (나)를 길이의 비로 바꾸어 Q의 위치를 정하게 하고, 마지막 자취를 삼각형 PQR의 무게중심을 중심으로 하는 원으로 바꿈"
+ ],
+ "topic": "평면벡터",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "$\\vec{{\\mathrm{PB}}}+\\vec{{\\mathrm{PQ}}}=2 \\vec{{\\mathrm{PK}}}$ ( ${\\mathrm{K}}$ 는 선분 ${\\mathrm{BQ}}$ 의 중점)이고 이것이 $\\vec{{\\mathrm{BC}}}$ 에 수직이므로 점 ${\\mathrm{P}}$ 에서 직선 ${\\mathrm{BC}}$ 에 내린 수선의 발이 ${\\mathrm{K}}$ 이다. 즉 $\\overline{{\\mathrm{PB}}}=\\overline{{\\mathrm{PQ}}}$ 이고, 같은 방법으로 $\\overline{{\\mathrm{RC}}}=\\overline{{\\mathrm{RQ}}}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "${\\mathrm{B}}(0,0)$ , ${\\mathrm{C}}(12,0)$ , ${\\mathrm{A}}(6,8)$ , ${\\mathrm{Q}}(q,0)$ 으로 놓으면 직선 ${\\mathrm{AB}}$ 는 $y=\\frac{4}{3}x$ , 직선 ${\\mathrm{AC}}$ 는 $y=\\frac{4}{3}(12-x)$ 이므로",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$${\\mathrm{P}}\\left(\\frac{q}{2},\\frac{2 q}{3}\\right),{\\mathrm{R}}\\left(\\frac{q+12}{2},\\frac{2(12-q)}{3}\\right),\\overline{{\\mathrm{PQ}}}=\\frac{5 q}{6},\\overline{{\\mathrm{QR}}}=\\frac{5(12-q)}{6}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "(나)에서 $q=2(12-q)$ , $q=8$ 이므로 ${\\mathrm{P}}\\left(4,\\frac{16}{3}\\right)$ , ${\\mathrm{Q}}(8,0)$ , ${\\mathrm{R}}\\left(10,\\frac{8}{3}\\right)$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "삼각형 ${\\mathrm{PQR}}$ 의 무게중심 ${\\mathrm{G}}\\left(\\frac{22}{3},\\frac{8}{3}\\right)$ 에 대하여 $|\\vec{{\\mathrm{XP}}}+\\vec{{\\mathrm{XQ}}}+\\vec{{\\mathrm{XR}}}|=3|\\vec{{\\mathrm{XG}}}|=4$ 이므로 점 ${\\mathrm{X}}$ 는 중심이 ${\\mathrm{G}}$ , 반지름의 길이가 $\\frac{4}{3}$ 인 원 위에 있다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "$|\\vec{{\\mathrm{AG}}}|^{2}=\\left(\\frac{4}{3}\\right)^{2}+\\left(\\frac{16}{3}\\right)^{2}=\\frac{272}{9}$ 이고 $M=|\\vec{{\\mathrm{AG}}}|+\\frac{4}{3}$ , $m=|\\vec{{\\mathrm{AG}}}|-\\frac{4}{3}$ 이므로",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "$$M^{2}+m^{2}=2 \\left(\\frac{272}{9}+\\frac{16}{9}\\right)=64$$",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}
