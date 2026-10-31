@@ -180,6 +180,28 @@ def japan_items():
     return out
 
 
+def past_items(start):
+    """src/past/index.json + answers.json + img/ → 평가원 기출 킬러(2022~2026학년도) 목록. 일본관과 같은 이미지 기반 구조(kind='past')"""
+    p = os.path.join(ROOT, 'src/past/index.json')
+    if not os.path.exists(p):
+        return []
+    ans = json.load(open(os.path.join(ROOT, 'src/past/answers.json'), encoding='utf-8'))
+    MON = {'6월': '6월 모의평가', '9월': '9월 모의평가', '11월': '수능'}
+    out = []
+    for x in json.load(open(p, encoding='utf-8')):
+        f = f"past/{x['id']}.webp"
+        if not os.path.exists(os.path.join(ROOT, 'src/past/img', os.path.basename(f))):
+            continue
+        key = x['id'].split('-')[2]
+        a = ans.get(f"{x['year']}-{x['month'][:-1].zfill(2)}", {}).get(key)
+        subj = {'공통': '공통', '확률과 통계': '확률과 통계', '미적분': '미적분Ⅱ', '기하': '기하'}[x['part']]
+        out.append({'num': start + len(out), 'kind': 'past', 'id': x['id'], 'year': x['year'], 'month': x['month'], 'num0': x['num'], 'stars': x['stars'],
+                    'univ': f"{x['year']}학년도 {MON[x['month']]}", 'track': f"{x['part']} {x['num']}번", 'part': x['part'], 'subj': subj,
+                    'text': f"{x['year']}학년도 {MON[x['month']]} {x['part']} {x['num']}번", 'qimg': [f], 'simg': [],
+                    'answer': a, 'choice': x['choice']})
+    return out
+
+
 ART_EXT = ('.webp', '.png', '.jpg', '.jpeg')
 
 
@@ -244,6 +266,7 @@ def main():
     import argparse, shutil
     ap = argparse.ArgumentParser()
     ap.add_argument('--key', help='접근 코드. 주면 문항 데이터를 암호화해서 넣는다 (학생은 코드를 입력해야 열림)')
+    ap.add_argument('--imgbase', default='', help='단일 파일(killer-math.html)에 이미지를 인라인하지 않고 이 URL 아래에서 불러온다 (예: https://killershrekmath.vercel.app/). 파일 크기를 줄일 때.')
     args = ap.parse_args()
 
     items = []
@@ -262,6 +285,8 @@ def main():
            for x in items]
     essays = essay_items()
     japan = japan_items()
+    past = past_items(len(japan) + 1)
+    japan += past
     elst = [{'num': e['num'], 'id': e['id'], 'univ': e['univ'], 'n': e['n'], 'title': e['title'], 'points': e['points'],
              'minutes': e['minutes'], 'nsubs': len(e['subs']), 'field': e['field'], 'art': art_path('essay-' + str(e['num'])), 'snip': essay_snip(e)} for e in essays]
     for j in japan:
@@ -272,7 +297,7 @@ def main():
     with open(os.path.join(ROOT, 'src/katex.inline.css'), encoding='utf-8') as f:
         tpl = tpl.replace('/*__KATEX_CSS__*/', f.read())
 
-    for d in ('data', 'edata', 'jp'):
+    for d in ('data', 'edata', 'jp', 'past'):
         shutil.rmtree(os.path.join(SITE, d), ignore_errors=True)
     for fn in ('list.json', 'elist.json', 'jlist.json', 'enc.json'):
         p = os.path.join(SITE, fn)
@@ -281,12 +306,13 @@ def main():
     dump = lambda obj, p: json.dump(obj, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     # 일본 문제 이미지는 암호화 여부와 상관없이 site/jp/ 에 복사 (단일 파일에는 data URI로 인라인)
     import base64
-    os.makedirs(os.path.join(SITE, 'jp'), exist_ok=True)
+    os.makedirs(os.path.join(SITE, 'jp'), exist_ok=True); os.makedirs(os.path.join(SITE, 'past'), exist_ok=True)
     jimg_js = {}
     for j in japan:
         for f in j['qimg'] + j['simg']:
-            src = os.path.join(ROOT, 'src/japan/img', os.path.basename(f))
-            shutil.copy(src, os.path.join(SITE, 'jp', os.path.basename(f)))
+            sub = 'src/past/img' if f.startswith('past/') else 'src/japan/img'
+            src = os.path.join(ROOT, sub, os.path.basename(f))
+            shutil.copy(src, os.path.join(SITE, f.split('/')[0], os.path.basename(f)))
             jimg_js[f] = 'data:image/webp;base64,' + base64.b64encode(open(src, 'rb').read()).decode()
     # 카드 그림(art/)도 단일 파일에는 인라인
     art_dir = os.path.join(SITE, 'art')
@@ -297,7 +323,7 @@ def main():
                     full = os.path.join(dp, fn); rel = os.path.relpath(full, SITE).replace(os.sep, '/')
                     mime = 'image/webp' if fn.lower().endswith('.webp') else 'image/png' if fn.lower().endswith('.png') else 'image/jpeg'
                     jimg_js[rel] = f'data:{mime};base64,' + base64.b64encode(open(full, 'rb').read()).decode()
-    jimg_script = 'window.__JIMG__=' + json.dumps(jimg_js) + ';'
+    jimg_script = ('window.__IMGBASE__=' + json.dumps(args.imgbase) + ';') if args.imgbase else ('window.__JIMG__=' + json.dumps(jimg_js) + ';')
 
     if args.key:
         payload = {'list': lst, 'data': {x['num']: x for x in items}, 'elist': elst, 'edata': {e['num']: e for e in essays}, 'jlist': japan, 'cats': cats}
@@ -340,7 +366,7 @@ def main():
         f.write(tpl.replace('/*__INLINE_DATA__*/', data_js))
 
     nfull = sum(1 for x in items if x['full'])
-    print(f'킬러 {len(items)}개 (완전 분석 {nfull}개) · 논술 {len(essays)}개 · 일본 {len(japan)}개 · {mode} → site/, killer-math.html')
+    print(f'킬러 {len(items)}개 (완전 분석 {nfull}개) · 논술 {len(essays)}개 · 일본 {len(japan) - len(past)}개 · 기출 {len(past)}개 (정답 {sum(1 for x in past if x["answer"] is not None)}개) · {mode} → site/, killer-math.html')
 
 
 if __name__ == '__main__':

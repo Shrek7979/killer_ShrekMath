@@ -21,6 +21,22 @@ Vercel → Add New → Project → 이 저장소 Import → 설정 그대로 Dep
 
 다른 시즌도 같은 방법으로 `season17.txt` → `items_17.json`을 만들면 자동으로 합쳐진다. (책마다 형식이 조금씩 달라 파서가 놓치는 문제가 있을 수 있다. 그림은 `[그림]`으로만 표시된다.)
 
+## 기출관 (평가원 기출 킬러, 이미지 기반)
+
+`src/past/` 에 2022~2026학년도 평가원(6월·9월 모의평가, 수능) 문제지에서 잘라낸 14·15·20·21·22번, 미적분 28·29·30번, 확통·기하 30번 이미지가 들어 있다(홀수형).
+
+1. `python src/past/render_past.py "공통.pdf" "확통.pdf" "미적.pdf" "기하.pdf"` → `src/past/img/*.webp`, `src/past/index.json`
+   (문제지 PDF는 2단 레이아웃. 문항 번호 단어의 위치로 세로 구간을 잘라내고 아래 흰 여백을 다듬는다.)
+2. `src/past/answers.json` 에 정답을 넣는다 (평가원 정답표 기준, 객관식은 1~5). `null` 이면 자기 점검 문항으로 올라간다.
+3. `python build.py` → `site/past/`, `jlist.json`(일본관과 같은 구조, `kind:"past"`)
+
+난이도·제한시간: 22번·선택 30번 ★5(13분), 15·21·28·29번 ★4(10분), 14·20번·확통/기하 30번 ★3(8분). `render_past.py` 의 `PLAN` 에서 바꾼다.
+해설은 싣지 않는다(저작권·분량). 진단 카드에서 EBSi 해설을 안내하고, 같은 번호 자리의 창작 문항(킬러관)으로 이어 준다.
+
+## 단일 파일 크기 줄이기
+
+`python build.py --imgbase https://killershrekmath.vercel.app/` 로 빌드하면 `killer-math.html` 에 일본관·기출관 이미지를 인라인하지 않고 그 주소에서 불러온다 (17MB → 1.5MB). `site/` 결과물은 똑같다.
+
 ## 접근 코드로 잠그기 (문항 유출 방지)
 
 ```
@@ -44,10 +60,12 @@ killer-math/
 ├─ anatomy/            ★ 완전 분석 파일 (문항 id별 JSON, LaTeX 문법)
 ├─ parse_essay.py      수리논술 텍스트 → 문제 JSON
 ├─ src/essay/          논술 원문 추출본(seasonNN.txt)·문제 JSON(items_NN.json)·추출 스크립트
+├─ src/japan/          일본 대학 입시 문제·해설 이미지(img/)·index.json
+├─ src/past/           평가원 기출 킬러 이미지(img/)·index.json·answers.json·render_past.py
 ├─ site/               정적 호스팅용 결과물 (index.html + list.json + data/NNN.json)
 └─ killer-math.html    단일 파일 결과물 (데이터 포함, 그냥 열면 됨 · 아티팩트용)
 
-`site/`에는 `elist.json`, `edata/NNN.json`(논술)도 생긴다. `--key`로 빌드하면 대신 `enc.json` 하나만 생긴다.
+`site/`에는 `elist.json`, `edata/NNN.json`(논술), `jlist.json`+`jp/`(일본)+`past/`(기출)도 생긴다. `--key`로 빌드하면 대신 `enc.json` 하나만 생긴다.
 ```
 
 ## 한글 파일에서 문항 가져오기 (`src/bank_src/`)
