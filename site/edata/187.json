@@ -1,0 +1,53 @@
+{
+ "num": 187,
+ "id": "S16-중앙대학교(자연계열Ⅰ)수시-3",
+ "univ": "중앙대학교(자연계열Ⅰ) 수시",
+ "n": 3,
+ "title": "문제 3",
+ "head": "다음을 읽고 문제에 답하시오.",
+ "points": null,
+ "minutes": 30,
+ "info": {
+  "concepts": "수학적 확룰, 기댓값, 로그, $sum _{ k=1} ^{ n } a_k$ , 덧셈정리, 치환적분법, 도형의 넓이, 그래프의 개형, 삼각함수의 덧셈정리, 사인법칙, 코사인법칙, 포물선, 이차방정식의 근과 계수의 관계",
+  "min": "서울 전체(약학부, 의학부 제외) : 국어, 수학(미적분, 기하 중 택 1), 영어, 과탐(1과목) 중 3개 영역 등급 합 6 이내",
+  "field": "약학부: 4개 영역 등급 합 5 이내 의학부: 과탐(2과목 평균, 소숫점 자리 버림 없음) 4개 영역 등급 합 5 이내 다빈치: 과탐(1과목) 2개 영역 등급 합 6 이내 수학(4문항, 7문제)",
+  "time": "120분"
+ },
+ "pre": [],
+ "passage": [
+  "• 함수 $f \\left(x \\right)$ 가 닫힌구간 $\\left[a,b \\right]$ 에서 연속일 때, 곡선 $y=f \\left(x \\right)$ 와 $x$ 축 및 두 직선 $x=a$ , $x=b$ 로 둘러싸인 도형의 넓이는 $S=\\int_{a}^{b}{\\left|f \\left(x \\right)\\right|dx}$ 이다.",
+  "• 미분가능한 함수 $g \\left(x \\right)$ 의 도함수 $g' \\left(x \\right)$ 가 닫힌구간 $\\left[a,b \\right]$ 를 포함하는 열린구간에서 연속이고, $g \\left(a \\right)=\\alpha$ , $g \\left(b \\right)=\\beta$ 에 대하여 함수 $f \\left(x \\right)$ 가 $\\alpha$ 와 $\\beta$ 를 양끝으로 하는 닫힌구간에서 연속일 때 다음 식이 성립한다. $\\int_{a}^{b}{f \\left(g \\left(x \\right)\\right)g' \\left(x \\right)dx}=\\int_{\\alpha}^{\\beta}{f \\left(t \\right)dt}$",
+  "• 미분가능한 함수 $f \\left(x \\right)$ 가 $x=a$ 에서 극값을 가지면 $f' \\left(a \\right)=0$ 이다.",
+  "• $\\tan \\left(\\alpha+\\beta \\right)=\\frac{\\tan \\alpha+\\tan \\beta}{1-\\tan \\alpha \\tan \\beta}$ (단, $\\tan \\alpha \\tan \\beta \\ne 1$ )"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[문제 3-1]",
+   "points": 10,
+   "text": [
+    "$x \\ge 0$ 에서 정의된 곡선 $y=\\frac{x}{x^2+1}\\left[\\left\\{\\ln \\left(x^2+1 \\right)\\right\\}^2-6 \\ln \\left(x^2+1 \\right)+5 \\right]$ 와 $x$ 축으로 둘러싸인 도형의 넓이를 구하시오. [10점]"
+   ],
+   "answer": [
+    "$f \\left(x \\right)=\\frac{x}{x^2+1}\\left(\\ln \\left(x^2+1 \\right)-1 \\right)\\left(\\ln \\left(x^2+1 \\right)-5 \\right)$ 라 하자. $x=0$ , $\\sqrt{e}-1$ , $\\sqrt{e^5-1}$ 에서 $f \\left(x \\right)=0$ $0 \\le x \\le \\sqrt{e}-1$ 에서 $f \\left(x \\right)\\ge 0$ 이고 $\\sqrt{e}-1 \\le x \\le \\sqrt{e^5-1}$ 에서 $f \\left(x \\right)\\le 0$ 이므로 구하는 넓이는 $\\int_{0}^{\\sqrt{e}-1}{f \\left(x \\right)dx}-\\int_{\\sqrt{e}-1}^{\\sqrt{e^5-1}}{f \\left(x \\right)dx}$ 이다. $t=\\ln \\left(x^2+1 \\right)$ 로 치환하여 적분하면 $\\frac{1}{2}\\int_{0}^{1}{\\left(t^2-6 t+5 \\right)dt}-\\frac{1}{2}\\int_{1}^{5}{\\left(t^2-6 t+5 \\right)dt}=\\frac{7}{6}+\\frac{16}{3}=\\frac{13}{2}$ 이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "[문제 3-2]",
+   "points": 15,
+   "text": [
+    "좌표평면 위에 점 $\\mathrm{A}\\left(-1,0 \\right)$ , $\\mathrm{B}\\left(1,0 \\right)$ 이 있다. 구간 $-1 \\le x \\le 1$ 에서 정의된 곡선 $y=\\sqrt{x}+2$ 위의 점 $\\mathrm{P}$ 에 대하여 $\\theta=\\angle \\mathrm{APB}$ 라 할 때, $\\tan^2 \\theta$ 의 최댓값을 구하시오.",
+    "[15점]"
+   ],
+   "answer": [
+    "점 $\\mathrm{P}$ 의 좌표는 $\\left(t,\\sqrt{t}+2 \\right)$ 라 하자. $\\angle \\mathrm{PAB}=\\alpha$ , $\\angle \\mathrm{PBA}=\\beta$ 라 하면 $\\tan \\alpha=\\frac{\\sqrt{t}+2}{1}+t$ , $\\tan \\beta=\\frac{\\sqrt{t}+2}{1}-t$ 이다. $\\theta=\\pi-\\alpha-\\beta$ 이므로 $\\tan \\theta=f \\left(t \\right)$ 라 하면 $f \\left(t \\right)=\\frac{2 \\sqrt{t}+2}{t^2+t+1}$ 이다. 미분하면 $f' \\left(t \\right)=-\\frac{3 \\left(t^2+3 t+1 \\right)}{\\left(t^2+t+1 \\right)^2 \\sqrt{t}+2}$ 이다. $t=\\frac{-3 \\pm \\sqrt{5}}{2}$ 에서 극값을 갖고 $\\frac{-3-\\sqrt{5}}{2}<-1<\\frac{-3+\\sqrt{5}}{2}<1$ 이므로 $t=\\frac{-3+\\sqrt{5}}{2}$ 에서 최댓값을 갖는다. $\\tan^2 \\theta$ 의 최댓값은 $\\left\\{f \\left(\\frac{-3+\\sqrt{5}}{2}\\right)\\right\\}^2=\\frac{11+5 \\sqrt{5}}{2}$ 이다."
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "수학적 확룰"
+}

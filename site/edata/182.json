@@ -1,0 +1,51 @@
+{
+ "num": 182,
+ "id": "S16-중앙대학교(자연계열)모의-2",
+ "univ": "중앙대학교(자연계열) 모의",
+ "n": 2,
+ "title": "문제 2",
+ "head": "다음을 읽고 문제에 답하시오.",
+ "points": null,
+ "minutes": 30,
+ "info": {
+  "concepts": "이산확률변수, 기댓값, 수열의 귀납적 정의, 이항분포, 도함수, 함수의 최댓값과 최솟값, 삼각함수, 삼각함수의 덧셈정리, 치환적분법, 정적분, 함수의 극한의 대소관계",
+  "min": "서울 전체(약학부, 의학부 제외) : 국어, 수학(미적분, 기하 중 택 1), 영어, 과탐(1과목) 중 3개 영역 등급 합 6 이내약학부 : 4개 영역 등급 합 5 이내",
+  "field": "의학부 : 과탐(2과목 평균, 소숫점 자리 버림 없음) 4개 영역 등급 합 5 이내 다빈치 : 과탐(1과목) 2개 영역 등급 합 6 이내 수학(4문항, 7문제)",
+  "time": "120분"
+ },
+ "pre": [],
+ "passage": [
+  "•함수 $f \\left(x \\right)$ 가 $x=a$ 에서 미분가능하고 $x=a$ 에서 극값을 가지면 $f' \\left(a \\right)=0$ 이다.",
+  "•모든 실수 $\\alpha$ , $\\beta$ 에 대하여 $\\sin \\left(\\alpha+\\beta \\right)=\\sin{\\alpha}\\cos \\beta+\\cos \\alpha \\sin \\beta$ 가 성립한다.",
+  "•탄젠트 함수의 덧셈정리는 다음과 같다. $\\tan \\left(\\alpha+\\beta \\right)=\\frac{\\tan \\alpha+\\tan \\beta}{1-\\tan \\alpha \\tan \\beta}$ $\\tan \\left(\\alpha-\\beta \\right)=\\frac{\\tan \\alpha-\\tan \\beta}{1+\\tan \\alpha \\tan \\beta}$"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[문제 2-1]",
+   "points": 10,
+   "text": [
+    "닫힌구간 $\\left[0,2 \\pi \\right]$ 에서 정의된 함수 $f \\left(x \\right)=x-3 \\sin x+\\sin \\left(2 x \\right)$ 가 $x=a$ 에서 최댓값을 가질 때, $\\sin a$ 의 값을 구하시오. [10점]"
+   ],
+   "answer": [
+    "삼각함수의 덧셈정리를 이용하여 함수 $f \\left(x \\right)$ 를 미분한 후, 식을 다음과 같이 정리한다. $f' \\left(x \\right)=1-3 \\cos x+\\left(2 \\sin x \\cos x \\right)'=1-3 \\cos x+2 \\left(\\cos^2 x-\\sin^2 x \\right)$ $=4 \\cos^2 x-3 \\cos x-1=\\left(\\cos x-1 \\right)\\left(4 \\cos x+1 \\right)$ 여기서 $x=0$ , $x_1$ , $x_2$ , $2 \\pi$ 일 때, $f' \\left(x \\right)=0$ 을 만족하므로 ( $\\cos x_1=\\cos x_2=-\\frac{1}{4}$ 이고 $x_1<x_2$ 라 한다.) $f \\left(x \\right)$ 의 최댓값은 $f \\left(0 \\right)=0$ , $f \\left(x_1 \\right)=x_1-\\frac{7}{8}\\sqrt{15}$ , $f \\left(x_2 \\right)=x_2+\\frac{7}{8}\\sqrt{15}$ , $f \\left(2 \\pi \\right)=2 \\pi$ 중 가장 큰 수이다. $\\cos x$ 함수의 그래프로부터 적어도 $x_2>\\frac{5 \\pi}{4}$ 를 만족함을 알 수 있는데 이를 이용하여 $f \\left(x_2 \\right)$ 와 $f \\left(2 \\pi \\right)$ 를 비교하면 $a=x_2$ 임을 알 수 있다. 따라서 정답은 $\\sin a=-\\frac{\\sqrt{15}}{4}$ 이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "[문제 2-2]",
+   "points": 15,
+   "text": [
+    "좌표평면 위의 점 $\\mathrm{A}\\left(0,1 \\right)$ , $\\mathrm{B}\\left(2,1 \\right)$ 과 직선 $x+y=0$ 위의 점 $\\mathrm{P}$ 에 대하여 $\\angle A P B=\\theta$ 라 할 때, $\\tan \\theta$ 의 최댓값을 구하시오. (단, $0 \\le x \\le 2$ 이다.) [15점]"
+   ],
+   "answer": [
+    "$\\mathrm{P}\\left(t,-t \\right)$ ( $0 \\le t \\le 2$ )라 하자. $\\mathrm{AP}$ 와 직선 $x=0$ 사이의 각을 $\\alpha$ , $\\mathrm{BP}$ 와 직선 $x=2$ 사이의 각을 $\\beta$ 라 하면 $\\tan \\alpha=\\frac{t}{t}+1$ , $\\tan \\beta=2-\\frac{t}{t}+1$ 이다. 덧셈정리를 이용하여 $\\tan \\theta=\\tan \\left(\\alpha+\\beta \\right)=2 t+\\frac{2}{2 t^2+1}$ 을 얻고, $t$ 에 대하여 미분하면 $\\frac{2 \\left(1-4 t-2 t^2 \\right)}{\\left(2 t^2+1 \\right)^2}$ 을 구한다. $\\tan \\theta=2 t+\\frac{2}{2 t^2+1}$ 는 $t=\\frac{\\sqrt{6}}{2}-1$ ( $0<\\frac{\\sqrt{6}}{2}-1<2$ )에서 극대이고 최댓값을 갖는다. $t=\\frac{\\sqrt{6}}{2}-1$ 을 $\\tan \\theta=2 t+\\frac{2}{2 t^2+1}$ 에 대입하여 최댓값 $\\frac{\\sqrt{6}}{6-2 \\sqrt{6}}=\\frac{2+\\sqrt{6}}{2}$ 을 구한다."
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "이산확률변수"
+}
