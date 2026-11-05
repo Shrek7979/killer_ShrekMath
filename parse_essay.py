@@ -10,7 +10,7 @@ MAIN = re.compile(r'^\[\s*(?:문제|문항)\s*(\d+)\s*\]')
 SUB = re.compile(r'^\[\s*(?:문제|문항)?\s*(\d+)\s*[-.–]\s*([0-9ⅰⅱⅲⅳⅴⅵ]+)\s*\]')
 RUBRIC = re.compile(r'^(○\s*)?채점\s*기준')
 ANSHEAD = re.compile(r'^예시\s*답안$')
-PTS = re.compile(r'\((?:총\s*)?(\d+)\s*점\)|\[(\d+)\s*점\]')
+PTS = re.compile(r'\((?:총\s*)?(\d+)\s*점\)|\[(?:배점\s*)?(\d+)\s*점\]')
 ROMAN = {'ⅰ': '1', 'ⅱ': '2', 'ⅲ': '3', 'ⅳ': '4', 'ⅴ': '5', 'ⅵ': '6'}
 REF = re.compile(r'^\]\s*(에서|의|로부터|에|과|와|을|를|은|는|으로|처럼|에 의해|에서는|을 이용|를 이용)')
 
@@ -32,6 +32,12 @@ def norm_title(t):
 
 def parse(path):
     raw = re.sub(r'[\ue000-\uf8ff]', '', open(path, encoding='utf-8').read()).split('\n')
+    # 경희대형 '[논제 Ⅰ]' / '[논제 Ⅰ-1]' 머리 → '[문제 1]' / '[1-1]'
+    UP = {'Ⅰ': '1', 'Ⅱ': '2', 'Ⅲ': '3', 'Ⅳ': '4', 'Ⅴ': '5'}
+    def _nz(l):
+        l = re.sub(r'^(\s*)\[\s*논제\s*([ⅠⅡⅢⅣⅤ])\s*-\s*(\d+)\s*\]', lambda m: f"{m.group(1)}[{UP[m.group(2)]}-{m.group(3)}]", l)
+        return re.sub(r'^(\s*)\[\s*논제\s*([ⅠⅡⅢⅣⅤ])\s*\]', lambda m: f"{m.group(1)}[문제 {UP[m.group(2)]}]", l)
+    raw = [_nz(l) for l in raw]
     lines = [(len(l) - len(l.lstrip(' ')), l.strip()) for l in raw]
     # 목차(앞부분) 건너뛰기: 첫 번째 '시험 시간' 표가 나오기 전의 제목은 무시
     sets, cur = [], None

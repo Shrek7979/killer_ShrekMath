@@ -1,0 +1,62 @@
+{
+ "num": 106,
+ "id": "S16-가톨릭대학교(의약학과)수시-1",
+ "univ": "가톨릭대학교(의·약학과) 수시",
+ "n": 1,
+ "title": "문제 1 · 170점",
+ "head": "제시문 (ㄱ)～(ㅁ)을 읽고 논제에 답하시오. (170점)",
+ "points": 170,
+ "minutes": 22,
+ "info": {
+  "concepts": "[의예, 약학]",
+  "min": "평면좌표, 속도, 거리, 지수함수, 그래프의 개형, 정적분, 함수의 증가와 감소, 최댓값과 최솟값",
+  "field": "[의예] 호도법, 삼각함수, 그래프의 대칭성 의예과 (국어, 수학(미적분/기하), 영어, 과탐(2과목 평균) 중 3개 영역 등급 합 4 이내 및 한국사 4등급 이내) 약학과 (국어, 수학(미적분/기하), 영어, 과탐(1과목) 중 3개 영역 등급 합 5 이내) [의예] 수학(4문항, 4문제) [약학] 수학(3문항, 3문제, 문항1,2,4) [의예] 100분",
+  "time": "[약학] 90분"
+ },
+ "pre": [],
+ "passage": [
+  "(ㄱ) 좌표평면 위를 움직이는 점 $\\mathrm{P}\\left(x,y \\right)$ 의 시각 $t$ ( $t \\ge 0$ )에서의 위치는 다음과 같다.",
+  "$x=2 \\sin t-\\left(2 t-\\pi \\right)\\cos t$",
+  "$y=2 \\cos t+\\left(2 t-\\pi \\right)\\sin t$",
+  "(ㄴ) 제시문 (ㄱ)의 점 $\\mathrm{P}$ 에서 $x$ 축과 $y$ 축에 내린 수선의 발을 각각 $\\mathrm{Q}$ 와 $\\mathrm{R}$ 이라고 하면, 점 $\\mathrm{P}$ 가 움직일 때 점 $\\mathrm{Q}$ 는 $x$ 축 위에서 직선 운동을 하고 점 $\\mathrm{R}$ 은 $y$ 축 위에서 직선 운동을 한다.",
+  "(ㄷ) 양수 $a$ 에 대하여 제시문 (ㄱ)의 점 $\\mathrm{P}$ 의 시각 $t=a$ 에서의 속력은 시각 $t=0$ 에서의 속력의 $3$ 배이다. 이때 실수 $s$ 는 다음과 같다.",
+  "$s$ 는 $t=0$ 에서 $t=a$ 까지 점 $\\mathrm{P}$ 가 움직인 거리이다.",
+  "(ㄹ) 양수 $b$ 에 대하여 제시문 (ㄴ)의 점 $\\mathrm{Q}$ 는 시각 $t=0$ 일 때 출발하여 시각 $t=b$ 에서 $\\mathrm{Q}$ 의 운동 방향을 두 번째로 바꾼다. 이때 실수 $d$ 는 다음과 같다.",
+  "$d$ 는 $t=0$ 에서 $t=b$ 까지 점 $\\mathrm{Q}$ 가 움직인 거리이다.",
+  "(ㅁ) 양수 $c$ 에 대하여 제시문 (ㄴ)의 점 $\\mathrm{R}$ 은 시각 $t=0$ 일 때 출발하여 시각 $t=c$ 에서 $\\mathrm{R}$ 의 운동 방향을 두 번째로 바꾼다. 이때 실수 $l$ 은 다음과 같다.",
+  "$l$ 는 $t=0$ 에서 $t=c$ 까지 점 $\\mathrm{R}$ 이 움직인 거리이다.",
+  "논제 1. (170점) 제시문 (ㄷ)～(ㅁ)의 $s$ , $d$ , $l$ 의 값을 각각 구하고 그 근거를 논술하시오."
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[답안]",
+   "points": 170,
+   "text": [],
+   "answer": [
+    "점 $\\mathrm{P}\\left(x,y \\right)$ 에 대하여 $\\frac{dx}{dt}=\\left(2 t-\\pi \\right)\\sin t$ , $\\frac{dy}{dt}=\\left(2 t-\\pi \\right)\\cos t$ 이므로, 시간 $t$ 에서 점 $\\mathrm{P}$ 의 속력은 다음과 같다.",
+    "$\\sqrt{\\left(\\frac{dx}{dt}\\right)^{2}+\\left(\\frac{dy}{dt}\\right)^{2}}=\\sqrt{\\left\\{\\left(2 t-\\pi \\right)\\sin t \\right\\}^{2}+\\left\\{\\left(2 t-\\pi \\right)\\cos t \\right\\}^{2}}=\\sqrt{\\left(2 t-\\pi \\right)^{2}}=\\left|2 t-\\pi \\right|$",
+    "점 $\\mathrm{P}$ 의 $t=0$ 에서 속력은 $\\left|2 t-\\pi \\right|=\\pi$ 이고, $t=a$ 에서의 속력은 $\\left|2 a-\\pi \\right|=3 \\pi$ 이므로 $a=2 \\pi$ 이다. 따라서 $s$ 는 다음과 같다.",
+    "$$\\begin{aligned}s&=\\int_{0}^{2 \\pi}{\\left|2 t-\\pi \\right|}dt=\\int_{0}^{\\frac{\\pi}{2}}{\\left(\\pi-2 t \\right)}dt+\\int_{\\frac{\\pi}{2}}^{2 \\pi}{\\left(2 t-\\pi \\right)}dt \\\\&=\\left[\\pi t-t^{2}\\right]_{0}^{\\frac{\\pi}{2}}+\\left[t^{2}-\\pi t \\right]_{\\frac{\\pi}{2}}^{2 \\pi}=\\frac{5}{2}\\pi^{2}\\end{aligned}$$",
+    "시간 $t$ 에서 점 $\\mathrm{Q}$ 의 속도는 $v \\left(t \\right)=\\left(2 t-\\pi \\right)\\sin t$ 이고, 점 $\\mathrm{R}$ 의 속도는 $u \\left(t \\right)=\\left(2 t-\\pi \\right)\\cos t$ 이다.",
+    "수직선을 따라 움직이는 점의 운동에서 속도의 부호는 점의 운동 방향을 나타내므로 두 점의 속도의 부호가 바뀌는 시각, 즉 운동 방향을 바꾸는 시각은 점 $\\mathrm{Q}$ 에 대하여 $\\frac{\\pi}{2}$ , $\\pi$ , $2 \\pi$ , $\\cdot \\cdot \\cdot$ 이고, 점 $\\mathrm{R}$ 에 대하여 $\\frac{3}{2}\\pi$ , $\\frac{5}{2}\\pi$ , $\\frac{7}{2}\\pi$ , $\\cdot \\cdot \\cdot$ 이다. 따라서 $b=\\pi$ , $c=\\frac{5}{2}\\pi$ 이다.",
+    "그러므로 $d$ 는",
+    "$$\\begin{aligned}d&=\\int_{0}^{\\pi}{\\left|\\left(2 t-\\pi \\right)\\sin t \\right|}dt=\\int_{0}^{\\frac{\\pi}{2}}{\\left(\\pi-2 t \\right)\\sin t}dt+\\int_{\\frac{\\pi}{2}}^{\\pi}{\\left(2 t-\\pi \\right)\\sin t}dt\\end{aligned}$$",
+    "$=\\int_0^{\\frac{\\pi}{2}}\\pi \\sin t dt-2 \\int_0^{\\frac{\\pi}{2}}t \\sin t dt+2 \\int_{\\frac{\\pi}{2}}^{\\pi}t \\sin t dt-\\pi \\int_{\\frac{\\pi}{2}}^{\\pi}\\sin t dt$",
+    "$=-2 \\left(\\int_{0}^{\\frac{\\pi}{2}}{t \\sin t}dt-\\int_{\\frac{\\pi}{2}}^{\\pi}{t \\sin t}dt \\right)$",
+    "이고, 부분적분법을 이용하면, $\\int{t \\sin t}dt=t \\left(-\\cos t \\right)-\\int{\\left(-\\cos t \\right)}dt=-t \\cos t+\\sin t$ $+C$ (단, $C$ 는 적분상수)이므로,",
+    "$d=-2 \\left(\\left[-t \\cos t+\\sin t \\right]_{0}^{\\frac{\\pi}{2}}+\\left[t \\cos t-\\sin t \\right]_{\\frac{\\pi}{2}}^{\\pi}\\right)=2 \\pi-4$ 이다.",
+    "또한 $l$ 은",
+    "$$\\begin{aligned}l&=\\int_{0}^{\\frac{5}{2}\\pi}{\\left|\\left(2 t-\\pi \\right)\\cos t \\right|}dt=\\int_{0}^{\\frac{3}{2}\\pi}{\\left(\\pi-2 t \\right)\\cos t}dt+\\int_{\\frac{3}{2}\\pi}^{\\frac{5}{2}\\pi}{\\left(2 t-\\pi \\right)\\cos t}dt\\end{aligned}$$",
+    "$=\\pi \\int_0^{\\frac{3}{2}\\pi}\\cos t dt-2 \\int_0^{\\frac{3}{2}\\pi}t \\cos t dt+2 \\int_{\\frac{3}{2}\\pi}^{\\frac{5}{2}\\pi}t \\cos t dt-\\pi \\int_{\\frac{3}{2}\\pi}^{\\frac{5}{2}\\pi}\\cos t dt$",
+    "$=-3 \\pi-2 \\left(\\int_{0}^{\\frac{3}{2}\\pi}{t \\cos t}dt-\\int_{\\frac{3}{2}\\pi}^{\\frac{5}{2}\\pi}{t \\cos t}dt \\right)$",
+    "이고, 부분적분법을 이용하면, $\\int{t \\cos t}dt=t \\sin t-\\int{\\sin t}dt=t \\sin t+\\cos t$ $+C$ (단, $C$ 는 적분상수)이므로,",
+    "$l=-3 \\pi-2 \\left(\\left[t \\sin t+\\cos t \\right]_{0}^{\\frac{3}{2}\\pi}-\\left[t \\sin t+\\cos t \\right]_{\\frac{3}{2}\\pi}^{\\frac{5}{2}\\pi}\\right)=8 \\pi+2$ 이다."
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "[의예"
+}

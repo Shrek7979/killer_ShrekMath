@@ -1,0 +1,67 @@
+{
+ "num": 188,
+ "id": "S16-중앙대학교(자연계열Ⅰ)수시-4",
+ "univ": "중앙대학교(자연계열Ⅰ) 수시",
+ "n": 4,
+ "title": "문제 4",
+ "head": "다음을 읽고 문제에 답하시오.",
+ "points": null,
+ "minutes": 30,
+ "info": {
+  "concepts": "수학적 확룰, 기댓값, 로그, $sum _{ k=1} ^{ n } a_k$ , 덧셈정리, 치환적분법, 도형의 넓이, 그래프의 개형, 삼각함수의 덧셈정리, 사인법칙, 코사인법칙, 포물선, 이차방정식의 근과 계수의 관계",
+  "min": "서울 전체(약학부, 의학부 제외) : 국어, 수학(미적분, 기하 중 택 1), 영어, 과탐(1과목) 중 3개 영역 등급 합 6 이내",
+  "field": "약학부: 4개 영역 등급 합 5 이내 의학부: 과탐(2과목 평균, 소숫점 자리 버림 없음) 4개 영역 등급 합 5 이내 다빈치: 과탐(1과목) 2개 영역 등급 합 6 이내 수학(4문항, 7문제)",
+  "time": "120분"
+ },
+ "pre": [],
+ "passage": [
+  "• 삼각형 $\\mathrm{ABC}$ 의 외접원의 반지름 길이를 $R$ 라 하면 $\\frac{a}{\\sin A}=\\frac{b}{\\sin B}=\\frac{c}{\\sin C}=2 R$ 이다.",
+  "• 삼각형 $\\mathrm{ABC}$ 에서 $a^2=b^2+c^2-2 b c \\cos A$ 이다.",
+  "• 평면 위의 한 점 $\\mathrm{F}$ 와 이 점을 지나지 않는 직선 $l$ 이 주어질 때, 점 $\\mathrm{F}$ 와 직선 $l$ 에 이르는 거리가 같은 점들의 집합을 포물선이라 한다.",
+  "• 이차방정식 $a x^2+b x+c=0$ 의 두 근을 $\\alpha$ , $\\beta$ 라 하면 $\\alpha+\\beta=-\\frac{b}{a}$ 이고 $\\alpha \\beta=\\frac{c}{a}$ 이다."
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[문제 4-1]",
+   "points": 15,
+   "text": [
+    "아래 그림과 같이 모든 모서리의 길이가 $2$ 인 정삼각기둥에서 두 선분 $\\mathrm{AC}$ , $\\mathrm{BE}$ 의 중점을 각각 $\\mathrm{M}$ , $\\mathrm{N}$ 이라 하고, 두 선분 $\\mathrm{MN}$ , $\\mathrm{CN}$ 의 중점을 각각 $\\mathrm{P}$ , $\\mathrm{Q}$ 라 하자. 삼각형 $\\mathrm{PFQ}$ 의 외접원의 반지름 길이를 구하시오. [15점]",
+    "[그림]"
+   ],
+   "answer": [
+    "$\\overline{\\mathrm{PQ}}=\\frac{1}{2}\\overline{M C}=\\frac{1}{2}$ 직각삼각형 $\\mathrm{MBN}$ 에서 $\\overline{\\mathrm{MN}}=\\sqrt{{\\overline{M B}}^2+{\\overline{B N}}^2}=\\sqrt{3}+1=2$ 이다. 직각삼각형 $\\mathrm{FCM}$ 과 $\\mathrm{NEF}$ 에서 $\\overline{\\mathrm{MF}}=\\sqrt{{\\overline{M C}}^2+{\\overline{F C}}^2}=\\sqrt{5}$ 와 $\\overline{\\mathrm{NF}}=\\sqrt{{\\overline{N E}}^2+{\\overline{E F}}^2}=\\sqrt{5}$ 이므로 삼각형 $\\mathrm{FMN}$ 은 이등변삼각형이고 삼각형 $\\mp F$ 는 직각삼각형이다. 직각삼각형 $\\mp F$ 에서 $\\overline{\\mathrm{PF}}=\\sqrt{{\\overline{M F}}^2-{\\overline{\\mp}}^2}=2$ 점 $\\mathrm{Q}$ 에서 선분 $\\mathrm{EF}$ 에 내린 수선의 발을 $\\mathrm{R}$ 이라 할 때, $\\overline{\\mathrm{QR}}=\\frac{3}{2}$ 이고 삼각형 $\\mathrm{QRF}$ 는 직각삼각형이므로 $\\overline{\\mathrm{QF}}=\\sqrt{{\\overline{Q R}}^2+{\\overline{R F}}^2}=\\frac{\\sqrt{13}}{2}$ $\\theta=\\angle \\mathrm{QPF}$ 라 하면 삼각형 $\\mathrm{QPF}$ 에서 코사인법칙에 의하여 $\\cos \\theta=\\frac{\\frac{1}{4}+4-\\frac{13}{4}}{2 \\times \\frac{1}{2}\\times 2}=\\frac{1}{2}$ 이므로 $\\sin \\theta=\\frac{\\sqrt{3}}{2}$ 이다.외접원의 반지름의 길이를 $R$ 라 하면 사인법칙에 의하여 $2 R=\\frac{\\frac{\\sqrt{13}}{2}}{\\frac{\\sqrt{3}}{2}}=\\frac{\\sqrt{13}}{\\sqrt{3}}$ 이므로 $R=\\frac{\\sqrt{13}}{2 \\sqrt{3}}=\\frac{\\sqrt{39}}{6}$",
+    "[그림]"
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "[문제 4-2]",
+   "points": 15,
+   "text": [
+    "아래의 그림과 같이 포물선 $y^2=4 x$ 의 초점 $\\mathrm{F}\\left(1,0 \\right)$ 을 지나고 $m>0$ 인 직선 $y=m \\left(x-1 \\right)$ 이 서로 다른 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 에서 포물선과 만난다. 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 에서 준선 $x=-1$ 에 내린 수선의 발을 각각 $\\mathrm{P'}$ , $\\mathrm{Q'}$ 이라 하자. 사각형 $\\mathrm{PP'Q'Q}$ 의 둘레의 길이가 $40$ 일 때, 이 사각형의 넓이를 구하시오. [15점]",
+    "[그림]",
+    "풀어보기",
+    "주사위를 한 번 던져 나온 눈의 수가 $3$ 의 배수이면 주머니 $\\mathrm{A}$ 에서 임의로 $2$ 개의 공을 꺼내고, 나온 눈의 수가 $3$ 의 배수가 아니면 주머니 $\\mathrm{B}$ 에서 임의로 $2$ 개의 공을 동시에 꺼낸다.꺼낸 $2$ 개의 공에 적혀 있는 수의 차를 기록한 후, 공을 꺼낸 주머니에 이 $2$ 개의 공을 다시 넣는다.",
+    "문제1. 주머니 $\\mathrm{A}$ 에는 숫자 $1$ , $2$ , $3$ 이 하나씩 적힌 $3$ 개의 공이 들어 있고, 주머니 $\\mathrm{B}$ 에는 숫자 $1$ , $2$ , $3$ , $4$ 가 하나씩 적힌 $4$ 개의 공이 들어 있다. 두 주머니 $\\mathrm{A}$ , $\\mathrm{B}$ 와 한 개의 주사위를 사용하여 다음 시행을 한다.이 시행을 $2$ 번 반복하여 기록한 두 개의 수의 평균을 $\\overline{X}$ 라 할 때, $\\mathrm{P}\\left(\\overline{X}=2 \\right)$ 의 값은? (2023년 9월 평가원)① $\\frac{11}{81}$ ② $\\frac{13}{81}$ ③ $\\frac{5}{27}$ ④ $\\frac{17}{81}$ ⑤ $\\frac{19}{81}$",
+    "문제2. $\\lim_{n \\to \\infty}{\\frac{2 \\pi}{n}\\sum_{k=1}^{n}\\sin \\frac{\\pi k}{3 n}}$ 의 값은? (2023년 10월 전국연합)① $\\frac{5}{2}$ ② $3$ ③ $\\frac{7}{2}$ ④ $4$ ⑤ $\\frac{9}{2}$",
+    "문제3. 양의 실수 전체의 집합에서 정의되고 미분가능한 두 함수 $f \\left(x \\right)$ , $g \\left(x \\right)$ 가 있다. $g \\left(x \\right)$ 는 $f \\left(x \\right)$ 의 역함수이고, $g' \\left(x \\right)$ 는 양의 실수 전체의 집합에서 연속이다. 모든 양수 $a$ 에 대하여 $\\int_{1}^{a}{\\frac{1}{g' \\left(f \\left(x \\right)\\right)f \\left(x \\right)}}dx=2 \\ln a+\\ln \\left(a+1 \\right)-\\ln 2$ 이고 $f \\left(1 \\right)=8$ 일 때, $f \\left(2 \\right)$ 의 값은?",
+    "(2023년 11월 대수능)",
+    "① $36$ ② $40$ ③ $44$ ④ $48$ ⑤ $52$",
+    "문제4. 초점이 $\\mathrm{F}$ 인 포물선 $y^2=8 x$ 위의 한 점 $\\mathrm{A}$ 에서 포물선의 준선에 내린 수선의 발을 $\\mathrm{B}$ 라 하고, 직선 $\\mathrm{BF}$ 와 포물선이 만나는 두 점을 각각 $\\mathrm{C}$ , $\\mathrm{D}$ 라 하자. $\\overline{\\mathrm{BC}}=\\overline{C D}$ 일 때, 삼각형 $\\mathrm{ABD}$ 의 넓이는? (단, $\\overline{\\mathrm{CF}}<\\overline{D F}$ 이고, 점 $\\mathrm{A}$ 는 원점이 아니다.)",
+    "(2023년 11월 대수능)",
+    "① $100 \\sqrt{2}$ ② $104 \\sqrt{2}$ ③ $108 \\sqrt{2}$ ④ $112 \\sqrt{2}$ ⑤ $116 \\sqrt{2}$"
+   ],
+   "answer": [
+    "$y^2=4 x$ 에 $y=m \\left(x-1 \\right)$ 을 대입하고 정리하여 얻은 이차방정식 $m^2 x^2-2 \\left(m^2+2 \\right)x+m^2=0$ 의 두 근을 $\\alpha$ , $\\beta$ 라 하면 $\\alpha+\\beta=\\frac{2 \\left(m^2+2 \\right)}{m^2}$ 이다. $\\overline{\\mathrm{PQ}}=\\overline{P F}+\\overline{F Q}=\\overline{P P'}+\\overline{Q Q'}=\\left(\\alpha+1 \\right)+\\left(\\beta+1 \\right)=\\frac{4 \\left(m^2+1 \\right)}{m^2}$ 점 $\\mathrm{P}$ 에서 직선 $\\mathrm{QQ'}$ 에 내린 수선의 발을 $\\mathrm{R}$ 이라 하고 각 $\\mathrm{PQR}$ 을 $\\theta$ 라 하면, $\\overline{\\mathrm{P'Q'}}=\\overline{P R}=\\tan \\theta \\overline{Q R}=m \\sqrt{{\\overline{\\mathrm{PQ}}}^2-\\overline{P R}}^2=m \\sqrt{{\\overline{P Q}}^2-{\\overline{P' Q'}}^2}$ 에서 $\\overline{\\mathrm{P'Q'}}=\\sqrt{\\frac{m^2}{m^2+1}}\\overline{\\mathrm{PQ}}=4 \\sqrt{\\frac{m^2+1}{m^2}}$ 사각형 $\\mathrm{PP'Q'Q}$ 의 둘레의 길이 $=\\overline{\\mathrm{PQ}}+\\overline{P P'}+\\overline{Q Q'}+\\overline{P' Q'}=2 \\overline{P Q}+\\overline{P' Q'}=\\frac{8 \\left(m^2+1 \\right)}{m^2}+4 \\sqrt{\\frac{m^2+1}{m^2}}=40$ $r=\\sqrt{\\frac{m^2+1}{m^2}}$ 라 놓아 얻은 이차방정식 $8 r^2+4 r=40$ 에서 $r>0$ 이므로 $r=\\sqrt{\\frac{m^2+1}{m^2}}=2$ 따라서 $m^2=\\frac{1}{3}$ 이고사각형 $\\mathrm{PP'Q'Q}$ 의 넓이 $=\\frac{1}{2}\\overline{\\mathrm{P'Q'}}\\times \\left(\\overline{P P'}+\\overline{Q Q'}\\right)=\\frac{1}{2}\\overline{P' Q'}\\times \\overline{P Q}=\\frac{1}{2}\\times 8 \\times 16=64$",
+    "[그림]",
+    "중앙대학교 입학처 홈페이지"
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "수학적 확룰"
+}

@@ -137,7 +137,7 @@ def joinlines(ls):
 def essay_items():
     """src/essay/items_*.json (parse_essay.py 결과) → 사이트용 논술 문항"""
     out = []
-    for f in sorted(glob.glob(os.path.join(ROOT, 'src/essay/items_*.json'))):
+    for f in sorted(glob.glob(os.path.join(ROOT, 'src/essay/items_*.json')), key=lambda f: (not f.endswith('items_18.json'), f)):   # 시즌 18(기존 #1~99) 먼저, 새 시즌은 뒤에 이어 번호를 매긴다
         with open(f, encoding='utf-8') as fp:
             for it in json.load(fp):
                 ct = convert_text
@@ -160,14 +160,18 @@ def essay_items():
     return out
 
 
-def japan_items():
-    """src/japan/index.json + img/ → 일본 대학 문제 목록 (★4 이상, 이미지 기반)"""
+def japan_items(start=1, extra=False):
+    """src/japan/index.json + img/ → 일본 대학 문제 목록 (이미지 기반)
+    extra=False: ★4 이상(처음 실은 문항) / extra=True: src/japan/pick3.json 의 ★3 추가분.
+    학생 기록이 번호(num)로 저장되므로 추가분은 기존 번호 뒤에 이어 매긴다."""
     p = os.path.join(ROOT, 'src/japan/index.json')
     if not os.path.exists(p):
         return []
+    pk = os.path.join(ROOT, 'src/japan/pick3.json')
+    pick = set(json.load(open(pk, encoding='utf-8'))['ids']) if os.path.exists(pk) else set()
     out = []
     for x in json.load(open(p, encoding='utf-8')):
-        if x['stars'] < 4:
+        if (x['id'] in pick) != extra or (not extra and x['stars'] < 4):
             continue
         q = [f"jp/{x['id']}-q{k}.webp" for k in range(len(x['pages']))]
         s = [f"jp/{x['id']}-s{k}.webp" for k in range(len(x['spages']))]
@@ -175,13 +179,13 @@ def japan_items():
             continue
         univ, _, track = x['univ'].partition('·')
         text = re.sub(r'[\u200b\ue000-\uf8ff]', '', x['text']).strip()
-        out.append({'num': len(out) + 1, 'id': x['id'], 'year': x['year'], 'num0': x['num'], 'stars': x['stars'],
+        out.append({'num': start + len(out), 'id': x['id'], 'year': x['year'], 'num0': x['num'], 'stars': x['stars'],
                     'univ': univ.strip(), 'track': track.strip() or '이과', 'subj': x['subj'] or '', 'text': text[:90],
                     'qimg': q, 'simg': s})
     return out
 
 
-def past_items(start):
+def past_items(start, extra=False):
     """src/past/index.json + answers.json + img/ → 평가원 기출 킬러(2022~2026학년도) 목록. 일본관과 같은 이미지 기반 구조(kind='past')"""
     p = os.path.join(ROOT, 'src/past/index.json')
     if not os.path.exists(p):
@@ -190,6 +194,8 @@ def past_items(start):
     MON = {'6월': '6월 모의평가', '9월': '9월 모의평가', '11월': '수능'}
     out = []
     for x in json.load(open(p, encoding='utf-8')):
+        if bool(x.get('add')) != extra:   # add=1: 2026-11 추가분(공통 11~13, 확통·기하 28·29) — 번호는 뒤에 이어서
+            continue
         f = f"past/{x['id']}.webp"
         if not os.path.exists(os.path.join(ROOT, 'src/past/img', os.path.basename(f))):
             continue
@@ -288,6 +294,11 @@ def main():
     japan = japan_items()
     past = past_items(len(japan) + 1)
     japan += past
+    jx = japan_items(len(japan) + 1, extra=True)      # 일본관 ★3 추가분
+    japan += jx
+    px = past_items(len(japan) + 1, extra=True)       # 기출관 추가분
+    japan += px
+    past += px
     elst = [{'num': e['num'], 'id': e['id'], 'univ': e['univ'], 'n': e['n'], 'title': e['title'], 'points': e['points'],
              'minutes': e['minutes'], 'nsubs': len(e['subs']), 'field': e['field'], 'art': art_path('essay-' + str(e['num'])), 'snip': essay_snip(e)} for e in essays]
     for j in japan:
