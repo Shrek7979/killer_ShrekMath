@@ -4185,7 +4185,7 @@
   "rate": "",
   "full": false,
   "nconds": 3,
-  "nsteps": 5,
+  "nsteps": 9,
   "art": "",
   "snip": [
    {
@@ -4323,7 +4323,7 @@
   "rate": "",
   "full": false,
   "nconds": 4,
-  "nsteps": 4,
+  "nsteps": 12,
   "art": "",
   "snip": [
    {
@@ -4576,7 +4576,7 @@
   "rate": "",
   "full": false,
   "nconds": 3,
-  "nsteps": 5,
+  "nsteps": 12,
   "art": "",
   "snip": [
    {
@@ -7723,7 +7723,7 @@
   "rate": "",
   "full": false,
   "nconds": 5,
-  "nsteps": 8,
+  "nsteps": 12,
   "art": "",
   "snip": [
    {
@@ -7745,8 +7745,8 @@
   "stars": 5,
   "rate": "",
   "full": false,
-  "nconds": 5,
-  "nsteps": 7,
+  "nconds": 6,
+  "nsteps": 13,
   "art": "",
   "snip": [
    {

@@ -60,7 +60,7 @@
     "따라서 삼각형 ${rm \"OAB\" it}$ 의 넓이는 ${1} over {2} times 16 times 8 = 64$"
    ]
   ],
-  "source": "ShrekMath 창작 · 2024학년도 6월 모의평가 29번 변형",
+  "source": "ShrekMath 창작 · 2024학년도 대학수학능력시험 29번 변형",
   "intro": [
    "초점삼각형 ${rm \"PF ' F\" it}$ 의 변의 길이로 타원을 결정한 뒤, 이차곡선의 접선의 방정식으로 연결"
   ]
@@ -184,7 +184,7 @@
     "점 $( 4 , ~ 3 )$ 이 쌍곡선 위에 있으므로 ${16} over {4} - {9} over {b ^{2}} = 1$ , $b ^{2} = 3$ 이다. 따라서 $c ^{2} = a ^{2} + b ^{2} = 7$ 이고 $d ^{2} = ( 2 c ) ^{2} = 28$"
    ]
   ],
-  "source": "ShrekMath 창작 · 2023학년도 대학수학능력시험 29번 변형",
+  "source": "ShrekMath 창작 · 2024학년도 6월 모의평가 29번 변형",
   "intro": [
    "쌍곡선의 방정식을 결정하는 조건을 접선의 방정식으로 바꾸어 제시"
   ]
@@ -550,7 +550,7 @@
     "따라서 구하는 합은 $64 + 84 = 148$"
    ]
   ],
-  "source": "ShrekMath 창작 · 2024학년도 6월 모의평가 29번 변형",
+  "source": "ShrekMath 창작 · 2024학년도 대학수학능력시험 29번 변형",
   "intro": [
    "쌍곡선을 타원으로 바꾸고, 이등변삼각형이 되는 두 경우를 삼각형의 존재 조건으로 모두 판정하게 함"
   ]
@@ -583,7 +583,7 @@
     "$overline {{rm \"PF '\" it}} ^{2} - overline {{rm \"PF\" it}} ^{2} = 4 ck$ 에서 $60 = 4 sqrt {17} k$ , $k = {15} over {sqrt {17}}$ 이다. 따라서 $17 k ^{2} = 225$"
    ]
   ],
-  "source": "ShrekMath 창작 · 2023학년도 대학수학능력시험 29번 변형",
+  "source": "ShrekMath 창작 · 2024학년도 6월 모의평가 29번 변형",
   "intro": [
    "초점을 공유하는 두 쌍곡선을 타원과 쌍곡선으로 바꾸어 $overline {{rm \"PF\" it}} + overline {{rm \"PF '\" it}}$ , $overline {{rm \"PF '\" it}} - overline {{rm \"PF\" it}}$ 를 동시에 얻게 함"
   ]
@@ -1023,7 +1023,7 @@
     "$b ^{2} = 36 - 9 = 27$ , $beta ^{2} = 9 - 4 = 5$ 이므로 $b ^{2} + beta ^{2} = 32$"
    ]
   ],
-  "source": "ShrekMath 창작 · 2023학년도 대학수학능력시험 29번 변형",
+  "source": "ShrekMath 창작 · 2024학년도 6월 모의평가 29번 변형",
   "intro": [
    "선분 위의 점 ${rm \"Q\" it}$ 에 대하여 $overline {{rm \"PQ\" it}} = overline {{rm \"PF '\" it}} - overline {{rm \"QF '\" it}}$ 로 나누어 쓰면 삼각형 ${rm \"PQF\" it}$ 의 둘레가 $2 a - 4$ 로 일정함을 발견하게 함"
   ]
@@ -1056,7 +1056,7 @@
     "따라서 $overline {{rm \"OP\" it}} ^{2} = {125} over {9} + {64} over {9} = 21$"
    ]
   ],
-  "source": "ShrekMath 창작 · 2024학년도 6월 모의평가 29번 변형",
+  "source": "ShrekMath 창작 · 2024학년도 대학수학능력시험 29번 변형",
   "intro": [
    "초점삼각형의 둘레가 일정( $2 a + 2 c$ )함을 내접원의 반지름과 넓이의 관계로 연결"
   ]
@@ -1119,23 +1119,39 @@
   "solution": [
    [
     "p",
-    "${rm \"A\" it}$ , ${rm \"B\" it}$ 에서 준선에 내린 수선의 발을 ${rm \"A '\" it}$ , ${rm \"B '\" it}$ , 선분 ${rm \"AB\" it}$ 의 중점을 ${rm \"M\" it}$ 이라 하면 ${rm \"M\" it}$ 과 준선 사이의 거리는 ${overline {{rm \"AA '\" it}} + overline {{rm \"BB '\" it}}} over {2} = {overline {{rm \"AF\" it}} + overline {{rm \"BF\" it}}} over {2} = {overline {{rm \"AB\" it}}} over {2}$ 이므로, 선분 ${rm \"AB\" it}$ 를 지름으로 하는 원은 항상 준선에 접하고 접점의 $y$ 좌표는 ${rm \"M\" it}$ 의 $y$ 좌표이다."
+    "두 점 ${rm \"A\" it}$ , ${rm \"B\" it}$ 에서 준선에 내린 수선의 발을 각각 ${rm \"A '\" it}$ , ${rm \"B '\" it}$ , 선분 ${rm \"AB\" it}$ 의 중점을 ${rm \"M\" it}$ 이라 하자. 포물선의 정의에 의하여 $overline {{rm \"AA '\" it}} = overline {{rm \"AF\" it}}$ , $overline {{rm \"BB '\" it}} = overline {{rm \"BF\" it}}$ 이므로 점 ${rm \"M\" it}$ 과 준선 사이의 거리는 ${overline {{rm \"AA '\" it}} + overline {{rm \"BB '\" it}}} over {2} = {overline {{rm \"AF\" it}} + overline {{rm \"BF\" it}}} over {2} = {overline {{rm \"AB\" it}}} over {2}$ 이다. 즉, 선분 ${rm \"AB\" it}$ 를 지름으로 하는 원은 항상 준선에 접하고, 그 접점 ${rm \"H\" it}$ 는 점 ${rm \"M\" it}$ 에서 준선에 내린 수선의 발이다."
    ],
    [
     "p",
-    "따라서 $overline {{rm \"AB\" it}} = 20$ , ${rm \"M\" it}$ 의 $y$ 좌표는 $4$ 이고, ${rm \"M\" it}$ 의 $x$ 좌표는 $10 - p$ 이다. 직선 ${rm \"AB\" it}$ 를 $x = ty + p$ 라 하고 $y ^{2} = 4 px$ 에 대입하면 $y ^{2} - 4 pty - 4 p ^{2} = 0$ 이므로 $y _{{rm \"A\" it}} + y _{{rm \"B\" it}} = 4 pt = 8$ , $y _{{rm \"A\" it}} y _{{rm \"B\" it}} = - 4 p ^{2}$ 이다."
+    "따라서 $overline {{rm \"AB\" it}} = 20$ , ${rm \"H\" it} ( - p , ~ 4 )$ 이고, 점 ${rm \"M\" it}$ 은 점 ${rm \"H\" it}$ 에서 오른쪽으로 $10$ 만큼 떨어진 점 ${rm \"M\" it} ( 10 - p , ~ 4 )$ 이다."
    ],
    [
     "p",
-    "${rm \"M\" it}$ 이 직선 위에 있으므로 $10 - p = 4 t + p$ , 즉 $10 - 2 p = {8} over {p}$ 에서 $p ^{2} - 5 p + 4 = 0$ , $p = 1$ 또는 $p = 4$ 이다."
+    "이제 두 직선 ${rm \"HF\" it}$ , ${rm \"AB\" it}$ 가 서로 수직임을 보이자. $overline {{rm \"MH\" it}} = overline {{rm \"MA\" it}}$ 이므로 $angle {rm \"MHA\" it} = angle {rm \"MAH\" it}$ 이고, 직선 ${rm \"MH\" it}$ 와 직선 ${rm \"AA '\" it}$ 은 모두 준선에 수직이므로 평행하여 $angle {rm \"MHA\" it} = angle {rm \"HAA '\" it}$ (엇각)이다. 즉, $angle {rm \"HAF\" it} = angle {rm \"HAA '\" it}$ 이다. 두 삼각형 ${rm \"AA ' H\" it}$ , ${rm \"AFH\" it}$ 는 $overline {{rm \"AA '\" it}} = overline {{rm \"AF\" it}}$ , 변 ${rm \"AH\" it}$ 공통, 끼인각이 같으므로 합동이고, $angle {rm \"AFH\" it} = angle {rm \"AA ' H\" it} = {pi} over {2}$ 이다."
+   ],
+   [
+    "p",
+    "그러면 삼각형 ${rm \"HFM\" it}$ 은 $angle {rm \"HFM\" it} = {pi} over {2}$ 인 직각삼각형이므로 $overline {{rm \"HF\" it}} ^{2} + overline {{rm \"FM\" it}} ^{2} = overline {{rm \"HM\" it}} ^{2}$ 이다. ${rm \"F\" it} ( p , ~ 0 )$ 이므로"
    ],
    [
     "eq",
-    "overline {{rm \"AF\" it}} times overline {{rm \"BF\" it}} = ( x _{{rm \"A\" it}} + p ) ( x _{{rm \"B\" it}} + p ) = x _{{rm \"A\" it}} x _{{rm \"B\" it}} + p ( x _{{rm \"A\" it}} + x _{{rm \"B\" it}} ) + p ^{2} = {( y _{{rm \"A\" it}} y _{{rm \"B\" it}} ) ^{2}} over {16 p ^{2}} + p ( 20 - 2 p ) + p ^{2} = 20 p"
+    "LEFT { ( 2 p ) ^{2} + 4 ^{2} RIGHT } + LEFT { ( 10 - 2 p ) ^{2} + 4 ^{2} RIGHT } = 10 ^{2}"
    ],
    [
     "p",
-    "이므로 구하는 합은 $20 + 80 = 100$"
+    "정리하면 $8 p ^{2} - 40 p + 32 = 0$ , 즉 $p ^{2} - 5 p + 4 = 0$ 이므로 $p = 1$ 또는 $p = 4$ 이다."
+   ],
+   [
+    "p",
+    "한편 점 ${rm \"H\" it}$ 는 선분 ${rm \"AB\" it}$ 를 지름으로 하는 원 위에 있으므로 $angle {rm \"AHB\" it} = {pi} over {2}$ 이고, $overline {{rm \"HF\" it}}$ 는 직각삼각형 ${rm \"AHB\" it}$ 의 빗변에 내린 수선이다. 두 삼각형 ${rm \"AFH\" it}$ , ${rm \"HFB\" it}$ 가 서로 닮음이므로"
+   ],
+   [
+    "eq",
+    "overline {{rm \"AF\" it}} times overline {{rm \"BF\" it}} = overline {{rm \"HF\" it}} ^{2} = 4 p ^{2} + 16"
+   ],
+   [
+    "p",
+    "$p = 1$ 일 때 $20$ , $p = 4$ 일 때 $80$ 이므로 구하는 합은 $20 + 80 = 100$"
    ]
   ],
   "source": "ShrekMath 창작 · 2022학년도 6월 모의평가 29번 변형",
@@ -1361,19 +1377,51 @@
   "solution": [
    [
     "p",
-    "$l : ~ y = {4} over {3} ( x - 1 )$ , 즉 $x = {3} over {4} y + 1$ 을 $y ^{2} = 4 x$ 에 대입하면 $y ^{2} - 3 y - 4 = 0$ 이므로 ${rm \"A\" it} ( 4 , ~ 4 )$ 이다."
+    "포물선 $y ^{2} = 4 x$ 의 초점은 ${rm \"F\" it} ( 1 , ~ 0 )$ , 준선은 $x = - 1$ 이다. 직선 $l$ 의 기울기가 ${4} over {3}$ 이므로 벡터 $( 3 , ~ 4 )$ 는 직선 $l$ 의 방향벡터이고, 그 크기는 $5$ 이다. 따라서 점 ${rm \"F\" it}$ 에서 직선 $l$ 을 따라 제 $1$ 사분면 쪽으로 거리 $d$ 만큼 떨어진 점은 $LEFT ( 1 + {3} over {5} d , ~ {4} over {5} d RIGHT )$ 이다."
    ],
    [
     "p",
-    "포물선 $( y - b ) ^{2} = 4 ( x - a )$ 의 초점 $( a + 1 , ~ b )$ 가 $l$ 위에 있으므로 $b = {4} over {3} a$ 이고, 점 ${rm \"A\" it}$ 를 지나므로 $LEFT ( 4 - {4} over {3} a RIGHT ) ^{2} = 4 ( 4 - a )$ , ${16} over {9} a ^{2} = {20} over {3} a$ , $a = {15} over {4}$ , $b = 5$ 이다. 이 포물선의 초점은 ${rm \"G\" it} LEFT ( {19} over {4} , ~ 5 RIGHT )$ , 준선은 $x = {11} over {4}$ 이다."
+    "$overline {{rm \"AF\" it}} = d$ 라 하면 포물선의 정의에 의하여 $d = ($ 점 ${rm \"A\" it}$ 의 $x$ 좌표 $) + 1 = LEFT ( 1 + {3} over {5} d RIGHT ) + 1$ 이므로 $d = 5$ , 즉 $overline {{rm \"AF\" it}} = 5$ , ${rm \"A\" it} ( 4 , ~ 4 )$ 이다."
    ],
    [
     "p",
-    "$overline {{rm \"AC\" it}} = 4 + 1 = 5$ 이다. 직선 $l$ 은 초점 ${rm \"G\" it}$ 를 지나므로 $overline {{rm \"AB\" it}} = overline {{rm \"AG\" it}} + overline {{rm \"GB\" it}}$ 이고, 두 번째 포물선의 정의에 의하여 $overline {{rm \"AG\" it}} = 4 - {11} over {4} = {5} over {4}$ , $overline {{rm \"BD\" it}} = LEFT ( x _{{rm \"B\" it}} - {11} over {4} RIGHT ) + {15} over {4} = overline {{rm \"GB\" it}} + {15} over {4}$ 이다."
+    "포물선 $( y - b ) ^{2} = 4 ( x - a )$ 는 포물선 $y ^{2} = 4 x$ 를 $x$ 축의 방향으로 $a$ 만큼, $y$ 축의 방향으로 $b$ 만큼 평행이동한 것이므로 초점은 ${rm \"G\" it} ( a + 1 , ~ b )$ , 준선은 $x = a - 1$ 이다. 점 ${rm \"G\" it}$ 가 직선 $l$ 위에 있으므로 $b = {4} over {3} a$ 이고, $overline {{rm \"FG\" it}} = sqrt {a ^{2} + {16} over {9} a ^{2}} = {5} over {3} a$ 이다."
    ],
    [
     "p",
-    "$k = 5 + overline {{rm \"GB\" it}} + {15} over {4} - {5} over {4} - overline {{rm \"GB\" it}} = {15} over {2}$ 이므로 $2 k = 15$ 이다. (실제로 ${rm \"B\" it} LEFT ( {31} over {4} , ~ 9 RIGHT )$ , $overline {{rm \"AB\" it}} = {25} over {4}$ , $overline {{rm \"BD\" it}} = {35} over {4}$ 이다.)"
+    "점 ${rm \"A\" it}$ 가 이 포물선 위에 있으므로 포물선의 정의에 의하여 $overline {{rm \"AG\" it}} = 4 - ( a - 1 ) = 5 - a$ 이다. 또 두 점 ${rm \"A\" it}$ , ${rm \"G\" it}$ 는 모두 직선 $l$ 위에서 점 ${rm \"F\" it}$ 의 같은 쪽에 있으므로 $overline {{rm \"AG\" it}} = LEFT | overline {{rm \"FG\" it}} - overline {{rm \"FA\" it}} RIGHT | = LEFT | {5} over {3} a - 5 RIGHT |$ 이다."
+   ],
+   [
+    "p",
+    "(i) ${5} over {3} a leq 5$ 일 때 $5 - {5} over {3} a = 5 - a$ 에서 $a = 0$ 이므로 $a > 0$ 에 모순이다."
+   ],
+   [
+    "p",
+    "(ii) ${5} over {3} a > 5$ 일 때 ${5} over {3} a - 5 = 5 - a$ 에서 $a = {15} over {4}$ , $b = 5$ 이다."
+   ],
+   [
+    "p",
+    "따라서 두 번째 포물선의 초점은 ${rm \"G\" it} LEFT ( {19} over {4} , ~ 5 RIGHT )$ , 준선은 $x = {11} over {4}$ 이고, $overline {{rm \"AG\" it}} = {5} over {4}$ 이며 점 ${rm \"A\" it}$ 는 선분 ${rm \"FG\" it}$ 위에 있다."
+   ],
+   [
+    "p",
+    "직선 $l$ 은 두 번째 포물선의 초점 ${rm \"G\" it}$ 를 지나므로 이 포물선과 만나는 두 점 ${rm \"A\" it}$ , ${rm \"B\" it}$ 는 점 ${rm \"G\" it}$ 의 양쪽에 있고, $overline {{rm \"AB\" it}} = overline {{rm \"AG\" it}} + overline {{rm \"GB\" it}}$ 이다. 점 ${rm \"B\" it}$ 의 $x$ 좌표를 $x _{{rm \"B\" it}}$ 라 하면 두 번째 포물선의 정의에 의하여 $overline {{rm \"GB\" it}} = x _{{rm \"B\" it}} - {11} over {4}$ 이므로"
+   ],
+   [
+    "eq",
+    "overline {{rm \"BD\" it}} = x _{{rm \"B\" it}} + 1 = overline {{rm \"GB\" it}} + {11} over {4} + 1 = overline {{rm \"GB\" it}} + {15} over {4}"
+   ],
+   [
+    "p",
+    "또 $overline {{rm \"AC\" it}} = 4 + 1 = 5$ 이다. 따라서"
+   ],
+   [
+    "eq",
+    "k = 5 + LEFT ( overline {{rm \"GB\" it}} + {15} over {4} RIGHT ) - LEFT ( {5} over {4} + overline {{rm \"GB\" it}} RIGHT ) = {15} over {2}"
+   ],
+   [
+    "p",
+    "이므로 $2 k = 15$ 이다. (참고: 점 ${rm \"A\" it}$ 를 구한 방법과 같이 $overline {{rm \"GB\" it}} = LEFT ( {19} over {4} + {3} over {5} overline {{rm \"GB\" it}} RIGHT ) - {11} over {4}$ 에서 $overline {{rm \"GB\" it}} = 5$ , ${rm \"B\" it} LEFT ( {31} over {4} , ~ 9 RIGHT )$ 이고, $overline {{rm \"AB\" it}} = {25} over {4}$ , $overline {{rm \"BD\" it}} = {35} over {4}$ 이다.)"
    ]
   ],
   "source": "ShrekMath 창작 · 2022학년도 6월 모의평가 29번 변형",
@@ -1409,7 +1457,7 @@
     "사각형 ${rm \"ABDC\" it}$ 는 평행한 두 변의 길이가 $8 sqrt {2}$ , $2 sqrt {2}$ 이고 높이가 $6$ 인 사다리꼴이므로 넓이는 ${1} over {2} times 10 sqrt {2} times 6 = 30 sqrt {2}$ 이다. 따라서 $k = 30$"
    ]
   ],
-  "source": "ShrekMath 창작 · 2023학년도 대학수학능력시험 29번 변형",
+  "source": "ShrekMath 창작 · 2024학년도 6월 모의평가 29번 변형",
   "intro": [
    "두 이차곡선의 공유 관계를 공통접선으로 바꾸어 기울기가 $m$ 인 포물선·타원의 접선의 방정식을 동시에 쓰게 함"
   ]
@@ -1446,7 +1494,7 @@
     "${rm \"D\" it} ( 1 , ~ 0 )$ , $overline {{rm \"F ' D\" it}} = 4$ 이므로 $S = {1} over {2} times 4 times sqrt {15} = 2 sqrt {15}$ , $S ^{2} = 60$"
    ]
   ],
-  "source": "ShrekMath 창작 · 2024학년도 6월 모의평가 29번 변형",
+  "source": "ShrekMath 창작 · 2024학년도 대학수학능력시험 29번 변형",
   "intro": [
    "접선에 수직인 직선의 $x$ 절편 ${c ^{2} x _{1}} over {a ^{2}}$ 과 $overline {{rm \"PF\" it}} = a - {c} over {a} x _{1}$ 을 연결하여 $c$ 를 결정"
   ]
@@ -1614,7 +1662,7 @@
     "$overline {{rm \"PQ\" it}} = overline {{rm \"QF '\" it}} = overline {{rm \"PF '\" it}} = 6$ 이므로 삼각형 ${rm \"PQF '\" it}$ 은 정삼각형이고 $S = {sqrt {3}} over {4} times 36 = 9 sqrt {3}$ 이다. 따라서 $S ^{2} = 243$"
    ]
   ],
-  "source": "ShrekMath 창작 · 2023학년도 대학수학능력시험 29번 변형",
+  "source": "ShrekMath 창작 · 2024학년도 6월 모의평가 29번 변형",
   "intro": [
    "두 쌍곡선을 타원과 쌍곡선으로 바꾸고, 등차수열 조건 대신 이등변 조건을 주어 두 삼각형에서 같은 각의 코사인을 비교하게 함"
   ]
@@ -1696,7 +1744,7 @@
     "$S = {1} over {2} times 4 times 8 sqrt {2} = 16 sqrt {2}$ 이므로 $S ^{2} = 512$"
    ]
   ],
-  "source": "ShrekMath 창작 · 2024학년도 6월 모의평가 29번 변형",
+  "source": "ShrekMath 창작 · 2024학년도 대학수학능력시험 29번 변형",
   "intro": [
    "이등변삼각형의 경우를 나누고 $c > a$ 와 삼각형의 존재 조건으로 한 경우를 배제하게 함"
   ]
@@ -1808,23 +1856,51 @@
   "solution": [
    [
     "p",
-    "$p = 4$ 이다. 직선 ${rm \"AB\" it}$ 를 $x = ty + 4$ 라 하고 대입하면 $y ^{2} - 16 ty - 64 = 0$ 이므로 $y _{{rm \"A\" it}} y _{{rm \"B\" it}} = - 64$ 이다."
+    "포물선 $y ^{2} = 16 x$ 의 초점은 ${rm \"F\" it} ( 4 , ~ 0 )$ , 준선은 $x = - 4$ 이다. 직선 ${rm \"AB\" it}$ 의 방향을 나타내는 단위벡터를 $( cos theta , ~ sin theta )$ $LEFT ( 0 < theta < pi RIGHT )$ 라 하면, 점 ${rm \"A\" it}$ 는 점 ${rm \"F\" it}$ 에서 이 방향으로, 점 ${rm \"B\" it}$ 는 반대 방향으로 놓이므로"
+   ],
+   [
+    "eq",
+    "{rm \"A\" it} ( 4 + overline {{rm \"AF\" it}} cos theta , ~ overline {{rm \"AF\" it}} sin theta ) , ` ` ` ` {rm \"B\" it} ( 4 - overline {{rm \"BF\" it}} cos theta , ~ - overline {{rm \"BF\" it}} sin theta )"
    ],
    [
     "p",
-    "${rm \"A\" it}$ , ${rm \"B\" it}$ 에서의 접선 $y _{{rm \"A\" it}} y = 8 ( x + x _{{rm \"A\" it}} )$ , $y _{{rm \"B\" it}} y = 8 ( x + x _{{rm \"B\" it}} )$ 의 기울기의 곱은 ${64} over {y _{{rm \"A\" it}} y _{{rm \"B\" it}}} = - 1$ 이므로 $angle {rm \"ATB\" it} = {pi} over {2}$ 이다. 두 접선의 교점은 ${rm \"T\" it} LEFT ( {y _{{rm \"A\" it}} y _{{rm \"B\" it}}} over {16} , ~ {y _{{rm \"A\" it}} + y _{{rm \"B\" it}}} over {2} RIGHT ) = ( - 4 , ~ 8 t )$ 이고, $vec {{rm \"FT\" it}} = ( - 8 , ~ 8 t )$ 는 직선 ${rm \"AB\" it}$ 의 방향벡터 $( t , ~ 1 )$ 과 수직이므로 두 직선 ${rm \"TF\" it}$ , ${rm \"AB\" it}$ 가 서로 수직이다."
+    "이다. 포물선의 정의(초점까지의 거리 $=$ 준선까지의 거리)에 의하여"
+   ],
+   [
+    "eq",
+    "overline {{rm \"AF\" it}} = ( 4 + overline {{rm \"AF\" it}} cos theta ) + 4 , ` ` ` ` overline {{rm \"BF\" it}} = ( 4 - overline {{rm \"BF\" it}} cos theta ) + 4"
    ],
    [
     "p",
-    "또 $overline {{rm \"AF\" it}} times overline {{rm \"BF\" it}} = ( x _{{rm \"A\" it}} + 4 ) ( x _{{rm \"B\" it}} + 4 )$ , $overline {{rm \"AF\" it}} + overline {{rm \"BF\" it}} = x _{{rm \"A\" it}} + x _{{rm \"B\" it}} + 8$ 이고 $x _{{rm \"A\" it}} x _{{rm \"B\" it}} = {( y _{{rm \"A\" it}} y _{{rm \"B\" it}} ) ^{2}} over {256} = 16$ 이므로 $overline {{rm \"AF\" it}} times overline {{rm \"BF\" it}} = 4 ( overline {{rm \"AF\" it}} + overline {{rm \"BF\" it}} )$ 이다. $overline {{rm \"BF\" it}} = s$ , $overline {{rm \"AF\" it}} = 4 s$ 를 대입하면 $4 s ^{2} = 20 s$ , $s = 5$ 이다."
+    "이므로 $overline {{rm \"AF\" it}} = {8} over {1 - cos theta}$ , $overline {{rm \"BF\" it}} = {8} over {1 + cos theta}$ 이다. $overline {{rm \"AF\" it}} = 4 overline {{rm \"BF\" it}}$ 에서 $1 + cos theta = 4 ( 1 - cos theta )$ , $cos theta = {3} over {5}$ , $sin theta = {4} over {5}$ 이다."
    ],
    [
     "p",
-    "$overline {{rm \"AB\" it}} = 25$ 이고 직각삼각형 ${rm \"ATB\" it}$ 에서 $overline {{rm \"TF\" it}} ^{2} = overline {{rm \"AF\" it}} times overline {{rm \"BF\" it}} = 100$ , $overline {{rm \"TF\" it}} = 10$ 이다."
+    "따라서 $overline {{rm \"AF\" it}} = 20$ , $overline {{rm \"BF\" it}} = 5$ , $overline {{rm \"AB\" it}} = 25$ 이고 ${rm \"A\" it} ( 16 , ~ 16 )$ , ${rm \"B\" it} ( 1 , ~ - 4 )$ 이다."
    ],
    [
     "p",
-    "따라서 삼각형 ${rm \"TAB\" it}$ 의 넓이는 ${1} over {2} times 25 times 10 = 125$"
+    "두 점 ${rm \"A\" it}$ , ${rm \"B\" it}$ 에서의 접선의 방정식은 각각"
+   ],
+   [
+    "eq",
+    "16 y = 8 ( x + 16 ) , ` ` ` ` - 4 y = 8 ( x + 1 )"
+   ],
+   [
+    "p",
+    "즉 $y = {1} over {2} x + 8$ , $y = - 2 x - 2$ 이다. 두 접선의 기울기의 곱이 $- 1$ 이므로 $angle {rm \"ATB\" it} = {pi} over {2}$ 이고, 두 식을 연립하면 ${rm \"T\" it} ( - 4 , ~ 6 )$ 이다. (점 ${rm \"T\" it}$ 는 준선 위에 있다.)"
+   ],
+   [
+    "p",
+    "$overline {{rm \"TA\" it}} = sqrt {20 ^{2} + 10 ^{2}} = 10 sqrt {5}$ , $overline {{rm \"TB\" it}} = sqrt {5 ^{2} + 10 ^{2}} = 5 sqrt {5}$ 이므로 직각삼각형 ${rm \"TAB\" it}$ 의 넓이는"
+   ],
+   [
+    "eq",
+    "{1} over {2} times 10 sqrt {5} times 5 sqrt {5} = 125"
+   ],
+   [
+    "p",
+    "(참고: $vec {{rm \"FT\" it}} = ( - 8 , ~ 6 )$ 과 직선 ${rm \"AB\" it}$ 의 방향벡터 $( 3 , ~ 4 )$ 의 내적이 $0$ 이므로 두 직선 ${rm \"TF\" it}$ , ${rm \"AB\" it}$ 는 서로 수직이고, ${1} over {2} times overline {{rm \"AB\" it}} times overline {{rm \"TF\" it}} = {1} over {2} times 25 times 10 = 125$ 로도 확인할 수 있다.)"
    ]
   ],
   "source": "ShrekMath 창작 · 2022학년도 6월 모의평가 29번 변형",

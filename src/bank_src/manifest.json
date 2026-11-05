@@ -36,11 +36,11 @@
    "status": "new"
   },
   "수능형 창작문항_29번형 추가 50제(기하).hwpx": {
-   "sha1": "2617f4fed6fe7e6d5345a8c74ab77bf26adb91f2",
+   "sha1": "de8a89ea9bdeda1633372eac29f430e778ebd34a",
    "slug": "29번형_추가_50제_기하",
    "items": 50,
    "dups": 0,
-   "status": "new"
+   "status": "updated"
   },
   "수능형 창작문항_29번형 추가 50제(미적분Ⅱ).hwpx": {
    "sha1": "daba7800a25f43805073999b77e9f9f6b5439043",
@@ -71,11 +71,11 @@
    "status": "new"
   },
   "수능형 창작문항_30번형 추가 50제(기하).hwpx": {
-   "sha1": "4fec15356d0f6124e36a0192221e6ca732058416",
+   "sha1": "be163e2c24a11b76264c04be3002f45b46f6fff7",
    "slug": "30번형_추가_50제_기하",
    "items": 50,
    "dups": 0,
-   "status": "new"
+   "status": "updated"
   },
   "수능형 창작문항_30번형 추가 50제(미적분Ⅱ).hwpx": {
    "sha1": "423096b2902979aaa575e431c5222c2f56d54729",

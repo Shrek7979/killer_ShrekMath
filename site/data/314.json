@@ -6,7 +6,7 @@
  "typeDesc": "기하 · 수능 30번형 자리의 고난도",
  "stars": 5,
  "standards": [],
- "source": "ShrekMath 창작 · 2024학년도 6월 모의평가 30번 변형",
+ "source": "ShrekMath 창작 · 2024학년도 대학수학능력시험 30번 변형",
  "rate": "",
  "wrong": "",
  "answer": 60,
@@ -34,7 +34,8 @@
   {
    "t": "p",
    "sents": [
-    "$|\\vec{{\\mathrm{AX}}}|$ 의 값이 최대가 되도록 하는 다섯 점에 대하여 사각형 ${\\mathrm{PQRT}}$ 의 넓이의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M \\times m$ 의 값을 구하시오. [4점]"
+    "$|\\vec{{\\mathrm{AX}}}|$ 의 값이 최대가 되도록 하는 다섯 점에 대하여 사각형 ${\\mathrm{PQRT}}$ 의 넓이의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M \\times m$ 의 값을 구하시오.",
+    "(단, 네 점 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ , ${\\mathrm{R}}$ , ${\\mathrm{T}}$ 중 어느 세 점도 한 직선 위에 있지 않다.) [4점]"
    ]
   }
  ],
@@ -89,7 +90,18 @@
     3,
     0
    ],
-   "text": "$|\\vec{{\\mathrm{AX}}}|$ 의 값이 최대가 되도록 하는 다섯 점에 대하여 사각형 ${\\mathrm{PQRT}}$ 의 넓이의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M \\times m$ 의 값을 구하시오. [4점]",
+   "text": "$|\\vec{{\\mathrm{AX}}}|$ 의 값이 최대가 되도록 하는 다섯 점에 대하여 사각형 ${\\mathrm{PQRT}}$ 의 넓이의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M \\times m$ 의 값을 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C6",
+   "at": [
+    3,
+    1
+   ],
+   "text": "(단, 네 점 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ , ${\\mathrm{R}}$ , ${\\mathrm{T}}$ 중 어느 세 점도 한 직선 위에 있지 않다.) [4점]",
    "label": "",
    "why": "",
    "uses": []
@@ -115,31 +127,67 @@
   },
   {
    "n": 3,
-   "text": "${\\mathrm{A}}(0,4)$ , ${\\mathrm{B}}(0,0)$ , ${\\mathrm{C}}(4,0)$ , ${\\mathrm{D}}(4,4)$ 로 놓으면 ${\\mathrm{E}}(0,3)$ , ${\\mathrm{F}}(1,0)$ , ${\\mathrm{G}}(4,1)$ , ${\\mathrm{H}}(3,4)$ 이고 두 대각선은",
+   "text": "${\\mathrm{A}}(0,4)$ , ${\\mathrm{B}}(0,0)$ , ${\\mathrm{C}}(4,0)$ , ${\\mathrm{D}}(4,4)$ 로 놓으면 ${\\mathrm{E}}(0,3)$ , ${\\mathrm{F}}(1,0)$ , ${\\mathrm{G}}(4,1)$ , ${\\mathrm{H}}(3,4)$ 이고, $\\vec{u}=\\vec{{\\mathrm{EG}}}=(4,-2)$ , $\\vec{v}=\\vec{{\\mathrm{FH}}}=(2,4)$ 라 하면 사각형 ${\\mathrm{PQRT}}$ 의 두 대각선은",
    "uses": [],
    "title": ""
   },
   {
    "n": 4,
-   "text": "$$\\vec{{\\mathrm{PR}}}=(4,-2)+2 \\vec{e},\\vec{{\\mathrm{QT}}}=(2,4)+2 \\vec{e}$$",
+   "text": "$$\\vec{{\\mathrm{PR}}}=\\vec{u}+2 \\vec{e},\\vec{{\\mathrm{QT}}}=\\vec{v}+2 \\vec{e}$$",
    "uses": [],
    "title": ""
   },
   {
    "n": 5,
-   "text": "사각형 ${\\mathrm{PQRT}}$ 의 넓이는 두 대각선 벡터로 만든 평행사변형의 넓이의 $\\frac{1}{2}$ 이므로",
+   "text": "이다. 두 대각선의 길이를 $a$ , $b$ , 두 대각선이 이루는 각의 크기를 $v a r \\phi$ 라 하면 사각형 ${\\mathrm{PQRT}}$ 의 넓이는 $\\frac{1}{2}a b \\sin v a r \\phi$ 이다.",
    "uses": [],
    "title": ""
   },
   {
    "n": 6,
-   "text": "$$\\frac{1}{2}\\left|(4+2 \\cos \\theta)(4+2 \\sin \\theta)-(-2+2 \\sin \\theta)(2+2 \\cos \\theta)\\right|=|10+6 \\cos \\theta+2 \\sin \\theta|$$",
+   "text": "원점 ${\\mathrm{O}}$ 에 대하여 $\\vec{{\\mathrm{OU}}}=\\vec{{\\mathrm{PR}}}$ , $\\vec{{\\mathrm{OV}}}=\\vec{{\\mathrm{QT}}}$ 인 두 점 ${\\mathrm{U}}$ , ${\\mathrm{V}}$ 를 잡으면 삼각형 ${\\mathrm{OUV}}$ 의 넓이도 $\\frac{1}{2}a b \\sin v a r \\phi$ 이므로 두 넓이는 같다. 그런데",
    "uses": [],
    "title": ""
   },
   {
    "n": 7,
-   "text": "$6 \\cos \\theta+2 \\sin \\theta$ 의 범위는 $-2 \\sqrt{10}$ 이상 $2 \\sqrt{10}$ 이하이므로 $M=10+2 \\sqrt{10}$ , $m=10-2 \\sqrt{10}$ 이고 $M \\times m=100-40=60$ 이다.",
+   "text": "$$\\vec{{\\mathrm{UV}}}=\\vec{{\\mathrm{QT}}}-\\vec{{\\mathrm{PR}}}=\\vec{v}-\\vec{u}=(-2,6)$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 8,
+   "text": "은 $\\vec{e}$ 와 관계없이 일정하므로, 삼각형 ${\\mathrm{OUV}}$ 의 밑변을 ${\\mathrm{UV}}$ $\\left(\\overline{{\\mathrm{UV}}}=2 \\sqrt{10}\\right)$ 로 보면 넓이는 점 ${\\mathrm{O}}$ 와 직선 ${\\mathrm{UV}}$ 사이의 거리(높이)로 정해진다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 9,
+   "text": "두 점 ${\\mathrm{U}}$ , ${\\mathrm{V}}$ 는 각각 두 점 ${\\mathrm{U}}_{0}(4,-2)$ , ${\\mathrm{V}}_{0}(2,4)$ 를 $2 \\vec{e}$ 만큼 평행이동한 점이다. 직선 ${\\mathrm{U}}_{0}{\\mathrm{V}}_{0}$ 의 방정식은 $3 x+y=10$ 이고, 직선 ${\\mathrm{UV}}$ 는 이 직선을 $2 \\vec{e}$ 만큼 평행이동한 직선이므로, 점 ${\\mathrm{O}}$ 와 직선 ${\\mathrm{UV}}$ 사이의 거리는 점 ${\\mathrm{O}}$ 를 $-2 \\vec{e}$ 만큼 평행이동한 점 ${\\mathrm{K}}$ 와 직선 $3 x+y=10$ 사이의 거리와 같다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 10,
+   "text": "점 ${\\mathrm{K}}$ 는 원점을 중심으로 하고 반지름의 길이가 $2$ 인 원 위의 점이고, $\\vec{e}$ 의 방향이 자유로우므로 이 원 위의 모든 점이 될 수 있다. 원점과 직선 $3 x+y=10$ 사이의 거리는 $\\frac{10}{\\sqrt{10}}=\\sqrt{10}$ $(>2)$ 이므로 점 ${\\mathrm{K}}$ 와 이 직선 사이의 거리의 범위는 $\\sqrt{10}-2$ 이상 $\\sqrt{10}+2$ 이하이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 11,
+   "text": "따라서 사각형 ${\\mathrm{PQRT}}$ 의 넓이는 $\\frac{1}{2}\\times 2 \\sqrt{10}\\times h=\\sqrt{10}h$ ( $h$ 는 위의 높이)이므로",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 12,
+   "text": "$$M=\\sqrt{10}\\left(\\sqrt{10}+2 \\right)=10+2 \\sqrt{10},m=\\sqrt{10}\\left(\\sqrt{10}-2 \\right)=10-2 \\sqrt{10}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 13,
+   "text": "이고 $M \\times m=100-40=60$ 이다.",
    "uses": [],
    "title": ""
   }

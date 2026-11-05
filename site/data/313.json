@@ -6,7 +6,7 @@
  "typeDesc": "기하 · 수능 30번형 자리의 고난도",
  "stars": 5,
  "standards": [],
- "source": "ShrekMath 창작 · 2024학년도 6월 모의평가 30번 변형",
+ "source": "ShrekMath 창작 · 2024학년도 대학수학능력시험 30번 변형",
  "rate": "",
  "wrong": "",
  "answer": 18,
@@ -121,31 +121,55 @@
   },
   {
    "n": 4,
-   "text": "${\\mathrm{A}}(0,0)$ , ${\\mathrm{B}}(6,0)$ , ${\\mathrm{C}}(3,3 \\sqrt{3})$ 으로 놓으면 ${\\mathrm{D}}(2,0)$ , ${\\mathrm{E}}(5,\\sqrt{3})$ , ${\\mathrm{F}}(2,2 \\sqrt{3})$ 이고 $\\vec{e}=(\\cos \\theta,\\sin \\theta)$ 에 대하여",
+   "text": "이때 $\\vec{{\\mathrm{OP}}}=\\vec{{\\mathrm{OD}}}+\\vec{e}$ , $\\vec{{\\mathrm{OQ}}}=\\vec{{\\mathrm{OE}}}+2 \\vec{e}$ , $\\vec{{\\mathrm{OR}}}=\\vec{{\\mathrm{OF}}}+3 \\vec{e}$ ( ${\\mathrm{O}}$ 는 임의의 점)이다. 선분 ${\\mathrm{PR}}$ 의 중점을 ${\\mathrm{N}}$ 이라 하면 $\\vec{{\\mathrm{ON}}}=\\frac{\\vec{{\\mathrm{OD}}}+\\vec{{\\mathrm{OF}}}}{2}+2 \\vec{e}$ 이므로",
    "uses": [],
    "title": ""
   },
   {
    "n": 5,
-   "text": "$$\\vec{{\\mathrm{PQ}}}=(3+\\cos \\theta,\\sqrt{3}+\\sin \\theta),\\vec{{\\mathrm{PR}}}=(2 \\cos \\theta,2 \\sqrt{3}+2 \\sin \\theta)$$",
+   "text": "$$\\vec{{\\mathrm{QN}}}=\\frac{\\vec{{\\mathrm{OD}}}+\\vec{{\\mathrm{OF}}}}{2}-\\vec{{\\mathrm{OE}}}$$",
    "uses": [],
    "title": ""
   },
   {
    "n": 6,
-   "text": "삼각형 ${\\mathrm{PQR}}$ 의 넓이는",
+   "text": "은 $\\vec{e}$ 와 관계없이 일정한 벡터이다.",
    "uses": [],
    "title": ""
   },
   {
    "n": 7,
-   "text": "$$\\frac{1}{2}\\left|(3+\\cos \\theta)(2 \\sqrt{3}+2 \\sin \\theta)-(\\sqrt{3}+\\sin \\theta)\\times 2 \\cos \\theta \\right|=3|\\sqrt{3}+\\sin \\theta|$$",
+   "text": "${\\mathrm{A}}(0,0)$ , ${\\mathrm{B}}(6,0)$ , ${\\mathrm{C}}(3,3 \\sqrt{3})$ 으로 놓으면 ${\\mathrm{D}}(2,0)$ , ${\\mathrm{E}}(5,\\sqrt{3})$ , ${\\mathrm{F}}(2,2 \\sqrt{3})$ 이므로 $\\vec{{\\mathrm{QN}}}=(2,\\sqrt{3})-(5,\\sqrt{3})=(-3,0)$ , 즉 선분 ${\\mathrm{QN}}$ 은 길이가 $3$ 이고 $x$ 축에 평행하다.",
    "uses": [],
    "title": ""
   },
   {
    "n": 8,
-   "text": "따라서 $M=3 \\sqrt{3}+3$ , $m=3 \\sqrt{3}-3$ 이고 $M \\times m=27-9=18$ 이다.",
+   "text": "선분 ${\\mathrm{QN}}$ 은 삼각형 ${\\mathrm{PQR}}$ 의 중선이므로 삼각형 ${\\mathrm{PQR}}$ 의 넓이는 삼각형 ${\\mathrm{QNR}}$ 의 넓이의 $2$ 배이다. 삼각형 ${\\mathrm{QNR}}$ 에서 밑변을 ${\\mathrm{QN}}$ 으로 보면 높이는 점 ${\\mathrm{R}}$ 와 직선 ${\\mathrm{QN}}$ 사이의 거리, 즉 두 점 ${\\mathrm{N}}$ , ${\\mathrm{R}}$ 의 $y$ 좌표의 차이다. $\\vec{e}=(\\cos \\theta,\\sin \\theta)$ 라 하면",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 9,
+   "text": "$$\\vec{{\\mathrm{NR}}}=\\frac{1}{2}\\vec{{\\mathrm{PR}}}=\\frac{1}{2}\\left(\\vec{{\\mathrm{DF}}}+2 \\vec{e}\\right)=(0,\\sqrt{3})+(\\cos \\theta,\\sin \\theta)$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 10,
+   "text": "이므로 높이는 $\\sqrt{3}+\\sin \\theta$ $(>0)$ 이다. 따라서 삼각형 ${\\mathrm{PQR}}$ 의 넓이는",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 11,
+   "text": "$$2 \\times \\frac{1}{2}\\times 3 \\times(\\sqrt{3}+\\sin \\theta)=3 \\sqrt{3}+3 \\sin \\theta$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 12,
+   "text": "$\\vec{e}$ 의 방향은 자유로우므로 $-1 \\le \\sin \\theta \\le 1$ 에서 $M=3 \\sqrt{3}+3$ , $m=3 \\sqrt{3}-3$ 이고 $M \\times m=27-9=18$ 이다.",
    "uses": [],
    "title": ""
   }
