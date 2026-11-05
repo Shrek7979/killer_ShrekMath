@@ -7,7 +7,7 @@
 소재 기출: 2026학년도 대학수학능력시험 29번 / 변형 포인트: 포물선 위의 점·준선의 수선의 발·초점으로 만든 삼각형만 남기고, $overline {{rm "FH" it}} ^{2} = 4 p ( a + p )$ 라는 관계로 $p$ 를 바로 결정하게 단순화
 02. [타원] 난이도 ★★☆☆☆
 두 초점이 ${rm "F" it} ( c , ~ 0 )$ , ${rm "F '" it} ( - c , ~ 0 )$ $( c > 0 )$ 인 타원 ${x ^{2}} over {a ^{2}} + {y ^{2}} over {b ^{2}} = 1$ $( a > b > 0 )$ 위의 점 중 제 $1$ 사분면에 있는 점 ${rm "P" it}$ 에 대하여 직선 ${rm "PF" it}$ 는 $x$ 축에 수직이고, $overline {{rm "PF" it}} = 6$ , $overline {{rm "PF '" it}} = 10$ 이다. 점 ${rm "P" it}$ 에서의 타원의 접선이 $x$ 축, $y$ 축과 만나는 점을 각각 ${rm "A" it}$ , ${rm "B" it}$ 라 할 때, 삼각형 ${rm "OAB" it}$ 의 넓이를 구하시오. (단, ${rm "O" it}$ 는 원점이다.) [4점]
-소재 기출: 2024학년도 6월 모의평가 29번 / 변형 포인트: 초점삼각형 ${rm "PF ' F" it}$ 의 변의 길이로 타원을 결정한 뒤, 이차곡선의 접선의 방정식으로 연결
+소재 기출: 2024학년도 대학수학능력시험 29번 / 변형 포인트: 초점삼각형 ${rm "PF ' F" it}$ 의 변의 길이로 타원을 결정한 뒤, 이차곡선의 접선의 방정식으로 연결
 03. [쌍곡선] 난이도 ★★☆☆☆
 두 초점이 ${rm "F" it} ( 5 , ~ 0 )$ , ${rm "F '" it} ( - 5 , ~ 0 )$ 인 쌍곡선 ${x ^{2}} over {a ^{2}} - {y ^{2}} over {b ^{2}} = 1$ 위의 점 중 제 $1$ 사분면에 있는 점 ${rm "P" it}$ 에 대하여 $angle {rm "F ' PF" it} = {pi} over {2}$ , $overline {{rm "PF '" it}} = 8$ 이다. 점 ${rm "P" it}$ 의 $x$ 좌표를 $k$ 라 할 때, $25 k ^{2}$ 의 값을 구하시오. (단, $a > 0$ , $b > 0$ ) [4점]
 소재 기출: 2025학년도 대학수학능력시험 29번 / 변형 포인트: 쌍곡선 위의 점과 두 초점으로 만든 삼각형을 직각삼각형으로 두고, 두 초점까지의 거리의 제곱의 차 $overline {{rm "PF '" it}} ^{2} - overline {{rm "PF" it}} ^{2} = 4 cx$ 로 좌표를 구하게 함
@@ -19,7 +19,7 @@
 소재 기출: 2026학년도 9월 모의평가 29번 / 변형 포인트: 타원의 정의 $overline {{rm "PF" it}} + overline {{rm "PF '" it}} = 2 a$ 를 피타고라스 정리·넓이와 결합하여 좌표 없이 장축의 길이를 구하게 함
 06. [쌍곡선의 접선] 난이도 ★★☆☆☆
 쌍곡선 ${x ^{2}} over {a ^{2}} - {y ^{2}} over {b ^{2}} = 1$ 위의 점 $( 4 , ~ 3 )$ 에서의 접선이 점 $( 1 , ~ 0 )$ 을 지난다. 이 쌍곡선의 두 초점 사이의 거리를 $d$ 라 할 때, $d ^{2}$ 의 값을 구하시오. (단, $a > 0$ , $b > 0$ ) [4점]
-소재 기출: 2023학년도 대학수학능력시험 29번 / 변형 포인트: 쌍곡선의 방정식을 결정하는 조건을 접선의 방정식으로 바꾸어 제시
+소재 기출: 2024학년도 6월 모의평가 29번 / 변형 포인트: 쌍곡선의 방정식을 결정하는 조건을 접선의 방정식으로 바꾸어 제시
 07. [포물선과 쌍곡선] 난이도 ★★☆☆☆
 포물선 $y ^{2} = 12 x$ 의 초점을 ${rm "F" it}$ 라 하고, 점 ${rm "F '" it} ( - 3 , ~ 0 )$ 이 있다. 두 점 ${rm "F" it}$ , ${rm "F '" it}$ 을 초점으로 하고 주축의 길이가 $2$ 인 쌍곡선과 포물선 $y ^{2} = 12 x$ 가 제 $1$ 사분면에서 만나는 점을 ${rm "P" it}$ 라 하자. 삼각형 ${rm "PF ' F" it}$ 의 넓이를 $S$ 라 할 때, $S ^{2}$ 의 값을 구하시오. [4점]
 소재 기출: 2025학년도 9월 모의평가 29번 / 변형 포인트: 포물선과 쌍곡선이 초점 하나를 공유하는 상황에서 두 정의( $overline {{rm "PF" it}} = x + 3$ , $overline {{rm "PF '" it}} - overline {{rm "PF" it}} = 2$ )를 연립하는 기본형
@@ -51,10 +51,10 @@ $LEFT | {x ^{2}} over {4} - 1 RIGHT | = {y ^{2}} over {b ^{2}}$
 소재 기출: 2024학년도 9월 모의평가 29번 / 변형 포인트: $overline {{rm "PQ" it}} - overline {{rm "PF" it}}$ 의 최솟값을 $overline {{rm "PQ" it}} + overline {{rm "PF" it}}$ 의 최솟값·최댓값으로 바꾸어 $overline {{rm "PF" it}} = 10 - overline {{rm "PF '" it}}$ 과 삼각부등식을 두 방향으로 쓰게 함
 16. [타원] 난이도 ★★★☆☆
 장축의 길이가 $10$ 이고 두 초점이 ${rm "F" it} ( c , ~ 0 )$ , ${rm "F '" it} ( - c , ~ 0 )$ $( 0 < c < 5 )$ 인 타원 위의 점 중 제 $1$ 사분면에 있는 점 ${rm "P" it}$ 에 대하여 삼각형 ${rm "PF ' F" it}$ 가 이등변삼각형이고 $overline {{rm "PF" it}} = 4$ 이다. 이를 만족시키는 모든 타원의 단축의 길이의 제곱의 합을 구하시오. [4점]
-소재 기출: 2024학년도 6월 모의평가 29번 / 변형 포인트: 쌍곡선을 타원으로 바꾸고, 이등변삼각형이 되는 두 경우를 삼각형의 존재 조건으로 모두 판정하게 함
+소재 기출: 2024학년도 대학수학능력시험 29번 / 변형 포인트: 쌍곡선을 타원으로 바꾸고, 이등변삼각형이 되는 두 경우를 삼각형의 존재 조건으로 모두 판정하게 함
 17. [타원과 쌍곡선] 난이도 ★★★☆☆
 타원 ${x ^{2}} over {25} + {y ^{2}} over {b ^{2}} = 1$ 과 쌍곡선 ${x ^{2}} over {9} - {y ^{2}} over {d ^{2}} = 1$ 이 두 초점 ${rm "F" it} ( c , ~ 0 )$ , ${rm "F '" it} ( - c , ~ 0 )$ $( c > 0 )$ 을 공유한다. 두 곡선이 제 $1$ 사분면에서 만나는 점 ${rm "P" it}$ 에 대하여 $angle {rm "F ' PF" it} = {pi} over {2}$ 이다. 점 ${rm "P" it}$ 의 $x$ 좌표를 $k$ 라 할 때, $17 k ^{2}$ 의 값을 구하시오. (단, $0 < b < 5$ , $d > 0$ ) [4점]
-소재 기출: 2023학년도 대학수학능력시험 29번 / 변형 포인트: 초점을 공유하는 두 쌍곡선을 타원과 쌍곡선으로 바꾸어 $overline {{rm "PF" it}} + overline {{rm "PF '" it}}$ , $overline {{rm "PF '" it}} - overline {{rm "PF" it}}$ 를 동시에 얻게 함
+소재 기출: 2024학년도 6월 모의평가 29번 / 변형 포인트: 초점을 공유하는 두 쌍곡선을 타원과 쌍곡선으로 바꾸어 $overline {{rm "PF" it}} + overline {{rm "PF '" it}}$ , $overline {{rm "PF '" it}} - overline {{rm "PF" it}}$ 를 동시에 얻게 함
 18. [포물선] 난이도 ★★★☆☆
 초점이 ${rm "F" it}$ 인 포물선 $C _{1} : ~ y ^{2} = 4 px$ $( p > 0 )$ 위의 점 중 제 $1$ 사분면에 있고 $x$ 좌표가 $12$ 인 점을 ${rm "P" it}$ 라 하고, 점 ${rm "P" it}$ 에서 포물선 $C _{1}$ 의 준선에 내린 수선의 발을 ${rm "H" it}$ 라 하자. 점 ${rm "H" it}$ 를 초점으로 하고 점 ${rm "P" it}$ 를 꼭짓점으로 하는 포물선 $C _{2}$ 가 포물선 $C _{1}$ 과 만나는 점 중 ${rm "P" it}$ 가 아닌 점을 ${rm "Q" it}$ 라 하자. 사각형 ${rm "PHQF" it}$ 의 둘레의 길이가 $60$ 일 때, 사각형 ${rm "PHQF" it}$ 의 넓이를 구하시오. [4점]
 소재 기출: 2023학년도 6월 모의평가 29번 / 변형 포인트: 두 번째 포물선의 초점을 준선 위의 점 ${rm "H" it}$ 로 바꾸어 $overline {{rm "QF" it}} + overline {{rm "QH" it}} = 2 overline {{rm "PF" it}}$ (둘레 $= 4 overline {{rm "PF" it}}$ )를 발견하게 함
@@ -90,10 +90,10 @@ $LEFT | {x ^{2}} over {4} - 1 RIGHT | = {y ^{2}} over {b ^{2}}$
 소재 기출: 2025학년도 9월 모의평가 29번 / 변형 포인트: 쌍곡선을 타원으로 바꾸고 $c$ 를 미지수로 남겨 비의 조건으로 $a = 3 c$ 라는 관계를 먼저 얻게 함
 29. [타원과 쌍곡선] 난이도 ★★★★☆
 타원 ${x ^{2}} over {a ^{2}} + {y ^{2}} over {b ^{2}} = 1$ $( a > b > 0 )$ 과 쌍곡선 ${x ^{2}} over {4} - {y ^{2}} over {beta ^{2}} = 1$ $( beta > 0 )$ 이 두 초점 ${rm "F" it} ( c , ~ 0 )$ , ${rm "F '" it} ( - c , ~ 0 )$ $( c > 0 )$ 을 공유한다. 타원 위의 점 중 제 $1$ 사분면에 있는 점 ${rm "P" it}$ 에 대하여 선분 ${rm "PF '" it}$ 이 쌍곡선과 만나는 점 중 $x$ 좌표가 양수인 점 ${rm "Q" it}$ 가 존재한다. 삼각형 ${rm "PQF" it}$ 의 둘레의 길이가 $8$ 이고 삼각형 ${rm "PF ' F" it}$ 의 둘레의 길이가 $18$ 일 때, $b ^{2} + beta ^{2}$ 의 값을 구하시오. [4점]
-소재 기출: 2023학년도 대학수학능력시험 29번 / 변형 포인트: 선분 위의 점 ${rm "Q" it}$ 에 대하여 $overline {{rm "PQ" it}} = overline {{rm "PF '" it}} - overline {{rm "QF '" it}}$ 로 나누어 쓰면 삼각형 ${rm "PQF" it}$ 의 둘레가 $2 a - 4$ 로 일정함을 발견하게 함
+소재 기출: 2024학년도 6월 모의평가 29번 / 변형 포인트: 선분 위의 점 ${rm "Q" it}$ 에 대하여 $overline {{rm "PQ" it}} = overline {{rm "PF '" it}} - overline {{rm "QF '" it}}$ 로 나누어 쓰면 삼각형 ${rm "PQF" it}$ 의 둘레가 $2 a - 4$ 로 일정함을 발견하게 함
 30. [타원] 난이도 ★★★★☆
 두 초점이 ${rm "F" it} ( 3 , ~ 0 )$ , ${rm "F '" it} ( - 3 , ~ 0 )$ 인 타원 ${x ^{2}} over {25} + {y ^{2}} over {16} = 1$ 위의 점 중 제 $1$ 사분면에 있는 점 ${rm "P" it}$ 에 대하여 삼각형 ${rm "PF ' F" it}$ 의 내접원의 반지름의 길이가 $1$ 이다. $overline {{rm "OP" it}} ^{2}$ 의 값을 구하시오. (단, ${rm "O" it}$ 는 원점이다.) [4점]
-소재 기출: 2024학년도 6월 모의평가 29번 / 변형 포인트: 초점삼각형의 둘레가 일정( $2 a + 2 c$ )함을 내접원의 반지름과 넓이의 관계로 연결
+소재 기출: 2024학년도 대학수학능력시험 29번 / 변형 포인트: 초점삼각형의 둘레가 일정( $2 a + 2 c$ )함을 내접원의 반지름과 넓이의 관계로 연결
 31. [타원] 난이도 ★★★★☆
 두 초점이 ${rm "F" it} ( c , ~ 0 )$ , ${rm "F '" it} ( - c , ~ 0 )$ $( c > 0 )$ 인 타원 $C _{1}$ 이 있다. 점 ${rm "F" it}$ 를 지나고 $x$ 축에 수직인 직선이 타원 $C _{1}$ 과 만나는 점 중 제 $1$ 사분면에 있는 점을 ${rm "P" it}$ , 선분 ${rm "PF '" it}$ 이 $y$ 축과 만나는 점을 ${rm "Q" it}$ 라 하자. 두 점 ${rm "P" it}$ , ${rm "F" it}$ 를 초점으로 하고 점 ${rm "Q" it}$ 를 지나는 타원을 $C _{2}$ 라 하자. 두 타원 $C _{1}$ , $C _{2}$ 가 만나는 점 중 하나를 ${rm "R" it}$ 라 할 때, $overline {{rm "RF '" it}} - overline {{rm "RP" it}} = 3$ 이고 타원 $C _{2}$ 의 장축의 길이는 $5$ 이다. 두 타원 $C _{1}$ , $C _{2}$ 의 단축의 길이의 곱을 $k$ 라 할 때, $k ^{2}$ 의 값을 구하시오. [4점]
 소재 기출: 2026학년도 9월 모의평가 29번 / 변형 포인트: 세로로 긴 타원을 가로로 긴 타원으로 바꾸고, 꼭짓점 조건 대신 '점 ${rm "Q" it}$ 를 지난다'는 조건에서 $C _{2}$ 의 장축의 길이가 $overline {{rm "PF '" it}}$ 임을 찾게 함
@@ -122,10 +122,10 @@ $LEFT | {x ^{2}} over {4} - 1 RIGHT | = {y ^{2}} over {b ^{2}}$
 소재 기출: 2022학년도 6월 모의평가 29번 / 변형 포인트: 기울기와 포물선을 바꾸고, 두 포물선의 준선이 다름에 주목하여 $overline {{rm "BD" it}}$ 를 '두 번째 포물선의 준선까지의 거리 $+ a$ '로 분해하게 함
 39. [이차곡선의 접선] 난이도 ★★★★☆
 포물선 $y ^{2} = 8 x$ 와 타원 ${x ^{2}} over {8} + {y ^{2}} over {4} = 1$ 에 동시에 접하는 두 직선이 포물선과 접하는 점을 각각 ${rm "A" it}$ , ${rm "B" it}$ , 타원과 접하는 점을 각각 ${rm "C" it}$ , ${rm "D" it}$ 라 하자. 사각형 ${rm "ABDC" it}$ 의 넓이가 $k sqrt {2}$ 일 때, $k$ 의 값을 구하시오. (단, 두 점 ${rm "A" it}$ , ${rm "C" it}$ 는 같은 접선 위에 있다.) [4점]
-소재 기출: 2023학년도 대학수학능력시험 29번 / 변형 포인트: 두 이차곡선의 공유 관계를 공통접선으로 바꾸어 기울기가 $m$ 인 포물선·타원의 접선의 방정식을 동시에 쓰게 함
+소재 기출: 2024학년도 6월 모의평가 29번 / 변형 포인트: 두 이차곡선의 공유 관계를 공통접선으로 바꾸어 기울기가 $m$ 인 포물선·타원의 접선의 방정식을 동시에 쓰게 함
 40. [타원의 접선] 난이도 ★★★★☆
 두 초점이 ${rm "F" it} ( c , ~ 0 )$ , ${rm "F '" it} ( - c , ~ 0 )$ $( c > 0 )$ 인 타원 ${x ^{2}} over {36} + {y ^{2}} over {b ^{2}} = 1$ $( 0 < b < 6 )$ 위의 점 중 제 $1$ 사분면에 있는 점 ${rm "P" it}$ 를 지나고 점 ${rm "P" it}$ 에서의 타원의 접선에 수직인 직선이 $x$ 축과 만나는 점을 ${rm "D" it}$ 라 하자. 점 ${rm "D" it}$ 가 선분 ${rm "OF" it}$ 위에 있고 $overline {{rm "PF" it}} = 4$ , $overline {{rm "DF" it}} = 2$ 일 때, 삼각형 ${rm "PF ' D" it}$ 의 넓이를 $S$ 라 하자. $S ^{2}$ 의 값을 구하시오. (단, ${rm "O" it}$ 는 원점이다.) [4점]
-소재 기출: 2024학년도 6월 모의평가 29번 / 변형 포인트: 접선에 수직인 직선의 $x$ 절편 ${c ^{2} x _{1}} over {a ^{2}}$ 과 $overline {{rm "PF" it}} = a - {c} over {a} x _{1}$ 을 연결하여 $c$ 를 결정
+소재 기출: 2024학년도 대학수학능력시험 29번 / 변형 포인트: 접선에 수직인 직선의 $x$ 절편 ${c ^{2} x _{1}} over {a ^{2}}$ 과 $overline {{rm "PF" it}} = a - {c} over {a} x _{1}$ 을 연결하여 $c$ 를 결정
 41. [쌍곡선의 접선] 난이도 ★★★★☆
 두 초점이 ${rm "F" it} ( c , ~ 0 )$ , ${rm "F '" it} ( - c , ~ 0 )$ $( c > 0 )$ 인 쌍곡선 ${x ^{2}} over {a ^{2}} - {y ^{2}} over {b ^{2}} = 1$ 위의 점 중 제 $1$ 사분면에 있는 점 ${rm "P" it}$ 에서의 접선이 $x$ 축과 만나는 점을 ${rm "T" it}$ 라 하자. $overline {{rm "TF" it}} = {3} over {2}$ , $overline {{rm "TF '" it}} = {5} over {2}$ , $overline {{rm "PF" it}} = 3$ 일 때, 삼각형 ${rm "PTF" it}$ 의 넓이는 ${q} over {p}$ 이다. $p + q$ 의 값을 구하시오. (단, $a > 0$ , $b > 0$ 이고, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]
 소재 기출: 2025학년도 대학수학능력시험 29번 / 변형 포인트: 접선의 $x$ 절편 ${a ^{2}} over {x _{1}}$ 과 초점까지의 거리 $overline {{rm "PF" it}} = {c} over {a} x _{1} - a$ 를 연립하게 함
@@ -137,13 +137,13 @@ $LEFT | {x ^{2}} over {4} - 1 RIGHT | = {y ^{2}} over {b ^{2}}$
 소재 기출: 2026학년도 대학수학능력시험 29번 / 변형 포인트: 세 점 ${rm "F" it}$ , ${rm "A" it}$ , ${rm "H" it}$ 를 지나는 타원을 쌍곡선으로 바꾸어, 대칭축 $x = {a - p} over {2}$ 와 꼭짓점 ${rm "F" it}$ 에서 주축의 길이 $3 p - a$ 를 얻고 $overline {{rm "HB" it}} - overline {{rm "AB" it}} = 3 p - a$ 를 쓰게 함
 44. [타원과 쌍곡선] 난이도 ★★★★★
 타원 ${x ^{2}} over {121} + {y ^{2}} over {72} = 1$ 과 쌍곡선 ${x ^{2}} over {4} - {y ^{2}} over {45} = 1$ 은 두 초점 ${rm "F" it} ( 7 , ~ 0 )$ , ${rm "F '" it} ( - 7 , ~ 0 )$ 을 공유한다. 타원 위의 점 중 제 $2$ 사분면에 있는 점 ${rm "P" it}$ 에 대하여 선분 ${rm "PF" it}$ 가 쌍곡선과 만나는 점 중 $x$ 좌표가 음수인 점을 ${rm "Q" it}$ 라 할 때, $overline {{rm "PQ" it}} = overline {{rm "QF '" it}}$ 이다. 삼각형 ${rm "PQF '" it}$ 의 넓이를 $S$ 라 할 때, $S ^{2}$ 의 값을 구하시오. [4점]
-소재 기출: 2023학년도 대학수학능력시험 29번 / 변형 포인트: 두 쌍곡선을 타원과 쌍곡선으로 바꾸고, 등차수열 조건 대신 이등변 조건을 주어 두 삼각형에서 같은 각의 코사인을 비교하게 함
+소재 기출: 2024학년도 6월 모의평가 29번 / 변형 포인트: 두 쌍곡선을 타원과 쌍곡선으로 바꾸고, 등차수열 조건 대신 이등변 조건을 주어 두 삼각형에서 같은 각의 코사인을 비교하게 함
 45. [타원] 난이도 ★★★★★
 두 초점이 ${rm "F" it} ( 4 , ~ 0 )$ , ${rm "F '" it} ( - 4 , ~ 0 )$ 인 타원 ${x ^{2}} over {64} + {y ^{2}} over {48} = 1$ 위의 점 중 제 $1$ 사분면에 있는 점 ${rm "P" it}$ 에 대하여 삼각형 ${rm "PF ' F" it}$ 의 내접원의 중심이 직선 $y = x$ 위에 있다. $overline {{rm "PF" it}} ^{2} + overline {{rm "PF '" it}} ^{2}$ 의 값을 구하시오. [4점]
 소재 기출: 2026학년도 6월 모의평가 29번 / 변형 포인트: 초점삼각형의 내심의 좌표를 내접원의 반지름과 접선의 길이로 직접 구하게 하여 조건을 점 ${rm "P" it}$ 의 좌표에 대한 식으로 바꾸게 함
 46. [쌍곡선] 난이도 ★★★★★
 주축의 길이가 $6$ 이고 두 초점이 ${rm "F" it} ( c , ~ 0 )$ , ${rm "F '" it} ( - c , ~ 0 )$ $( c > 0 )$ 인 쌍곡선 위의 점 중 제 $1$ 사분면에 있는 점 ${rm "P" it}$ 에 대하여 삼각형 ${rm "PF ' F" it}$ 가 이등변삼각형이다. 점 ${rm "F" it}$ 에서 직선 ${rm "PF '" it}$ 에 내린 수선의 발을 ${rm "Q" it}$ 라 할 때, 점 ${rm "Q" it}$ 는 선분 ${rm "PF '" it}$ 위에 있고 $overline {{rm "PQ" it}} = 4$ 이다. 삼각형 ${rm "PQF" it}$ 의 넓이를 $S$ 라 할 때, $S ^{2}$ 의 값을 구하시오. [4점]
-소재 기출: 2024학년도 6월 모의평가 29번 / 변형 포인트: 이등변삼각형의 경우를 나누고 $c > a$ 와 삼각형의 존재 조건으로 한 경우를 배제하게 함
+소재 기출: 2024학년도 대학수학능력시험 29번 / 변형 포인트: 이등변삼각형의 경우를 나누고 $c > a$ 와 삼각형의 존재 조건으로 한 경우를 배제하게 함
 47. [타원과 원] 난이도 ★★★★★
 두 초점이 ${rm "F" it} ( 3 , ~ 0 )$ , ${rm "F '" it} ( - 3 , ~ 0 )$ 인 타원 ${x ^{2}} over {a ^{2}} + {y ^{2}} over {b ^{2}} = 1$ $( a > b > 0 )$ 과 원 $( x - 12 ) ^{2} + ( y - 20 ) ^{2} = 25$ 가 있다. 타원 위의 점 ${rm "P" it}$ 와 원 위의 점 ${rm "Q" it}$ 에 대하여 $overline {{rm "PQ" it}} - overline {{rm "PF" it}}$ 의 최솟값이 $10$ 이다. $overline {{rm "PQ" it}} - overline {{rm "PF" it}}$ 의 값이 최소가 되도록 하는 점 ${rm "P" it}$ 를 ${rm "P" it} _{0}$ 이라 할 때, 삼각형 ${rm "P" it} _{0} {rm "F ' F" it}$ 의 넓이를 구하시오. [4점]
 소재 기출: 2024학년도 9월 모의평가 29번 / 변형 포인트: 타원을 미지수로 두어 최솟값 조건으로 장축을 결정한 뒤, 최소가 되는 점을 초점까지의 거리 관계로 찾게 함
@@ -413,11 +413,15 @@ $overline {{rm "PF" it}} = 8 - 5 = 3$ , $( 2 c ) ^{2} = 25 - 9 = 16$ 에서 $c =
 $C _{2}$ 는 두 초점 사이의 거리가 $overline {{rm "PF" it}} = 3$ , 장축의 길이가 $5$ 이므로 단축의 길이는 $2 sqrt {{25} over {4} - {9} over {4}} = 4$ 이다.
 $k = 4 sqrt {3} times 4 = 16 sqrt {3}$ 이므로 $k ^{2} = 768$
 32. 정답 $100$
-${rm "A" it}$ , ${rm "B" it}$ 에서 준선에 내린 수선의 발을 ${rm "A '" it}$ , ${rm "B '" it}$ , 선분 ${rm "AB" it}$ 의 중점을 ${rm "M" it}$ 이라 하면 ${rm "M" it}$ 과 준선 사이의 거리는 ${overline {{rm "AA '" it}} + overline {{rm "BB '" it}}} over {2} = {overline {{rm "AF" it}} + overline {{rm "BF" it}}} over {2} = {overline {{rm "AB" it}}} over {2}$ 이므로, 선분 ${rm "AB" it}$ 를 지름으로 하는 원은 항상 준선에 접하고 접점의 $y$ 좌표는 ${rm "M" it}$ 의 $y$ 좌표이다.
-따라서 $overline {{rm "AB" it}} = 20$ , ${rm "M" it}$ 의 $y$ 좌표는 $4$ 이고, ${rm "M" it}$ 의 $x$ 좌표는 $10 - p$ 이다. 직선 ${rm "AB" it}$ 를 $x = ty + p$ 라 하고 $y ^{2} = 4 px$ 에 대입하면 $y ^{2} - 4 pty - 4 p ^{2} = 0$ 이므로 $y _{{rm "A" it}} + y _{{rm "B" it}} = 4 pt = 8$ , $y _{{rm "A" it}} y _{{rm "B" it}} = - 4 p ^{2}$ 이다.
-${rm "M" it}$ 이 직선 위에 있으므로 $10 - p = 4 t + p$ , 즉 $10 - 2 p = {8} over {p}$ 에서 $p ^{2} - 5 p + 4 = 0$ , $p = 1$ 또는 $p = 4$ 이다.
-$overline {{rm "AF" it}} times overline {{rm "BF" it}} = ( x _{{rm "A" it}} + p ) ( x _{{rm "B" it}} + p ) = x _{{rm "A" it}} x _{{rm "B" it}} + p ( x _{{rm "A" it}} + x _{{rm "B" it}} ) + p ^{2} = {( y _{{rm "A" it}} y _{{rm "B" it}} ) ^{2}} over {16 p ^{2}} + p ( 20 - 2 p ) + p ^{2} = 20 p$
-이므로 구하는 합은 $20 + 80 = 100$
+두 점 ${rm "A" it}$ , ${rm "B" it}$ 에서 준선에 내린 수선의 발을 각각 ${rm "A '" it}$ , ${rm "B '" it}$ , 선분 ${rm "AB" it}$ 의 중점을 ${rm "M" it}$ 이라 하자. 포물선의 정의에 의하여 $overline {{rm "AA '" it}} = overline {{rm "AF" it}}$ , $overline {{rm "BB '" it}} = overline {{rm "BF" it}}$ 이므로 점 ${rm "M" it}$ 과 준선 사이의 거리는 ${overline {{rm "AA '" it}} + overline {{rm "BB '" it}}} over {2} = {overline {{rm "AF" it}} + overline {{rm "BF" it}}} over {2} = {overline {{rm "AB" it}}} over {2}$ 이다. 즉, 선분 ${rm "AB" it}$ 를 지름으로 하는 원은 항상 준선에 접하고, 그 접점 ${rm "H" it}$ 는 점 ${rm "M" it}$ 에서 준선에 내린 수선의 발이다.
+따라서 $overline {{rm "AB" it}} = 20$ , ${rm "H" it} ( - p , ~ 4 )$ 이고, 점 ${rm "M" it}$ 은 점 ${rm "H" it}$ 에서 오른쪽으로 $10$ 만큼 떨어진 점 ${rm "M" it} ( 10 - p , ~ 4 )$ 이다.
+이제 두 직선 ${rm "HF" it}$ , ${rm "AB" it}$ 가 서로 수직임을 보이자. $overline {{rm "MH" it}} = overline {{rm "MA" it}}$ 이므로 $angle {rm "MHA" it} = angle {rm "MAH" it}$ 이고, 직선 ${rm "MH" it}$ 와 직선 ${rm "AA '" it}$ 은 모두 준선에 수직이므로 평행하여 $angle {rm "MHA" it} = angle {rm "HAA '" it}$ (엇각)이다. 즉, $angle {rm "HAF" it} = angle {rm "HAA '" it}$ 이다. 두 삼각형 ${rm "AA ' H" it}$ , ${rm "AFH" it}$ 는 $overline {{rm "AA '" it}} = overline {{rm "AF" it}}$ , 변 ${rm "AH" it}$ 공통, 끼인각이 같으므로 합동이고, $angle {rm "AFH" it} = angle {rm "AA ' H" it} = {pi} over {2}$ 이다.
+그러면 삼각형 ${rm "HFM" it}$ 은 $angle {rm "HFM" it} = {pi} over {2}$ 인 직각삼각형이므로 $overline {{rm "HF" it}} ^{2} + overline {{rm "FM" it}} ^{2} = overline {{rm "HM" it}} ^{2}$ 이다. ${rm "F" it} ( p , ~ 0 )$ 이므로
+$LEFT { ( 2 p ) ^{2} + 4 ^{2} RIGHT } + LEFT { ( 10 - 2 p ) ^{2} + 4 ^{2} RIGHT } = 10 ^{2}$
+정리하면 $8 p ^{2} - 40 p + 32 = 0$ , 즉 $p ^{2} - 5 p + 4 = 0$ 이므로 $p = 1$ 또는 $p = 4$ 이다.
+한편 점 ${rm "H" it}$ 는 선분 ${rm "AB" it}$ 를 지름으로 하는 원 위에 있으므로 $angle {rm "AHB" it} = {pi} over {2}$ 이고, $overline {{rm "HF" it}}$ 는 직각삼각형 ${rm "AHB" it}$ 의 빗변에 내린 수선이다. 두 삼각형 ${rm "AFH" it}$ , ${rm "HFB" it}$ 가 서로 닮음이므로
+$overline {{rm "AF" it}} times overline {{rm "BF" it}} = overline {{rm "HF" it}} ^{2} = 4 p ^{2} + 16$
+$p = 1$ 일 때 $20$ , $p = 4$ 일 때 $80$ 이므로 구하는 합은 $20 + 80 = 100$
 33. 정답 $129$
 점 ${rm "Q" it}$ 가 선분 ${rm "PF '" it}$ 위에 있으므로 $overline {{rm "F ' Q" it}} = overline {{rm "PF '" it}} - overline {{rm "PF" it}} = 6$ 이고 $overline {{rm "QF" it}} = overline {{rm "QF '" it}} = 6$ 이다. 둘레에서 $2 overline {{rm "PF" it}} + 6 = 24$ , $overline {{rm "PF" it}} = 9$ , $overline {{rm "PF '" it}} = 15$ 이다.
 $overline {{rm "QF" it}} = overline {{rm "QF '" it}}$ 이므로 ${rm "Q" it}$ 는 $y$ 축 위에 있고 $cos ( angle {rm "PF ' F" it} ) = {c} over {6}$ 이다. 삼각형 ${rm "PF ' F" it}$ 에서 코사인법칙에 의하여
@@ -446,10 +450,18 @@ $C _{2}$ 는 $y ^{2} = - 4 ( k - p ) ( x - k )$ 이고 준선은 $x = 2 k - p$ �
 $overline {{rm "P" it} {rm "T" it} _{1}} ^{2} = 4 x _{1} ^{2} + y _{1} ^{2} = 64$ 에서 $x _{1} = {16} over {5}$ , $p = 5 - x _{1} = {9} over {5}$ 이다. (실제로 $4 px _{1} = {576} over {25} = y _{1} ^{2}$ 이다.) $2 k - p - x _{1} = 5$ 에서 $k = 5$ 이다.
 따라서 $10 ( p + k ) = 10 times {34} over {5} = 68$
 38. 정답 $15$
-$l : ~ y = {4} over {3} ( x - 1 )$ , 즉 $x = {3} over {4} y + 1$ 을 $y ^{2} = 4 x$ 에 대입하면 $y ^{2} - 3 y - 4 = 0$ 이므로 ${rm "A" it} ( 4 , ~ 4 )$ 이다.
-포물선 $( y - b ) ^{2} = 4 ( x - a )$ 의 초점 $( a + 1 , ~ b )$ 가 $l$ 위에 있으므로 $b = {4} over {3} a$ 이고, 점 ${rm "A" it}$ 를 지나므로 $LEFT ( 4 - {4} over {3} a RIGHT ) ^{2} = 4 ( 4 - a )$ , ${16} over {9} a ^{2} = {20} over {3} a$ , $a = {15} over {4}$ , $b = 5$ 이다. 이 포물선의 초점은 ${rm "G" it} LEFT ( {19} over {4} , ~ 5 RIGHT )$ , 준선은 $x = {11} over {4}$ 이다.
-$overline {{rm "AC" it}} = 4 + 1 = 5$ 이다. 직선 $l$ 은 초점 ${rm "G" it}$ 를 지나므로 $overline {{rm "AB" it}} = overline {{rm "AG" it}} + overline {{rm "GB" it}}$ 이고, 두 번째 포물선의 정의에 의하여 $overline {{rm "AG" it}} = 4 - {11} over {4} = {5} over {4}$ , $overline {{rm "BD" it}} = LEFT ( x _{{rm "B" it}} - {11} over {4} RIGHT ) + {15} over {4} = overline {{rm "GB" it}} + {15} over {4}$ 이다.
-$k = 5 + overline {{rm "GB" it}} + {15} over {4} - {5} over {4} - overline {{rm "GB" it}} = {15} over {2}$ 이므로 $2 k = 15$ 이다. (실제로 ${rm "B" it} LEFT ( {31} over {4} , ~ 9 RIGHT )$ , $overline {{rm "AB" it}} = {25} over {4}$ , $overline {{rm "BD" it}} = {35} over {4}$ 이다.)
+포물선 $y ^{2} = 4 x$ 의 초점은 ${rm "F" it} ( 1 , ~ 0 )$ , 준선은 $x = - 1$ 이다. 직선 $l$ 의 기울기가 ${4} over {3}$ 이므로 벡터 $( 3 , ~ 4 )$ 는 직선 $l$ 의 방향벡터이고, 그 크기는 $5$ 이다. 따라서 점 ${rm "F" it}$ 에서 직선 $l$ 을 따라 제 $1$ 사분면 쪽으로 거리 $d$ 만큼 떨어진 점은 $LEFT ( 1 + {3} over {5} d , ~ {4} over {5} d RIGHT )$ 이다.
+$overline {{rm "AF" it}} = d$ 라 하면 포물선의 정의에 의하여 $d = ($ 점 ${rm "A" it}$ 의 $x$ 좌표 $) + 1 = LEFT ( 1 + {3} over {5} d RIGHT ) + 1$ 이므로 $d = 5$ , 즉 $overline {{rm "AF" it}} = 5$ , ${rm "A" it} ( 4 , ~ 4 )$ 이다.
+포물선 $( y - b ) ^{2} = 4 ( x - a )$ 는 포물선 $y ^{2} = 4 x$ 를 $x$ 축의 방향으로 $a$ 만큼, $y$ 축의 방향으로 $b$ 만큼 평행이동한 것이므로 초점은 ${rm "G" it} ( a + 1 , ~ b )$ , 준선은 $x = a - 1$ 이다. 점 ${rm "G" it}$ 가 직선 $l$ 위에 있으므로 $b = {4} over {3} a$ 이고, $overline {{rm "FG" it}} = sqrt {a ^{2} + {16} over {9} a ^{2}} = {5} over {3} a$ 이다.
+점 ${rm "A" it}$ 가 이 포물선 위에 있으므로 포물선의 정의에 의하여 $overline {{rm "AG" it}} = 4 - ( a - 1 ) = 5 - a$ 이다. 또 두 점 ${rm "A" it}$ , ${rm "G" it}$ 는 모두 직선 $l$ 위에서 점 ${rm "F" it}$ 의 같은 쪽에 있으므로 $overline {{rm "AG" it}} = LEFT | overline {{rm "FG" it}} - overline {{rm "FA" it}} RIGHT | = LEFT | {5} over {3} a - 5 RIGHT |$ 이다.
+(i) ${5} over {3} a leq 5$ 일 때 $5 - {5} over {3} a = 5 - a$ 에서 $a = 0$ 이므로 $a > 0$ 에 모순이다.
+(ii) ${5} over {3} a > 5$ 일 때 ${5} over {3} a - 5 = 5 - a$ 에서 $a = {15} over {4}$ , $b = 5$ 이다.
+따라서 두 번째 포물선의 초점은 ${rm "G" it} LEFT ( {19} over {4} , ~ 5 RIGHT )$ , 준선은 $x = {11} over {4}$ 이고, $overline {{rm "AG" it}} = {5} over {4}$ 이며 점 ${rm "A" it}$ 는 선분 ${rm "FG" it}$ 위에 있다.
+직선 $l$ 은 두 번째 포물선의 초점 ${rm "G" it}$ 를 지나므로 이 포물선과 만나는 두 점 ${rm "A" it}$ , ${rm "B" it}$ 는 점 ${rm "G" it}$ 의 양쪽에 있고, $overline {{rm "AB" it}} = overline {{rm "AG" it}} + overline {{rm "GB" it}}$ 이다. 점 ${rm "B" it}$ 의 $x$ 좌표를 $x _{{rm "B" it}}$ 라 하면 두 번째 포물선의 정의에 의하여 $overline {{rm "GB" it}} = x _{{rm "B" it}} - {11} over {4}$ 이므로
+$overline {{rm "BD" it}} = x _{{rm "B" it}} + 1 = overline {{rm "GB" it}} + {11} over {4} + 1 = overline {{rm "GB" it}} + {15} over {4}$
+또 $overline {{rm "AC" it}} = 4 + 1 = 5$ 이다. 따라서
+$k = 5 + LEFT ( overline {{rm "GB" it}} + {15} over {4} RIGHT ) - LEFT ( {5} over {4} + overline {{rm "GB" it}} RIGHT ) = {15} over {2}$
+이므로 $2 k = 15$ 이다. (참고: 점 ${rm "A" it}$ 를 구한 방법과 같이 $overline {{rm "GB" it}} = LEFT ( {19} over {4} + {3} over {5} overline {{rm "GB" it}} RIGHT ) - {11} over {4}$ 에서 $overline {{rm "GB" it}} = 5$ , ${rm "B" it} LEFT ( {31} over {4} , ~ 9 RIGHT )$ 이고, $overline {{rm "AB" it}} = {25} over {4}$ , $overline {{rm "BD" it}} = {35} over {4}$ 이다.)
 39. 정답 $30$
 포물선 $y ^{2} = 8 x$ 의 기울기가 $m$ 인 접선은 $y = mx + {2} over {m}$ 이고, 이 직선이 타원 ${x ^{2}} over {8} + {y ^{2}} over {4} = 1$ 에 접할 조건은 $LEFT ( {2} over {m} RIGHT ) ^{2} = 8 m ^{2} + 4$ 이다. $2 m ^{4} + m ^{2} - 1 = 0$ 에서 $m ^{2} = {1} over {2}$ 이다.
 포물선의 접점은 $LEFT ( {2} over {m ^{2}} , ~ {4} over {m} RIGHT ) = ( 4 , ~ +- 4 sqrt {2} )$ 이고, 타원의 접점은 $LEFT ( - {8 m} over {n} , ~ {4} over {n} RIGHT )$ $LEFT ( n = {2} over {m} RIGHT )$ , 즉 $( - 4 m ^{2} , ~ 2 m ) = ( - 2 , ~ +- sqrt {2} )$ 이다.
@@ -511,11 +523,18 @@ $overline {{rm "RF '" it}} - overline {{rm "RF" it}} = 2 a - {2 ( a ^{2} + c ^{2
 $c = 1$ 이면 $a = 7$ , 단축의 길이의 제곱은 $4 ( 49 - 1 ) = 192$ 이고, $c = 3$ 이면 $a = 5$ , $4 ( 25 - 9 ) = 64$ 이다. (두 경우 모두 $y > 0$ 이므로 점 ${rm "R" it}$ 가 존재한다.)
 따라서 구하는 합은 $192 + 64 = 256$
 49. 정답 $125$
-$p = 4$ 이다. 직선 ${rm "AB" it}$ 를 $x = ty + 4$ 라 하고 대입하면 $y ^{2} - 16 ty - 64 = 0$ 이므로 $y _{{rm "A" it}} y _{{rm "B" it}} = - 64$ 이다.
-${rm "A" it}$ , ${rm "B" it}$ 에서의 접선 $y _{{rm "A" it}} y = 8 ( x + x _{{rm "A" it}} )$ , $y _{{rm "B" it}} y = 8 ( x + x _{{rm "B" it}} )$ 의 기울기의 곱은 ${64} over {y _{{rm "A" it}} y _{{rm "B" it}}} = - 1$ 이므로 $angle {rm "ATB" it} = {pi} over {2}$ 이다. 두 접선의 교점은 ${rm "T" it} LEFT ( {y _{{rm "A" it}} y _{{rm "B" it}}} over {16} , ~ {y _{{rm "A" it}} + y _{{rm "B" it}}} over {2} RIGHT ) = ( - 4 , ~ 8 t )$ 이고, $vec {{rm "FT" it}} = ( - 8 , ~ 8 t )$ 는 직선 ${rm "AB" it}$ 의 방향벡터 $( t , ~ 1 )$ 과 수직이므로 두 직선 ${rm "TF" it}$ , ${rm "AB" it}$ 가 서로 수직이다.
-또 $overline {{rm "AF" it}} times overline {{rm "BF" it}} = ( x _{{rm "A" it}} + 4 ) ( x _{{rm "B" it}} + 4 )$ , $overline {{rm "AF" it}} + overline {{rm "BF" it}} = x _{{rm "A" it}} + x _{{rm "B" it}} + 8$ 이고 $x _{{rm "A" it}} x _{{rm "B" it}} = {( y _{{rm "A" it}} y _{{rm "B" it}} ) ^{2}} over {256} = 16$ 이므로 $overline {{rm "AF" it}} times overline {{rm "BF" it}} = 4 ( overline {{rm "AF" it}} + overline {{rm "BF" it}} )$ 이다. $overline {{rm "BF" it}} = s$ , $overline {{rm "AF" it}} = 4 s$ 를 대입하면 $4 s ^{2} = 20 s$ , $s = 5$ 이다.
-$overline {{rm "AB" it}} = 25$ 이고 직각삼각형 ${rm "ATB" it}$ 에서 $overline {{rm "TF" it}} ^{2} = overline {{rm "AF" it}} times overline {{rm "BF" it}} = 100$ , $overline {{rm "TF" it}} = 10$ 이다.
-따라서 삼각형 ${rm "TAB" it}$ 의 넓이는 ${1} over {2} times 25 times 10 = 125$
+포물선 $y ^{2} = 16 x$ 의 초점은 ${rm "F" it} ( 4 , ~ 0 )$ , 준선은 $x = - 4$ 이다. 직선 ${rm "AB" it}$ 의 방향을 나타내는 단위벡터를 $( cos theta , ~ sin theta )$ $LEFT ( 0 < theta < pi RIGHT )$ 라 하면, 점 ${rm "A" it}$ 는 점 ${rm "F" it}$ 에서 이 방향으로, 점 ${rm "B" it}$ 는 반대 방향으로 놓이므로
+${rm "A" it} ( 4 + overline {{rm "AF" it}} cos theta , ~ overline {{rm "AF" it}} sin theta ) , ` ` ` ` {rm "B" it} ( 4 - overline {{rm "BF" it}} cos theta , ~ - overline {{rm "BF" it}} sin theta )$
+이다. 포물선의 정의(초점까지의 거리 $=$ 준선까지의 거리)에 의하여
+$overline {{rm "AF" it}} = ( 4 + overline {{rm "AF" it}} cos theta ) + 4 , ` ` ` ` overline {{rm "BF" it}} = ( 4 - overline {{rm "BF" it}} cos theta ) + 4$
+이므로 $overline {{rm "AF" it}} = {8} over {1 - cos theta}$ , $overline {{rm "BF" it}} = {8} over {1 + cos theta}$ 이다. $overline {{rm "AF" it}} = 4 overline {{rm "BF" it}}$ 에서 $1 + cos theta = 4 ( 1 - cos theta )$ , $cos theta = {3} over {5}$ , $sin theta = {4} over {5}$ 이다.
+따라서 $overline {{rm "AF" it}} = 20$ , $overline {{rm "BF" it}} = 5$ , $overline {{rm "AB" it}} = 25$ 이고 ${rm "A" it} ( 16 , ~ 16 )$ , ${rm "B" it} ( 1 , ~ - 4 )$ 이다.
+두 점 ${rm "A" it}$ , ${rm "B" it}$ 에서의 접선의 방정식은 각각
+$16 y = 8 ( x + 16 ) , ` ` ` ` - 4 y = 8 ( x + 1 )$
+즉 $y = {1} over {2} x + 8$ , $y = - 2 x - 2$ 이다. 두 접선의 기울기의 곱이 $- 1$ 이므로 $angle {rm "ATB" it} = {pi} over {2}$ 이고, 두 식을 연립하면 ${rm "T" it} ( - 4 , ~ 6 )$ 이다. (점 ${rm "T" it}$ 는 준선 위에 있다.)
+$overline {{rm "TA" it}} = sqrt {20 ^{2} + 10 ^{2}} = 10 sqrt {5}$ , $overline {{rm "TB" it}} = sqrt {5 ^{2} + 10 ^{2}} = 5 sqrt {5}$ 이므로 직각삼각형 ${rm "TAB" it}$ 의 넓이는
+${1} over {2} times 10 sqrt {5} times 5 sqrt {5} = 125$
+(참고: $vec {{rm "FT" it}} = ( - 8 , ~ 6 )$ 과 직선 ${rm "AB" it}$ 의 방향벡터 $( 3 , ~ 4 )$ 의 내적이 $0$ 이므로 두 직선 ${rm "TF" it}$ , ${rm "AB" it}$ 는 서로 수직이고, ${1} over {2} times overline {{rm "AB" it}} times overline {{rm "TF" it}} = {1} over {2} times 25 times 10 = 125$ 로도 확인할 수 있다.)
 50. 정답 $60$
 내접원이 세 변 ${rm "F ' F" it}$ , ${rm "PF" it}$ , ${rm "PF '" it}$ 과 접하는 점을 각각 ${rm "K" it}$ , ${rm "L" it}$ , ${rm "N" it}$ 이라 하면 $overline {{rm "PL" it}} = overline {{rm "PN" it}}$ , $overline {{rm "FL" it}} = overline {{rm "FK" it}}$ , $overline {{rm "F ' N" it}} = overline {{rm "F ' K" it}}$ 이므로
 $overline {{rm "F ' K" it}} - overline {{rm "FK" it}} = overline {{rm "PF '" it}} - overline {{rm "PF" it}} = 2 a , ~ ~ ~ overline {{rm "F ' K" it}} + overline {{rm "FK" it}} = 2 c$
