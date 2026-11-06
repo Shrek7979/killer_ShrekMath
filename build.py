@@ -11,7 +11,7 @@
 
 실행:  python3 build.py
 """
-import json, re, glob, os, html
+import json, re, glob, os, html, shutil, base64
 from hwptex import convert_text, hwp2tex
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -363,19 +363,29 @@ def main():
                 '<meta name="theme-color" content="#141414">\n'
                 '<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="수학몰">\n'
                 '<link rel="manifest" href="manifest.json">\n'
+                '<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">\n'
+                '<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">\n'
+                '<meta property="og:title" content="킬러들의 수학몰"><meta property="og:image" content="https://killershrekmath.vercel.app/icon-512.png">\n'
                 '<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}</style>\n'
                 '</head>\n<body>\n__BODY__\n</body>\n</html>\n')
     with open(os.path.join(SITE, 'index.html'), 'w', encoding='utf-8') as f:
         f.write(skeleton.replace('__BODY__', tpl.replace('/*__INLINE_DATA__*/', '')))
+    # 아이콘: src/icon/ (원본 source.png 에서 만든 PNG/ICO) 를 site/ 루트로 복사
+    ICON = os.path.join(ROOT, 'src', 'icon')
+    for fn in ('favicon.ico', 'favicon-32.png', 'favicon-64.png', 'apple-touch-icon.png', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png'):
+        shutil.copy2(os.path.join(ICON, fn), os.path.join(SITE, fn))
     with open(os.path.join(SITE, 'manifest.json'), 'w', encoding='utf-8') as f:
         json.dump({'name': '킬러들의 수학몰', 'short_name': '수학몰', 'start_url': './', 'display': 'standalone', 'background_color': '#141414', 'theme_color': '#141414',
-                   'icons': [{'src': 'icon.svg', 'sizes': 'any', 'type': 'image/svg+xml'}]}, f, ensure_ascii=False, indent=1)
-    with open(os.path.join(SITE, 'icon.svg'), 'w', encoding='utf-8') as f:
-        f.write('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="#141414"/><circle cx="50" cy="50" r="28" fill="none" stroke="#e50914" stroke-width="6"/><circle cx="50" cy="50" r="10" fill="none" stroke="#e50914" stroke-width="5"/><path d="M50 8v18M50 74v18M8 50h18M74 50h18" stroke="#e50914" stroke-width="6" stroke-linecap="round"/></svg>')
+                   'icons': [{'src': 'icon-192.png', 'sizes': '192x192', 'type': 'image/png'},
+                             {'src': 'icon-512.png', 'sizes': '512x512', 'type': 'image/png'},
+                             {'src': 'icon-maskable-512.png', 'sizes': '512x512', 'type': 'image/png', 'purpose': 'maskable'}]}, f, ensure_ascii=False, indent=1)
     with open(os.path.join(SITE, 'vercel.json'), 'w', encoding='utf-8') as f:
         json.dump({'cleanUrls': True, 'headers': [{'source': '/(.*)\\.json', 'headers': [{'key': 'Cache-Control', 'value': 'public, max-age=300'}]}]}, f, indent=1)
+    # 단일 파일(아티팩트용)에는 64px 파비콘을 data URI 로 인라인
+    with open(os.path.join(ICON, 'favicon-64.png'), 'rb') as f:
+        fav64 = base64.b64encode(f.read()).decode('ascii')
     with open(os.path.join(ROOT, 'killer-math.html'), 'w', encoding='utf-8') as f:
-        f.write(tpl.replace('/*__INLINE_DATA__*/', data_js))
+        f.write('<link rel="icon" type="image/png" href="data:image/png;base64,' + fav64 + '">\n' + tpl.replace('/*__INLINE_DATA__*/', data_js))
 
     nfull = sum(1 for x in items if x['full'])
     print(f'킬러 {len(items)}개 (완전 분석 {nfull}개) · 논술 {len(essays)}개 · 일본 {len(japan) - len(past)}개 · 기출 {len(past)}개 (정답 {sum(1 for x in past if x["answer"] is not None)}개) · {mode} → site/, killer-math.html')
