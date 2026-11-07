@@ -59,7 +59,7 @@ p{word-break:keep-all}
 /* ───── 홈 (넷플릭스풍) ───── */
 #home{padding-block:0 70px;max-width:none}
 .topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:8;display:flex;align-items:center;gap:26px;padding:14px 0;background:linear-gradient(180deg,rgba(0,0,0,.85),rgba(0,0,0,.6) 70%,transparent);backdrop-filter:blur(4px)}
-.topbar .logo{font-family:var(--disp);font-weight:900;font-size:1.55rem;letter-spacing:-.02em;color:var(--red);line-height:1;text-shadow:0 2px 12px rgba(229,9,20,.35);white-space:nowrap}
+.topbar .logo{display:block;text-decoration:none;cursor:pointer;font-family:var(--disp);font-weight:900;font-size:1.55rem;letter-spacing:-.02em;color:var(--red);line-height:1;text-shadow:0 2px 12px rgba(229,9,20,.35);white-space:nowrap}
 .topbar .logo small{display:block;font-size:.6rem;letter-spacing:.3em;color:var(--mute);font-weight:700;margin-top:2px}
 .topbar nav{display:flex;gap:4px;flex:1;flex-wrap:wrap}
 .topbar nav button{color:#e5e5e5;font-weight:700;font-size:1rem;padding:8px 12px;border-radius:6px;opacity:.75}
@@ -98,6 +98,11 @@ p{word-break:keep-all}
 .flow{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .flow span{font-size:.82rem;padding:3px 10px;border-radius:999px;background:color-mix(in srgb,var(--kc) 18%,transparent);color:var(--kc);font-weight:700;border:1px solid color-mix(in srgb,var(--kc) 40%,transparent)}
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 8px;align-items:center}
+.fgrp{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px;padding:6px 8px 6px 10px;border:1px solid #2c2c2c;border-radius:10px;background:#1b1b1b}
+.fgrp .fl{font-size:.72rem;font-weight:800;color:#9a9a9a;letter-spacing:.08em;margin-right:4px;white-space:nowrap}
+.fchips{display:inline-flex;flex-wrap:wrap;gap:6px}
+.fgrp .chip{padding:5px 12px}
+.setchip{margin-left:auto}
 .chip{border:1px solid #555;background:transparent;border-radius:4px;padding:6px 14px;font-size:.92rem;color:#e5e5e5;font-weight:700}
 .chip:hover{border-color:#fff}
 .chip.on{background:#fff;color:#000;border-color:#fff}
@@ -441,7 +446,7 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
 
 <div id="home" class="wrap" hidden>
   <div class="topbar">
-    <div class="logo">킬러들의 수학몰<small>KILLERS' MATH MALL · by ShrekMath</small></div>
+    <a class="logo" id="logoHome" href="#" title="홈으로">킬러들의 수학몰<small>KILLERS' MATH MALL · by ShrekMath</small></a>
     <nav id="tabs">
       <button data-tab="killer" class="on">킬러관<span class="n" id="nKiller">0</span></button>
       <button data-tab="essay">논술관<span class="n" id="nEssay">0</span></button>
@@ -487,48 +492,56 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
   </div>
 
   <div class="filters" id="filters">
-    <span id="subjChips"></span>
-    <span class="chip sep">|</span>
-    <span id="typeChips"></span>
-    <span class="chip sep">|</span>
-    <button class="chip" data-k="hard" data-v="1">어려운 순</button>
-    <button class="chip" data-k="full" data-v="1">완전 분석만</button>
-    <button class="chip" data-k="wrong" data-v="1">틀린 문항만</button>
-    <button class="chip" data-k="review" data-v="1">복습 필요 (오답·시간초과)</button>
-    <span class="chip sep">|</span>
-    <button class="chip" id="setBtn" style="border-color:var(--red);color:#fff;background:var(--red)">🎯 모의 세트 (4문항 연속)</button>
-    <button class="chip" data-k="todo" data-v="1">안 푼 문항만</button>
+    <div class="fgrp"><span class="fl">과목</span><span id="subjChips" class="fchips"></span></div>
+    <div class="fgrp"><span class="fl">유형</span><span id="typeChips" class="fchips"></span></div>
+    <div class="fgrp"><span class="fl">보기</span>
+      <button class="chip" data-k="hard" data-v="1">어려운 순</button>
+      <button class="chip" data-k="full" data-v="1">완전 분석만</button>
+      <button class="chip" data-k="wrong" data-v="1">틀린 문항만</button>
+      <button class="chip" data-k="review" data-v="1">복습 필요 (오답·시간초과)</button>
+      <button class="chip" data-k="todo" data-v="1">안 푼 문항만</button>
+    </div>
+    <button class="chip setchip" id="setBtn" style="border-color:var(--red);color:#fff;background:var(--red)">🎯 모의 세트 (4문항 연속)</button>
   </div>
   <div class="filters" id="efilters" hidden>
-    <select class="chip" id="univSel"><option value="">모든 대학</option></select>
-    <button class="chip" data-k="round" data-v="수시">수시</button>
-    <button class="chip" data-k="round" data-v="모의">모의</button>
-    <span class="chip sep">|</span>
-    <button class="chip" data-k="todo" data-v="1">안 푼 문제만</button>
+    <div class="fgrp"><span class="fl">대학</span><select class="chip" id="univSel"><option value="">모든 대학</option></select></div>
+    <div class="fgrp"><span class="fl">전형</span>
+      <button class="chip" data-k="round" data-v="수시">수시</button>
+      <button class="chip" data-k="round" data-v="모의">모의</button>
+    </div>
+    <div class="fgrp"><span class="fl">보기</span><button class="chip" data-k="todo" data-v="1">안 푼 문제만</button></div>
   </div>
   <div class="filters" id="pfilters" hidden>
-    <select class="chip" id="pYearSel"><option value="" data-en="All years">모든 학년도</option></select>
-    <select class="chip" id="pMonSel"><option value="" data-en="All exams">6월·9월·수능</option><option value="6월" data-en="June mock">6월 모의평가</option><option value="9월" data-en="September mock">9월 모의평가</option><option value="11월" data-en="CSAT">수능</option></select>
-    <span class="chip sep">|</span>
-    <button class="chip" data-k="part" data-v="공통" data-en="Common">공통</button>
-    <button class="chip" data-k="part" data-v="미적분" data-en="Calculus">미적분</button>
-    <button class="chip" data-k="part" data-v="확률과 통계" data-en="Prob. & Stats">확률과 통계</button>
-    <button class="chip" data-k="part" data-v="기하" data-en="Geometry">기하</button>
-    <span class="chip sep">|</span>
-    <button class="chip" data-k="five" data-v="1" data-en="★★★★★ only">★★★★★만</button>
-    <button class="chip" data-k="todo" data-v="1" data-en="Unsolved only">안 푼 문제만</button>
+    <div class="fgrp"><span class="fl" data-en="Exam">시험</span>
+      <select class="chip" id="pYearSel"><option value="" data-en="All years">모든 학년도</option></select>
+      <select class="chip" id="pMonSel"><option value="" data-en="All exams">6월·9월·수능</option><option value="6월" data-en="June mock">6월 모의평가</option><option value="9월" data-en="September mock">9월 모의평가</option><option value="11월" data-en="CSAT">수능</option></select>
+    </div>
+    <div class="fgrp"><span class="fl" data-en="Subject">과목</span>
+      <button class="chip" data-k="part" data-v="공통" data-en="Common">공통</button>
+      <button class="chip" data-k="part" data-v="미적분" data-en="Calculus">미적분</button>
+      <button class="chip" data-k="part" data-v="확률과 통계" data-en="Prob. & Stats">확률과 통계</button>
+      <button class="chip" data-k="part" data-v="기하" data-en="Geometry">기하</button>
+    </div>
+    <div class="fgrp"><span class="fl" data-en="Show">보기</span>
+      <button class="chip" data-k="five" data-v="1" data-en="★★★★★ only">★★★★★만</button>
+      <button class="chip" data-k="todo" data-v="1" data-en="Unsolved only">안 푼 문제만</button>
+    </div>
   </div>
   <div class="filters" id="jfilters" hidden>
-    <select class="chip" id="jUnivSel"><option value="">모든 대학</option></select>
-    <select class="chip" id="jYearSel"><option value="">모든 연도</option></select>
-    <span id="jSubjChips"></span>
-    <span class="chip sep">|</span>
-    <button class="chip" data-k="track" data-v="이과">이과</button>
-    <button class="chip" data-k="track" data-v="문과">문과</button>
-    <button class="chip" data-k="track" data-v="의학부">의학부</button>
-    <span class="chip sep">|</span>
-    <button class="chip" data-k="five" data-v="1">★★★★★만</button>
-    <button class="chip" data-k="todo" data-v="1">안 푼 문제만</button>
+    <div class="fgrp"><span class="fl">출처</span>
+      <select class="chip" id="jUnivSel"><option value="">모든 대학</option></select>
+      <select class="chip" id="jYearSel"><option value="">모든 연도</option></select>
+    </div>
+    <div class="fgrp"><span class="fl">과목</span><span id="jSubjChips" class="fchips"></span></div>
+    <div class="fgrp"><span class="fl">계열</span>
+      <button class="chip" data-k="track" data-v="이과">이과</button>
+      <button class="chip" data-k="track" data-v="문과">문과</button>
+      <button class="chip" data-k="track" data-v="의학부">의학부</button>
+    </div>
+    <div class="fgrp"><span class="fl">보기</span>
+      <button class="chip" data-k="five" data-v="1">★★★★★만</button>
+      <button class="chip" data-k="todo" data-v="1">안 푼 문제만</button>
+    </div>
   </div>
   <div class="grid" id="grid"></div>
   <div class="foot" id="footPast" hidden>2022~2026학년도 평가원(6월·9월 모의평가, 수능) 수학 영역 중 공통 11~15·20~22번과 선택과목 28·29·30번(홀수형, 공통 11번은 2023학년도 수능 이후). 문제는 문제지 이미지 그대로, 정답은 평가원 정답표 기준으로 자동 채점합니다. 해설은 EBSi 등에서 확인하세요.<br>저작권: 한국교육과정평가원. 기록은 이 브라우저에만 저장됩니다.</div>
@@ -976,6 +989,7 @@ function showSetResult(){const st=S.set;const box=$('#setResult');const ok=st.re
 $('#setResult').addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b){$('#setResult').hidden=true;S.set=null;save();location.hash='q'+b.dataset.go}});
 $('#setClose').onclick=()=>{$('#setResult').hidden=true;S.set=null;save();location.hash=''};
 $('#setBtn').onclick=makeSet;
+$('#logoHome').onclick=e=>{e.preventDefault();S.tab='killer';save();if(location.hash){history.pushState(null,'',location.pathname+location.search)}home();window.scrollTo({top:0,behavior:'smooth'})};
 $('#jpBtn').onclick=()=>{S.jlang=JA()?'ko':'ja';save();applyLang();if(!$('#op').hidden&&mode==='japan'&&J)openJapan(J.num,cur);else home()};
 $('#langBtn').onclick=()=>{S.lang=EN()?'ko':'en';save();applyLang();if(!$('#op').hidden&&mode==='japan'&&J)openJapan(J.num,cur);else home()};
 $('#randBtn').onclick=()=>{let pool,pre;if(S.tab==='essay'){pool=ELIST.filter(x=>!S.erec[x.num]);pre='e'}else if(S.tab==='japan'){pool=JP().filter(x=>!S.jrec[x.num]);pre='j'}else if(S.tab==='past'){pool=PAST().filter(x=>!S.jrec[x.num]);pre='j'}else{pool=LIST.filter(x=>!S.rec[x.num]);pre='q'}
