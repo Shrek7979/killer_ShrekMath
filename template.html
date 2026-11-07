@@ -379,6 +379,18 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 }
 
 
+
+/* 휴대폰: 관 선택 탭을 상단바 아래 한 줄 전체로(4칸 같은 폭, 엄지로 누르기 쉬운 높이) */
+@media (max-width:760px){
+  .topbar{flex-wrap:wrap;row-gap:8px;column-gap:8px;padding:8px 0 10px;background:rgba(10,10,10,.94)}
+  .topbar .logo{flex:1;min-width:0;font-size:1.2rem}
+  .topbar nav{order:3;flex:0 0 100%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;overflow:visible}
+  .topbar nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:50px;padding:6px 2px;font-size:1.02rem;line-height:1.15;border-radius:8px;background:rgba(255,255,255,.07);opacity:.9}
+  .topbar nav button.on{background:var(--red);color:#fff;opacity:1;box-shadow:0 4px 14px rgba(229,9,20,.35)}
+  .topbar nav button .n{margin:0;font-size:.72rem;color:rgba(255,255,255,.65)}
+  .topbar nav button.on .n{color:rgba(255,255,255,.9)}
+  .topbar .cta{padding:8px 11px;font-size:.9rem}
+}
 </style>
 
 <div id="gate" class="wrap" hidden>
