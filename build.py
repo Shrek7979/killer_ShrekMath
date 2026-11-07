@@ -137,7 +137,10 @@ def joinlines(ls):
 def essay_items():
     """src/essay/items_*.json (parse_essay.py 결과) → 사이트용 논술 문항"""
     out = []
-    for f in sorted(glob.glob(os.path.join(ROOT, 'src/essay/items_*.json')), key=lambda f: (not f.endswith('items_18.json'), f)):   # 시즌 18(기존 #1~99) 먼저, 새 시즌은 뒤에 이어 번호를 매긴다
+    # 학생 기록이 번호(num)로 저장되므로 실은 순서를 고정한다: 시즌 18(#1~99) → 16(#100~199) → 15 → 17 → 그 밖의 새 시즌
+    ORDER = ['items_18.json', 'items_16.json', 'items_15.json', 'items_17.json']
+    files = glob.glob(os.path.join(ROOT, 'src/essay/items_*.json'))
+    for f in sorted(files, key=lambda f: (ORDER.index(os.path.basename(f)) if os.path.basename(f) in ORDER else len(ORDER), f)):
         with open(f, encoding='utf-8') as fp:
             for it in json.load(fp):
                 ct = convert_text
@@ -149,14 +152,17 @@ def essay_items():
                 head = re.sub(r'^\[[^\]]*\]\s*', '', it['head'] or '')
                 passage = [t for t in it['passage'] if t.strip() != head.strip()]
                 topic = (it['info'] or {}).get('concepts', '')
+                season = it.get('season') or int(re.search(r'items_(\d+)', f).group(1))
                 out.append({
-                    'num': len(out) + 1, 'id': it['id'], 'univ': it['univ'], 'n': it['n'],
+                    'num': len(out) + 1, 'id': it['id'], 'univ': it['univ'], 'n': it['n'], 'year': 2008 + season,
                     'title': f"문제 {it['n']}" + (f" · {it['points']}점" if it['points'] else ''),
                     'head': ct(head), 'points': it['points'], 'minutes': it['minutes'], 'info': it['info'],
                     'pre': [ct(t) for t in it['pre']], 'passage': [ct(t) for t in passage],
                     'subs': subs, 'answer': [ct(t) for t in it['answer']], 'rubric': [ct(t) for t in joinlines(it['rubric'])],
                     'field': (topic.split(',')[0].strip() if topic else ''),
                 })
+                if it.get('qimg'):   # PDF에서 이미지로 실은 문항(시즌 17): 문제지·예시답안 원본 이미지
+                    out[-1]['qimg'] = it['qimg']; out[-1]['aimg'] = it.get('aimg', [])
     return out
 
 
@@ -262,7 +268,7 @@ def snip_blocks(body):
 
 
 def essay_snip(e):
-    lines = [s for s in e['passage'] if s.strip() and '[그림]' not in s]
+    lines = [s for s in (e['pre'] + e['passage']) if s.strip() and '[그림]' not in s] or ([e['head']] if e.get('head') else [])
     return [{'t': 'p', 's': s} for s in lines[:4]]
 
 
@@ -310,7 +316,7 @@ def main():
     jx2 = japan_items(len(japan) + 1, extra='pick_b2.json')   # 일본관 2차 추가분(2026-11-07)
     japan += jx2
     elst = [{'num': e['num'], 'id': e['id'], 'univ': e['univ'], 'n': e['n'], 'title': e['title'], 'points': e['points'],
-             'minutes': e['minutes'], 'nsubs': len(e['subs']), 'field': e['field'], 'art': art_path('essay-' + str(e['num'])), 'snip': essay_snip(e)} for e in essays]
+             'minutes': e['minutes'], 'nsubs': len(e['subs']), 'field': e['field'], 'year': e['year'], 'img': bool(e.get('qimg')), 'art': art_path('essay-' + str(e['num'])), 'snip': essay_snip(e)} for e in essays]
     for j in japan:
         j['art'] = art_path(j['id'])
 
@@ -319,7 +325,7 @@ def main():
     with open(os.path.join(ROOT, 'src/katex.inline.css'), encoding='utf-8') as f:
         tpl = tpl.replace('/*__KATEX_CSS__*/', f.read())
 
-    for d in ('data', 'edata', 'jp', 'past'):
+    for d in ('data', 'edata', 'jp', 'past', 'ess'):
         shutil.rmtree(os.path.join(SITE, d), ignore_errors=True)
     for fn in ('list.json', 'elist.json', 'jlist.json', 'enc.json'):
         p = os.path.join(SITE, fn)
@@ -330,6 +336,12 @@ def main():
     import base64
     os.makedirs(os.path.join(SITE, 'jp'), exist_ok=True); os.makedirs(os.path.join(SITE, 'past'), exist_ok=True)
     jimg_js = {}
+    os.makedirs(os.path.join(SITE, 'ess'), exist_ok=True)
+    for e in essays:   # 이미지 논술 문항(src/essay/img → site/ess)
+        for f in e.get('qimg', []) + e.get('aimg', []):
+            src = os.path.join(ROOT, 'src/essay/img', os.path.basename(f))
+            shutil.copy(src, os.path.join(SITE, 'ess', os.path.basename(f)))
+            jimg_js[f] = 'data:image/webp;base64,' + base64.b64encode(open(src, 'rb').read()).decode()
     for j in japan:
         for f in j['qimg'] + j['simg']:
             sub = 'src/past/img' if f.startswith('past/') else 'src/japan/img'

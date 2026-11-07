@@ -1,0 +1,36 @@
+{
+ "num": 343,
+ "id": "S17-중앙대학교(자연계열)모의-3",
+ "univ": "중앙대학교(자연계열) 모의",
+ "n": 3,
+ "year": 2025,
+ "title": "문제 3",
+ "head": "다음을 읽고 문제에 답하시오.",
+ "points": null,
+ "minutes": 30,
+ "info": {
+  "time": "120분"
+ },
+ "pre": [],
+ "passage": [],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[답안]",
+   "points": null,
+   "text": [],
+   "answer": [],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "",
+ "qimg": [
+  "ess/s17-37-3q-0.webp"
+ ],
+ "aimg": [
+  "ess/s17-37-3a-0.webp",
+  "ess/s17-37-3a-1.webp"
+ ]
+}

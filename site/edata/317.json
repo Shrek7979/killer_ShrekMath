@@ -1,0 +1,37 @@
+{
+ "num": 317,
+ "id": "S17-성균관대학교(수리형1)수시-3",
+ "univ": "성균관대학교(수리형 1) 수시",
+ "n": 3,
+ "year": 2025,
+ "title": "문제 3",
+ "head": "다음 <제시문 1> ～ <제시문 3>을 읽고 [문제3-ⅰ] ～[문제3-ⅲ]을",
+ "points": null,
+ "minutes": 33,
+ "info": {
+  "time": "100분"
+ },
+ "pre": [],
+ "passage": [],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[답안]",
+   "points": null,
+   "text": [],
+   "answer": [],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "",
+ "qimg": [
+  "ess/s17-27-3q-0.webp"
+ ],
+ "aimg": [
+  "ess/s17-27-3a-0.webp",
+  "ess/s17-27-3a-1.webp",
+  "ess/s17-27-3a-2.webp"
+ ]
+}

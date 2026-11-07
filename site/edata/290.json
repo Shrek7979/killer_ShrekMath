@@ -1,0 +1,36 @@
+{
+ "num": 290,
+ "id": "S17-고려대학교(자연계열-오전)수시-3",
+ "univ": "고려대학교(자연계열-오전) 수시",
+ "n": 3,
+ "year": 2025,
+ "title": "문제 3 · 20점",
+ "head": "다음 글을 읽고 물음에 답하시오. (20점)",
+ "points": 20,
+ "minutes": 20,
+ "info": {
+  "time": "80분"
+ },
+ "pre": [],
+ "passage": [],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[답안]",
+   "points": 20,
+   "text": [],
+   "answer": [],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "",
+ "qimg": [
+  "ess/s17-13-3q-0.webp"
+ ],
+ "aimg": [
+  "ess/s17-13-3a-0.webp",
+  "ess/s17-13-3a-1.webp"
+ ]
+}
