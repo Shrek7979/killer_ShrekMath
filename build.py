@@ -162,16 +162,24 @@ def essay_items():
 
 def japan_items(start=1, extra=False):
     """src/japan/index.json + img/ → 일본 대학 문제 목록 (이미지 기반)
-    extra=False: ★4 이상(처음 실은 문항) / extra=True: src/japan/pick3.json 의 ★3 추가분.
+    extra=False: ★4 이상(처음 실은 문항) / extra=True·'pick3.json': 1차 ★3 추가분 / 'pick_b2.json': 2차 추가분(★3·★2).
     학생 기록이 번호(num)로 저장되므로 추가분은 기존 번호 뒤에 이어 매긴다."""
     p = os.path.join(ROOT, 'src/japan/index.json')
     if not os.path.exists(p):
         return []
-    pk = os.path.join(ROOT, 'src/japan/pick3.json')
-    pick = set(json.load(open(pk, encoding='utf-8'))['ids']) if os.path.exists(pk) else set()
+    def ids_of(name):
+        pk = os.path.join(ROOT, 'src/japan', name)
+        return set(json.load(open(pk, encoding='utf-8'))['ids']) if os.path.exists(pk) else set()
+    if extra is True:
+        extra = 'pick3.json'
+    allpick = ids_of('pick3.json') | ids_of('pick_b2.json')
+    pick = ids_of(extra) if extra else set()
     out = []
     for x in json.load(open(p, encoding='utf-8')):
-        if (x['id'] in pick) != extra or (not extra and x['stars'] < 4):
+        if extra:
+            if x['id'] not in pick:
+                continue
+        elif x['id'] in allpick or x['stars'] < 4:
             continue
         q = [f"jp/{x['id']}-q{k}.webp" for k in range(len(x['pages']))]
         s = [f"jp/{x['id']}-s{k}.webp" for k in range(len(x['spages']))]
@@ -299,6 +307,8 @@ def main():
     px = past_items(len(japan) + 1, extra=True)       # 기출관 추가분
     japan += px
     past += px
+    jx2 = japan_items(len(japan) + 1, extra='pick_b2.json')   # 일본관 2차 추가분(2026-11-07)
+    japan += jx2
     elst = [{'num': e['num'], 'id': e['id'], 'univ': e['univ'], 'n': e['n'], 'title': e['title'], 'points': e['points'],
              'minutes': e['minutes'], 'nsubs': len(e['subs']), 'field': e['field'], 'art': art_path('essay-' + str(e['num'])), 'snip': essay_snip(e)} for e in essays]
     for j in japan:

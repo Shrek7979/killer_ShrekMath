@@ -1,8 +1,9 @@
-"""pick3.json 에 적힌 ★3 문항의 문제·해설 페이지를 WebP로 (render_japan.py 와 같은 방식). 이미 만든 것은 건너뜀."""
+"""pick3.json(또는 4번째 인자로 준 목록)에 적힌 ★3 문항의 문제·해설 페이지를 WebP로 (render_japan.py 와 같은 방식). 이미 만든 것은 건너뜀."""
 import json, os, sys, subprocess, time
 from PIL import Image, ImageChops
 Q, S = sys.argv[1], sys.argv[2]; BUDGET = float(sys.argv[3]) if len(sys.argv) > 3 else 150
-ids = set(json.load(open('pick3.json', encoding='utf-8'))['ids'])
+PICK = sys.argv[4] if len(sys.argv) > 4 else 'pick3.json'
+ids = set(json.load(open(PICK, encoding='utf-8'))['ids'])
 d = [x for x in json.load(open('index.json', encoding='utf-8')) if x['id'] in ids]
 jobs = [(Q, p, f"img/{x['id']}-q{k}.webp") for x in d for k, p in enumerate(x['pages'])] + \
        [(S, p, f"img/{x['id']}-s{k}.webp") for x in d for k, p in enumerate(x['spages'])]
