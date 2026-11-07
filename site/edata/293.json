@@ -1,0 +1,36 @@
+{
+ "num": 293,
+ "id": "S17-고려대학교(자연계열-오후)수시-2",
+ "univ": "고려대학교(자연계열-오후) 수시",
+ "n": 2,
+ "year": 2025,
+ "title": "문제 2 · 30점",
+ "head": "다음 글을 읽고 물음에 답하시오. (30점)",
+ "points": 30,
+ "minutes": 20,
+ "info": {
+  "time": "80분"
+ },
+ "pre": [],
+ "passage": [],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[답안]",
+   "points": 30,
+   "text": [],
+   "answer": [],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "",
+ "qimg": [
+  "ess/s17-14-2q-0.webp"
+ ],
+ "aimg": [
+  "ess/s17-14-2a-0.webp",
+  "ess/s17-14-2a-1.webp"
+ ]
+}

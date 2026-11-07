@@ -1,0 +1,2951 @@
+[
+ {
+  "id": "S17-가톨릭대학교(의약학과)수시-1",
+  "univ": "가톨릭대학교(의·약학과) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[문항 1] 제시문 ( ㄱ )～( ㄹ )을 읽고 논제에 답하시오. (200점)",
+  "points": 200,
+  "minutes": 22,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 200,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-02-1q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-02-1a-0.webp",
+   "ess/s17-02-1a-1.webp",
+   "ess/s17-02-1a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-가톨릭대학교(의약학과)수시-2",
+  "univ": "가톨릭대학교(의·약학과) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[문항 2] 제시문 ( ㄱ )을 읽고 논제에 답하시오. (200점)",
+  "points": 200,
+  "minutes": 22,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 200,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-02-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-02-2a-0.webp",
+   "ess/s17-02-2a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-가톨릭대학교(의약학과)수시-3",
+  "univ": "가톨릭대학교(의·약학과) 수시",
+  "n": 3,
+  "season": 17,
+  "head": "[문항 3] 제시문 ( ㄱ )～( ㄷ )를 읽고 논제에 답하시오. (200점)",
+  "points": 200,
+  "minutes": 22,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 200,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-02-3q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-02-3a-0.webp",
+   "ess/s17-02-3a-1.webp",
+   "ess/s17-02-3a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-가톨릭대학교(의약학과)수시-4",
+  "univ": "가톨릭대학교(의·약학과) 수시",
+  "n": 4,
+  "season": 17,
+  "head": "[문항 4] 제시문 ( ㄱ )～( ㄷ )를 읽고 논제에 답하시오. (200점)",
+  "points": 200,
+  "minutes": 22,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 200,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-02-4q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-02-4a-0.webp",
+   "ess/s17-02-4a-1.webp",
+   "ess/s17-02-4a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-경희대학교(자연계)수시-1",
+  "univ": "경희대학교(자연계) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[논제 Ⅰ]",
+  "points": null,
+  "minutes": 40,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-10-1q-0.webp",
+   "ess/s17-10-1q-1.webp",
+   "ess/s17-10-1q-2.webp",
+   "ess/s17-10-1q-3.webp"
+  ],
+  "aimg": [
+   "ess/s17-10-1a-0.webp",
+   "ess/s17-10-1a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-경희대학교(자연계)수시-2",
+  "univ": "경희대학교(자연계) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[논제 Ⅱ]",
+  "points": null,
+  "minutes": 40,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-10-2q-0.webp",
+   "ess/s17-10-2q-1.webp",
+   "ess/s17-10-2q-2.webp",
+   "ess/s17-10-2q-3.webp"
+  ],
+  "aimg": [
+   "ess/s17-10-2a-0.webp",
+   "ess/s17-10-2a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-경희대학교(자연계)수시-3",
+  "univ": "경희대학교(자연계) 수시",
+  "n": 3,
+  "season": 17,
+  "head": "[논제 Ⅲ]",
+  "points": null,
+  "minutes": 40,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-10-3q-0.webp",
+   "ess/s17-10-3q-1.webp",
+   "ess/s17-10-3q-2.webp",
+   "ess/s17-10-3q-3.webp"
+  ],
+  "aimg": [
+   "ess/s17-10-3a-0.webp",
+   "ess/s17-10-3a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-고려대학교(자연계)모의-1",
+  "univ": "고려대학교(자연계) 모의",
+  "n": 1,
+  "season": 17,
+  "head": "[문항 1] 다음 글을 읽고 물음에 답하시오. (35점)",
+  "points": 35,
+  "minutes": 20,
+  "info": {
+   "time": "80분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 35,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-12-1q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-12-1a-0.webp",
+   "ess/s17-12-1a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-고려대학교(자연계)모의-2",
+  "univ": "고려대학교(자연계) 모의",
+  "n": 2,
+  "season": 17,
+  "head": "[문항 2] 다음 글을 읽고 물음에 답하시오. (35점)",
+  "points": 35,
+  "minutes": 20,
+  "info": {
+   "time": "80분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 35,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-12-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-12-2a-0.webp"
+  ]
+ },
+ {
+  "id": "S17-고려대학교(자연계)모의-3",
+  "univ": "고려대학교(자연계) 모의",
+  "n": 3,
+  "season": 17,
+  "head": "[문항 3] 다음 글을 읽고 물음에 답하시오. (15점)",
+  "points": 15,
+  "minutes": 20,
+  "info": {
+   "time": "80분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 15,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-12-3q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-12-3a-0.webp",
+   "ess/s17-12-3a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-고려대학교(자연계)모의-4",
+  "univ": "고려대학교(자연계) 모의",
+  "n": 4,
+  "season": 17,
+  "head": "[문항 4] 다음 글을 읽고 물음에 답하시오. (15점)",
+  "points": 15,
+  "minutes": 20,
+  "info": {
+   "time": "80분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 15,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-12-4q-0.webp",
+   "ess/s17-12-4q-1.webp"
+  ],
+  "aimg": [
+   "ess/s17-12-4a-0.webp"
+  ]
+ },
+ {
+  "id": "S17-고려대학교(자연계열-오전)수시-1",
+  "univ": "고려대학교(자연계열-오전) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[문항 1] 다음 글을 읽고 물음에 답하시오. (35점)",
+  "points": 35,
+  "minutes": 20,
+  "info": {
+   "time": "80분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 35,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-13-1q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-13-1a-0.webp",
+   "ess/s17-13-1a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-고려대학교(자연계열-오전)수시-2",
+  "univ": "고려대학교(자연계열-오전) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[문항 2] 다음 글을 읽고 물음에 답하시오. (25점)",
+  "points": 25,
+  "minutes": 20,
+  "info": {
+   "time": "80분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 25,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-13-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-13-2a-0.webp"
+  ]
+ },
+ {
+  "id": "S17-고려대학교(자연계열-오전)수시-3",
+  "univ": "고려대학교(자연계열-오전) 수시",
+  "n": 3,
+  "season": 17,
+  "head": "[문항 3] 다음 글을 읽고 물음에 답하시오. (20점)",
+  "points": 20,
+  "minutes": 20,
+  "info": {
+   "time": "80분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 20,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-13-3q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-13-3a-0.webp",
+   "ess/s17-13-3a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-고려대학교(자연계열-오전)수시-4",
+  "univ": "고려대학교(자연계열-오전) 수시",
+  "n": 4,
+  "season": 17,
+  "head": "[문항 4] 제시문을 읽고 문제에 답하시오. (20점)",
+  "points": 20,
+  "minutes": 20,
+  "info": {
+   "time": "80분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 20,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-13-4q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-13-4a-0.webp"
+  ]
+ },
+ {
+  "id": "S17-고려대학교(자연계열-오후)수시-1",
+  "univ": "고려대학교(자연계열-오후) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[문항 1] 다음 글을 읽고 물음에 답하시오. (30점)",
+  "points": 30,
+  "minutes": 20,
+  "info": {
+   "time": "80분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 30,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-14-1q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-14-1a-0.webp",
+   "ess/s17-14-1a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-고려대학교(자연계열-오후)수시-2",
+  "univ": "고려대학교(자연계열-오후) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[문항 2] 다음 글을 읽고 물음에 답하시오. (30점)",
+  "points": 30,
+  "minutes": 20,
+  "info": {
+   "time": "80분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 30,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-14-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-14-2a-0.webp",
+   "ess/s17-14-2a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-고려대학교(자연계열-오후)수시-3",
+  "univ": "고려대학교(자연계열-오후) 수시",
+  "n": 3,
+  "season": 17,
+  "head": "[문항 3] 다음 글을 읽고 물음에 답하시오. (20점)",
+  "points": 20,
+  "minutes": 20,
+  "info": {
+   "time": "80분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 20,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-14-3q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-14-3a-0.webp"
+  ]
+ },
+ {
+  "id": "S17-고려대학교(자연계열-오후)수시-4",
+  "univ": "고려대학교(자연계열-오후) 수시",
+  "n": 4,
+  "season": 17,
+  "head": "[문항 4] 다음 글을 읽고 물음에 답하시오. (20점)",
+  "points": 20,
+  "minutes": 20,
+  "info": {
+   "time": "80분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 20,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-14-4q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-14-4a-0.webp"
+  ]
+ },
+ {
+  "id": "S17-부산대학교(의약학계열)수시-1",
+  "univ": "부산대학교(의․약학계열) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[문항 1] 다음 제시문을 이용하여 아래 논제의 풀이 과정과 답을 논리적으로 서술하시오.",
+  "points": null,
+  "minutes": 33,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-16-1q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-16-1a-0.webp",
+   "ess/s17-16-1a-1.webp",
+   "ess/s17-16-1a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-부산대학교(의약학계열)수시-2",
+  "univ": "부산대학교(의․약학계열) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[문항 2] 다음 제시문을 이용하여 아래 논제의 풀이 과정과 답을 논리적으로 서술하시오.",
+  "points": null,
+  "minutes": 33,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-16-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-16-2a-0.webp",
+   "ess/s17-16-2a-1.webp",
+   "ess/s17-16-2a-2.webp",
+   "ess/s17-16-2a-3.webp",
+   "ess/s17-16-2a-4.webp"
+  ]
+ },
+ {
+  "id": "S17-부산대학교(의약학계열)수시-3",
+  "univ": "부산대학교(의․약학계열) 수시",
+  "n": 3,
+  "season": 17,
+  "head": "[문항 3] 다음 제시문을 이용하여 아래 논제의 풀이 과정과 답을 논리적으로 서술하시오.",
+  "points": null,
+  "minutes": 33,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-16-3q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-16-3a-0.webp",
+   "ess/s17-16-3a-1.webp",
+   "ess/s17-16-3a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-서강대학교(자연계열1차)모의-1",
+  "univ": "서강대학교(자연계열 1차) 모의",
+  "n": 1,
+  "season": 17,
+  "head": "[문제]",
+  "points": null,
+  "minutes": 50,
+  "info": {
+   "time": "50분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-17-1q-0.webp",
+   "ess/s17-17-1q-1.webp",
+   "ess/s17-17-1q-2.webp"
+  ],
+  "aimg": [
+   "ess/s17-17-1a-0.webp",
+   "ess/s17-17-1a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-서강대학교(자연계열1차)수시-1",
+  "univ": "서강대학교(자연계열 1차) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[문항1] 제시문 [가]",
+  "points": null,
+  "minutes": 50,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-19-1q-0.webp",
+   "ess/s17-19-1q-1.webp"
+  ],
+  "aimg": [
+   "ess/s17-19-1a-0.webp",
+   "ess/s17-19-1a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-서강대학교(자연계열1차)수시-2",
+  "univ": "서강대학교(자연계열 1차) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[문항 2] 제시문[가]",
+  "points": null,
+  "minutes": 50,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-19-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-19-2a-0.webp",
+   "ess/s17-19-2a-1.webp",
+   "ess/s17-19-2a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-서강대학교(자연계열2차)수시-1",
+  "univ": "서강대학교(자연계열 2차) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[문항1] 제시문 [가]～[다]를 참고하여 다음 물음에 답하시오.",
+  "points": null,
+  "minutes": 50,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-20-1q-0.webp",
+   "ess/s17-20-1q-1.webp"
+  ],
+  "aimg": [
+   "ess/s17-20-1a-0.webp",
+   "ess/s17-20-1a-1.webp",
+   "ess/s17-20-1a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-서강대학교(자연계열2차)수시-2",
+  "univ": "서강대학교(자연계열 2차) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[문항 2] 제시문[가]～[다]를 참고하여 다음 물음에 답하시오.",
+  "points": null,
+  "minutes": 50,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-20-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-20-2a-0.webp",
+   "ess/s17-20-2a-1.webp",
+   "ess/s17-20-2a-2.webp",
+   "ess/s17-20-2a-3.webp"
+  ]
+ },
+ {
+  "id": "S17-서울시립대학교(자연계열)모의-1",
+  "univ": "서울시립대학교(자연계열) 모의",
+  "n": 1,
+  "season": 17,
+  "head": "[문제 1] (85점)",
+  "points": 85,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 85,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-24-1q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-24-1a-0.webp"
+  ]
+ },
+ {
+  "id": "S17-서울시립대학교(자연계열)모의-2",
+  "univ": "서울시립대학교(자연계열) 모의",
+  "n": 2,
+  "season": 17,
+  "head": "[문제 2] (95점)",
+  "points": 95,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 95,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-24-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-24-2a-0.webp",
+   "ess/s17-24-2a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-서울시립대학교(자연계열)모의-3",
+  "univ": "서울시립대학교(자연계열) 모의",
+  "n": 3,
+  "season": 17,
+  "head": "[문제 3] (105점)",
+  "points": 105,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 105,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-24-3q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-24-3a-0.webp"
+  ]
+ },
+ {
+  "id": "S17-서울시립대학교(자연계열)모의-4",
+  "univ": "서울시립대학교(자연계열) 모의",
+  "n": 4,
+  "season": 17,
+  "head": "[문제 4] (총 115점)",
+  "points": 115,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 115,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-24-4q-0.webp",
+   "ess/s17-24-4q-1.webp"
+  ],
+  "aimg": [
+   "ess/s17-24-4a-0.webp"
+  ]
+ },
+ {
+  "id": "S17-서울시립대학교(자연계)수시-1",
+  "univ": "서울시립대학교(자연계) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[문제 1] (총 85점)",
+  "points": 85,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 85,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-25-1q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-25-1a-0.webp"
+  ]
+ },
+ {
+  "id": "S17-서울시립대학교(자연계)수시-2",
+  "univ": "서울시립대학교(자연계) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[문제 2] (95점)",
+  "points": 95,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 95,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-25-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-25-2a-0.webp",
+   "ess/s17-25-2a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-서울시립대학교(자연계)수시-3",
+  "univ": "서울시립대학교(자연계) 수시",
+  "n": 3,
+  "season": 17,
+  "head": "[문제 3] (총 105점)",
+  "points": 105,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 105,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-25-3q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-25-3a-0.webp",
+   "ess/s17-25-3a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-서울시립대학교(자연계)수시-4",
+  "univ": "서울시립대학교(자연계) 수시",
+  "n": 4,
+  "season": 17,
+  "head": "[문제 4] (115점)",
+  "points": 115,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 115,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-25-4q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-25-4a-0.webp",
+   "ess/s17-25-4a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-성균관대학교(자연계)모의-1",
+  "univ": "성균관대학교(자연계) 모의",
+  "n": 1,
+  "season": 17,
+  "head": "[문제 1] 다음 <제시문 1> ～ <제시문 3>을 읽고 [문제 1-ⅰ]",
+  "points": null,
+  "minutes": 33,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-26-1q-0.webp",
+   "ess/s17-26-1q-1.webp"
+  ],
+  "aimg": [
+   "ess/s17-26-1a-0.webp",
+   "ess/s17-26-1a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-성균관대학교(자연계)모의-2",
+  "univ": "성균관대학교(자연계) 모의",
+  "n": 2,
+  "season": 17,
+  "head": "[문제 2] 다음 <제시문 1>",
+  "points": null,
+  "minutes": 33,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-26-2q-0.webp",
+   "ess/s17-26-2q-1.webp"
+  ],
+  "aimg": [
+   "ess/s17-26-2a-0.webp",
+   "ess/s17-26-2a-1.webp",
+   "ess/s17-26-2a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-성균관대학교(자연계)모의-3",
+  "univ": "성균관대학교(자연계) 모의",
+  "n": 3,
+  "season": 17,
+  "head": "[문제 3] 다음 <제시문 1>과 <제시문 2>를 읽고 [문제 3-ⅰ]",
+  "points": null,
+  "minutes": 33,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-26-3q-0.webp",
+   "ess/s17-26-3q-1.webp"
+  ],
+  "aimg": [
+   "ess/s17-26-3a-0.webp",
+   "ess/s17-26-3a-1.webp",
+   "ess/s17-26-3a-2.webp",
+   "ess/s17-26-3a-3.webp",
+   "ess/s17-26-3a-4.webp"
+  ]
+ },
+ {
+  "id": "S17-성균관대학교(수리형1)수시-1",
+  "univ": "성균관대학교(수리형 1) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[문제 1] 다음 <제시문 1> ～ <제시문 3>을 읽고 [문제1-ⅰ] ～[문제1-ⅲ]을",
+  "points": null,
+  "minutes": 33,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-27-1q-0.webp",
+   "ess/s17-27-1q-1.webp"
+  ],
+  "aimg": [
+   "ess/s17-27-1a-0.webp",
+   "ess/s17-27-1a-1.webp",
+   "ess/s17-27-1a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-성균관대학교(수리형1)수시-2",
+  "univ": "성균관대학교(수리형 1) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[문제 2] 다음 <제시문 1>과 <제시문 2>를 읽고 [문제2-ⅰ] ～[문제2-ⅳ]를",
+  "points": null,
+  "minutes": 33,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-27-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-27-2a-0.webp",
+   "ess/s17-27-2a-1.webp",
+   "ess/s17-27-2a-2.webp",
+   "ess/s17-27-2a-3.webp"
+  ]
+ },
+ {
+  "id": "S17-성균관대학교(수리형1)수시-3",
+  "univ": "성균관대학교(수리형 1) 수시",
+  "n": 3,
+  "season": 17,
+  "head": "[문제 3] 다음 <제시문 1> ～ <제시문 3>을 읽고 [문제3-ⅰ] ～[문제3-ⅲ]을",
+  "points": null,
+  "minutes": 33,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-27-3q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-27-3a-0.webp",
+   "ess/s17-27-3a-1.webp",
+   "ess/s17-27-3a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-성균관대학교(수리형2)수시-1",
+  "univ": "성균관대학교(수리형 2) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[문제 1] 다음 <제시문 1> ～ <제시문 2>를 읽고 [문제1-ⅰ] ～[문제1-ⅲ]을",
+  "points": null,
+  "minutes": 33,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-28-1q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-28-1a-0.webp",
+   "ess/s17-28-1a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-성균관대학교(수리형2)수시-2",
+  "univ": "성균관대학교(수리형 2) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[문제 2] 다음 <제시문 1>과 <제시문 2>를 읽고 [문제2-ⅰ] ～[문제2-ⅳ]를",
+  "points": null,
+  "minutes": 33,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-28-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-28-2a-0.webp",
+   "ess/s17-28-2a-1.webp",
+   "ess/s17-28-2a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-성균관대학교(수리형2)수시-3",
+  "univ": "성균관대학교(수리형 2) 수시",
+  "n": 3,
+  "season": 17,
+  "head": "[문제 3] 다음 <제시문 1> ～ <제시문 3>을 읽고 [문제3-ⅰ] ～[문제3-ⅲ]을",
+  "points": null,
+  "minutes": 33,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-28-3q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-28-3a-0.webp",
+   "ess/s17-28-3a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-성균관대학교(수리형3)수시-1",
+  "univ": "성균관대학교(수리형 3) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[문제 1] 다음 <제시문>을 읽고 [문제1-ⅰ] ～[문제1-ⅳ]을 문항별로 풀이와",
+  "points": null,
+  "minutes": 33,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-29-1q-0.webp",
+   "ess/s17-29-1q-1.webp"
+  ],
+  "aimg": [
+   "ess/s17-29-1a-0.webp",
+   "ess/s17-29-1a-1.webp",
+   "ess/s17-29-1a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-성균관대학교(수리형3)수시-2",
+  "univ": "성균관대학교(수리형 3) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[문제 2] 다음 <제시문>을 읽고 [문제2-ⅰ] ～[문제2-ⅲ]를 문항별로 풀이와",
+  "points": null,
+  "minutes": 33,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-29-2q-0.webp",
+   "ess/s17-29-2q-1.webp"
+  ],
+  "aimg": [
+   "ess/s17-29-2a-0.webp",
+   "ess/s17-29-2a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-성균관대학교(수리형3)수시-3",
+  "univ": "성균관대학교(수리형 3) 수시",
+  "n": 3,
+  "season": 17,
+  "head": "[문제 3] 다음 <제시문 1> ～ <제시문 3>을 읽고 [문제3-ⅰ] ～[문제3-ⅲ]을",
+  "points": null,
+  "minutes": 33,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-29-3q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-29-3a-0.webp",
+   "ess/s17-29-3a-1.webp",
+   "ess/s17-29-3a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-연세대학교(자연계)모의-1",
+  "univ": "연세대학교(자연계) 모의",
+  "n": 1,
+  "season": 17,
+  "head": "[문제 1, 단답형]",
+  "points": null,
+  "minutes": 18,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-30-1q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-30-1a-0.webp",
+   "ess/s17-30-1a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-연세대학교(자연계)모의-3",
+  "univ": "연세대학교(자연계) 모의",
+  "n": 3,
+  "season": 17,
+  "head": "[문제 3, 단답형]",
+  "points": null,
+  "minutes": 18,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-30-3q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-30-3a-0.webp",
+   "ess/s17-30-3a-1.webp",
+   "ess/s17-30-3a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-연세대학교(자연계)모의-4",
+  "univ": "연세대학교(자연계) 모의",
+  "n": 4,
+  "season": 17,
+  "head": "[문제 4, 단답형]",
+  "points": null,
+  "minutes": 18,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-30-4q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-30-4a-0.webp"
+  ]
+ },
+ {
+  "id": "S17-연세대학교(자연계)모의-5",
+  "univ": "연세대학교(자연계) 모의",
+  "n": 5,
+  "season": 17,
+  "head": "[문제 5, 서술형]",
+  "points": null,
+  "minutes": 18,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-30-5q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-30-5a-0.webp",
+   "ess/s17-30-5a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-연세대학교(자연계)모의-6",
+  "univ": "연세대학교(자연계) 모의",
+  "n": 6,
+  "season": 17,
+  "head": "[문제 6, 서술형]",
+  "points": null,
+  "minutes": 18,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-30-6q-0.webp",
+   "ess/s17-30-6q-1.webp"
+  ],
+  "aimg": [
+   "ess/s17-30-6a-0.webp",
+   "ess/s17-30-6a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-연세대학교(자연계)수시-1",
+  "univ": "연세대학교(자연계) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[문제 1, 단답형]",
+  "points": null,
+  "minutes": 15,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-31-1q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-31-1a-0.webp",
+   "ess/s17-31-1a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-연세대학교(자연계)수시-2",
+  "univ": "연세대학교(자연계) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[문제 2, 단답형]",
+  "points": null,
+  "minutes": 15,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-31-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-31-2a-0.webp"
+  ]
+ },
+ {
+  "id": "S17-연세대학교(자연계)수시-3",
+  "univ": "연세대학교(자연계) 수시",
+  "n": 3,
+  "season": 17,
+  "head": "[문제 3, 단답형]",
+  "points": null,
+  "minutes": 15,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-31-3q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-31-3a-0.webp",
+   "ess/s17-31-3a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-연세대학교(자연계)수시-4",
+  "univ": "연세대학교(자연계) 수시",
+  "n": 4,
+  "season": 17,
+  "head": "[문제 4, 단답형]",
+  "points": null,
+  "minutes": 15,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-31-4q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-31-4a-0.webp",
+   "ess/s17-31-4a-1.webp",
+   "ess/s17-31-4a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-연세대학교(자연계)수시-5",
+  "univ": "연세대학교(자연계) 수시",
+  "n": 5,
+  "season": 17,
+  "head": "[문제 5, 서술형]",
+  "points": null,
+  "minutes": 15,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-31-5q-0.webp",
+   "ess/s17-31-5q-1.webp"
+  ],
+  "aimg": [
+   "ess/s17-31-5a-0.webp",
+   "ess/s17-31-5a-1.webp",
+   "ess/s17-31-5a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-연세대학교(자연계)수시-6",
+  "univ": "연세대학교(자연계) 수시",
+  "n": 6,
+  "season": 17,
+  "head": "[문제 6, 서술형]",
+  "points": null,
+  "minutes": 15,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-31-6q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-31-6a-0.webp",
+   "ess/s17-31-6a-1.webp",
+   "ess/s17-31-6a-2.webp",
+   "ess/s17-31-6a-3.webp"
+  ]
+ },
+ {
+  "id": "S17-이화여자대학교(자연계열Ⅰ)수시-1",
+  "univ": "이화여자대학교(자연계열Ⅰ) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[문제 1] 모든 실수  에서 미분가능한 함수     에 대하여  ′   가 연속이다. 함수",
+  "points": null,
+  "minutes": 33,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-32-1q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-32-1a-0.webp"
+  ]
+ },
+ {
+  "id": "S17-이화여자대학교(자연계열Ⅰ)수시-2",
+  "univ": "이화여자대학교(자연계열Ⅰ) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[문제 2] 구간",
+  "points": null,
+  "minutes": 33,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-32-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-32-2a-0.webp",
+   "ess/s17-32-2a-1.webp",
+   "ess/s17-32-2a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-이화여자대학교(자연계열Ⅱ)수시-1",
+  "univ": "이화여자대학교(자연계열Ⅱ) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[문제 1] 양의 실수",
+  "points": null,
+  "minutes": 33,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-33-1q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-33-1a-0.webp",
+   "ess/s17-33-1a-1.webp",
+   "ess/s17-33-1a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-이화여자대학교(자연계열Ⅱ)수시-2",
+  "univ": "이화여자대학교(자연계열Ⅱ) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[문제 2] 구간",
+  "points": null,
+  "minutes": 33,
+  "info": {
+   "time": "100분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-33-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-33-2a-0.webp",
+   "ess/s17-33-2a-1.webp",
+   "ess/s17-33-2a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-인하대학교(의예과)수시-1",
+  "univ": "인하대학교(의예과) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[문제 1] 다음 제시문을 읽고 물음에 답하시오. (30점)",
+  "points": 30,
+  "minutes": 40,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 30,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-36-1q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-36-1a-0.webp",
+   "ess/s17-36-1a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-인하대학교(의예과)수시-2",
+  "univ": "인하대학교(의예과) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[문제 2] 다음 제시문을 읽고 물음에 답하시오. (35점)",
+  "points": 35,
+  "minutes": 40,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 35,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-36-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-36-2a-0.webp",
+   "ess/s17-36-2a-1.webp",
+   "ess/s17-36-2a-2.webp",
+   "ess/s17-36-2a-3.webp"
+  ]
+ },
+ {
+  "id": "S17-중앙대학교(자연계열)모의-1",
+  "univ": "중앙대학교(자연계열) 모의",
+  "n": 1,
+  "season": 17,
+  "head": "[문제 1] 주머니 A에는 1부터 3까지의 자연수가 각각 하나씩 적힌 3장의 카드",
+  "points": null,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-37-1q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-37-1a-0.webp",
+   "ess/s17-37-1a-1.webp",
+   "ess/s17-37-1a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-중앙대학교(자연계열)모의-2",
+  "univ": "중앙대학교(자연계열) 모의",
+  "n": 2,
+  "season": 17,
+  "head": "[문제 2] 다음을 읽고 문제에 답하시오.",
+  "points": null,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-37-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-37-2a-0.webp",
+   "ess/s17-37-2a-1.webp",
+   "ess/s17-37-2a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-중앙대학교(자연계열)모의-3",
+  "univ": "중앙대학교(자연계열) 모의",
+  "n": 3,
+  "season": 17,
+  "head": "[문제 3] 다음을 읽고 문제에 답하시오.",
+  "points": null,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-37-3q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-37-3a-0.webp",
+   "ess/s17-37-3a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-중앙대학교(자연계열)모의-4",
+  "univ": "중앙대학교(자연계열) 모의",
+  "n": 4,
+  "season": 17,
+  "head": "[문제 4] 다음을 읽고 문제에 답하시오.",
+  "points": null,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-37-4q-0.webp",
+   "ess/s17-37-4q-1.webp"
+  ],
+  "aimg": [
+   "ess/s17-37-4a-0.webp",
+   "ess/s17-37-4a-1.webp",
+   "ess/s17-37-4a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-중앙대학교(자연계열Ⅰ)수시-1",
+  "univ": "중앙대학교(자연계열Ⅰ) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[문제 1] 다음 규칙에 따라 점수를 얻는 시행을 한다. 풀이와 함께 물음에 답하시오.",
+  "points": null,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-38-1q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-38-1a-0.webp",
+   "ess/s17-38-1a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-중앙대학교(자연계열Ⅰ)수시-2",
+  "univ": "중앙대학교(자연계열Ⅰ) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[문제 2] 다음을 읽고 문항별로 풀이와 함께 답하시오",
+  "points": null,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-38-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-38-2a-0.webp",
+   "ess/s17-38-2a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-중앙대학교(자연계열Ⅰ)수시-3",
+  "univ": "중앙대학교(자연계열Ⅰ) 수시",
+  "n": 3,
+  "season": 17,
+  "head": "[문제 3] 다음을 읽고 문항별로 풀이와 함께 답하시오.",
+  "points": null,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-38-3q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-38-3a-0.webp",
+   "ess/s17-38-3a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-중앙대학교(자연계열Ⅰ)수시-4",
+  "univ": "중앙대학교(자연계열Ⅰ) 수시",
+  "n": 4,
+  "season": 17,
+  "head": "[문제 4] 다음을 읽고 문항별로 풀이와 함께 답하시오.",
+  "points": null,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-38-4q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-38-4a-0.webp",
+   "ess/s17-38-4a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-중앙대학교(자연계열Ⅱ)수시-1",
+  "univ": "중앙대학교(자연계열Ⅱ) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[문제 1] 다음 규칙에 따라 상금을 받는 시행을 한다. 풀이와 함께 물음에 답하시오.",
+  "points": null,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-39-1q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-39-1a-0.webp",
+   "ess/s17-39-1a-1.webp",
+   "ess/s17-39-1a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-중앙대학교(자연계열Ⅱ)수시-2",
+  "univ": "중앙대학교(자연계열Ⅱ) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[문제 2] 다음을 읽고 문항별로 풀이와 함께 답하시오",
+  "points": null,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-39-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-39-2a-0.webp",
+   "ess/s17-39-2a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-중앙대학교(자연계열Ⅱ)수시-3",
+  "univ": "중앙대학교(자연계열Ⅱ) 수시",
+  "n": 3,
+  "season": 17,
+  "head": "[문제 3] 다음을 읽고 문항별로 풀이와 함께 답하시오.",
+  "points": null,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-39-3q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-39-3a-0.webp",
+   "ess/s17-39-3a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-중앙대학교(자연계열Ⅱ)수시-4",
+  "univ": "중앙대학교(자연계열Ⅱ) 수시",
+  "n": 4,
+  "season": 17,
+  "head": "[문제 4] 다음을 읽고 문항별로 풀이와 함께 답하시오.",
+  "points": null,
+  "minutes": 30,
+  "info": {
+   "time": "120분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-39-4q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-39-4a-0.webp",
+   "ess/s17-39-4a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-한양대학교(자연계열)모의-1",
+  "univ": "한양대학교(자연계열) 모의",
+  "n": 1,
+  "season": 17,
+  "head": "[문제 1] 다음 물음에 답하시오. (50점)",
+  "points": 50,
+  "minutes": 45,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 50,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-40-1q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-40-1a-0.webp",
+   "ess/s17-40-1a-1.webp",
+   "ess/s17-40-1a-2.webp",
+   "ess/s17-40-1a-3.webp"
+  ]
+ },
+ {
+  "id": "S17-한양대학교(자연계열)모의-2",
+  "univ": "한양대학교(자연계열) 모의",
+  "n": 2,
+  "season": 17,
+  "head": "[문제 2] 다음 물음에 답하시오. (50점)",
+  "points": 50,
+  "minutes": 45,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 50,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-40-2q-0.webp",
+   "ess/s17-40-2q-1.webp"
+  ],
+  "aimg": [
+   "ess/s17-40-2a-0.webp",
+   "ess/s17-40-2a-1.webp",
+   "ess/s17-40-2a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-한양대학교(오전)수시-1",
+  "univ": "한양대학교(오전) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[문항 1] 다음 제시문을 읽고 물음에 답하시오. (50점)",
+  "points": 50,
+  "minutes": 45,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 50,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-41-1q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-41-1a-0.webp",
+   "ess/s17-41-1a-1.webp",
+   "ess/s17-41-1a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-한양대학교(오전)수시-2",
+  "univ": "한양대학교(오전) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[문항 2] 다음 제시문을 읽고 물음에 답하시오. (50점)",
+  "points": 50,
+  "minutes": 45,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 50,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-41-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-41-2a-0.webp",
+   "ess/s17-41-2a-1.webp",
+   "ess/s17-41-2a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-한양대학교(오후1)수시-1",
+  "univ": "한양대학교(오후1) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[문항 1] 다음 물음에 답하시오. (50점)",
+  "points": 50,
+  "minutes": 45,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 50,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-42-1q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-42-1a-0.webp",
+   "ess/s17-42-1a-1.webp",
+   "ess/s17-42-1a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-한양대학교(오후1)수시-2",
+  "univ": "한양대학교(오후1) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[문항 2] 다음 물음에 답하시오. (50점)",
+  "points": 50,
+  "minutes": 45,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 50,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-42-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-42-2a-0.webp",
+   "ess/s17-42-2a-1.webp"
+  ]
+ },
+ {
+  "id": "S17-한양대학교(오후2)수시-1",
+  "univ": "한양대학교(오후2) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "[문항 1] 다음 물음에 답하시오. (50점)",
+  "points": 50,
+  "minutes": 45,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 50,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-43-1q-0.webp",
+   "ess/s17-43-1q-1.webp"
+  ],
+  "aimg": [
+   "ess/s17-43-1a-0.webp",
+   "ess/s17-43-1a-1.webp",
+   "ess/s17-43-1a-2.webp"
+  ]
+ },
+ {
+  "id": "S17-한양대학교(오후2)수시-2",
+  "univ": "한양대학교(오후2) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "[문항 2] 다음 제시문을 읽고 물음에 답하시오. (50점)",
+  "points": 50,
+  "minutes": 45,
+  "info": {
+   "time": "90분"
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": 50,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-43-2q-0.webp"
+  ],
+  "aimg": [
+   "ess/s17-43-2a-0.webp",
+   "ess/s17-43-2a-1.webp",
+   "ess/s17-43-2a-2.webp",
+   "ess/s17-43-2a-3.webp",
+   "ess/s17-43-2a-4.webp",
+   "ess/s17-43-2a-5.webp",
+   "ess/s17-43-2a-6.webp"
+  ]
+ },
+ {
+  "id": "S17-서울대학교(일반전형)수시-1",
+  "univ": "서울대학교(일반전형) 수시",
+  "n": 1,
+  "season": 17,
+  "head": "문제 1.",
+  "points": null,
+  "minutes": 30,
+  "info": {
+   "time": ""
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-44-1q-0.webp",
+   "ess/s17-44-1q-1.webp"
+  ],
+  "aimg": [
+   "ess/s17-44-1a-0.webp",
+   "ess/s17-44-1a-1.webp",
+   "ess/s17-44-1a-2.webp",
+   "ess/s17-44-1a-3.webp",
+   "ess/s17-44-1a-4.webp",
+   "ess/s17-44-1a-5.webp"
+  ]
+ },
+ {
+  "id": "S17-서울대학교(일반전형)수시-2",
+  "univ": "서울대학교(일반전형) 수시",
+  "n": 2,
+  "season": 17,
+  "head": "문제 2.",
+  "points": null,
+  "minutes": 30,
+  "info": {
+   "time": ""
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-44-2q-0.webp",
+   "ess/s17-44-2q-1.webp",
+   "ess/s17-44-2q-2.webp"
+  ],
+  "aimg": [
+   "ess/s17-44-2a-0.webp",
+   "ess/s17-44-2a-1.webp",
+   "ess/s17-44-2a-2.webp",
+   "ess/s17-44-2a-3.webp",
+   "ess/s17-44-2a-4.webp",
+   "ess/s17-44-2a-5.webp",
+   "ess/s17-44-2a-6.webp",
+   "ess/s17-44-2a-7.webp",
+   "ess/s17-44-2a-8.webp"
+  ]
+ },
+ {
+  "id": "S17-서울대학교(일반전형)수시-3",
+  "univ": "서울대학교(일반전형) 수시",
+  "n": 3,
+  "season": 17,
+  "head": "문제 3.",
+  "points": null,
+  "minutes": 30,
+  "info": {
+   "time": ""
+  },
+  "pre": [],
+  "passage": [],
+  "subs": [
+   {
+    "k": "1",
+    "label": "[답안]",
+    "text": [],
+    "points": null,
+    "answer": [],
+    "rubric": []
+   }
+  ],
+  "answer": [],
+  "rubric": [],
+  "qimg": [
+   "ess/s17-44-3q-0.webp",
+   "ess/s17-44-3q-1.webp"
+  ],
+  "aimg": [
+   "ess/s17-44-3a-0.webp",
+   "ess/s17-44-3a-1.webp",
+   "ess/s17-44-3a-2.webp"
+  ]
+ }
+]

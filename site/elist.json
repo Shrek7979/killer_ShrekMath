@@ -9,8 +9,14 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "함수의 극한과 연속",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
+   {
+    "t": "p",
+    "s": "2026 수리논술 나침반 ⅩⅧ"
+   },
    {
     "t": "p",
     "s": "㈀ 함수 $f(x)$ , $g(x)$ 는 다음과 같다."
@@ -22,10 +28,6 @@
    {
     "t": "p",
     "s": "㈏ $g(x)=e^{2 x}$"
-   },
-   {
-    "t": "p",
-    "s": "㈁ 제시문 ㈀의 함수 $f(x)$ , $g(x)$ 에 대하여 실수 $a$ , $b$ 는 다음 조건을 만족시킨다."
    }
   ]
  },
@@ -39,6 +41,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "함수의 극한과 연속",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -69,6 +73,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "함수의 극한과 연속",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -99,6 +105,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "인수분해",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -129,6 +137,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "인수분해",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -159,6 +169,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "인수분해",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -189,6 +201,8 @@
   "minutes": 25,
   "nsubs": 1,
   "field": "등차수열",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -219,6 +233,8 @@
   "minutes": 25,
   "nsubs": 1,
   "field": "등차수열",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -249,6 +265,8 @@
   "minutes": 25,
   "nsubs": 1,
   "field": "등차수열",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -279,6 +297,8 @@
   "minutes": 17,
   "nsubs": 1,
   "field": "경우의 수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -309,6 +329,8 @@
   "minutes": 17,
   "nsubs": 1,
   "field": "경우의 수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -339,6 +361,8 @@
   "minutes": 17,
   "nsubs": 1,
   "field": "경우의 수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -369,6 +393,8 @@
   "minutes": 25,
   "nsubs": 1,
   "field": "지수함수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -399,6 +425,8 @@
   "minutes": 25,
   "nsubs": 1,
   "field": "지수함수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -429,6 +457,8 @@
   "minutes": 25,
   "nsubs": 1,
   "field": "지수함수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -459,6 +489,8 @@
   "minutes": 25,
   "nsubs": 1,
   "field": "내분점",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -489,6 +521,8 @@
   "minutes": 25,
   "nsubs": 1,
   "field": "내분점",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -519,6 +553,8 @@
   "minutes": 25,
   "nsubs": 1,
   "field": "수열",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -549,6 +585,8 @@
   "minutes": 25,
   "nsubs": 1,
   "field": "수열",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -579,6 +617,8 @@
   "minutes": 20,
   "nsubs": 3,
   "field": "수열",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -605,6 +645,8 @@
   "minutes": 20,
   "nsubs": 3,
   "field": "수열",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -635,6 +677,8 @@
   "minutes": 20,
   "nsubs": 2,
   "field": "수열",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -653,6 +697,8 @@
   "minutes": 20,
   "nsubs": 2,
   "field": "수열",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -671,6 +717,8 @@
   "minutes": 20,
   "nsubs": 3,
   "field": "역함수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -701,6 +749,8 @@
   "minutes": 20,
   "nsubs": 3,
   "field": "역함수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -731,6 +781,8 @@
   "minutes": 20,
   "nsubs": 2,
   "field": "역함수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -757,6 +809,8 @@
   "minutes": 20,
   "nsubs": 2,
   "field": "역함수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -787,8 +841,27 @@
   "minutes": 33,
   "nsubs": 2,
   "field": "경우의 수",
+  "year": 2026,
+  "img": false,
   "art": "",
-  "snip": []
+  "snip": [
+   {
+    "t": "p",
+    "s": "【문항 1】다음 제시문을 읽고 아래 논제의 풀이 과정과 답을 논리적으로 서술하시오."
+   },
+   {
+    "t": "p",
+    "s": "서로 다른 $n$ 개에서 $r$ 개를 택하는 조합의 수는 $_{n}\\mathrm{C}_{r}=\\frac{n!}{r!\\left(n-r \\right)!}$ (단, $0 \\le r \\le n$ )"
+   },
+   {
+    "t": "p",
+    "s": "네 학생 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ , $\\mathrm{D}$ 를 포함한 $10$ 명의 학생이 연구조, 발표조, 지원조로 한 팀을 구성하여 어느 프로젝트 대회에 참가하려고 한다. 이 $10$ 명의 학생 모두를 연구조에 $4$ 명, 발표조에 $3$ 명, 지원조에 $3$ 명 배정하려고 할 때, 다음 물음에 답하시오."
+   },
+   {
+    "t": "p",
+    "s": "(가) $\\mathrm{A}$ 는 $\\mathrm{B}$ 또는 $\\mathrm{C}$ 와 같은 조에 배정한다."
+   }
+  ]
  },
  {
   "num": 29,
@@ -800,6 +873,8 @@
   "minutes": 33,
   "nsubs": 2,
   "field": "경우의 수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": []
  },
@@ -813,6 +888,8 @@
   "minutes": 33,
   "nsubs": 2,
   "field": "경우의 수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": []
  },
@@ -826,8 +903,27 @@
   "minutes": 33,
   "nsubs": 2,
   "field": "접선의 방정식",
+  "year": 2026,
+  "img": false,
   "art": "",
-  "snip": []
+  "snip": [
+   {
+    "t": "p",
+    "s": "【문항 1】다음 제시문을 읽고 아래 논제의 풀이 과정과 답을 논리적으로 서술하시오."
+   },
+   {
+    "t": "p",
+    "s": "[Ⅰ] 함수 $f \\left(x \\right)$ 가 $x=a$ 에서 미분가능할 때, 곡선 $y=f \\left(x \\right)$ 위의 점 $\\left(a,f \\left(a \\right)\\right)$ 에서의 접선의 방정식은 $y-f \\left(a \\right)=f' \\left(a \\right)\\left(x-a \\right)$"
+   },
+   {
+    "t": "p",
+    "s": "[Ⅱ] 집합 $A$ 의 원소가 유한개일 때, 집합 $A$ 의 원소의 개수를 기호로 $n \\left(A \\right)$ 와 같이 나타낸다."
+   },
+   {
+    "t": "p",
+    "s": "[Ⅲ] 함수 $f \\left(x \\right)$ 가 미분가능하고 $f' \\left(a \\right)=0$ 일 때, $x=a$ 의 좌우에서 $f' \\left(x \\right)$ 의 부호가(ⅰ) 양( $+$ )에서 음( $-$ )으로 바뀌면 $f \\left(x \\right)$ 는 $x=a$ 에서 극대이고 극댓값 $f \\left(a \\right)$ 를 갖는다.(ⅱ) 음( $-$ )에서 양( $+$ )으로 바뀌면 $f \\left(x \\right)$ 는 $x=a$ 에서 극소이고 극솟값 $f \\left(a \\right)$ 를 갖는다."
+   }
+  ]
  },
  {
   "num": 32,
@@ -839,6 +935,8 @@
   "minutes": 33,
   "nsubs": 2,
   "field": "접선의 방정식",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": []
  },
@@ -852,6 +950,8 @@
   "minutes": 33,
   "nsubs": 2,
   "field": "접선의 방정식",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": []
  },
@@ -865,8 +965,27 @@
   "minutes": 50,
   "nsubs": 4,
   "field": "이차함수의 최대",
+  "year": 2026,
+  "img": false,
   "art": "",
-  "snip": []
+  "snip": [
+   {
+    "t": "p",
+    "s": "[제시문]"
+   },
+   {
+    "t": "p",
+    "s": "[가] 코사인법칙"
+   },
+   {
+    "t": "p",
+    "s": "삼각형 $\\mathrm{ABC}$ 에서"
+   },
+   {
+    "t": "p",
+    "s": "$a^2=b^2+c^2-2 b c \\cos A$"
+   }
+  ]
  },
  {
   "num": 35,
@@ -878,8 +997,27 @@
   "minutes": 50,
   "nsubs": 4,
   "field": "정적분",
+  "year": 2026,
+  "img": false,
   "art": "",
-  "snip": []
+  "snip": [
+   {
+    "t": "p",
+    "s": "제시문"
+   },
+   {
+    "t": "p",
+    "s": "[가] 함수 $f(x)$ 가 닫힌구간 $\\left[a,b \\right]$ 에서 연속이고 열린구간 $\\left(a,b \\right)$ 에서 미분가능하 $\\frac{f(b)-f(a)}{b-a}=f'(c)$ 인 $c$ 가 $a$ 와 $b$ 사이에 적어도 하나 존재한다."
+   },
+   {
+    "t": "p",
+    "s": "[나] 닫힌구간 $\\left[a,b \\right]$ 에서 연속인 함수 $f(x)$ 의 한 부정적분을 $F(x)$ 라고 하면"
+   },
+   {
+    "t": "p",
+    "s": "$\\int_{a}^{b}{f(x)dx}=F(b)-F(a)$"
+   }
+  ]
  },
  {
   "num": 36,
@@ -891,8 +1029,27 @@
   "minutes": 50,
   "nsubs": 4,
   "field": "점과 직선 사이의 거리",
+  "year": 2026,
+  "img": false,
   "art": "",
-  "snip": []
+  "snip": [
+   {
+    "t": "p",
+    "s": "[제시문]"
+   },
+   {
+    "t": "p",
+    "s": "[가] 점 $(x_1,y_1)$ 과 직선 $a x+b y+c=0$ 사이의 거리 $d$ 는"
+   },
+   {
+    "t": "p",
+    "s": "$d=\\frac{v e r t a x_1+b y_1+c v e r t}{\\sqrt{a^2+b^2}}$"
+   },
+   {
+    "t": "p",
+    "s": "[나] 함수 $y=f(x)$ 에서 $x$ 의 값이 $a$ 에서 $a+\\delta x$ 까지 변할 때의 평균변화율은"
+   }
+  ]
  },
  {
   "num": 37,
@@ -904,8 +1061,15 @@
   "minutes": 50,
   "nsubs": 4,
   "field": "점과 직선 사이의 거리",
+  "year": 2026,
+  "img": false,
   "art": "",
-  "snip": []
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0<t<\\pi$ 일 때, 점 $\\mathrm{P}(2 \\cos t,2 \\sin t)$ 에 대하여 점 $\\mathrm{P}$ 와 점 $(-1,0)$ 을 지나는 직선과 점 $\\mathrm{P}$ 와 점 $(-2,0)$ 을 지나는 직선이 이루는 예각의 크기를 $\\theta(t)$ 라고 하자. 열린구간 $(0,\\pi)$ 에서 정의된 함수 $f(t)=\\tan \\theta(t)$ 에 대하여 제시문 [가]～[다]를 참고하여 문항 [2-1]～[2-4]에 답하시오. (단, $\\theta(t)$ 의 단위는 라디안)"
+   }
+  ]
  },
  {
   "num": 38,
@@ -917,8 +1081,27 @@
   "minutes": 50,
   "nsubs": 4,
   "field": "삼차방정식",
+  "year": 2026,
+  "img": false,
   "art": "",
-  "snip": []
+  "snip": [
+   {
+    "t": "p",
+    "s": "[제시문]"
+   },
+   {
+    "t": "p",
+    "s": "[가] 함수 $f(x)$ 가 $x=a$ 에서 미분가능할 때, 곡선 $y=f(x)$ 위의 점 $\\mathrm{P}(a,f(a))$ 에서의 접선의 방정식은"
+   },
+   {
+    "t": "p",
+    "s": "$y-f(a)=f'(a)(x-a)$"
+   },
+   {
+    "t": "p",
+    "s": "[나] 급수 $\\sum_n=1^\\infty a_n$ 에서 첫째항부터 제 $n$ 항까지의 합 $S_n$ , 즉 $S_n=a_1+a_2+a_3+\\cdots+a_n=\\sum_k=1^n a_k$ 를 이 급수의 제 $n$ 항까지의 부분합이라고 한다. 급수 $\\sum_n=1^\\infty a_n$ 의 부분합으로 이루어진 수열 $\\left\\{S_n \\right\\}$ 이 일정한 값 $S$ 에 수렴할 때, 즉 $\\lim_n \\to \\infty S_n=\\lim_n \\to \\infty \\sum_k=1^n a_k=S$ 일 때, 이 급수는 $S$ 에 수렴한다고 한다. 이때 $S$ 를 이 급수의 합이라고 하고, $a_1+a_2+a_3+\\cdots+a_n+\\cdots=S$ 또는 $\\sum_n=1^\\infty a_n=S$ 와 같이 나타낸다. 한편, 급수 $\\sum_n=1^\\infty a_n$ 의 부분합으로 이루어진 수열 $\\left\\{S_n \\right\\}$ 이 발산할 때, 이 급수는 발산한다고 한다."
+   }
+  ]
  },
  {
   "num": 39,
@@ -930,8 +1113,15 @@
   "minutes": 50,
   "nsubs": 4,
   "field": "삼차방정식",
+  "year": 2026,
+  "img": false,
   "art": "",
-  "snip": []
+  "snip": [
+   {
+    "t": "p",
+    "s": "제시문 [가]～[라]를 참고하여 다음 물음에 답하시오."
+   }
+  ]
  },
  {
   "num": 40,
@@ -943,6 +1133,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "경우의 수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -969,6 +1161,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "경우의 수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -987,8 +1181,15 @@
   "minutes": 33,
   "nsubs": 4,
   "field": "지수",
+  "year": 2026,
+  "img": false,
   "art": "",
-  "snip": []
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 물음에 답하시오. (40점)"
+   }
+  ]
  },
  {
   "num": 43,
@@ -1000,6 +1201,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "지수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1026,6 +1229,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "지수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1052,6 +1257,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "자연로그",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1082,6 +1289,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "자연로그",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1100,6 +1309,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "자연로그",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1126,6 +1337,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "자연로그",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1144,6 +1357,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "함수의 증가와 감소",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1162,6 +1377,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "함수의 증가와 감소",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1180,6 +1397,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "함수의 증가와 감소",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1198,6 +1417,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "함수의 증가와 감소",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1224,6 +1445,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "등차수열의 합",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1254,6 +1477,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "등차수열의 합",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1276,6 +1501,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "등차수열의 합",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1306,6 +1533,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "직선의 방정식",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1336,6 +1565,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "직선의 방정식",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1366,6 +1597,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "직선의 방정식",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1396,6 +1629,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "직선의 방정식",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1426,6 +1661,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "직선의 방정식",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1456,6 +1693,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "직선의 방정식",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1486,6 +1725,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "함수의 극대와 극소",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1516,6 +1757,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "함수의 극대와 극소",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1542,6 +1785,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "함수의 극대와 극소",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1572,6 +1817,8 @@
   "minutes": 18,
   "nsubs": 1,
   "field": "집합",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1590,6 +1837,8 @@
   "minutes": 18,
   "nsubs": 1,
   "field": "집합",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1612,8 +1861,15 @@
   "minutes": 18,
   "nsubs": 2,
   "field": "집합",
+  "year": 2026,
+  "img": false,
   "art": "",
-  "snip": []
+  "snip": [
+   {
+    "t": "p",
+    "s": "$7$ 개의 함수 $f(x)=a x^2+b x+c$ , $g_1(x)=a x+b$ , $g_2(x)=a x+c$ , $g_3(x)=b x+a$ , $g_4(x)=b x+c$ , $g_5(x)=c x+a$ , $g_6(x)=c x+b$ 가 다음 조건을 만족시키도록 하는 세 실수 $a$ , $b$ , $c$ 에 대하여 아래의 물음에 답하시오."
+   }
+  ]
  },
  {
   "num": 68,
@@ -1625,8 +1881,15 @@
   "minutes": 18,
   "nsubs": 2,
   "field": "집합",
+  "year": 2026,
+  "img": false,
   "art": "",
-  "snip": []
+  "snip": [
+   {
+    "t": "p",
+    "s": "곡선 $C_1:\\frac{x^2}{4}-y^2=1$ ( $x>0$ ) 위를 움직이는 점 $\\ P$ 에 대하여 점 $\\ P$ 를 지나고 반지름의 길이가 $1$ 인 원을 $C_2$ 라 하자. 원 $C_2$ 의 중심이 $\\ Q$ 이고 $C_2$ 위의 점 $\\ P$ 에서의 접선이 곡선 $C_1$ 위의 점 $\\ P$ 에서의 접선과 일치할 때, 아래의 물음에 답하시오. (단, 점 $\\ Q$ 의 $x$ 좌표는 점 $\\ P$ 의 $x$ 좌표보다 작다.)"
+   }
+  ]
  },
  {
   "num": 69,
@@ -1638,8 +1901,15 @@
   "minutes": 18,
   "nsubs": 2,
   "field": "집합",
+  "year": 2026,
+  "img": false,
   "art": "",
-  "snip": []
+  "snip": [
+   {
+    "t": "p",
+    "s": "아래의 물음에 답하시오. (단, $e>2$ 이다.)"
+   }
+  ]
  },
  {
   "num": 70,
@@ -1651,6 +1921,8 @@
   "minutes": 33,
   "nsubs": 1,
   "field": "미분계수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1681,6 +1953,8 @@
   "minutes": 33,
   "nsubs": 1,
   "field": "미분계수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1711,6 +1985,8 @@
   "minutes": 33,
   "nsubs": 1,
   "field": "미분계수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1741,6 +2017,8 @@
   "minutes": 50,
   "nsubs": 1,
   "field": "접선의 방정식",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1771,6 +2049,8 @@
   "minutes": 50,
   "nsubs": 1,
   "field": "접선의 방정식",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1801,6 +2081,8 @@
   "minutes": 33,
   "nsubs": 2,
   "field": "정적분",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1827,6 +2109,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "정적분",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1853,6 +2137,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "정적분",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1883,6 +2169,8 @@
   "minutes": 33,
   "nsubs": 2,
   "field": "함수의 극대와 극소",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1913,6 +2201,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "함수의 극대와 극소",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1943,6 +2233,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "함수의 극대와 극소",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -1973,6 +2265,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "정적분의 치환적분법",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2003,6 +2297,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "정적분의 치환적분법",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2033,6 +2329,8 @@
   "minutes": 33,
   "nsubs": 2,
   "field": "정적분의 치환적분법",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2055,6 +2353,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "원순열",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2085,6 +2385,8 @@
   "minutes": 30,
   "nsubs": 2,
   "field": "원순열",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2115,6 +2417,8 @@
   "minutes": 30,
   "nsubs": 2,
   "field": "원순열",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2145,6 +2449,8 @@
   "minutes": 30,
   "nsubs": 2,
   "field": "원순열",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2175,6 +2481,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "배반사건",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2205,6 +2513,8 @@
   "minutes": 30,
   "nsubs": 2,
   "field": "배반사건",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2235,6 +2545,8 @@
   "minutes": 30,
   "nsubs": 2,
   "field": "배반사건",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2261,6 +2573,8 @@
   "minutes": 30,
   "nsubs": 2,
   "field": "배반사건",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2283,6 +2597,8 @@
   "minutes": 45,
   "nsubs": 1,
   "field": "함수의 극한",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2309,6 +2625,8 @@
   "minutes": 45,
   "nsubs": 1,
   "field": "함수의 극한",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2335,6 +2653,8 @@
   "minutes": 45,
   "nsubs": 1,
   "field": "사인법칙",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2365,6 +2685,8 @@
   "minutes": 45,
   "nsubs": 1,
   "field": "사인법칙",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2395,6 +2717,8 @@
   "minutes": 45,
   "nsubs": 1,
   "field": "지수함수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2425,6 +2749,8 @@
   "minutes": 45,
   "nsubs": 1,
   "field": "지수함수",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2455,6 +2781,8 @@
   "minutes": 45,
   "nsubs": 1,
   "field": "내분점",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2485,6 +2813,8 @@
   "minutes": 45,
   "nsubs": 1,
   "field": "내분점",
+  "year": 2026,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2515,8 +2845,14 @@
   "minutes": 33,
   "nsubs": 1,
   "field": "사인법칙",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
+   {
+    "t": "p",
+    "s": "2024 수리논술 나침반 ⅩⅥ"
+   },
    {
     "t": "p",
     "s": "(ㄱ) 중심이 $\\mathrm{O}$ 이고 반지름이 $2$ 인 원에 내접하는 삼각형 $\\mathrm{ABC}$ 는 다음을 만족시킨다."
@@ -2528,10 +2864,6 @@
    {
     "t": "p",
     "s": "(ㄴ) 제시문 (ㄱ)의 삼각형 $\\mathrm{ABC}$ 에 대하여 점 $\\mathrm{D}$ 가 다음을 만족시킬 때, 삼각형 $\\mathrm{ACD}$ 의 둘레의 길이를 $L$ 이라고 하자."
-   },
-   {
-    "t": "p",
-    "s": "(가) 점 $\\mathrm{D}$ 는 제시문 (ㄱ)의 원 위의 점이다."
    }
   ]
  },
@@ -2545,6 +2877,8 @@
   "minutes": 33,
   "nsubs": 1,
   "field": "사인법칙",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2567,6 +2901,8 @@
   "minutes": 33,
   "nsubs": 1,
   "field": "사인법칙",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2597,6 +2933,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "이차방정식의 판별식",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2627,6 +2965,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "이차방정식의 판별식",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2649,6 +2989,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "이차방정식의 판별식",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2679,6 +3021,8 @@
   "minutes": 22,
   "nsubs": 1,
   "field": "[의예",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2709,6 +3053,8 @@
   "minutes": 22,
   "nsubs": 1,
   "field": "[의예",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2739,6 +3085,8 @@
   "minutes": 22,
   "nsubs": 1,
   "field": "[의예",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2769,6 +3117,8 @@
   "minutes": 22,
   "nsubs": 1,
   "field": "[의예",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2799,23 +3149,25 @@
   "minutes": 25,
   "nsubs": 1,
   "field": "미분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
     "t": "p",
-    "s": "[제시문 2] 제시문을 읽고 문제에 답하시오. (20점)"
+    "s": "[제시문 1] 제시문을 읽고 문제에 답하시오. (15점)"
    },
    {
     "t": "p",
-    "s": "(가) $n$ 개 중에서 서로 같은 것이 각각 $p$ 개, $q$ 개, $\\cdots$ , $r$ 개씩 있을 때, $n$ 개를 일렬로 나열하는 순열의 수는"
+    "s": "(가) $x=a$ 에서 $x=b$ 까지의 곡선 $y=f(x)$ 의 길이 $l$ 은"
    },
    {
     "t": "p",
-    "s": "$\\frac{n!}{p!\\times q!\\times \\cdots \\times r!}$ (단, $p+q+\\cdots+r=n$ )"
+    "s": "$l=\\int_a^b \\sqrt{1+\\left\\{f'(x)\\right\\}^2}dx$"
    },
    {
     "t": "p",
-    "s": "(나) [조건 $1$ ] 또는 [조건 $2$ ]를 만족하도록 문자 $\\ A$ $3$ 개, $\\ B$ $4$ 개, $\\ C$ $3$ 개, $\\ D$ $2$ 개로 이루어진 $12$ 개의 문자 $\\ A$ , $\\ A$ , $\\ A$ , $\\ B$ , $\\ B$ , $\\ B$ , $\\ B$ , $\\ C$ , $\\ C$ , $\\ C$ , $\\ D$ , $\\ D$ 를 왼쪽부터 일렬로 나열하자."
+    "s": "(나) 그림에서 $S$ 는 중심이 점 $\\left(0,\\frac{\\sqrt{13}}{3}\\right)$ 이고 반지름이 $1$ 인 원이다. 원점에서 바라볼 때 점 $\\ A$ , $\\ B$ 는 원 $S$ 에 가려져서 보이지 않고 점 $\\ C$ , $\\ D$ 는 보인다."
    }
   ]
  },
@@ -2829,6 +3181,8 @@
   "minutes": 25,
   "nsubs": 1,
   "field": "미분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2859,6 +3213,8 @@
   "minutes": 25,
   "nsubs": 1,
   "field": "미분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2889,23 +3245,25 @@
   "minutes": 25,
   "nsubs": 1,
   "field": "중복조합",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
     "t": "p",
-    "s": "[제시문 2] 제시문을 읽고 문제에 답하시오. (20점)"
+    "s": "[제시문 1] 제시문을 읽고 문제에 답하시오. (15점)"
    },
    {
     "t": "p",
-    "s": "(가) $n$ 개 중에서 서로 같은 것이 각각 $p$ 개, $q$ 개, $\\cdots$ , $r$ 개씩 있을 때, $n$ 개를 일렬로 나열하는 순열의 수는"
+    "s": "(가) 함수 $f(x)$ 가 $x=a$ 에서 극값을 갖고 $a$ 를 포함하는 어떤 열린구간에서 미분가능하면 $f'(a)＝0$ 이 성립한다."
    },
    {
     "t": "p",
-    "s": "$\\frac{n!}{p!\\times q!\\times \\cdots \\times r!}$ (단, $p+q+\\cdots+r=n$ )"
+    "s": "(나) 그림에서 색칠된 도형 $R$ 는 제 $1$ 사분면에 있고 다음 곡선들로 둘러싸여 있다."
    },
    {
     "t": "p",
-    "s": "(나) [조건 $1$ ] 또는 [조건 $2$ ]를 만족하도록 문자 $\\ A$ $3$ 개, $\\ B$ $5$ 개, $\\ C$ $3$ 개로 이루어진 $11$ 개의 문자 $\\ A$ , $\\ A$ , $\\ A$ , $\\ B$ , $\\ B$ , $\\ B$ , $\\ B$ , $\\ B$ , $\\ C$ , $\\ C$ , $\\ C$ 를 왼쪽부터 일렬로 나열하자."
+    "s": "$x=t$ , $x^2+y^2=1$ , $(x-t)^2+y^2=(1-t)^2$"
    }
   ]
  },
@@ -2919,6 +3277,8 @@
   "minutes": 25,
   "nsubs": 1,
   "field": "중복조합",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2949,6 +3309,8 @@
   "minutes": 25,
   "nsubs": 1,
   "field": "중복조합",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -2979,6 +3341,8 @@
   "minutes": 25,
   "nsubs": 1,
   "field": "중복조합",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3009,6 +3373,8 @@
   "minutes": 100,
   "nsubs": 1,
   "field": "내분점",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3039,6 +3405,8 @@
   "minutes": 100,
   "nsubs": 1,
   "field": "일대일함수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3069,19 +3437,25 @@
   "minutes": 40,
   "nsubs": 1,
   "field": "조건부확률",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
     "t": "p",
-    "s": "상자 안에 총 $60$ 개의 공이 들어있다. 그 중 $n$ ( $1 \\le n<60$ )개의 공은 흰색이고 나머지 공은 모두 검은색이다. 경희는 상자 안에 있는 공을 하나 임의로 꺼내어 색을 확인하고 다시 상자에 공을 집어넣는 것을 $3$ 번 반복한다. 경희는 흰색 공을 꺼낼 때마다 $100$ 원을 얻고, 검은색 공을 꺼낼 때마다 $100$ 원을 잃는다. 경희는 공을 꺼내기 전에 $300$ 원을 가지고 있다고 한다."
+    "s": "제시문 [가]～[사]를 읽고 다음 질문에 답하시오."
    },
    {
     "t": "p",
-    "s": "(1) $3$ 번째 공을 꺼내고 난 후, 경희가 $400$ 원을 가지고 있을 사건을 $A$ , $1$ 번째 공을 꺼내고 난 후, 경희가 $400$ 원을 가지고 있을 사건을 $B$ 라고 하자. 조건부 확률 $\\ P(B|A)$ 를 구하고, 그 근거를 논술하시오. (10점)"
+    "s": "[가] 사건 $A$ 가 일어났을 때의 사건 $B$ 의 조건부확률은 $\\ P(B|A)=\\frac{\\ P(A \\cap B)}{\\ P(A)}$ (단, $\\ P(A)>0$ )"
    },
    {
     "t": "p",
-    "s": "(2) $3$ 번째 공을 꺼내고 난 후 경희가 가지고 있는 금액을 $X$ 라고 하자. $X$ 의 기댓값이 $200$ 원일 때, $n$ 의 값을 구하고, 그 근거를 논술하시오. (20점)"
+    "s": "[나] 이산확률변수 $X$ 의 기댓값(평균)은 $\\ E(X)=x_1 p_1+x_2 p_2+x_3 p_3+\\cdots+x_n p_n$"
+   },
+   {
+    "t": "p",
+    "s": "[다] 부정적분 $F'(x)=f(x)$ 일 때, $\\int f(x)dx=F(x)+C$ (단, $C$ 는 적분상수)"
    }
   ]
  },
@@ -3095,6 +3469,8 @@
   "minutes": 40,
   "nsubs": 1,
   "field": "조건부확률",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3117,6 +3493,8 @@
   "minutes": 40,
   "nsubs": 1,
   "field": "조건부확률",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3147,23 +3525,25 @@
   "minutes": 40,
   "nsubs": 1,
   "field": "쌍곡선",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
     "t": "p",
-    "s": "(1) 선분 $\\mathrm{P}_1 Q_1$ 의 수직이등분선이 쌍곡선 $x^2-y^2=b$ 와 접한다고 한다. 이때 $b$ 의 값을 구하고, 그 근거를 논술하시오. (12점)"
+    "s": "다음 제시문을 읽고 논제에 답하시오. (100점)"
    },
    {
     "t": "p",
-    "s": "(2) 두 점 $\\mathrm{P}_1$ , $\\mathrm{Q}_1$ 에 대하여 직각삼각형 $\\mathrm{OP}_1 Q_1$ 을 만든다. 선분 $\\mathrm{P}_1 Q_1$ 의 수직이등분선이 $x$ 축, $y$ 축과 만나는 두 점을 각각 $\\mathrm{P}_2$ , $\\mathrm{Q}_2$ 라 하고 직각삼각형 $\\mathrm{OP}_2 Q_2$ 를 만든다. 선분 $\\mathrm{P}_{2}Q_{2}$ 의 수직이등분선이 $x$ 축, $y$ 축과 만나는 두 점을 각각 $\\mathrm{P}_{3}$ , $\\mathrm{Q}_{3}$ 라 하고 직각삼각형 $\\mathrm{OP}_{3}Q_{3}$ 를 만든다. 선분 $\\mathrm{P}_{3}Q_{3}$ 의 수직이등분선이 $x$ 축, $y$ 축과 만나는 두 점을 각각 $\\mathrm{P}_{4}$ , $\\mathrm{Q}_{4}$ 라 하고 직각삼각형 $\\mathrm{OP}_{4}Q_{4}$ 를 만든다."
+    "s": "(가) 두 직선 $l:y=m x+n$ , $l':y=m' x+n'$ 에 대하여 $l$ 과 $l'$ 이 서로 수직이면"
    },
    {
     "t": "p",
-    "s": "이와 같은 과정을 계속하여 직각삼각형 $\\mathrm{OP}_{5}Q_{5}$ , $\\mathrm{OP}_{6}Q_{6}$ , $\\mathrm{OP}_{7}Q_{7}$ , $\\cdots$ 을 만든다. 이때, 빗변의 중점이 제 $1$ 사분면에 있는 직각삼각형들의 넓이의 합을 $A_1$ , 빗변의 중점이 제 $2$ 사분면에 있는 직각삼각형들의 넓이의 합을 $A_2$ , 빗변의 중점이 제 $3$ 사분면에 있는 직각삼각형들의 넓이의 합을 $A_3$ , 빗변의 중점이 제 $4$ 사분면에 있는 직각삼각형들의 넓이의 합을 $A_4$ 라 하자. 다음 명제의 참, 거짓을 판별하고, 그 근거를 논술하시오. (18점)"
+    "s": "$m m'=-1$ 이다. 거꾸로 $m m'=-1$ 이면 $l$ 과 $l'$ 이 서로 수직이다."
    },
    {
     "t": "p",
-    "s": "명제: $A_1$ 은 $A_2+A_3+A_4$ 보다 크다."
+    "s": "(나) 첫째항이 $a$ ( $a \\ne 0$ )이고 공비가 $r$ 인 등비급수 $\\sum_{n=1}^{\\infty}a r^{n-1}$ 은 $v e r t r v e r t<1$ 일 때 수렴하고 그 합은 $\\frac{a}{1-r}$ 이다."
    }
   ]
  },
@@ -3177,6 +3557,8 @@
   "minutes": 40,
   "nsubs": 1,
   "field": "쌍곡선",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3199,6 +3581,8 @@
   "minutes": 40,
   "nsubs": 1,
   "field": "쌍곡선",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3229,8 +3613,27 @@
   "minutes": 85,
   "nsubs": 2,
   "field": "벡터의 뜻",
+  "year": 2024,
+  "img": false,
   "art": "",
-  "snip": []
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 제시문을 읽고 논제에 답하시오. (60점)"
+   },
+   {
+    "t": "p",
+    "s": "(가) 두 벡터 $\\vec{a}$ , $\\vec{b}$ 의 크기와 방향이 각각 같을 때, 두 벡터 $\\vec{a}$ , $\\vec{b}$ 는 서로 같다고 하며, 이것을 기호로 $\\vec{a}=\\vec{b}$ 와 같이 나타낸다."
+   },
+   {
+    "t": "p",
+    "s": "(나) 두 평면벡터 $\\vec{a}$ , $\\vec{b}$ 가 이루는 각의 크기가 $\\theta$ ( $0^\\circ \\le \\theta \\le 180^\\circ$ )일 때, 두 벡터의 내적"
+   },
+   {
+    "t": "p",
+    "s": "$\\vec{a}\\cdot \\vec{b}$ 를 다음과 같이 정의한다."
+   }
+  ]
  },
  {
   "num": 126,
@@ -3242,6 +3645,8 @@
   "minutes": 20,
   "nsubs": 1,
   "field": "미분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3272,6 +3677,8 @@
   "minutes": 20,
   "nsubs": 1,
   "field": "미분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3302,6 +3709,8 @@
   "minutes": 20,
   "nsubs": 1,
   "field": "미분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3332,6 +3741,8 @@
   "minutes": 20,
   "nsubs": 1,
   "field": "미분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3362,6 +3773,8 @@
   "minutes": 33,
   "nsubs": 2,
   "field": "역함수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3392,6 +3805,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "역함수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3422,6 +3837,8 @@
   "minutes": 33,
   "nsubs": 2,
   "field": "역함수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3452,6 +3869,8 @@
   "minutes": 33,
   "nsubs": 2,
   "field": "미분의 부등식의 활용",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3478,6 +3897,8 @@
   "minutes": 33,
   "nsubs": 2,
   "field": "미분의 부등식의 활용",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3508,6 +3929,8 @@
   "minutes": 50,
   "nsubs": 4,
   "field": "시험시간",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3538,6 +3961,8 @@
   "minutes": 50,
   "nsubs": 4,
   "field": "시험시간",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3568,6 +3993,8 @@
   "minutes": 50,
   "nsubs": 4,
   "field": "시험시간",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3594,6 +4021,8 @@
   "minutes": 50,
   "nsubs": 5,
   "field": "시험시간",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3624,8 +4053,15 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "이차방정식",
+  "year": 2024,
+  "img": false,
   "art": "",
-  "snip": []
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 물음에 답하시오. (34점)"
+   }
+  ]
  },
  {
   "num": 140,
@@ -3637,6 +4073,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "이차방정식",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3659,6 +4097,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "이차방정식",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3689,8 +4129,15 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "도형의 이동",
+  "year": 2024,
+  "img": false,
   "art": "",
-  "snip": []
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 물음에 답하시오. (34점)"
+   }
+  ]
  },
  {
   "num": 143,
@@ -3702,6 +4149,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "도형의 이동",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3728,6 +4177,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "도형의 이동",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3746,6 +4197,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "삼각함수의 정적분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3772,6 +4225,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "삼각함수의 정적분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3798,6 +4253,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "삼각함수의 정적분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3816,6 +4273,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "삼각함수의 정적분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3846,8 +4305,15 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "연속함수의 성질의 활용",
+  "year": 2024,
+  "img": false,
   "art": "",
-  "snip": []
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 곡선 $y=x^{4}-2 x^{2}+1$ 과 $y=-x^{2}+x+2$ 가 만나는 두 점 중 $x$ 좌표가 음수인 점을 $\\mathrm{P}$ , $x$ 좌표가 양수인 점을 $\\mathrm{Q}$ 라 하자. 점 $\\mathrm{A}(0,-1)$ 에 대하여 $k \\le{\\vec{\\mathrm{PQ}}}B U L \\le T{\\vec{\\mathrm{PA}}}<k+1$ 을 만족시키는 정수 $k$ 를 구하여라. (85점)"
+   }
+  ]
  },
  {
   "num": 150,
@@ -3859,6 +4325,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "연속함수의 성질의 활용",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3881,6 +4349,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "연속함수의 성질의 활용",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3903,6 +4373,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "연속함수의 성질의 활용",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3933,6 +4405,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "함수 그래프의 평행이동",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3963,6 +4437,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "함수 그래프의 평행이동",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -3993,6 +4469,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "함수 그래프의 평행이동",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4023,6 +4501,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "함수의 그래프의 개형",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4053,6 +4533,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "함수의 그래프의 개형",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4083,6 +4565,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "함수의 그래프의 개형",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4113,6 +4597,8 @@
   "minutes": 33,
   "nsubs": 4,
   "field": "미분계수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4143,6 +4629,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "미분계수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4173,6 +4661,8 @@
   "minutes": 33,
   "nsubs": 3,
   "field": "미분계수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4203,8 +4693,15 @@
   "minutes": 22,
   "nsubs": 2,
   "field": "함수의 최댓값과 최솟값",
+  "year": 2024,
+  "img": false,
   "art": "",
-  "snip": []
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면에서 오른쪽( $x$ 축 양의 방향) 또는 위쪽( $y$ 쪽 양의 방향)으로만 움직이며 $x$ 좌표와 $y$ 좌표가 모두 음이 아닌 정수로 이루어진 점에서만 방향 전환을 하는 로봇이 있다. 다음 물음에 답하시오."
+   }
+  ]
  },
  {
   "num": 163,
@@ -4216,6 +4713,8 @@
   "minutes": 22,
   "nsubs": 2,
   "field": "함수의 최댓값과 최솟값",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4246,8 +4745,15 @@
   "minutes": 22,
   "nsubs": 2,
   "field": "함수의 최댓값과 최솟값",
+  "year": 2024,
+  "img": false,
   "art": "",
-  "snip": []
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0$ 을 제외하고 $-20$ 부터 $20$ 까지 $40$ 개의 정수가 하나씩 적혀 있는 $40$ 장의카드들을 두 장씩 짝지어 $20$ 쌍을 만들었다. 이 중 임의로 고른 하나의 쌍에서 두 카드에 적힌 숫자의 합을 확률변수 $X$ 라 하자. 다음 물음에 답하시오."
+   }
+  ]
  },
  {
   "num": 165,
@@ -4259,6 +4765,8 @@
   "minutes": 22,
   "nsubs": 2,
   "field": "함수의 최댓값과 최솟값",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4289,6 +4797,8 @@
   "minutes": 33,
   "nsubs": 1,
   "field": "로그함수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4319,6 +4829,8 @@
   "minutes": 33,
   "nsubs": 1,
   "field": "로그함수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4349,6 +4861,8 @@
   "minutes": 33,
   "nsubs": 1,
   "field": "로그함수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4379,6 +4893,8 @@
   "minutes": 33,
   "nsubs": 1,
   "field": "로그함수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4409,6 +4925,8 @@
   "minutes": 33,
   "nsubs": 1,
   "field": "로그함수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4435,6 +4953,8 @@
   "minutes": 33,
   "nsubs": 1,
   "field": "로그함수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4465,6 +4985,8 @@
   "minutes": 40,
   "nsubs": 1,
   "field": "아래로 볼록",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4495,6 +5017,8 @@
   "minutes": 40,
   "nsubs": 1,
   "field": "아래로 볼록",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4525,6 +5049,8 @@
   "minutes": 40,
   "nsubs": 1,
   "field": "아래로 볼록",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4555,6 +5081,8 @@
   "minutes": 40,
   "nsubs": 1,
   "field": "정적분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4585,6 +5113,8 @@
   "minutes": 40,
   "nsubs": 1,
   "field": "정적분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4615,6 +5145,8 @@
   "minutes": 40,
   "nsubs": 1,
   "field": "정적분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4645,6 +5177,8 @@
   "minutes": 40,
   "nsubs": 1,
   "field": "매개변수로 나타낸 함수의 미분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4675,6 +5209,8 @@
   "minutes": 40,
   "nsubs": 1,
   "field": "매개변수로 나타낸 함수의 미분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4705,6 +5241,8 @@
   "minutes": 40,
   "nsubs": 1,
   "field": "매개변수로 나타낸 함수의 미분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4735,6 +5273,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "이산확률변수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4765,6 +5305,8 @@
   "minutes": 30,
   "nsubs": 2,
   "field": "이산확률변수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4791,6 +5333,8 @@
   "minutes": 30,
   "nsubs": 2,
   "field": "이산확률변수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4821,6 +5365,8 @@
   "minutes": 30,
   "nsubs": 2,
   "field": "이산확률변수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4847,6 +5393,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "수학적 확룰",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4877,6 +5425,8 @@
   "minutes": 30,
   "nsubs": 2,
   "field": "수학적 확룰",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4907,6 +5457,8 @@
   "minutes": 30,
   "nsubs": 2,
   "field": "수학적 확룰",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4937,6 +5489,8 @@
   "minutes": 30,
   "nsubs": 2,
   "field": "수학적 확룰",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4967,6 +5521,8 @@
   "minutes": 30,
   "nsubs": 1,
   "field": "내분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -4997,6 +5553,8 @@
   "minutes": 30,
   "nsubs": 2,
   "field": "내분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -5027,6 +5585,8 @@
   "minutes": 30,
   "nsubs": 2,
   "field": "내분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -5053,6 +5613,8 @@
   "minutes": 30,
   "nsubs": 2,
   "field": "내분",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -5079,6 +5641,8 @@
   "minutes": 45,
   "nsubs": 1,
   "field": "부분집합의 개수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -5109,6 +5673,8 @@
   "minutes": 45,
   "nsubs": 1,
   "field": "부분집합의 개수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -5139,6 +5705,8 @@
   "minutes": 45,
   "nsubs": 1,
   "field": "삼각함수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -5169,6 +5737,8 @@
   "minutes": 45,
   "nsubs": 1,
   "field": "삼각함수",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -5199,23 +5769,25 @@
   "minutes": 90,
   "nsubs": 1,
   "field": "같은 것이 있는 순열",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
     "t": "p",
-    "s": "<나> 오른쪽 그림과 같이 평면 $\\alpha$ 와 평면 $\\beta$ 는 직선 $l$ 에서 만난다. 평면 $\\alpha$ 위에 중심이 $\\mathrm{O}$ 이고 반지름의 길이가 $1$ 인 원이 있다. 이 원을 밑면으로 하는 반구와 평면 $\\beta$ 가 만나서 생기는 도형은 반지름의 길이가 $\\frac{1}{2}$ 인 원 $C$ 이다. 원 $C$ 를 밑면으로 하는 반구는 평면 $\\alpha$ 와 한 점 $\\mathrm{H}$ 에서만 만난다."
+    "s": "1. 오른쪽 그림은 크기가 같은 정육면체 $25$ 개를 가로로 $5$ 개, 세로로 $5$ 개씩 쌓아 만든 직육면체이다. 정육면체의 모서리를 따라 꼭짓점 $\\mathrm{P}$ 에서 꼭짓점 $\\mathrm{Q}$ 까지 최단거리로 이동할 때, 색칠된 정육면체의 꼭짓점을 지나지 않고 이동하는 경우의 수를 구하시오."
    },
    {
     "t": "p",
-    "s": "1. 제시문 <가>에서 주어진 각의 크기 $\\theta$ 에 대하여, $\\cos \\theta$ 와 $\\sin \\theta$ 의 값을 구하시오."
+    "s": "2. 주머니 $\\mathrm{A}$ 에는 숫자 $4$ 가 적힌공이 세 개, 숫자 $6$ 이 적힌 공이 두 개, 숫자 $8$ 이 적힌공이 한 개 들어 있고, 주머니 $\\mathrm{B}$ 에는 숫자 $0$ 이 적힌 공이 여섯 개, 숫자 $1$ 이 적힌 공이 네 개 들어 있다. 주머니 $\\mathrm{A}$ 에서 한 개의 공을 임의로 꺼낼 때 공에 적힌 수를 $a$ , 주머니 $\\mathrm{B}$ 에서 한 개의 공을 임의로 꺼낼 때 공에 적힌 수를 $b$ 라 하자. 곡선 $y=(x+7)\\left(x^{2}-a b x+\\frac{a}{2}-6 \\right)$ 이 $x$ 축과 만나는 세 점 중에서 가장 가까운 두 점 사이의 거리를 확률변수 $X$ 라 할 때, $X$ 의 기댓값 $\\mathrm{E}(X)$ 를 구하시오."
    },
    {
     "t": "p",
-    "s": "2. 제시문 <가>에서 주어진 두 점 $\\mathrm{S}$ 와 $\\mathrm{T}$ 에 대하여, 선분 $\\mathrm{ST}$ 의 길이의 최댓값을 구하시오."
+    "s": "3. $0<x<\\frac{\\pi}{2}$ 에서 정의된 함수 $f(x)=\\frac{1}{\\sin^{2}2 x}$ 에 대하여 두 함수 $g(x)$ 와 $h(x)$ 를 $g(x)=\\int_{\\frac{\\pi}{6}}^{x}{f(t)}dt$ , $h(x)=\\int_{\\frac{\\pi}{6}}^{x}{g(t)}dt$ $\\left(0<x<\\frac{\\pi}{2}\\right)$"
    },
    {
     "t": "p",
-    "s": "3. 제시문 <나>에서 주어진 원 $C$ 의 평면 $\\alpha$ 위로의 정사영의 넓이를 구하시오."
+    "s": "라 하자. 극한값 $\\lim_{x \\rightarrow 0+}{\\frac{h(x)+\\left\\{g(x)\\right\\}^{2}}{f(x)}}$ 을 구하시오. (단, $\\lim_{t \\rightarrow 0+}{t^{2}\\ln t=0}$ 이다.)"
    }
   ]
  },
@@ -5229,6 +5801,8 @@
   "minutes": 45,
   "nsubs": 1,
   "field": "같은 것이 있는 순열",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -5259,6 +5833,8 @@
   "minutes": 45,
   "nsubs": 1,
   "field": "같은 것이 있는 순열",
+  "year": 2024,
+  "img": false,
   "art": "",
   "snip": [
    {
@@ -5276,6 +5852,3971 @@
    {
     "t": "p",
     "s": "문제1. 숫자 $1$ , $2$ , $3$ 중에서 중복을 허락하여 다음 조건을 만족시키도록 여섯 개를 선택한 후, 선택한 숫자 여섯 개를 모두 일렬로 나열하는 경우의 수를 구하시오. (2023년 3월 전국연합)"
+   }
+  ]
+ },
+ {
+  "num": 200,
+  "id": "S15-가톨릭대학교(의예약학)수시-1",
+  "univ": "가톨릭대학교(의예․약학) 수시",
+  "n": 1,
+  "title": "문제 1 · 160점",
+  "points": 160,
+  "minutes": 22,
+  "nsubs": 1,
+  "field": "집합",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(ㄱ) 다음 조건을 만족시키는 모든 실수 $k$ 의 집합을 $A$ 라고 하자."
+   },
+   {
+    "t": "p",
+    "s": "모든 실수 $x$ 에 대하여 $\\log_{\\left(\\frac{1}{2}k-5 \\right)}\\left\\{-(k-11)x^2+(k-11)x+2 \\right\\}$ 가 정의된다."
+   },
+   {
+    "t": "p",
+    "s": "(ㄴ) 제시문 (ㄱ)의 집합 $A$ 에 대하여 집합 $B$ 를 다음과 같이 정의한다."
+   },
+   {
+    "t": "p",
+    "s": "$B=\\left\\{(m,n)\\left|\\frac{1}{3}m^2+n \\in A$ , $n>1$ , $m$ 과 $n$ 은 정수 $\\pi \\le{\\\\}\\right\\}$"
+   }
+  ]
+ },
+ {
+  "num": 201,
+  "id": "S15-가톨릭대학교(의예약학)수시-2",
+  "univ": "가톨릭대학교(의예․약학) 수시",
+  "n": 2,
+  "title": "문제 2 · 170점",
+  "points": 170,
+  "minutes": 22,
+  "nsubs": 1,
+  "field": "집합",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(ㄱ) 좌표평면 위의 원 $C_1$ , $C_2$ 는 다음과 같다."
+   },
+   {
+    "t": "p",
+    "s": "$C_1$ : $(x-1)^2+y^2=\\frac{1}{5}$"
+   },
+   {
+    "t": "p",
+    "s": "$C_2$ : $(x+2)^2+(y+3)^2=\\frac{4}{5}$"
+   },
+   {
+    "t": "p",
+    "s": "(ㄴ) 제시문 (ㄱ)의 원 $C_1$ , $C_2$ 에 동시에 접하는 직선 중 기울기가 최대인 직선을 $l$ , 최소인 직선을 $m$ 이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 202,
+  "id": "S15-가톨릭대학교(의예약학)수시-3",
+  "univ": "가톨릭대학교(의예․약학) 수시",
+  "n": 3,
+  "title": "문제 3 · 180점",
+  "points": 180,
+  "minutes": 22,
+  "nsubs": 1,
+  "field": "집합",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(ㄱ) 함수 $f(t)$ 를 다음과 같이 정의한다."
+   },
+   {
+    "t": "p",
+    "s": "$f(t)=\\int_0^t \\left\\{\\pi \\le{\\frac{1}{\\left(1+x^4 \\right)^{\\frac{1}{4}}}-\\frac{x^4}{\\left(1+x^4 \\right)^{\\frac{5}{4}}}}\\right\\} dx$"
+   },
+   {
+    "t": "p",
+    "s": "(ㄴ) 제시문 (ㄱ)의 함수 $f(t)$ 에 대하여 수직선 위를 움직이는 점 $\\ P$ 의 시각 $t$ 에서의 속도 $v(t)$ 는 다음과 같다."
+   },
+   {
+    "t": "p",
+    "s": "$v(t)=3 t^2 \\left\\{f(t)+1 \\right\\}$"
+   }
+  ]
+ },
+ {
+  "num": 203,
+  "id": "S15-가톨릭대학교(의예약학)수시-4",
+  "univ": "가톨릭대학교(의예․약학) 수시",
+  "n": 4,
+  "title": "문제 4 · 190점",
+  "points": 190,
+  "minutes": 22,
+  "nsubs": 1,
+  "field": "집합",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(ㄱ) 수열 $\\left\\{a_n \\right\\}$ 은 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "p",
+    "s": "(가) $a_1=0$"
+   },
+   {
+    "t": "p",
+    "s": "(나) 모든 자연수 $n$ 에 대하여 $a_n<a_n+1$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "(다) 실수 $x$ 가 $a_n<x<a_n+1$ 일 때, 집합 $\\left\\{\\frac{1}{k}\\ln \\frac{k}{x}\\left|1 \\le k \\le 5 n \\pi \\le{\\\\}$ , $k$ 는 자연수 $\\pi \\le{\\\\}\\right\\}$ 의 원소 중 최댓값은 $\\frac{1}{n}\\ln \\frac{n}{x}$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 204,
+  "id": "S15-경희대학교(자연계)모의-1",
+  "univ": "경희대학교(자연계) 모의",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "정적분의 성질",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "제시문 [가]～[라]를 읽고 다음 질문에 답하시오."
+   },
+   {
+    "t": "p",
+    "s": "[가] 함수 $f(x)$ 가 닫힌구간 $[a,b]$ 에서 연속일 때, 곡선 $y=f(x)$ 와 $x$ 축 및 두 직선 $x=a$ , $x=b$ 로 둘러싸인 도형의 넓이 $S$ 는 $S=\\int_a^b \\left|f(x)\\right|dx$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "[나] 함수 $f(x)$ 가 닫힌구간 $[a,b]$ 에서 연속이고 $f(a)\\ne f(b)$ 이면, $f(a)$ 와 $f(b)$ 사이의 임의의 값 $k$ 에 대하여 $f(c)=k$ 인 $c$ 가 열린구간 $(a,b)$ 에 적어도 하나 존재한다."
+   },
+   {
+    "t": "p",
+    "s": "[다] 두 초점 $\\ F(c,0)$ , $\\ F'(-c,0)$ 에서의 거리의 합이 $2 a$ 인 타원의 방정식은 $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ (단, $a>c>0$ , $b^2=a^2-c^2$ )두 초점 $\\ F(0,c)$ , $\\ F'(0,-c)$ 에서의 거리의 합이 $2 b$ 인 타원의 방정식은 $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ (단, $b>c>0$ , $a^2=b^2-c^2$ )"
+   }
+  ]
+ },
+ {
+  "num": 205,
+  "id": "S15-경희대학교(자연계)모의-2",
+  "univ": "경희대학교(자연계) 모의",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "정적분의 성질",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(1) 타원 $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ ( $a>0$ , $b>0$ )이 점 $\\ A$ , $\\ E$ , $\\ C$ , $\\ F$ 를 지날 때, 이 타원의 두 초점의 좌표를 $p$ 의 식으로 나타내고, 그 과정을 논술하시오. (15점)"
+   },
+   {
+    "t": "p",
+    "s": "(2) 타원 $\\frac{x^2}{m^2}+\\frac{y^2}{n^2}=1$ ( $m>0$ , $n>0$ )이 점 $\\ A$ , $\\ M$ , $\\ C$ , $\\ N$ 을 지날 때, (1)의 $b$ 에 대하여 $n<b$ 임을 보이고, 그 근거를 논술하시오. (20점)"
+   }
+  ]
+ },
+ {
+  "num": 206,
+  "id": "S15-경희대학교(자연계)모의-3",
+  "univ": "경희대학교(자연계) 모의",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "정적분의 성질",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(1) $p=\\frac{1}{3}$ , $u=2$ , $d=\\frac{1}{2}$ , $A_0=20$ 이라 하자. 민국은 $3$ 년 후에 금 한 돈을 $3$ 년 동안 변한 금 한 돈의 가격 중에 가장 싼 값으로 구입하기로 경희 금은방과 약속하였다. 민국이 $3$ 년 후에 이 금 한 돈 거래를 통해 얻는 이익의 기댓값을 구하고, 그 근거를 논술하시오.(예를 들어, 금 한 돈의 가격이 $3$ 년 동안 $A_1=10$ , $A_2=20$ , $A_3=40$ 으로 변했다면 민국은 $3$ 년 후 $40$ 만원인 금 한 돈의 가격을 $10$ 만원으로 구입하여 $30$ 만원의 이익을 남긴다.) (15점)"
+   },
+   {
+    "t": "p",
+    "s": "(2) 민국은 $1$ 년 후에 금 한 돈의 가격 $A_1$ 만원이 $A_0$ 만원보다 비싼 경우에는 $A_0$ 만원의 가격으로 금 한 돈을 구입하고, $A_0$ 만원보다 싼 경우에는 금 한 돈을 구입하지 않기로 경희 금은방과 약속하였다. 민국이가 $1$ 년 후에 얻는 이익을 $V_1$ 이라고 하자. $V_0$ 을 $V_1$ 의 기댓값이라고 할 때, 상수 $\\beta$ 가 $A_1$ 의 가격에 상관없이 $V_0+\\beta A_0=V_1+\\beta A_1$ 을 만족한다. $p$ 와 $\\beta$ 를 $u$ 와 $d$ 를 이용하여 나타내고, 그 근거를 논술하시오. (20점)"
+   },
+   {
+    "t": "p",
+    "s": "풀어보기"
+   },
+   {
+    "t": "p",
+    "s": "모든 실수 $x$ 에 대하여 부등식"
+   }
+  ]
+ },
+ {
+  "num": 207,
+  "id": "S15-경희대학교(의약학계)모의-1",
+  "univ": "경희대학교(의․약학계) 모의",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 120,
+  "nsubs": 2,
+  "field": "직선과 평면 사이의 위치 관계",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "Ⅰ. 다음 제시문을 읽고 논제에 답하시오. (60점)"
+   },
+   {
+    "t": "p",
+    "s": "[가] 평면 $\\alpha$ 위에 있는 도형의 넓이를 $S$ , 이 도형의 평면 $\\beta$ 위로의 정사영의 넓이를 $S'$ 이라 할 때, 두 평면 $\\alpha$ 와 $\\beta$ 가 이루는 각의 크기를 $\\theta$ ( $0^\\circ \\le \\theta \\le 90^\\circ$ )라 하면 $S'=S \\cos \\theta$"
+   },
+   {
+    "t": "p",
+    "s": "[나] 등비급수 $\\sum_n=1^\\infty a r^n-1=a+a r+a r^2+\\cdots+a r^n-1+\\cdots$ ( $a \\ne 0$ )은(1) $\\left|r \\right|<1$ 일 때, 수렴하고 그 합은 $\\frac{a}{1}-r$ 이다.(2) $\\left|r \\right|\\ge 1$ 일 때, 발산한다."
+   },
+   {
+    "t": "p",
+    "s": "[다] 미분가능한 두 함수 $f(x)$ 와 $g(x)$ ( $g(x)\\ne 0$ )에 대하여(1) $\\left\\{\\frac{1}{g(x)}\\right\\} \\pi \\le{' \\\\}=-\\frac{g'(x)}{\\left\\{g(x)\\right\\}^2}$ (2) $\\left\\{\\frac{f(x)}{g(x)}\\right\\} \\pi \\le{' \\\\}=\\frac{f'(x)g(x)-f(x)g'(x)}{\\left\\{g(x)\\right\\}^2}$"
+   }
+  ]
+ },
+ {
+  "num": 208,
+  "id": "S15-경희대학교(자연계오전)수시-1",
+  "univ": "경희대학교(자연계 오전) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "접선의 방정식",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "[문항] 다음 제시문을 읽고 논제에 답하시오. (100점)"
+   },
+   {
+    "t": "p",
+    "s": "[가] 곡선 $y=f(x)$ 위의 점 $(a,f(a))$ 에서 접하는 접선의 방정식은"
+   },
+   {
+    "t": "p",
+    "s": "$y-f(a)=f'(a)(x-a)$"
+   },
+   {
+    "t": "p",
+    "s": "[나] 좌표평면 위를 움직이는 점 $\\mathrm{P}$ 의 시각 $t$ 에서의 위치가 $x=f(t),y=g(t)$ 일 때, 시각 $t=a$ 에서 $t=b$ 까지 점 $\\mathrm{P}$ 가 움직인 거리 $s$ 는"
+   }
+  ]
+ },
+ {
+  "num": 209,
+  "id": "S15-경희대학교(자연계오전)수시-2",
+  "univ": "경희대학교(자연계 오전) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "접선의 방정식",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(1) 구간 $\\left(0,\\infty \\right)$ 에서 함수 $y=x+\\frac{1}{x}$ 의 증가와 감소를 표로 나타내시오. 이 결과를 이용하여 상수 $k$ 가 양수일 때 두 함수 $y=f(x)$ 와 $y=g(x)$ 의 그래프가 서로 다른 두 점에서 만남을 보이고, 그 근거를 논술하시오."
+   },
+   {
+    "t": "p",
+    "s": "(단, $\\lim_{x \\rightarrow 0+}\\left(x+\\frac{1}{x}\\right)=\\infty,\\lim_{x \\rightarrow \\infty}\\left(x+\\frac{1}{x}\\right)=\\infty$ ) (18점)"
+   },
+   {
+    "t": "p",
+    "s": "(2) (1)에서 두 교점의 $x$ 좌표를 각각 $\\alpha$ 와 $\\beta$ 라 할 때, $\\left(\\alpha-\\beta \\right)^{2}$ 을 $k$ 에 대한 식으로 나타내고, 그 식을 $S(k)$ 라 하자. 닫힌구간 $[4,10]$ 의 임의의 점 $x$ 에서 $x$ 축에 수직인 평면으로 자른 단면의 넓이가 $6 S(x)$ 인 입체도형의 부피를 구하고, 그 근거를 논술하시오. (15점)"
+   },
+   {
+    "t": "p",
+    "s": "그림과 같이 양수 $k$ 에 대하여 곡선 $y=\\sqrt{\\frac{k x}{2 x^{2}+1}}$ 와 $x$ 축 및 두 직선 $x=1$ , $x=2$ 로 둘러싸인 부분을 밑면으로 하고 $x$ 축에 수직인 평면으로 자른 단면이 모두 정사각형인 입체도형의 부피가 $2 \\ln 3$ 일 때, $k$ 의 값은? (2022년 9월 평가원)"
+   }
+  ]
+ },
+ {
+  "num": 210,
+  "id": "S15-경희대학교(자연계오전)수시-3",
+  "univ": "경희대학교(자연계 오전) 수시",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "접선의 방정식",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "각각 $1,2,\\cdots,n$ 번 조끼를 입은 학생들이 운동장에 모여 있고 아래와 같은 규칙으로 방을 통과하는 게임에 참여한다."
+   },
+   {
+    "t": "p",
+    "s": "(가) $1$ 번 조끼를 입은 학생부터 조끼 번호의 오름차순으로 한 명씩 방 $1$ 로 들어간다."
+   },
+   {
+    "t": "p",
+    "s": "(나) 모든 $i=1,2,\\cdots,n$ 에 대하여 방 $i$ 에 처음으로 도착한 학생은 두 개의 출구 중 하나를 선택한다. 이때 다음 방으로 연결된 출구를 선택하면 이 학생은 다음 방으로 가고, 그렇지 않으면 운동장으로 나온다. 방 $(n+1)$ 에 도착한 모든 학생은 상품을 받고 출구를 통해 운동장으로 나온다. (단, 지나온 길을 되돌아가지는 않는다.)"
+   },
+   {
+    "t": "p",
+    "s": "(다) 먼저 출발한 학생이 운동장으로 나오면, 그 다음 학생은 방 $1$ 로 들어간다. 먼저 출발한 학생이 방 $i$ 의 출구( $i=1,2,\\cdots,n$ )에서 운동장으로 나오면, 그 다음에 출발하는 학생은 방 $1$ 부터 연결된 출구들을 통해 방 $(i+1)$ 로 간다. 먼저 출발한 학생이 방 $(n+1)$ 에서 나오면, 그 다음 학생은 항상 방 $(n+1)$ 까지 간다."
+   }
+  ]
+ },
+ {
+  "num": 211,
+  "id": "S15-경희대학교(자연계오후)수시-1",
+  "univ": "경희대학교(자연계 오후) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "타원의 방정식",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "[문항] 다음 제시문을 읽고 논제에 답하시오. (100점)"
+   },
+   {
+    "t": "p",
+    "s": "[가] 타원 $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ 위의 점 $\\left(x_{1},y_{1}\\right)$ 에서의 접선의 방정식은"
+   },
+   {
+    "t": "p",
+    "s": "$\\frac{x_{1}x}{a^{2}}+\\frac{y_{1}y}{b^{2}}=1$"
+   },
+   {
+    "t": "p",
+    "s": "[나] 함수 $f(x)$ 가 어떤 열린구간에서 미분가능하고, 이 구간에 속하는 모든 $x$ 에서"
+   }
+  ]
+ },
+ {
+  "num": 212,
+  "id": "S15-경희대학교(자연계오후)수시-2",
+  "univ": "경희대학교(자연계 오후) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "타원의 방정식",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(1) 함수 $f(t)$ 를 구하고, 함수 $g(t)={\\begin{cases}2 t&\\,(t<2)\\\\ 12-4 t&\\,(t \\ge 2)\\end{cases}}$ 에 대하여 $\\int_{0}^{3}\\left|f(t)-g(t)\\right|dt$ 의 값을 구하고, 그 근거를 논술하시오. (18점)"
+   },
+   {
+    "t": "p",
+    "s": "(2) 상수 $a$ 에 대하여 곡선 $y=f(t)(1 \\le t \\le 2)$ , 직선 $y=f(a)$ 및 두 직선 $t=1,t=2$ 로 둘러싸인 부분의 넓이를 $S(a)$ 라고 하자. $1<a<2$ 일 때 $S(a)$ 가 최소가 되는 $a$ 의 값을 구하고, 그 근거를 논술하시오. (15점)"
+   },
+   {
+    "t": "p",
+    "s": "$t>2 e$ 인 실수 $t$ 에 대하여 함수 $f \\left(x \\right)=t \\left(\\ln x \\right)^{2}-x^{2}$ 이 $x=k$ 에서 극대일 때, 실수 $k$ 의 값을 $g \\left(t \\right)$ 라 하면 $g \\left(t \\right)$ 는 미분가능한 함수이다. $g \\left(\\alpha \\right)=e^{2}$ 인 실수 $\\alpha$ 에 대하여 $\\alpha \\times \\left\\{g' \\left(\\alpha \\right)\\right\\}^{2}=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오. (단, $p$ 와 $q$ 는 서로소인 자연수이다.) (2021년 6월 평가원)"
+   }
+  ]
+ },
+ {
+  "num": 213,
+  "id": "S15-경희대학교(자연계오후)수시-3",
+  "univ": "경희대학교(자연계 오후) 수시",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "타원의 방정식",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "<그림 1>은 첫 번째 분기점에서 네 갈래로 갈라지고 두 번째 분기점에서 각각 $4,6,4,6$ 갈래로 갈라진 경우의 예이다. <그림 2>는 점선을 따라 이동한 불꽃이 분기점에서 네 갈래 또는 여섯 갈래로 갈라지는 모양을 나타낸 것이다. 점선의 화살표 방향을 따라 이동한 불꽃은 <그림 2>와 같은 각도로만 갈라진다."
+   },
+   {
+    "t": "p",
+    "s": "다음 조건을 만족할 때, 아래 물음에 답하시오."
+   },
+   {
+    "t": "p",
+    "s": "(가) 각 분기점에서 불꽃이 갈라지는 시행은 독립시행이다."
+   },
+   {
+    "t": "p",
+    "s": "(나) 각 분기점에서 불꽃이 네 갈래로 갈라질 확률은 $\\frac{1}{2}$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 214,
+  "id": "S15-경희대학교(의약학계)수시-1",
+  "univ": "경희대학교(의․약학계) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 60,
+  "nsubs": 1,
+  "field": "함수의 미분과 적분",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "[문항] 다음 제시문을 읽고 논제에 답하시오. (60점)"
+   },
+   {
+    "t": "p",
+    "s": "[가] 함수 $f(x)$ 가 어떤 열린구간에서 미분가능하고, 이 구간에 속하는 모든 $x$ 에서"
+   },
+   {
+    "t": "p",
+    "s": "① $f'(x)>0$ 이면 $f(x)$ 는 그 구간에서 증가한다."
+   },
+   {
+    "t": "p",
+    "s": "② $f'(x)<0$ 이면 $f(x)$ 는 그 구간에서 감소한다."
+   }
+  ]
+ },
+ {
+  "num": 215,
+  "id": "S15-경희대학교(의약학계)수시-2",
+  "univ": "경희대학교(의․약학계) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 60,
+  "nsubs": 1,
+  "field": "함수의 미분과 적분",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "<그림 1>은 첫 번째 분기점에서 네 갈래로 갈라지고 두 번째 분기점에서 각각 $4,6,4,6$ 갈래로 갈라진 경우의 예이다. <그림 2>는 점선을 따라 이동한 불꽃이 분기점에서 네 갈래 또는 여섯 갈래로 갈라지는 모양을 나타낸 것이다. 점선의 화살표 방향을 따라 이동한 불꽃은 <그림 2>와 같은 각도로만 갈라진다."
+   },
+   {
+    "t": "p",
+    "s": "다음 조건을 만족할 때, 아래 물음에 답하시오."
+   },
+   {
+    "t": "p",
+    "s": "(가) 각 분기점에서 불꽃이 갈라지는 시행은 독립시행이다."
+   },
+   {
+    "t": "p",
+    "s": "(나) 각 분기점에서 불꽃이 네 갈래로 갈라질 확률은 $\\frac{1}{2}$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 216,
+  "id": "S15-부산대학교(의약학계열)수시-2",
+  "univ": "부산대학교(의․약학계열) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 2,
+  "field": "함수의 극한",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "[공통문항 2] 다음 제시문을 이용하여 아래 논제의 풀이 과정과 답을 논리적으로 서술하시오."
+   },
+   {
+    "t": "p",
+    "s": "(가) 일반적으로 함수 $f(x)$ 가 실수 $a$ 에 대하여 다음 세 조건을 모두 만족시킬 때, 함수 $f(x)$ 는 $x=a$ 에서 연속이라고 한다."
+   },
+   {
+    "t": "p",
+    "s": "(ⅰ) 함수 $f(x)$ 가 $x=a$ 에서 정의되어 있고"
+   },
+   {
+    "t": "p",
+    "s": "(ⅱ) 극한값 $\\lim_{x \\to a}{f(x)}$ 가 존재하며"
+   }
+  ]
+ },
+ {
+  "num": 217,
+  "id": "S15-서강대학교(자연계)모의-1",
+  "univ": "서강대학교(자연계) 모의",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 50,
+  "nsubs": 4,
+  "field": "접선의 방정식",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "[문항] 제시문"
+   },
+   {
+    "t": "p",
+    "s": "[가] 함수 $y=f \\left(x \\right)$ 가 $x=a$ 에서 미분가능할 때, 곡선 $y=f \\left(x \\right)$ 위의 점 $\\mathrm{P}\\left(a,f \\left(a \\right)\\right)$ 에서의 접선의 방정식은"
+   },
+   {
+    "t": "p",
+    "s": "$y-f \\left(a \\right)=f' \\left(a \\right)\\left(x-a \\right)$"
+   },
+   {
+    "t": "p",
+    "s": "[나] 삼각함수의 덧셈정리"
+   }
+  ]
+ },
+ {
+  "num": 218,
+  "id": "S15-서강대학교(자연계1차)수시-1",
+  "univ": "서강대학교(자연계 1차) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 50,
+  "nsubs": 4,
+  "field": "중복조합",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "[제시문]"
+   },
+   {
+    "t": "p",
+    "s": "[가] 중복조합의 수"
+   },
+   {
+    "t": "p",
+    "s": "서로 다른 $n$ 개에서 $r$ 개를 택하는 중복조합의 수는 $_{n}\\mathrm{H}_{r}=_{n+r-1}\\mathrm{C}_{r}$"
+   },
+   {
+    "t": "p",
+    "s": "[나] 이항정리"
+   }
+  ]
+ },
+ {
+  "num": 219,
+  "id": "S15-서강대학교(자연계1차)수시-2",
+  "univ": "서강대학교(자연계 1차) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 50,
+  "nsubs": 4,
+  "field": "중복조합",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": []
+ },
+ {
+  "num": 220,
+  "id": "S15-서강대학교(자연계2차)수시-1",
+  "univ": "서강대학교(자연계 2차) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 50,
+  "nsubs": 4,
+  "field": "직선의 방정식",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "[제시문]"
+   },
+   {
+    "t": "p",
+    "s": "[가] 좌표평면 위의 한 점 $(x_{1},y_{1})$ 과 직선 $a x+b y+c=0$ 사이의 거리는 다음과 같다. $\\frac{\\left|a x_{1}+b y_{1}+c \\right|}{\\sqrt{a^{2}+b^{2}}}$"
+   },
+   {
+    "t": "p",
+    "s": "[나] 반지름의 길이가 $r$ , 중심각의 크기가 $\\theta$ (라디안)인 부채꼴의 호의 길이를 $l$ , 넓이를 $S$ 라고 하면, $l=r \\theta$ , $S=\\frac{1}{2}r^{2}\\theta=\\frac{1}{2}r l$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "[다] $\\lim_{x \\rightarrow 0}{\\frac{\\sin x}{x}=1}$ (단, $x$ 의 단위는 라디안)"
+   }
+  ]
+ },
+ {
+  "num": 221,
+  "id": "S15-서강대학교(자연계2차)수시-2",
+  "univ": "서강대학교(자연계 2차) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 50,
+  "nsubs": 4,
+  "field": "직선의 방정식",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": []
+ },
+ {
+  "num": 222,
+  "id": "S15-서울시립대학교(자연계열)모의-1",
+  "univ": "서울시립대학교(자연계열) 모의",
+  "n": 1,
+  "title": "문제 1 · 85점",
+  "points": 85,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "쌍곡선의 방정식",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "쌍곡선 $\\frac{x^{2}}{9}-\\frac{y^{2}}{16}=1$ 위의 점 $\\mathrm{P}$ 와 이 쌍곡선의 두 초점 $\\mathrm{F}_{1}$ , $\\mathrm{F}_{2}$ 에 대하여 $\\frac{\\overline{P F_{2}}}{\\overline{P F_{1}}}=\\frac{29}{11}$ 일 때, 세 점 $\\mathrm{P}$ , $\\mathrm{F}_{1}$ , $\\mathrm{F}_{2}$ 를 지나는 이차함수의 그래프와 선분 $\\overline{\\mathrm{PF}_{2}}$ 로 둘러싸인 부분의 넓이를 구하여라. (단, 점 $\\mathrm{P}$ 는 제 $1$ 사분면 위의 점이다.)"
+   }
+  ]
+ },
+ {
+  "num": 223,
+  "id": "S15-서울시립대학교(자연계열)모의-2",
+  "univ": "서울시립대학교(자연계열) 모의",
+  "n": 2,
+  "title": "문제 2 · 95점",
+  "points": 95,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "쌍곡선의 방정식",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "어떤 주머니에 흰 공, 빨간 공, 파란 공들이 들어있다. 이 주머니에서 다음의 규칙을 따르는 시행을 한다."
+   },
+   {
+    "t": "p",
+    "s": "주머니에서 임의로 한 개의 공을 꺼내어 그 색을 확인하고 같은 색의 공을 한 개 추가하여 뽑은 공과 함께 주머니에 다시 넣는다."
+   },
+   {
+    "t": "p",
+    "s": "처음에 흰 공 $2$ 개, 빨간 공 $1$ 개, 파란 공 $1$ 개가 들어있는 주머니에 대해, 이 시행을 $7$ 회 반복한 후, 주머니에 들어있는 공이 $11$ 개가 되면 멈춘다. 주머니에 있는 $11$ 개의 공 중에서 $7$ 개가 흰 공, $2$ 개가 빨간 공, $2$ 개가 파란 공인 사건을 $A$ 라 할 때, 다음 물음에 답하여라."
+   },
+   {
+    "t": "p",
+    "s": "(a) 사건 $A$ 가 일어날 확률을 구하여라.(40점)"
+   }
+  ]
+ },
+ {
+  "num": 224,
+  "id": "S15-서울시립대학교(자연계열)모의-3",
+  "univ": "서울시립대학교(자연계열) 모의",
+  "n": 3,
+  "title": "문제 3 · 105점",
+  "points": 105,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "쌍곡선의 방정식",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 전체의 집합에서 미분가능한 두 함수 $f \\left(x \\right)$ 와 $g \\left(x \\right)$ 가 다음 조건을 만족시킬 때, $\\left\\{f \\left(1 \\right)\\right\\}^{2}+\\left\\{g \\left(1 \\right)\\right\\}^{2}$ 의 값을 구하여라."
+   },
+   {
+    "t": "p",
+    "s": "(1) $\\int_{0}^{x}{e^{t}f \\left(t \\right)dt=\\frac{e^{x}\\left\\{f \\left(x \\right)-g \\left(x \\right)\\right\\}+1}{2}}$"
+   },
+   {
+    "t": "p",
+    "s": "(2) $\\int_{0}^{x}{e^{t}g \\left(t \\right)dt=\\frac{e^{x}\\left\\{f \\left(x \\right)+g \\left(x \\right)\\right\\}-1}{2}}$"
+   }
+  ]
+ },
+ {
+  "num": 225,
+  "id": "S15-서울시립대학교(자연계열)모의-4",
+  "univ": "서울시립대학교(자연계열) 모의",
+  "n": 4,
+  "title": "문제 4 · 115점",
+  "points": 115,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "쌍곡선의 방정식",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "그림과 같이 길이가 $2$ 인 선분 $\\mathrm{AB}$ 를 지름으로 하는 반원이 있다. 호 $\\mathrm{AB}$ 위에 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 를 $\\angle P A B=\\theta$ , $\\angle Q B A=3 \\theta$ 가 되도록 잡고, 두 선분 $\\mathrm{AP}$ , $\\mathrm{BQ}$ 의 교점을 $\\mathrm{R}$ 이라 하자. 삼각형 $\\mathrm{PQR}$ 의 내접원의 반지름의 길이를 $r \\left(\\theta \\right)$ 라 할 때, $\\lim_{\\theta \\to 0+}{\\frac{r \\left(\\theta \\right)}{\\theta}}$ 의 값을 구하여라. (단, $0<\\theta<\\frac{\\pi}{8}$ 이다.)"
+   },
+   {
+    "t": "p",
+    "s": "풀어보기"
+   },
+   {
+    "t": "p",
+    "s": "문제1. 그림과 같이 두 점 $\\mathrm{F}\\left(c,0 \\right)$ , $\\mathrm{F}' \\left(-c,0 \\right)$ ( $c>0$ )을 초점으로 하는 쌍곡선 $\\frac{x^{2}}{10}-\\frac{y^{2}}{a^{2}}=1$ 이 있다. 쌍곡선 위의 점 중 제 $2$ 사분면에 있는 점 $\\mathrm{P}$ 에 대하여 삼각형 $\\mathrm{F}' F P$ 는 넓이가 $15$ 이고 $\\angle \\mathrm{F}' P F=\\frac{\\pi}{2}$ 인 직각삼각형이다. 직선 $\\mathrm{PF}'$ 과 평행하고 쌍곡선에 접하는 두 직선을 각각 $l_{1}$ , $l_{2}$ 라 하자. 두 직선 $l_{1}$ , $l_{2}$ 가 $x$ 축과 만나는 점을 각각 $\\mathrm{Q}_{1}$ , $\\mathrm{Q}_{2}$ 라 할 때, ${\\overline{\\mathrm{Q}_{1}Q_{2}}}=\\frac{q}{p}\\sqrt{3}$ 이다. $p+q$ 의 값을 구하시오. (단, $p$ 와 $q$ 는 서로소인 자연수이고, $a$ 는 양수이다.) (2022년 4월 전국연합)"
+   },
+   {
+    "t": "p",
+    "s": "$y$"
+   }
+  ]
+ },
+ {
+  "num": 226,
+  "id": "S15-서울시립대학교(자연Ⅰ)수시-1",
+  "univ": "서울시립대학교(자연Ⅰ) 수시",
+  "n": 1,
+  "title": "문제 1 · 85점",
+  "points": 85,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "중복조합",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "시립이는 아래와 같은 규칙으로 주사위를 반복해 던져서 나오는 눈의 수만큼 주머니에 공을 넣는 게임을 한다. 게임을 시작할 때 주머니에 있는 공의 개수는 $0$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "(1) 주머니에 있는 공의 개수가 $5$ 이하이면 시립이는 주사위를 새로 던져서 나오는 눈의 수만큼 공을 넣는다."
+   },
+   {
+    "t": "p",
+    "s": "(2) 주머니에 있는 공의 개수가 $6$ 이상이면 시립이는 주사위를 던지는 것을 멈추고 게임을 끝낸다."
+   },
+   {
+    "t": "p",
+    "s": "(a) 게임이 끝났을 때 주머니에 있는 공의 개수가 $6$ 일 확률 $\\frac{q}{p}$ 를 구하여라. (단, $p$ 와 $q$ 는 서로소인 자연수이다.) (45점)"
+   }
+  ]
+ },
+ {
+  "num": 227,
+  "id": "S15-서울시립대학교(자연Ⅰ)수시-2",
+  "univ": "서울시립대학교(자연Ⅰ) 수시",
+  "n": 2,
+  "title": "문제 2 · 95점",
+  "points": 95,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "중복조합",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $f \\left(x \\right)=-x^{3}-x+3$ 의 역함수 $g \\left(x \\right)$ 에 대하여 연속함수 $h \\left(x \\right)$ 가 다음 조건을 모두 만족시킨다."
+   },
+   {
+    "t": "p",
+    "s": "(1) $h \\left(x \\right)={\\begin{cases}3 x&\\left(0 \\le x<1 \\right)\\\\ 4 g' \\left(x \\right)+4&\\left(1 \\le x<3 \\right)\\end{cases}}$"
+   },
+   {
+    "t": "p",
+    "s": "(2) 모든 실수 $x$ 에 대하여 $h \\left(x+3 \\right)=h \\left(x \\right)$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "정적분 $\\int_{0}^{6}{x h \\left(x \\right)dx}$ 의 값을 구하여라."
+   }
+  ]
+ },
+ {
+  "num": 228,
+  "id": "S15-서울시립대학교(자연Ⅰ)수시-3",
+  "univ": "서울시립대학교(자연Ⅰ) 수시",
+  "n": 3,
+  "title": "문제 3 · 105점",
+  "points": 105,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "중복조합",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음을 만족시키는 서로 다른 세 자연수 $a$ , $b$ , $c$ 의 모든 순서쌍 $\\left(a,b,c \\right)$ 의 개수를 구하여라."
+   },
+   {
+    "t": "p",
+    "s": "$\\log_{2}\\left(a+4 b \\right)+2 \\log_{2}c-\\log_{2}3=100$"
+   }
+  ]
+ },
+ {
+  "num": 229,
+  "id": "S15-서울시립대학교(자연Ⅰ)수시-4",
+  "univ": "서울시립대학교(자연Ⅰ) 수시",
+  "n": 4,
+  "title": "문제 4 · 115점",
+  "points": 115,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "중복조합",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위의 두 점 $\\mathrm{F}\\left(5,0 \\right)$ , $\\mathrm{F'}\\left(-5,0 \\right)$ 을 초점으로 하는 타원 $C_{1}$ 과 두 점 $\\mathrm{F}$ , $\\mathrm{F'}$ 을 초점으로 하는 쌍곡선 $C_{2}$ 가 있다. 두 곡선 $C_{1}$ , $C_{2}$ 의 제 $1$ 사분면 위의 교점 $\\mathrm{P}$ 에 대하여 $\\overline{\\mathrm{PF}}\\times \\overline{P F'}=20$ 일 때, 다음에 답하여라."
+   },
+   {
+    "t": "p",
+    "s": "(a) $\\frac{\\overline{P F}}{\\overline{P F'}}$ 의 값의 범위를 구하여라. (75점)"
+   },
+   {
+    "t": "p",
+    "s": "(b) $\\angle F P F'=\\frac{\\pi}{3}$ 일 때, $\\frac{\\overline{P F}}{\\overline{P F'}}$ 의 값을 구하여라. (40점)"
+   },
+   {
+    "t": "p",
+    "s": "풀어보기"
+   }
+  ]
+ },
+ {
+  "num": 230,
+  "id": "S15-서울시립대학교(자연Ⅱ)수시-1",
+  "univ": "서울시립대학교(자연Ⅱ) 수시",
+  "n": 1,
+  "title": "문제 1 · 85점",
+  "points": 85,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "다항함수의 미분법",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $f \\left(x \\right)=x^{3}+a x^{2}+b x+1$ 일 때, 모든 실수 $x$ 에 대하여 $f' \\left(x \\right)\\ne 0$ 이면서 다음을 만족시키는 곡선 $y=f \\left(x \\right)$ 위의 점 $\\mathrm{P}$ 의 개수가 $2$ 가 되도록 하는 실수 $a$ , $b$ 의 조건을 구하여라."
+   },
+   {
+    "t": "p",
+    "s": "곡선 $y=f \\left(x \\right)$ 위의 점 $\\mathrm{P}\\left(p,q \\right)$ 에서의 접선을 $l_{1}$ 이라 하고, 점 $\\mathrm{P}$ 를 지나고 직선 $l_{1}$ 에 수직인 직선을 $l_{2}$ 라 하자. 직선 $l_{2}$ 와 $y$ 축의 교점을 $\\mathrm{Q}$ 라 할 때, $\\overline{\\mathrm{PQ}}=2 \\left|p \\right|>0$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 231,
+  "id": "S15-서울시립대학교(자연Ⅱ)수시-2",
+  "univ": "서울시립대학교(자연Ⅱ) 수시",
+  "n": 2,
+  "title": "문제 2 · 95점",
+  "points": 95,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "다항함수의 미분법",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "세 점 $\\mathrm{P}$ , $\\mathrm{Q}$ , $\\mathrm{R}$ 은 한 변의 길이가 $1$ 인 정삼각형의 세 변 위를 시계 반대 방향으로 움직인다. 세 점 $\\mathrm{P}$ , $\\mathrm{Q}$ , $\\mathrm{R}$ 은 시각 $t=0$ 일 때 한 꼭짓점에서 동시에 출발하여 순서대로 $1$ , $\\sqrt{2}$ , $2$ 의 일정한 속력으로 움직인다. 시각 $t=\\sqrt{2}$ 에서 시각 $t=2$ 까지 세 점 $\\mathrm{P}$ , $\\mathrm{Q}$ , $\\mathrm{R}$ 이 움직일 때, 삼각형 $\\mathrm{PQR}$ 의 넓이가 최대가 되는 시각과 최소가 되는 시각을 각각 구하여라."
+   }
+  ]
+ },
+ {
+  "num": 232,
+  "id": "S15-서울시립대학교(자연Ⅱ)수시-3",
+  "univ": "서울시립대학교(자연Ⅱ) 수시",
+  "n": 3,
+  "title": "문제 3 · 105점",
+  "points": 105,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "다항함수의 미분법",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 그림과 같이 $12$ 개의 칸에 번호를 붙인 보관함을 흰 구슬 $5$ 개와 검은 구슬 $7$ 개로 빈칸 없이 채우려고 한다."
+   },
+   {
+    "t": "p",
+    "s": "보관함의 적어도 한 개의 가로줄 또는 세로줄을 같은 색의 구슬로 채우는 경우의 수를 구하여라. (단, 보관함의 한 칸에는 구슬 한 개만 넣을 수 있다.)"
+   }
+  ]
+ },
+ {
+  "num": 233,
+  "id": "S15-서울시립대학교(자연Ⅱ)수시-4",
+  "univ": "서울시립대학교(자연Ⅱ) 수시",
+  "n": 4,
+  "title": "문제 4 · 115점",
+  "points": 115,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "다항함수의 미분법",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "모든 자연수 $n$ 에 대하여 다음 부등식이 성립함을 보여라."
+   },
+   {
+    "t": "p",
+    "s": "$\\sum_{k=1}^{n}\\left\\{\\frac{1}{k+1}+\\frac{1}{2 \\left(k+1 \\right)^{2}}\\right\\} \\le \\ln \\left(n+1 \\right)\\le \\sum_{k=1}^{n}\\frac{1}{2}\\left(\\frac{1}{k}+\\frac{1}{k+1}\\right)$"
+   },
+   {
+    "t": "p",
+    "s": "풀어보기"
+   },
+   {
+    "t": "p",
+    "s": "문제1. 최고차항의 계수가 양수인 삼차함수 $f(x)$ 가 다음 조건을 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 234,
+  "id": "S15-성균관대학교(자연계)모의-1",
+  "univ": "성균관대학교(자연계) 모의",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 3,
+  "field": "$SMALLSUM$ 의 성질",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "<제시문 1>"
+   },
+   {
+    "t": "p",
+    "s": "자연수 $n$ 에 $$ 대한 명제 $p \\left(n \\right)$ 이 모든 자연수 $n$ 에 대하여 성립함을 증명하려면 다음 두 가지를 보이면 된다."
+   },
+   {
+    "t": "p",
+    "s": "(a) $n=1$ 일 때 명제 $p \\left(n \\right)$ 이 성립한다."
+   },
+   {
+    "t": "p",
+    "s": "(b) $n=k$ 일 때 명제 $p \\left(n \\right)$ 이 성립한다고 가정하면 $n=k+1$ 일 때에도 명제 $p \\left(n \\right)$ 이 성립한다."
+   }
+  ]
+ },
+ {
+  "num": 235,
+  "id": "S15-성균관대학교(자연계)모의-2",
+  "univ": "성균관대학교(자연계) 모의",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 3,
+  "field": "$SMALLSUM$ 의 성질",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "<제시문 1>"
+   },
+   {
+    "t": "p",
+    "s": "자연수의 거듭제곱의 합은 다음과 같다."
+   },
+   {
+    "t": "p",
+    "s": "$\\sum_{k=1}^{n}k=\\frac{n \\left(n+1 \\right)}{2}$"
+   },
+   {
+    "t": "p",
+    "s": "$\\sum_{k=1}^{n}k^{2}=\\frac{n \\left(n+1 \\right)\\left(2 n+1 \\right)}{6}$"
+   }
+  ]
+ },
+ {
+  "num": 236,
+  "id": "S15-성균관대학교(자연계)모의-3",
+  "univ": "성균관대학교(자연계) 모의",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 3,
+  "field": "$SMALLSUM$ 의 성질",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "<제시문 1>"
+   },
+   {
+    "t": "p",
+    "s": "실수 $x$ 의 절댓값 $\\left|x \\right|$ 는 수직선 위에서 실수 $x$ 를 나타내는 점과 원점 사이의 거리를 나타낸다. 예를 들어, $\\left|x \\right|=5$ 이면 $x=5$ 또는 $x=-5$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "<제시문 2>"
+   },
+   {
+    "t": "p",
+    "s": "함수 $f \\left(x \\right)$ 에서 $x=a$ 를 포함하는 어떤 열린구간에 속하는 모든 $x$ 에 대하여 $f \\left(x \\right)\\le f \\left(a \\right)$ 일 때, 함수 $f \\left(x \\right)$ 는 $x=a$ 에서 극대라 하며, $f \\left(a \\right)$ 를 극댓값이라고 한다. 또, $x=a$ 를 포함하는 어떤 열린구간에 속하는 모든 $x$ 에 대하여 $f \\left(x \\right)\\ge f \\left(a \\right)$ 일 때, 함수 $f \\left(x \\right)$ 는 $x=a$ 에서 극소라 하며, $f \\left(a \\right)$ 를 극솟값이라고 한다. 극댓값과 극솟값을 통틀어 극값이라고 한다."
+   }
+  ]
+ },
+ {
+  "num": 237,
+  "id": "S15-성균관대학교(자연1)수시-1",
+  "univ": "성균관대학교(자연1) 수시",
+  "n": 1,
+  "title": "문제 1 · 30점",
+  "points": 30,
+  "minutes": 33,
+  "nsubs": 3,
+  "field": "이차방정식의 근과 계수의 관계",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "<제시문1>"
+   },
+   {
+    "t": "p",
+    "s": "좌표평면 위의 두 점 $\\mathrm{A}(x_1,y_1)$ , $\\mathrm{B}(x_2,y_2)$ 사이의 거리는 다음과 같다."
+   },
+   {
+    "t": "p",
+    "s": "$\\overline{\\mathrm{AB}}=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$"
+   },
+   {
+    "t": "p",
+    "s": "<제시문2>"
+   }
+  ]
+ },
+ {
+  "num": 238,
+  "id": "S15-성균관대학교(자연1)수시-2",
+  "univ": "성균관대학교(자연1) 수시",
+  "n": 2,
+  "title": "문제 2 · 40점",
+  "points": 40,
+  "minutes": 33,
+  "nsubs": 4,
+  "field": "이차방정식의 근과 계수의 관계",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "<제시문1>"
+   },
+   {
+    "t": "p",
+    "s": "삼각형 $\\mathrm{ABC}$ 의 외접원의 반지름의 길이 $R$ 에 대해 다음이 성립한다."
+   },
+   {
+    "t": "p",
+    "s": "$\\frac{{\\overline{B C}}}{\\sin A}=\\frac{{\\overline{C A}}}{\\sin B}=\\frac{{\\overline{A B}}}{\\sin C}=2 R$"
+   },
+   {
+    "t": "p",
+    "s": "그림과 같이 양의 실수 $a$ 에 대해 반지름이 $a$ 인 원에"
+   }
+  ]
+ },
+ {
+  "num": 239,
+  "id": "S15-성균관대학교(자연1)수시-3",
+  "univ": "성균관대학교(자연1) 수시",
+  "n": 3,
+  "title": "문제 3 · 30점",
+  "points": 30,
+  "minutes": 33,
+  "nsubs": 3,
+  "field": "이차방정식의 근과 계수의 관계",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "<제시문1>"
+   },
+   {
+    "t": "p",
+    "s": "자연수 $n$ 에 대한 명제 $p(n)$ 이 모든 자연수 $n$ 에 대하여 성립함을 증명하려면 다음 두"
+   },
+   {
+    "t": "p",
+    "s": "가지를 보이면 된다."
+   },
+   {
+    "t": "p",
+    "s": "(a) $n=1$ 일 때 명제 $p(n)$ 이 성립한다."
+   }
+  ]
+ },
+ {
+  "num": 240,
+  "id": "S15-성균관대학교(자연2)수시-1",
+  "univ": "성균관대학교(자연2) 수시",
+  "n": 1,
+  "title": "문제 1 · 30점",
+  "points": 30,
+  "minutes": 33,
+  "nsubs": 3,
+  "field": "인수분해",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "<제시문1>"
+   },
+   {
+    "t": "p",
+    "s": "첫째항부터 차례대로 일정한 수를 더하여 만든 수열을 등차수열이라 하며, 그 일정한"
+   },
+   {
+    "t": "p",
+    "s": "수를 공차라고 한다. 공차가 $d$ 인 등차수열 $\\left\\{a_n \\right\\}$ 에서 제 $n$ 항에 공차 $d$ 를 더하면"
+   },
+   {
+    "t": "p",
+    "s": "제 $(n+1)$ 항이 되므로 다음이 성립한다."
+   }
+  ]
+ },
+ {
+  "num": 241,
+  "id": "S15-성균관대학교(자연2)수시-2",
+  "univ": "성균관대학교(자연2) 수시",
+  "n": 2,
+  "title": "문제 2 · 30점",
+  "points": 30,
+  "minutes": 33,
+  "nsubs": 3,
+  "field": "인수분해",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "<제시문1>"
+   },
+   {
+    "t": "p",
+    "s": "모든 실수 $x$ 에 대하여 다음이 성립한다."
+   },
+   {
+    "t": "p",
+    "s": "$\\cos \\left(x+\\frac{\\pi}{2}\\right)=-\\sin x$"
+   },
+   {
+    "t": "p",
+    "s": "$\\cos \\left(x+{\\pi}\\right)=-\\cos x$"
+   }
+  ]
+ },
+ {
+  "num": 242,
+  "id": "S15-성균관대학교(자연2)수시-3",
+  "univ": "성균관대학교(자연2) 수시",
+  "n": 3,
+  "title": "문제 3 · 40점",
+  "points": 40,
+  "minutes": 33,
+  "nsubs": 4,
+  "field": "인수분해",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "<제시문1>"
+   },
+   {
+    "t": "p",
+    "s": "상수 $a,b,c,d$ 에 대하여 삼차함수 $f(x)=a x^3+b x^2+c x+d$ 가 있다. (단, $a,d$ 는 양수)"
+   },
+   {
+    "t": "p",
+    "s": "실수 $t$ 와 양수 $h$ 에 대해 원점 $\\mathrm{O}$ 와 두 점 $\\mathrm{P}(t,f(t)),\\mathrm{Q}(t+h,f(t+h))$ 를 각각 잇는"
+   },
+   {
+    "t": "p",
+    "s": "선분 $\\mathrm{OP},O Q$ 가 있다. 다음 그림과 같은 방식으로 $y=f(x)$ 의 그래프의 점 $\\mathrm{P}$ 에서 점"
+   }
+  ]
+ },
+ {
+  "num": 243,
+  "id": "S15-연세대학교(자연계)수시-1",
+  "univ": "연세대학교(자연계) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 50,
+  "nsubs": 3,
+  "field": "약수의 개수",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "[제시문 1] 연세로에 $2023$ 개의 전등이 $1$ 번부터 $2023$ 번까지 순서대로 놓여 있다. 모든 전등에는 버튼이 달려 있으며, 전등이 꺼져있을 때 버튼을 누르면 전등이 켜지고, 전등이 켜져있을 때 누르면 꺼진다. 수험번호가 $k$ 인 학생은 연세로를 지나가며 전등 번호가 $k$ 의 배수인 모든 전등의 버튼을 한 번씩 누른다고 하자. 다음 물음에 답하시오."
+   }
+  ]
+ },
+ {
+  "num": 244,
+  "id": "S15-연세대학교(자연계)수시-2",
+  "univ": "연세대학교(자연계) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 50,
+  "nsubs": 4,
+  "field": "약수의 개수",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": []
+ },
+ {
+  "num": 245,
+  "id": "S15-연세대학교(자연계)수시-3",
+  "univ": "연세대학교(자연계) 수시",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 50,
+  "nsubs": 2,
+  "field": "약수의 개수",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": []
+ },
+ {
+  "num": 246,
+  "id": "S15-이화여자대학교(자연계)모의-1",
+  "univ": "이화여자대학교(자연계) 모의",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "[문항 1] 절대부등식",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$a_n+1=f(n)$ , $b_b=\\frac{1}{2}\\left(a_n+\\frac{2}{a_n}\\right)$"
+   },
+   {
+    "t": "p",
+    "s": "을 만족시킬 때, 아래 물음에 답하시오. [35점]"
+   },
+   {
+    "t": "p",
+    "s": "(1) $a_1$ 이 양의 실수일 때, $a_2 \\ge \\sqrt{2}$ 가 성립함을 보이시오."
+   },
+   {
+    "t": "p",
+    "s": "(2) $a_1 \\ge \\sqrt{2}$ 일 때, 모든 자연수 $n$ 에 대하여 $a_n \\ge \\sqrt{2}$ 가 성립함을 수학적 귀납법을 이용하여 보이시오."
+   }
+  ]
+ },
+ {
+  "num": 247,
+  "id": "S15-이화여자대학교(자연계)모의-2",
+  "univ": "이화여자대학교(자연계) 모의",
+  "n": 2,
+  "title": "문제 2 · 35점",
+  "points": 35,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "[문항 1] 절대부등식",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(1) 식 $\\frac{\\int_{a}^{b}{f'(x)}dx}{t(b-a)^3}$ 의 값을 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "(2) $g(t_0)=\\frac{2 \\sqrt{5}}{5}$ 일 때, $t_0$ 의 값을 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "(3) 문항 (2)의 $t_0$ 에 대하여, 직선 $x=a$ , $y=f(b)$ 와 $y=f(x)$ ( $x \\ge a$ )의 그래프로 둘러싸인 도형의 넓이를 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "(4) 극한값 $\\lim_{t \\to 0^+}{\\frac{g(t)}{t}}$ 를 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 248,
+  "id": "S15-이화여자대학교(자연계)모의-3",
+  "univ": "이화여자대학교(자연계) 모의",
+  "n": 3,
+  "title": "문제 3 · 30점",
+  "points": 30,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "[문항 1] 절대부등식",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 $a$ 에 대하여, 좌표평면의 집합 $\\mathrm{A}=\\left\\{\\left(x,y \\right)v e r t 8 y \\ge 3 \\left(\\left|x \\right|-\\left|x-2 \\right|+4 \\right)\\right\\}$ 와 원 $(x-a)^2+(y-r)^2=r^2$ 이 한 점 또는 두 점에서 만나는 반지름 $r(>0)$ 이 있다. 이때 함숫값 $f(a)$ 는 $r$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "(1) $a>-1$ 일 때, 좌표 평면의 점 $\\left(a,\\frac{a+1}{3}\\right)$ 에서 직선 $y=\\frac{3}{4}(x+1)$ 에 내린 수선의 발을 $a$ 로 나타내시오."
+   },
+   {
+    "t": "p",
+    "s": "(2) 실수 $a$ 에 대하여 원 $(x-a)^2+(y-r)^2=r^2$ 이 집합 $A$ 와 두 점에서 만나는 반지름 $r$ 이 있을 때, 실수 $a$ 를 모두 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "(3) $a>-1$ 일 때, 함수 $f(a)$ 를 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 249,
+  "id": "S15-이화여자대학교(자연계)수시-1",
+  "univ": "이화여자대학교(자연계) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "[문항 1] 함수의 그래프",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(가) $2 n \\le x<2 n+2$ 일 때, $f(x)=1-\\left|x-2 n-1 \\right|$ 이다. (단, $n=0,1,2,3,․․․$ 이다.)"
+   },
+   {
+    "t": "p",
+    "s": "(나) $x<0$ 일 때, $f(x)=0$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "닫힌구간 $\\left[2 n,2 n+2 \\right]$ 에서 직선 $y=a x$ ( $0<a<1)$ 와 함수 $y=f(x)$ 의 그래프가 두 점에서 만날 때 직선과 함수의 그래프로 둘러싸인 도형의 넓이를 $S_{n}$ 이라 한다. 아래 물음에 답하시오. [40점]"
+   },
+   {
+    "t": "p",
+    "s": "(1) $S_{0}$ 을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 250,
+  "id": "S15-이화여자대학교(자연계)수시-2",
+  "univ": "이화여자대학교(자연계) 수시",
+  "n": 2,
+  "title": "문제 2 · 30점",
+  "points": 30,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "[문항 1] 함수의 그래프",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(1) $m=1$ 일 때 위 조건을 만족하는 $b$ 의 값을 모두 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "(2) $m \\ge 0$ , $b>0$ 일 때 위 조건을 만족하는 $m$ 의 값의 범위를 구하고 $b$ 를 $m$ 으로 나타내시오."
+   },
+   {
+    "t": "p",
+    "s": "(3) $m \\ge 0$ , $b>0$ 일 때 직선 $y=m x+b$ 와 함수 $y=\\left|x(x-2)\\right|$ 의 그래프의 세 교점을 $x$ 좌표의 크기순으로 $\\mathrm{A},B,C$ 라 하자. 교점 $\\mathrm{A}$ 와 $\\mathrm{B}$ 사이에서 직선과 함수의 그래프로 둘러싸인 부분의 넓이와 교점 $\\mathrm{B}$ 와 $\\mathrm{C}$ 사이에서 직선과 함수의 그래프로 둘러싸인 부분의 넓이가 서로 같아지는 실수 $b$ 의 값을 모두 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 251,
+  "id": "S15-이화여자대학교(자연계)수시-3",
+  "univ": "이화여자대학교(자연계) 수시",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "[문항 1] 함수의 그래프",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "이 과정을 계속하여 $P_n$ 에 원 $(x-n-1)^2+y^2=1$ 과 $(x+n+1)^2+y^2=1$ 의 내부를 색칠한 부분을 더하여 얻게 되는 그림을 $P_{n+1}$ 이라 한다. $P_n$ 에 색칠되어 있는 부분의 넓이를 $S_n$ 이라 하자. (단, $n=0,1,2,3,․․․$ 이다.)"
+   },
+   {
+    "t": "p",
+    "s": "한 변의 길이가 $1$ 인 정삼각형의 넓이를 $\\alpha$ 라 하고, 반지름의 길이가 $1$ 이고 중심각의 크기가 $\\frac{\\pi}{3}$ 인 부채꼴에서 호의 양 끝점과 중심을 꼭짓점으로 하는 삼각형을 제외한 도형의 넓이를 $\\beta$ 라 할 때 아래 물음에 답하시오. [30점]"
+   },
+   {
+    "t": "p",
+    "s": "(1) $S_0$ 을 $a_0 \\alpha+b_0 \\beta$ 로 나타낼 때 자연수 $a_0$ , $b_0$ 을 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "(2) $S_1$ 을 $a_1 \\alpha+b_1 \\beta$ 로 나타낼 때 자연수 $a_1$ , $b_1$ 을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 252,
+  "id": "S15-인하대학교(의학계)모의-1",
+  "univ": "인하대학교(의학계) 모의",
+  "n": 1,
+  "title": "문제 1 · 30점",
+  "points": 30,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "평균값 정리",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(가) [평균값 정리] 함수 $f(x)$ 가 닫힌구간 $[a,b]$ 에서 연속이고 열린구간 $(a,b)$ 에서 미분가능할 때, $f'(c)=\\frac{f(b)-f(a)}{b-a}$ 인 $c$ 가 열린구간 $(a,b)$ 에 적어도 하나 존재한다."
+   },
+   {
+    "t": "p",
+    "s": "(나) 함수 $f(x)$ 가 어떤 구간에 속하는 임의의 두 실수 $x_1$ , $x_2$ 에 대하여"
+   },
+   {
+    "t": "p",
+    "s": "$x_1<x_2$ 일 때 $f(x_1)<f(x_2)$ 이면 $f(x)$ 는 이 구간에서 증가한다고 한다."
+   },
+   {
+    "t": "p",
+    "s": "또 $x_1<x_2$ 일 때 $f(x_1)>f(x_2)$ 이면 $f(x)$ 는 이 구간에서 감소한다고 한다."
+   }
+  ]
+ },
+ {
+  "num": 253,
+  "id": "S15-인하대학교(의학계)모의-2",
+  "univ": "인하대학교(의학계) 모의",
+  "n": 2,
+  "title": "문제 2 · 35점",
+  "points": 35,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "평균값 정리",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(가) 함수 $f(x)$ 가 어떤 열린구간에서 미분가능할 때, 그 열린구간에 속하는 모든 $x$ 에 대하여 $f'(x)>0$ 이면 $f(x)$ 는 그 열린구간에서 증가하고, $f'(x)<0$ 이면 $f(x)$ 는 그 열린구간에서 감소한다."
+   },
+   {
+    "t": "p",
+    "s": "(나) 닫힌구간 $[a,b]$ 를 포함하는 열린구간에서 두 함수 $f(x)$ , $g(x)$ 가 각각 연속인 도함수를 가질 때"
+   },
+   {
+    "t": "p",
+    "s": "$\\int_a^b f'(x)g(x)dx=\\left[f(x)g(x)\\right]_a^b-\\int_a^b f(x)g'(x)dx$"
+   },
+   {
+    "t": "p",
+    "s": "(다) 닫힌구간 $[a,b]$ 에서 연속인 두 함수가 $f(x)\\le g(x)$ 를 만족하면"
+   }
+  ]
+ },
+ {
+  "num": 254,
+  "id": "S15-인하대학교(의학계)모의-3",
+  "univ": "인하대학교(의학계) 모의",
+  "n": 3,
+  "title": "문제 3 · 35점",
+  "points": 35,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "평균값 정리",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "[수학적 귀납법] 자연수 $n$ $(\\ge 9)$ 에 대한 명제 $p(n)$ 이 모든 자연수 $n$ $(n \\ge 9)$ 에 대하여 성립함을 증명하려면 다음 두 가지를 보이면 된다."
+   },
+   {
+    "t": "p",
+    "s": "(1) $n=9$ 일 때, 명제 $p(n)$ 이 성립한다."
+   },
+   {
+    "t": "p",
+    "s": "(2) $n=k$ $(k \\ge 9)$ 일 때 명제 $p(n)$ 이 성립한다고 가정하면, $n=k+1$ 일 때에도 명제 $p(n)$ 이 성립한다."
+   },
+   {
+    "t": "p",
+    "s": "(※) 2 이상인 서로 다른 자연수 $n$ $(n \\ge 1)$ 개로 이루어진 집합 $A={a_1,a_2,\\cdots,a_n}$ 에 대하여"
+   }
+  ]
+ },
+ {
+  "num": 255,
+  "id": "S15-인하대학교(의예과)수시-1",
+  "univ": "인하대학교(의예과) 수시",
+  "n": 1,
+  "title": "문제 1 · 30점",
+  "points": 30,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "연속함수",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(가) [부분적분법] 두 함수 $f(x)$ , $g(x)$ 가 미분가능할 때"
+   },
+   {
+    "t": "p",
+    "s": "$\\int f(x)g'(x)dx=f(x)g(x)-\\int f'(x)g(x)dx$"
+   },
+   {
+    "t": "p",
+    "s": "이다."
+   },
+   {
+    "t": "p",
+    "s": "(나) $\\int x^2 e^x dx=(x^2-2 x+2)e^x+C$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 256,
+  "id": "S15-인하대학교(의예과)수시-2",
+  "univ": "인하대학교(의예과) 수시",
+  "n": 2,
+  "title": "문제 2 · 35점",
+  "points": 35,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "연속함수",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(가) [부분적분법] 두 함수 $f(x)$ , $g(x)$ 가 미분가능할 때"
+   },
+   {
+    "t": "p",
+    "s": "$\\int f(x)g'(x)dx=f(x)g(x)-\\int f'(x)g(x)dx$"
+   },
+   {
+    "t": "p",
+    "s": "이다."
+   },
+   {
+    "t": "p",
+    "s": "(나) [사잇값의 정리] 함수 $f(x)$ 가 닫힌구간 $[a,b]$ 에서 연속이고 $f(a)\\ne f(b)$ 이면 $f(a)$ 와 $f(b)$ 사이에 있는 임의의 $k$ 에 대하여 $f(c)=k$ 인 $c$ 가 열린구간 $(a,b)$ 에 적어도 하나 존재한다."
+   }
+  ]
+ },
+ {
+  "num": 257,
+  "id": "S15-인하대학교(의예과)수시-3",
+  "univ": "인하대학교(의예과) 수시",
+  "n": 3,
+  "title": "문제 3 · 35점",
+  "points": 35,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "연속함수",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(가) [곱의 법칙] 두 사건 A, B에서 사건 A가 일어나는 경우의 수가 $m$ 이고, 그 각각의 경우에 대하여 사건 B가 일어나는 경우의 수가 $n$ 일 때, 사건 A에 잇달아 사건 B가 일어나는 경우의 수는 $m \\times n$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "(나) 일대일대응 $f:\\left\\{1,2,\\cdots,n \\right\\} \\to \\left\\{1,2,\\cdots,n \\right\\}$ 에 대하여 $\\sum_{i=1}^n f(i)=n(n+1 \\frac{)}{2}$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "(다) 어떤 명제가 참임을 증명할 때, 명제의 결론을 부정하여 가정한 사실 또는 이미 알려진 사실에 모순이 생김을 보이면 된다. 이처럼 증명하는 방법을 귀류법이라 한다."
+   },
+   {
+    "t": "p",
+    "s": "(※) $n$ 은 $3$ 이상의 정수이다. 한 변의 길이가 $1$ 인 정 $n$ 각형 $\\mathrm{P}_1 P_2 \\cdots P_n$ 의 각 꼭짓점 $\\mathrm{P}_i$ 위에 동전 $R_{i}$ 가 놓여있다. 함수 $f:\\left\\{1,2,\\cdots,n \\right\\} \\to \\left\\{1,2,\\cdots,n \\right\\}$ 에 대하여 다음의 시행을 한다."
+   }
+  ]
+ },
+ {
+  "num": 258,
+  "id": "S15-중앙대학교(자연계)모의-1",
+  "univ": "중앙대학교(자연계) 모의",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "로그의 성질",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "∙ 주머니 $\\mathrm{A}$ 에는 $2$ 부터 $4$ 까지의 자연수가 각각 하나씩 적힌 $3$ 개의 공이 들어 있고, 주머니 $\\mathrm{B}$ 에는 $4$ 부터 $32$ 까지의 자연수가 각각 하나씩 적힌 $29$ 개의 공이 들어 있다."
+   },
+   {
+    "t": "p",
+    "s": "∙ 주머니 A에서 임의로 한 개의 공을 꺼낼 때 적힌 수를 $a$ 라 하고, 주머니 $\\mathrm{B}$ 에서 임의로 한 개의 공을 꺼낼 때 적힌 수를 $b$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "이때 $-48+44 \\log_a(a b)-12 \\left\\{\\log_a(a b)\\right\\}^2+\\left\\{\\log_a(a b)\\right\\}^3>0$ 을 만족하는 순서쌍 $(a,b)$ 의 개수를 모두 구하시오. [20점]"
+   }
+  ]
+ },
+ {
+  "num": 259,
+  "id": "S15-중앙대학교(자연계)모의-2",
+  "univ": "중앙대학교(자연계) 모의",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 2,
+  "field": "로그의 성질",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "∙ 양수 $M,N$ 에 대하여 $\\ln(M N)=\\ln M+\\ln N$ 이 성립한다."
+   },
+   {
+    "t": "p",
+    "s": "∙ 첫째항이 $a$ 이고 공차가 $d$ 인 등차수열의 첫째항부터 제 $n$ 항까지의 합은 $\\frac{n \\left\\{2 a+(n-1)d \\right\\}}{2}$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "∙ 등비급수 $\\sum_{n=1}^{\\infty}a r^{n-1}(a \\ne 0)$ 은 $\\left|r \\right|<1$ 일 때 수렴하고 그 합은 $\\frac{a}{1-r}$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "∙ 미분가능한 함수 $g(x)$ 의 도함수 $g'(x)$ 가 닫힌구간 $[a,b]$ 를 포함하는 열린구간에서 연속이고, $g(a)=\\alpha$ , $g(b)=\\beta$ 에 대하여 함수 $f(x)$ 가 $\\alpha$ 와 $\\beta$ 를 양끝으로 하는 닫힌구간에서 연속일 때 다음 식이 성립한다."
+   }
+  ]
+ },
+ {
+  "num": 260,
+  "id": "S15-중앙대학교(자연계)모의-3",
+  "univ": "중앙대학교(자연계) 모의",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 2,
+  "field": "로그의 성질",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "∙ 곡선 $y=f(x)$ 위의 점 $(\\alpha,f(\\alpha))$ 에서 접하는 접선의 방정식은 $y-f(\\alpha)=f'(\\alpha)(x-\\alpha)$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "∙ 미분가능한 두 함수 $f(x)$ , $g(x)$ 에 대하여 $f'(x)$ , $g'(x)$ 가 닫힌구간 $[a,b]$ 에서 연속일 때 다음 식이 성립한다."
+   },
+   {
+    "t": "p",
+    "s": "$\\int_{a}^{b}{f(x)g'(x)}dx=\\left[f(x)g(x)\\right]_a^b-\\int_{a}^{b}{f'(x)g(x)}dx$"
+   },
+   {
+    "t": "p",
+    "s": "∙ 미분가능한 두 함수 $y=f(u)$ , $u=g(x)$ 에 대하여 합성함수 $y=f(g(x))$ 의 도함수는 $\\left\\{f(g(x))\\right\\}'=f'(g(x))g'(x)$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 261,
+  "id": "S15-중앙대학교(자연계열Ⅰ)수시-1",
+  "univ": "중앙대학교(자연계열Ⅰ) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "경우의 수",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$1$ 라운드: $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ 가 상자에서 임의로 각각 한 장씩 이름표를 뽑은 다음, 자신의 이름표를 뽑은 사람을 제외하고 다른 사람의 이름표를 뽑은 사람만 이름표를 상자에 다시 넣는다."
+   },
+   {
+    "t": "p",
+    "s": "$n$ 라운드( $n \\ge 2$ ): 아직 자신의 이름표를 뽑지 못한 사람만 ( $n-1$ )라운드 직후의 상자에서 임의로 각각 한 장씩 이름표를 뽑는다. 이때 자신의 이름표를 뽑은 사람을 제외하고 다른 사람의 이름표를 뽑은 사람만 이름표를 상자에 다시 넣는다."
+   },
+   {
+    "t": "p",
+    "s": "각 라운드 직후 상자에 남은 이름표가 없으면 게임은 종료된다."
+   },
+   {
+    "t": "p",
+    "s": "위와 같은 규칙으로 게임이 종료되지 않고 $6$ 라운드까지 진행된다고 할 때, 오직 한 사람만 자신의 이름표를 뽑는 경우의 수를 구하시오. (단, 각 라운드에서 이름표를 뽑는 순서는 고려하지 않는다.) [20점]"
+   }
+  ]
+ },
+ {
+  "num": 262,
+  "id": "S15-중앙대학교(자연계열Ⅰ)수시-2",
+  "univ": "중앙대학교(자연계열Ⅰ) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 2,
+  "field": "경우의 수",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "[제시문]"
+   },
+   {
+    "t": "p",
+    "s": "두 함수 $f \\left(x \\right)$ , $g \\left(x \\right)$ 가 미분가능할 때 $\\left\\{f \\left(x \\right)g \\left(x \\right)\\right\\}'=f' \\left(x \\right)g \\left(x \\right)+f \\left(x \\right)g' \\left(x \\right)$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "미분가능한 두 함수 $y=f \\left(u \\right)$ , $u=g \\left(x \\right)$ 에 대하여 합성함수 $y=f \\left(g \\left(x \\right)\\right)$ 의 도함수는 $\\left\\{f \\left(g \\left(x \\right)\\right)\\right\\}'=f' \\left(g \\left(x \\right)\\right)g' \\left(x \\right)$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "함수 $f \\left(x \\right)$ 가 임의의 세 실수 $a$ , $b$ , $c$ 를 포함하는 열린구간에서 연속일 때 다음 식이 성립한다."
+   }
+  ]
+ },
+ {
+  "num": 263,
+  "id": "S15-중앙대학교(자연계열Ⅰ)수시-3",
+  "univ": "중앙대학교(자연계열Ⅰ) 수시",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 2,
+  "field": "경우의 수",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "곡선 $y=f \\left(x \\right)$ 위의 점 $\\left(\\alpha,f \\left(\\alpha \\right)\\right)$ 에서 접하는 접선의 방정식은 $y-f \\left(\\alpha \\right)=f' \\left(\\alpha \\right)\\left(x-\\alpha \\right)$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "미분가능한 두 함수 $y=f \\left(u \\right)$ , $u=g \\left(x \\right)$ 에 대하여 합성함수 $y=f \\left(g \\left(x \\right)\\right)$ 의 도함수는 $\\left\\{f \\left(g \\left(x \\right)\\right)\\right\\}'=f' \\left(g \\left(x \\right)\\right)g' \\left(x \\right)$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "미분가능한 함수 $g \\left(x \\right)$ 의 도함수 $g' \\left(x \\right)$ 가 닫힌구간 $\\left[a,b \\right]$ 를 포함하는 열린구간에서 연속이고, $g \\left(a \\right)=\\alpha$ , $g \\left(b \\right)=\\beta$ 에 대하여 함수 $f \\left(x \\right)$ 가 $\\alpha$ 와 $\\beta$ 를 양끝으로 하는 닫힌구간에서 연속일 때 다음 식이 성립한다."
+   },
+   {
+    "t": "p",
+    "s": "$\\int_{a}^{b}{f \\left(g \\left(x \\right)\\right)g' \\left(x \\right)}dx=\\int_{\\alpha}^{\\beta}{f \\left(t \\right)}dt$"
+   }
+  ]
+ },
+ {
+  "num": 264,
+  "id": "S15-중앙대학교(자연계열Ⅱ)수시-1",
+  "univ": "중앙대학교(자연계열Ⅱ) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "경우의 수",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음의 그림과 같은 도로망이 있다. $\\left(i,j \\right)$ 좌표에서 $\\left(i+1,j \\right)$ 또는 $\\left(i,j+1 \\right)$ 좌표로의 이동비용은 $1000$ 원이고 소요 시간은 $1$ 시간이다. $\\left(i,i \\right)$ 좌표에서 $\\left(i+1,i+1 \\right)$ 좌표로의 이동비용은 $2400$ 원이며 소요 시간은 $30$ 분이다. 원점 $\\mathrm{O}$ 지점에서 출발하여 $\\mathrm{A}\\left(4,4 \\right)$ 지점까지 도로를 따라갈 때, $9000$ 원 이하의 비용으로 $7$ 시간 이내에 도착하기 위한 모든 경로의 수를 구하시오. (단, 왼쪽( $\\leftarrow$ ) 또는 아래( $\\downarrow$ ) 방향과 왼쪽 아래로의 대각선( $S W A R R O W$ ) 방향으로 이동할 수 없다.) [20점]"
+   }
+  ]
+ },
+ {
+  "num": 265,
+  "id": "S15-중앙대학교(자연계열Ⅱ)수시-2",
+  "univ": "중앙대학교(자연계열Ⅱ) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 2,
+  "field": "경우의 수",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $f \\left(x \\right)$ 가 임의의 세 실수 $a$ , $b$ , $c$ 를 포함하는 열린구간에서 연속일 때 다음 식이 성립한다."
+   },
+   {
+    "t": "p",
+    "s": "$\\int_{a}^{c}{f \\left(x \\right)}dx+\\int_{c}^{b}{f \\left(x \\right)}dx=\\int_{a}^{b}{f \\left(x \\right)}dx$"
+   },
+   {
+    "t": "p",
+    "s": "모든 실수 $x$ 에 대하여 $\\sin^{2}x+\\cos^{2}x=1$ 이 성립한다."
+   },
+   {
+    "t": "p",
+    "s": "미분가능한 두 함수 $f \\left(x \\right)$ , $g \\left(x \\right)$ 에 대하여 $f' \\left(x \\right)$ , $g' \\left(x \\right)$ 가 닫힌구간 $[a,b]$ 에서 연속일 때 다음 식이 성립한다."
+   }
+  ]
+ },
+ {
+  "num": 266,
+  "id": "S15-중앙대학교(자연계열Ⅱ)수시-3",
+  "univ": "중앙대학교(자연계열Ⅱ) 수시",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 2,
+  "field": "경우의 수",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "미분가능한 함수 $f \\left(x \\right)$ 가 $x=a$ 에서 극값을 가지면 $f' \\left(a \\right)=0$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "모든 실수 $x$ 에 대하여 $\\sin^{2}x+\\cos^{2}x=1$ 이 성립한다."
+   },
+   {
+    "t": "p",
+    "s": "미분가능한 두 함수 $y=f \\left(u \\right)$ , $u=g \\left(x \\right)$ 에 대하여 합성함수 $y=f \\left(g \\left(x \\right)\\right)$ 의 도함수는 $\\left\\{f \\left(g \\left(x \\right)\\right)\\right\\}'=f' \\left(g \\left(x \\right)\\right)g' \\left(x \\right)$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "$x$ 의 함수 $y$ 가 음함수의 꼴 $f \\left(x,y \\right)=0$ 으로 주어질 때, $f \\left(x,y \\right)=0$ 의 양변을 $x$ 에 대하여 미분하여 $\\frac{dy}{dx}$ 를 구한다."
+   }
+  ]
+ },
+ {
+  "num": 267,
+  "id": "S15-한양대학교(자연계열)모의-1",
+  "univ": "한양대학교(자연계열) 모의",
+  "n": 1,
+  "title": "문제 1 · 50점",
+  "points": 50,
+  "minutes": 45,
+  "nsubs": 1,
+  "field": "평면 벡터와 그 내적",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "평면 위의 삼각형 $\\mathrm{ABC}$ 의 세 변의 길이의 비가 ${\\overline{A B}}:{\\overline{B C}}:{\\overline{C A}}=2:1:2$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "논제 1. $\\left|{\\vec{A B}}+\\frac{3}{2}{\\vec{B C}}\\right|=2$ 인 경우 ${\\overline{A B}}$ 의 값을 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "논제 2. 아래의 등식을 만족하는 평면 위의 두 점 $\\mathrm{P}$ 와 $\\mathrm{Q}$ 에 대하여, ${\\overline{A Q}}$ 가 최소가 될 때 $\\frac{{\\overline{A Q}}}{{\\overline{B C}}}$ 의 값을 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "$\\mathrm{2}\\left({\\overline{P B}}-{\\overline{A B}}\\right)=2 \\left({\\overline{A C}}-{\\overline{P C}}\\right)=2 \\left({\\overline{A Q}}-{\\overline{P Q}}\\right)={\\overline{B C}}$"
+   }
+  ]
+ },
+ {
+  "num": 268,
+  "id": "S15-한양대학교(자연계열)모의-2",
+  "univ": "한양대학교(자연계열) 모의",
+  "n": 2,
+  "title": "문제 2 · 50점",
+  "points": 50,
+  "minutes": 45,
+  "nsubs": 1,
+  "field": "평면 벡터와 그 내적",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "논제 1. 자연수 $n$ 에 대하여 $x_{n}=\\frac{1}{n}\\sum_{k=1}^{2 n}\\frac{2 n}{2 n+2 k-1}$ 일 때, 극한값 $\\lim_{n \\rightarrow \\infty}{x_{n}}$ 을 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "논제 2. 함수 $f(x)$ (단, $x>0$ )가 세 조건"
+   },
+   {
+    "t": "p",
+    "s": "(ⅰ) $f''(x)=\\frac{\\sin x}{x}$ , (ⅱ) $\\lim_{x \\rightarrow \\frac{\\pi}{\\sqrt{3}}}{f'(x)=\\frac{1}{\\sqrt{3}}}$ , (ⅲ) $\\lim_{x \\rightarrow \\pi}{f'(x)=1}$"
+   },
+   {
+    "t": "p",
+    "s": "을 만족시킬 때, 극한값 $\\lim_{x \\rightarrow \\frac{\\pi}{\\sqrt{3}}}{\\int_{x}^{\\sqrt{3}}{f'(t)dt}}$ 을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 269,
+  "id": "S15-한양대학교(자연계오전)수시-1",
+  "univ": "한양대학교(자연계 오전) 수시",
+  "n": 1,
+  "title": "문제 1 · 50점",
+  "points": 50,
+  "minutes": 45,
+  "nsubs": 1,
+  "field": "코사인법칙",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{O}$ 는 선분 $\\mathrm{AB}$ 의 중점이다. 호 $\\mathrm{AB}$ 위의 한 점 $\\mathrm{R}$ 에서 선분 $\\mathrm{AB}$ 에 내린 수선의 발을 $\\mathrm{H}$ 라 하고, 점 $\\mathrm{H}$ 에서 선분 $\\mathrm{AR}$ 에 내린 수선의 발을 $\\mathrm{P}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "1. (15점) $\\angle \\mathrm{ROB}=\\frac{\\pi}{3}$ 일 때, ${\\overline{O P}}^{2}+{\\overline{B P}}^{2}$ 의 값을 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "2. (20점) $\\mathrm{R}$ 가 $\\mathrm{A}$ 에서 $\\mathrm{B}$ 까지 호 $\\mathrm{AB}$ 위를 움직일 때, 선분 $\\mathrm{OP}$ 의 길이의 최솟값을 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "3. (15점) 점 $\\mathrm{R}$ 가 $\\mathrm{A}$ 에서 $\\mathrm{B}$ 까지 호 $\\mathrm{AB}$ 위를 움직일 때, 점 $\\mathrm{P}$ 가 이루는 곡선과 선분 $\\mathrm{AB}$ 로 둘러싸인 도형을 밑면으로 하는 입체도형이 있다. 이 입체도형을 선분 $\\mathrm{AB}$ 에 수직인 평면으로 자른 단면이 모두 정사각형일 때, 이 입체도형의 부피를 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 270,
+  "id": "S15-한양대학교(자연계오전)수시-2",
+  "univ": "한양대학교(자연계 오전) 수시",
+  "n": 2,
+  "title": "문제 2 · 50점",
+  "points": 50,
+  "minutes": 45,
+  "nsubs": 1,
+  "field": "코사인법칙",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "1. (20점) 수열 $\\left\\{a_{n}\\right\\}$ 은 모든 자연수 $n$ 에 대하여 $\\frac{a_{n}}{n+1}=\\int_{0}^{\\beta}{\\sin^{n}x \\cos x dx}$ 를 만족시킨다."
+   },
+   {
+    "t": "p",
+    "s": "$\\sum_{n=1}^{\\infty}a_{n}=\\frac{1}{6}$ 일 때, $\\tan \\beta$ 의 값을 구하시오. $\\left(단,0<\\beta<\\frac{\\pi}{2}\\right)$"
+   },
+   {
+    "t": "p",
+    "s": "2. (15점) 평균이 $m$ , 표준편차가 $\\sigma$ 인 정규분포를 따르는 모집단에서 크기가 $n$ 인 표본을 임의추출할 때, 표본평균을 ${\\overline{X}}$ 라 하자. 이 모집단의 확률변수를 $X$ 라 할 때, 두 확률 변수 $X,{\\overline{X}}$ 가 다음 세 조건을 만족시킨다. 이때, $m+\\sigma+n$ 의 값을 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "(단, $Z$ 가 표준정규분포를 따르는 확률변수일 때, $\\mathrm{P}(0 \\le Z \\le 1.5)=0.4332$ ,"
+   }
+  ]
+ },
+ {
+  "num": 271,
+  "id": "S15-한양대학교(자연계오후Ⅰ)수시-1",
+  "univ": "한양대학교(자연계 오후Ⅰ) 수시",
+  "n": 1,
+  "title": "문제 1 · 50점",
+  "points": 50,
+  "minutes": 90,
+  "nsubs": 1,
+  "field": "정적분과 미분의 관계",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "<가> 함수 $f(x)$ 는 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "p",
+    "s": "$f(x)=\\int_{0}^{x}{(x t-t^{2})e^{x-t}dt}$"
+   },
+   {
+    "t": "p",
+    "s": "<나> 함수 $g(x)$ 는 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "p",
+    "s": "(1) $g(0)=0$"
+   }
+  ]
+ },
+ {
+  "num": 272,
+  "id": "S15-한양대학교(자연계오후Ⅱ)수시-1",
+  "univ": "한양대학교(자연계 오후Ⅱ) 수시",
+  "n": 1,
+  "title": "문제 1 · 50점",
+  "points": 50,
+  "minutes": 45,
+  "nsubs": 1,
+  "field": "이항계수",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "<가> 자연수 $n$ 에 대하여 $a_{n}=\\sum_{k=0}^{n}_{3 n}\\mathrm{C}_{3 k}$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "<나> 정수 $n$ 과 $k$ 가 $0 \\le k<n$ 을 만족시킬 때, $_{n}\\mathrm{C}_{k}+_{n}\\mathrm{C}_{k+1}=_{n+1}\\mathrm{C}_{k+1}$ 이 성립한다."
+   },
+   {
+    "t": "p",
+    "s": "1. (10점) 정수 $n$ 과 $k$ 가 $1 \\le k \\le n$ 을 만족시킬 때, 제시문 <나>를 이용하여 $_{3 n+3}\\mathrm{C}_{3 k}=_{3 n}\\mathrm{C}_{3 k-3}+3 \\times_{3 n}\\mathrm{C}_{3 k-2}+3 \\times_{3 n}\\mathrm{C}_{3 k-1}+_{3 n}\\mathrm{C}_{3 k}$ 가 성립함을 보이시오."
+   },
+   {
+    "t": "p",
+    "s": "2. (20점) 자연수 $n$ 에 대해 $a_{n+1}=2+\\sum_{k=1}^{n}_{3 n+3}\\mathrm{C}_{3 k}$ 를 이용하여 $a_{n}+a_{n+1}=3 \\times 2^{3 n}$ 이 성립함을 보이시오."
+   }
+  ]
+ },
+ {
+  "num": 273,
+  "id": "S15-한양대학교(자연계오후Ⅱ)수시-2",
+  "univ": "한양대학교(자연계 오후Ⅱ) 수시",
+  "n": 2,
+  "title": "문제 2 · 50점",
+  "points": 50,
+  "minutes": 45,
+  "nsubs": 1,
+  "field": "이항계수",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "1. (15점) 함수 $f(x)=\\frac{\\ln(x+\\alpha)}{x+\\alpha}$ 에 대하여 방정식 $(f \\circ f)(x)=\\frac{1}{e}$ 이 서로 다른 두 실근을 갖도록 하는 실수 $\\alpha$ 의 범위를 구하시오. $\\left(단,\\lim_{x \\rightarrow \\infty}{\\frac{\\ln x}{x}=0}\\right)$"
+   },
+   {
+    "t": "p",
+    "s": "2. (15점) 미분가능한 함수 $f(x)$ 가 네 조건 $f'(1)<0,f'(-1)>0,f'(-1)-f'(1)=23,f(1)=f(-1)=0$ 을 만족시킨다. 곡선 $y=f(x)$ 위의 점 $\\mathrm{A}(-1,0)$ 에서의 접선과 점 $\\mathrm{B}(1,0)$ 에서의 접선의 교점을 $\\mathrm{P}$ , 삼각형 $\\mathrm{APB}$ 의 넓이를 $S$ 라고 할 때, $\\cot(\\angle A P B)$ 를 $S$ 에 대한 식으로 나타내시오."
+   },
+   {
+    "t": "p",
+    "s": "3. (20점) 높이가 $1$ 인 정삼각형 $\\mathrm{ABC}$ 의 꼭짓점 $\\mathrm{A}$ 를 중심으로 하고 변 $\\mathrm{BC}$ 에 접하는 원이 있다. 오른쪽 그림과 같이 이 원을 직선 $\\mathrm{BC}$ 에 접한 채 거리 $t$ 만큼 $(0<t<1)$ 평행이동한 원과 변 $\\mathrm{AB}$ , 변 $\\mathrm{AC}$ 로 둘러싸인 도형의 넓이를 $f(t)$ 라고 하자. 이때 도함수 $f'(t)$ 를 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "풀어보기"
+   }
+  ]
+ },
+ {
+  "num": 274,
+  "id": "S15-서울대학교(일반전형)수시-1",
+  "univ": "서울대학교(일반전형) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 30,
+  "nsubs": 3,
+  "field": "",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "※ 제시문을 읽고 문제에 답하시오."
+   },
+   {
+    "t": "p",
+    "s": "$f(x)={\\begin{cases}0 \\,\\,\\,\\,\\,\\,\\,(x<0)\\\\ 2 x \\,\\,\\,\\,\\,\\,\\left(0 \\le x<\\frac{1}{2}\\right)\\\\ 2-2 x \\,\\,\\,\\left(\\frac{1}{2}\\le x<1 \\right)\\\\ 0 \\,\\,\\,\\,\\,\\,\\,(x \\ge 1)\\end{cases}}$"
+   },
+   {
+    "t": "p",
+    "s": "$\\mathrm{O}$"
+   },
+   {
+    "t": "p",
+    "s": "$\\frac{1}{2}$"
+   }
+  ]
+ },
+ {
+  "num": 275,
+  "id": "S15-서울대학교(일반전형)수시-3",
+  "univ": "서울대학교(일반전형) 수시",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 30,
+  "nsubs": 4,
+  "field": "",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(*) $3$ 개의 동전이 모두 앞면이거나 모두 뒷면"
+   },
+   {
+    "t": "p",
+    "s": "동전을 뒤집을 순서를 차례대로 나열한 수열을 ‘뒤집기 수열’이라고 하자. 즉, ‘뒤집기 수열’ $\\left\\{a_n \\right\\}$ 은 $n$ 번째에 $a_n$ 원짜리 동전을 뒤집는 것을 말하며 수열 $\\left\\{a_n \\right\\}$ 의 모든 항은 $10$ , $100$ , $500$ 중 하나이다. 예를 들어, ‘뒤집기 수열’ $100,500,․․․$ 에 따라 동전을 뒤집으면 다음과 같다."
+   },
+   {
+    "t": "p",
+    "s": "➡"
+   },
+   {
+    "t": "p",
+    "s": "➡"
+   }
+  ]
+ },
+ {
+  "num": 276,
+  "id": "S15-서울대학교(일반전형)수시-4",
+  "univ": "서울대학교(일반전형) 수시",
+  "n": 4,
+  "title": "문제 4",
+  "points": null,
+  "minutes": 30,
+  "nsubs": 3,
+  "field": "",
+  "year": 2023,
+  "img": false,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$x$"
+   },
+   {
+    "t": "p",
+    "s": "$y$"
+   },
+   {
+    "t": "p",
+    "s": "$\\mathrm{O}$"
+   },
+   {
+    "t": "p",
+    "s": "$\\mathrm{P}_2$"
+   }
+  ]
+ },
+ {
+  "num": 277,
+  "id": "S17-가톨릭대학교(의약학과)수시-1",
+  "univ": "가톨릭대학교(의·약학과) 수시",
+  "n": 1,
+  "title": "문제 1 · 200점",
+  "points": 200,
+  "minutes": 22,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "제시문 ( ㄱ )～( ㄹ )을 읽고 논제에 답하시오. (200점)"
+   }
+  ]
+ },
+ {
+  "num": 278,
+  "id": "S17-가톨릭대학교(의약학과)수시-2",
+  "univ": "가톨릭대학교(의·약학과) 수시",
+  "n": 2,
+  "title": "문제 2 · 200점",
+  "points": 200,
+  "minutes": 22,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "제시문 ( ㄱ )을 읽고 논제에 답하시오. (200점)"
+   }
+  ]
+ },
+ {
+  "num": 279,
+  "id": "S17-가톨릭대학교(의약학과)수시-3",
+  "univ": "가톨릭대학교(의·약학과) 수시",
+  "n": 3,
+  "title": "문제 3 · 200점",
+  "points": 200,
+  "minutes": 22,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "제시문 ( ㄱ )～( ㄷ )를 읽고 논제에 답하시오. (200점)"
+   }
+  ]
+ },
+ {
+  "num": 280,
+  "id": "S17-가톨릭대학교(의약학과)수시-4",
+  "univ": "가톨릭대학교(의·약학과) 수시",
+  "n": 4,
+  "title": "문제 4 · 200점",
+  "points": 200,
+  "minutes": 22,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "제시문 ( ㄱ )～( ㄷ )를 읽고 논제에 답하시오. (200점)"
+   }
+  ]
+ },
+ {
+  "num": 281,
+  "id": "S17-경희대학교(자연계)수시-1",
+  "univ": "경희대학교(자연계) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": []
+ },
+ {
+  "num": 282,
+  "id": "S17-경희대학교(자연계)수시-2",
+  "univ": "경희대학교(자연계) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": []
+ },
+ {
+  "num": 283,
+  "id": "S17-경희대학교(자연계)수시-3",
+  "univ": "경희대학교(자연계) 수시",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": []
+ },
+ {
+  "num": 284,
+  "id": "S17-고려대학교(자연계)모의-1",
+  "univ": "고려대학교(자연계) 모의",
+  "n": 1,
+  "title": "문제 1 · 35점",
+  "points": 35,
+  "minutes": 20,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 글을 읽고 물음에 답하시오. (35점)"
+   }
+  ]
+ },
+ {
+  "num": 285,
+  "id": "S17-고려대학교(자연계)모의-2",
+  "univ": "고려대학교(자연계) 모의",
+  "n": 2,
+  "title": "문제 2 · 35점",
+  "points": 35,
+  "minutes": 20,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 글을 읽고 물음에 답하시오. (35점)"
+   }
+  ]
+ },
+ {
+  "num": 286,
+  "id": "S17-고려대학교(자연계)모의-3",
+  "univ": "고려대학교(자연계) 모의",
+  "n": 3,
+  "title": "문제 3 · 15점",
+  "points": 15,
+  "minutes": 20,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 글을 읽고 물음에 답하시오. (15점)"
+   }
+  ]
+ },
+ {
+  "num": 287,
+  "id": "S17-고려대학교(자연계)모의-4",
+  "univ": "고려대학교(자연계) 모의",
+  "n": 4,
+  "title": "문제 4 · 15점",
+  "points": 15,
+  "minutes": 20,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 글을 읽고 물음에 답하시오. (15점)"
+   }
+  ]
+ },
+ {
+  "num": 288,
+  "id": "S17-고려대학교(자연계열-오전)수시-1",
+  "univ": "고려대학교(자연계열-오전) 수시",
+  "n": 1,
+  "title": "문제 1 · 35점",
+  "points": 35,
+  "minutes": 20,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 글을 읽고 물음에 답하시오. (35점)"
+   }
+  ]
+ },
+ {
+  "num": 289,
+  "id": "S17-고려대학교(자연계열-오전)수시-2",
+  "univ": "고려대학교(자연계열-오전) 수시",
+  "n": 2,
+  "title": "문제 2 · 25점",
+  "points": 25,
+  "minutes": 20,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 글을 읽고 물음에 답하시오. (25점)"
+   }
+  ]
+ },
+ {
+  "num": 290,
+  "id": "S17-고려대학교(자연계열-오전)수시-3",
+  "univ": "고려대학교(자연계열-오전) 수시",
+  "n": 3,
+  "title": "문제 3 · 20점",
+  "points": 20,
+  "minutes": 20,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 글을 읽고 물음에 답하시오. (20점)"
+   }
+  ]
+ },
+ {
+  "num": 291,
+  "id": "S17-고려대학교(자연계열-오전)수시-4",
+  "univ": "고려대학교(자연계열-오전) 수시",
+  "n": 4,
+  "title": "문제 4 · 20점",
+  "points": 20,
+  "minutes": 20,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "제시문을 읽고 문제에 답하시오. (20점)"
+   }
+  ]
+ },
+ {
+  "num": 292,
+  "id": "S17-고려대학교(자연계열-오후)수시-1",
+  "univ": "고려대학교(자연계열-오후) 수시",
+  "n": 1,
+  "title": "문제 1 · 30점",
+  "points": 30,
+  "minutes": 20,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 글을 읽고 물음에 답하시오. (30점)"
+   }
+  ]
+ },
+ {
+  "num": 293,
+  "id": "S17-고려대학교(자연계열-오후)수시-2",
+  "univ": "고려대학교(자연계열-오후) 수시",
+  "n": 2,
+  "title": "문제 2 · 30점",
+  "points": 30,
+  "minutes": 20,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 글을 읽고 물음에 답하시오. (30점)"
+   }
+  ]
+ },
+ {
+  "num": 294,
+  "id": "S17-고려대학교(자연계열-오후)수시-3",
+  "univ": "고려대학교(자연계열-오후) 수시",
+  "n": 3,
+  "title": "문제 3 · 20점",
+  "points": 20,
+  "minutes": 20,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 글을 읽고 물음에 답하시오. (20점)"
+   }
+  ]
+ },
+ {
+  "num": 295,
+  "id": "S17-고려대학교(자연계열-오후)수시-4",
+  "univ": "고려대학교(자연계열-오후) 수시",
+  "n": 4,
+  "title": "문제 4 · 20점",
+  "points": 20,
+  "minutes": 20,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 글을 읽고 물음에 답하시오. (20점)"
+   }
+  ]
+ },
+ {
+  "num": 296,
+  "id": "S17-부산대학교(의약학계열)수시-1",
+  "univ": "부산대학교(의․약학계열) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 제시문을 이용하여 아래 논제의 풀이 과정과 답을 논리적으로 서술하시오."
+   }
+  ]
+ },
+ {
+  "num": 297,
+  "id": "S17-부산대학교(의약학계열)수시-2",
+  "univ": "부산대학교(의․약학계열) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 제시문을 이용하여 아래 논제의 풀이 과정과 답을 논리적으로 서술하시오."
+   }
+  ]
+ },
+ {
+  "num": 298,
+  "id": "S17-부산대학교(의약학계열)수시-3",
+  "univ": "부산대학교(의․약학계열) 수시",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 제시문을 이용하여 아래 논제의 풀이 과정과 답을 논리적으로 서술하시오."
+   }
+  ]
+ },
+ {
+  "num": 299,
+  "id": "S17-서강대학교(자연계열1차)모의-1",
+  "univ": "서강대학교(자연계열 1차) 모의",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 50,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": []
+ },
+ {
+  "num": 300,
+  "id": "S17-서강대학교(자연계열1차)수시-1",
+  "univ": "서강대학교(자연계열 1차) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 50,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "제시문 [가]"
+   }
+  ]
+ },
+ {
+  "num": 301,
+  "id": "S17-서강대학교(자연계열1차)수시-2",
+  "univ": "서강대학교(자연계열 1차) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 50,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "제시문[가]"
+   }
+  ]
+ },
+ {
+  "num": 302,
+  "id": "S17-서강대학교(자연계열2차)수시-1",
+  "univ": "서강대학교(자연계열 2차) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 50,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "제시문 [가]～[다]를 참고하여 다음 물음에 답하시오."
+   }
+  ]
+ },
+ {
+  "num": 303,
+  "id": "S17-서강대학교(자연계열2차)수시-2",
+  "univ": "서강대학교(자연계열 2차) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 50,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "제시문[가]～[다]를 참고하여 다음 물음에 답하시오."
+   }
+  ]
+ },
+ {
+  "num": 304,
+  "id": "S17-서울시립대학교(자연계열)모의-1",
+  "univ": "서울시립대학교(자연계열) 모의",
+  "n": 1,
+  "title": "문제 1 · 85점",
+  "points": 85,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(85점)"
+   }
+  ]
+ },
+ {
+  "num": 305,
+  "id": "S17-서울시립대학교(자연계열)모의-2",
+  "univ": "서울시립대학교(자연계열) 모의",
+  "n": 2,
+  "title": "문제 2 · 95점",
+  "points": 95,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(95점)"
+   }
+  ]
+ },
+ {
+  "num": 306,
+  "id": "S17-서울시립대학교(자연계열)모의-3",
+  "univ": "서울시립대학교(자연계열) 모의",
+  "n": 3,
+  "title": "문제 3 · 105점",
+  "points": 105,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(105점)"
+   }
+  ]
+ },
+ {
+  "num": 307,
+  "id": "S17-서울시립대학교(자연계열)모의-4",
+  "univ": "서울시립대학교(자연계열) 모의",
+  "n": 4,
+  "title": "문제 4 · 115점",
+  "points": 115,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(총 115점)"
+   }
+  ]
+ },
+ {
+  "num": 308,
+  "id": "S17-서울시립대학교(자연계)수시-1",
+  "univ": "서울시립대학교(자연계) 수시",
+  "n": 1,
+  "title": "문제 1 · 85점",
+  "points": 85,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(총 85점)"
+   }
+  ]
+ },
+ {
+  "num": 309,
+  "id": "S17-서울시립대학교(자연계)수시-2",
+  "univ": "서울시립대학교(자연계) 수시",
+  "n": 2,
+  "title": "문제 2 · 95점",
+  "points": 95,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(95점)"
+   }
+  ]
+ },
+ {
+  "num": 310,
+  "id": "S17-서울시립대학교(자연계)수시-3",
+  "univ": "서울시립대학교(자연계) 수시",
+  "n": 3,
+  "title": "문제 3 · 105점",
+  "points": 105,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(총 105점)"
+   }
+  ]
+ },
+ {
+  "num": 311,
+  "id": "S17-서울시립대학교(자연계)수시-4",
+  "univ": "서울시립대학교(자연계) 수시",
+  "n": 4,
+  "title": "문제 4 · 115점",
+  "points": 115,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(115점)"
+   }
+  ]
+ },
+ {
+  "num": 312,
+  "id": "S17-성균관대학교(자연계)모의-1",
+  "univ": "성균관대학교(자연계) 모의",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 <제시문 1> ～ <제시문 3>을 읽고 [문제 1-ⅰ]"
+   }
+  ]
+ },
+ {
+  "num": 313,
+  "id": "S17-성균관대학교(자연계)모의-2",
+  "univ": "성균관대학교(자연계) 모의",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 <제시문 1>"
+   }
+  ]
+ },
+ {
+  "num": 314,
+  "id": "S17-성균관대학교(자연계)모의-3",
+  "univ": "성균관대학교(자연계) 모의",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 <제시문 1>과 <제시문 2>를 읽고 [문제 3-ⅰ]"
+   }
+  ]
+ },
+ {
+  "num": 315,
+  "id": "S17-성균관대학교(수리형1)수시-1",
+  "univ": "성균관대학교(수리형 1) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 <제시문 1> ～ <제시문 3>을 읽고 [문제1-ⅰ] ～[문제1-ⅲ]을"
+   }
+  ]
+ },
+ {
+  "num": 316,
+  "id": "S17-성균관대학교(수리형1)수시-2",
+  "univ": "성균관대학교(수리형 1) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 <제시문 1>과 <제시문 2>를 읽고 [문제2-ⅰ] ～[문제2-ⅳ]를"
+   }
+  ]
+ },
+ {
+  "num": 317,
+  "id": "S17-성균관대학교(수리형1)수시-3",
+  "univ": "성균관대학교(수리형 1) 수시",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 <제시문 1> ～ <제시문 3>을 읽고 [문제3-ⅰ] ～[문제3-ⅲ]을"
+   }
+  ]
+ },
+ {
+  "num": 318,
+  "id": "S17-성균관대학교(수리형2)수시-1",
+  "univ": "성균관대학교(수리형 2) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 <제시문 1> ～ <제시문 2>를 읽고 [문제1-ⅰ] ～[문제1-ⅲ]을"
+   }
+  ]
+ },
+ {
+  "num": 319,
+  "id": "S17-성균관대학교(수리형2)수시-2",
+  "univ": "성균관대학교(수리형 2) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 <제시문 1>과 <제시문 2>를 읽고 [문제2-ⅰ] ～[문제2-ⅳ]를"
+   }
+  ]
+ },
+ {
+  "num": 320,
+  "id": "S17-성균관대학교(수리형2)수시-3",
+  "univ": "성균관대학교(수리형 2) 수시",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 <제시문 1> ～ <제시문 3>을 읽고 [문제3-ⅰ] ～[문제3-ⅲ]을"
+   }
+  ]
+ },
+ {
+  "num": 321,
+  "id": "S17-성균관대학교(수리형3)수시-1",
+  "univ": "성균관대학교(수리형 3) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 <제시문>을 읽고 [문제1-ⅰ] ～[문제1-ⅳ]을 문항별로 풀이와"
+   }
+  ]
+ },
+ {
+  "num": 322,
+  "id": "S17-성균관대학교(수리형3)수시-2",
+  "univ": "성균관대학교(수리형 3) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 <제시문>을 읽고 [문제2-ⅰ] ～[문제2-ⅲ]를 문항별로 풀이와"
+   }
+  ]
+ },
+ {
+  "num": 323,
+  "id": "S17-성균관대학교(수리형3)수시-3",
+  "univ": "성균관대학교(수리형 3) 수시",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 <제시문 1> ～ <제시문 3>을 읽고 [문제3-ⅰ] ～[문제3-ⅲ]을"
+   }
+  ]
+ },
+ {
+  "num": 324,
+  "id": "S17-연세대학교(자연계)모의-1",
+  "univ": "연세대학교(자연계) 모의",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 18,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": []
+ },
+ {
+  "num": 325,
+  "id": "S17-연세대학교(자연계)모의-3",
+  "univ": "연세대학교(자연계) 모의",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 18,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": []
+ },
+ {
+  "num": 326,
+  "id": "S17-연세대학교(자연계)모의-4",
+  "univ": "연세대학교(자연계) 모의",
+  "n": 4,
+  "title": "문제 4",
+  "points": null,
+  "minutes": 18,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": []
+ },
+ {
+  "num": 327,
+  "id": "S17-연세대학교(자연계)모의-5",
+  "univ": "연세대학교(자연계) 모의",
+  "n": 5,
+  "title": "문제 5",
+  "points": null,
+  "minutes": 18,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": []
+ },
+ {
+  "num": 328,
+  "id": "S17-연세대학교(자연계)모의-6",
+  "univ": "연세대학교(자연계) 모의",
+  "n": 6,
+  "title": "문제 6",
+  "points": null,
+  "minutes": 18,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": []
+ },
+ {
+  "num": 329,
+  "id": "S17-연세대학교(자연계)수시-1",
+  "univ": "연세대학교(자연계) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 15,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": []
+ },
+ {
+  "num": 330,
+  "id": "S17-연세대학교(자연계)수시-2",
+  "univ": "연세대학교(자연계) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 15,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": []
+ },
+ {
+  "num": 331,
+  "id": "S17-연세대학교(자연계)수시-3",
+  "univ": "연세대학교(자연계) 수시",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 15,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": []
+ },
+ {
+  "num": 332,
+  "id": "S17-연세대학교(자연계)수시-4",
+  "univ": "연세대학교(자연계) 수시",
+  "n": 4,
+  "title": "문제 4",
+  "points": null,
+  "minutes": 15,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": []
+ },
+ {
+  "num": 333,
+  "id": "S17-연세대학교(자연계)수시-5",
+  "univ": "연세대학교(자연계) 수시",
+  "n": 5,
+  "title": "문제 5",
+  "points": null,
+  "minutes": 15,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": []
+ },
+ {
+  "num": 334,
+  "id": "S17-연세대학교(자연계)수시-6",
+  "univ": "연세대학교(자연계) 수시",
+  "n": 6,
+  "title": "문제 6",
+  "points": null,
+  "minutes": 15,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": []
+ },
+ {
+  "num": 335,
+  "id": "S17-이화여자대학교(자연계열Ⅰ)수시-1",
+  "univ": "이화여자대학교(자연계열Ⅰ) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "모든 실수  에서 미분가능한 함수     에 대하여  ′   가 연속이다. 함수"
+   }
+  ]
+ },
+ {
+  "num": 336,
+  "id": "S17-이화여자대학교(자연계열Ⅰ)수시-2",
+  "univ": "이화여자대학교(자연계열Ⅰ) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "구간"
+   }
+  ]
+ },
+ {
+  "num": 337,
+  "id": "S17-이화여자대학교(자연계열Ⅱ)수시-1",
+  "univ": "이화여자대학교(자연계열Ⅱ) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양의 실수"
+   }
+  ]
+ },
+ {
+  "num": 338,
+  "id": "S17-이화여자대학교(자연계열Ⅱ)수시-2",
+  "univ": "이화여자대학교(자연계열Ⅱ) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 33,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "구간"
+   }
+  ]
+ },
+ {
+  "num": 339,
+  "id": "S17-인하대학교(의예과)수시-1",
+  "univ": "인하대학교(의예과) 수시",
+  "n": 1,
+  "title": "문제 1 · 30점",
+  "points": 30,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 제시문을 읽고 물음에 답하시오. (30점)"
+   }
+  ]
+ },
+ {
+  "num": 340,
+  "id": "S17-인하대학교(의예과)수시-2",
+  "univ": "인하대학교(의예과) 수시",
+  "n": 2,
+  "title": "문제 2 · 35점",
+  "points": 35,
+  "minutes": 40,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 제시문을 읽고 물음에 답하시오. (35점)"
+   }
+  ]
+ },
+ {
+  "num": 341,
+  "id": "S17-중앙대학교(자연계열)모의-1",
+  "univ": "중앙대학교(자연계열) 모의",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "주머니 A에는 1부터 3까지의 자연수가 각각 하나씩 적힌 3장의 카드"
+   }
+  ]
+ },
+ {
+  "num": 342,
+  "id": "S17-중앙대학교(자연계열)모의-2",
+  "univ": "중앙대학교(자연계열) 모의",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음을 읽고 문제에 답하시오."
+   }
+  ]
+ },
+ {
+  "num": 343,
+  "id": "S17-중앙대학교(자연계열)모의-3",
+  "univ": "중앙대학교(자연계열) 모의",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음을 읽고 문제에 답하시오."
+   }
+  ]
+ },
+ {
+  "num": 344,
+  "id": "S17-중앙대학교(자연계열)모의-4",
+  "univ": "중앙대학교(자연계열) 모의",
+  "n": 4,
+  "title": "문제 4",
+  "points": null,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음을 읽고 문제에 답하시오."
+   }
+  ]
+ },
+ {
+  "num": 345,
+  "id": "S17-중앙대학교(자연계열Ⅰ)수시-1",
+  "univ": "중앙대학교(자연계열Ⅰ) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 규칙에 따라 점수를 얻는 시행을 한다. 풀이와 함께 물음에 답하시오."
+   }
+  ]
+ },
+ {
+  "num": 346,
+  "id": "S17-중앙대학교(자연계열Ⅰ)수시-2",
+  "univ": "중앙대학교(자연계열Ⅰ) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음을 읽고 문항별로 풀이와 함께 답하시오"
+   }
+  ]
+ },
+ {
+  "num": 347,
+  "id": "S17-중앙대학교(자연계열Ⅰ)수시-3",
+  "univ": "중앙대학교(자연계열Ⅰ) 수시",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음을 읽고 문항별로 풀이와 함께 답하시오."
+   }
+  ]
+ },
+ {
+  "num": 348,
+  "id": "S17-중앙대학교(자연계열Ⅰ)수시-4",
+  "univ": "중앙대학교(자연계열Ⅰ) 수시",
+  "n": 4,
+  "title": "문제 4",
+  "points": null,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음을 읽고 문항별로 풀이와 함께 답하시오."
+   }
+  ]
+ },
+ {
+  "num": 349,
+  "id": "S17-중앙대학교(자연계열Ⅱ)수시-1",
+  "univ": "중앙대학교(자연계열Ⅱ) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 규칙에 따라 상금을 받는 시행을 한다. 풀이와 함께 물음에 답하시오."
+   }
+  ]
+ },
+ {
+  "num": 350,
+  "id": "S17-중앙대학교(자연계열Ⅱ)수시-2",
+  "univ": "중앙대학교(자연계열Ⅱ) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음을 읽고 문항별로 풀이와 함께 답하시오"
+   }
+  ]
+ },
+ {
+  "num": 351,
+  "id": "S17-중앙대학교(자연계열Ⅱ)수시-3",
+  "univ": "중앙대학교(자연계열Ⅱ) 수시",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음을 읽고 문항별로 풀이와 함께 답하시오."
+   }
+  ]
+ },
+ {
+  "num": 352,
+  "id": "S17-중앙대학교(자연계열Ⅱ)수시-4",
+  "univ": "중앙대학교(자연계열Ⅱ) 수시",
+  "n": 4,
+  "title": "문제 4",
+  "points": null,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음을 읽고 문항별로 풀이와 함께 답하시오."
+   }
+  ]
+ },
+ {
+  "num": 353,
+  "id": "S17-한양대학교(자연계열)모의-1",
+  "univ": "한양대학교(자연계열) 모의",
+  "n": 1,
+  "title": "문제 1 · 50점",
+  "points": 50,
+  "minutes": 45,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 물음에 답하시오. (50점)"
+   }
+  ]
+ },
+ {
+  "num": 354,
+  "id": "S17-한양대학교(자연계열)모의-2",
+  "univ": "한양대학교(자연계열) 모의",
+  "n": 2,
+  "title": "문제 2 · 50점",
+  "points": 50,
+  "minutes": 45,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 물음에 답하시오. (50점)"
+   }
+  ]
+ },
+ {
+  "num": 355,
+  "id": "S17-한양대학교(오전)수시-1",
+  "univ": "한양대학교(오전) 수시",
+  "n": 1,
+  "title": "문제 1 · 50점",
+  "points": 50,
+  "minutes": 45,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 제시문을 읽고 물음에 답하시오. (50점)"
+   }
+  ]
+ },
+ {
+  "num": 356,
+  "id": "S17-한양대학교(오전)수시-2",
+  "univ": "한양대학교(오전) 수시",
+  "n": 2,
+  "title": "문제 2 · 50점",
+  "points": 50,
+  "minutes": 45,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 제시문을 읽고 물음에 답하시오. (50점)"
+   }
+  ]
+ },
+ {
+  "num": 357,
+  "id": "S17-한양대학교(오후1)수시-1",
+  "univ": "한양대학교(오후1) 수시",
+  "n": 1,
+  "title": "문제 1 · 50점",
+  "points": 50,
+  "minutes": 45,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 물음에 답하시오. (50점)"
+   }
+  ]
+ },
+ {
+  "num": 358,
+  "id": "S17-한양대학교(오후1)수시-2",
+  "univ": "한양대학교(오후1) 수시",
+  "n": 2,
+  "title": "문제 2 · 50점",
+  "points": 50,
+  "minutes": 45,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 물음에 답하시오. (50점)"
+   }
+  ]
+ },
+ {
+  "num": 359,
+  "id": "S17-한양대학교(오후2)수시-1",
+  "univ": "한양대학교(오후2) 수시",
+  "n": 1,
+  "title": "문제 1 · 50점",
+  "points": 50,
+  "minutes": 45,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 물음에 답하시오. (50점)"
+   }
+  ]
+ },
+ {
+  "num": 360,
+  "id": "S17-한양대학교(오후2)수시-2",
+  "univ": "한양대학교(오후2) 수시",
+  "n": 2,
+  "title": "문제 2 · 50점",
+  "points": 50,
+  "minutes": 45,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 제시문을 읽고 물음에 답하시오. (50점)"
+   }
+  ]
+ },
+ {
+  "num": 361,
+  "id": "S17-서울대학교(일반전형)수시-1",
+  "univ": "서울대학교(일반전형) 수시",
+  "n": 1,
+  "title": "문제 1",
+  "points": null,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "문제 1."
+   }
+  ]
+ },
+ {
+  "num": 362,
+  "id": "S17-서울대학교(일반전형)수시-2",
+  "univ": "서울대학교(일반전형) 수시",
+  "n": 2,
+  "title": "문제 2",
+  "points": null,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "문제 2."
+   }
+  ]
+ },
+ {
+  "num": 363,
+  "id": "S17-서울대학교(일반전형)수시-3",
+  "univ": "서울대학교(일반전형) 수시",
+  "n": 3,
+  "title": "문제 3",
+  "points": null,
+  "minutes": 30,
+  "nsubs": 1,
+  "field": "",
+  "year": 2025,
+  "img": true,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "문제 3."
    }
   ]
  }

@@ -1,0 +1,35 @@
+{
+ "num": 285,
+ "id": "S17-고려대학교(자연계)모의-2",
+ "univ": "고려대학교(자연계) 모의",
+ "n": 2,
+ "year": 2025,
+ "title": "문제 2 · 35점",
+ "head": "다음 글을 읽고 물음에 답하시오. (35점)",
+ "points": 35,
+ "minutes": 20,
+ "info": {
+  "time": "80분"
+ },
+ "pre": [],
+ "passage": [],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[답안]",
+   "points": 35,
+   "text": [],
+   "answer": [],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "",
+ "qimg": [
+  "ess/s17-12-2q-0.webp"
+ ],
+ "aimg": [
+  "ess/s17-12-2a-0.webp"
+ ]
+}

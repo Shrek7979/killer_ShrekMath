@@ -52,7 +52,7 @@ def parse(path):
                 i += 1; continue
             # 새 세트는 뒤에 시험정보 표(TBL)가 따라와야 한다
             look = ' '.join(x[1] for x in lines[i + 1:i + 14])
-            if '시험 시간' in look or '출제 분야' in look or '시험시간' in look:
+            if '시험 시간' in look or '출제 분야' in look or '시험시간' in look or '모집단위' in look:   # 서울대는 시험정보 대신 '활용·모집단위' 표
                 cur = {'key': key, 'title': m.group(1), 'lines': [], 'start': i}
                 sets.append(cur)
                 i += 1; continue
@@ -168,10 +168,45 @@ def split_answers(lines):
     return res
 
 
+PLAIN_MAIN = re.compile(r'^\(?\s*(?:논제|문제)\s*(\d+)\s*(?:\.|\))\s*')   # '논제 1.' / '문제 1.' / 답안의 '(논제 1)'
+PLAIN_SUB = re.compile(r'^(\d+)\s*-\s*(\d+)\s*\.\s*')
+
+
+def normalize_set(st):
+    """'[문제 n]' 머리가 하나도 없는 세트(서울대 '문제 1.'·'1-1.', 경희대 수시 '논제 1.')만
+    머리를 '[문제 n]'·'[n-m]' 로 바꾸고, 문항해설·모집단위 표는 버린다. 다른 세트는 건드리지 않는다."""
+    L = st['lines']
+    if any(is_header(t, MAIN) or is_header(t, SUB) for d, t in L if not t.startswith('[') or True):
+        if any(is_header(t, MAIN) for d, t in L):
+            return
+    out, i, dropped = [], 0, False
+    while i < len(L):
+        d, t = L[i]
+        if t == 'TBL':
+            j = i + 1
+            while j < len(L) and not (L[j][1] == '/TBL' and L[j][0] == d):
+                j += 1
+            block = ' '.join(x[1] for x in L[i:j + 1])
+            if '문항해설' in block or '모집단위' in block:
+                if not dropped:   # 맨 앞 표는 시험정보 표 자리 → 빈 표로 남겨 둬야 첫 문제가 시험정보로 먹히지 않는다
+                    out.append((0, 'TBL')); out.append((0, '/TBL')); dropped = True
+                i = j + 1; continue
+        m = PLAIN_MAIN.match(t)
+        if m and d <= 2:   # d 는 들여쓰기 칸 수(한 단계 = 2칸)
+            t = f'[문제 {m.group(1)}] ' + t[m.end():]
+        else:
+            m = PLAIN_SUB.match(t)
+            if m and d <= 2:   # d 는 들여쓰기 칸 수(한 단계 = 2칸)
+                t = f'[{m.group(1)}-{m.group(2)}] ' + t[m.end():]
+        out.append((d, t.strip())); i += 1
+    st['lines'] = out
+
+
 def build_items(path):
     sets = parse(path)
     items = []
     for st in sets:
+        normalize_set(st)
         info, pl, al = split_set(st)
         probs = split_problems(pl)
         ans = split_answers(al)

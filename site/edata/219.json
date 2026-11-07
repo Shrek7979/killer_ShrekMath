@@ -1,0 +1,91 @@
+{
+ "num": 219,
+ "id": "S15-서강대학교(자연계1차)수시-2",
+ "univ": "서강대학교(자연계 1차) 수시",
+ "n": 2,
+ "year": 2023,
+ "title": "문제 2",
+ "head": "",
+ "points": null,
+ "minutes": 50,
+ "info": {
+  "concepts": "중복조합, 이항분포, 이항정리, 정규분포, 확률변수, 표준정규분포, 확률질량함수, 미분계수, 접선의 방정식, 삼각함수의 극한과 미분, 원과 직선의 위치관계, 함수의 극한",
+  "min": "국어, 수학, 영어, 탐구 4개 영역 중 3개 영역 등급합 6이내, 한국사 4등급 이내",
+  "field": "수학(2문항, 8문제)",
+  "time": "100분"
+ },
+ "pre": [],
+ "passage": [],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[2-1]",
+   "points": null,
+   "text": [
+    "원점이 $\\mathrm{O}$ 인 좌표평면 위의 점 $\\mathrm{P}$ 의 좌표가 $(\\cos t,\\sin t)$ 이고, 점 $\\mathrm{Q}$ 의 좌표는 $(2 \\cos(t^{2}+t),2 \\sin(t^{2}+t))$ 이다. 세 점 $\\mathrm{O},P,Q$ 가 한 직선 위에 있지 않게 되는 실수 $t$ 에 대해서 함수 $S(t)$ 는 삼각형 $\\mathrm{OPQ}$ 의 넓이로 정의하고, 세 점 $\\mathrm{O},P,Q$ 가 한 직선 위에 있는 $t$ 에 대해서는 $S(t)=0$ 이라고 정의한다. $-\\sqrt{2 \\pi}<t<\\sqrt{2 \\pi}$ 일 때, $S(t)$ 를 구하시오."
+   ],
+   "answer": [
+    "$\\angle P O Q=t^{2}$ 이고, ${\\overline{O P}}=1$ , ${\\overline{O Q}}=2$ 이다. $t^{2}=0$ 또는 $t^{2}=\\pi$ 이면 $S(t)=0$ 이다. $0<t^{2}<\\pi$ 일 때, 삼각형 $\\mathrm{OPQ}$ 의 $\\angle \\mathrm{O}$ 의 크기는 $t^{2}$ 이므로 제시문 [가]에 의해 $S(t)=\\sin(t^{2})$ 이다. $\\pi<t^{2}<2 \\pi$ 일 때, 삼각형 $\\mathrm{OPQ}$ 의 $\\angle \\mathrm{O}$ 의 크기는 $2 \\pi-t^{2}$ 이므로 $S(t)=\\sin(2 \\pi-t^{2})=-\\sin(t^{2})$ 이다. 따라서 $S(t)=\\left|\\sin(t^{2})\\right|$ 이다. [그림]"
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "[2-2]",
+   "points": null,
+   "text": [
+    "제시문 [나]를 이용하여, 위 문항 [2-1]에서의 함수 $S(t)$ 가 미분가능하지 않은 실수 $t$ 의 값을 모두 구하시오. (단, $-\\sqrt{2 \\pi}<t<\\sqrt{2 \\pi}$ )"
+   ],
+   "answer": [
+    "$t$ 가 $-\\sqrt{\\pi}<t<0$ 또는 $0<t<\\sqrt{\\pi}$ 일 때 $S(t)=\\sin(t^{2})$ 이므로, 미분가능한 두 함수 $\\sin t$ 와 $t^{2}$ 의 합성함수인 $S(t)$ 는 미분가능하다. $t$ 가 $-\\sqrt{2 \\pi}<t<0-\\sqrt{\\pi}$ 또는 $\\sqrt{\\pi}<t<\\sqrt{2 \\pi}$ 일 때, $S(t)=-\\sin(t^{2})$ 이므로, 미분가능한 두 함수 $-\\sin t$ 와 $t^{2}$ 의 합성함수인 $S(t)$ 는 미분가능하다. 제시문 [나]와 [다]를 이용하여 $t=0,\\pm \\sqrt{\\pi}$ 일 때 미분가능성을 조사한다. $t=0$ 일 때 $\\lim_{h \\rightarrow 0}{\\frac{S(h)-S(0)}{h}=\\lim_{h \\rightarrow 0}{\\frac{1}{h}\\left|\\sin(h^{2})\\right|}=\\lim_{h \\rightarrow 0}{h \\frac{\\sin(h^{2})}{h^{2}}}=0}$ 따라서, $S(t)$ 는 $t=0$ 에서 미분가능하다. $t=\\sqrt{\\pi}$ 일 때 $\\lim_{h \\rightarrow 0}{\\frac{S(\\sqrt{\\pi}+h)-S(\\sqrt{\\pi})}{h}=\\lim_{h \\rightarrow 0}{\\frac{\\left|\\sin(\\pi+2 \\sqrt{\\pi}h+h^{2})\\right|}{h}}=\\lim_{h \\rightarrow 0}{\\frac{\\left|\\sin(2 \\sqrt{\\pi}h+h^{2})\\right|}{h}}}$ 이다. $h \\to 0+$ 인 경우 $0<h(2 \\sqrt{\\pi}+h)<\\pi$ 이므로, 제시문 [다]에 의해 $\\lim_{h \\rightarrow 0+}{\\frac{S(\\sqrt{\\pi}+h)-S(\\sqrt{\\pi})}{h}=\\lim_{h \\rightarrow 0+}{\\frac{\\sin(2 \\sqrt{\\pi}h+h^{2})}{h}}=\\lim_{h \\rightarrow 0+}{(2 \\sqrt{\\pi}+h)\\frac{\\sin(2 \\sqrt{\\pi}h+h^{2})}{(2 \\sqrt{\\pi}+h)h}}=2 \\sqrt{\\pi}}$ $h \\rightarrow 0-$ 인 경우 $-\\pi<h(2 \\sqrt{\\pi}+h)<0$ 이므로, 제시문 [다]에 의해 $\\lim_{h \\rightarrow 0-}{\\frac{S(\\sqrt{\\pi}+h)-S(\\sqrt{\\pi})}{h}=\\lim_{h \\rightarrow 0-}{\\frac{-\\sin(2 \\sqrt{\\pi}h+h^{2})}{h}}=-\\lim_{h \\rightarrow 0-}{(2 \\sqrt{\\pi}+h)\\frac{\\sin(2 \\sqrt{\\pi}h+h^{2})}{(2 \\sqrt{\\pi}+h)h}}}$",
+    "$=-2 \\sqrt{\\pi}$ 좌극한과 우극한이 다르므로 $S(t)$ 는 $t=\\sqrt{\\pi}$ 에서 미분가능하지 않다. 그리고 $S(t)=S(-t)$ 이므로 대칭에 의해 $S(t)$ 는 $t=-\\sqrt{\\pi}$ 에서 미분가능하지 않다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "3",
+   "label": "[2-3]",
+   "points": null,
+   "text": [
+    "$a$ 가 $1$ 보다 큰 실수이고, 원점이 $\\mathrm{O}$ 인 좌표평면에서 곡선 $y=\\frac{1}{x}$ 위의 한 점 $\\mathrm{R}\\left(a,\\frac{1}{a}\\right)$ 에 대하여 $x$ 축의 양의 방향과 반직선 $\\mathrm{OR}$ 이 이루는 각의 크기를 $\\theta$ (라디안)라 하자. 점 $\\mathrm{R}$ 에서의 접선이 원 $x^{2}+y^{2}=\\sqrt{3}$ 과 만날 때 $\\theta$ 의 범위를 구하시오."
+   ],
+   "answer": [
+    "직선 $\\mathrm{OR}$ 의 방정식은 $y=(\\tan \\theta)x$ 이고 곡선 $y=\\frac{1}{x}$ 과의 교점이 $\\mathrm{R}\\left(a,\\frac{1}{a}\\right)$ 이므로 $a \\tan \\theta=\\frac{1}{a}$ 를 만족하고 $a^{2}=\\cot \\theta$ 이다. [그림]",
+    "제시문 [나]에 의해, 점 $\\mathrm{R}\\left(a,\\frac{1}{a}\\right)$ 에서의 접선의 방정식은 $x+a^{2}y-2 a=0$ 이고 제시문 [라]에 의해 원점과 접선 사이의 거리는 $\\frac{2 a}{\\sqrt{1+a^{4}}}$ 가 된다. 이 거리가 원의 반지름 $3^{\\frac{1}{4}}$ 보다 작거나 같으면 접선과 원이 만나므로 $a$ 는 부등식 $4 a^{2}\\le \\sqrt{3}(1+a^{4})$ 을 만족한다. 이 부등식은 $a^{2}$ 에 관한 이차부등식이고 인수분해를 하면 $(\\sqrt{3}a^{2}-1)(a^{2}-\\sqrt{3})\\ge 0$ 을 만족하므로 $\\cot \\theta=a^{2}\\ge \\sqrt{3}$ 또는 $\\cot \\theta=a^{2}\\le \\frac{1}{\\sqrt{3}}$ 이다. $a>1$ 이므로 $\\cot \\theta>1$ 이고 $0<\\theta<\\frac{\\pi}{4}$ 이다. 따라서 $\\cot \\theta \\ge \\sqrt{3}$ 이고 $0<\\theta \\le \\frac{\\pi}{6}$ 이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "4",
+   "label": "[2-4]",
+   "points": null,
+   "text": [
+    "위 문항 [2-3]의 점 $\\mathrm{R}$ 을 접점으로 하는 곡선 $y=\\frac{1}{x}$ 의 접선이 원 $x^{2}+y^{2}=\\sqrt{3}$ 과 서로 다른 두 점 $\\mathrm{A},B$ 에서 만난다고 하자. 선분 $\\mathrm{AB}$ 의 길이를 $\\theta$ 의 함수 $l(\\theta)$ 로 나타낼 때, 극한값 $\\lim_{\\theta \\rightarrow 0+}{\\frac{\\left\\{l(\\theta)\\right\\}^{2}-4 \\sqrt{3}}{\\theta}}$ 을 구하시오.",
+    "$z$",
+    "$\\mathrm{P}(0 \\le Z \\le z)$",
+    "$0.64$",
+    "$0.24$",
+    "$0.84$",
+    "$0.30$",
+    "$1.00$",
+    "$0.34$",
+    "$1.28$",
+    "$0.40$",
+    "풀어보기",
+    "문제1. 어느 과수원에서 수확한 사과의 무게는 평균 $400 g$ , 표준편차 $50 g$ 인 정규분포를 따른다고 한다. 이 사과 중 무게가 $442 g$ 이상인 것을 $1$ 등급 상품으로 정한다. 이 과수원에서 수확한 사과 중 $100$ 개를 임의로 선택할 때, $1$ 등급 상품이 $24$ 개 이상일 확률을 오른쪽 표준정규분포표를 이용하여 구한 것은? (2012년 10월 전국연합)",
+    "① $0.10$ ② $0.16$ ③ $0.20$ ④ $0.26$ ⑤ $0.34$",
+    "문제2. 그림과 같이 중심이 $\\mathrm{O}$ 이고 길이가 $2$ 인 선분 $\\mathrm{AB}$ 를 지름으로 하는 반원 위에 $\\angle{\\mathrm{AOC}}=\\frac{\\pi}{2}$ 인 점 $\\mathrm{C}$ 가 있다. 호 $\\mathrm{BC}$ 위에 점 $\\mathrm{P}$ 와 호 $\\mathrm{CA}$ 위에 점 $\\mathrm{Q}$ 를 $\\overline{\\mathrm{PB}}=\\overline{\\mathrm{QC}}$ 가 되도록 잡고, 선분 $\\mathrm{AP}$ 위에 점 $\\mathrm{R}$ 를 $\\angle{\\mathrm{CQR}}=\\frac{\\pi}{2}$ 가 되도록 잡는다. 선분 $\\mathrm{AP}$ 와 선분 $\\mathrm{CO}$ 의 교점을 $\\mathrm{S}$ 라 하자. $\\angle{\\mathrm{PAB}}=\\theta$ 일 때, 삼각형 $\\mathrm{POB}$ 의 넓이를 $f \\left(\\theta \\right)$ , 사각형 $\\mathrm{CQRS}$ 의 넓이를 $g \\left(\\theta \\right)$ 라 하자. $\\lim_{\\theta \\rightarrow 0+}\\frac{3 f \\left(\\theta \\right)-2 g(\\theta)}{\\theta^{2}}$ 의 값은? $\\left(\\pi \\le{\\\\}\\right.$ 단, $0<\\theta<\\frac{\\pi}{4}\\right)$",
+    "(2022년 11월 대수능)",
+    "[그림]",
+    "① $1$ ② $2$ ③ $3$ ④ $4$ ⑤ $5$"
+   ],
+   "answer": [
+    "문항 [2-3]의 풀이에서 접선 $x+a^{2}y-2 a=0$ 에 대하여 원점 $\\mathrm{O}$ 에서 내린 수선의 발을 $\\mathrm{T}$ 라 하면 선분 $\\mathrm{OT}$ 의 길이는 원점과 접선 사이의 거리 $\\frac{2 a}{\\sqrt{1+a^{4}}}$ 와 같다. 삼각형 $\\mathrm{OTA}$ 는 직각삼각형이므로 피타고라스 정리에 의해 $\\left\\{\\frac{l(\\theta)}{2}\\right\\}^{2}=\\sqrt{3}-\\left(\\frac{2 a}{\\sqrt{1+a^{4}}}\\right)^{2}$ 이고 $\\frac{\\left\\{l(\\theta)\\right\\}-4 \\sqrt{3}}{\\theta}=\\frac{-16 a^{2}}{(1+a^{4})\\theta}=\\frac{-16 \\cot \\theta}{(1+\\cot^{2}\\theta)\\theta}=-16 \\frac{\\sin \\theta \\cos \\theta}{\\theta}$ 따라서, $\\lim_{\\theta \\rightarrow 0+}{\\frac{\\left\\{l(\\theta)\\right\\}^{2}-4 \\sqrt{3}}{\\theta}=-16}$ 이다."
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "중복조합"
+}

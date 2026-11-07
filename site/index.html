@@ -516,7 +516,7 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
   <div class="foot" id="footJapan" hidden>일본 대학 입시 수학(2021–2026) 한국어 번역 문제집·해설집에서 난이도 ★4 이상과 ★3 전부, ★2 일부를 골랐습니다. 문제와 해설은 원본 이미지 그대로 보여 줍니다.<br>자기 점검 결과는 이 브라우저에만 저장됩니다.</div>
   <div class="foot" id="footKiller">문항: ShrekMath 수능형 창작 문항 은행(2022 개정 교육과정) · 분석·그림·변형 문항은 ShrekMath가 새로 썼습니다.<br>
   기록은 브라우저(localStorage)에만 저장됩니다. 기기를 바꾸면 '기록 내보내기'로 옮기세요.</div>
-  <div class="foot" id="footEssay" hidden>논술 문제·예시답안·채점기준: 각 대학 공개 자료 (수리논술 나침반 ⅩⅥ·ⅩⅧ, 부산수학나침반 엮음) · 그림이 있는 문제는 원본 자료를 함께 보세요.<br>
+  <div class="foot" id="footEssay" hidden>논술 문제·예시답안·채점기준: 각 대학 공개 자료 (수리논술 나침반 ⅩⅤ~ⅩⅧ, 부산수학나침반 엮음) · 그림이 있는 문제는 원본 자료를 함께 보세요.<br>
   자기 채점 점수는 이 브라우저에만 저장됩니다.</div>
 </div>
 
@@ -795,11 +795,11 @@ function homeEssay(){
   if(!L.length){grid.append(el('div','empty','조건에 맞는 문제가 없어요'));return}
   let last='',track=null;
   for(const x of L){
-    if(x.univ!==last){last=x.univ;track=newRow(x.univ,L.filter(y=>y.univ===x.univ).length)}
+    const g=x.univ+(x.year?' · '+x.year+'학년도':'');if(g!==last){last=g;track=newRow(g,L.filter(y=>y.univ+(y.year?' · '+y.year+'학년도':'')===g).length)}
     const c=el('button','card');const rec=S.erec[x.num];c.style.setProperty('--dc','var(--gold)');c.dataset.big=String(x.n);
     c.innerHTML=`<div class="top"><span><span class="num">#E${String(x.num).padStart(3,'0')}</span> · 문제 ${x.n}</span><span class="subj" style="--sc:var(--s6)">${x.points?x.points+'점':'논술'}</span></div>
       <div class="topic">${esc(x.title)}</div>
-      <div class="meta"><span>소문항 ${x.nsubs} · 제한 ${x.minutes}분</span><span><span class="tag">${esc(x.field||'')}</span></span></div>`;
+      <div class="meta"><span>${x.img?'원본 이미지':'소문항 '+x.nsubs} · 제한 ${x.minutes}분</span><span><span class="tag">${esc(x.field||'')}</span></span></div>`;
     c.insertBefore(artEl(x.field||'','논술',x.art,x.id,'var(--gold)',x.snip),c.querySelector('.topic'));
     if(rec) c.append(el('span','st '+(rec.total?'ok':'skip'),rec.total?`${rec.score}/${rec.total}`:'열람'));
     c.onclick=()=>location.hash='e'+x.num;track.append(c);
@@ -1076,6 +1076,7 @@ async function openEssay(n,c){
 }
 function renderEssaySheet(){
   const root=$('#examText');root.innerHTML='';
+  if(E.qimg&&E.qimg.length){E.qimg.forEach(p=>{const im=el('img','pg');im.src=jimg(p);im.alt='문제';root.append(im)});document.documentElement.style.setProperty('--fs',S.fs);$('#exam').classList.toggle('open',unlocked);$('#exam').classList.remove('fold');$('#foldBtn').textContent='접기';return}
   const p0=el('p');p0.append(el('span','qno','문제 '+E.n));if(E.head)p0.append(md(E.head));root.append(p0);
   if(E.pre.length){root.append(el('div','sect','제시문'));E.pre.forEach(t=>root.append(el('p',null,md(t))))}
   if(E.passage.length){const bx=el('div','box');E.passage.forEach(t=>bx.append(el('div',null,md(t))));root.append(bx)}
@@ -1100,10 +1101,11 @@ function renderEssayCard(p){
   if(p.k==='intro'){w.append(head('intro'));const b=el('div','body');b.append(el('h2',null,esc(E.univ)));
     const inf=E.info||{};
     b.append(el('dl','kv',`<dt>문제</dt><dd>${esc(E.title)}${E.points?' · '+E.points+'점':''}</dd><dt>소문항</dt><dd>${E.subs.map(s=>s.label.replace(/[\[\]]/g,'')+(s.points?'('+s.points+'점)':'')).join(' · ')}</dd>${inf.time?`<dt>시험 시간</dt><dd>${esc(inf.time)} → 이 문제 ${E.minutes}분</dd>`:''}${inf.field?`<dt>출제 분야</dt><dd>${esc(inf.field)}</dd>`:''}${inf.concepts?`<dt>핵심 개념</dt><dd>${esc(inf.concepts)}</dd>`:''}${inf.min?`<dt>수능 최저</dt><dd>${esc(inf.min)}</dd>`:''}`));
-    b.append(el('p','note','그림이 들어간 문제는 [그림]으로 표시됩니다. 원본 자료(수리논술 나침반)에서 그림을 확인하세요.'));w.append(b);return w}
+    b.append(el('p','note',E.qimg?'문제지와 예시답안은 수리논술 나침반 원본 이미지 그대로입니다. 그림을 누르면 크게 볼 수 있어요.':'그림이 들어간 문제는 [그림]으로 표시됩니다. 원본 자료(수리논술 나침반)에서 그림을 확인하세요.'));w.append(b);return w}
   if(p.k==='answer'){const s=E.subs[p.i];w.append(head('answer',`${s.label.replace(/[\[\]]/g,'')} · ${p.i+1}/${p.n}`));const b=el('div','body anscard');
     if(s.text.length){const q=el('div','vbody');q.innerHTML=s.text.map(md).join('<br>');b.append(q)}
     b.append(el('h3',null,'대학 발표 예시답안'+(s.points?` (${s.points}점)`:'')));
+    if(E.aimg&&E.aimg.length){E.aimg.forEach(p=>{const im=el('img','pg');im.src=jimg(p);im.alt='예시답안';b.append(im)});w.append(b);return w}
     (s.answer.length?s.answer:E.answer).forEach(t=>b.append(el('p',null,md(t))));
     if(!s.answer.length&&!E.answer.length)b.append(el('p','note','이 소문항의 예시답안은 자료에 없습니다.'));
     w.append(b);return w}
