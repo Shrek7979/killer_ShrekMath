@@ -205,6 +205,8 @@ def past_items(start, extra=False):
     if not os.path.exists(p):
         return []
     ans = json.load(open(os.path.join(ROOT, 'src/past/answers.json'), encoding='utf-8'))
+    ep = os.path.join(ROOT, 'src/past/en.json')
+    EN = json.load(open(ep, encoding='utf-8')) if os.path.exists(ep) else {}   # 영어 번역(시범)
     MON = {'6월': '6월 모의평가', '9월': '9월 모의평가', '11월': '수능'}
     out = []
     for x in json.load(open(p, encoding='utf-8')):
@@ -220,6 +222,8 @@ def past_items(start, extra=False):
                     'univ': f"{x['year']}학년도 {MON[x['month']]}", 'track': f"{x['part']} {x['num']}번", 'part': x['part'], 'subj': subj,
                     'text': f"{x['year']}학년도 {MON[x['month']]} {x['part']} {x['num']}번", 'qimg': [f], 'simg': [],
                     'answer': a, 'choice': x['choice']})
+        if x['id'] in EN:
+            out[-1]['en'] = EN[x['id']]
     return out
 
 
