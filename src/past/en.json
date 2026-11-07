@@ -2741,5 +2741,802 @@
   {
    "p": "whose $x$-coordinate and $y$-coordinate are both at least 0. The area of the region represented by these points is $\\dfrac{q}{p}$. Find the value of $p+q$. (Here O is the origin, and $p$ and $q$ are relatively prime natural numbers.) [4 points]"
   }
+ ],
+ "2023-11-c11": [
+  {
+   "p": "As shown in the figure, quadrilateral ABCD is inscribed in a circle, and"
+  },
+  {
+   "eq": "\\overline{\\mathrm{AB}}=5,\\quad \\overline{\\mathrm{AC}}=3\\sqrt{5},\\quad \\overline{\\mathrm{AD}}=7,\\quad \\angle\\mathrm{BAC}=\\angle\\mathrm{CAD}."
+  },
+  {
+   "p": "What is the radius of this circle? [4 points]"
+  },
+  {
+   "fig": "See the original for the figure."
+  },
+  {
+   "ch": [
+    "\\dfrac{5\\sqrt{2}}{2}",
+    "\\dfrac{8\\sqrt{5}}{5}",
+    "\\dfrac{5\\sqrt{5}}{3}",
+    "\\dfrac{8\\sqrt{2}}{3}",
+    "\\dfrac{9\\sqrt{3}}{4}"
+   ]
+  }
+ ],
+ "2023-11-c12": [
+  {
+   "p": "A function $f(x)$ continuous on the set of all real numbers satisfies the following condition."
+  },
+  {
+   "box": [
+    "When $n-1\\le x<n$, $|f(x)|=|6(x-n+1)(x-n)|$.",
+    "(Here $n$ is a natural number.)"
+   ]
+  },
+  {
+   "p": "When the function defined on the open interval $(0,\\,4)$"
+  },
+  {
+   "eq": "g(x)=\\int_{0}^{x}f(t)\\,dt-\\int_{x}^{4}f(t)\\,dt"
+  },
+  {
+   "p": "has its minimum value 0 at $x=2$, what is the value of $\\displaystyle\\int_{\\frac{1}{2}}^{4}f(x)\\,dx$? [4 points]"
+  },
+  {
+   "ch": [
+    "-\\dfrac{3}{2}",
+    "-\\dfrac{1}{2}",
+    "\\dfrac{1}{2}",
+    "\\dfrac{3}{2}",
+    "\\dfrac{5}{2}"
+   ]
+  }
+ ],
+ "2023-11-c13": [
+  {
+   "p": "For a natural number $m\\ (m\\ge 2)$, let $f(m)$ be the number of natural numbers $n$, at least 2, such that some $n$th root of $m^{12}$ is an integer. What is the value of $\\displaystyle\\sum_{m=2}^{9}f(m)$? [4 points]"
+  },
+  {
+   "ch": [
+    "37",
+    "42",
+    "47",
+    "52",
+    "57"
+   ]
+  }
+ ],
+ "2023-11-c14": [
+  {
+   "p": "For a polynomial function $f(x)$, the function $g(x)$ is defined as follows."
+  },
+  {
+   "eq": "g(x)=\\begin{cases} x & (x<-1\\ \\text{or}\\ x>1) \\\\ f(x) & (-1\\le x\\le 1) \\end{cases}"
+  },
+  {
+   "p": "For the function $h(x)=\\displaystyle\\lim_{t\\to 0+}g(x+t)\\times\\lim_{t\\to 2+}g(x+t)$, which of the statements in <Statements> are correct? [4 points]"
+  },
+  {
+   "box": [
+    "<Statements>",
+    "a. $h(1)=3$",
+    "b. The function $h(x)$ is continuous on the set of all real numbers.",
+    "c. If the function $g(x)$ is decreasing on the closed interval $[-1,\\,1]$ and $g(-1)=-2$, then the function $h(x)$ has a minimum value on the set of all real numbers."
+   ]
+  },
+  {
+   "ch": [
+    "\\text{a}",
+    "\\text{b}",
+    "\\text{a, b}",
+    "\\text{a, c}",
+    "\\text{b, c}"
+   ]
+  }
+ ],
+ "2023-11-c15": [
+  {
+   "p": "Over all sequences $\\{a_n\\}$ whose terms are all natural numbers and which satisfy the following conditions, let $M$ and $m$ be the maximum and minimum values of $a_9$, respectively. What is the value of $M+m$? [4 points]"
+  },
+  {
+   "box": [
+    "(A) $a_7=40$",
+    "(B) For every natural number $n$,",
+    "$a_{n+2}=\\begin{cases} a_{n+1}+a_n & (\\text{if } a_{n+1} \\text{ is not a multiple of } 3) \\\\ \\dfrac{1}{3}a_{n+1} & (\\text{if } a_{n+1} \\text{ is a multiple of } 3) \\end{cases}$"
+   ]
+  },
+  {
+   "ch": [
+    "216",
+    "218",
+    "220",
+    "222",
+    "224"
+   ]
+  }
+ ],
+ "2023-11-c20": [
+  {
+   "p": "The velocity $v(t)$ and acceleration $a(t)$ at time $t\\ (t\\ge 0)$ of a point P moving on a number line satisfy the following conditions."
+  },
+  {
+   "box": [
+    "(A) When $0\\le t\\le 2$, $v(t)=2t^3-8t$.",
+    "(B) When $t\\ge 2$, $a(t)=6t+4$."
+   ]
+  },
+  {
+   "p": "Find the distance traveled by point P from time $t=0$ to $t=3$. [4 points]"
+  }
+ ],
+ "2023-11-c21": [
+  {
+   "p": "For a natural number $n$, let the function $f(x)$ be"
+  },
+  {
+   "eq": "f(x)=\\begin{cases} |3^{x+2}-n| & (x<0) \\\\ |\\log_2(x+4)-n| & (x\\ge 0) \\end{cases}"
+  },
+  {
+   "p": "For a real number $t$, let $g(t)$ be the number of distinct real roots of the equation $f(x)=t$ in $x$. Find the sum of all natural numbers $n$ for which the maximum value of the function $g(t)$ is 4. [4 points]"
+  }
+ ],
+ "2023-11-c22": [
+  {
+   "p": "When a cubic function $f(x)$ with leading coefficient 1 and a function $g(x)$ continuous on the set of all real numbers satisfy the following conditions, find the value of $f(4)$. [4 points]"
+  },
+  {
+   "box": [
+    "(A) For every real number $x$, $f(x)=f(1)+(x-1)f'(g(x))$.",
+    "(B) The minimum value of the function $g(x)$ is $\\dfrac{5}{2}$.",
+    "(C) $f(0)=-3$, $f(g(1))=6$"
+   ]
+  }
+ ],
+ "2023-11-k28": [
+  {
+   "p": "The continuous random variable $X$ takes values in the range $0\\le X\\le a$, and the graph of the probability density function of $X$ is as shown in the figure."
+  },
+  {
+   "fig": "See the original for the figure."
+  },
+  {
+   "p": "When $\\mathrm{P}(X\\le b)-\\mathrm{P}(X\\ge b)=\\dfrac{1}{4}$ and $\\mathrm{P}(X\\le\\sqrt{5})=\\dfrac{1}{2}$, what is the value of $a+b+c$? (Here $a$, $b$, $c$ are constants.) [4 points]"
+  },
+  {
+   "ch": [
+    "\\dfrac{11}{2}",
+    "6",
+    "\\dfrac{13}{2}",
+    "7",
+    "\\dfrac{15}{2}"
+   ]
+  }
+ ],
+ "2023-11-k29": [
+  {
+   "p": "There are 6 cards; on the front of each, one of the natural numbers from 1 to 6 is written, and on the back of each, 0 is written. As shown in the figure, for each natural number $k$ at most 6, the cards are placed so that the natural number $k$ shows in the $k$th position."
+  },
+  {
+   "fig": "See the original for the figure."
+  },
+  {
+   "p": "Using these 6 cards and one die, the following trial is performed."
+  },
+  {
+   "box": [
+    "Roll the die once; if the number rolled is $k$,",
+    "flip the card in the $k$th position over once and put it back in its place."
+   ]
+  },
+  {
+   "p": "After repeating this trial 3 times, given that the sum of all numbers showing on the 6 cards is even, the probability that the die showed 1 exactly once is $\\dfrac{q}{p}$. Find the value of $p+q$. (Here $p$ and $q$ are relatively prime natural numbers.) [4 points]"
+  }
+ ],
+ "2023-11-k30": [
+  {
+   "p": "For the set $X=\\{x\\mid x \\text{ is a natural number at most } 10\\}$, find the number of functions $f:X\\to X$ satisfying the following conditions. [4 points]"
+  },
+  {
+   "box": [
+    "(A) For every natural number $x$ at most 9, $f(x)\\le f(x+1)$.",
+    "(B) When $1\\le x\\le 5$, $f(x)\\le x$; when $6\\le x\\le 10$, $f(x)\\ge x$.",
+    "(C) $f(6)=f(5)+6$"
+   ]
+  }
+ ],
+ "2023-11-m28": [
+  {
+   "p": "As shown in the figure, on the semicircle with diameter AB, a segment of length 2 with center O, there is a point C such that $\\angle\\mathrm{AOC}=\\dfrac{\\pi}{2}$. Take a point P on arc BC and a point Q on arc CA so that $\\overline{\\mathrm{PB}}=\\overline{\\mathrm{QC}}$, and take a point R on segment AP so that $\\angle\\mathrm{CQR}=\\dfrac{\\pi}{2}$. Let S be the intersection of segment AP and segment CO."
+  },
+  {
+   "p": "When $\\angle\\mathrm{PAB}=\\theta$, let $f(\\theta)$ be the area of triangle POB and $g(\\theta)$ the area of quadrilateral CQRS. What is the value of"
+  },
+  {
+   "eq": "\\lim_{\\theta\\to 0+}\\frac{3f(\\theta)-2g(\\theta)}{\\theta^2}\\,?"
+  },
+  {
+   "p": "(Here $0<\\theta<\\dfrac{\\pi}{4}$.) [4 points]"
+  },
+  {
+   "fig": "See the original for the figure."
+  },
+  {
+   "ch": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ]
+  }
+ ],
+ "2023-11-m29": [
+  {
+   "p": "For three constants $a$, $b$, $c$, the function $f(x)=ae^{2x}+be^{x}+c$ satisfies the following conditions."
+  },
+  {
+   "box": [
+    "(A) $\\displaystyle\\lim_{x\\to-\\infty}\\frac{f(x)+6}{e^{x}}=1$",
+    "(B) $f(\\ln 2)=0$"
+   ]
+  },
+  {
+   "p": "When $g(x)$ is the inverse function of $f(x)$, $\\displaystyle\\int_{0}^{14}g(x)\\,dx=p+q\\ln 2$. Find the value of $p+q$. (Here $p$, $q$ are rational numbers, and $\\ln 2$ is irrational.) [4 points]"
+  }
+ ],
+ "2023-11-m30": [
+  {
+   "p": "For a cubic function $f(x)$ with positive leading coefficient and the function $g(x)=e^{\\sin\\pi x}-1$, the composite function $h(x)=g(f(x))$ defined on the set of all real numbers satisfies the following conditions."
+  },
+  {
+   "box": [
+    "(A) The function $h(x)$ has a local maximum value 0 at $x=0$.",
+    "(B) The number of distinct real roots of the equation $h(x)=1$ in the open interval $(0,\\,3)$ is 7."
+   ]
+  },
+  {
+   "p": "When $f(3)=\\dfrac{1}{2}$ and $f'(3)=0$, $f(2)=\\dfrac{q}{p}$. Find the value of $p+q$. (Here $p$ and $q$ are relatively prime natural numbers.) [4 points]"
+  }
+ ],
+ "2023-11-g28": [
+  {
+   "p": "There are a hyperbola $C$ with two foci $\\mathrm{F}(c,\\,0)$, $\\mathrm{F'}(-c,\\,0)\\ (c>0)$ and a point A on the $y$-axis. Let P be the point where hyperbola $C$ meets segment AF, and P' the point where it meets segment AF'. When line AF is parallel to one of the asymptotes of hyperbola $C$ and"
+  },
+  {
+   "eq": "\\overline{\\mathrm{AP}}:\\overline{\\mathrm{PP'}}=5:6,\\qquad \\overline{\\mathrm{PF}}=1,"
+  },
+  {
+   "p": "what is the length of the transverse axis of hyperbola $C$? [4 points]"
+  },
+  {
+   "ch": [
+    "\\dfrac{13}{6}",
+    "\\dfrac{9}{4}",
+    "\\dfrac{7}{3}",
+    "\\dfrac{29}{12}",
+    "\\dfrac{5}{2}"
+   ]
+  }
+ ],
+ "2023-11-g29": [
+  {
+   "p": "On a plane $\\alpha$ there is a trapezoid ABCD with $\\overline{\\mathrm{AB}}=\\overline{\\mathrm{CD}}=\\overline{\\mathrm{AD}}=2$ and $\\angle\\mathrm{ABC}=\\angle\\mathrm{BCD}=\\dfrac{\\pi}{3}$. For two points P, Q on plane $\\alpha$ satisfying the following conditions, find the value of $\\overrightarrow{\\mathrm{CP}}\\cdot\\overrightarrow{\\mathrm{DQ}}$. [4 points]"
+  },
+  {
+   "box": [
+    "(A) $\\overrightarrow{\\mathrm{AC}}=2(\\overrightarrow{\\mathrm{AD}}+\\overrightarrow{\\mathrm{BP}})$",
+    "(B) $\\overrightarrow{\\mathrm{AC}}\\cdot\\overrightarrow{\\mathrm{PQ}}=6$",
+    "(C) $2\\times\\angle\\mathrm{BQA}=\\angle\\mathrm{PBQ}<\\dfrac{\\pi}{2}$"
+   ]
+  }
+ ],
+ "2023-11-g30": [
+  {
+   "p": "There is a regular tetrahedron ABCD in coordinate space. Let $S$ be the sphere centered at the circumcenter of the equilateral triangle BCD and passing through point B. Let P be the point other than B where sphere $S$ meets segment AB, Q the point other than C where sphere $S$ meets segment AC, and R the point other than D where sphere $S$ meets segment AD, and let $\\alpha$ be the plane tangent to sphere $S$ at point P."
+  },
+  {
+   "p": "When the radius of sphere $S$ is 6, the area of the orthogonal projection of triangle PQR onto plane $\\alpha$ is $k$. Find the value of $k^2$. [4 points]"
+  }
+ ],
+ "2023-09-c12": [
+  {
+   "p": "For a real number $t\\ (t>0)$, let A and B be the two points where the line $y=x+t$ meets the curve $y=x^2$. Let C be the point other than A where the line through A parallel to the $x$-axis meets the curve $y=x^2$, and let H be the foot of the perpendicular from point B to segment AC. What is the value of"
+  },
+  {
+   "eq": "\\lim_{t\\to 0+}\\frac{\\overline{\\mathrm{AH}}-\\overline{\\mathrm{CH}}}{t}\\,?"
+  },
+  {
+   "p": "(Here the $x$-coordinate of point A is positive.) [4 points]"
+  },
+  {
+   "ch": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ]
+  }
+ ],
+ "2023-09-c13": [
+  {
+   "p": "As shown in the figure, there are two points C, D on the arc AB of the semicircle with diameter AB. With O the midpoint of segment AB, the two segments AD and CO meet at point E, and"
+  },
+  {
+   "eq": "\\overline{\\mathrm{CE}}=4,\\quad \\overline{\\mathrm{ED}}=3\\sqrt{2},\\quad \\angle\\mathrm{CEA}=\\frac{3}{4}\\pi."
+  },
+  {
+   "p": "What is the value of $\\overline{\\mathrm{AC}}\\times\\overline{\\mathrm{CD}}$? [4 points]"
+  },
+  {
+   "fig": "See the original for the figure."
+  },
+  {
+   "ch": [
+    "6\\sqrt{10}",
+    "10\\sqrt{5}",
+    "16\\sqrt{2}",
+    "12\\sqrt{5}",
+    "20\\sqrt{2}"
+   ]
+  }
+ ],
+ "2023-09-c14": [
+  {
+   "p": "For a cubic function $f(x)$ with leading coefficient 1, $f(0)=0$ and $f(1)=0$, let the function $g(t)$ be"
+  },
+  {
+   "eq": "g(t)=\\int_{t}^{t+1}f(x)\\,dx-\\int_{0}^{1}|f(x)|\\,dx."
+  },
+  {
+   "p": "Which of the statements in <Statements> are correct? [4 points]"
+  },
+  {
+   "box": [
+    "<Statements>",
+    "a. If $g(0)=0$, then $g(-1)<0$.",
+    "b. If $g(-1)>0$, then there exists a real number $k<-1$ satisfying $f(k)=0$.",
+    "c. If $g(-1)>1$, then $g(0)<-1$."
+   ]
+  },
+  {
+   "ch": [
+    "\\text{a}",
+    "\\text{a, b}",
+    "\\text{a, c}",
+    "\\text{b, c}",
+    "\\text{a, b, c}"
+   ]
+  }
+ ],
+ "2023-09-c15": [
+  {
+   "p": "The sequence $\\{a_n\\}$ satisfies the following conditions."
+  },
+  {
+   "box": [
+    "(A) For every natural number $k$, $a_{4k}=r^k$.",
+    "(Here $r$ is a constant with $0<|r|<1$.)",
+    "(B) $a_1<0$, and for every natural number $n$,",
+    "$a_{n+1}=\\begin{cases} a_n+3 & (|a_n|<5) \\\\ -\\dfrac{1}{2}a_n & (|a_n|\\ge 5) \\end{cases}$"
+   ]
+  },
+  {
+   "p": "When $p$ is the number of natural numbers $m$ at most 100 satisfying $|a_m|\\ge 5$, what is the value of $p+a_1$? [4 points]"
+  },
+  {
+   "ch": [
+    "8",
+    "10",
+    "12",
+    "14",
+    "16"
+   ]
+  }
+ ],
+ "2023-09-c20": [
+  {
+   "p": "For a constant $k\\ (k<0)$, the graphs of the two functions"
+  },
+  {
+   "eq": "f(x)=x^3+x^2-x,\\qquad g(x)=4|x|+k"
+  },
+  {
+   "p": "meet at exactly 2 points. Let $S$ be the area of the region enclosed by the graphs of the two functions. Find the value of $30\\times S$. [4 points]"
+  }
+ ],
+ "2023-09-c21": [
+  {
+   "p": "As shown in the figure, there are two points $\\mathrm{P}(a,\\,2^a)$ and $\\mathrm{Q}(b,\\,2^b)$ on the curve $y=2^x$. Let $m$ be the slope of line PQ. Let A and B be the points where the line through P with slope $-m$ meets the $x$-axis and the $y$-axis, respectively, and let C be the point where the line through Q with slope $-m$ meets the $x$-axis. When"
+  },
+  {
+   "eq": "\\overline{\\mathrm{AB}}=4\\overline{\\mathrm{PB}},\\qquad \\overline{\\mathrm{CQ}}=3\\overline{\\mathrm{AB}},"
+  },
+  {
+   "p": "find the value of $90\\times(a+b)$. (Here $0<a<b$.) [4 points]"
+  },
+  {
+   "fig": "See the original for the figure."
+  }
+ ],
+ "2023-09-c22": [
+  {
+   "p": "There is a cubic function $f(x)$ with leading coefficient 1 that has a local maximum value 8 at $x=3$. For a real number $t$, let the function $g(x)$ be"
+  },
+  {
+   "eq": "g(x)=\\begin{cases} f(x) & (x\\ge t) \\\\ -f(x)+2f(t) & (x<t) \\end{cases}"
+  },
+  {
+   "p": "and let $h(t)$ be the number of distinct real roots of the equation $g(x)=0$. When there are exactly two values of $a$ at which the function $h(t)$ is discontinuous at $t=a$, find the value of $f(8)$. [4 points]"
+  }
+ ],
+ "2023-09-k28": [
+  {
+   "p": "Three distinct numbers are chosen at random from the natural numbers 1 through 10. What is the probability that the product of the three chosen numbers is a multiple of 5 and their sum is a multiple of 3? [4 points]"
+  },
+  {
+   "ch": [
+    "\\dfrac{3}{20}",
+    "\\dfrac{1}{6}",
+    "\\dfrac{11}{60}",
+    "\\dfrac{1}{5}",
+    "\\dfrac{13}{60}"
+   ]
+  }
+ ],
+ "2023-09-k29": [
+  {
+   "p": "A pouch contains 6 cards with the natural numbers from 1 to 6 written on them, one each. A trial is performed in which one card is drawn at random from the pouch, the number on it is checked, and the card is put back. Let $\\overline{X}$ be the mean of the four numbers checked when this trial is repeated 4 times. When $\\mathrm{P}\\left(\\overline{X}=\\dfrac{11}{4}\\right)=\\dfrac{q}{p}$, find the value of $p+q$. (Here $p$ and $q$ are relatively prime natural numbers.) [4 points]"
+  }
+ ],
+ "2023-09-k30": [
+  {
+   "p": "For the set $X=\\{1,\\,2,\\,3,\\,4,\\,5\\}$ and a function $f:X\\to X$, let $A$ be the range of $f$ and $B$ the range of the composite function $f\\circ f$. Find the number of functions $f$ satisfying the following conditions. [4 points]"
+  },
+  {
+   "box": [
+    "(A) $n(A)\\le 3$",
+    "(B) $n(A)=n(B)$",
+    "(C) For every element $x$ of the set $X$, $f(x)\\ne x$."
+   ]
+  }
+ ],
+ "2023-09-m28": [
+  {
+   "p": "As shown in the figure, there is a sector OAB with radius 1 and central angle $\\dfrac{\\pi}{2}$. For a point P on arc AB, take a point C on arc PB and a point D on segment OA so that $\\overline{\\mathrm{PA}}=\\overline{\\mathrm{PC}}=\\overline{\\mathrm{PD}}$. Let E be the point where the line through D parallel to segment OP meets segment PA."
+  },
+  {
+   "p": "When $\\angle\\mathrm{POA}=\\theta$, let $f(\\theta)$ be the area of triangle CDP and $g(\\theta)$ the area of triangle EDA. What is the value of"
+  },
+  {
+   "eq": "\\lim_{\\theta\\to 0+}\\frac{g(\\theta)}{\\theta^2\\times f(\\theta)}\\,?"
+  },
+  {
+   "p": "(Here $0<\\theta<\\dfrac{\\pi}{4}$.) [4 points]"
+  },
+  {
+   "fig": "See the original for the figure."
+  },
+  {
+   "ch": [
+    "\\dfrac{1}{8}",
+    "\\dfrac{1}{4}",
+    "\\dfrac{3}{8}",
+    "\\dfrac{1}{2}",
+    "\\dfrac{5}{8}"
+   ]
+  }
+ ],
+ "2023-09-m29": [
+  {
+   "p": "There is a function $f(x)=e^x+x$. For a positive number $t$, when the distance between the points $(t,\\,0)$ and $(x,\\,f(x))$ is minimal at $x=s$, let $g(t)$ be the value of the real number $f(s)$. When $h(t)$ is the inverse function of $g(t)$, find the value of $h'(1)$. [4 points]"
+  }
+ ],
+ "2023-09-m30": [
+  {
+   "p": "A quartic function $f(x)$ with leading coefficient 1 and a function $g(x)$ with $g(x)\\ge 0$ on the interval $(0,\\,\\infty)$ satisfy the following conditions."
+  },
+  {
+   "box": [
+    "(A) For every real number $x\\le -3$, $f(x)\\ge f(-3)$.",
+    "(B) For every real number $x>-3$, $g(x+3)\\{f(x)-f(0)\\}^2=f'(x)$."
+   ]
+  },
+  {
+   "p": "When $\\displaystyle\\int_{4}^{5}g(x)\\,dx=\\frac{q}{p}$, find the value of $p+q$. (Here $p$ and $q$ are relatively prime natural numbers.) [4 points]"
+  }
+ ],
+ "2023-09-g28": [
+  {
+   "p": "For a real number $p\\ (p\\ge 1)$ and the function $f(x)=(x+a)^2$, let A be the point where the two parabolas"
+  },
+  {
+   "eq": "C_1:\\ y^2=4x,\\qquad C_2:\\ (y-3)^2=4p\\{x-f(p)\\}"
+  },
+  {
+   "p": "meet in the first quadrant. Let $\\mathrm{F_1}$, $\\mathrm{F_2}$ be the foci of parabolas $C_1$, $C_2$, respectively. What is the value of the constant $a$ such that there is exactly one $p$ satisfying $\\overline{\\mathrm{AF_1}}=\\overline{\\mathrm{AF_2}}$? [4 points]"
+  },
+  {
+   "ch": [
+    "-\\dfrac{3}{4}",
+    "-\\dfrac{5}{8}",
+    "-\\dfrac{1}{2}",
+    "-\\dfrac{3}{8}",
+    "-\\dfrac{1}{4}"
+   ]
+  }
+ ],
+ "2023-09-g29": [
+  {
+   "p": "In coordinate space there are two spheres"
+  },
+  {
+   "eq": "S_1:\\ x^2+y^2+(z-2)^2=4,\\qquad S_2:\\ x^2+y^2+(z+7)^2=49."
+  },
+  {
+   "p": "Let $\\alpha$ be the plane that passes through the point $\\mathrm{A}(\\sqrt{5},\\,0,\\,0)$, is perpendicular to the $zx$-plane, and is tangent to sphere $S_1$ at a point with positive $z$-coordinate. Let $C$ be the circle formed where sphere $S_2$ meets plane $\\alpha$, let B be the point on circle $C$ with the least $z$-coordinate, and let $\\beta$ be the plane tangent to $S_2$ at point B."
+  },
+  {
+   "p": "When the area of the orthogonal projection of circle $C$ onto plane $\\beta$ is $\\dfrac{q}{p}\\pi$, find the value of $p+q$. (Here $p$ and $q$ are relatively prime natural numbers.) [4 points]"
+  }
+ ],
+ "2023-09-g30": [
+  {
+   "p": "There are two points $\\mathrm{A}(-2,\\,2)$ and $\\mathrm{B}(2,\\,2)$ in the coordinate plane. Two points P, Q moving on the figure represented by the points X satisfying"
+  },
+  {
+   "eq": "(|\\overrightarrow{\\mathrm{AX}}|-2)(|\\overrightarrow{\\mathrm{BX}}|-2)=0,\\qquad |\\overrightarrow{\\mathrm{OX}}|\\ge 2"
+  },
+  {
+   "p": "satisfy the following conditions."
+  },
+  {
+   "box": [
+    "(A) For $\\vec{u}=(1,\\,0)$, $(\\overrightarrow{\\mathrm{OP}}\\cdot\\vec{u})(\\overrightarrow{\\mathrm{OQ}}\\cdot\\vec{u})\\ge 0$.",
+    "(B) $|\\overrightarrow{\\mathrm{PQ}}|=2$"
+   ]
+  },
+  {
+   "p": "When the length of the figure represented by the set of points Y satisfying $\\overrightarrow{\\mathrm{OY}}=\\overrightarrow{\\mathrm{OP}}+\\overrightarrow{\\mathrm{OQ}}$ is $\\dfrac{q}{p}\\sqrt{3}\\pi$, find the value of $p+q$. (Here O is the origin, and $p$ and $q$ are relatively prime natural numbers.) [4 points]"
+  }
+ ],
+ "2023-06-c12": [
+  {
+   "p": "When an arithmetic sequence $\\{a_n\\}$ with common difference 3 satisfies the following conditions, what is the value of $a_{10}$? [4 points]"
+  },
+  {
+   "box": [
+    "(A) $a_5\\times a_7<0$",
+    "(B) $\\displaystyle\\sum_{k=1}^{6}|a_{k+6}|=6+\\sum_{k=1}^{6}|a_{2k}|$"
+   ]
+  },
+  {
+   "ch": [
+    "\\dfrac{21}{2}",
+    "11",
+    "\\dfrac{23}{2}",
+    "12",
+    "\\dfrac{25}{2}"
+   ]
+  }
+ ],
+ "2023-06-c13": [
+  {
+   "p": "There are two curves $y=16^x$, $y=2^x$ and a point $\\mathrm{A}(64,\\,2^{64})$. Let $\\mathrm{P_1}$ be the point where the line through A parallel to the $x$-axis meets the curve $y=16^x$, and let $\\mathrm{Q_1}$ be the point where the line through $\\mathrm{P_1}$ parallel to the $y$-axis meets the curve $y=2^x$."
+  },
+  {
+   "p": "Let $\\mathrm{P_2}$ be the point where the line through $\\mathrm{Q_1}$ parallel to the $x$-axis meets the curve $y=16^x$, and let $\\mathrm{Q_2}$ be the point where the line through $\\mathrm{P_2}$ parallel to the $y$-axis meets the curve $y=2^x$."
+  },
+  {
+   "p": "Continuing this process, let $\\mathrm{P}_n$, $\\mathrm{Q}_n$ be the two points obtained at the $n$th step, and let $x_n$ be the $x$-coordinate of point $\\mathrm{Q}_n$. How many natural numbers $k$ are there such that the minimum value of $n$ satisfying $x_n<\\dfrac{1}{k}$ is 6? [4 points]"
+  },
+  {
+   "ch": [
+    "48",
+    "51",
+    "54",
+    "57",
+    "60"
+   ]
+  }
+ ],
+ "2023-06-c14": [
+  {
+   "p": "When a function $f(x)$ continuous on the set of all real numbers and a cubic function $g(x)$ with leading coefficient 1 satisfy"
+  },
+  {
+   "eq": "g(x)=\\begin{cases} -\\displaystyle\\int_{0}^{x}f(t)\\,dt & (x<0) \\\\ \\displaystyle\\int_{0}^{x}f(t)\\,dt & (x\\ge 0) \\end{cases}"
+  },
+  {
+   "p": "which of the statements in <Statements> are correct? [4 points]"
+  },
+  {
+   "box": [
+    "<Statements>",
+    "a. $f(0)=0$",
+    "b. The function $f(x)$ has a local maximum value.",
+    "c. When $2<f(1)<4$, the number of distinct real roots of the equation $f(x)=x$ is 3."
+   ]
+  },
+  {
+   "ch": [
+    "\\text{a}",
+    "\\text{c}",
+    "\\text{a, b}",
+    "\\text{a, c}",
+    "\\text{a, b, c}"
+   ]
+  }
+ ],
+ "2023-06-c15": [
+  {
+   "p": "For a natural number $k$, there is a sequence $\\{a_n\\}$ satisfying the following condition."
+  },
+  {
+   "box": [
+    "$a_1=0$, and for every natural number $n$,",
+    "$a_{n+1}=\\begin{cases} a_n+\\dfrac{1}{k+1} & (a_n\\le 0) \\\\ a_n-\\dfrac{1}{k} & (a_n>0) \\end{cases}$"
+   ]
+  },
+  {
+   "p": "What is the sum of all values of $k$ such that $a_{22}=0$? [4 points]"
+  },
+  {
+   "ch": [
+    "12",
+    "14",
+    "16",
+    "18",
+    "20"
+   ]
+  }
+ ],
+ "2023-06-c20": [
+  {
+   "p": "For a quadratic function $f(x)$ with leading coefficient 2, the function $g(x)=\\displaystyle\\int_{x}^{x+1}|f(t)|\\,dt$ has local minima at $x=1$ and $x=4$. Find the value of $f(0)$. [4 points]"
+  }
+ ],
+ "2023-06-c21": [
+  {
+   "p": "Find the sum of all natural numbers $n$ at most 1000 for which the value of $4\\log_{64}\\left(\\dfrac{3}{4n+16}\\right)$ is an integer. [4 points]"
+  }
+ ],
+ "2023-06-c22": [
+  {
+   "p": "For two positive numbers $a$, $b\\ (b>3)$ and a quadratic function $f(x)$ with leading coefficient 1, the function"
+  },
+  {
+   "eq": "g(x)=\\begin{cases} (x+3)f(x) & (x<0) \\\\ (x+a)f(x-b) & (x\\ge 0) \\end{cases}"
+  },
+  {
+   "p": "is continuous on the set of all real numbers and satisfies the following condition. Find the value of $g(4)$. [4 points]"
+  },
+  {
+   "box": [
+    "The only real values of $t$ for which",
+    "$\\displaystyle\\lim_{x\\to-3}\\frac{\\sqrt{|g(x)|+\\{g(t)\\}^2}-|g(t)|}{(x+3)^2}$",
+    "does **not** exist are $-3$ and $6$."
+   ]
+  }
+ ],
+ "2023-06-k28": [
+  {
+   "p": "Among all four-digit natural numbers that can be formed by choosing 4 distinct digits from 1, 2, 3, 4, 5 and arranging them in a row, one number is chosen at random. What is the probability that the chosen number is a multiple of 5 or at least 3500? [4 points]"
+  },
+  {
+   "ch": [
+    "\\dfrac{9}{20}",
+    "\\dfrac{1}{2}",
+    "\\dfrac{11}{20}",
+    "\\dfrac{3}{5}",
+    "\\dfrac{13}{20}"
+   ]
+  }
+ ],
+ "2023-06-k29": [
+  {
+   "p": "For the set $X=\\{1,\\,2,\\,3,\\,4,\\,5\\}$, find the number of functions $f:X\\to X$ satisfying the following conditions. [4 points]"
+  },
+  {
+   "box": [
+    "(A) $f(f(1))=4$",
+    "(B) $f(1)\\le f(3)\\le f(5)$"
+   ]
+  }
+ ],
+ "2023-06-k30": [
+  {
+   "p": "A pouch contains 12 balls with the natural numbers from 1 to 12 written on them, one each. Three balls are drawn at random from the pouch at the same time, and the numbers on the balls, in increasing order, are $a$, $b$, $c$. Given that $b-a\\ge 5$, the probability that $c-a\\ge 10$ is $\\dfrac{q}{p}$. Find the value of $p+q$. (Here $p$ and $q$ are relatively prime natural numbers.) [4 points]"
+  }
+ ],
+ "2023-06-m28": [
+  {
+   "p": "For a cubic function $f(x)$ with leading coefficient $\\dfrac{1}{2}$, the function $g(x)$ is"
+  },
+  {
+   "eq": "g(x)=\\begin{cases} \\ln|f(x)| & (f(x)\\ne 0) \\\\ 1 & (f(x)=0) \\end{cases}"
+  },
+  {
+   "p": "and satisfies the following conditions. What is the local minimum value of the function $g(x)$? [4 points]"
+  },
+  {
+   "box": [
+    "(A) The function $g(x)$ is continuous at every real number $x\\ne 1$.",
+    "(B) The function $g(x)$ has a local maximum at $x=2$, and the function $|g(x)|$ has a local minimum at $x=2$.",
+    "(C) The number of distinct real roots of the equation $g(x)=0$ is 3."
+   ]
+  },
+  {
+   "ch": [
+    "\\ln\\dfrac{13}{27}",
+    "\\ln\\dfrac{16}{27}",
+    "\\ln\\dfrac{19}{27}",
+    "\\ln\\dfrac{22}{27}",
+    "\\ln\\dfrac{25}{27}"
+   ]
+  }
+ ],
+ "2023-06-m29": [
+  {
+   "p": "As shown in the figure, there is a sector OAB with radius 1 and central angle $\\dfrac{\\pi}{2}$. Let H be the foot of the perpendicular from a point P on arc AB to segment OA, and let Q, R, S be the intersections of the bisector of $\\angle\\mathrm{OAP}$ with the three segments HP, OP, OB, respectively. When $\\angle\\mathrm{APH}=\\theta$, let $f(\\theta)$ be the area of triangle AQH and $g(\\theta)$ the area of triangle PSR."
+  },
+  {
+   "p": "When $\\displaystyle\\lim_{\\theta\\to 0+}\\frac{\\theta^3\\times g(\\theta)}{f(\\theta)}=k$, find the value of $100k$. (Here $0<\\theta<\\dfrac{\\pi}{4}$.) [4 points]"
+  },
+  {
+   "fig": "See the original for the figure."
+  }
+ ],
+ "2023-06-m30": [
+  {
+   "p": "For a positive number $a$, the function $f(x)$ is"
+  },
+  {
+   "eq": "f(x)=\\frac{x^2-ax}{e^x}."
+  },
+  {
+   "p": "For a real number $t$, let $g(t)$ be the number of distinct real roots of the equation in $x$"
+  },
+  {
+   "eq": "f(x)=f'(t)(x-t)+f(t)."
+  },
+  {
+   "p": "When $g(5)+\\displaystyle\\lim_{t\\to 5}g(t)=5$, the sum of all real numbers $k$ satisfying $\\displaystyle\\lim_{t\\to k-}g(t)\\ne\\lim_{t\\to k+}g(t)$ is $\\dfrac{q}{p}$. Find the value of $p+q$. (Here $p$ and $q$ are relatively prime natural numbers.) [4 points]"
+  }
+ ],
+ "2023-06-g28": [
+  {
+   "p": "In the coordinate plane, a point P moves on the line $y=2x-3$. For the two points $\\mathrm{A}(c,\\,0)$ and $\\mathrm{B}(-c,\\,0)\\ (c>0)$, when the coordinates of point P that maximize the value of $\\overline{\\mathrm{PB}}-\\overline{\\mathrm{PA}}$ are $(3,\\,3)$, what is the value of the constant $c$? [4 points]"
+  },
+  {
+   "ch": [
+    "\\dfrac{3\\sqrt{6}}{2}",
+    "\\dfrac{3\\sqrt{7}}{2}",
+    "3\\sqrt{2}",
+    "\\dfrac{9}{2}",
+    "\\dfrac{3\\sqrt{10}}{2}"
+   ]
+  }
+ ],
+ "2023-06-g29": [
+  {
+   "p": "For a point P in the first quadrant on the parabola $y^2=8x$ with focus F, let F' be the point where the line through P parallel to the $x$-axis meets the directrix of the parabola $y^2=8x$. Let Q be the point other than P where the parabola with focus F' and vertex P meets the parabola $y^2=8x$. When the perimeter of quadrilateral PF'QF is 12, the area of triangle PF'Q is $\\dfrac{q}{p}\\sqrt{2}$. Find the value of $p+q$. (Here the $x$-coordinate of point P is less than 2, and $p$ and $q$ are relatively prime natural numbers.) [4 points]"
+  }
+ ],
+ "2023-06-g30": [
+  {
+   "p": "In the coordinate plane, a point P moves on the sides of a regular hexagon ABCDEF with side length 4, and a point Q moves on the circle with center C and radius 1. For the two points P, Q and a real number $k$, a point X satisfies the following conditions. Let $\\alpha$ be the value of $k$ at which $|\\overrightarrow{\\mathrm{CX}}|$ is minimal, and $\\beta$ the value of $k$ at which $|\\overrightarrow{\\mathrm{CX}}|$ is maximal."
+  },
+  {
+   "box": [
+    "(A) $\\overrightarrow{\\mathrm{CX}}=\\dfrac{1}{2}\\overrightarrow{\\mathrm{CP}}+\\overrightarrow{\\mathrm{CQ}}$",
+    "(B) $\\overrightarrow{\\mathrm{XA}}+\\overrightarrow{\\mathrm{XC}}+2\\overrightarrow{\\mathrm{XD}}=k\\overrightarrow{\\mathrm{CD}}$"
+   ]
+  },
+  {
+   "p": "Find the value of $\\alpha^2+\\beta^2$. [4 points]"
+  }
  ]
 }
