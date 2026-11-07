@@ -4637,6 +4637,32 @@
   "simg": [],
   "answer": 1,
   "choice": true,
+  "en": [
+   {
+    "p": "For two natural numbers $a$, $b$, the function $f(x)$ is"
+   },
+   {
+    "eq": "f(x)=\\begin{cases} 2x^{3}-6x+1 & (x\\le 2) \\\\ a(x-2)(x-b)+9 & (x>2) \\end{cases}"
+   },
+   {
+    "p": "For a real number $t$, let $g(t)$ be the number of points where the graph of $y=f(x)$ meets the line $y=t$. Over the ordered pairs $(a,\\,b)$ of natural numbers for which exactly one real number $k$ satisfies"
+   },
+   {
+    "eq": "g(k)+\\lim_{t\\to k-}g(t)+\\lim_{t\\to k+}g(t)=9,"
+   },
+   {
+    "p": "what is the maximum value of $a+b$? [4 points]"
+   },
+   {
+    "ch": [
+     "51",
+     "52",
+     "53",
+     "54",
+     "55"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -4658,6 +4684,26 @@
   "simg": [],
   "answer": 3,
   "choice": true,
+  "en": [
+   {
+    "p": "A sequence $\\{a_n\\}$ whose first term is a natural number satisfies, for every natural number $n$,"
+   },
+   {
+    "eq": "a_{n+1}=\\begin{cases} 2^{a_n} & (\\text{if } a_n \\text{ is odd}) \\\\ \\dfrac{1}{2}a_n & (\\text{if } a_n \\text{ is even}) \\end{cases}"
+   },
+   {
+    "p": "What is the sum of all values of $a_1$ for which $a_6+a_7=3$? [4 points]"
+   },
+   {
+    "ch": [
+     "139",
+     "146",
+     "153",
+     "160",
+     "167"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -4679,6 +4725,17 @@
   "simg": [],
   "answer": 25,
   "choice": false,
+  "en": [
+   {
+    "p": "For a real number $a>\\sqrt{2}$, let the function $f(x)$ be"
+   },
+   {
+    "eq": "f(x)=-x^{3}+ax^{2}+2x."
+   },
+   {
+    "p": "Let $\\mathrm{A}$ be the point, other than $\\mathrm{O}$, where the tangent line to the curve $y=f(x)$ at $\\mathrm{O}(0,\\,0)$ meets the curve $y=f(x)$, and let $\\mathrm{B}$ be the point where the tangent line to the curve $y=f(x)$ at $\\mathrm{A}$ meets the $x$-axis. When point $\\mathrm{A}$ lies on the circle with diameter $\\mathrm{OB}$, find the value of $\\overline{\\mathrm{OA}}\\times\\overline{\\mathrm{AB}}$. [4 points]"
+   }
+  ],
   "art": ""
  },
  {
@@ -4700,6 +4757,17 @@
   "simg": [],
   "answer": 10,
   "choice": false,
+  "en": [
+   {
+    "p": "For a positive number $a$, the function $f(x)$ defined for $x\\ge -1$ is"
+   },
+   {
+    "eq": "f(x)=\\begin{cases} -x^{2}+6x & (-1\\le x<6) \\\\ a\\log_{4}(x-5) & (x\\ge 6) \\end{cases}"
+   },
+   {
+    "p": "For a real number $t\\ge 0$, let $g(t)$ be the maximum value of $f(x)$ on the closed interval $[t-1,\\,t+1]$. Find the minimum value of the positive number $a$ for which the minimum value of $g(t)$ on the interval $[0,\\,\\infty)$ is $5$. [4 points]"
+   }
+  ],
   "art": ""
  },
  {
@@ -4721,6 +4789,19 @@
   "simg": [],
   "answer": 483,
   "choice": false,
+  "en": [
+   {
+    "p": "A cubic function $f(x)$ with leading coefficient $1$ satisfies the following condition."
+   },
+   {
+    "box": [
+     "For the function $f(x)$, there is **no** integer $k$ satisfying $f(k-1)f(k+1)<0$."
+    ]
+   },
+   {
+    "p": "When $f'\\!\\left(-\\dfrac{1}{4}\\right)=-\\dfrac{1}{4}$ and $f'\\!\\left(\\dfrac{1}{4}\\right)<0$, find the value of $f(8)$. [4 points]"
+   }
+  ],
   "art": ""
  },
  {
@@ -4742,6 +4823,45 @@
   "simg": [],
   "answer": 673,
   "choice": false,
+  "en": [
+   {
+    "p": "For a positive number $t$, a random variable $X$ follows the normal distribution $\\mathrm{N}\\left(1,\\,t^{2}\\right)$. Over all positive numbers $t$ satisfying"
+   },
+   {
+    "eq": "\\mathrm{P}(X\\le 5t)\\ge\\frac{1}{2},"
+   },
+   {
+    "p": "let $k$ be the maximum value of $\\mathrm{P}\\left(t^{2}-t+1\\le X\\le t^{2}+t+1\\right)$, obtained using the standard normal table below. Find the value of $1000\\times k$. [4 points]"
+   },
+   {
+    "tbl": [
+     [
+      "$z$",
+      "$\\mathrm{P}(0\\le Z\\le z)$"
+     ],
+     [
+      "0.6",
+      "0.226"
+     ],
+     [
+      "0.8",
+      "0.288"
+     ],
+     [
+      "1.0",
+      "0.341"
+     ],
+     [
+      "1.2",
+      "0.385"
+     ],
+     [
+      "1.4",
+      "0.419"
+     ]
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -4763,6 +4883,26 @@
   "simg": [],
   "answer": 2,
   "choice": true,
+  "en": [
+   {
+    "p": "A function $f(x)$ continuous on the set of all real numbers satisfies $f(x)\\ge 0$ for every real number $x$, and $f(x)=-4xe^{4x^{2}}$ for $x<0$. For every positive number $t$, the equation $f(x)=t$ in $x$ has exactly 2 distinct real roots; let $g(t)$ be the smaller and $h(t)$ the larger of the two roots. The two functions $g(t)$, $h(t)$ satisfy, for every positive number $t$,"
+   },
+   {
+    "eq": "2g(t)+h(t)=k\\quad(k\\text{ is a constant})."
+   },
+   {
+    "p": "When $\\displaystyle\\int_{0}^{7}f(x)\\,dx=e^{4}-1$, what is the value of $\\dfrac{f(9)}{f(8)}$? [4 points]"
+   },
+   {
+    "ch": [
+     "\\dfrac{3}{2}e^{5}",
+     "\\dfrac{4}{3}e^{7}",
+     "\\dfrac{5}{4}e^{9}",
+     "\\dfrac{6}{5}e^{11}",
+     "\\dfrac{7}{6}e^{13}"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -4784,6 +4924,17 @@
   "simg": [],
   "answer": 162,
   "choice": false,
+  "en": [
+   {
+    "p": "For two geometric sequences $\\{a_n\\}$, $\\{b_n\\}$, each with nonzero first term and nonzero common ratio, the two series $\\displaystyle\\sum_{n=1}^{\\infty}a_n$, $\\displaystyle\\sum_{n=1}^{\\infty}b_n$ each converge, and"
+   },
+   {
+    "eq": "\\sum_{n=1}^{\\infty}a_n b_n=\\left(\\sum_{n=1}^{\\infty}a_n\\right)\\times\\left(\\sum_{n=1}^{\\infty}b_n\\right),\\qquad 3\\times\\sum_{n=1}^{\\infty}|a_{2n}|=7\\times\\sum_{n=1}^{\\infty}|a_{3n}|"
+   },
+   {
+    "p": "hold. When $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{b_{2n-1}+b_{3n+1}}{b_n}=S$, find the value of $120S$. [4 points]"
+   }
+  ],
   "art": ""
  },
  {
@@ -4805,6 +4956,23 @@
   "simg": [],
   "answer": 125,
   "choice": false,
+  "en": [
+   {
+    "p": "The derivative $f'(x)$ of a function $f(x)$ differentiable on the set of all real numbers is"
+   },
+   {
+    "eq": "f'(x)=|\\sin x|\\cos x."
+   },
+   {
+    "p": "For a positive number $a$, let $y=g(x)$ be the equation of the tangent line to the curve $y=f(x)$ at the point $(a,\\,f(a))$. When all positive numbers $a$ for which the function"
+   },
+   {
+    "eq": "h(x)=\\int_{0}^{x}\\left\\{f(t)-g(t)\\right\\}dt"
+   },
+   {
+    "p": "has a local maximum or local minimum at $x=a$ are listed in increasing order, let $a_n$ be the $n$th number. Find the value of $\\dfrac{100}{\\pi}\\times\\left(a_6-a_2\\right)$. [4 points]"
+   }
+  ],
   "art": ""
  },
  {
@@ -4826,6 +4994,20 @@
   "simg": [],
   "answer": 147,
   "choice": false,
+  "en": [
+   {
+    "p": "In the coordinate plane there is an equilateral triangle $\\mathrm{ABC}$ with side length $4$. Let $\\mathrm{D}$, $\\mathrm{E}$, $\\mathrm{F}$ be the points that internally divide segments $\\mathrm{AB}$, $\\mathrm{BC}$, $\\mathrm{CA}$ in the ratio $1:3$, respectively. Four points $\\mathrm{P}$, $\\mathrm{Q}$, $\\mathrm{R}$, $\\mathrm{X}$ satisfy the following conditions."
+   },
+   {
+    "box": [
+     "(A) $\\left|\\overrightarrow{\\mathrm{DP}}\\right|=\\left|\\overrightarrow{\\mathrm{EQ}}\\right|=\\left|\\overrightarrow{\\mathrm{FR}}\\right|=1$",
+     "(B) $\\overrightarrow{\\mathrm{AX}}=\\overrightarrow{\\mathrm{PB}}+\\overrightarrow{\\mathrm{QC}}+\\overrightarrow{\\mathrm{RA}}$"
+    ]
+   },
+   {
+    "p": "When the value of $\\left|\\overrightarrow{\\mathrm{AX}}\\right|$ is at its maximum, let $S$ be the area of triangle $\\mathrm{PQR}$. Find the value of $16S^{2}$. [4 points]"
+   }
+  ],
   "art": ""
  },
  {
@@ -4847,6 +5029,26 @@
   "simg": [],
   "answer": 3,
   "choice": true,
+  "en": [
+   {
+    "p": "For a real number $a\\ (a\\ge 0)$, the velocity $v(t)$ at time $t\\ (t\\ge 0)$ of a point P moving on a number line is"
+   },
+   {
+    "eq": "v(t)=-t(t-1)(t-a)(t-2a)."
+   },
+   {
+    "p": "For values of $a$ such that point P, after starting at time $t=0$, changes its direction of motion exactly once, what is the maximum value of the change in position of point P from time $t=0$ to $t=2$? [4 points]"
+   },
+   {
+    "ch": [
+     "\\dfrac{1}{5}",
+     "\\dfrac{7}{30}",
+     "\\dfrac{4}{15}",
+     "\\dfrac{3}{10}",
+     "\\dfrac{1}{3}"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -4868,6 +5070,29 @@
   "simg": [],
   "answer": 2,
   "choice": true,
+  "en": [
+   {
+    "p": "For a natural number $k$, there is a sequence $\\{a_n\\}$ satisfying the following condition."
+   },
+   {
+    "box": [
+     "$a_1=k$, and for every natural number $n$,",
+     "$a_{n+1}=\\begin{cases} a_n+2n-k & (a_n\\le 0) \\\\ a_n-2n-k & (a_n>0) \\end{cases}$"
+    ]
+   },
+   {
+    "p": "What is the sum of all values of $k$ such that $a_3\\times a_4\\times a_5\\times a_6<0$? [4 points]"
+   },
+   {
+    "ch": [
+     "10",
+     "14",
+     "18",
+     "22",
+     "26"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -4889,6 +5114,23 @@
   "simg": [],
   "answer": 39,
   "choice": false,
+  "en": [
+   {
+    "p": "For a quadratic function $f(x)$ with leading coefficient 1, the function"
+   },
+   {
+    "eq": "g(x)=\\int_{0}^{x}f(t)\\,dt"
+   },
+   {
+    "p": "satisfies the following condition. Find the value of $f(9)$. [4 points]"
+   },
+   {
+    "box": [
+     "For every real number $x\\ge 1$,",
+     "$g(x)\\ge g(4)$ and $|g(x)|\\ge |g(3)|$."
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -4910,6 +5152,29 @@
   "simg": [],
   "answer": 110,
   "choice": false,
+  "en": [
+   {
+    "p": "For a real number $t$, let $f(t)$ be the $x$-coordinate of the point where the two curves $y=t-\\log_2 x$ and $y=2^{x-t}$ meet."
+   },
+   {
+    "p": "For each statement in <Statements>, the values of $A$, $B$, $C$ are determined by the following rules. Find the value of $A+B+C$. (Here $A+B+C\\ne 0$.) [4 points]"
+   },
+   {
+    "box": [
+     "• If statement a. is true, $A=100$; if false, $A=0$.",
+     "• If statement b. is true, $B=10$; if false, $B=0$.",
+     "• If statement c. is true, $C=1$; if false, $C=0$."
+    ]
+   },
+   {
+    "box": [
+     "<Statements>",
+     "a. $f(1)=1$ and $f(2)=2$.",
+     "b. As the value of the real number $t$ increases, the value of $f(t)$ also increases.",
+     "c. For every positive real number $t$, $f(t)\\ge t$."
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -4931,6 +5196,23 @@
   "simg": [],
   "answer": 380,
   "choice": false,
+  "en": [
+   {
+    "p": "For an integer $a\\ (a\\ne 0)$, let the function $f(x)$ be"
+   },
+   {
+    "eq": "f(x)=x^3-2ax^2."
+   },
+   {
+    "p": "For the value of $a$ such that the product of all integers $k$ satisfying the following condition is $-12$, find the value of $f'(10)$. [4 points]"
+   },
+   {
+    "box": [
+     "For the function $f(x)$, there exist three real numbers $x_1$, $x_2$, $x_3$ in the open interval $\\left(k,\\,k+\\dfrac{3}{2}\\right)$ satisfying",
+     "$\\left\\{\\dfrac{f(x_1)-f(x_2)}{x_1-x_2}\\right\\}\\times\\left\\{\\dfrac{f(x_2)-f(x_3)}{x_2-x_3}\\right\\}<0$."
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -4952,6 +5234,21 @@
   "simg": [],
   "answer": 51,
   "choice": false,
+  "en": [
+   {
+    "p": "A pouch contains 4 white balls with the numbers 1, 2, 3, 4 written on them, one each, and 4 black balls with the numbers 4, 5, 6, 7 written on them, one each. Using this pouch, a trial that awards a score according to the following rule is performed."
+   },
+   {
+    "box": [
+     "Draw 2 balls at random from the pouch at the same time.",
+     "If the drawn balls are of different colors, the score is 12;",
+     "if the drawn balls are of the same color, the score is the product of the numbers written on the two balls."
+    ]
+   },
+   {
+    "p": "When the probability that the score obtained from performing this trial once is an even number at most 24 is $\\dfrac{q}{p}$, find the value of $p+q$. (Here $p$ and $q$ are relatively prime natural numbers.) [4 points]"
+   }
+  ],
   "art": ""
  },
  {
@@ -4973,6 +5270,27 @@
   "simg": [],
   "answer": 2,
   "choice": true,
+  "en": [
+   {
+    "p": "For two constants $a\\ (a>0)$ and $b$, when a function $f(x)$ continuous on the set of all real numbers satisfies the following conditions, what is the value of $a\\times b$? [4 points]"
+   },
+   {
+    "box": [
+     "(A) For every real number $x$,",
+     "$\\{f(x)\\}^2+2f(x)=a\\cos^3\\pi x\\times e^{\\sin^2\\pi x}+b$.",
+     "(B) $f(0)=f(2)+1$"
+    ]
+   },
+   {
+    "ch": [
+     "-\\dfrac{1}{16}",
+     "-\\dfrac{7}{64}",
+     "-\\dfrac{5}{32}",
+     "-\\dfrac{13}{64}",
+     "-\\dfrac{1}{4}"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -4994,6 +5312,11 @@
   "simg": [],
   "answer": 5,
   "choice": false,
+  "en": [
+   {
+    "p": "For three real numbers $a$, $b$, $k$, the two points $\\mathrm{A}(a,\\,a+k)$ and $\\mathrm{B}(b,\\,b+k)$ lie on the curve $C:\\ x^2-2xy+2y^2=15$. When the tangent line to curve $C$ at point A and the tangent line to curve $C$ at point B are perpendicular to each other, find the value of $k^2$. (Here $a+2k\\ne 0$, $b+2k\\ne 0$.) [4 points]"
+   }
+  ],
   "art": ""
  },
  {
@@ -5015,6 +5338,26 @@
   "simg": [],
   "answer": 24,
   "choice": false,
+  "en": [
+   {
+    "p": "The sequence $\\{a_n\\}$ is a geometric sequence, and for every natural number $n$ the sequence $\\{b_n\\}$ is defined by"
+   },
+   {
+    "eq": "b_n=\\begin{cases} -1 & (a_n\\le -1) \\\\ a_n & (a_n>-1) \\end{cases}"
+   },
+   {
+    "p": "The sequence $\\{b_n\\}$ satisfies the following conditions."
+   },
+   {
+    "box": [
+     "(A) The series $\\displaystyle\\sum_{n=1}^{\\infty}b_{2n-1}$ converges and its sum is $-3$.",
+     "(B) The series $\\displaystyle\\sum_{n=1}^{\\infty}b_{2n}$ converges and its sum is $8$."
+    ]
+   },
+   {
+    "p": "When $b_3=-1$, find the value of $\\displaystyle\\sum_{n=1}^{\\infty}|a_n|$. [4 points]"
+   }
+  ],
   "art": ""
  },
  {
@@ -5036,6 +5379,17 @@
   "simg": [],
   "answer": 13,
   "choice": false,
+  "en": [
+   {
+    "p": "For a point P moving on the line $2x+y=0$ and a point Q moving on the ellipse $2x^2+y^2=3$, consider all points X satisfying"
+   },
+   {
+    "eq": "\\overrightarrow{\\mathrm{OX}}=\\overrightarrow{\\mathrm{OP}}+\\overrightarrow{\\mathrm{OQ}}"
+   },
+   {
+    "p": "whose $x$-coordinate and $y$-coordinate are both at least 0. The area of the region represented by these points is $\\dfrac{q}{p}$. Find the value of $p+q$. (Here O is the origin, and $p$ and $q$ are relatively prime natural numbers.) [4 points]"
+   }
+  ],
   "art": ""
  },
  {
@@ -5057,6 +5411,31 @@
   "simg": [],
   "answer": 2,
   "choice": true,
+  "en": [
+   {
+    "p": "For two natural numbers $a$, $b$, when the function"
+   },
+   {
+    "eq": "f(x)=\\begin{cases} 2^{x+a}+b & (x\\le -8) \\\\ -3^{x-3}+8 & (x>-8) \\end{cases}"
+   },
+   {
+    "p": "satisfies the following condition, what is the value of $a+b$? [4 points]"
+   },
+   {
+    "box": [
+     "The range of all real numbers $k$ for which the set $\\{f(x)\\mid x\\le k\\}$ has exactly 2 integer elements is $3\\le k<4$."
+    ]
+   },
+   {
+    "ch": [
+     "11",
+     "13",
+     "15",
+     "17",
+     "19"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -5078,6 +5457,26 @@
   "simg": [],
   "answer": 4,
   "choice": true,
+  "en": [
+   {
+    "p": "For a cubic function $f(x)$ with leading coefficient $1$, let the function $g(x)$ be"
+   },
+   {
+    "eq": "g(x)=\\begin{cases} \\dfrac{f(x+3)\\{f(x)+1\\}}{f(x)} & (f(x)\\ne 0) \\\\ 3 & (f(x)=0) \\end{cases}"
+   },
+   {
+    "p": "When $\\displaystyle\\lim_{x\\to 3}g(x)=g(3)-1$, what is the value of $g(5)$? [4 points]"
+   },
+   {
+    "ch": [
+     "14",
+     "16",
+     "18",
+     "20",
+     "22"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -5099,6 +5498,34 @@
   "simg": [],
   "answer": 98,
   "choice": false,
+  "en": [
+   {
+    "p": "As shown in the figure, there is a quadrilateral $\\mathrm{ABCD}$ with"
+   },
+   {
+    "eq": "\\overline{\\mathrm{AB}}=2,\\quad \\overline{\\mathrm{AD}}=1,\\quad \\angle\\mathrm{DAB}=\\frac{2}{3}\\pi,\\quad \\angle\\mathrm{BCD}=\\frac{3}{4}\\pi."
+   },
+   {
+    "p": "Let $R_1$ be the radius of the circumcircle of triangle $\\mathrm{BCD}$, and $R_2$ the radius of the circumcircle of triangle $\\mathrm{ABD}$."
+   },
+   {
+    "fig": 1
+   },
+   {
+    "p": "The following is the process of finding the value of $R_1\\times R_2$."
+   },
+   {
+    "box": [
+     "By the law of sines in triangle $\\mathrm{BCD}$, $\\ R_1=\\dfrac{\\sqrt{2}}{2}\\times\\overline{\\mathrm{BD}}$,",
+     "and by the law of sines in triangle $\\mathrm{ABD}$, $\\ R_2=\\boxed{\\ (\\text{A})\\ }\\times\\overline{\\mathrm{BD}}$.",
+     "By the law of cosines in triangle $\\mathrm{ABD}$, $\\ \\overline{\\mathrm{BD}}^{2}=2^{2}+1^{2}-\\left(\\boxed{\\ (\\text{B})\\ }\\right)$,",
+     "so $\\ R_1\\times R_2=\\boxed{\\ (\\text{C})\\ }$."
+    ]
+   },
+   {
+    "p": "Let $p$, $q$, $r$ be the numbers that fit (A), (B), (C) above, respectively. Find the value of $9\\times(p\\times q\\times r)^{2}$. [4 points]"
+   }
+  ],
   "art": ""
  },
  {
@@ -5120,6 +5547,11 @@
   "simg": [],
   "answer": 19,
   "choice": false,
+  "en": [
+   {
+    "p": "Let $S_n$ be the sum of the first $n$ terms of an arithmetic sequence $\\{a_n\\}$ whose terms are all natural numbers. When $a_7$ is a multiple of 13 and $\\displaystyle\\sum_{k=1}^{7}S_k=644$, find the value of $a_2$. [4 points]"
+   }
+  ],
   "art": ""
  },
  {
@@ -5141,6 +5573,20 @@
   "simg": [],
   "answer": 10,
   "choice": false,
+  "en": [
+   {
+    "p": "For two polynomial functions $f(x)$, $g(x)$, let $F(x)$ be an antiderivative of $f(x)$ and $G(x)$ an antiderivative of $g(x)$. These functions satisfy the following conditions for every real number $x$."
+   },
+   {
+    "box": [
+     "(A) $\\displaystyle\\int_{1}^{x}f(t)\\,dt=xf(x)-2x^{2}-1$",
+     "(B) $f(x)G(x)+F(x)g(x)=8x^{3}+3x^{2}+1$"
+    ]
+   },
+   {
+    "p": "Find the value of $\\displaystyle\\int_{1}^{3}g(x)\\,dx$. [4 points]"
+   }
+  ],
   "art": ""
  },
  {
@@ -5162,6 +5608,17 @@
   "simg": [],
   "answer": 336,
   "choice": false,
+  "en": [
+   {
+    "p": "Find the number of ordered pairs $(a,\\,b,\\,c,\\,d)$ of natural numbers $a$, $b$, $c$, $d$, each at most 13, that satisfy the following conditions. [4 points]"
+   },
+   {
+    "box": [
+     "(A) $a\\le b\\le c\\le d$",
+     "(B) $a\\times d$ is odd, and $b+c$ is even."
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -5183,6 +5640,32 @@
   "simg": [],
   "answer": 2,
   "choice": true,
+  "en": [
+   {
+    "p": "For a real number $a\\ (0<a<2)$, let the function $f(x)$ be"
+   },
+   {
+    "eq": "f(x)=\\begin{cases} 2|\\sin 4x| & (x<0) \\\\ -\\sin ax & (x\\ge 0) \\end{cases}"
+   },
+   {
+    "p": "When the function"
+   },
+   {
+    "eq": "g(x)=\\left|\\int_{-a\\pi}^{x}f(t)\\,dt\\right|"
+   },
+   {
+    "p": "is differentiable on the set of all real numbers, what is the minimum value of $a$? [4 points]"
+   },
+   {
+    "ch": [
+     "\\dfrac{1}{2}",
+     "\\dfrac{3}{4}",
+     "1",
+     "\\dfrac{5}{4}",
+     "\\dfrac{3}{2}"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -5204,6 +5687,17 @@
   "simg": [],
   "answer": 18,
   "choice": false,
+  "en": [
+   {
+    "p": "When two real numbers $a$, $b\\ (a>1,\\ b>1)$ satisfy"
+   },
+   {
+    "eq": "\\lim_{n\\to\\infty}\\frac{3^{n}+a^{n+1}}{3^{n+1}+a^{n}}=a,\\qquad \\lim_{n\\to\\infty}\\frac{a^{n}+b^{n+1}}{a^{n+1}+b^{n}}=\\frac{9}{a},"
+   },
+   {
+    "p": "find the value of $a+b$. [4 points]"
+   }
+  ],
   "art": ""
  },
  {
@@ -5225,6 +5719,11 @@
   "simg": [],
   "answer": 32,
   "choice": false,
+  "en": [
+   {
+    "p": "There are a circle with diameter $\\mathrm{AB}$ of length $10$ and a point $\\mathrm{C}$ on segment $\\mathrm{AB}$ with $\\overline{\\mathrm{AC}}=4$. Take point $\\mathrm{P}$ on this circle so that $\\angle\\mathrm{PCB}=\\theta$, and let $\\mathrm{Q}$ be the point, other than $\\mathrm{P}$, where the line through $\\mathrm{P}$ perpendicular to segment $\\mathrm{AB}$ meets this circle. If $S(\\theta)$ is the area of triangle $\\mathrm{PCQ}$, find the value of $-7\\times S'\\!\\left(\\dfrac{\\pi}{4}\\right)$. (Given that $0<\\theta<\\dfrac{\\pi}{2}$.) [4 points]"
+   }
+  ],
   "art": ""
  },
  {
@@ -5246,6 +5745,21 @@
   "simg": [],
   "answer": 27,
   "choice": false,
+  "en": [
+   {
+    "p": "In the coordinate plane, for a right triangle $\\mathrm{ABC}$ with $\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AC}}$ and $\\angle\\mathrm{BAC}=\\dfrac{\\pi}{2}$, two points $\\mathrm{P}$, $\\mathrm{Q}$ satisfy the following conditions."
+   },
+   {
+    "box": [
+     "(A) Triangle $\\mathrm{APQ}$ is equilateral, and $9\\left|\\overrightarrow{\\mathrm{PQ}}\\right|\\overrightarrow{\\mathrm{PQ}}=4\\left|\\overrightarrow{\\mathrm{AB}}\\right|\\overrightarrow{\\mathrm{AB}}$.",
+     "(B) $\\overrightarrow{\\mathrm{AC}}\\cdot\\overrightarrow{\\mathrm{AQ}}<0$",
+     "(C) $\\overrightarrow{\\mathrm{PQ}}\\cdot\\overrightarrow{\\mathrm{CB}}=24$"
+    ]
+   },
+   {
+    "p": "For a point $\\mathrm{X}$ on segment $\\mathrm{AQ}$, let $m$ be the minimum value of $\\left|\\overrightarrow{\\mathrm{XA}}+\\overrightarrow{\\mathrm{XB}}\\right|$. Find the value of $m^{2}$. [4 points]"
+   }
+  ],
   "art": ""
  },
  {
@@ -9904,6 +10418,31 @@
   "simg": [],
   "answer": 4,
   "choice": true,
+  "en": [
+   {
+    "p": "There are one bag and two boxes $\\mathrm{A}$, $\\mathrm{B}$. The bag contains 4 cards labeled 1, 2, 3, 4; box $\\mathrm{A}$ contains at least 8 white balls and at least 8 black balls; and box $\\mathrm{B}$ is empty. Using the bag and the two boxes, the following trial is performed."
+   },
+   {
+    "box": [
+     "Draw one card from the bag at random, check its number, and put it back in the bag.",
+     "If the number is 1, move 1 white ball from box $\\mathrm{A}$ to box $\\mathrm{B}$;",
+     "if the number is 2 or 3, move 1 white ball and 1 black ball from box $\\mathrm{A}$ to box $\\mathrm{B}$;",
+     "if the number is 4, move 2 white balls and 1 black ball from box $\\mathrm{A}$ to box $\\mathrm{B}$."
+    ]
+   },
+   {
+    "p": "After repeating this trial 4 times, given that box $\\mathrm{B}$ contains 8 balls, what is the probability that box $\\mathrm{B}$ contains exactly 2 black balls? [4 points]"
+   },
+   {
+    "ch": [
+     "\\dfrac{3}{70}",
+     "\\dfrac{2}{35}",
+     "\\dfrac{1}{14}",
+     "\\dfrac{3}{35}",
+     "\\dfrac{1}{10}"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -9925,6 +10464,16 @@
   "simg": [],
   "answer": 196,
   "choice": false,
+  "en": [
+   {
+    "p": "Find the number of ordered pairs $(a,\\,b,\\,c,\\,d)$ of natural numbers $a$, $b$, $c$, $d$, each at most 6, that satisfy the following condition. [4 points]"
+   },
+   {
+    "box": [
+     "$a\\le c\\le d$ and $b\\le c\\le d$."
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -9946,6 +10495,31 @@
   "simg": [],
   "answer": 5,
   "choice": true,
+  "en": [
+   {
+    "p": "Bag $\\mathrm{A}$ contains 3 balls labeled 1, 2, 3, and bag $\\mathrm{B}$ contains 4 balls labeled 1, 2, 3, 4. Using the two bags $\\mathrm{A}$, $\\mathrm{B}$ and one die, the following trial is performed."
+   },
+   {
+    "box": [
+     "Roll the die once.",
+     "If the number rolled is a multiple of 3, draw 2 balls at random at the same time from bag $\\mathrm{A}$;",
+     "if it is not a multiple of 3, draw 2 balls at random at the same time from bag $\\mathrm{B}$.",
+     "Record the difference of the numbers on the 2 drawn balls, then put the 2 balls back into the bag they came from."
+    ]
+   },
+   {
+    "p": "This trial is repeated 2 times; let $\\overline{X}$ be the mean of the two recorded numbers. What is the value of $\\mathrm{P}\\left(\\overline{X}=2\\right)$? [4 points]"
+   },
+   {
+    "ch": [
+     "\\dfrac{11}{81}",
+     "\\dfrac{13}{81}",
+     "\\dfrac{5}{27}",
+     "\\dfrac{17}{81}",
+     "\\dfrac{19}{81}"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -9967,6 +10541,21 @@
   "simg": [],
   "answer": 62,
   "choice": false,
+  "en": [
+   {
+    "p": "There is a card with the letter A on its front and the letter B on its back. Using this card and one coin, the following trial is performed."
+   },
+   {
+    "box": [
+     "Toss the coin twice.",
+     "If the number of heads is 2, flip the card over once;",
+     "if the number of heads is 0 or 1, leave the card as it is."
+    ]
+   },
+   {
+    "p": "Starting with the card placed so that the letter A shows, after repeating this trial 5 times, the probability that the card is placed so that the letter B shows is $p$. Find the value of $128\\times p$. [4 points]"
+   }
+  ],
   "art": ""
  },
  {
@@ -9988,6 +10577,27 @@
   "simg": [],
   "answer": 5,
   "choice": true,
+  "en": [
+   {
+    "p": "For the set $X=\\{1,\\,2,\\,3,\\,4,\\,5\\}$, how many functions $f:X\\to X$ satisfy the following conditions? [4 points]"
+   },
+   {
+    "box": [
+     "(A) $f(1)\\times f(3)\\times f(5)$ is odd.",
+     "(B) $f(2)<f(4)$",
+     "(C) The range of the function $f$ has exactly 3 elements."
+    ]
+   },
+   {
+    "ch": [
+     "128",
+     "132",
+     "136",
+     "140",
+     "144"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -10009,6 +10619,21 @@
   "simg": [],
   "answer": 25,
   "choice": false,
+  "en": [
+   {
+    "p": "As shown in the figure, there are 2 black cards and 8 white cards on which the natural numbers from 1 to 8 are written, one on each. When all of these cards are used exactly once and arranged in a row from left to right, find the number of arrangements satisfying the following conditions. (Here the black cards are not distinguished from each other.) [4 points]"
+   },
+   {
+    "box": [
+     "(A) The cards are placed so that the numbers on the white cards are arranged in increasing order from left to right.",
+     "(B) At least 2 white cards are placed between the black cards.",
+     "(C) At least 1 white card with a multiple of 3 written on it is placed between the black cards."
+    ]
+   },
+   {
+    "fig": "See the original for the figure."
+   }
+  ],
   "art": ""
  },
  {
@@ -10726,6 +11351,20 @@
   "simg": [],
   "answer": 1,
   "choice": true,
+  "en": [
+   {
+    "p": "In coordinate space there is a sphere $S$ with center $\\mathrm{A}(0,\\,0,\\,1)$ and radius $4$. Let $C$ be the circle formed where sphere $S$ meets the $xy$-plane, and take two points $\\mathrm{P}$, $\\mathrm{Q}$ on circle $C$ so that the distance from point $\\mathrm{A}$ to segment $\\mathrm{PQ}$ is $2$. When point $\\mathrm{B}$ moves on the circle formed where sphere $S$ meets the sphere $T$ with diameter $\\mathrm{PQ}$, what is the maximum area of the orthogonal projection of triangle $\\mathrm{BPQ}$ onto the $xy$-plane? (The $z$-coordinate of point $\\mathrm{B}$ is positive.) [4 points]"
+   },
+   {
+    "ch": [
+     "6",
+     "3\\sqrt{6}",
+     "6\\sqrt{2}",
+     "3\\sqrt{10}",
+     "6\\sqrt{3}"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -10747,6 +11386,11 @@
   "simg": [],
   "answer": 17,
   "choice": false,
+  "en": [
+   {
+    "p": "There are an ellipse $\\dfrac{x^{2}}{9}+\\dfrac{y^{2}}{5}=1$ with one focus $\\mathrm{F}(c,\\,0)\\ (c>0)$ and a circle with center $(2,\\,3)$ and radius $r$. For a point $\\mathrm{P}$ on the ellipse and a point $\\mathrm{Q}$ on the circle, when the minimum value of $\\overline{\\mathrm{PQ}}-\\overline{\\mathrm{PF}}$ is $6$, find the value of $r$. [4 points]"
+   }
+  ],
   "art": ""
  },
  {
@@ -10768,6 +11412,26 @@
   "simg": [],
   "answer": 5,
   "choice": true,
+  "en": [
+   {
+    "p": "As shown in the figure, two points $\\mathrm{A}$, $\\mathrm{B}$ with $\\overline{\\mathrm{AB}}=18$ lie on the line of intersection of two distinct planes $\\alpha$, $\\beta$. The circle $C_1$ with diameter $\\mathrm{AB}$ lies in plane $\\alpha$, and the ellipse $C_2$ with major axis $\\mathrm{AB}$ and foci $\\mathrm{F}$, $\\mathrm{F'}$ lies in plane $\\beta$. If $\\mathrm{H}$ is the foot of the perpendicular from a point $\\mathrm{P}$ on circle $C_1$ to plane $\\beta$, then $\\overline{\\mathrm{HF'}}<\\overline{\\mathrm{HF}}$ and $\\angle\\mathrm{HFF'}=\\dfrac{\\pi}{6}$."
+   },
+   {
+    "p": "If $\\mathrm{Q}$ is the intersection point of line $\\mathrm{HF}$ and ellipse $C_2$ that is closer to $\\mathrm{H}$, then $\\overline{\\mathrm{FH}}<\\overline{\\mathrm{FQ}}$. The circle in plane $\\beta$ centered at $\\mathrm{H}$ and passing through $\\mathrm{Q}$ has radius $4$ and is tangent to line $\\mathrm{AB}$. If $\\theta$ is the angle between the two planes $\\alpha$, $\\beta$, what is the value of $\\cos\\theta$? (Point $\\mathrm{P}$ does not lie in plane $\\beta$.) [4 points]"
+   },
+   {
+    "fig": 1
+   },
+   {
+    "ch": [
+     "\\dfrac{2\\sqrt{66}}{33}",
+     "\\dfrac{4\\sqrt{69}}{69}",
+     "\\dfrac{\\sqrt{2}}{3}",
+     "\\dfrac{4\\sqrt{3}}{15}",
+     "\\dfrac{2\\sqrt{78}}{39}"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -10789,6 +11453,18 @@
   "simg": [],
   "answer": 11,
   "choice": false,
+  "en": [
+   {
+    "p": "For a positive number $c$, there is a hyperbola with foci $\\mathrm{F}(c,\\,0)$, $\\mathrm{F'}(-c,\\,0)$ and transverse axis of length $6$. Find the sum of all values of $c$ for which there exist two distinct points $\\mathrm{P}$, $\\mathrm{Q}$ on this hyperbola satisfying the following conditions. [4 points]"
+   },
+   {
+    "box": [
+     "(A) Point $\\mathrm{P}$ lies in the first quadrant, and point $\\mathrm{Q}$ lies on line $\\mathrm{PF'}$.",
+     "(B) Triangle $\\mathrm{PF'F}$ is isosceles.",
+     "(C) The perimeter of triangle $\\mathrm{PQF}$ is $28$."
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -10810,6 +11486,29 @@
   "simg": [],
   "answer": 5,
   "choice": true,
+  "en": [
+   {
+    "p": "For the four points $\\mathrm{A}(2,\\,6)$, $\\mathrm{B}(6,\\,2)$, $\\mathrm{C}(4,\\,4)$, $\\mathrm{D}(8,\\,6)$ in the coordinate plane, let $S$ be the set of all points X satisfying the following conditions."
+   },
+   {
+    "box": [
+     "(A) $\\left\\{(\\overrightarrow{\\mathrm{OX}}-\\overrightarrow{\\mathrm{OD}})\\cdot\\overrightarrow{\\mathrm{OC}}\\right\\}\\times\\left\\{|\\overrightarrow{\\mathrm{OX}}-\\overrightarrow{\\mathrm{OC}}|-3\\right\\}=0$",
+     "(B) There exists a point P on segment AB such that the two vectors $\\overrightarrow{\\mathrm{OX}}-\\overrightarrow{\\mathrm{OP}}$ and $\\overrightarrow{\\mathrm{OC}}$ are parallel."
+    ]
+   },
+   {
+    "p": "Among the points in the set $S$, let Q be the point with the greatest $y$-coordinate and R the point with the least $y$-coordinate. What is the value of $\\overrightarrow{\\mathrm{OQ}}\\cdot\\overrightarrow{\\mathrm{OR}}$? (Here O is the origin.) [4 points]"
+   },
+   {
+    "ch": [
+     "25",
+     "26",
+     "27",
+     "28",
+     "29"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -10831,6 +11530,17 @@
   "simg": [],
   "answer": 80,
   "choice": false,
+  "en": [
+   {
+    "p": "There are two hyperbolas with foci at the two points $\\mathrm{F}(c,\\,0)$ and $\\mathrm{F'}(-c,\\,0)\\ (c>0)$:"
+   },
+   {
+    "eq": "C_1:\\ x^2-\\frac{y^2}{24}=1,\\qquad C_2:\\ \\frac{x^2}{4}-\\frac{y^2}{21}=1"
+   },
+   {
+    "p": "For a point P on hyperbola $C_1$ in the second quadrant, let Q be the point where segment PF' meets hyperbola $C_2$. When $\\overline{\\mathrm{PQ}}+\\overline{\\mathrm{QF}}$, $2\\overline{\\mathrm{PF'}}$, $\\overline{\\mathrm{PF}}+\\overline{\\mathrm{PF'}}$ form an arithmetic sequence in this order, the slope of line PQ is $m$. Find the value of $60m$. [4 points]"
+   }
+  ],
   "art": ""
  },
  {
@@ -11868,6 +12578,26 @@
   "simg": [],
   "answer": 5,
   "choice": true,
+  "en": [
+   {
+    "p": "Two points $\\mathrm{P}$ and $\\mathrm{Q}$ start at time $t=0$ from points $\\mathrm{A}(1)$ and $\\mathrm{B}(8)$, respectively, and move along a number line. The velocities of $\\mathrm{P}$ and $\\mathrm{Q}$ at time $t\\ (t\\ge 0)$ are"
+   },
+   {
+    "eq": "v_1(t)=3t^{2}+4t-7,\\qquad v_2(t)=2t+4,"
+   },
+   {
+    "p": "respectively. What is the distance traveled by point $\\mathrm{P}$ from the start until the distance between $\\mathrm{P}$ and $\\mathrm{Q}$ first becomes $4$? [4 points]"
+   },
+   {
+    "ch": [
+     "10",
+     "14",
+     "19",
+     "25",
+     "32"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -11889,6 +12619,26 @@
   "simg": [],
   "answer": 1,
   "choice": true,
+  "en": [
+   {
+    "p": "A sequence $\\{a_n\\}$ whose first term is a natural number satisfies, for every natural number $n$,"
+   },
+   {
+    "eq": "a_{n+1}=\\begin{cases} a_n+1 & (\\text{if } a_n \\text{ is odd}) \\\\ \\dfrac{1}{2}a_n & (\\text{if } a_n \\text{ is even}) \\end{cases}"
+   },
+   {
+    "p": "What is the sum of all values of $a_1$ for which $a_2+a_4=40$? [4 points]"
+   },
+   {
+    "ch": [
+     "172",
+     "175",
+     "178",
+     "181",
+     "184"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -11910,6 +12660,26 @@
   "simg": [],
   "answer": 3,
   "choice": true,
+  "en": [
+   {
+    "p": "For two real numbers $a$, $b$, the function"
+   },
+   {
+    "eq": "f(x)=\\begin{cases} -\\dfrac{1}{3}x^{3}-ax^{2}-bx & (x<0) \\\\ \\dfrac{1}{3}x^{3}+ax^{2}-bx & (x\\ge 0) \\end{cases}"
+   },
+   {
+    "p": "is decreasing on the interval $(-\\infty,\\,-1]$ and increasing on the interval $[-1,\\,\\infty)$. Let $M$ and $m$ be the maximum and minimum values of $a+b$, respectively. What is the value of $M-m$? [4 points]"
+   },
+   {
+    "ch": [
+     "\\dfrac{3}{2}+3\\sqrt{2}",
+     "3+3\\sqrt{2}",
+     "\\dfrac{9}{2}+3\\sqrt{2}",
+     "6+3\\sqrt{2}",
+     "\\dfrac{15}{2}+3\\sqrt{2}"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -11931,6 +12701,26 @@
   "simg": [],
   "answer": 1,
   "choice": true,
+  "en": [
+   {
+    "p": "For an arithmetic sequence $\\{a_n\\}$ with nonzero common difference, when"
+   },
+   {
+    "eq": "|a_6|=a_8,\\qquad \\sum_{k=1}^{5}\\frac{1}{a_k a_{k+1}}=\\frac{5}{96},"
+   },
+   {
+    "p": "what is the value of $\\displaystyle\\sum_{k=1}^{15}a_k$? [4 points]"
+   },
+   {
+    "ch": [
+     "60",
+     "65",
+     "70",
+     "75",
+     "80"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -11952,6 +12742,26 @@
   "simg": [],
   "answer": 3,
   "choice": true,
+  "en": [
+   {
+    "p": "For the function $f(x)=\\dfrac{1}{9}x(x-6)(x-9)$ and a real number $t\\ (0<t<6)$, the function $g(x)$ is"
+   },
+   {
+    "eq": "g(x)=\\begin{cases} f(x) & (x<t) \\\\ -(x-t)+f(t) & (x\\ge t) \\end{cases}"
+   },
+   {
+    "p": "What is the maximum area of the region enclosed by the graph of $y=g(x)$ and the $x$-axis? [4 points]"
+   },
+   {
+    "ch": [
+     "\\dfrac{125}{4}",
+     "\\dfrac{127}{4}",
+     "\\dfrac{129}{4}",
+     "\\dfrac{131}{4}",
+     "\\dfrac{133}{4}"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -11973,6 +12783,29 @@
   "simg": [],
   "answer": 1,
   "choice": true,
+  "en": [
+   {
+    "p": "As shown in the figure, there is a quadrilateral $\\mathrm{ABCD}$ with"
+   },
+   {
+    "eq": "\\overline{\\mathrm{AB}}=3,\\quad \\overline{\\mathrm{BC}}=\\sqrt{13},\\quad \\overline{\\mathrm{AD}}\\times\\overline{\\mathrm{CD}}=9,\\quad \\angle\\mathrm{BAC}=\\frac{\\pi}{3}."
+   },
+   {
+    "p": "Let $S_1$ be the area of triangle $\\mathrm{ABC}$, $S_2$ the area of triangle $\\mathrm{ACD}$, and $R$ the radius of the circumcircle of triangle $\\mathrm{ACD}$. When $S_2=\\dfrac{5}{6}S_1$, what is the value of $\\dfrac{R}{\\sin(\\angle\\mathrm{ADC})}$? [4 points]"
+   },
+   {
+    "fig": 1
+   },
+   {
+    "ch": [
+     "\\dfrac{54}{25}",
+     "\\dfrac{117}{50}",
+     "\\dfrac{63}{25}",
+     "\\dfrac{27}{10}",
+     "\\dfrac{72}{25}"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -11994,6 +12827,29 @@
   "simg": [],
   "answer": 3,
   "choice": true,
+  "en": [
+   {
+    "p": "As shown in the figure, for a real number $t\\ (0<t<1)$, let P be the point on the curve $y=x^2$ whose distance from the line $y=2tx-1$ is minimal, and let Q be the point where the line OP meets the line $y=2tx-1$. What is the value of"
+   },
+   {
+    "eq": "\\lim_{t\\to 1-}\\frac{\\overline{\\mathrm{PQ}}}{1-t}\\,?"
+   },
+   {
+    "p": "(Here O is the origin.) [4 points]"
+   },
+   {
+    "fig": "See the original for the figure."
+   },
+   {
+    "ch": [
+     "\\sqrt{6}",
+     "\\sqrt{7}",
+     "2\\sqrt{2}",
+     "3",
+     "\\sqrt{10}"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -12015,6 +12871,26 @@
   "simg": [],
   "answer": 5,
   "choice": true,
+  "en": [
+   {
+    "p": "For an arithmetic sequence $\\{a_n\\}$ with $a_2=-4$ and a nonzero common difference, define the sequence $\\{b_n\\}$ by $b_n=a_n+a_{n+1}\\ (n\\ge 1)$, and let the two sets $A$, $B$ be"
+   },
+   {
+    "eq": "A=\\{a_1,\\,a_2,\\,a_3,\\,a_4,\\,a_5\\},\\qquad B=\\{b_1,\\,b_2,\\,b_3,\\,b_4,\\,b_5\\}."
+   },
+   {
+    "p": "Over all sequences $\\{a_n\\}$ such that $n(A\\cap B)=3$, what is the sum of the values of $a_{20}$? [4 points]"
+   },
+   {
+    "ch": [
+     "30",
+     "34",
+     "38",
+     "42",
+     "46"
+    ]
+   }
+  ],
   "art": ""
  },
  {
@@ -12036,6 +12912,32 @@
   "simg": [],
   "answer": 1,
   "choice": true,
+  "en": [
+   {
+    "p": "As shown in the figure, in the quadrilateral ABCD with"
+   },
+   {
+    "eq": "\\overline{\\mathrm{BC}}=3,\\quad \\overline{\\mathrm{CD}}=2,\\quad \\cos(\\angle\\mathrm{BCD})=-\\frac{1}{3},\\quad \\angle\\mathrm{DAB}>\\frac{\\pi}{2},"
+   },
+   {
+    "p": "the two triangles ABC and ACD are both acute triangles. Let E be the point dividing segment AC internally in the ratio $1:2$. Let $\\mathrm{P_1}$, $\\mathrm{P_2}$ be the points other than A where the circle with diameter AE meets the segments AB and AD, respectively, and let $\\mathrm{Q_1}$, $\\mathrm{Q_2}$ be the points other than C where the circle with diameter CE meets the segments BC and CD, respectively."
+   },
+   {
+    "p": "When $\\overline{\\mathrm{P_1P_2}}:\\overline{\\mathrm{Q_1Q_2}}=3:5\\sqrt{2}$ and the area of triangle ABD is 2, what is the value of $\\overline{\\mathrm{AB}}+\\overline{\\mathrm{AD}}$? (Here $\\overline{\\mathrm{AB}}>\\overline{\\mathrm{AD}}$.) [4 points]"
+   },
+   {
+    "fig": "See the original for the figure."
+   },
+   {
+    "ch": [
+     "\\sqrt{21}",
+     "\\sqrt{22}",
+     "\\sqrt{23}",
+     "2\\sqrt{6}",
+     "5"
+    ]
+   }
+  ],
   "art": ""
  },
  {
