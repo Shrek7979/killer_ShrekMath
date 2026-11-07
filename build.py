@@ -179,6 +179,8 @@ def japan_items(start=1, extra=False):
     if extra is True:
         extra = 'pick3.json'
     allpick = ids_of('pick3.json') | ids_of('pick_b2.json')
+    jp = os.path.join(ROOT, 'src/japan/ja.json')
+    JA = json.load(open(jp, encoding='utf-8')) if os.path.exists(jp) else {}   # 일본어 번역 + 유사문항(시범)
     pick = ids_of(extra) if extra else set()
     out = []
     for x in json.load(open(p, encoding='utf-8')):
@@ -196,6 +198,9 @@ def japan_items(start=1, extra=False):
         out.append({'num': start + len(out), 'id': x['id'], 'year': x['year'], 'num0': x['num'], 'stars': x['stars'],
                     'univ': univ.strip(), 'track': track.strip() or '이과', 'subj': x['subj'] or '', 'text': text[:90],
                     'qimg': q, 'simg': s})
+        if x['id'] in JA:
+            out[-1]['ja'] = JA[x['id']]['ja']
+            out[-1]['sim'] = JA[x['id']]['sim']
     return out
 
 
