@@ -1,0 +1,75 @@
+{
+ "_note": "기출관 영어 번역(시범: 2026학년도 수능 10문항). 블록 형식 — p: 문단, eq: 가운데 수식(LaTeX), box: 조건 상자(줄 목록), ch: 5지선다 보기, fig: 그림은 원문 참고. 수식은 $…$ (LaTeX).",
+ "2026-11-c14": [
+  {"p": "As shown in the figure, $\\mathrm{ABC}$ is a right triangle with $\\overline{\\mathrm{AB}}=3$, $\\overline{\\mathrm{BC}}=4$, and $\\angle \\mathrm{B}=\\dfrac{\\pi}{2}$. Let $\\mathrm{D}$ be the point that internally divides segment $\\mathrm{AB}$ in the ratio $2:1$."},
+  {"p": "Let $\\mathrm{E}$ be the point where the circle centered at $\\mathrm{A}$ with radius $\\overline{\\mathrm{AD}}$ meets segment $\\mathrm{AC}$, and let $\\mathrm{F}$ be the point, other than $\\mathrm{D}$, where line $\\mathrm{AB}$ meets this circle. Point $\\mathrm{G}$ is chosen on arc $\\mathrm{EF}$ so that $\\overline{\\mathrm{CG}}=2\\sqrt{6}$."},
+  {"p": "Point $\\mathrm{H}$ lies on the circle passing through the three points $\\mathrm{C}$, $\\mathrm{E}$, $\\mathrm{G}$ and satisfies $\\angle \\mathrm{HCG}=\\angle \\mathrm{BAC}$. What is the length of segment $\\mathrm{GH}$? [4 points]"},
+  {"fig": 1},
+  {"ch": ["\\dfrac{6\\sqrt{15}}{5}", "\\dfrac{38\\sqrt{10}}{25}", "\\dfrac{14\\sqrt{3}}{5}", "\\dfrac{32\\sqrt{15}}{25}", "\\dfrac{8\\sqrt{10}}{5}"]}
+ ],
+ "2026-11-c15": [
+  {"p": "The function $f(x)$ is"},
+  {"eq": "f(x)=\\begin{cases} -x^{2} & (x<0) \\\\ x^{2}-x & (x\\ge 0) \\end{cases}"},
+  {"p": "and, for a positive number $a$, the function $g(x)$ is defined by"},
+  {"eq": "g(x)=\\begin{cases} ax+a & (x<-1) \\\\ 0 & (-1\\le x<1) \\\\ ax-a & (x\\ge 1) \\end{cases}"},
+  {"p": "Let $k$ be the maximum value of $a$ for which the function $h(x)=\\displaystyle\\int_{0}^{x}\\big(g(t)-f(t)\\big)\\,dt$ has exactly one extreme value. When $a=k$, what is the value of $k+h(3)$? [4 points]"},
+  {"ch": ["\\dfrac{9}{2}", "\\dfrac{11}{2}", "\\dfrac{13}{2}", "\\dfrac{15}{2}", "\\dfrac{17}{2}"]}
+ ],
+ "2026-11-c20": [
+  {"p": "The sequence $\\{a_n\\}$ satisfies the following conditions."},
+  {"box": ["• $a_1=7$", "• For every natural number $n\\ge 2$, $\\displaystyle\\sum_{k=1}^{n}a_k=\\frac{2}{3}a_n+\\frac{1}{6}n^{2}-\\frac{1}{6}n+10$."]},
+  {"p": "The following is the process of finding the value of $\\displaystyle\\sum_{k=1}^{12}a_k+\\sum_{k=1}^{5}a_{2k+1}$."},
+  {"box": [
+   "For every natural number $n\\ge 2$, since $a_{n+1}=\\displaystyle\\sum_{k=1}^{n+1}a_k-\\sum_{k=1}^{n}a_k$,",
+   "$\\qquad a_{n+1}=\\dfrac{2}{3}\\left(a_{n+1}-a_n\\right)+\\boxed{\\ (\\text{A})\\ }$,",
+   "and rearranging this gives",
+   "$\\qquad 2a_n+a_{n+1}=3\\times\\boxed{\\ (\\text{A})\\ }\\qquad\\cdots\\cdots$ ①",
+   "Substituting $n=2$ into both sides of $\\displaystyle\\sum_{k=1}^{n}a_k=\\frac{2}{3}a_n+\\frac{1}{6}n^{2}-\\frac{1}{6}n+10\\ (n\\ge 2)$ gives",
+   "$\\qquad a_2=\\boxed{\\ (\\text{B})\\ }\\qquad\\cdots\\cdots$ ②",
+   "By ① and ②,",
+   "$\\qquad \\displaystyle\\sum_{k=1}^{12}a_k+\\sum_{k=1}^{5}a_{2k+1}=a_1+a_2+\\sum_{k=1}^{5}\\left(2a_{2k+1}+a_{2k+2}\\right)=\\boxed{\\ (\\text{C})\\ }$"
+  ]},
+  {"p": "Let $f(n)$ be the expression that fits (A), and let $p$ and $q$ be the numbers that fit (B) and (C), respectively. Find the value of $\\dfrac{p\\times q}{f(12)}$. [4 points]"}
+ ],
+ "2026-11-c21": [
+  {"p": "For a cubic function $f(x)$ with positive leading coefficient and a real number $t$, the function"},
+  {"eq": "g(x)=\\begin{cases} -f(x) & (x<t) \\\\ f(x) & (x\\ge t) \\end{cases}"},
+  {"p": "is continuous on the set of all real numbers and satisfies the following conditions."},
+  {"box": ["(A) For every real number $a$, the value of $\\displaystyle\\lim_{x\\to a+}\\frac{g(x)}{x(x-2)}$ exists.", "(B) The set of natural numbers $m$ for which the value of $\\displaystyle\\lim_{x\\to m+}\\frac{g(x)}{x(x-2)}$ is negative is $\\left\\{g(-1),\\ -\\dfrac{7}{2}g(1)\\right\\}$."]},
+  {"p": "Find the value of $g(-5)$. (Given that $g(-1)\\ne -\\dfrac{7}{2}g(1)$.) [4 points]"}
+ ],
+ "2026-11-c22": [
+  {"p": "Point $\\mathrm{A}(a,\\,b)$ on the curve $y=\\log_{16}(8x+2)$ and point $\\mathrm{B}$ on the curve $y=4^{x-1}-\\dfrac{1}{2}$ both lie in the first quadrant."},
+  {"p": "The reflection of point $\\mathrm{A}$ across the line $y=x$ lies on line $\\mathrm{OB}$, and the midpoint of segment $\\mathrm{AB}$ is $\\left(\\dfrac{77}{8},\\ \\dfrac{133}{8}\\right)$. Then $a\\times b=\\dfrac{q}{p}$. Find the value of $p+q$."},
+  {"p": "(Here $\\mathrm{O}$ is the origin, and $p$ and $q$ are relatively prime natural numbers.) [4 points]"}
+ ],
+ "2026-11-k30": [
+  {"p": "Ten empty bags are placed in a row, and there are 8 balls. All the balls are distributed into the bags so that each bag contains at most 2 balls. Find the number of ways that satisfy the following conditions. (The balls are indistinguishable from one another.) [4 points]"},
+  {"box": ["(A) The number of bags containing exactly 1 ball is 4 or 6.", "(B) Every bag adjacent to a bag containing 2 balls contains no balls."]}
+ ],
+ "2026-11-m28": [
+  {"p": "For the function"},
+  {"eq": "f(x)=\\frac{1}{2}x^{2}-x+\\ln(1+x)"},
+  {"p": "and a positive number $t$, let $g(t)$ be the value of $s$ such that the distance between the foot of the perpendicular from the point $(s,\\,f(s))\\ (s>0)$ to the $y$-axis and the point where the tangent line to the curve $y=f(x)$ at $(s,\\,f(s))$ meets the $y$-axis is $t$. What is the value of $\\displaystyle\\int_{\\frac{1}{2}}^{\\frac{27}{4}}g(t)\\,dt$? [4 points]"},
+  {"ch": ["\\dfrac{161}{12}+\\ln 3", "\\dfrac{40}{3}+\\ln 3", "\\dfrac{53}{4}+\\ln 2", "\\dfrac{79}{6}+\\ln 2", "\\dfrac{157}{12}+\\ln 2"]}
+ ],
+ "2026-11-m29": [
+  {"p": "An arithmetic sequence $\\{a_n\\}$ whose first term equals its common difference and a geometric sequence $\\{b_n\\}$ satisfy the following condition."},
+  {"box": ["For some natural number $k$,", "$\\qquad b_{k+i}=\\dfrac{1}{a_i}-1\\quad (i=1,\\ 2,\\ 3)$."]},
+  {"p": "When the inequality"},
+  {"eq": "0<\\sum_{n=1}^{\\infty}\\left(b_n-\\frac{1}{a_n a_{n+1}}\\right)<30"},
+  {"p": "holds, $a_2\\times\\displaystyle\\sum_{n=1}^{\\infty}b_{2n}=\\dfrac{q}{p}$. Find the value of $p+q$. (Given that $a_1\\ne 0$, and $p$ and $q$ are relatively prime natural numbers.) [4 points]"}
+ ],
+ "2026-11-m30": [
+  {"p": "The inverse function $f^{-1}(x)$ of a continuous function $f(x)$ that is increasing on the set of all real numbers satisfies the following conditions."},
+  {"box": ["(A) When $|x|\\le 1$, $4\\times\\left(f^{-1}(x)\\right)^{2}=x^{2}\\left(x^{2}-5\\right)^{2}$.", "(B) When $|x|>1$, $\\left|f^{-1}(x)\\right|=e^{|x|-1}+1$."]},
+  {"p": "For a real number $m$, let $g(m)$ be the number of points at which the line with slope $m$ passing through the point $(1,\\,0)$ meets the curve $y=f(x)$. The function $g(m)$ is discontinuous at $m=a$ and $m=b\\ (a<b)$. Find the value of"},
+  {"eq": "g(a)\\times\\left(\\lim_{m\\to a+}g(m)\\right)+g(b)\\times\\left(\\frac{\\ln b}{b}\\right)^{2}."},
+  {"p": "(You may use $\\displaystyle\\lim_{x\\to\\infty}\\frac{\\ln x}{x}=0$.) [4 points]"}
+ ],
+ "2026-11-g30": [
+  {"p": "In the coordinate plane, two points $\\mathrm{P}$ and $\\mathrm{Q}$ on the circle whose diameter is segment $\\mathrm{AB}$ of length $10\\sqrt{2}$ satisfy"},
+  {"eq": "\\left(\\overrightarrow{\\mathrm{PA}}+\\overrightarrow{\\mathrm{PB}}\\right)\\cdot\\left(\\overrightarrow{\\mathrm{PQ}}+\\overrightarrow{\\mathrm{PB}}\\right)=2\\left|\\overrightarrow{\\mathrm{PQ}}\\right|^{2}."},
+  {"p": "When $\\left|\\overrightarrow{\\mathrm{PB}}\\right|=14$, $\\left|\\overrightarrow{\\mathrm{PA}}\\cdot\\overrightarrow{\\mathrm{QB}}\\right|=\\dfrac{q}{p}$. Find the value of $p+q$. (Given that $\\left|\\overrightarrow{\\mathrm{QB}}\\right|>0$, and $p$ and $q$ are relatively prime natural numbers.) [4 points]"}
+ ]
+}
