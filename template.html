@@ -12,7 +12,7 @@
   --d2:#8a93a6; --d3:#4ea3ff; --d4:#ff9f3a; --d5:#ff4a6e;
   --s1:#2dd4bf; --s2:#a78bfa; --s3:#fb7185; --s4:#fbbf24; --s5:#60a5fa; --s6:#f5c542;
   --k-solve:#e50914; --k-intro:#5aa9ff; --k-cond:#f5c542; --k-concept:#2dd4bf; --k-step:#a78bfa; --k-trap:#ff9f3a; --k-variant:#49d49a; --k-end:#f472b6;
-  --k-answer:#a6e85c; --k-rubric:#f5c542;
+  --k-answer:#a6e85c; --k-rubric:#f5c542; --k-sim:#ff8fd8;
   --disp:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; --body:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
   --exam:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
   --r:8px; --fs:1; color-scheme:dark;
@@ -392,6 +392,12 @@ html[lang=en] .sheet:has(.exam.fold) .tools b::after{content:' · tap to view'}
 .entext table.entbl{border-collapse:collapse;margin:.4em 0 .8em}.entext .entbl th,.entext .entbl td{border:1px solid var(--paper-line,#bbb);padding:.2em .9em;text-align:center}
 details.orig{margin-top:14px;border-top:1px dashed var(--paper-line,#ccc);padding-top:10px}
 details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:8px}
+.langseg{display:inline-flex;gap:0;margin:0 0 12px;border:1px solid var(--paper-line,#ccc);border-radius:999px;overflow:hidden;font-size:.85rem}
+.langseg button{border:0;background:transparent;color:inherit;padding:4px 14px;cursor:pointer;font:inherit}
+.langseg button.on{background:#e8417a;color:#fff}
+#fullExam .langseg{display:none}
+.jab{display:inline-block;font-size:.66rem;padding:0 5px;border-radius:4px;background:#e8417a;color:#fff;margin-left:4px;vertical-align:1px}
+.simans{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line,#444)}
 .enb{display:inline-block;font-size:.66rem;padding:0 5px;border-radius:4px;background:#2b6cff;color:#fff;margin-left:4px;vertical-align:1px}
 /* 휴대폰: 관 선택 탭을 상단바 아래 한 줄 전체로(4칸 같은 폭, 엄지로 누르기 쉬운 높이) */
 @media (max-width:760px){
@@ -564,8 +570,8 @@ const RANKS=[[0,'손님'],[3,'단골'],[10,'VIP'],[25,'점원'],[45,'매니저']
 const LIMIT={5:13,4:10,3:8,2:8};   // 제한시간(분): 킬러 13 · 고난도 10 · 준킬러 8
 const STAGE={solve:['실전','시험처럼 먼저 풀기'],intro:['진단','문항 프로필'],cond:['조건','조건을 문장 단위로 쪼개기'],concept:['개념','문항을 떠받치는 원리'],
   step:['풀이','단계별 풀이'],trap:['함정','출제 포인트와 분기점'],variant:['변형','같은 뼈대, 다른 숫자'],end:['정리','오늘의 한 줄'],
-  answer:['예시답안','대학 발표 답안'],rubric:['채점','채점 기준과 자기 채점']};
-const ORDER=['solve','intro','cond','concept','step','answer','rubric','trap','variant','end'];
+  answer:['예시답안','대학 발표 답안'],rubric:['채점','채점 기준과 자기 채점'],sim:['유사문항','같은 아이디어, 다른 조건']};
+const ORDER=['solve','intro','cond','concept','step','answer','rubric','sim','trap','variant','end'];
 const KEY='km:v2';
 const $=s=>document.querySelector(s);
 const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
@@ -883,7 +889,7 @@ function homeJapan(){
   for(const x of L){
     const g=x.year+'년';if(g!==last){last=g;track=newRow(g+' 일본 대학 입시',L.filter(y=>y.year===x.year).length)}
     const c=el('button','card');const rec=S.jrec[x.num];c.style.setProperty('--dc',DC(x.stars));c.dataset.big=x.year.slice(2);
-    c.innerHTML=`<div class="top"><span><span class="num">#J${JNO(x)}</span> · ${x.year} · ${x.num0}번</span><span class="subj" style="--sc:${SC(x.subj==='미적분'?'미적분Ⅱ':x.subj)}">${esc(x.subj)}</span></div>
+    c.innerHTML=`<div class="top"><span><span class="num">#J${JNO(x)}</span> · ${x.year} · ${x.num0}번${x.ja?' <b class="jab">日·유사</b>':''}</span><span class="subj" style="--sc:${SC(x.subj==='미적분'?'미적분Ⅱ':x.subj)}">${esc(x.subj)}</span></div>
       <div class="topic">${esc(x.univ)} · ${esc(x.track)}</div>
       <div class="meta"><span><span class="stars">${'★'.repeat(x.stars)}${'☆'.repeat(5-x.stars)}</span><span class="dbadge">${x.stars>=5?'최고난도':x.stars>=3?'고난도':'중급'}</span></span><span><span class="tag" style="white-space:normal;line-height:1.3">${esc(x.text.slice(0,30))}…</span></span></div>`;
     c.insertBefore(artEl(x.text,x.subj,x.art,x.id,DC(x.stars),null,x.qimg&&x.qimg[0]),c.querySelector('.topic'));
@@ -999,6 +1005,7 @@ function buildPages(){
     E.subs.forEach((s,i)=>pages.push({k:'rubric',i,n:E.subs.length}));
   }else{
     J.simg.forEach((s,i)=>pages.push({k:'answer',i,n:J.simg.length}));
+    if(J.sim)pages.push({k:'sim'});
   }
   pages.push({k:'end'});
   const st=$('#stages');st.innerHTML='';let idx=0;
@@ -1210,10 +1217,22 @@ async function openJapan(n,c){
   $('#opTitle').textContent=J.univ+' · '+J.track;$('#opStars').innerHTML=`<span class="diff" style="--dc:${DC(J.stars)}">${'★'.repeat(J.stars)} 제한 ${jlim(J)}분</span>`;
   $('#sheetLbl').textContent='문제';$('#numBtn').hidden=true;
   const root=$('#examText');root.innerHTML='';J.qimg.forEach(p=>{const im=el('img','pg');im.src=jimg(p);im.alt='문제';root.append(im)});
+  if(!isP&&J.ja)renderJapanText(root);
   if(isP&&EN()){$('#opId').innerHTML=`#P${JNO(J)} · KICE past exam <span class="subj" style="--sc:${SC(J.subj)}">${esc(PART_EN[J.part]||J.part)}</span>`;$('#opTitle').textContent=pName(J)+' · '+pTrack(J);$('#opStars').innerHTML=`<span class="diff" style="--dc:${DC(J.stars)}">${'★'.repeat(J.stars)} ${jlim(J)} min</span>`;$('#sheetLbl').textContent='Problem';
     if(J.en){root.innerHTML='';renderEnBlocks(root,J.en);const d=el('details','orig');d.open=J.en.some(b=>b.fig);d.append(el('summary',null,'Original (Korean)'));J.qimg.forEach(p=>{const im=el('img','pg');im.src=jimg(p);im.alt='원문';d.append(im)});root.append(d);tex(root)}}
   $('#exam').classList.toggle('open',unlocked);$('#exam').classList.remove('fold');$('#foldBtn').textContent='접기';
   if(LP())$('#foldBtn').textContent='Fold';userUnfold=false;buildPages();go(Math.min(c||0,pages.length-1),true);requestAnimationFrame(measureBar);
+}
+/* 일본관 일본어 보기(시범) */
+const JA=()=>S.jlang==='ja';
+function langSeg(onchange){const bar=el('div','langseg');[['ko','한국어'],['ja','日本語']].forEach(([v,t])=>{const b=el('button',(S.jlang||'ko')===v?'on':'',t);b.onclick=e=>{e.stopPropagation();if((S.jlang||'ko')===v)return;S.jlang=v;save();onchange()};bar.append(b)});return bar}
+function jaRefresh(){renderJapanText($('#examText'));if(pages[cur]&&pages[cur].k==='sim')go(cur,true)}
+function renderJapanText(root){
+  root.innerHTML='';root.append(langSeg(jaRefresh));
+  const img=(p,a)=>{const im=el('img','pg');im.src=jimg(p);im.alt=a;return im};
+  if(JA()){renderEnBlocks(root,J.ja);root.lastChild.lang='ja';const d=el('details','orig');d.append(el('summary',null,'한국어판 (이미지)'));J.qimg.forEach(p=>d.append(img(p,'한국어판')));root.append(d);
+    root.append(el('p','note','※ 日本語は韓国語版からの再翻訳で、大学の原文とは表現が異なる場合があります。'));tex(root)}
+  else J.qimg.forEach(p=>root.append(img(p,'문제')));
 }
 const jlim=j=>j.kind==='past'?(LIMIT[j.stars]||8):(JLIMIT[j.stars]||25);
 function renderJapanCard(p){
@@ -1245,6 +1264,15 @@ function renderJapanCard(p){
     b.append(el('p','note','난이도는 한국 고등학생 기준의 편집 추정입니다. 소문항이 여러 개면 가장 어려운 소문항 기준.'));w.append(b);return w}
   if(p.k==='answer'){w.append(head('answer',`해설 ${p.i+1}/${p.n}`));const b=el('div','body');b.style.maxWidth='none';
     const im=el('img','pg');im.src=jimg(J.simg[p.i]);im.alt='해설';b.append(im);w.append(b);return w}
+  if(p.k==='sim'){w.append(head('sim'));const b=el('div','body');const s=J.sim,ja=JA();
+    b.append(langSeg(jaRefresh));
+    b.append(el('p','lead',ja?'原題と同じ考え方で、条件を変えた問題です。紙に解いてから答えを確かめましょう。':'원문제와 같은 아이디어로 조건을 바꾼 문제입니다. 종이에 풀고 나서 답을 확인하세요.'));
+    const q=el('div');renderEnBlocks(q,ja?s.ja:s.ko);if(ja)q.lang='ja';b.append(q);
+    const bt=el('button','btn',ja?'答えと解説を見る':'정답·풀이 보기');const an=el('div','simans');an.hidden=true;if(ja)an.lang='ja';
+    an.append(el('p','lead',`<b>${ja?'答':'정답'}</b>　${md(ja?s.ans.ja:s.ans.ko)}`));renderEnBlocks(an,ja?s.sol.ja:s.sol.ko);
+    bt.onclick=()=>{an.hidden=false;bt.hidden=true};const row=el('div','btnrow');row.append(bt);b.append(row,an);
+    b.append(el('p','note',ja?'※ 類題はShrekMathの自作問題です(答えは計算・全数確認で検証済み)。':'※ 유사문항은 ShrekMath 자체 제작입니다. (정답은 계산과 전수 확인으로 검증)'));
+    w.append(b);return w}
   if(p.k==='end'){w.append(head('end'));const b=el('div','body');b.append(el('h2',null,auto?'정리':'스스로 점검'));
     if(auto){b.append(el('p','lead',rec&&rec.r==='ok'?`정답 <b class="num">${esc(J.answer)}</b>. 맞았어도 ‘어느 조건이 어느 단계에서 쓰였는지’ 한 줄로 말할 수 있어야 진짜 내 것입니다.`:`정답은 <b class="num">${esc(J.answer)}</b>. 내 풀이가 어디서 갈라졌는지 적어 두고, 3일 뒤 다시 풀어 보세요.`))}
     else b.append(el('p','lead',isP?'정답이 등록되지 않은 문항입니다. 해설(EBSi 등)과 비교해서 하나를 고르세요.':'해설과 내 풀이를 비교해서 하나를 고르세요. 기록에 남고, 목록에서 색으로 표시됩니다.'));
@@ -1262,7 +1290,7 @@ function measureBar(){const h=$('#op .opbar').getBoundingClientRect().height;doc
 window.addEventListener('resize',measureBar);
 $('#fullExam').addEventListener('click',e=>{if(e.target.closest('img.pg')){e.stopPropagation();$('#fullExam').classList.toggle('zoom')}},true);
 $('.sheet .tools').addEventListener('click',e=>{if(e.target.closest('button'))return;if($('#exam').classList.contains('open'))$('#fullBtn').click()});
-$('#examText').addEventListener('click',e=>{if(!$('#exam').classList.contains('open'))return;if(e.target.closest('img.pg'))return;$('#fullBtn').click()});
+$('#examText').addEventListener('click',e=>{if(!$('#exam').classList.contains('open'))return;if(e.target.closest('img.pg,summary,button,.langseg'))return;$('#fullBtn').click()});
 $('#fullBtn').onclick=()=>{if(!$('#exam').classList.contains('open')){toast('먼저 실전 시작을 눌러 문항을 여세요');return}$('#fullExam').innerHTML=$('#examText').innerHTML;$('#fullExam').classList.remove('zoom');$('#fsHint').hidden=!$('#fullExam').querySelector('img.pg');$('#fsAnswer').hidden=true;const solving=!!timer&&!unlocked;$('#fsFoot').hidden=!solving;const autoG=mode==='killer'||(mode==='japan'&&J&&J.kind==='past'&&J.answer!=null);$('#fsAnsRow').hidden=!(solving&&autoG);$('#fsDone').hidden=!(solving&&!autoG);$('#fsDone').textContent=mode==='essay'?'답안 작성 완료 → 예시답안':'풀이 완료 → 해설 보기';$('#fsAns').value='';$('#fullSheet').hidden=false;if(solving&&autoG&&window.innerWidth>900)setTimeout(()=>$('#fsAns').focus(),50);document.body.style.overflow='hidden'};
 $('#fsClose').onclick=()=>{$('#fullSheet').hidden=true;document.body.style.overflow=''};
 $('#fsGrade').onclick=()=>{const v=$('#fsAns').value.trim();if(!v){$('#fsAns').focus();return}const a=$('#answer');if(!a){toast('채점할 수 없어요');return}a.value=v;$('#fsClose').click();a.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}))};
