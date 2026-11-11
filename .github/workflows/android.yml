@@ -10,6 +10,9 @@ on:
     branches: [main]
     paths: ['android/**', '.github/workflows/android.yml']
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -33,3 +36,11 @@ jobs:
           path: |
             android/app/build/outputs/bundle/release/*.aab
             android/app/build/outputs/apk/debug/*.apk
+      - name: 결과 파일을 app-build 브랜치에 올리기 (내려받기 쉽게)
+        run: |
+          mkdir -p /tmp/out && cp android/app/build/outputs/bundle/release/*.aab /tmp/out/ && cp android/app/build/outputs/apk/debug/*.apk /tmp/out/
+          cd /tmp/out
+          git init -q -b app-build && git config user.name "github-actions" && git config user.email "actions@github.com"
+          echo "run ${{ github.run_number }} · ${{ github.sha }}" > BUILD.txt
+          git add -A && git commit -q -m "앱 빌드 ${{ github.run_number }}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" app-build
