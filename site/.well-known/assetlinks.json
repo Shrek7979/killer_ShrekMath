@@ -1,0 +1,14 @@
+[
+ {
+  "relation": [
+   "delegate_permission/common.handle_all_urls"
+  ],
+  "target": {
+   "namespace": "android_app",
+   "package_name": "com.shrekmath.killermath",
+   "sha256_cert_fingerprints": [
+    "49:C9:70:38:B1:D0:05:40:A2:80:47:09:CD:01:E8:0D:E6:F1:F7:3B:C0:44:6E:A2:18:4A:20:1C:8A:D8:72:2F"
+   ]
+  }
+ }
+]

@@ -2,3 +2,8 @@ __pycache__/
 _update/
 *.pyc
 .DS_Store
+android/.gradle/
+android/build/
+android/app/build/
+*.jks
+*.keystore
