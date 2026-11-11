@@ -292,6 +292,25 @@ def encrypt_payload(obj, password):
     return {'salt': b64(salt), 'iv': b64(iv), 'iter': iters, 'data': b64(data)}
 
 
+APP_PACKAGE = 'com.shrekmath.killermath'   # 플레이스토어 패키지 이름 (한 번 올리면 바꿀 수 없음)
+
+
+def write_app_files():
+    """안드로이드 앱(TWA)·PWA 용 파일: 서비스 워커, 개인정보처리방침, Digital Asset Links"""
+    import time
+    sw = open(os.path.join(ROOT, 'src', 'app', 'sw.js'), encoding='utf-8').read()
+    with open(os.path.join(SITE, 'sw.js'), 'w', encoding='utf-8') as f:
+        f.write(sw.replace('__VERSION__', time.strftime('%Y%m%d%H%M%S')))
+    shutil.copy2(os.path.join(ROOT, 'src', 'app', 'privacy.html'), os.path.join(SITE, 'privacy.html'))
+    fp = os.path.join(ROOT, 'src', 'app', 'sha256.txt')
+    if os.path.exists(fp):
+        fps = [l.strip() for l in open(fp, encoding='utf-8') if l.strip() and not l.startswith('#')]
+        os.makedirs(os.path.join(SITE, '.well-known'), exist_ok=True)
+        with open(os.path.join(SITE, '.well-known', 'assetlinks.json'), 'w', encoding='utf-8') as f:
+            json.dump([{'relation': ['delegate_permission/common.handle_all_urls'],
+                        'target': {'namespace': 'android_app', 'package_name': APP_PACKAGE, 'sha256_cert_fingerprints': fps}}], f, indent=1)
+
+
 def main():
     import argparse, shutil
     ap = argparse.ArgumentParser()
@@ -398,6 +417,7 @@ def main():
                 '<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">\n'
                 '<meta property="og:title" content="킬러들의 수학몰"><meta property="og:image" content="https://killershrekmath.vercel.app/icon-512.png">\n'
                 '<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}</style>\n'
+                '<script>if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(()=>{}))</script>\n'
                 '</head>\n<body>\n__BODY__\n</body>\n</html>\n')
     with open(os.path.join(SITE, 'index.html'), 'w', encoding='utf-8') as f:
         f.write(skeleton.replace('__BODY__', tpl.replace('/*__INLINE_DATA__*/', '')))
@@ -406,10 +426,13 @@ def main():
     for fn in ('favicon.ico', 'favicon-32.png', 'favicon-64.png', 'apple-touch-icon.png', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png'):
         shutil.copy2(os.path.join(ICON, fn), os.path.join(SITE, fn))
     with open(os.path.join(SITE, 'manifest.json'), 'w', encoding='utf-8') as f:
-        json.dump({'name': '킬러들의 수학몰', 'short_name': '수학몰', 'start_url': './', 'display': 'standalone', 'background_color': '#141414', 'theme_color': '#141414',
+        json.dump({'id': '/', 'name': '킬러들의 수학몰', 'short_name': '수학몰', 'lang': 'ko', 'scope': '/', 'start_url': '/', 'display': 'standalone',
+                   'description': '수능 킬러 문항 분석, 대학별 수리논술, 일본 대학 입시 수학, 수능 기출을 스스로 풀고 해설을 보는 학습 앱',
+                   'categories': ['education'], 'orientation': 'any', 'background_color': '#141414', 'theme_color': '#141414',
                    'icons': [{'src': 'icon-192.png', 'sizes': '192x192', 'type': 'image/png'},
                              {'src': 'icon-512.png', 'sizes': '512x512', 'type': 'image/png'},
                              {'src': 'icon-maskable-512.png', 'sizes': '512x512', 'type': 'image/png', 'purpose': 'maskable'}]}, f, ensure_ascii=False, indent=1)
+    write_app_files()
     with open(os.path.join(SITE, 'vercel.json'), 'w', encoding='utf-8') as f:
         json.dump({'cleanUrls': True, 'headers': [{'source': '/(.*)\\.json', 'headers': [{'key': 'Cache-Control', 'value': 'public, max-age=300'}]}]}, f, indent=1)
     # 단일 파일(아티팩트용)에는 64px 파비콘을 data URI 로 인라인

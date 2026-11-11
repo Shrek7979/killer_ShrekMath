@@ -1,8 +1,16 @@
 {
+ "id": "/",
  "name": "킬러들의 수학몰",
  "short_name": "수학몰",
- "start_url": "./",
+ "lang": "ko",
+ "scope": "/",
+ "start_url": "/",
  "display": "standalone",
+ "description": "수능 킬러 문항 분석, 대학별 수리논술, 일본 대학 입시 수학, 수능 기출을 스스로 풀고 해설을 보는 학습 앱",
+ "categories": [
+  "education"
+ ],
+ "orientation": "any",
  "background_color": "#141414",
  "theme_color": "#141414",
  "icons": [
