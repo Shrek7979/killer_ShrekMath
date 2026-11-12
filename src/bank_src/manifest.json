@@ -132,6 +132,13 @@
    "items": 50,
    "dups": 0,
    "status": "updated"
+  },
+  "수능형 창작문항_15번형 추가 50제(대수·미적분Ⅰ).hwpx": {
+   "sha1": "8336c98496e05f51160ad3c6140df10cafb1261d",
+   "slug": "15번형_추가_50제_대수·미적분Ⅰ",
+   "items": 50,
+   "dups": 0,
+   "status": "new"
   }
  },
  "ignore": [
