@@ -15,7 +15,7 @@ import json, re, glob, os, html, shutil, base64
 from hwptex import convert_text, hwp2tex
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-BANK_ORDER = os.path.join(ROOT, 'src/bank/order.json')   # 문항 번호(#q번호, 학습 기록 키)를 고정하는 파일 순서
+BANK_ORDER = os.path.join(ROOT, 'src/bank_order.json')   # 문항 번호(#q번호, 학습 기록 키)를 고정하는 파일 순서
 
 
 def bank_files():
