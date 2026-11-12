@@ -1,0 +1,174 @@
+{
+ "num": 559,
+ "id": "고난도200-127",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2024학년도 대학수학능력시험 30번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 15,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "좌표평면 위의 세 점 ${\\mathrm{E}}(0,\\,4)$ , ${\\mathrm{F}}(4,\\,0)$ , ${\\mathrm{G}}(6,\\,0)$ 이 있다.",
+    "선분 ${\\mathrm{EF}}$ 위의 점 ${\\mathrm{P}}$ 를 지나고 서로 수직인 두 직선 $l_{1}$ , $l_{2}$ 가 원 $x^{2}+y^{2}=25$ 와 만나는 점을 각각 ${\\mathrm{A}}$ , ${\\mathrm{B}}$ 와 ${\\mathrm{C}}$ , ${\\mathrm{D}}$ 라 하자.",
+    "두 직선 $l_{1}$ , $l_{2}$ 가 점 ${\\mathrm{P}}$ 를 지나며 서로 수직인 채로 움직이고 점 ${\\mathrm{P}}$ 가 선분 ${\\mathrm{EF}}$ 위를 움직일 때,"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "(\\vec{{\\mathrm{PA}}}+\\vec{{\\mathrm{PB}}}+\\vec{{\\mathrm{PC}}}+\\vec{{\\mathrm{PD}}})\\cdot \\vec{{\\mathrm{PG}}}"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "의 최댓값을 $M$ , 최솟값을 $m$ 이라 하자.",
+    "$M+m$ 의 값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "좌표평면 위의 세 점 ${\\mathrm{E}}(0,\\,4)$ , ${\\mathrm{F}}(4,\\,0)$ , ${\\mathrm{G}}(6,\\,0)$ 이 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "선분 ${\\mathrm{EF}}$ 위의 점 ${\\mathrm{P}}$ 를 지나고 서로 수직인 두 직선 $l_{1}$ , $l_{2}$ 가 원 $x^{2}+y^{2}=25$ 와 만나는 점을 각각 ${\\mathrm{A}}$ , ${\\mathrm{B}}$ 와 ${\\mathrm{C}}$ , ${\\mathrm{D}}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "두 직선 $l_{1}$ , $l_{2}$ 가 점 ${\\mathrm{P}}$ 를 지나며 서로 수직인 채로 움직이고 점 ${\\mathrm{P}}$ 가 선분 ${\\mathrm{EF}}$ 위를 움직일 때,",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$(\\vec{{\\mathrm{PA}}}+\\vec{{\\mathrm{PB}}}+\\vec{{\\mathrm{PC}}}+\\vec{{\\mathrm{PD}}})\\cdot \\vec{{\\mathrm{PG}}}$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    2,
+    0
+   ],
+   "text": "의 최댓값을 $M$ , 최솟값을 $m$ 이라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C6",
+   "at": [
+    2,
+    1
+   ],
+   "text": "$M+m$ 의 값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "여러 점에 대한 벡터의 합을 다루는 구조를, 현의 중점과 직사각형을 이용해 합벡터가 두 직선의 방향과 관계없이 $2 \\vec{{\\mathrm{PO}}}$ 로 일정함을 찾게 하고, 선분 위에서 이차식의 최대·최소로 마무리하게 함"
+ ],
+ "topic": "평면벡터",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "원의 중심을 ${\\mathrm{O}}$ 라 하고, 점 ${\\mathrm{O}}$ 에서 두 직선 $l_{1}$ , $l_{2}$ 에 내린 수선의 발을 각각 ${\\mathrm{M}}_{1}$ , ${\\mathrm{M}}_{2}$ 라 하자. ${\\mathrm{M}}_{1}$ , ${\\mathrm{M}}_{2}$ 는 각각 현 ${\\mathrm{AB}}$ , ${\\mathrm{CD}}$ 의 중점이므로",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$$\\vec{{\\mathrm{PA}}}+\\vec{{\\mathrm{PB}}}=2 \\vec{{\\mathrm{PM}}_{1}},\\,\\,\\,\\vec{{\\mathrm{PC}}}+\\vec{{\\mathrm{PD}}}=2 \\vec{{\\mathrm{PM}}_{2}}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "이다. 두 직선 $l_{1}$ , $l_{2}$ 가 서로 수직이고 직선 ${\\mathrm{OM}}_{1}$ 은 $l_{1}$ 에, 직선 ${\\mathrm{OM}}_{2}$ 는 $l_{2}$ 에 수직이므로 사각형 ${\\mathrm{PM}}_{1}{\\mathrm{OM}}_{2}$ 는 직사각형(한 직선이 점 ${\\mathrm{O}}$ 를 지나면 선분)이고 $\\vec{{\\mathrm{PM}}_{1}}+\\vec{{\\mathrm{PM}}_{2}}=\\vec{{\\mathrm{PO}}}$ 이다. 따라서 두 직선의 방향과 관계없이",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$$\\vec{{\\mathrm{PA}}}+\\vec{{\\mathrm{PB}}}+\\vec{{\\mathrm{PC}}}+\\vec{{\\mathrm{PD}}}=2 \\vec{{\\mathrm{PO}}}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "이다. (선분 ${\\mathrm{EF}}$ 위의 점은 원점으로부터 거리가 $4$ 이하이므로 원의 내부에 있어 두 직선은 항상 원과 두 점에서 만난다.)",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "선분 ${\\mathrm{OG}}$ 의 중점을 ${\\mathrm{N}}(3,\\,0)$ 이라 하면",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "$$2 \\vec{{\\mathrm{PO}}}\\cdot \\vec{{\\mathrm{PG}}}=2(|\\vec{{\\mathrm{PN}}}|^{2}-9)$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 8,
+   "text": "이다. 점 ${\\mathrm{N}}$ 에서 직선 ${\\mathrm{EF}}:x+y=4$ 에 내린 수선의 발 $\\left(\\frac{7}{2},\\,\\frac{1}{2}\\right)$ 은 선분 ${\\mathrm{EF}}$ 위에 있고 $|\\vec{{\\mathrm{PN}}}|^{2}$ 의 최솟값은 $\\frac{1}{2}$ 이다. 최댓값은 끝점에서 생기며 ${\\mathrm{E}}$ 에서 $9+16=25$ , ${\\mathrm{F}}$ 에서 $1$ 이므로 $25$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 9,
+   "text": "$$M=2(25-9)=32,\\,\\,\\,m=2 \\left(\\frac{1}{2}-9 \\right)=-17$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 10,
+   "text": "따라서 $M+m=15$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

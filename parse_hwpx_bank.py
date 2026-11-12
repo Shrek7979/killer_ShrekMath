@@ -11,8 +11,10 @@
 import re, json, glob, os, sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-HEAD = re.compile(r'^(\d{1,2})\.\s*(?:\[([^\]]+)\])?\s*(?:난이도\s*([★☆]+))?\s*$')
-SOL = re.compile(r'^(\d{1,2})(?:번|\.)\s*정답\s*\$?\s*(\d+)')
+HEAD = re.compile(r'^(\d{1,3})\.\s*(?:\[([^\]]+)\])?\s*(?:(\d{2})번형)?\s*(?:난이도\s*([★☆]+))?\s*$')
+SOL = re.compile(r'^(\d{1,3})(?:번|\.)\s*정답\s*\$?\s*(\d+)')
+# 형식 E: 단원 머리줄 "미적분Ⅱ — 도함수의 활용 (026~049)" / 해설의 "기하" — 본문에 섞이지 않게 건너뛴다
+SECT = re.compile(r'^(미적분Ⅱ|미적분Ⅰ|대수|확률과 통계|기하)(\s*—.*|\s*\(\d{3}~\d{3}\))?$')
 SUBJ = {'공통(대수)': '대수', '대수': '대수', '공통(미적분Ⅰ)': '미적분Ⅰ', '미적분Ⅰ': '미적분Ⅰ', '미적분Ⅱ': '미적분Ⅱ',
         '확률과 통계': '확률과 통계', '기하': '기하', '수학Ⅰ': '대수', '수학Ⅱ': '미적분Ⅰ', '미적분': '미적분Ⅱ'}
 # 손으로 붙인 주제 (형식 B에는 주제 줄이 없다)
@@ -51,6 +53,8 @@ def parse(path, name=None):
     name = {'2cha': '창작2차', 'byeonhyeong8': '기출변형', '2차': '창작2차', '기출_심화_변형_8제': '기출변형'}.get(name, name)
     mm = re.match(r'(\d\d)번형_추가_\d+제_(.+)$', name)   # "20번형_추가_50제_대수" → "추가20·대수"
     if mm: name = f'추가{mm.group(1)}·{mm.group(2)}'
+    mm = re.match(r'(최고난도|고난도|선택과목_혼합)_(\d+)제', name)   # "고난도_200제_…" → "고난도200"
+    if mm: name = mm.group(1).replace('선택과목_', '') + mm.group(2)
     L = [l.rstrip('\n') for l in open(path, encoding='utf-8')]
     L = [re.sub(r'[-]', '', l) for l in L]
     L = [l if l.strip() in ('TBL', '/TBL') else l.strip() for l in L]
@@ -62,21 +66,29 @@ def parse(path, name=None):
     for l in L[:5]:
         m = re.search(r'(\d{2})번형.*?\(([^)]+)\)', l)
         if m: htype, hsubj = m.group(1) + '번형', m.group(2).strip(); break
-    probs, cur = {}, None
+    probs, cur, width = {}, None, 2
     for l in L[:qi]:
+        if SECT.match(l.strip()):
+            continue
         m = HEAD.match(l)
         if m:
             n = int(m.group(1)); br = (m.group(2) or '').strip()
+            if len(m.group(1)) == 3: width = 3
+            hint = ''
+            if '·' in br and br.split('·', 1)[0] in SUBJ:   # 형식 E: [미적분Ⅱ·급수]
+                br, hint = br.split('·', 1)
             # 대괄호가 과목이면 과목, 아니면(형식 D: [수열]) 주제 힌트이고 과목은 머리말에서
-            cur = {'n': n, 'subj': br if br in SUBJ else (hsubj or '공통'), 'hint': '' if br in SUBJ else br, 'stars': (m.group(3) or '').count('★') or 4, 'lines': [], 'note': ''}
+            cur = {'n': n, 'subj': br if br in SUBJ else (hsubj or '공통'), 'hint': hint or ('' if br in SUBJ else br), 'stars': (m.group(4) or '').count('★') or 4, 'lines': [], 'note': '', 'type': (m.group(3) + '번형') if m.group(3) else ''}
             probs[n] = cur; continue
         if cur is None:
             continue
-        if l.startswith('▶') or l.startswith('소재 기출:'):
+        if l.startswith('▶') or l.startswith('소재 기출:') or l.startswith('원 문항:'):
             cur['note'] = l.lstrip('▶ ').strip(); continue
         cur['lines'].append(l)
     sols, cur = {}, None
     for l in L[si + 1:]:
+        if SECT.match(l.strip()):
+            continue
         m = SOL.match(l)
         if m:
             n = int(m.group(1)); cur = {'answer': int(m.group(2)), 'lines': [], 'topic': '', 'standards': [], 'intent': ''}
@@ -107,18 +119,18 @@ def parse(path, name=None):
         s = sols.get(n)
         if not s:
             continue
-        qid = f'{name}-{n:02d}'
+        qid = f'{name}-{n:0{width}d}'
         subj = SUBJ.get(p['subj'].strip(), p['subj'].strip())
         src = p['note']
         mt = re.search(r'(\d+)번', src)
-        qtype = htype or ((mt.group(1) + '번형') if mt else f'{n}번형')
+        qtype = p['type'] or htype or ((mt.group(1) + '번형') if mt else f'{n}번형')
         topic = s['topic'].split(',')[0].strip() if s['topic'] else TOPICS.get(qid, p.get('hint') or f'{subj} {n}번')
         items.append({
             'id': qid, 'subject': subj, 'topic': topic, 'stars': p['stars'], 'type': qtype,
             'standards': s['standards'], 'answer': s['answer'],
             'body': blocks_from(p['lines']),
             'solution': blocks_from(s['lines']),
-            'source': (('ShrekMath 창작 · ' + re.split(r'→|/ 변형 포인트:', src)[0].replace('소재:', '').replace('소재 기출:', '').strip() + ' 변형') if src else 'ShrekMath 창작 · 수능 ' + qtype),
+            'source': (('ShrekMath 창작 · ' + re.split(r'→|/ 변형 포인트:', src)[0].replace('원 문항:', '').replace('소재:', '').replace('소재 기출:', '').strip() + ' 변형') if src else 'ShrekMath 창작 · 수능 ' + qtype),
             'intro': [x for x in [s['intent'], (re.split(r'→|/ 변형 포인트:', src, 1)[1].strip() if re.search(r'→|/ 변형 포인트:', src) else '')] if x],
         })
     return items
