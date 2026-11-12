@@ -118,6 +118,13 @@
    "items": 100,
    "dups": 0,
    "status": "new"
+  },
+  "수능형 창작문항_15번형 추가 20제(대수·미적분Ⅰ).hwpx": {
+   "sha1": "2b039b874dfc44f9d915b40a5c2ea76a04794b0e",
+   "slug": "15번형_추가_20제_대수·미적분Ⅰ",
+   "items": 20,
+   "dups": 0,
+   "status": "new"
   }
  },
  "ignore": [
