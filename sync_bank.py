@@ -79,6 +79,13 @@ def main(args):
         txt = os.path.join(SRC_DIR, slug + '.txt'); outj = os.path.join(BANK, 'x_' + slug + '.json')
         extract(f, txt)
         items = pb.parse(txt, name=slug)
+        # 다른 파일의 문항과 id 가 겹치면(같은 번형의 추가 세트) 접두어에 (2), (3)… 을 붙인다
+        used = set(bank_fingerprints(exclude_file=outj).values())
+        if any(it['id'] in used for it in items):
+            for k in range(2, 10):
+                cand = [dict(it, id=it['id'].rsplit('-', 1)[0] + f'({k})-' + it['id'].rsplit('-', 1)[1]) for it in items]
+                if not any(it['id'] in used for it in cand):
+                    items = cand; break
         fp = bank_fingerprints(exclude_file=outj)
         kept, dup = [], []
         for it in items:
