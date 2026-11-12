@@ -15,7 +15,21 @@ import json, re, glob, os, html, shutil, base64
 from hwptex import convert_text, hwp2tex
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-BANK = sorted(glob.glob(os.path.join(ROOT, 'src/bank/q*_final.json'))) + sorted(glob.glob(os.path.join(ROOT, 'src/bank/x_*.json')))
+BANK_ORDER = os.path.join(ROOT, 'src/bank/order.json')   # 문항 번호(#q번호, 학습 기록 키)를 고정하는 파일 순서
+
+
+def bank_files():
+    """은행 파일 순서: order.json 에 적힌 순서를 지키고, 처음 보는 파일은 맨 뒤에 붙인 뒤 order.json 을 갱신한다.
+    (파일 이름 순으로만 정렬하면 이름이 앞서는 새 파일이 들어올 때 기존 문항 번호가 밀린다.)"""
+    q = sorted(glob.glob(os.path.join(ROOT, 'src/bank/q*_final.json')))
+    xs = {os.path.basename(f): f for f in glob.glob(os.path.join(ROOT, 'src/bank/x_*.json'))}
+    order = json.load(open(BANK_ORDER, encoding='utf-8')) if os.path.exists(BANK_ORDER) else sorted(xs)
+    order = [n for n in order if n in xs] + sorted(n for n in xs if n not in order)
+    json.dump(order, open(BANK_ORDER, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    return q + [xs[n] for n in order]
+
+
+BANK = bank_files()
 ANAT = os.path.join(ROOT, 'anatomy')
 SITE = os.path.join(ROOT, 'site')
 
