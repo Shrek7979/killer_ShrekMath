@@ -51,7 +51,9 @@ def blocks_from(lines):
 def parse(path, name=None):
     name = name or os.path.splitext(os.path.basename(path))[0]
     name = {'2cha': '창작2차', 'byeonhyeong8': '기출변형', '2차': '창작2차', '기출_심화_변형_8제': '기출변형'}.get(name, name)
-    mm = re.match(r'(\d\d)번형_추가_\d+제_(.+)$', name)   # "20번형_추가_50제_대수" → "추가20·대수"
+    mm2 = re.match(r'(\d\d)번형_추가_\d+제_(\d)차_(.+)$', name)   # "20번형_추가_50제_2차_대수" → "추가20·대수(2)"
+    if mm2: name = f'추가{mm2.group(1)}·{mm2.group(3)}({mm2.group(2)})'
+    mm = None if mm2 else re.match(r'(\d\d)번형_추가_\d+제_(.+)$', name)   # "20번형_추가_50제_대수" → "추가20·대수"
     if mm: name = f'추가{mm.group(1)}·{mm.group(2)}'
     mm = re.match(r'(최고난도|고난도|선택과목_혼합)_(\d+)제', name)   # "고난도_200제_…" → "고난도200"
     if mm: name = mm.group(1).replace('선택과목_', '') + mm.group(2)
