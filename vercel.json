@@ -3,7 +3,7 @@
  "cleanUrls": true,
  "headers": [
   {
-   "source": "/((?!p/).*)\\.json",
+   "source": "/(.*)\\.json",
    "headers": [
     {
      "key": "Cache-Control",
@@ -28,27 +28,6 @@
      "value": "application/json"
     }
    ]
-  },
-  {
-   "source": "/api/(.*)",
-   "headers": [
-    {
-     "key": "Cache-Control",
-     "value": "no-store"
-    }
-   ]
   }
- ],
- "rewrites": [
-  {
-   "source": "/p/:path*",
-   "destination": "/api/c?f=:path*"
-  }
- ],
- "functions": {
-  "api/c.js": {
-   "includeFiles": "paid/**",
-   "memory": 1024
-  }
- }
+ ]
 }

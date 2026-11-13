@@ -1,0 +1,158 @@
+{
+ "num": 207,
+ "id": "추가29·미적분Ⅱ-29",
+ "subject": "미적분Ⅱ",
+ "type": "29번형",
+ "typeDesc": "미적분Ⅱ · 수능 29번형 자리의 고난도",
+ "stars": 4,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2025학년도 대학수학능력시험 29번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 16,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "등비수열 $\\{a_{n}\\}$ 이"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "\\sum_{n=1}^{\\infty}\\left(\\left|a_{n}\\right|+a_{n}\\right)=30,\\,\\,\\,\\sum_{n=1}^{\\infty}\\left(\\left|a_{n}\\right|-a_{n}\\right)=10"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "을 만족시킨다.",
+    "부등식"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "\\sum_{k=1}^{\\infty}\\left(a_{m+k}\\times \\sin \\frac{k \\pi}{2}\\right)<-\\frac{1}{1000}"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "을 만족시키는 모든 자연수 $m$ 의 값의 합을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "등비수열 $\\{a_{n}\\}$ 이",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$\\sum_{n=1}^{\\infty}\\left(\\left|a_{n}\\right|+a_{n}\\right)=30,\\,\\,\\,\\sum_{n=1}^{\\infty}\\left(\\left|a_{n}\\right|-a_{n}\\right)=10$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    2,
+    0
+   ],
+   "text": "을 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    1
+   ],
+   "text": "부등식",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    3,
+    0
+   ],
+   "text": "$\\sum_{k=1}^{\\infty}\\left(a_{m+k}\\times \\sin \\frac{k \\pi}{2}\\right)<-\\frac{1}{1000}$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C6",
+   "at": [
+    4,
+    0
+   ],
+   "text": "을 만족시키는 모든 자연수 $m$ 의 값의 합을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "부호가 바뀌는 계수를 $(-1)^{\\frac{k(k+1)}{2}}$ 대신 $\\sin \\frac{k \\pi}{2}$ 로 바꾸어 한 칸씩 건너뛴 등비급수가 되게 하고, 음수 쪽 부등식으로 $m$ 의 홀짝까지 판단하게 함"
+ ],
+ "topic": "급수",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "두 식을 더하고 빼면 $\\sum|a_{n}|=20$ , $\\sum a_{n}=10$ 이다. 첫째항을 $a$ , 공비를 $r$ 라 하자.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$r>0$ 이면 $\\sum|a_{n}|=\\left|\\sum a_{n}\\right|$ 이므로 모순이다. $r=-s$ $(0<s<1)$ 일 때 $a<0$ 이면 $\\sum a_{n}=\\frac{a}{1+s}<0$ 이므로 모순이다. 따라서 $a>0$ 이고 $\\frac{a}{1-s}=20$ , $\\frac{a}{1+s}=10$ 에서 $s=\\frac{1}{3}$ , $a=\\frac{40}{3}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$\\sin \\frac{k \\pi}{2}$ 는 $1,\\,0,\\,-1,\\,0$ 이 반복되므로",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$$\\sum_{k=1}^{\\infty}a_{m+k}\\sin \\frac{k \\pi}{2}=a_{m+1}-a_{m+3}+a_{m+5}-\\cdots=\\frac{a_{m+1}}{1+r^{2}}=\\frac{9}{10}\\times \\frac{40}{3}\\left(-\\frac{1}{3}\\right)^{m}=12 \\left(-\\frac{1}{3}\\right)^{m}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "이다. 이 값이 $-\\frac{1}{1000}$ 보다 작으려면 $m$ 이 홀수이고 $\\frac{12}{3^{m}}>\\frac{1}{1000}$ , 즉 $3^{m}<12000$ 이어야 한다. $3^{8}=6561$ , $3^{9}=19683$ 이므로 $m=1,\\,3,\\,5,\\,7$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "따라서 구하는 합은 $16$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

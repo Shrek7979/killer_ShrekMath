@@ -1,0 +1,48 @@
+{
+ "num": 222,
+ "id": "S15-서울시립대학교(자연계열)모의-1",
+ "univ": "서울시립대학교(자연계열) 모의",
+ "n": 1,
+ "year": 2023,
+ "title": "문제 1 · 85점",
+ "head": "(85점)",
+ "points": 85,
+ "minutes": 30,
+ "info": {
+  "concepts": "쌍곡선의 방정식, 정적분, 조건부확률, 부분적분법, 사인법칙, 삼각함수의 극한,",
+  "min": "없음",
+  "field": "수학(4문항, 5문제)",
+  "time": "120분"
+ },
+ "pre": [],
+ "passage": [
+  "쌍곡선 $\\frac{x^{2}}{9}-\\frac{y^{2}}{16}=1$ 위의 점 $\\mathrm{P}$ 와 이 쌍곡선의 두 초점 $\\mathrm{F}_{1}$ , $\\mathrm{F}_{2}$ 에 대하여 $\\frac{\\overline{P F_{2}}}{\\overline{P F_{1}}}=\\frac{29}{11}$ 일 때, 세 점 $\\mathrm{P}$ , $\\mathrm{F}_{1}$ , $\\mathrm{F}_{2}$ 를 지나는 이차함수의 그래프와 선분 $\\overline{\\mathrm{PF}_{2}}$ 로 둘러싸인 부분의 넓이를 구하여라. (단, 점 $\\mathrm{P}$ 는 제 $1$ 사분면 위의 점이다.)"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[답안]",
+   "points": 85,
+   "text": [],
+   "answer": [
+    "$\\frac{{\\overline{P F_{2}}}}{{\\overline{P F_{1}}}}=\\frac{29}{11}>1$ 로부터 $\\overline{\\mathrm{PF}_{2}}>\\overline{P F_{1}}$ 이므로 $\\mathrm{F}_{1}\\left(5,0 \\right)$ , $\\mathrm{F}_{2}\\left(-5,0 \\right)$ 이다. 쌍곡선의 정의에 의하여 ${\\overline{P F_{2}}}-{\\overline{P F_{1}}}=2 \\times 3=6$ 이므로 $\\frac{{\\overline{P F_{2}}}}{{\\overline{P F_{1}}}}=\\frac{29}{11}$ 과 연립하여 풀면 $\\overline{\\mathrm{PF}_{1}}=\\frac{11}{3}$ 이다.",
+    "${\\overline{P F_{1}}}=\\sqrt{\\left(x-5 \\right)^{2}+\\left(y-0 \\right)^{2}}=\\frac{11}{3}$ 에서 $y^{2}=-x^{2}+10 x-\\frac{104}{9}$ 이고, 점 $\\mathrm{P}\\left(x,y \\right)$ 는 쌍곡선 위의 점이므로 $\\frac{x^{2}}{9}-\\frac{y^{2}}{16}=1$ 로부터 $5 x^{2}-18 x-8=\\left(5 x+2 \\right)\\left(x-4 \\right)=0$ 이다. 점 $\\mathrm{P}$ 는 제 $1$ 사분면 위의 점이므로 $x=4$ 이고, $y=\\frac{4}{3}\\sqrt{7}$ 이다. 따라서 점 $\\mathrm{P}$ 의 좌표는 $\\left(4,\\frac{4}{3}\\sqrt{7}\\right)$ 이다.",
+    "세 점 $\\mathrm{P}$ , $\\mathrm{F}_{1}$ , $\\mathrm{F}_{2}$ 를 지나는 이차함수는 $y=-\\frac{4}{27}\\sqrt{7}\\left(x^{2}-25 \\right)$ 이므로 구하고자 하는 부분의 영역의 넓이는",
+    "$\\int_{-5}^{4}{-\\frac{4}{27}\\sqrt{7}\\left(x^{2}-25 \\right)dx-\\frac{1}{2}\\times \\left(4-\\left(-5 \\right)\\right)\\times \\frac{4}{3}\\sqrt{7}=18 \\sqrt{7}}$",
+    "이다.",
+    "참고 사항1",
+    "점 $\\mathrm{F}$ , $\\ F'$ 을 중심으로 하고 반지름의 길이가 각각 $\\overline{\\ P F_1}=\\frac{11}{3}$ , $\\overline{\\ P F_2}=\\frac{29}{3}$ 인 원은",
+    "$(x-5)^2+y^2=\\frac{11^2}{9}$ , $(x+5)^2+y^2=\\frac{29^2}{9}$",
+    "이고 두 원의 교점인 점 $\\ P$ 의 $x$ 좌표는 $20 x=\\frac{29^2-11^2}{9}=\\frac{18 \\times 40}{9}=80$ 이고 $x=4$ 이다.",
+    "참고 사항2",
+    "$\\triangle \\ F_1 F_2 P$ 에서 $\\angle \\ F_1 F_2 P=\\theta$ 라 하면 코사인법칙에 의해",
+    "$\\cos \\theta=\\frac{10^2+\\frac{29^2}{9}-\\frac{11^2}{9}}{2 \\times 10 \\times \\frac{29}{3}}=\\frac{100+80}{\\frac{580}{3}}=\\frac{27}{29}$",
+    "이다. 따라서 점 $\\ P$ 의 $x$ 좌표는 $x=\\overline{\\ P F_1}\\cos \\theta-5=\\frac{29}{3}\\times \\frac{27}{29}-5=4$ 이다."
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "쌍곡선의 방정식"
+}

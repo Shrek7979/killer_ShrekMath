@@ -1,0 +1,132 @@
+{
+ "num": 284,
+ "id": "추가30·기하-10",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 3,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2026학년도 대학수학능력시험 30번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 39,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "좌표평면에서 길이가 $10$ 인 선분 ${\\mathrm{AB}}$ 를 지름으로 하는 원 위의 두 점 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ 가"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "(\\vec{{\\mathrm{PA}}}+\\vec{{\\mathrm{PB}}})\\cdot(\\vec{{\\mathrm{QA}}}+\\vec{{\\mathrm{QB}}})=2|\\vec{{\\mathrm{PQ}}}|^{2}"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "을 만족시킨다.",
+    "$|\\vec{{\\mathrm{PA}}}|=8$ 일 때, 가능한 모든 $|\\vec{{\\mathrm{AQ}}}|$ 의 값의 곱을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "좌표평면에서 길이가 $10$ 인 선분 ${\\mathrm{AB}}$ 를 지름으로 하는 원 위의 두 점 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ 가",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$(\\vec{{\\mathrm{PA}}}+\\vec{{\\mathrm{PB}}})\\cdot(\\vec{{\\mathrm{QA}}}+\\vec{{\\mathrm{QB}}})=2|\\vec{{\\mathrm{PQ}}}|^{2}$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    2,
+    0
+   ],
+   "text": "을 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    1
+   ],
+   "text": "$|\\vec{{\\mathrm{PA}}}|=8$ 일 때, 가능한 모든 $|\\vec{{\\mathrm{AQ}}}|$ 의 값의 곱을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "같은 ' $\\vec{{\\mathrm{PA}}}+\\vec{{\\mathrm{PB}}}=2 \\vec{{\\mathrm{PO}}}$ ' 아이디어를 두 점 P, Q 모두에 적용해 $\\angle{\\mathrm{POQ}}$ 를 결정하게 하고, Q의 두 위치를 모두 고려하게 함"
+ ],
+ "topic": "평면벡터",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "원의 중심을 ${\\mathrm{O}}$ 라 하면 $\\vec{{\\mathrm{PA}}}+\\vec{{\\mathrm{PB}}}=2 \\vec{{\\mathrm{PO}}}$ , $\\vec{{\\mathrm{QA}}}+\\vec{{\\mathrm{QB}}}=2 \\vec{{\\mathrm{QO}}}$ 이므로 주어진 식은",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$$4 \\vec{{\\mathrm{OP}}}\\cdot \\vec{{\\mathrm{OQ}}}=2|\\vec{{\\mathrm{OQ}}}-\\vec{{\\mathrm{OP}}}|^{2}=2(50-2 \\vec{{\\mathrm{OP}}}\\cdot \\vec{{\\mathrm{OQ}}})$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "즉 $\\vec{{\\mathrm{OP}}}\\cdot \\vec{{\\mathrm{OQ}}}=\\frac{25}{2}$ 이고 $\\cos(\\angle{\\mathrm{POQ}})=\\frac{1}{2}$ , $\\angle{\\mathrm{POQ}}=\\frac{\\pi}{3}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$\\angle{\\mathrm{POB}}=\\theta$ 라 하면 $\\angle{\\mathrm{APB}}=\\frac{\\pi}{2}$ 에서 $|\\vec{{\\mathrm{PA}}}|=10 \\cos \\frac{\\theta}{2}=8$ , $|\\vec{{\\mathrm{PB}}}|=10 \\sin \\frac{\\theta}{2}=6$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "점 ${\\mathrm{Q}}$ 에 대하여 $\\angle{\\mathrm{QOB}}=\\theta \\pm \\frac{\\pi}{3}$ 이므로 $|\\vec{{\\mathrm{AQ}}}|=10 \\left|\\cos \\left(\\frac{\\theta}{2}\\pm \\frac{\\pi}{6}\\right)\\right|$ 이고, 두 값은",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "$$10 \\left(\\frac{4}{5}\\cdot \\frac{\\sqrt{3}}{2}-\\frac{3}{5}\\cdot \\frac{1}{2}\\right)=4 \\sqrt{3}-3,10 \\left(\\frac{4}{5}\\cdot \\frac{\\sqrt{3}}{2}+\\frac{3}{5}\\cdot \\frac{1}{2}\\right)=4 \\sqrt{3}+3$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "이다. 따라서 구하는 곱은 $(4 \\sqrt{3})^{2}-3^{2}=39$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

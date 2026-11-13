@@ -1,0 +1,126 @@
+{
+ "num": 322,
+ "id": "추가30·기하-48",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2026학년도 대학수학능력시험 30번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 26,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "좌표평면에서 길이가 $10$ 인 선분 ${\\mathrm{AB}}$ 를 지름으로 하는 원 중 직선 ${\\mathrm{AB}}$ 의 한쪽에 있는 반원(양 끝점 포함) 위의 두 점 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ 가"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "9(\\vec{{\\mathrm{PA}}}+\\vec{{\\mathrm{PB}}})\\cdot(\\vec{{\\mathrm{QA}}}+\\vec{{\\mathrm{QB}}})=7|\\vec{{\\mathrm{PQ}}}|^{2}"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "을 만족시킨다.",
+    "$\\vec{{\\mathrm{BP}}}\\cdot \\vec{{\\mathrm{AQ}}}$ 의 값이 될 수 있는 모든 정수의 개수를 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "좌표평면에서 길이가 $10$ 인 선분 ${\\mathrm{AB}}$ 를 지름으로 하는 원 중 직선 ${\\mathrm{AB}}$ 의 한쪽에 있는 반원(양 끝점 포함) 위의 두 점 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ 가",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$9(\\vec{{\\mathrm{PA}}}+\\vec{{\\mathrm{PB}}})\\cdot(\\vec{{\\mathrm{QA}}}+\\vec{{\\mathrm{QB}}})=7|\\vec{{\\mathrm{PQ}}}|^{2}$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    2,
+    0
+   ],
+   "text": "을 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    1
+   ],
+   "text": "$\\vec{{\\mathrm{BP}}}\\cdot \\vec{{\\mathrm{AQ}}}$ 의 값이 될 수 있는 모든 정수의 개수를 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "같은 벡터 조건에서 두 점을 반원 위로 제한하여, 내적이 될 수 있는 값의 범위가 두 구간으로 나뉨을 발견하게 함"
+ ],
+ "topic": "평면벡터",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "문항 35와 같이 $\\vec{{\\mathrm{OP}}}\\cdot \\vec{{\\mathrm{OQ}}}=7$ 이므로 $\\cos(\\angle{\\mathrm{POQ}})=\\frac{7}{25}$ 이고, $\\angle{\\mathrm{POQ}}=2 \\gamma$ 라 하면 $\\cos \\gamma=\\frac{4}{5}$ , $\\sin \\gamma=\\frac{3}{5}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "${\\mathrm{A}}(-5,0)$ , ${\\mathrm{B}}(5,0)$ , 반원을 $y \\ge 0$ 인 부분으로 놓고 ${\\mathrm{P}}(5 \\cos a,5 \\sin a)$ , ${\\mathrm{Q}}(5 \\cos b,5 \\sin b)$ $(0 \\le a,b \\le \\pi$ , $|a-b|=2 \\gamma)$ 라 하면",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$$\\vec{{\\mathrm{BP}}}\\cdot \\vec{{\\mathrm{AQ}}}=\\vec{{\\mathrm{OP}}}\\cdot \\vec{{\\mathrm{OQ}}}-\\vec{{\\mathrm{OP}}}\\cdot \\vec{{\\mathrm{OA}}}-\\vec{{\\mathrm{OB}}}\\cdot \\vec{{\\mathrm{OQ}}}+\\vec{{\\mathrm{OA}}}\\cdot \\vec{{\\mathrm{OB}}}=5(x_{P}-x_{Q})-18$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$x_{P}-x_{Q}=5(\\cos a-\\cos b)=-10 \\sin \\frac{a+b}{2}\\sin \\frac{a-b}{2}$ 이고 $\\frac{a+b}{2}$ 는 $\\gamma$ 이상 $\\pi-\\gamma$ 이하의 모든 값을 가지므로 $\\sin \\frac{a+b}{2}$ 의 범위는 $\\frac{3}{5}$ 이상 $1$ 이하이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$a-b=2 \\gamma$ 이면 $x_{P}-x_{Q}=-6 \\sin \\frac{a+b}{2}$ 의 범위는 $-6$ 이상 $-\\frac{18}{5}$ 이하, $a-b=-2 \\gamma$ 이면 $\\frac{18}{5}$ 이상 $6$ 이하이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "따라서 $\\vec{{\\mathrm{BP}}}\\cdot \\vec{{\\mathrm{AQ}}}$ 의 값의 범위는 $-48$ 이상 $-36$ 이하 또는 $0$ 이상 $12$ 이하이고, 정수의 개수는 $13+13=26$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

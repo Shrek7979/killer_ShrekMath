@@ -1,0 +1,55 @@
+{
+ "num": 186,
+ "id": "S16-중앙대학교(자연계열Ⅰ)수시-2",
+ "univ": "중앙대학교(자연계열Ⅰ) 수시",
+ "n": 2,
+ "year": 2024,
+ "title": "문제 2",
+ "head": "다음을 읽고, 문제에 답하시오.",
+ "points": null,
+ "minutes": 30,
+ "info": {
+  "concepts": "수학적 확룰, 기댓값, 로그, $sum _{ k=1} ^{ n } a_k$ , 덧셈정리, 치환적분법, 도형의 넓이, 그래프의 개형, 삼각함수의 덧셈정리, 사인법칙, 코사인법칙, 포물선, 이차방정식의 근과 계수의 관계",
+  "min": "서울 전체(약학부, 의학부 제외) : 국어, 수학(미적분, 기하 중 택 1), 영어, 과탐(1과목) 중 3개 영역 등급 합 6 이내",
+  "field": "약학부: 4개 영역 등급 합 5 이내 의학부: 과탐(2과목 평균, 소숫점 자리 버림 없음) 4개 영역 등급 합 5 이내 다빈치: 과탐(1과목) 2개 영역 등급 합 6 이내 수학(4문항, 7문제)",
+  "time": "120분"
+ },
+ "pre": [],
+ "passage": [
+  "• $a>0$ , $a \\ne 1$ , $N>0$ 일 때, $a^x=N \\,\\leftrightarrow \\,x=\\log_a N$ 이다. 그리고 $\\log_a N^k=k \\log_a N$ 이다. (단, $k$ 는 실수)",
+  "• $a>0$ , $a \\ne 1$ , $b>0$ , $c>0$ , $c \\ne 1$ 일 때, $\\log_a b=\\frac{\\log_c b}{\\log_c a}$ 이다.",
+  "• 함수 $f \\left(x \\right)$ 가 닫힌구간 $\\left[a,b \\right]$ 에서 연속일 때, 다음 식이 성립한다.",
+  "$\\int_{a}^{b}{f \\left(x \\right)dx}=\\lim_{n \\to \\infty}{\\sum_{k=1}^{n}f \\left(x_k \\right)\\delta x}$ (단, $\\delta x=b-\\frac{a}{n}$ , $x_k=a+k \\delta x$ )",
+  "• $\\tan \\left(\\alpha-\\beta \\right)=\\frac{\\tan \\alpha-\\tan \\beta}{1+{\\tan \\alpha}\\tan \\beta}$ (단, $\\tan \\alpha \\tan \\beta \\ne-1$ )"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[문제 2-1]",
+   "points": 10,
+   "text": [
+    "다음 식의 값을 구하시오. [10점]",
+    "$\\sum_{k=2}^{9}\\left(k^{\\frac{k \\ln 2}{\\ln k}}-2^{\\frac{2 \\ln k}{\\ln 2}}\\right)$"
+   ],
+   "answer": [
+    "로그함수의 성질을 이용하여 $k^{\\frac{k \\ln 2}{\\ln k}}=k^{\\frac{\\ln 2^k}{\\ln k}}=k^{\\log_k 2^k}=2^k$ , $2^{\\frac{2 \\ln k}{\\ln 2}}=2^{\\frac{\\ln k^2}{\\ln 2}}=2^{\\log_2 k^2}=k^2$ 으로 정리한 후, 아래와 같이 등비수열의 합과 자연수의 거듭제곱의 합에 대한 식을 이용하여 답을 구한다. $\\sum_{k=2}^{9}2^k-\\sum_{k=2}^{9}k^2=\\sum_{k=2}^{9}2^k-\\left(\\sum_{k=1}^{9}k^2-1 \\right)=\\frac{4 \\left(2^8-1 \\right)}{2}-1-\\frac{9 \\times 10 \\times 19}{6}+1=1020-285+1=736$"
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "[문제 2-2]",
+   "points": 15,
+   "text": [
+    "좌표평면에서 직선 $x=1$ 위를 움직이는 점 $\\mathrm{A}\\left(1,y_1 \\right)$ 과 $x$ 축 위를 움직이는 점 $\\mathrm{B}\\left(x_1,0 \\right)$ 의 시각 $t$ 에서의 위치는 두 함수 $x_1=f \\left(t \\right)$ , $y_1=g \\left(t \\right)$ 로 나타내어질 수 있다. 두 점 $\\mathrm{A}\\left(1,g \\left(t \\right)\\right)$ , $\\mathrm{B}\\left(f \\left(t \\right),0 \\right)$ 은 시각 $t=0$ 일 때 $\\left(1,0 \\right)$ 에서 출발한 후, $0<t \\le \\frac{\\pi}{4}$ 일 때 원점 $\\mathrm{O}$ 에 대하여 $\\angle \\mathrm{AOB}=t$ 이고 $\\angle \\mathrm{OAB}=\\frac{2 \\pi}{3}$ 를 만족하며 움직인다고 하자. 이때, 극한값 $\\lim_{n \\to \\infty}{\\frac{1}{n}\\sum_{k=1}^{n}f \\left(\\frac{\\pi k}{6 n}\\right)}$ 를 구하시오. (단, $x_1 \\ge 1$ , $y_1 \\ge 0$ 이다.) [15점]"
+   ],
+   "answer": [
+    "우선 주어진 문제의 조건으로부터 $f \\left(t \\right)=1+\\left(\\tan t \\right)\\left\\{\\tan \\left(t+\\frac{\\pi}{6}\\right)\\right\\}$ 를 구한 후, 정적분과 급수의 합 사이의 관계를 이용하여 극한값을 $\\frac{6}{\\pi}\\int_{0}^{\\frac{\\pi}{6}}{\\left[1+\\left(\\tan x \\right)\\left\\{\\tan \\left(x+\\frac{\\pi}{6}\\right)\\right\\} \\right]dx}$ 로 표현한다. 그리고 제시문에 주어진 탄젠트 함수의 덧셈정리를 이용하여 $\\lim_{n \\to \\infty}{\\frac{1}{n}\\sum_{k=1}^{n}f \\left(\\frac{\\pi k}{6 n}\\right)}=\\frac{6}{\\pi}\\int_{0}^{\\frac{\\pi}{6}}{\\frac{\\tan \\left(x+\\frac{\\pi}{6}\\right)-\\tan x}{\\tan \\frac{\\pi}{6}}dx}=\\frac{6 \\sqrt{3}}{\\pi}\\int_{0}^{\\frac{\\pi}{6}}{\\left\\{\\tan \\left(x+\\frac{\\pi}{6}\\right)-\\tan x \\right\\} dx}$ 를 얻는다. 치환적분을 하면 $\\tan x$ 의 부정적분이 $-\\ln \\left(\\cos x \\right)+C$ 임을 알 수 있는데, 이를 이용하여 다음의 답을 얻는다. $\\frac{6 \\sqrt{3}}{\\pi}\\left\\{-\\ln \\left(\\cos \\frac{\\pi}{3}\\right)+\\ln \\left(\\cos \\frac{\\pi}{6}\\right)+\\ln \\left(\\cos \\frac{\\pi}{6}\\right)-\\ln \\left(\\cos 0 \\right)\\right\\}=\\frac{6 \\sqrt{3}}{\\pi}\\ln \\frac{3}{2}$"
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "수학적 확룰"
+}

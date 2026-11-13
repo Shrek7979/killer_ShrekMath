@@ -1,0 +1,82 @@
+{
+ "num": 151,
+ "id": "추가29·기하-15",
+ "subject": "기하",
+ "type": "29번형",
+ "typeDesc": "기하 · 수능 29번형 자리의 고난도",
+ "stars": 3,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2024학년도 9월 모의평가 29번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 16,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "두 초점이 ${\\mathrm{F}}(3,\\,0)$ , ${\\mathrm{F'}}(-3,\\,0)$ 인 타원 $\\frac{x^{2}}{25}+\\frac{y^{2}}{16}=1$ 과 원 $(x-1)^{2}+y^{2}=r^{2}$ $(0<r<3)$ 이 있다.",
+    "타원 위의 점 ${\\mathrm{P}}$ 와 원 위의 점 ${\\mathrm{Q}}$ 에 대하여 $\\overline{{\\mathrm{PQ}}}+\\overline{{\\mathrm{PF}}}$ 의 최솟값이 $4$ 일 때, $\\overline{{\\mathrm{PQ}}}+\\overline{{\\mathrm{PF}}}$ 의 최댓값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "두 초점이 ${\\mathrm{F}}(3,\\,0)$ , ${\\mathrm{F'}}(-3,\\,0)$ 인 타원 $\\frac{x^{2}}{25}+\\frac{y^{2}}{16}=1$ 과 원 $(x-1)^{2}+y^{2}=r^{2}$ $(0<r<3)$ 이 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "타원 위의 점 ${\\mathrm{P}}$ 와 원 위의 점 ${\\mathrm{Q}}$ 에 대하여 $\\overline{{\\mathrm{PQ}}}+\\overline{{\\mathrm{PF}}}$ 의 최솟값이 $4$ 일 때, $\\overline{{\\mathrm{PQ}}}+\\overline{{\\mathrm{PF}}}$ 의 최댓값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "$\\overline{{\\mathrm{PQ}}}-\\overline{{\\mathrm{PF}}}$ 의 최솟값을 $\\overline{{\\mathrm{PQ}}}+\\overline{{\\mathrm{PF}}}$ 의 최솟값·최댓값으로 바꾸어 $\\overline{{\\mathrm{PF}}}=10-\\overline{{\\mathrm{PF'}}}$ 과 삼각부등식을 두 방향으로 쓰게 함"
+ ],
+ "topic": "타원과 원",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "원의 중심을 ${\\mathrm{C}}(1,\\,0)$ 이라 하자. $0<r<3$ 이면 원은 타원의 내부에 있으므로 타원 위의 점 ${\\mathrm{P}}$ 에 대하여 $\\overline{{\\mathrm{PC}}}-r \\le \\overline{{\\mathrm{PQ}}}\\le \\overline{{\\mathrm{PC}}}+r$ 이다. 또 타원의 정의에 의하여 $\\overline{{\\mathrm{PF}}}=10-\\overline{{\\mathrm{PF'}}}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "(최솟값) $\\overline{{\\mathrm{PQ}}}+\\overline{{\\mathrm{PF}}}\\ge \\overline{{\\mathrm{PC}}}-\\overline{{\\mathrm{PF'}}}+10-r \\ge-\\overline{{\\mathrm{CF'}}}+10-r=6-r$ 이고, 등호는 점 ${\\mathrm{C}}$ 가 선분 ${\\mathrm{PF'}}$ 위에 있을 때, 즉 ${\\mathrm{P}}(5,\\,0)$ 일 때 성립한다. $6-r=4$ 에서 $r=2$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "(최댓값) $\\overline{{\\mathrm{PQ}}}+\\overline{{\\mathrm{PF}}}\\le \\overline{{\\mathrm{PC}}}-\\overline{{\\mathrm{PF'}}}+10+r \\le \\overline{{\\mathrm{CF'}}}+10+r=16$ 이고, 등호는 점 ${\\mathrm{F'}}$ 이 선분 ${\\mathrm{PC}}$ 위에 있을 때, 즉 ${\\mathrm{P}}(-5,\\,0)$ 일 때 성립한다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "따라서 최댓값은 $16$",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

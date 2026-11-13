@@ -1,0 +1,120 @@
+{
+ "num": 278,
+ "id": "추가30·기하-04",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 3,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2025학년도 6월 모의평가 30번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 13,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "두 초점이 ${\\mathrm{F}}(4,0)$ , ${\\mathrm{F}}'(-4,0)$ 인 타원 $\\frac{x^{2}}{25}+\\frac{y^{2}}{9}=1$ 위의 점 중 $y$ 좌표가 양수인 점 ${\\mathrm{P}}$ 에 대하여 점 ${\\mathrm{Q}}$ 가"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "(10-|\\vec{{\\mathrm{PF}}}|)\\vec{{\\mathrm{F}}'{\\mathrm{Q}}}=3 \\vec{{\\mathrm{F}}'{\\mathrm{P}}}"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "를 만족시킨다.",
+    "점 ${\\mathrm{A}}(2,-8)$ 에 대하여 $|\\vec{{\\mathrm{AQ}}}|$ 의 최댓값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "두 초점이 ${\\mathrm{F}}(4,0)$ , ${\\mathrm{F}}'(-4,0)$ 인 타원 $\\frac{x^{2}}{25}+\\frac{y^{2}}{9}=1$ 위의 점 중 $y$ 좌표가 양수인 점 ${\\mathrm{P}}$ 에 대하여 점 ${\\mathrm{Q}}$ 가",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$(10-|\\vec{{\\mathrm{PF}}}|)\\vec{{\\mathrm{F}}'{\\mathrm{Q}}}=3 \\vec{{\\mathrm{F}}'{\\mathrm{P}}}$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    2,
+    0
+   ],
+   "text": "를 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    1
+   ],
+   "text": "점 ${\\mathrm{A}}(2,-8)$ 에 대하여 $|\\vec{{\\mathrm{AQ}}}|$ 의 최댓값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "쌍곡선을 타원으로 바꾸어 '두 초점까지의 거리의 합'으로 $|\\vec{{\\mathrm{F'Q}}}|$ 가 일정함을 끌어내고, 점 Q가 반원 위에만 있다는 조건을 확인하게 함"
+ ],
+ "topic": "이차곡선과 벡터",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "타원의 정의에서 $|\\vec{{\\mathrm{PF}}}|+|\\vec{{\\mathrm{P}}{\\mathrm{F}}'}|=10$ 이므로 $10-|\\vec{{\\mathrm{PF}}}|=|\\vec{{\\mathrm{P}}{\\mathrm{F}}'}|$ 이다. 따라서",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$$\\vec{{\\mathrm{F}}'{\\mathrm{Q}}}=\\frac{3}{|\\vec{{\\mathrm{F}}'{\\mathrm{P}}}|}\\vec{{\\mathrm{F}}'{\\mathrm{P}}}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "이므로 점 ${\\mathrm{Q}}$ 는 반직선 ${\\mathrm{F'P}}$ 위에서 $|\\vec{{\\mathrm{F}}'{\\mathrm{Q}}}|=3$ 인 점이다. 점 ${\\mathrm{F}}'$ 은 타원의 내부에 있으므로 ${\\mathrm{F}}'$ 에서 위쪽(y좌표가 양수인 쪽)으로 향하는 모든 반직선은 타원의 위쪽 부분과 한 점에서 만난다. 즉 점 ${\\mathrm{Q}}$ 가 나타내는 도형은 중심이 ${\\mathrm{F}}'(-4,0)$ , 반지름의 길이가 $3$ 인 원 중 $y>0$ 인 부분(반원)이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$\\vec{{\\mathrm{A}}{\\mathrm{F}}'}=(-6,8)$ , $|\\vec{{\\mathrm{A}}{\\mathrm{F}}'}|=10$ 이고, 점 ${\\mathrm{A}}$ 에서 가장 먼 원 위의 점은 ${\\mathrm{F}}'+3 \\times \\frac{(-6,8)}{10}=\\left(-\\frac{29}{5},\\frac{12}{5}\\right)$ 로 $y$ 좌표가 양수이므로 반원 위에 있다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "따라서 $|\\vec{{\\mathrm{AQ}}}|$ 의 최댓값은 $10+3=13$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

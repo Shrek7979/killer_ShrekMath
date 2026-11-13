@@ -1,0 +1,60 @@
+{
+ "num": 163,
+ "id": "S16-연세대학교(자연계)수시-2",
+ "univ": "연세대학교(자연계) 수시",
+ "n": 2,
+ "year": 2024,
+ "title": "문제 2",
+ "head": "모든 자연수 $n$ 에 대하여 $a_{n}=n!$ 이다. 모든 항이 자연수인 두 수열 $\\left\\{b_{n}\\right\\},\\left\\{c_{n}\\right\\}$ 은 $1$ 보다 큰 모든 자연수 $n$ 에 대하여 아래의 성질을 만족시킨다.",
+ "points": null,
+ "minutes": 22,
+ "info": {
+  "concepts": "함수의 최댓값과 최솟값, 중복조합, 수열의 극한, 정적분과 급수와의 관계, 수열의 합, 이산확률변수, 벡터, 벡터의 연산, 벡터의 내적",
+  "min": "없음",
+  "field": "수학(4문항, 8문제)",
+  "time": "90분"
+ },
+ "pre": [],
+ "passage": [
+  "(가) $b_{n}$ 의 모든 소인수는 $n$ 이하이다.",
+  "(나) $3 \\log_{2}n \\le c_{n}\\le 4 \\log_{2}n$",
+  "(다) $b_{n}$ 은 $a_{n}^{c_{n}}$ 의 약수가 아니다.",
+  "다음 수열의 수렴 및 발산을 조사하고 수렴한다면 극한값을 구하시오."
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[문제2-1]",
+   "points": 5,
+   "text": [
+    "$\\left\\{\\frac{1}{n}\\ln a_{2 n}-\\frac{1}{n}\\ln a_{n}-\\ln 2 n \\right\\}$ [5점]"
+   ],
+   "answer": [
+    "$\\frac{1}{n}\\ln a_{2 n}-\\frac{1}{n}\\ln a_{n}-\\ln 2 n=\\frac{1}{n}\\ln \\frac{a_{2 n}}{a_{n}}-\\ln 2 n$",
+    "$$\\begin{aligned}=\\frac{1}{n}\\ln \\frac{(2 n)!}{n!}-\\ln 2 n \\\\\\end{aligned}$$",
+    "$=\\frac{1}{n}\\sum_{k=1}^{n}\\ln(n+k)-\\ln 2 n$",
+    "$$\\begin{aligned}=\\frac{1}{n}\\sum_{k=1}^{n}\\left\\{\\ln(n+k)-\\ln 2 n \\right\\} \\\\\\end{aligned}$$",
+    "따라서 정적분과 급수와의 관계에 의하여",
+    "$$\\begin{aligned}\\lim_{n \\rightarrow \\infty}{\\left(\\frac{1}{n}\\ln a_{2 n}-\\frac{1}{n}\\ln a_{n}-\\ln 2 n \\right)}&=\\lim_{n \\rightarrow \\infty}{\\frac{1}{n}\\sum_{k=1}^{n}\\left\\{\\ln(n+k)-\\ln 2 n \\right\\}}\\\\&=\\lim_{n \\rightarrow \\infty}{\\frac{1}{n}\\sum_{k=1}^{n}}\\ln \\left(\\frac{1}{2}+\\frac{k}{2 n}\\right)=\\int_{0}^{1}{\\ln \\left(\\frac{1}{2}+\\frac{x}{2}\\right)dx=-1+\\ln 2}\\end{aligned}$$"
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "[문제2-2]",
+   "points": 10,
+   "text": [
+    "$\\left\\{\\frac{b_{n}}{n^{2}}\\right\\}$ [10점]"
+   ],
+   "answer": [
+    "주어진 조건 (가), (다)에 의하여 각 소인수가 $n$ 이하인 $b_{n}$ 이 $a_{n}^{c_{n}}$ 의 약수가 아니므로 적어도 하나의 소인수 $p_{n}$ 이 존재하여 $p_{n}^{c_{n}+1}$ 이 $b_{n}$ 의 약수이다. 따라서 조건 (나)에 의하여",
+    "$b_{n}\\ge p_{n}^{c_{n}+1}>p_{n}^{3 \\log_{2}n}\\ge 2^{3 \\log_{2}n}=n^{3}$ 이다. 그러므로 $\\frac{b_{n}}{n^{2}}>\\frac{n^{3}}{n^{2}}=n$ 이다.",
+    "수열의 극한의 대소 관계에 의하여 $\\lim_{n \\rightarrow \\infty}{\\frac{b_{n}}{n^{2}}}=\\infty$ 이다."
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "함수의 최댓값과 최솟값"
+}
