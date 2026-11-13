@@ -1,0 +1,142 @@
+{
+ "num": 185,
+ "id": "추가29·기하-49",
+ "subject": "기하",
+ "type": "29번형",
+ "typeDesc": "기하 · 수능 29번형 자리의 고난도",
+ "stars": 5,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2022학년도 6월 모의평가 29번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 125,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "포물선 $y^{2}=16 x$ 의 초점 ${\\mathrm{F}}$ 를 지나는 직선이 이 포물선과 만나는 두 점 중 제 $1$ 사분면에 있는 점을 ${\\mathrm{A}}$ , 다른 점을 ${\\mathrm{B}}$ 라 하자.",
+    "두 점 ${\\mathrm{A}}$ , ${\\mathrm{B}}$ 에서의 포물선의 접선이 만나는 점을 ${\\mathrm{T}}$ 라 하자.",
+    "$\\overline{{\\mathrm{AF}}}=4 \\overline{{\\mathrm{BF}}}$ 일 때, 삼각형 ${\\mathrm{TAB}}$ 의 넓이를 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "포물선 $y^{2}=16 x$ 의 초점 ${\\mathrm{F}}$ 를 지나는 직선이 이 포물선과 만나는 두 점 중 제 $1$ 사분면에 있는 점을 ${\\mathrm{A}}$ , 다른 점을 ${\\mathrm{B}}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "두 점 ${\\mathrm{A}}$ , ${\\mathrm{B}}$ 에서의 포물선의 접선이 만나는 점을 ${\\mathrm{T}}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "$\\overline{{\\mathrm{AF}}}=4 \\overline{{\\mathrm{BF}}}$ 일 때, 삼각형 ${\\mathrm{TAB}}$ 의 넓이를 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "초점을 지나는 직선의 두 교점에서의 접선이 준선 위에서 수직으로 만나고 두 직선 ${\\mathrm{TF}}$ , ${\\mathrm{AB}}$ 가 서로 수직임을 발견하여 직각삼각형의 닮음으로 넓이를 구하게 함"
+ ],
+ "topic": "포물선의 접선",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "포물선 $y^{2}=16 x$ 의 초점은 ${\\mathrm{F}}(4,\\,0)$ , 준선은 $x=-4$ 이다. 직선 ${\\mathrm{AB}}$ 의 방향을 나타내는 단위벡터를 $(\\cos \\theta,\\,\\sin \\theta)$ $\\left(0<\\theta<\\pi \\right)$ 라 하면, 점 ${\\mathrm{A}}$ 는 점 ${\\mathrm{F}}$ 에서 이 방향으로, 점 ${\\mathrm{B}}$ 는 반대 방향으로 놓이므로",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$${\\mathrm{A}}(4+\\overline{{\\mathrm{AF}}}\\cos \\theta,\\,\\overline{{\\mathrm{AF}}}\\sin \\theta),{\\mathrm{B}}(4-\\overline{{\\mathrm{BF}}}\\cos \\theta,\\,-\\overline{{\\mathrm{BF}}}\\sin \\theta)$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "이다. 포물선의 정의(초점까지의 거리 $=$ 준선까지의 거리)에 의하여",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$$\\overline{{\\mathrm{AF}}}=(4+\\overline{{\\mathrm{AF}}}\\cos \\theta)+4,\\overline{{\\mathrm{BF}}}=(4-\\overline{{\\mathrm{BF}}}\\cos \\theta)+4$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "이므로 $\\overline{{\\mathrm{AF}}}=\\frac{8}{1-\\cos \\theta}$ , $\\overline{{\\mathrm{BF}}}=\\frac{8}{1+\\cos \\theta}$ 이다. $\\overline{{\\mathrm{AF}}}=4 \\overline{{\\mathrm{BF}}}$ 에서 $1+\\cos \\theta=4(1-\\cos \\theta)$ , $\\cos \\theta=\\frac{3}{5}$ , $\\sin \\theta=\\frac{4}{5}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "따라서 $\\overline{{\\mathrm{AF}}}=20$ , $\\overline{{\\mathrm{BF}}}=5$ , $\\overline{{\\mathrm{AB}}}=25$ 이고 ${\\mathrm{A}}(16,\\,16)$ , ${\\mathrm{B}}(1,\\,-4)$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "두 점 ${\\mathrm{A}}$ , ${\\mathrm{B}}$ 에서의 접선의 방정식은 각각",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 8,
+   "text": "$$16 y=8(x+16),-4 y=8(x+1)$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 9,
+   "text": "즉 $y=\\frac{1}{2}x+8$ , $y=-2 x-2$ 이다. 두 접선의 기울기의 곱이 $-1$ 이므로 $\\angle{\\mathrm{ATB}}=\\frac{\\pi}{2}$ 이고, 두 식을 연립하면 ${\\mathrm{T}}(-4,\\,6)$ 이다. (점 ${\\mathrm{T}}$ 는 준선 위에 있다.)",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 10,
+   "text": "$\\overline{{\\mathrm{TA}}}=\\sqrt{20^{2}+10^{2}}=10 \\sqrt{5}$ , $\\overline{{\\mathrm{TB}}}=\\sqrt{5^{2}+10^{2}}=5 \\sqrt{5}$ 이므로 직각삼각형 ${\\mathrm{TAB}}$ 의 넓이는",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 11,
+   "text": "$$\\frac{1}{2}\\times 10 \\sqrt{5}\\times 5 \\sqrt{5}=125$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 12,
+   "text": "(참고: $\\vec{{\\mathrm{FT}}}=(-8,\\,6)$ 과 직선 ${\\mathrm{AB}}$ 의 방향벡터 $(3,\\,4)$ 의 내적이 $0$ 이므로 두 직선 ${\\mathrm{TF}}$ , ${\\mathrm{AB}}$ 는 서로 수직이고, $\\frac{1}{2}\\times \\overline{{\\mathrm{AB}}}\\times \\overline{{\\mathrm{TF}}}=\\frac{1}{2}\\times 25 \\times 10=125$ 로도 확인할 수 있다.)",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

@@ -1,0 +1,80 @@
+{
+ "num": 139,
+ "id": "S16-서울과학기술대학교(오전)수시-1",
+ "univ": "서울과학기술대학교(오전) 수시",
+ "n": 1,
+ "year": 2024,
+ "title": "문제 1 · 34점",
+ "head": "다음 물음에 답하시오. (34점)",
+ "points": 34,
+ "minutes": 33,
+ "info": {
+  "concepts": "이차방정식, 삼각함수, 다항함수, 미분, 직선의 방정식, 도형의 이동, 무리함수, 도함수, 원의 방정식, 지수함수, 등비수열, 속도와 거리, 정적분, 등비급수, 매개변수로 나타낸 함수",
+  "min": "없음",
+  "field": "수학, 수학Ⅰ, 수학Ⅱ, 미적분 (3문항, 9문제)",
+  "time": "100분"
+ },
+ "pre": [],
+ "passage": [],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[1.1]",
+   "points": null,
+   "text": [
+    "이차함수 $f \\left(x \\right)=k x^{2}-\\left(k+4 \\right)x+k+2$ 에 대하여, $y=f \\left(x \\right)$ 의 그래프와 $x$ 축과의 교점이 $\\left(\\sin \\theta,0 \\right)$ , $\\left(\\cos \\theta,0 \\right)$ 이다. 이때 모든 $\\theta$ 값들의 합을 구하시오. (단, $0<\\theta<2 \\pi$ , $k$ 는 상수)"
+   ],
+   "answer": [
+    "$\\sin \\theta$ , $\\cos \\theta$ 는 이차방정식 $f \\left(x \\right)=0$ 의 두 근이다. 이차방정식의 근과 계수의 관계를 이용하면",
+    "$\\sin \\theta+\\cos \\theta=\\frac{k+4}{k}$ , $\\sin \\theta \\cos \\theta=\\frac{k+2}{k}$",
+    "이다. 따라서,",
+    "$\\frac{\\left(k+4 \\right)^{2}}{k^{2}}=1+\\frac{2 \\left(k+2 \\right)}{k}$ , $\\left(k-4 \\right)\\left(k+2 \\right)=0$",
+    "이다.(…6점)",
+    "$k=4$ 일 때, $f \\left(x \\right)=4 x^{2}-8 x+6=4 \\left(x-1 \\right)^{2}+2>0$ 이므로 $x$ 축과의 교점이 없다.",
+    "$k=-2$ 일 때, $f \\left(x \\right)=-2 x^{2}-2 x$ 가 되어 $y=f \\left(x \\right)$ 와 $x$ 축의 교점의 좌표는 $\\left(0,0 \\right)$ , $\\left(-1,0 \\right)$ 이다. 그러므로",
+    "$\\sin \\theta=0$ , $\\cos \\theta=-1$ 일 때, $\\theta=\\pi$",
+    "$\\sin \\theta=-1$ , $\\cos \\theta=0$ 일 때, $\\theta=\\frac{3}{2}\\pi$",
+    "이다. 따라서 모든 $\\theta$ 값들의 합은 $\\pi+\\frac{3}{2}\\pi=\\frac{5}{2}\\pi$ 이다.(…6점)"
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "[1.2]",
+   "points": null,
+   "text": [
+    "최고차항의 계수가 $1$ 인 사차함수 $f \\left(x \\right)$ 가 다음 두 조건을 만족할 때, $f \\left(x \\right)$ 를 구하시오.",
+    "(가) $f' \\left(-x \\right)=-f' \\left(x \\right)$ 이다.",
+    "(나) $f \\left(x \\right)$ 는 $x=2$ 에서 극솟값 $-13$ 을 갖는다."
+   ],
+   "answer": [
+    "$f \\left(x \\right)$ 는 최고차항의 계수가 $1$ 인 사차함수이므로 $f' \\left(x \\right)$ 는 최고차항의 계수가 $4$ 인 삼차함수이다. 조건 (가)에 의해 $f' \\left(x \\right)$ 의 이차항의 계수와 상수항은 $0$ 이다. 따라서",
+    "$f' \\left(x \\right)=4 x^{3}+a x$ (…6점)",
+    "이다. 조건 (나)에 의해 $f' \\left(2 \\right)=0$ 이므로 $a=-16$ 이다. 즉,",
+    "$f' \\left(x \\right)=4 x^{3}-16 x$",
+    "이다. 이를 적분하면 $f \\left(x \\right)=x^{4}-8 x^{2}+C$ (단, $C$ 는 적분상수)이고 조건 (나)에 의해",
+    "$f \\left(2 \\right)=16-32+C=-13$",
+    "이므로 $C=3$ 이다. 즉, $f \\left(x \\right)=x^{4}-8 x^{2}+3$ 이다.(…4점)"
+   ],
+   "rubric": []
+  },
+  {
+   "k": "3",
+   "label": "[1.3]",
+   "points": null,
+   "text": [
+    "높이가 $1$ 인 입체도형이 있다. 밑면으로부터 높이가 $x$ ( $0 \\le x \\le 1$ )인 지점에서 밑면과 평행한 평면으로 자른 단면이 가로의 길이가 $2^{x}$ 이고 세로의 길이가 $x+1$ 인 직사각형일 때, 이 입체도형의 부피를 구하시오."
+   ],
+   "answer": [
+    "단면의 넓이는 $\\left(x+1 \\right)2^{x}$ 이다. 따라서 부피는",
+    "$V=\\int_{0}^{1}{\\left(x+1 \\right)2^{x}dx=\\left[\\left(x+1 \\right)\\frac{2^{x}}{\\ln 2}\\right]_{0}^{1}}-\\int_{0}^{1}{\\frac{2^{x}}{\\ln 2}dx}$ (…3점)",
+    "$=\\frac{3}{\\ln 2}-\\left[\\frac{2^{x}}{\\left(\\ln 2 \\right)^{2}}\\right]_{0}^{1}=\\frac{3}{\\ln 2}-\\frac{1}{\\left(\\ln 2 \\right)^{2}}=\\frac{3 \\ln 2-1}{\\left(\\ln 2 \\right)^{2}}$ (…9점)",
+    "이다."
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "이차방정식"
+}

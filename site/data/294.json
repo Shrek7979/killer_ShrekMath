@@ -1,0 +1,114 @@
+{
+ "num": 294,
+ "id": "추가30·기하-20",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 4,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2023학년도 6월 모의평가 30번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 108,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "한 변의 길이가 $2$ 인 정육각형 ${\\mathrm{ABCDEF}}$ 의 변 위를 움직이는 점 ${\\mathrm{P}}$ 와 $|\\vec{{\\mathrm{DQ}}}|=1$ 을 만족시키는 점 ${\\mathrm{Q}}$ 에 대하여 점 ${\\mathrm{X}}$ 가"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "\\vec{{\\mathrm{AX}}}=\\frac{1}{2}(\\vec{{\\mathrm{AP}}}+\\vec{{\\mathrm{AQ}}})"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "를 만족시킨다.",
+    "$\\vec{{\\mathrm{AX}}}\\cdot \\vec{{\\mathrm{AD}}}$ 의 최댓값과 최솟값의 곱을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "한 변의 길이가 $2$ 인 정육각형 ${\\mathrm{ABCDEF}}$ 의 변 위를 움직이는 점 ${\\mathrm{P}}$ 와 $|\\vec{{\\mathrm{DQ}}}|=1$ 을 만족시키는 점 ${\\mathrm{Q}}$ 에 대하여 점 ${\\mathrm{X}}$ 가",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$\\vec{{\\mathrm{AX}}}=\\frac{1}{2}(\\vec{{\\mathrm{AP}}}+\\vec{{\\mathrm{AQ}}})$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    2,
+    0
+   ],
+   "text": "를 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    1
+   ],
+   "text": "$\\vec{{\\mathrm{AX}}}\\cdot \\vec{{\\mathrm{AD}}}$ 의 최댓값과 최솟값의 곱을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "정육각형과 원을 그대로 쓰되 원의 중심을 D로 옮기고, 자취 대신 정사영(내적)의 범위를 두 부분으로 나누어 구하게 함"
+ ],
+ "topic": "평면벡터",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "$\\vec{{\\mathrm{AX}}}\\cdot \\vec{{\\mathrm{AD}}}=\\frac{1}{2}\\left(\\vec{{\\mathrm{AP}}}\\cdot \\vec{{\\mathrm{AD}}}+\\vec{{\\mathrm{AQ}}}\\cdot \\vec{{\\mathrm{AD}}}\\right)$ 이고, 두 점 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ 는 서로 독립적으로 움직인다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$\\overline{{\\mathrm{AD}}}=4$ 이고 정육각형의 모든 점은 직선 ${\\mathrm{AD}}$ 위로의 정사영이 선분 ${\\mathrm{AD}}$ 위에 있으므로 $0 \\le \\vec{{\\mathrm{AP}}}\\cdot \\vec{{\\mathrm{AD}}}\\le 16$ 이다( ${\\mathrm{P}}={\\mathrm{A}}$ 일 때 $0$ , ${\\mathrm{P}}={\\mathrm{D}}$ 일 때 $16$ ).",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$\\vec{{\\mathrm{AQ}}}\\cdot \\vec{{\\mathrm{AD}}}=|\\vec{{\\mathrm{AD}}}|^{2}+\\vec{{\\mathrm{DQ}}}\\cdot \\vec{{\\mathrm{AD}}}=16+\\vec{{\\mathrm{DQ}}}\\cdot \\vec{{\\mathrm{AD}}}$ 이고 $-4 \\le \\vec{{\\mathrm{DQ}}}\\cdot \\vec{{\\mathrm{AD}}}\\le 4$ 이므로 $12 \\le \\vec{{\\mathrm{AQ}}}\\cdot \\vec{{\\mathrm{AD}}}\\le 20$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "따라서 $6 \\le \\vec{{\\mathrm{AX}}}\\cdot \\vec{{\\mathrm{AD}}}\\le 18$ 이고 구하는 곱은 $108$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

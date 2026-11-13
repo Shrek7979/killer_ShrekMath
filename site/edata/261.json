@@ -1,0 +1,59 @@
+{
+ "num": 261,
+ "id": "S15-중앙대학교(자연계열Ⅰ)수시-1",
+ "univ": "중앙대학교(자연계열Ⅰ) 수시",
+ "n": 1,
+ "year": 2023,
+ "title": "문제 1",
+ "head": "세 사람 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ 의 이름이 각각 적힌 서로 다른 $3$ 장의 이름표가 들어 있는 상자가 있다. 다음과 같은 규칙의 게임을 고려하자.",
+ "points": null,
+ "minutes": 40,
+ "info": {
+  "concepts": "경우의 수, 합의 법칙, 곱의 법칙, 등비수열의 합, 함수의 곱의 미분, 도함수, 정적분의 성질, 여러 가지 함수의 정적분, 치환적분법, 수열의 합의 성질, 접선의 방정식, 극대와 극소",
+  "min": "약학부, 의학부: 국어, 수학, 영어, 탐구(2과목 평균) 4개 영역 등급 합 5 이내",
+  "field": "약학부, 의학부 제외: 국어, 수학, 영어, 탐구(상위 1과목) 3개 영역 등급 합 6 이내 수학(3문항, 6문제) +과학(1문항)",
+  "time": "120분"
+ },
+ "pre": [],
+ "passage": [
+  "$1$ 라운드: $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ 가 상자에서 임의로 각각 한 장씩 이름표를 뽑은 다음, 자신의 이름표를 뽑은 사람을 제외하고 다른 사람의 이름표를 뽑은 사람만 이름표를 상자에 다시 넣는다.",
+  "$n$ 라운드( $n \\ge 2$ ): 아직 자신의 이름표를 뽑지 못한 사람만 ( $n-1$ )라운드 직후의 상자에서 임의로 각각 한 장씩 이름표를 뽑는다. 이때 자신의 이름표를 뽑은 사람을 제외하고 다른 사람의 이름표를 뽑은 사람만 이름표를 상자에 다시 넣는다.",
+  "각 라운드 직후 상자에 남은 이름표가 없으면 게임은 종료된다.",
+  "위와 같은 규칙으로 게임이 종료되지 않고 $6$ 라운드까지 진행된다고 할 때, 오직 한 사람만 자신의 이름표를 뽑는 경우의 수를 구하시오. (단, 각 라운드에서 이름표를 뽑는 순서는 고려하지 않는다.) [20점]"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[답안]",
+   "points": null,
+   "text": [],
+   "answer": [
+    "우선 $n$ 라운드에서만 $1$ 명이 자신의 이름표를 뽑을 조건을 고려하자. 이를 위해서는,",
+    "① 이전 라운드까지는 모든 사람이 다른 사람의 이름표를 뽑아야 하고",
+    "② $n$ 라운드에서 세 사람 중 한 명이 자신의 이름표를 뽑고",
+    "③ $\\left(n+1 \\right)$ 라운드부터는 나머지 사람들이 모두 다른 사람의 이름표를 계속 뽑아야 한다.",
+    "단, $n=1$ 인 경우는 이전 라운드가 없기 때문에 ①의 과정이 없고, $n=6$ 인 경우는 $6$ 라운드까지 고려하므로 ③의 과정이 없다.",
+    "편의상, 세 사람 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ 의 이름표를 각각 $\\mathrm{a}$ , $\\mathrm{b}$ , $\\mathrm{c}$ 라고 하자. ①의 경우는 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ 가 $\\left(\\mathrm{b},c,a \\right)$ 또는 $\\left(\\mathrm{c},a,b \\right)$ 를 고르는 경우이므로 $2$ 가지가 있다. ②의 경우는 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ 중 한 사람이 자신의 이름표를 뽑고 나머지 두 사람은 이름표를 엇갈리게 뽑는 경우이다. 따라서, 자신의 이름표를 뽑는 사람이 세 사람 중 한 명이므로 $3$ 가지가 있다. ③의 경우는 두 사람이 서로 이름표를 엇갈리게 뽑는 경우이므로 $1$ 가지 경우이다. 따라서, $6$ 라운드까지 진행에서 $n$ 라운드에서만 $1$ 명이 자신의 이름표를 뽑는 경우의 수를 $M_{n}$ 이라고 하면 다음과 같이 계산할 수 있다.",
+    "$M_{1}=3 \\times 1 \\times 1 \\times 1 \\times 1 \\times 1=3$ ;",
+    "예: $\\mathrm{A}$ 만 이름표를 뽑는 경우",
+    "$\\left(\\mathrm{a},c,b \\right)\\rightarrow \\left(․,c,b \\right)\\rightarrow \\cdots \\rightarrow \\left(․,c,b \\right)$",
+    "$M_{2}=2 \\times 3 \\times 1 \\times 1 \\times 1 \\times 1=3 \\times 2^{1}$ ;",
+    "예: $\\mathrm{A}$ 만 이름표를 뽑는 경우",
+    "$\\left(\\mathrm{b},c,a \\right)o r \\left(\\mathrm{c},a,b \\right)\\rightarrow \\left(a,c,b \\right)\\rightarrow \\left(․,c,b \\right)\\rightarrow \\cdots \\rightarrow \\left(․,c,b \\right)$",
+    "$M_{3}=2 \\times 2 \\times 3 \\times 1 \\times 1 \\times 1=3 \\times 2^{2}$ ;",
+    "예: $\\mathrm{A}$ 만 이름표를 뽑는 경우",
+    "$\\left(\\mathrm{b},c,a \\right)o r \\left(\\mathrm{c},a,b \\right)\\rightarrow \\left(\\mathrm{b},c,a \\right)o r \\left(\\mathrm{c},a,b \\right)\\rightarrow \\left(a,c,b \\right)\\rightarrow \\left(․,c,b \\right)\\rightarrow \\cdots \\rightarrow \\left(․,c,b \\right)$",
+    "$\\cdots$",
+    "$M_{6}=2 \\times 2 \\times 2 \\times 2 \\times 2 \\times 3=3 \\times 2^{5}$ ;",
+    "예: $\\mathrm{A}$ 만 이름표를 뽑는 경우",
+    "$\\left(\\mathrm{b},c,a \\right)o r \\left(\\mathrm{c},a,b \\right)\\rightarrow \\cdots \\rightarrow \\left(\\mathrm{b},c,a \\right)o r \\left(\\mathrm{c},a,b \\right)\\rightarrow \\left(a,c,b \\right)$",
+    "위의 계산에 의하여, 문제에서 요구하는 경우의 수는 다음과 같다.",
+    "$\\sum_{n=1}^{6}M_{n}=3 \\times \\left(\\frac{2^{6}-1}{2-1}\\right)=3 \\times 63=189$"
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "경우의 수"
+}

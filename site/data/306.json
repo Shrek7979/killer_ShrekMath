@@ -1,0 +1,176 @@
+{
+ "num": 306,
+ "id": "추가30·기하-32",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 4,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2025학년도 대학수학능력시험 30번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 891,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "좌표평면 위의 네 점 ${\\mathrm{A}}(0,0)$ , ${\\mathrm{B}}(6,0)$ , ${\\mathrm{C}}(6,6)$ , ${\\mathrm{D}}(0,6)$ 에 대하여"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "|\\vec{{\\mathrm{XB}}}+\\vec{{\\mathrm{XC}}}|=|\\vec{{\\mathrm{XB}}}-\\vec{{\\mathrm{XC}}}|"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "를 만족시키는 점 ${\\mathrm{X}}$ 가 나타내는 도형 중 정사각형 ${\\mathrm{ABCD}}$ 의 내부 또는 둘레 위에 있는 부분을 $S$ 라 하자.",
+    "도형 $S$ 위의 점 ${\\mathrm{P}}$ 에 대하여"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "4 \\vec{{\\mathrm{PQ}}}=\\vec{{\\mathrm{PA}}}+2 \\vec{{\\mathrm{PD}}}"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "를 만족시키는 점을 ${\\mathrm{Q}}$ 라 하자.",
+    "점 ${\\mathrm{E}}(2,3)$ 에 대하여 $\\vec{{\\mathrm{BQ}}}\\cdot \\vec{{\\mathrm{BE}}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M \\times m$ 의 값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "좌표평면 위의 네 점 ${\\mathrm{A}}(0,0)$ , ${\\mathrm{B}}(6,0)$ , ${\\mathrm{C}}(6,6)$ , ${\\mathrm{D}}(0,6)$ 에 대하여",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$|\\vec{{\\mathrm{XB}}}+\\vec{{\\mathrm{XC}}}|=|\\vec{{\\mathrm{XB}}}-\\vec{{\\mathrm{XC}}}|$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    2,
+    0
+   ],
+   "text": "를 만족시키는 점 ${\\mathrm{X}}$ 가 나타내는 도형 중 정사각형 ${\\mathrm{ABCD}}$ 의 내부 또는 둘레 위에 있는 부분을 $S$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    1
+   ],
+   "text": "도형 $S$ 위의 점 ${\\mathrm{P}}$ 에 대하여",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    3,
+    0
+   ],
+   "text": "$4 \\vec{{\\mathrm{PQ}}}=\\vec{{\\mathrm{PA}}}+2 \\vec{{\\mathrm{PD}}}$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C6",
+   "at": [
+    4,
+    0
+   ],
+   "text": "를 만족시키는 점을 ${\\mathrm{Q}}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C7",
+   "at": [
+    4,
+    1
+   ],
+   "text": "점 ${\\mathrm{E}}(2,3)$ 에 대하여 $\\vec{{\\mathrm{BQ}}}\\cdot \\vec{{\\mathrm{BE}}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M \\times m$ 의 값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "도형 S를 반원으로 제한하고 내적의 방향 벡터를 $(-4,3)$ 으로 잡아, 최댓값은 접점에서, 최솟값은 반원의 끝점에서 생기도록 설계"
+ ],
+ "topic": "평면벡터",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "$|\\vec{{\\mathrm{XB}}}+\\vec{{\\mathrm{XC}}}|=|\\vec{{\\mathrm{XB}}}-\\vec{{\\mathrm{XC}}}|$ 에서 $\\vec{{\\mathrm{XB}}}\\cdot \\vec{{\\mathrm{XC}}}=0$ 이므로 $S$ 는 중심이 $(6,3)$ , 반지름의 길이가 $3$ 인 원 중 $x \\le 6$ 인 반원이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$4(\\vec{{\\mathrm{OQ}}}-\\vec{{\\mathrm{OP}}})=\\vec{{\\mathrm{OA}}}+2 \\vec{{\\mathrm{OD}}}-3 \\vec{{\\mathrm{OP}}}$ 에서 $\\vec{{\\mathrm{OQ}}}=\\frac{1}{4}(\\vec{{\\mathrm{OP}}}+\\vec{{\\mathrm{OA}}}+2 \\vec{{\\mathrm{OD}}})$ 이다. $\\vec{w}=\\vec{{\\mathrm{BE}}}=(-4,3)$ 이라 하면",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$$\\vec{{\\mathrm{BQ}}}\\cdot \\vec{w}=\\frac{1}{4}\\left(\\vec{{\\mathrm{OP}}}\\cdot \\vec{w}+36 \\right)+24$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$\\vec{{\\mathrm{OP}}}\\cdot \\vec{w}=-15+\\vec{{\\mathrm{KP}}}\\cdot \\vec{w}$ ( ${\\mathrm{K}}(6,3)$ )이고 $\\vec{{\\mathrm{KP}}}=3(\\cos t,\\sin t)$ , $\\frac{\\pi}{2}\\le t \\le \\frac{3 \\pi}{2}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$\\vec{{\\mathrm{KP}}}\\cdot \\vec{w}$ 의 최댓값은 $\\vec{{\\mathrm{KP}}}$ 가 $\\vec{w}$ 와 같은 방향일 때 $15$ 이고 이때 ${\\mathrm{P}}\\left(\\frac{18}{5},\\frac{24}{5}\\right)$ 는 반원 위에 있다. 최솟값은 반원의 끝점 중 $\\vec{w}$ 와 이루는 각이 큰 쪽 ${\\mathrm{P}}={\\mathrm{B}}$ 에서 $(0,-3)\\cdot(-4,3)=-9$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "따라서 $\\vec{{\\mathrm{OP}}}\\cdot \\vec{w}$ 의 범위는 $-24$ 이상 $0$ 이하이고, $m=\\frac{12}{4}+24=27$ , $M=\\frac{36}{4}+24=33$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "$$M \\times m=891$$",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

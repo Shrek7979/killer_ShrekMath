@@ -1,0 +1,120 @@
+{
+ "num": 303,
+ "id": "추가30·기하-29",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 4,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2026학년도 9월 모의평가 30번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 32,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "좌표평면 위의 세 점 ${\\mathrm{A}}(0,6)$ , ${\\mathrm{B}}(-2,0)$ , ${\\mathrm{C}}(4,0)$ 에 대하여 점 ${\\mathrm{X}}$ 가"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "\\vec{{\\mathrm{XA}}}\\cdot \\vec{{\\mathrm{XB}}}=\\vec{{\\mathrm{XB}}}\\cdot \\vec{{\\mathrm{XC}}}=\\vec{{\\mathrm{XC}}}\\cdot \\vec{{\\mathrm{XA}}}"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "를 만족시킨다.",
+    "선분 ${\\mathrm{BC}}$ 위를 움직이는 점 ${\\mathrm{P}}$ 에 대하여 $\\vec{{\\mathrm{PX}}}\\cdot \\vec{{\\mathrm{PA}}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M+m$ 의 값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "좌표평면 위의 세 점 ${\\mathrm{A}}(0,6)$ , ${\\mathrm{B}}(-2,0)$ , ${\\mathrm{C}}(4,0)$ 에 대하여 점 ${\\mathrm{X}}$ 가",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$\\vec{{\\mathrm{XA}}}\\cdot \\vec{{\\mathrm{XB}}}=\\vec{{\\mathrm{XB}}}\\cdot \\vec{{\\mathrm{XC}}}=\\vec{{\\mathrm{XC}}}\\cdot \\vec{{\\mathrm{XA}}}$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    2,
+    0
+   ],
+   "text": "를 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    1
+   ],
+   "text": "선분 ${\\mathrm{BC}}$ 위를 움직이는 점 ${\\mathrm{P}}$ 에 대하여 $\\vec{{\\mathrm{PX}}}\\cdot \\vec{{\\mathrm{PA}}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M+m$ 의 값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "삼각형에 대한 벡터 조건을 '수심'이 되도록 바꾸어 특수점을 먼저 찾게 하고, 선분 위 점에 대한 내적의 범위로 연결"
+ ],
+ "topic": "평면벡터",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "$\\vec{{\\mathrm{XA}}}\\cdot \\vec{{\\mathrm{XB}}}=\\vec{{\\mathrm{XB}}}\\cdot \\vec{{\\mathrm{XC}}}$ 에서 $\\vec{{\\mathrm{XB}}}\\cdot(\\vec{{\\mathrm{XA}}}-\\vec{{\\mathrm{XC}}})=\\vec{{\\mathrm{XB}}}\\cdot \\vec{{\\mathrm{CA}}}=0$ 이므로 점 ${\\mathrm{X}}$ 는 점 ${\\mathrm{B}}$ 를 지나고 직선 ${\\mathrm{CA}}$ 에 수직인 직선 위에 있다. 같은 방법으로 점 ${\\mathrm{C}}$ 를 지나고 직선 ${\\mathrm{AB}}$ 에 수직인 직선 위에도 있으므로 ${\\mathrm{X}}$ 는 삼각형 ${\\mathrm{ABC}}$ 의 수심이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "점 ${\\mathrm{A}}$ 를 지나고 ${\\mathrm{BC}}$ 에 수직인 직선은 $x=0$ 이고, 점 ${\\mathrm{B}}$ 를 지나고 $\\vec{{\\mathrm{CA}}}=(-4,6)$ 에 수직인 직선은 $-4(x+2)+6 y=0$ 이므로 ${\\mathrm{X}}\\left(0,\\frac{4}{3}\\right)$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "선분 ${\\mathrm{XA}}$ 의 중점 ${\\mathrm{K}}\\left(0,\\frac{11}{3}\\right)$ 에 대하여 $\\vec{{\\mathrm{PX}}}\\cdot \\vec{{\\mathrm{PA}}}=|\\vec{{\\mathrm{PK}}}|^{2}-\\left(\\frac{7}{3}\\right)^{2}$ 이다. ${\\mathrm{P}}(t,0)$ $(-2 \\le t \\le 4)$ 이면 $|\\vec{{\\mathrm{PK}}}|^{2}=t^{2}+\\frac{121}{9}$ 이므로",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$$\\vec{{\\mathrm{PX}}}\\cdot \\vec{{\\mathrm{PA}}}=t^{2}+8$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "따라서 $m=8$ ( $t=0$ ), $M=24$ ( $t=4$ )이고 $M+m=32$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

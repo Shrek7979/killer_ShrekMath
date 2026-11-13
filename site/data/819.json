@@ -1,0 +1,178 @@
+{
+ "num": 819,
+ "id": "최고난도100-087",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [],
+ "source": "ShrekMath 창작 · 2차 R2_기하 26번( 2024학년도 9월 모의평가 29번), 1차 Q30_기하 43번 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 11,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "두 초점이 ${\\mathrm{F}}(5,\\,0)$ , ${\\mathrm{F'}}(-5,\\,0)$ 인 쌍곡선 $\\frac{x^{2}}{16}-\\frac{y^{2}}{9}=1$ 위의 점 중 제 $1$ 사분면에 있는 점 ${\\mathrm{P}}$ 가 $\\vec{{\\mathrm{FP}}}\\cdot \\vec{{\\mathrm{FF'}}}\\ge 0$ 을 만족시킨다.",
+    "점 ${\\mathrm{P}}$ 에서의 접선에 점 ${\\mathrm{F}}$ 에서 내린 수선의 발을 ${\\mathrm{N}}$ 이라 하자.",
+    "두 점 ${\\mathrm{A}}(15,\\,9)$ , ${\\mathrm{B}}(15,\\,7)$ 에 대하여 $\\vec{{\\mathrm{NA}}}\\cdot \\vec{{\\mathrm{NB}}}$ 의 값이 될 수 있는 모든 정수의 개수를 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "두 초점이 ${\\mathrm{F}}(5,\\,0)$ , ${\\mathrm{F'}}(-5,\\,0)$ 인 쌍곡선 $\\frac{x^{2}}{16}-\\frac{y^{2}}{9}=1$ 위의 점 중 제 $1$ 사분면에 있는 점 ${\\mathrm{P}}$ 가 $\\vec{{\\mathrm{FP}}}\\cdot \\vec{{\\mathrm{FF'}}}\\ge 0$ 을 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "점 ${\\mathrm{P}}$ 에서의 접선에 점 ${\\mathrm{F}}$ 에서 내린 수선의 발을 ${\\mathrm{N}}$ 이라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "두 점 ${\\mathrm{A}}(15,\\,9)$ , ${\\mathrm{B}}(15,\\,7)$ 에 대하여 $\\vec{{\\mathrm{NA}}}\\cdot \\vec{{\\mathrm{NB}}}$ 의 값이 될 수 있는 모든 정수의 개수를 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "초점에서 접선에 내린 수선의 발이 원 위에 있고 그 방향이 직선 ${\\mathrm{F'P}}$ 의 방향과 같음을 쌍곡선에서 찾게 하고, 내적 조건 $\\vec{{\\mathrm{FP}}}\\cdot \\vec{{\\mathrm{FF'}}}\\ge 0$ 이 만드는 '한쪽은 열리고 한쪽은 닫힌' 호의 끝점을 직선 ${\\mathrm{F'P}}$ 의 기울기의 증가로 정한 뒤, 최소는 닫힌 끝점에서, 상한은 열린 끝점에서 생김을 구별해 정수를 세게 함"
+ ],
+ "topic": "이차곡선과 평면벡터",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "${\\mathrm{P}}(x_{1},\\,y_{1})$ 이라 하면 $\\vec{{\\mathrm{FP}}}\\cdot \\vec{{\\mathrm{FF'}}}=-10(x_{1}-5)\\ge 0$ 이므로 $4<x_{1}\\le 5$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "점 ${\\mathrm{P}}$ 에서의 접선은 $\\frac{x_{1}x}{16}-\\frac{y_{1}y}{9}=1$ , 즉 법선벡터가 $\\vec{n}=\\left(\\frac{x_{1}}{16},\\,-\\frac{y_{1}}{9}\\right)$ 인 직선 $\\vec{n}\\cdot(x,\\,y)=1$ 이다. 점 ${\\mathrm{N}}$ 은 점 ${\\mathrm{F}}$ 에서 $\\vec{n}$ 방향으로 옮긴 점이므로 $\\vec{{\\mathrm{ON}}}=\\vec{{\\mathrm{OF}}}-\\lambda \\vec{n}$ 으로 놓을 수 있고, ${\\mathrm{N}}$ 이 접선 위에 있으므로 $\\vec{n}\\cdot \\vec{{\\mathrm{OF}}}-\\lambda|\\vec{n}|^{2}=1$ 에서 $\\lambda=\\frac{\\vec{n}\\cdot \\vec{{\\mathrm{OF}}}-1}{|\\vec{n}|^{2}}$ 이다. $y_{1}^{2}=9 \\left(\\frac{x_{1}^{2}}{16}-1 \\right)$ 을 쓰면",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$$|\\vec{n}|^{2}=\\frac{(5 x_{1}-16)(5 x_{1}+16)}{2304},\\,\\,\\,\\vec{n}\\cdot \\vec{{\\mathrm{OF}}}-1=\\frac{5 x_{1}-16}{16},\\,\\,\\,\\lambda=\\frac{144}{5 x_{1}+16}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "이므로",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$$\\vec{{\\mathrm{ON}}}=\\left(5-\\frac{9 x_{1}}{5 x_{1}+16},\\,\\frac{16 y_{1}}{5 x_{1}+16}\\right)=\\frac{16}{5 x_{1}+16}(x_{1}+5,\\,y_{1})$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "이다. 한편 $\\overline{{\\mathrm{PF'}}}^{2}-\\overline{{\\mathrm{PF}}}^{2}=20 x_{1}$ , $\\overline{{\\mathrm{PF'}}}-\\overline{{\\mathrm{PF}}}=8$ 에서 $\\overline{{\\mathrm{PF'}}}=\\frac{5 x_{1}+16}{4}$ 이므로 $\\vec{{\\mathrm{ON}}}=\\frac{4}{\\overline{{\\mathrm{PF'}}}}\\vec{{\\mathrm{F'P}}}$ 이다. 즉 점 ${\\mathrm{N}}$ 은 원 $x^{2}+y^{2}=16$ 위에 있고 $\\vec{{\\mathrm{ON}}}$ 의 방향은 $\\vec{{\\mathrm{F'P}}}$ 의 방향과 같다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "직선 ${\\mathrm{F'P}}$ 의 기울기를 $s$ 라 하면",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 8,
+   "text": "$$s^{2}=\\frac{y_{1}^{2}}{(x_{1}+5)^{2}}=\\frac{9}{16}\\times \\left(1-\\frac{9}{x_{1}+5}\\right)\\times \\left(1-\\frac{1}{x_{1}+5}\\right)$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 9,
+   "text": "이고 두 괄호는 모두 양수이며 $x_{1}$ 에 따라 증가하므로, $x_{1}$ 이 $4$ 보다 크고 $5$ 이하인 범위를 움직일 때 $s$ 는 연속적으로 증가하면서 $0$ 보다 크고 $x_{1}=5$ 일 때의 값 $\\frac{9/4}{10}=\\frac{9}{40}$ 이하인 모든 값을 가진다( $x_{1}=5$ 일 때 ${\\mathrm{P}}\\left(5,\\,\\frac{9}{4}\\right)$ ). 따라서",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 10,
+   "text": "$${\\mathrm{N}}=4(\\cos \\theta,\\,\\sin \\theta),\\,\\,\\,0<\\theta \\le \\theta_{1}\\,\\,\\left(\\cos \\theta_{1}=\\frac{40}{41},\\,\\sin \\theta_{1}=\\frac{9}{41}\\right)$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 11,
+   "text": "이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 12,
+   "text": "선분 ${\\mathrm{AB}}$ 의 중점 ${\\mathrm{K}}(15,\\,8)$ 에 대하여 $\\vec{{\\mathrm{NA}}}\\cdot \\vec{{\\mathrm{NB}}}=\\overline{{\\mathrm{NK}}}^{2}-1$ 이고, $\\overline{{\\mathrm{OK}}}=17$ , $\\vec{{\\mathrm{OK}}}$ 의 방향각을 $k a p p a$ $\\left(\\cos k a p p a=\\frac{15}{17},\\,\\sin k a p p a=\\frac{8}{17}\\right)$ 라 하면",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 13,
+   "text": "$$\\overline{{\\mathrm{NK}}}^{2}=16+289-136 \\cos(\\theta-k a p p a)$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 14,
+   "text": "이다. $\\tan k a p p a=\\frac{8}{15}>\\frac{9}{40}=\\tan \\theta_{1}$ 이므로 $-k a p p a<\\theta-k a p p a \\le \\theta_{1}-k a p p a<0$ 이고, 이 범위에서 $\\cos(\\theta-k a p p a)$ 는 $\\theta$ 에 따라 증가한다. 따라서",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 15,
+   "text": "$$\\frac{15}{17}<\\cos(\\theta-k a p p a)\\le \\cos(\\theta_{1}-k a p p a)=\\frac{40}{41}\\times \\frac{15}{17}+\\frac{9}{41}\\times \\frac{8}{17}=\\frac{672}{697}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 16,
+   "text": "이고(왼쪽 끝은 포함되지 않음)",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 17,
+   "text": "$$\\frac{7129}{41}\\le \\overline{{\\mathrm{NK}}}^{2}<185,\\,\\,\\,\\frac{7088}{41}\\le \\vec{{\\mathrm{NA}}}\\cdot \\vec{{\\mathrm{NB}}}<184$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 18,
+   "text": "이며 이 범위의 모든 값을 가진다. $\\frac{7088}{41}=172.8 \\cdots$ 이므로 가능한 정수는 $173$ , $174$ , $\\cdots$ , $183$ 의 $11$ 개이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

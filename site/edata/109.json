@@ -1,0 +1,71 @@
+{
+ "num": 109,
+ "id": "S16-가톨릭대학교(의약학과)수시-4",
+ "univ": "가톨릭대학교(의·약학과) 수시",
+ "n": 4,
+ "year": 2024,
+ "title": "문제 4 · 180점",
+ "head": "제시문 (ㄱ)～(ㄷ)을 읽고 논제에 답하시오. (180점)",
+ "points": 180,
+ "minutes": 22,
+ "info": {
+  "concepts": "[의예, 약학]",
+  "min": "평면좌표, 속도, 거리, 지수함수, 그래프의 개형, 정적분, 함수의 증가와 감소, 최댓값과 최솟값",
+  "field": "[의예] 호도법, 삼각함수, 그래프의 대칭성 의예과 (국어, 수학(미적분/기하), 영어, 과탐(2과목 평균) 중 3개 영역 등급 합 4 이내 및 한국사 4등급 이내) 약학과 (국어, 수학(미적분/기하), 영어, 과탐(1과목) 중 3개 영역 등급 합 5 이내) [의예] 수학(4문항, 4문제) [약학] 수학(3문항, 3문제, 문항1,2,4) [의예] 100분",
+  "time": "[약학] 90분"
+ },
+ "pre": [],
+ "passage": [
+  "(ㄱ) 실수 $a$ 에 대하여 함수 $f \\left(x \\right)$ 는 다음과 같다.",
+  "$f \\left(x \\right)={\\begin{cases}x^{3}-a x^{2}-a^{2}x+4 a+2 a^{2}&\\left(x \\ge 0 \\right)\\\\-\\left(a+4 \\right)^{2}x+4 a+2 a^{2}&\\left(x<0 \\right)\\end{cases}}$",
+  "(ㄴ) 양수 $k$ 와 제시문 (ㄱ)의 실수 $a$ , 함수 $f \\left(x \\right)$ 에 대하여 닫힌구간 $\\left[-k,k \\right]$ 에서 $f \\left(x \\right)$ 의 최댓값을 $g \\left(a \\right)$ 라고 하자.",
+  "(ㄷ) 제시문 (ㄴ)의 양수 $k$ 와 함수 $g \\left(a \\right)$ 에 대하여 구간 $\\left(-\\infty,\\infty \\right)$ 에서 $g \\left(a \\right)$ 의 최솟값을 $m$ 이라고 할 때, 다음 조건을 만족시키는 $k$ 값의 전체의 집합을 $A$ 라고 하자.",
+  "$g \\left(a \\right)=m$ 을 만족시키는 $a$ 의 값은 단 하나만 존재한다.",
+  "논제 1. 제시문 (ㄷ)의 집합 $A$ 의 원소가 아닌 양수 $k$ 의 값을 모두 구하고 그 근거를 논술하시오. (180점)",
+  "풀어보기",
+  "문제1. 좌표평면 위를 움직이는 점 $\\mathrm{P}$ 의 시각 $t(t>0)$ 에서의 위치가 곡선 $y=x^2$ 과 직선 $y=t^2 x-\\frac{\\ln t}{8}$ 가 만나는 서로 다른 두 점의 중점일 때, 시각 $t=1$ 에서 $t=e$ 까지 점 $\\mathrm{P}$ 가 움직인 거리는? (2021년 11월 대수능)",
+  "➀ $\\frac{e^4}{2}-\\frac{3}{8}$ ➁ $\\frac{e^4}{2}-\\frac{5}{16}$ ➂ $\\frac{e^4}{2}-\\frac{1}{4}$ ➃ $\\frac{e^4}{2}-\\frac{3}{16}$ ➄ $\\frac{e^4}{2}-\\frac{1}{8}$",
+  "문제2. 양의 실수 $t$ 에 대하여 함수 $f \\left(x \\right)$ 를",
+  "$f \\left(x \\right)=x^{3}-3 t^{2}x$",
+  "라 할 때, 닫힌구간 $\\left[-2,1 \\right]$ 에서 두 함수 $f \\left(x \\right)$ , $\\left|f \\left(x \\right)\\right|$ 의 최댓값을 각각 $M_{1}\\left(t \\right)$ , $M_{2}\\left(t \\right)$ 라 하자. 함수",
+  "$g \\left(t \\right)=M_{1}\\left(t \\right)+M_{2}\\left(t \\right)$",
+  "에 대하여 <보기>에서 옳은 것만을 있는 대로 고른 것은? (2023년 4월 전국연합)",
+  "보 기",
+  "ㄱ. $g \\left(2 \\right)=32$",
+  "ㄴ. $g \\left(t \\right)=2 f \\left(-t \\right)$ 를 만족시키는 $t$ 의 최댓값과 최솟값의 합은 $3$ 이다.",
+  "ㄷ. $\\lim_{h \\rightarrow 0+}{\\frac{g \\left(\\frac{1}{2}+h \\right)-g \\left(\\frac{1}{2}\\right)}{h}}-\\lim_{h \\rightarrow 0-}{\\frac{g \\left(\\frac{1}{2}+h \\right)-g \\left(\\frac{1}{2}\\right)}{h}}=5$",
+  "① ㄱ② ㄷ③ ㄱ, ㄴ④ ㄴ, ㄷ⑤ ㄱ, ㄴ, ㄷ"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[답안]",
+   "points": 180,
+   "text": [],
+   "answer": [
+    "$f \\left(x \\right)$ 는 $x=0$ 에서 연속이다. $f \\left(x \\right)$ 는 $x<0$ 에서 기울기가 $-\\left(a+4 \\right)^{2}<0$ 인 직선이므로 닫힌구간 $\\left[-k,0 \\right]$ 에서 $f \\left(-k \\right)$ 가 최대이다. 한편, 함수 $y=x^{3}-a x^{2}-a^{2}x+4 a+2 a^{2}$ 은 $x^{3}$ 의 계수가 양수이고, $y'=3 x^{2}-2 a x-a^{2}=\\left(x-a \\right)\\left(3 x+a \\right)$ 이므로 $x=a$ 및 $x=-\\frac{a}{3}$ 에서 극값을 가진다. 그러므로 $x \\ge 0$ 에서 $f \\left(x \\right)$ 의 함숫값은 $a=0$ 인 경우에는 증가하고 $a \\ne 0$ 인 경우에는 감소하다가 증가한다. 즉, 닫힌구간 $\\left[0,k \\right]$ 에서 $f \\left(x \\right)$ 의 최댓값은 $f \\left(0 \\right)$ 과 $f \\left(k \\right)$ 중 하나이다. 따라서 닫힌구간 $\\left[-k,k \\right]$ 에서 $f \\left(x \\right)$ 의 최댓값은 $f \\left(-k \\right)$ 와 $f \\left(k \\right)$ 중 하나이다.",
+    "이때 $f \\left(-k \\right)=\\left(2+k \\right)a^{2}+\\left(8 k+4 \\right)a+16 k$ 를 $g_{1}\\left(a \\right)$ ,",
+    "$f \\left(k \\right)=\\left(2-k \\right)a^{2}+\\left(4-k^{2}\\right)a+k^{3}$ 를 $g_{2}\\left(a \\right)$ 라고 하면,",
+    "$g \\left(a \\right)={\\begin{cases}g_{1}\\left(a \\right)&\\left(g_{1}\\left(a \\right)\\ge g_{2}\\left(a \\right)\\right)\\\\ g_{2}\\left(a \\right)&\\left(g_{1}\\left(a \\right)<g_{2}\\left(a \\right)\\right)\\end{cases}}$",
+    "이다.",
+    "함수 $g_{1}\\left(a \\right)$ 은 아래로 볼록한 이차함수이므로 꼭짓점 $\\left(v,g_{1}\\left(v \\right)\\right)$ 에서 최솟값 $g_{1}\\left(v \\right)$ 를 갖는다.",
+    "한편 $g_{1}\\left(a \\right)-g_{2}\\left(a \\right)=2 k a^{2}+\\left(k^{2}+8 k \\right)a+16 k-k^{3}$ 은 $a^{2}$ 의 계수가 양수인 이차함수이다.",
+    "(1) $g_{1}\\left(a \\right)-g_{2}\\left(a \\right)=0$ 인 $a$ 가 없거나 중근을 가질 경우의 $k$ 에 대하여 모든 실수 $a$ 에서 $g_{1}\\left(a \\right)-g_{2}\\left(a \\right)\\ge 0$ 이므로 $g \\left(a \\right)=g_{1}\\left(a \\right)$ 가 되어 $g_{1}\\left(v \\right)=m$ 이고, 이러한 $a$ 는 $v$ 뿐이다. 따라서 $k \\in A$ 이다.",
+    "(2) 이차방정식 $g_{1}\\left(a \\right)-g_{2}\\left(a \\right)=0$ 가 서로 다른 두 근 $\\alpha$ , $\\beta$ ( $\\alpha<\\beta$ )를 가지게 하는 $k$ 에 대하여",
+    "$g \\left(a \\right)={\\begin{cases}g_{1}\\left(a \\right)&\\left(a<\\alpha,a>\\beta \\right)\\\\ g_{2}\\left(a \\right)&\\left(\\alpha \\le a \\le \\beta \\right)\\end{cases}}$",
+    "이다. $g \\left(a \\right)\\ge g_{1}\\left(a \\right)$ 이므로, $v<\\alpha$ 이거나 $v>\\beta$ 인 경우에는 $g \\left(a \\right)$ 가 $v$ 에서 유일한 최솟값을 가지게 되어 $k \\in A$ 이다. 따라서 $\\alpha<v<\\beta$ 인 경우만 확인하면 되고, 이때 함수 $g \\left(a \\right)$ 는 $a<\\alpha$ 에서 감소하고 $a>\\beta$ 에서 증가하므로 $g \\left(a \\right)=m$ 을 만족하는 $a$ 는 구간 $\\left[\\alpha,\\beta \\right]$ 안에서만 존재한다.",
+    "함수 $g_{2}\\left(a \\right)$ 가 아래로 볼록일 경우 최솟값을 갖는 $a$ 의 값은 두 개 이상 존재할 수 없다. 따라서 $g_{2}\\left(a \\right)$ 는 위로 볼록이거나 일차함수이어야 한다.",
+    "(ⅰ) $g_{2}\\left(a \\right)$ 가 일차함수이면 $k=2$ 이고 $g_{2}\\left(a \\right)=8$ 이다. 이때 $\\alpha=-3$ , $\\beta=-2$ 이므로 $-3 \\le a \\le-2$ 인 모든 $a$ 에 대하여 최솟값 $g_{2}\\left(a \\right)=8$ 을 가진다. $2$ 는 $A$ 에 속하지 않는다.",
+    "(ⅱ) $g_{2}\\left(a \\right)$ 가 위로 볼록인 경우 $g_{2}\\left(\\alpha \\right)=g_{2}\\left(\\beta \\right)$ 일 때만 $g \\left(a \\right)=m$ 인 $a$ 의 값을 $\\alpha$ , $\\beta$ 로 두 개 이상 가질 수 있고, 이때 $g_{1}\\left(\\alpha \\right)=g_{1}\\left(\\beta \\right)$ 이기도 하므로 두 함수 $g_{1}\\left(a \\right)$ 와 $g_{2}\\left(a \\right)$ 는 $v$ 에서 극솟값을 갖는다.",
+    "$g_{2}' \\left(a \\right)=2 \\left(2-k \\right)a+4-k^{2}$ 에서 $g_{2}' \\left(v \\right)=0$ 이므로 $v=-\\frac{2+k}{2}$ 이고,",
+    "$g_{1}' \\left(v \\right)=2 \\left(2+k \\right)v+\\left(8 k+4 \\right)$ 에서 $-\\left(2+k \\right)^{2}+\\left(8 k+4 \\right)=0$ , 즉 $k \\left(k-4 \\right)=0$ 이고 $k=4$ 이다. 이때 $\\alpha=-6$ , $\\beta=0$ 에서 최솟값 $64$ 를 가지므로 $4$ 는 $A$ 에 속하지 않는다.",
+    "따라서 (1), (2)(ⅰ), (2)(ⅱ)에 의해 $A$ 에 속하지 않는 양수 $k$ 는 $2$ 와 $4$ 이다.",
+    "건국대학교 홈페이지"
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "[의예"
+}

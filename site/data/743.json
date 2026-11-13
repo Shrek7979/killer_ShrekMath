@@ -1,0 +1,150 @@
+{
+ "num": 743,
+ "id": "최고난도100-011",
+ "subject": "미적분Ⅱ",
+ "type": "29번형",
+ "typeDesc": "미적분Ⅱ · 수능 29번형 자리의 고난도",
+ "stars": 5,
+ "standards": [],
+ "source": "ShrekMath 창작 · 3차 R3_미적A 08번( 2022학년도 6월 모의평가 30번) 변형",
+ "rate": "",
+ "wrong": "",
+ "answer": 13,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "매개변수 $t$ $\\left(0<t<\\frac{\\pi}{2}\\right)$ 로 나타낸 곡선"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "x=t-\\sin t,\\,\\,\\,y=1-\\cos t"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "위의 $t$ 에 대응하는 점 ${\\mathrm{P}}$ 에서의 접선과 법선이 직선 $y=1$ 과 만나는 점을 각각 ${\\mathrm{Q}}$ , ${\\mathrm{R}}$ 라 하자.",
+    "삼각형 ${\\mathrm{PQR}}$ 의 넓이를 $S(t)$ 라 할 때, $S' \\left(\\frac{\\pi}{3}\\right)=-\\frac{q}{p}$ 이다.",
+    "$p+q$ 의 값을 구하시오.",
+    "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "매개변수 $t$ $\\left(0<t<\\frac{\\pi}{2}\\right)$ 로 나타낸 곡선",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$x=t-\\sin t,\\,\\,\\,y=1-\\cos t$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    2,
+    0
+   ],
+   "text": "위의 $t$ 에 대응하는 점 ${\\mathrm{P}}$ 에서의 접선과 법선이 직선 $y=1$ 과 만나는 점을 각각 ${\\mathrm{Q}}$ , ${\\mathrm{R}}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    1
+   ],
+   "text": "삼각형 ${\\mathrm{PQR}}$ 의 넓이를 $S(t)$ 라 할 때, $S' \\left(\\frac{\\pi}{3}\\right)=-\\frac{q}{p}$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    2,
+    2
+   ],
+   "text": "$p+q$ 의 값을 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C6",
+   "at": [
+    2,
+    3
+   ],
+   "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [
+  "곡선을 사이클로이드로 바꾸어 접선과 법선이 각각 점 $(t,\\,2)$ , $(t,\\,0)$ 을 지난다는 성질을 스스로 발견하게 하고, 두 직선을 $x$ 축이 아닌 직선 $y=1$ 로 잘라 삼각형의 밑변을 반각으로 정리하게 함"
+ ],
+ "topic": "여러 가지 미분법",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "$\\frac{dx}{dt}=1-\\cos t$ , $\\frac{dy}{dt}=\\sin t$ 이므로 점 ${\\mathrm{P}}(t-\\sin t,\\,1-\\cos t)$ 에서의 접선의 기울기는 $\\frac{\\sin t}{1-\\cos t}=\\frac{1+\\cos t}{\\sin t}$ 이다. 점 ${\\mathrm{P}}$ 와 점 $(t,\\,2)$ 를 지나는 직선의 기울기는 $\\frac{2-(1-\\cos t)}{t-(t-\\sin t)}=\\frac{1+\\cos t}{\\sin t}$ 이므로 접선은 점 $(t,\\,2)$ 를 지난다. 또 점 ${\\mathrm{P}}$ 와 점 $(t,\\,0)$ 을 지나는 직선의 기울기는 $\\frac{-(1-\\cos t)}{\\sin t}$ 이고 접선의 기울기와의 곱이 $-1$ 이므로 법선은 점 $(t,\\,0)$ 을 지난다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "점 ${\\mathrm{P}}$ 의 $y$ 좌표는 $1-\\cos t<1$ 이다. 접선 위에서 $y$ 좌표가 $1-\\cos t$ 에서 $2$ 까지 $1+\\cos t$ 만큼 변할 때 $x$ 좌표는 $\\sin t$ 만큼 변하므로, $y=1$ 이 되는 점 ${\\mathrm{Q}}$ 의 $x$ 좌표는 $t-\\sin t+\\frac{\\sin t \\cos t}{1+\\cos t}=t-\\frac{\\sin t}{1+\\cos t}$ 이다. 같은 방법으로 법선 위의 점 ${\\mathrm{R}}$ 의 $x$ 좌표는 $t-\\frac{\\sin t}{1-\\cos t}$ 이다. 따라서",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$$\\overline{{\\mathrm{QR}}}=\\frac{\\sin t}{1-\\cos t}-\\frac{\\sin t}{1+\\cos t}=\\frac{2 \\cos t}{\\sin t}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "이고 점 ${\\mathrm{P}}$ 와 직선 $y=1$ 사이의 거리는 $\\cos t$ 이므로 $S(t)=\\frac{\\cos^{2}t}{\\sin t}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$$S'(t)=\\frac{-2 \\cos t \\sin^{2}t-\\cos^{3}t}{\\sin^{2}t},\\,\\,\\,S' \\left(\\frac{\\pi}{3}\\right)=\\frac{-\\frac{3}{4}-\\frac{1}{8}}{\\frac{3}{4}}=-\\frac{7}{6}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "이므로 $p+q=6+7=13$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}
