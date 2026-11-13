@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId 'com.shrekmath.killermath'   // 플레이스토어 패키지 이름 — 한 번 올리면 바꿀 수 없음
-        minSdk 21
+        minSdk 23   // Play 결제 라이브러리 요구 (Android 6.0 이상)
         targetSdk 36
         versionCode((env.VERSION_CODE ?: '1') as int)
         versionName env.VERSION_NAME ?: '1.0'
