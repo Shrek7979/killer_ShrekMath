@@ -152,6 +152,21 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 .tag{font-size:.72rem;padding:2px 8px;border-radius:3px;border:1px solid rgba(255,255,255,.3);color:#eee;white-space:nowrap}
 .tag.full{border-color:var(--red);color:#fff;background:var(--red)}
 .st{position:absolute;top:10px;right:10px;font-family:var(--mono);font-size:.72rem;padding:3px 7px;border-radius:3px;font-weight:700}
+.card.locked>:not(.st){filter:saturate(.35) brightness(.7)}.card.locked::after{content:'🔒';position:absolute;top:8px;right:8px;font-size:1rem;background:rgba(0,0,0,.6);border-radius:50%;width:28px;height:28px;display:grid;place-items:center}
+.card.paycta{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;text-align:center;background:linear-gradient(160deg,#3a0a0d,#111);border:1px solid var(--red);cursor:pointer}
+.card.paycta b{font-size:1.15rem}.card.paycta small{color:#ccc;font-size:.8rem;line-height:1.5}
+@media (max-width:420px){#proBtn:not([hidden])~#randBtn{display:none}}
+#payBox{position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.72);display:grid;place-items:center;padding:16px}
+#payBox[hidden]{display:none}
+#payBox .pb{background:#181818;color:#f2f2f2;border:1px solid #333;border-radius:10px;max-width:420px;width:100%;padding:24px 22px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+#payBox h3{margin:0 0 6px;font-size:1.3rem}#payBox p{margin:6px 0;color:#c8c8c8;line-height:1.6;font-size:.95rem}
+#payBox ul{margin:10px 0 14px;padding-left:1.1em;color:#ddd;line-height:1.7;font-size:.92rem}
+#payBox .row{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+#payBox button,#payBox a.b{flex:1;min-height:44px;border-radius:6px;border:0;font:inherit;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:0 12px}
+#payBox .go{background:var(--red);color:#fff}#payBox .sub{background:#2a2a2a;color:#eee}
+#payBox input{flex:2;min-height:44px;border-radius:6px;border:1px solid #444;background:#111;color:#fff;padding:0 10px;font:inherit}
+#payBox .msg{min-height:1.4em;color:var(--gold);font-size:.9rem;margin-top:8px}
+#payBox .fine{font-size:.78rem;color:#888;margin-top:12px}
 .st.ok{background:var(--green);color:#000} .st.late{background:#ff9f3a;color:#000} .st.no{background:var(--red);color:#fff} .st.skip{background:#555;color:#fff}
 .empty{color:var(--mute);padding:40px 0;text-align:center}
 .foot{margin-top:44px;color:#777;font-size:.84rem;line-height:1.8;border-top:1px solid #2a2a2a;padding-top:20px}
@@ -437,7 +452,7 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
       <button data-tab="past">기출관<span class="n" id="nPast">0</span></button>
       <button data-tab="japan">일본관<span class="n" id="nJapan">0</span></button>
     </nav>
-    <button class="cta ghostc" id="langBtn" title="View in English (Past Exams)">EN</button><button class="cta ghostc" id="jpBtn" title="日本語で見る(日本館)" hidden>JP</button><button class="cta ghostc" id="randBtn" title="아직 안 푼 문제 중 하나">🎲<span class="lbl"> 아무거나</span></button><button class="cta" id="exportBtn">🧾<span class="lbl"> 영수증 뽑기</span></button>
+    <button class="cta" id="proBtn" hidden>🔓<span class="lbl"> 전체 열기</span></button><button class="cta ghostc" id="langBtn" title="View in English (Past Exams)">EN</button><button class="cta ghostc" id="jpBtn" title="日本語で見る(日本館)" hidden>JP</button><button class="cta ghostc" id="randBtn" title="아직 안 푼 문제 중 하나">🎲<span class="lbl"> 아무거나</span></button><button class="cta" id="exportBtn">🧾<span class="lbl"> 영수증 뽑기</span></button>
   </div>
   <div class="hero">
     <div class="mosaic" id="mosaic"></div>
@@ -697,11 +712,14 @@ const JLIMIT={2:15,3:20,4:25,5:35};
 async function loadJSON(name){ return (await fetch(name)).json() }
 async function loadList(){ if(window.__LIST__) return window.__LIST__; return loadJSON('list.json') }
 async function loadEList(){ if(window.__ELIST__) return window.__ELIST__; try{return await loadJSON('elist.json')}catch(e){return []} }
-async function loadItem(n){ if(window.__DATA__&&window.__DATA__[n]) return window.__DATA__[n]; return loadJSON(`data/${String(n).padStart(3,'0')}.json`) }
+async function loadItem(n){ if(window.__DATA__&&window.__DATA__[n]) return window.__DATA__[n]; const f=`data/${String(n).padStart(3,'0')}.json`;const row=LIST.find(x=>x.num===n);return row&&row.lock?loadPaid(f):loadJSON(f) }
+/* 구독: 무료 샘플(free) 외 문항(lock)은 /p/ 아래에서 구독 쿠키가 있어야 받을 수 있다 */
+const PAY=window.__PAY__||null;let PRO=!PAY,FREE_C=[];
+async function loadPaid(f){try{const r=await fetch('p/'+f,{credentials:'same-origin'});if(r.status===402){PRO=false;updPro();showPay();return null}if(!r.ok)throw 0;if(!PRO){PRO=true;updPro()}return await r.json()}catch(e){toast('문항을 불러오지 못했어요 · 인터넷 연결을 확인하세요');return null}}
 async function loadCats(){ if(window.__CATS__) return window.__CATS__; try{return await loadJSON('cats.json')}catch(e){return {}} }
 async function loadJList(){ if(window.__JLIST__) return window.__JLIST__; try{return await loadJSON('jlist.json')}catch(e){return []} }
 const jimg=p=>(window.__JIMG__&&window.__JIMG__[p])||((window.__IMGBASE__||'')+p);
-async function loadEssay(n){ if(window.__EDATA__&&window.__EDATA__[n]) return window.__EDATA__[n]; return loadJSON(`edata/${String(n).padStart(3,'0')}.json`) }
+async function loadEssay(n){ if(window.__EDATA__&&window.__EDATA__[n]) return window.__EDATA__[n]; const f=`edata/${String(n).padStart(3,'0')}.json`;const row=ELIST.find(x=>x.num===n);return row&&row.lock?loadPaid(f):loadJSON(f) }
 
 /* ───────── 접근 코드(암호화 빌드) ───────── */
 async function unlockData(){
@@ -759,7 +777,7 @@ function home(){
   $('#nameBtn').textContent=SITE.sheetUrl?(S.name?`👤 ${S.name} · 변경`:'👤 이름 입력 (교사 전송용)'):'';$('#nameInp').value=S.name||'';flush();
   const eg=Object.values(S.erec).filter(r=>r.total);$('#rEssay').textContent=eg.length;
   $('#rEssayAvg').textContent=eg.length?Math.round(eg.reduce((a,b)=>a+b.score/b.total,0)/eg.length*100)+'%':'–';
-  japan?homeJapan():past?homePast():essay?homeEssay():homeKiller();
+  FREE_C=[];japan?homeJapan():past?homePast():essay?homeEssay():homeKiller();freeRow();
   tex($('#grid'));
 }
 function mosaic(){
@@ -879,7 +897,7 @@ function homeKiller(){
     c.innerHTML=`<div class="top"><span><span class="num">#${String(x.num).padStart(3,'0')}</span> · ${x.type}</span><span class="subj" style="--sc:${SC(x.subject)}">${x.subject}</span></div>
       <div class="topic">${esc(x.topic)}</div>
       <div class="meta"><span><span class="stars">${'★'.repeat(x.stars)}${'☆'.repeat(5-x.stars)}</span><span class="dbadge">${DNAME[x.stars]||''}</span></span><span><span class="tag ${x.full?'full':''}">${x.full?'완전 분석':'풀이 '+x.nsteps+'단계'}</span></span></div>`;
-    c.insertBefore(artEl(x.topic,x.subject,x.art,x.id,DC(x.stars),x.snip),c.querySelector('.topic'));
+    c.insertBefore(artEl(x.topic,x.subject,x.art,x.id,DC(x.stars),x.snip),c.querySelector('.topic'));tagPay(c,x);
     if(rec) c.append(el('span','st '+(rec.skip?'skip':rec.ok?(rec.over?'late':'ok'):'no'),rec.skip?'열람':rec.ok?(rec.over?'정답·초과 ':'정답 ')+mmss(rec.secs):'오답'));
     c.onclick=()=>location.hash='q'+x.num;track.append(c);
   }}
@@ -896,7 +914,7 @@ function homeEssay(){
     c.innerHTML=`<div class="top"><span><span class="num">#E${String(x.num).padStart(3,'0')}</span> · 문제 ${x.n}</span><span class="subj" style="--sc:var(--s6)">${x.points?x.points+'점':'논술'}</span></div>
       <div class="topic">${esc(x.title)}</div>
       <div class="meta"><span>${x.img?'원본 이미지':'소문항 '+x.nsubs} · 제한 ${x.minutes}분</span><span><span class="tag">${esc(x.field||'')}</span></span></div>`;
-    c.insertBefore(artEl(x.field||'','논술',x.art,x.id,'var(--gold)',x.snip),c.querySelector('.topic'));
+    c.insertBefore(artEl(x.field||'','논술',x.art,x.id,'var(--gold)',x.snip),c.querySelector('.topic'));tagPay(c,x);
     if(rec) c.append(el('span','st '+(rec.total?'ok':'skip'),rec.total?`${rec.score}/${rec.total}`:'열람'));
     c.onclick=()=>location.hash='e'+x.num;track.append(c);
   }
@@ -915,7 +933,7 @@ function homeJapan(){
     c.innerHTML=`<div class="top"><span><span class="num">#J${JNO(x)}</span> · ${x.year} · ${x.num0}${JA()?'番':'번'}${x.ja?` <b class="jab">${JA()?'日・類題':'日·유사'}</b>`:''}</span><span class="subj" style="--sc:${SC(x.subj==='미적분'?'미적분Ⅱ':x.subj)}">${esc(jS(x))}</span></div>
       <div class="topic">${esc(jU(x))} · ${esc(jT(x))}</div>
       <div class="meta"><span><span class="stars">${'★'.repeat(x.stars)}${'☆'.repeat(5-x.stars)}</span><span class="dbadge">${JA()?(x.stars>=5?'最難関':x.stars>=3?'難関':'中級'):(x.stars>=5?'최고난도':x.stars>=3?'고난도':'중급')}</span></span><span><span class="tag" style="white-space:normal;line-height:1.3">${esc((JA()&&x.ja?((x.ja.find(b=>b.p)||{}).p||'').replace(/\$|\\[a-z]+|[{}]/g,''):x.text).slice(0,30))}…</span></span></div>`;
-    c.insertBefore(artEl(x.text,x.subj,x.art,x.id,DC(x.stars),null,x.qimg&&x.qimg[0]),c.querySelector('.topic'));
+    c.insertBefore(artEl(x.text,x.subj,x.art,x.id,DC(x.stars),null,x.qimg&&x.qimg[0]),c.querySelector('.topic'));tagPay(c,x);
     if(rec) c.append(el('span','st '+(rec.r==='ok'?'ok':rec.r==='no'?'no':'skip'),rec.r==='ok'?'맞음':rec.r==='part'?'부분':rec.r==='no'?'틀림':'열람'));
     c.onclick=()=>location.hash='j'+x.num;track.append(c);
   };
@@ -939,7 +957,7 @@ function homePast(){
     c.innerHTML=`<div class="top"><span><span class="num">#P${JNO(x)}</span> · ${EN()?({'11월':'CSAT','6월':'June','9월':'Sept.'}[x.month]):(x.month==='11월'?'수능':x.month)}${x.en?' <b class="enb">EN</b>':''}</span><span class="subj" style="--sc:${SC(x.subj)}">${esc(EN()?(PART_EN[x.part]||x.part):x.part)}</span></div>
       <div class="topic">${EN()?esc(pTrack(x))+' · '+x.year:esc(x.track)+' · '+x.year+'학년도'}</div>
       <div class="meta"><span><span class="stars">${'★'.repeat(x.stars)}${'☆'.repeat(5-x.stars)}</span><span class="dbadge">${EN()?DIFF_EN(x.stars):x.stars>=5?'킬러':x.stars>=4?'고난도':'준킬러'}</span></span><span><span class="tag">${EN()?(x.choice?'Multiple choice':'Short answer')+' · '+(LIMIT[x.stars]||8)+' min'+(x.answer==null?' · no key':''):(x.choice?'5지선다':'주관식')+' · '+(LIMIT[x.stars]||8)+'분'+(x.answer==null?' · 정답 미등록':'')}</span></span></div>`;
-    c.insertBefore(artEl(x.text,x.subj,x.art,x.id,DC(x.stars),null,x.qimg&&x.qimg[0]),c.querySelector('.topic'));
+    c.insertBefore(artEl(x.text,x.subj,x.art,x.id,DC(x.stars),null,x.qimg&&x.qimg[0]),c.querySelector('.topic'));tagPay(c,x);
     if(rec) c.append(el('span','st '+(rec.r==='ok'?'ok':rec.r==='no'?'no':'skip'),EN()?(rec.r==='ok'?'Correct':rec.r==='no'?'Wrong':rec.r==='part'?'Partial':'Viewed'):rec.r==='ok'?'정답':rec.r==='no'?'오답':rec.r==='part'?'부분':'열람'));
     c.onclick=()=>location.hash='j'+x.num;track.append(c);
   }
@@ -1239,7 +1257,7 @@ function renderEssayCard(p){
 
 /* ───────── 일본 대학 ───────── */
 async function openJapan(n,c){
-  mode='japan';J=JLIST.find(x=>x.num===n);D=null;E=null;if(!J){location.hash='';return}applyLang();
+  mode='japan';J=JLIST.find(x=>x.num===n);D=null;E=null;if(J&&J.lock){const full=await loadPaid(`jx/${String(n).padStart(3,'0')}.json`);if(full){delete J.lock;Object.assign(J,full)}else J=null}if(!J){location.hash='';return}applyLang();
   STAGE.answer=['해설','문제집 해설'];
   $('#home').hidden=true;$('#op').hidden=false;window.scrollTo(0,0);
   const rec=S.jrec[n];unlocked=!!rec;
@@ -1338,5 +1356,54 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#fullSheet').hi
 /* ───────── 라우팅 ───────── */
 function route(){const m=location.hash.match(/^#([qej])(\d+)(?:-(\d+))?$/);if(m){(m[1]==='q'?open:m[1]==='e'?openEssay:openJapan)(+m[2],+(m[3]||0))}else home()}
 window.addEventListener('hashchange',route);
-(async()=>{await unlockData();LIST=await loadList();ELIST=await loadEList();JLIST=await loadJList();CATS=await loadCats();document.documentElement.style.setProperty('--fs',S.fs);route()})();
+
+/* ── 구독(페이월) ── */
+function tagPay(c,x){if(!PAY||PRO)return;if(x.lock)c.classList.add('locked');if(x.free&&!FREE_C.some(f=>f.x.num===x.num))FREE_C.push({c,x})}
+function freeRow(){if(!PAY||PRO)return;const grid=$('#grid');const h=el('div','ghead','🎁 무료 샘플 · 먼저 풀어 보세요'),t=el('div','track');
+  for(const {c} of FREE_C){const k=c.cloneNode(true);k.onclick=c.onclick;t.append(k)}
+  const cta=el('button','card paycta',`<b>🔓 전체 열기</b><small>킬러·논술·기출·일본관<br>${(LIST.length+ELIST.length+JLIST.length).toLocaleString()}문항 전부</small><small>월 $3 구독</small>`);cta.onclick=showPay;t.append(cta);
+  grid.prepend(h,t)}
+function updPro(){const b=$('#proBtn');if(!b)return;b.hidden=!PAY;b.innerHTML=PRO?'✅<span class="lbl"> 구독 중</span>':'🔓<span class="lbl"> 전체 열기</span>';b.onclick=showPay}
+let DG=null;
+async function digitalGoods(){if(DG!==null)return DG;DG=false;if(!('getDigitalGoodsService' in window))return DG;
+  try{DG=await Promise.race([window.getDigitalGoodsService('https://play.google.com/billing'),new Promise((_,r)=>setTimeout(r,3000))])||false}catch(e){DG=false}return DG}
+async function verifyPurchase(token,sku){const r=await fetch('api/verify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({purchaseToken:token,sku})});const j=await r.json().catch(()=>({}));return !!j.active}
+async function refreshPro(){if(!PAY)return false;const was=PRO;
+  try{const j=await (await fetch('api/status',{cache:'no-store'})).json();PRO=!!j.active}catch(e){}
+  if(!PRO){const dg=await digitalGoods();if(dg){try{for(const p of await dg.listPurchases()){if(await verifyPurchase(p.purchaseToken,p.itemId)){PRO=true;break}}}catch(e){}}}
+  updPro();return was!==PRO}
+async function showPay(){if(!PAY)return;let box=$('#payBox');
+  if(!box){box=el('div');box.id='payBox';box.onclick=e=>{if(e.target===box)box.hidden=true};document.body.append(box)}
+  const n=(LIST.length+ELIST.length+JLIST.length).toLocaleString();
+  if(PRO){box.innerHTML=`<div class="pb"><h3>✅ 구독 중이에요</h3><p>모든 관의 ${n}문항과 해설을 볼 수 있어요.</p><p class="fine">구독 관리·해지는 Google Play 스토어 앱 → 프로필 → 결제 및 정기 결제 → 정기 결제에서 할 수 있어요.</p><div class="row"><button class="sub" data-a="x">닫기</button></div></div>`;box.hidden=false;box.querySelector('[data-a=x]').onclick=()=>box.hidden=true;return}
+  box.innerHTML=`<div class="pb"><h3>🔓 전체 문항 열기</h3><p>무료 샘플은 관마다 2문항이에요. 구독하면 전부 열려요.</p>
+    <ul><li>킬러관 ${LIST.length}문항 · 단계별 해설</li><li>논술관 ${ELIST.length}문항 · 예시답안</li><li>기출관·일본관 ${JLIST.length}문항 · 자동 채점·유사문항</li></ul>
+    <p><b id="payPrice">월 $3</b> · 언제든 해지할 수 있어요</p>
+    <div class="row" id="payMain"><button class="go" disabled>확인 중…</button></div>
+    <div class="row"><input id="payCode" placeholder="이용 코드가 있나요?" autocomplete="off"><button class="sub" data-a="code">코드 적용</button></div>
+    <div class="msg" id="payMsg"></div>
+    <div class="row"><button class="sub" data-a="x">닫기</button></div>
+    <p class="fine">결제는 Google Play로 처리되며 이 앱은 결제 정보를 받지 않아요.</p></div>`;
+  box.hidden=false;const msg=t=>$('#payMsg').textContent=t;
+  box.querySelector('[data-a=x]').onclick=()=>box.hidden=true;
+  box.querySelector('[data-a=code]').onclick=async()=>{const code=$('#payCode').value.trim();if(!code)return;msg('확인 중…');
+    try{const r=await fetch('api/code',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({code})});const j=await r.json();
+      if(j.active){PRO=true;updPro();box.hidden=true;toast('전체 문항이 열렸어요');if(!$('#home').hidden)home()}else msg(j.error||'코드가 맞지 않습니다')}catch(e){msg('연결에 실패했어요')}};
+  const main=$('#payMain'),dg=await digitalGoods();
+  if(dg){
+    try{const [d]=await dg.getDetails([PAY.sku]);if(d&&d.price){$('#payPrice').textContent='월 '+new Intl.NumberFormat('ko-KR',{style:'currency',currency:d.price.currency}).format(d.price.value)}}catch(e){}
+    $('#payCode').parentNode.remove();   // 앱 안에서는 Google Play 결제만 (스토어 정책)
+    main.innerHTML='<button class="go" data-a="buy">구독하기</button><button class="sub" data-a="restore">구매 복원</button>';
+    main.querySelector('[data-a=buy]').onclick=async()=>{msg('');try{
+      const req=new PaymentRequest([{supportedMethods:'https://play.google.com/billing',data:{sku:PAY.sku}}],{total:{label:'Total',amount:{currency:'USD',value:'0'}}});
+      const resp=await req.show();msg('구독을 확인하는 중…');const ok=await verifyPurchase(resp.details.purchaseToken,PAY.sku);await resp.complete(ok?'success':'fail');
+      if(ok){PRO=true;updPro();box.hidden=true;toast('구독해 주셔서 고마워요! 전체 문항이 열렸어요');if(!$('#home').hidden)home();else route()}else msg('결제는 됐지만 확인에 실패했어요. 잠시 뒤 [구매 복원]을 눌러 주세요.')
+    }catch(e){msg(e&&e.name==='AbortError'?'':'결제를 시작하지 못했어요: '+(e.message||e))}};
+    main.querySelector('[data-a=restore]').onclick=async()=>{msg('확인 중…');const ch=await refreshPro();if(PRO){box.hidden=true;toast('구독이 확인됐어요');home()}else msg('활성 구독을 찾지 못했어요')};
+  }else{
+    main.innerHTML=`<a class="b go" href="${PAY.play}" target="_blank" rel="noopener">Google Play 앱에서 구독하기</a>`;
+    msg('');
+  }
+}
+(async()=>{await unlockData();LIST=await loadList();ELIST=await loadEList();JLIST=await loadJList();CATS=await loadCats();document.documentElement.style.setProperty('--fs',S.fs);updPro();route();if(await refreshPro()&&!$('#home').hidden)home()})();
 </script>

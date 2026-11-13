@@ -325,6 +325,76 @@ def write_app_files():
                         'target': {'namespace': 'android_app', 'package_name': APP_PACKAGE, 'sha256_cert_fingerprints': fps}}], f, indent=1)
 
 
+PAID = os.path.join(ROOT, 'paid')   # 구독자만 받는 파일 (Vercel 함수 api/c.js 가 쿠키 확인 후 보내 줌). site/ 에는 없다.
+JMETA = ('num', 'kind', 'id', 'year', 'month', 'num0', 'stars', 'univ', 'track', 'part', 'subj', 'art')
+
+
+def load_paywall():
+    fp = os.path.join(ROOT, 'src', 'app', 'free.json')
+    if not os.path.exists(fp): return None
+    pw = json.load(open(fp, encoding='utf-8'))
+    return pw if pw.get('paywall') else None
+
+
+def apply_paywall(pw, lst, items, elst, essays, japan):
+    """무료 샘플(관마다 2개)만 공개 데이터로 남기고 나머지는 paid/ 로 보낸다.
+    반환: 공개용 (lst, items, elst, essays, japan), 잠긴 이미지 경로 집합"""
+    fk, fe = set(pw['killer']), set(pw['essay'])
+    fj = set(pw['japan']) | set(pw['past'])
+    for want, have, name in ((fk, {x['id'] for x in items}, '킬러'), (fe, {e['id'] for e in essays}, '논술'), (fj, {j['id'] for j in japan}, '일본/기출')):
+        miss = want - have
+        if miss: raise SystemExit(f'free.json: {name} 에 없는 id {sorted(miss)}')
+    shutil.rmtree(PAID, ignore_errors=True)
+    for d in ('data', 'edata', 'jx'): os.makedirs(os.path.join(PAID, d))
+    dump = lambda obj, p: json.dump(obj, open(p, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+    pre = lambda v: [('p/' + f) for f in v]
+    locked_img = set()
+    lst2 = []
+    for x, row in zip(items, lst):
+        row = dict(row)
+        if x['id'] in fk: row['free'] = True
+        else:
+            row['lock'] = True; row['snip'] = row['snip'][:1]
+            dump(x, os.path.join(PAID, 'data', f"{x['num']:03d}.json"))
+        lst2.append(row)
+    elst2 = []
+    for e, row in zip(essays, elst):
+        row = dict(row)
+        if e['id'] in fe: row['free'] = True
+        else:
+            row['lock'] = True; row['snip'] = row['snip'][:2]
+            e2 = dict(e)
+            for k in ('qimg', 'aimg'):
+                if e.get(k): locked_img.update(e[k]); e2[k] = pre(e[k])
+            dump(e2, os.path.join(PAID, 'edata', f"{e['num']:03d}.json"))
+        elst2.append(row)
+    japan2 = []
+    for j in japan:
+        if j['id'] in fj:
+            japan2.append(dict(j, free=True)); continue
+        locked_img.update(j['qimg'] + j['simg'])
+        full = dict(j, qimg=pre(j['qimg']), simg=pre(j['simg']))
+        dump(full, os.path.join(PAID, 'jx', f"{j['num']:03d}.json"))
+        pub = {k: j[k] for k in JMETA if k in j}
+        t = j.get('text', '')
+        pub.update(lock=True, qimg=[], simg=[], text=(t if j.get('kind') == 'past' else t[:40] + '…'))
+        if 'choice' in j: pub['choice'] = j['choice']
+        if j.get('en'): pub['en'] = True                      # 목록의 EN 배지용 표시만
+        if j.get('ja'): pub['ja'] = [{'p': (next((b['p'] for b in j['ja'] if b.get('p')), ''))[:40] + '…'}]
+        japan2.append(pub)
+    keep = lambda arr, free: [a for a in arr if a['id'] in free]
+    return lst2, keep(items, fk), elst2, keep(essays, fe), japan2, locked_img
+
+
+def move_locked_images(locked):
+    """site/ 로 복사된 이미지 중 잠긴 문항 것은 paid/ 로 옮긴다"""
+    for f in locked:
+        src = os.path.join(SITE, f)
+        if os.path.exists(src):
+            dst = os.path.join(PAID, f); os.makedirs(os.path.dirname(dst), exist_ok=True)
+            shutil.move(src, dst)
+
+
 def main():
     import argparse, shutil
     ap = argparse.ArgumentParser()
@@ -408,6 +478,18 @@ def main():
         data_js = 'window.__ENC__=' + json.dumps(enc) + ';' + jimg_script
         mode = f'암호화(접근 코드 사용)'
     else:
+        pw = load_paywall()
+        pay_js = ''
+        if pw:
+            lst, items, elst, essays, japan, locked = apply_paywall(pw, lst, items, elst, essays, japan)
+            move_locked_images(locked)
+            for f in locked: jimg_js.pop(f, None)
+            if not args.imgbase: jimg_script = 'window.__JIMG__=' + json.dumps(jimg_js) + ';'
+            pay_js = 'window.__PAY__=' + json.dumps({'sku': pw['sku'], 'play': pw['play_url']}) + ';'
+            jimg_script += pay_js
+            print(f'구독 잠금: 무료 킬러 {len(items)} · 논술 {len(essays)} · 일본/기출 {sum(1 for j in japan if j.get("free"))} · 잠긴 이미지 {len(locked)} → paid/')
+        else:
+            shutil.rmtree(PAID, ignore_errors=True)
         os.makedirs(os.path.join(SITE, 'data')); os.makedirs(os.path.join(SITE, 'edata'))
         dump(lst, os.path.join(SITE, 'list.json')); dump(elst, os.path.join(SITE, 'elist.json')); dump(japan, os.path.join(SITE, 'jlist.json')); dump(cats, os.path.join(SITE, 'cats.json'))
         for x in items: dump(x, os.path.join(SITE, 'data', f"{x['num']:03d}.json"))
@@ -434,7 +516,7 @@ def main():
                 '<script>if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(()=>{}))</script>\n'
                 '</head>\n<body>\n__BODY__\n</body>\n</html>\n')
     with open(os.path.join(SITE, 'index.html'), 'w', encoding='utf-8') as f:
-        f.write(skeleton.replace('__BODY__', tpl.replace('/*__INLINE_DATA__*/', '')))
+        f.write(skeleton.replace('__BODY__', tpl.replace('/*__INLINE_DATA__*/', locals().get('pay_js', ''))))
     # 아이콘: src/icon/ (원본 source.png 에서 만든 PNG/ICO) 를 site/ 루트로 복사
     ICON = os.path.join(ROOT, 'src', 'icon')
     for fn in ('favicon.ico', 'favicon-32.png', 'favicon-64.png', 'apple-touch-icon.png', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png'):
@@ -455,8 +537,8 @@ def main():
     with open(os.path.join(ROOT, 'killer-math.html'), 'w', encoding='utf-8') as f:
         f.write('<link rel="icon" type="image/png" href="data:image/png;base64,' + fav64 + '">\n' + tpl.replace('/*__INLINE_DATA__*/', data_js))
 
-    nfull = sum(1 for x in items if x['full'])
-    print(f'킬러 {len(items)}개 (완전 분석 {nfull}개) · 논술 {len(essays)}개 · 일본 {len(japan) - len(past)}개 · 기출 {len(past)}개 (정답 {sum(1 for x in past if x["answer"] is not None)}개) · {mode} → site/, killer-math.html')
+    nfull = sum(1 for x in lst if x['full'])
+    print(f'킬러 {len(lst)}개 (완전 분석 {nfull}개) · 논술 {len(elst)}개 · 일본 {len(japan) - len(past)}개 · 기출 {len(past)}개 (정답 {sum(1 for x in past if x["answer"] is not None)}개) · {mode} → site/, killer-math.html')
 
 
 if __name__ == '__main__':

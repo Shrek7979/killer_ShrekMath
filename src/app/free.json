@@ -1,0 +1,10 @@
+{
+ "_note": "무료 샘플 문항 (관마다 2개). id로 지정. 나머지는 구독해야 열린다. paywall=false 로 바꾸면 전부 공개.",
+ "paywall": true,
+ "killer": ["20A-02", "30A-06"],
+ "essay": ["가톨릭대학교(자연공학,간호학과)모의-1", "연세대학교(자연계열)수시-1"],
+ "japan": ["2024-085", "2026-082"],
+ "past": ["2026-11-c22", "2026-11-m30"],
+ "sku": "premium_monthly",
+ "play_url": "https://play.google.com/store/apps/details?id=com.shrekmath.killermath"
+}

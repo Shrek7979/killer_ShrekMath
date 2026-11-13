@@ -43,4 +43,5 @@ android {
 
 dependencies {
     implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.5.0'
+    implementation 'com.google.androidbrowserhelper:billing:1.2.0'   // Google Play 결제 (Digital Goods API)
 }
