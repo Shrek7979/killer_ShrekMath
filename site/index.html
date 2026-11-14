@@ -115,6 +115,8 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 .ghead{font-family:var(--disp);font-size:1.3rem;font-weight:700;color:#e5e5e5;margin:0 0 -16px;display:flex;align-items:center;gap:10px}
 .ghead .cnt{font-family:var(--mono);font-size:.8rem;color:var(--mute);font-weight:500}
 .track{display:flex;gap:10px;overflow-x:auto;padding:16px 4px 22px;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:#444 transparent;margin:0 -4px}
+/* 화면 밖 줄은 그리지 않음 (모바일 관 전환 속도) */
+.track{content-visibility:auto;contain-intrinsic-size:auto 300px}
 .track::-webkit-scrollbar{height:6px}.track::-webkit-scrollbar-thumb{background:#444;border-radius:3px}
 .card{flex:0 0 200px;aspect-ratio:2/3;scroll-snap-align:start;background:linear-gradient(170deg,color-mix(in srgb,var(--dc) 62%,#111),color-mix(in srgb,var(--dc) 18%,#111) 60%,#0d0d0d);border:0;border-radius:6px;padding:14px 14px 12px;text-align:left;display:grid;grid-template-rows:auto 1fr auto;gap:6px;min-width:0;position:relative;transition:transform .2s,box-shadow .2s;color:#fff;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.5)}
 .card::before{content:attr(data-big);position:absolute;right:8px;bottom:6px;font-family:var(--mono);font-weight:700;font-size:1rem;color:rgba(255,255,255,.35);pointer-events:none}
@@ -641,15 +643,21 @@ function rankOf(n){RANKS[RANKS.length-1][0]=LIST.length||RANKS[RANKS.length-1][0
 function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),1800)}
 
 /* ───────── 수식 ───────── */
-function tex(root){ if(window.renderMathInElement) renderMathInElement(root,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false,strict:false}) }
+function tex(root,ign){ if(window.renderMathInElement) renderMathInElement(root,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false,strict:false,ignoredClasses:ign||[]}) }
+/* 카드 썸네일 수식은 화면 가까이 올 때만 그린다 (모바일에서 관 전환이 몇 초씩 걸리던 원인) */
+const _tio=('IntersectionObserver' in window)?new IntersectionObserver(es=>{for(const e of es){if(e.isIntersecting){_tio.unobserve(e.target);tex(e.target)}}},{rootMargin:'300px'}):null;
+function lazyTex(el){if(_tio)_tio.observe(el);else tex(el)}
 const md=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
 
 /* ───────── 데이터 ───────── */
 let LIST=[],ELIST=[],JLIST=[],D=null,E=null,J=null,pages=[],cur=0,unlocked=false,timer=null,t0=0,mode='killer';
 let filt={subj:'',type:'',hard:false,full:false,wrong:false,review:false,todo:false}, efilt={univ:'',round:'',todo:false}, jfilt={univ:'',year:'',subj:'',track:'',five:false,todo:false}, pfilt={year:'',mon:'',part:'',five:false,todo:false};
-const JP=()=>JLIST.filter(x=>x.kind!=='past'), PAST=()=>JLIST.filter(x=>x.kind==='past');
+/* 일본관·기출관 목록과 화면 번호는 JLIST가 바뀔 때만 한 번 계산 (카드마다 전체를 다시 걸러 느렸음) */
+let _jc=null,_jcSrc=null;
+function _jsplit(){if(_jcSrc!==JLIST){const jp=[],pa=[],no=new Map();for(const x of JLIST){const a=x.kind==='past'?pa:jp;a.push(x);no.set(x,a.length)}_jc={jp,pa,no};_jcSrc=JLIST}return _jc}
+const JP=()=>_jsplit().jp, PAST=()=>_jsplit().pa;
 // 화면 번호(#J·#P): 관 안에서의 순서. 내부 num 은 기록 보존을 위해 추가분이 뒤에 이어 붙어 있어 그대로 쓰지 않는다
-const JNO=x=>String((x.kind==='past'?PAST():JP()).indexOf(x)+1).padStart(3,'0');
+const JNO=x=>String(_jsplit().no.get(x)||0).padStart(3,'0');
 /* ───────── 영어 모드 (시범: 기출관만) ───────── */
 const EN=()=>S.lang==='en';
 /* ───────── 일본어 모드 (일본관) ───────── */
@@ -795,7 +803,7 @@ function home(){
   const eg=Object.values(S.erec).filter(r=>r.total);$('#rEssay').textContent=eg.length;
   $('#rEssayAvg').textContent=eg.length?Math.round(eg.reduce((a,b)=>a+b.score/b.total,0)/eg.length*100)+'%':'–';
   FREE_C=[];japan?homeJapan():past?homePast():essay?homeEssay():homeKiller();freeRow();
-  tex($('#grid'));
+  tex($('#grid'),['paper']);
 }
 function mosaic(){
   const m=$('#mosaic');if(m.children.length)return;
@@ -878,7 +886,7 @@ function snapEl(snip,img,seed,hue){
   if(img){const im=el('img');im.alt='';p.append(im);lazyImg(im,jimg(img),p)}
   else p.innerHTML=snip.map(b=>b.t==='eq'?`<div class="eq"><span class="mk">$\\displaystyle ${esc(b.tex)}$</span></div>`
     :b.t==='box'?`<div class="box">${b.items.map(s=>`<div><span class="mk">${esc(s)}</span></div>`).join('')}</div>`:`<p>${esc(b.s)}</p>`).join('');
-  d.append(p,el('i','cm'));return d}
+  if(!img&&snip.length)lazyTex(p);d.append(p,el('i','cm'));return d}
 /* 카드 썸네일 지연 로딩: 브라우저 lazy 속성 대신 IntersectionObserver (가로 스크롤 행에서도 확실히 뜨도록) */
 const _lz=new WeakMap();const _io=('IntersectionObserver' in window)?new IntersectionObserver(es=>{for(const e of es){if(e.isIntersecting){const im=_lz.get(e.target);if(im&&im.dataset.src){im.src=im.dataset.src;delete im.dataset.src}_io.unobserve(e.target)}}},{rootMargin:'400px'}):null;
 function lazyImg(im,src,box){if(_io){im.dataset.src=src;_lz.set(box,im);_io.observe(box)}else im.src=src}
