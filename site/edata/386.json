@@ -1,0 +1,135 @@
+{
+ "num": 386,
+ "id": "서울대학교(일반전형)수시-1",
+ "univ": "서울대학교(일반전형) 수시",
+ "n": 1,
+ "year": 2026,
+ "title": "문제 1",
+ "head": "",
+ "points": null,
+ "minutes": 25,
+ "info": {},
+ "pre": [
+  "※ 제시문을 읽고 문제에 답하시오."
+ ],
+ "passage": [
+  "민호는 $1$ 그램, 영희는 $2$ 그램의 금을 보유하고 있고, 다음 [규칙]에 따라 금을 주고받는 시행을 한다.",
+  "[ 규칙 ]",
+  "(가) 어떤 실수 $a$ ( $0 \\le a \\le 1$ )에 대하여, 민호는 $a$ 그램의 금을 영희에게 지급한다. 이때, $a$ 의 값을 투자량이라고 한다.",
+  "(나) 어떤 실수 $b$ ( $0 \\le b \\le 1$ )에 대하여, 공정한 주사위를 한 번 던져 그 결과에 따라 영희는 민호에게 다음과 같이 금을 지급한다.",
+  "▪나온 눈의 수가 $2$ 이하이면 투자량 $1$ 그램당 ( $2+b$ ) 그램의 금을 지급",
+  "▪나온 눈의 수가 $3$ 이상이면 투자량 $1$ 그램당 ( $1-b$ ) 그램의 금을 지급",
+  "이때, $b$ 의 값을 활성도라고 한다.",
+  "위 [규칙]에 주어진 $a$ 와 $b$ 의 값은 (나)에서 주사위를 던지기 전에 다음 두 방식 중",
+  "하나로 결정된다.",
+  "[방식1] 영희가 먼저 $b$ 를 결정하여 공지하면, 민호는 그 값을 알고 $a$ 를 결정",
+  "[방식2] 민호가 먼저 $a$ 를 결정하여 공지하면, 영희는 그 값을 알고 $b$ 를 결정",
+  "민호와 영희가 시행의 결과로 보유하게 될 금의 그램 수를 나타내는 확률변수를 각각",
+  "$X$ 와 $Y$ 라고 하자. 민호와 영희는 평균을 기대수익으로, 분산을 위험도로 간주한 후,",
+  "각자 적절한 자산 관리지표를 설정한다."
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[1-1]",
+   "points": null,
+   "text": [
+    "주어진 두 실수 $a$ , $b$ ( $0 \\le a \\le 1$ , $0 \\le b \\le 1$ )에 대하여, 투자량이 $a$ 로, 활성도가 $b$ 로 결정되었을 때, 확률변수 $X$ 의 평균 $\\mathrm{E}\\left(X \\right)$ 와 분산 $\\mathrm{V}\\left(X \\right)$ 를 구하시오."
+   ],
+   "answer": [
+    "확률변수 $X$ 의 값은 주사위를 던져 나온 눈의 수가 $2$ 이하이면, $1-a+\\left(2+b \\right)a=a b+a+1$",
+    "이고, 나온 눈의 수가 $3$ 이상이면 $1-a+\\left(1-b \\right)a=-a b+1$ 이다. 따라서",
+    "$\\mathrm{E}\\left(X \\right)=\\left(a b+a+1 \\right)\\times \\frac{1}{3}+\\left(1-a b \\right)\\times \\frac{2}{3}=-\\frac{a b}{3}+\\frac{a}{3}+1$ ,",
+    "$$\\begin{aligned}\\mathrm{V}\\left(X \\right)&=\\left\\{\\left(a b+a+1 \\right)-\\left(-\\frac{a b}{3}+\\frac{a}{3}+1 \\right)\\right\\}^{2}\\times \\frac{1}{3}+\\left\\{\\left(-a b+1 \\right)-\\left(-\\frac{a b}{3}+\\frac{a}{3}+1 \\right)\\right\\}^{2}\\times \\frac{2}{3}\\\\&=\\frac{2}{9}a^{2}\\left(2 b+1 \\right)^{2}\\end{aligned}$$"
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "[1-2]",
+   "points": null,
+   "text": [
+    "주어진 실수 $b$ ( $0 \\le b \\le 1$ )에 대하여 영희가 먼저 활성도를 $b$ 로 결정하여 공지하였다. 민호의 자산 관리지표 $\\mathrm{U}$ 는 다음과 같다. $\\mathrm{U}=E \\left(X \\right)-\\frac{1}{2}\\mathrm{V}\\left(X \\right)$ 범위 $0 \\le a \\le 1$ 에서 자산 관리지표 $\\mathrm{U}$ 의 값이 최대가 되도록 하는 투자량 $a$ 의 값을 민호의 최적 투자량이라고 할 때, 이 값을 구하시오."
+   ],
+   "answer": [
+    "민호의 자산 관리지표는",
+    "$\\mathrm{U}=\\mathrm{E}\\left(X \\right)-\\frac{1}{2}\\mathrm{V}\\left(X \\right)=\\left(-\\frac{a b}{3}+\\frac{a}{3}+1 \\right)-\\frac{1}{9}a^{2}\\left(2 b+1 \\right)^{2}$",
+    "$=-\\frac{\\left(2 b+1 \\right)^{2}}{9}a^{2}+\\frac{1-b}{3}a+1$",
+    "이다. 또, $0 \\le b \\le 1$ 이므로 $0 \\le \\frac{3 \\left(1-b \\right)}{2 \\left(2 b+1 \\right)^{2}}\\le \\frac{3}{2}$ 이다. 이때,",
+    "(ⅰ) $0 \\le \\frac{3 \\left(1-b \\right)}{2 \\left(2 b+1 \\right)^{2}}\\le 1$ 일 때",
+    "$\\frac{-11+3 \\sqrt{17}}{16}\\le b \\le 1$ 이고, $a=\\frac{3 \\left(1-b \\right)}{2 \\left(2 b+1 \\right)^{2}}$ 에서 자산 관리지표 $\\mathrm{U}$ 는 최댓값을 갖는다.",
+    "(ⅱ) $\\frac{3 \\left(1-b \\right)}{2 \\left(2 b+1 \\right)^{2}}>1$ 일 때",
+    "$0 \\le b<\\frac{-11+3 \\sqrt{17}}{16}$ 이고, $a=1$ 에서 자산 관리지표 $\\mathrm{U}$ 는 최댓값을 갖는다.",
+    "(ⅰ)과 (ⅱ)에 의해 민호의 최적 투자량 $a=f(b)$ 는",
+    "$f(b)=\\begin{cases}\\,\\,\\,1 \\,\\,\\,\\,\\,\\,&\\left(0 \\le b<\\frac{-11+3 \\sqrt{17}}{16}\\right)\\\\\\frac{3 \\left(1-b \\right)}{2 \\left(2 b+1 \\right)^{2}}&\\left(\\frac{-11+3 \\sqrt{17}}{16}\\le b \\le 1 \\right)\\end{cases}$ 이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "3",
+   "label": "[1-3]",
+   "points": null,
+   "text": [
+    "주어진 실수 $a$ ( $0 \\le a \\le 1$ )에 대하여 민호가 먼저 투자량을 $a$ 로 결정하여 공지하였다. 영희의 자산 관리지표 $\\mathrm{W}$ 는 다음과 같다.",
+    "$\\mathrm{W}=E \\left(Y \\right)-\\frac{1}{2}\\mathrm{V}\\left(Y \\right)$ 범위 $0 \\le b \\le 1$ 에서 자산 관리지표 $\\mathrm{W}$ 의 값이 최대가 되도록 하는 활성도 $b$ 의 값을 영희의 최적 활성도라고 할 때, 이 값을 구하시오.(단, $\\mathrm{W}$ 의 값이 최대가 되도록 하는 $b$ 의 값이 여러 개인 경우, 그 값들을 모두 최적 활성도라고 한다.)"
+   ],
+   "answer": [
+    "먼저 확률변수 $Y$ 의 평균 $\\mathrm{E}\\left(Y \\right)$ 와 분산 $\\mathrm{V}\\left(Y \\right)$ 를 구해보자.",
+    "확률변수 $Y$ 의 값은 주사위를 던져 나온 눈의 수가 $2$ 이하이면, $2+a-\\left(2+b \\right)a=-a b-a+2$",
+    "이고, 나온 눈의 수가 $3$ 이상이면 $2+a-\\left(1-b \\right)a=a b+2$ 이다. 따라서",
+    "$\\mathrm{E}\\left(Y \\right)=\\left(-a b-a+2 \\right)\\times \\frac{1}{3}+\\left(a b+2 \\right)\\times \\frac{2}{3}=\\frac{a b}{3}-\\frac{a}{3}+2$ ,",
+    "$$\\begin{aligned}\\mathrm{V}\\left(Y \\right)&=\\left\\{\\left(-a b-a+2 \\right)-\\left(\\frac{a b}{3}-\\frac{a}{3}+2 \\right)\\right\\}^{2}\\times \\frac{1}{3}+\\left\\{\\left(a b+2 \\right)-\\left(\\frac{a b}{3}-\\frac{a}{3}+2 \\right)\\right\\}^{2}\\times \\frac{2}{3}\\\\&=\\frac{2}{9}a^{2}\\left(2 b+1 \\right)^{2}\\end{aligned}$$",
+    "영희의 자산 관리지표는",
+    "$\\mathrm{W}=\\mathrm{E}\\left(Y \\right)-\\frac{1}{2}\\mathrm{V}\\left(Y \\right)=\\left(\\frac{a b}{3}-\\frac{a}{3}+2 \\right)-\\frac{1}{9}a^{2}\\left(2 b+1 \\right)^{2}$",
+    "$=-\\frac{4 a^{2}}{9}b^{2}-\\frac{a \\left(4 a-3 \\right)}{9}b-\\frac{a^{2}+3 a-18}{9}$",
+    "이다.",
+    "(ⅰ) $a=0$ 이면 자산 관리지표는 $b$ 의 값에 관계없이 $2$ 이다.",
+    "(ⅱ) $\\frac{3-4 a}{8 a}<0$ 이면, 즉 $\\frac{3}{4}<a \\le 1$ 이면 $b=0$ 에서 자산 관리지표 $\\mathrm{W}$ 는 최댓값을 갖는다.",
+    "(ⅲ) $0 \\le \\frac{3-4 a}{8 a}\\le 1$ 이면 즉, $\\frac{1}{4}\\le a \\le \\frac{3}{4}$ 이면 $b=\\frac{3-4 a}{8 a}$ 에서 자산 관리지표 $\\mathrm{W}$ 는 최댓값을 갖는다.",
+    "(ⅳ) $\\frac{3-4 a}{8 a}>1$ 이면 즉, $0<a<\\frac{1}{4}$ 이면 $b=1$ 에서 자산 관리지표 $\\mathrm{W}$ 는 최댓값을 갖는다.",
+    "(ⅰ)∼(ⅳ)에 의해 영희의 최적 활성도 $b=g(a)$ 는",
+    "$g(a)=\\begin{cases}\\,\\,임 의 의 \\,실 수 \\,c \\in[0,1]\\,\\,\\,\\,\\,\\,&\\left(a=0 \\right)\\\\\\,\\,1 \\,\\,\\,\\,&\\left(0<a<\\frac{1}{4}\\right)\\\\\\frac{3-4 a}{8 a}\\,\\,\\,\\,\\,&\\left(\\frac{1}{4}\\le a \\le \\frac{3}{4}\\right)\\\\\\,\\,0 \\,\\,\\,\\,\\,\\,&\\left(\\frac{3}{4}<a \\le 1 \\right)\\end{cases}$",
+    "이다.",
+    "(다른 풀이) 전체 금의 양은 항상 $3$ 그램이므로 $Y=3-X$ 이다. 따라서",
+    "$\\mathrm{E}\\left(Y \\right)=3-\\mathrm{E}(X)=2-\\frac{a(1-b)}{3}$ ,",
+    "$\\mathrm{V}\\left(Y \\right)=\\mathrm{V}(X)=\\frac{2 a^2(1+2 b)^2}{9}$",
+    "이다. 이후 풀이는 위의 풀이와 유사하다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "4",
+   "label": "[1-4]",
+   "points": null,
+   "text": [
+    "다음 [조건]을 만족하는 순서쌍 $\\left(a,b \\right)$ 를 모두 구하시오.(단, $0 \\le a \\le 1$ , $0 \\le b \\le 1$ )",
+    "[ 조건 ]",
+    "(ㄱ) 영희가 먼저 활성도를 $b$ 로 결정하여 공지했을 때, $a$ 는 민호의 최적 투자량이다.",
+    "(ㄴ) 민호가 먼저 투자량을 $a$ 로 결정하여 공지했을 때, $b$ 는 영희의 최적 활성도이다.",
+    "※ 제시문을 읽고 문제에 답하시오."
+   ],
+   "answer": [
+    "문제1-2와 문제 1-3의 결과를 종합하면 민호의 최적 투자량 $a=f(b)$ 는",
+    "$f(b)=\\begin{cases}\\,\\,\\,1 \\,\\,\\,\\,\\,\\,&\\left(0 \\le b<\\frac{-11+3 \\sqrt{17}}{16}\\right)\\\\\\frac{3 \\left(1-b \\right)}{2 \\left(2 b+1 \\right)^{2}}&\\left(\\frac{-11+3 \\sqrt{17}}{16}\\le b \\le 1 \\right)\\end{cases}$ 이고, 영희의 최적 활성도 $b=g(a)$ 는",
+    "$g(a)=\\begin{cases}\\,\\,임 의 의 \\,실 수 \\,c \\in[0,1]\\,\\,\\,\\,\\,\\,&\\left(a=0 \\right)\\\\\\,\\,1 \\,\\,\\,\\,&\\left(0<a<\\frac{1}{4}\\right)\\\\\\frac{3-4 a}{8 a}\\,\\,\\,\\,\\,&\\left(\\frac{1}{4}\\le a \\le \\frac{3}{4}\\right)\\\\\\,\\,0 \\,\\,\\,\\,\\,\\,&\\left(\\frac{3}{4}<a \\le 1 \\right)\\end{cases}$",
+    "이다. 이를 $a$ 와 $b$ 를 두 축으로 하는 좌표평면 위에 나타내면 아래와 같다.",
+    "$\\ O$",
+    "$a$",
+    "$b$",
+    "$1$",
+    "$1$",
+    "$a=0$ 일 때 $b=1$ 이 두 조건을 모두 만족시키므로 순서쌍 $\\left(0,1 \\right)$ 은 [조건]을 만족한다.",
+    "$0<a<\\frac{1}{4}$ 에서 $b=g(a)=1$ 이 되어 $a=f(1)=0$ 이 되어 [조건]을 만족하지 않는다.",
+    "$\\frac{1}{4}\\le a \\le \\frac{3}{4}$ 에서 $b=\\frac{3-4 a}{8 a}$ 와 $a=\\frac{3 \\left(1-b \\right)}{2 \\left(2 b+1 \\right)^2}$ 을 동시에 만족시키는 순서쌍 $\\left(a,b \\right)$ 이다.",
+    "두 식을 연립하면",
+    "$b=\\frac{3-4 \\times \\frac{3 \\left(1-b \\right)}{2 \\left(2 b+1 \\right)^2}}{8 \\times \\frac{3 \\left(1-b \\right)}{2 \\left(2 b+1 \\right)^2}}$ , $8 b^2+2 b-1=0$",
+    "이 되어 $b=\\frac{1}{4}$ 이고, 이때 $a=\\frac{1}{2}$ 이므로 순서쌍 $\\left(\\frac{1}{2},\\frac{1}{4}\\right)$ 도 [조건]을 만족한다.",
+    "$a=1$ 일 때 $b=0$ 이 두 조건을 동시에 만족시키므로 순서쌍 $\\left(1,0 \\right)$ 도 문제의 [조건]을 만족한다. 따라서 구하려는 순서쌍은 $\\left(0,1 \\right)$ , $\\left(\\frac{1}{2},\\frac{1}{4}\\right)$ , $\\left(1,0 \\right)$ 이다."
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": ""
+}

@@ -1,0 +1,104 @@
+{
+ "num": 368,
+ "id": "S16-서울과학기술대학교(자연계)모의-3",
+ "univ": "서울과학기술대학교(자연계) 모의",
+ "n": 3,
+ "year": 2024,
+ "title": "문제 3 · 33점",
+ "head": "다음 제시문을 읽고 물음에 답하시오. (33점)",
+ "points": 33,
+ "minutes": 33,
+ "info": {
+  "concepts": "함수의 개수, 급수, 입체도형의 부피, 적분, 미분, 극값, 접선의 방정식, 최솟값, 부분분수",
+  "min": "없음",
+  "field": "수학(3문항, 10문제)",
+  "time": "100분"
+ },
+ "pre": [],
+ "passage": [
+  "함수 $f(x)=\\frac{\\cos x}{x^{2}}(x>0)$ 에 대하여 곡선 $y=f(x)$ 와 $x$ 축과의 교점을 $x$ 좌표가 작은 것부터 차례대로 $\\mathrm{P}_{1}(x_{1},0)$ , $\\mathrm{P}_{2}(x_{2},0)$ , $\\mathrm{P}_{3}(x_{3},0)$ , $\\cdots$ 이라고 하자. 또 $n=1,2,3,\\cdots$ 에 대하여 점 $\\mathrm{P}_n$ 에서 곡선 $y=f(x)$ 의 접선이 $y$ 축과 만나는 점을 $\\mathrm{Q}_{n}(0,y_{n})$ 이라고 하자."
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[3.1]",
+   "points": null,
+   "text": [
+    "$n=1,2,3,\\cdots$ 에 대하여 $x_{n}$ 을 구하시오."
+   ],
+   "answer": [
+    "$x^{2}>0$ 이므로 $\\cos x=0$ 이 되는 $x$ 를 찾으면 된다. 따라서 $x_{n}=\\frac{(2 n-1)\\pi}{2}$ 이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "[3.2]",
+   "points": null,
+   "text": [
+    "$n=1,2,3,\\cdots$ 에 대하여 $y_{n}$ 을 구하시오."
+   ],
+   "answer": [
+    "$f(x)$ 를 미분하면 $f'(x)=-\\frac{\\sin x}{x^{2}}-\\frac{2 \\cos x}{x^{3}}$ 이므로",
+    "$f'(x_{n})=\\frac{-\\sin x_{n}}{x_{n}^{2}}-\\frac{2 \\cos x_{n}}{x_{n}^{3}}=-\\frac{\\sin x_{n}}{x_{n}^{2}}=-\\left\\{\\frac{2}{(2 n-1)\\pi}\\right\\}^{2}\\sin \\frac{(2 n-1)\\pi}{2}$",
+    "이고, 사인값을 계산하면",
+    "$f' \\left(x_{n}\\right)={\\begin{cases}-\\left\\{\\frac{2}{(2 n-1)\\pi}\\right\\}^{2},&n=1,3,5,\\cdots \\\\\\left\\{\\frac{2}{(2 n-1)\\pi}\\right\\}^{2},&n=2,4,6,\\cdots\\end{cases}}$",
+    "이다. 따라서 $n=1,3,5,\\cdots$ 일 때 점 $\\mathrm{P}_{n}$ 에서 곡선 $y=f(x)$ 의 접선의 방정식은",
+    "$y=-\\left(\\frac{2}{(2 n-1)\\pi}\\right)^{2}\\left(x-\\frac{(2 n-1)\\pi}{2}\\right)$",
+    "이고, 이 직선의 $y$ 절편은 $y_{n}=\\frac{2}{(2 n-1)\\pi}$ 이다.",
+    "또 $n=2,4,6,\\cdots$ 일 때 점 $\\mathrm{P}_{n}$ 에서 곡선 $y=f(x)$ 의 접선의 방정식은",
+    "$y=\\left(\\frac{2}{(2 n-1)\\pi}\\right)^{2}\\left(x-\\frac{(2 n-1)\\pi}{2}\\right)$",
+    "이고, 이 직선의 $y$ 절편은 $y_{n}=-\\frac{2}{(2 n-1)\\pi}$ 이다. 따라서",
+    "$y_{n}={\\begin{cases}\\frac{2}{(2 n-1)\\pi},&n=1,3,5,\\cdots \\\\-\\frac{2}{(2 n-1)\\pi},&n=2,4,6,\\cdots\\end{cases}}$",
+    "이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "3",
+   "label": "[3.3]",
+   "points": null,
+   "text": [
+    "$n=1,2,3,\\cdots$ 에 대하여 삼각형 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}\\mathrm{Q}_{n}$ 의 넓이를 $A_n$ 이라고 할 때, $\\sum_{n=1}^{10}A_{n}A_{n+1}$ 의 값을 구하시오."
+   ],
+   "answer": [
+    "두 점 $\\mathrm{P}_{n}$ 과 $\\mathrm{P}_{n+1}$ 사이의 거리는 $\\pi$ 이므로 $A_{n}=\\frac{1}{2}\\times \\pi \\times \\frac{2}{(2 n-1)\\pi}=\\frac{1}{2 n-1}$ 이고",
+    "$\\sum_{n=1}^{10}A_{n}A_{n+1}=\\sum_{n=1}^{10}\\frac{1}{(2 n-1)(2 n+1)}$",
+    "이다. 부분분수로 바꾸어 계산하면",
+    "$$\\begin{aligned}\\sum_{n=1}^{10}A_{n}A_{n+1}=\\sum_{n=1}^{10}\\frac{1}{2}\\left(\\frac{1}{2 n-1}-\\frac{1}{2 n+1}\\right)\\\\=\\frac{1}{2}\\left\\{\\left(1-\\frac{1}{3}\\right)+\\left(\\frac{1}{3}-\\frac{1}{5}\\right)+\\cdots+\\left(\\frac{1}{19}-\\frac{1}{21}\\right)\\right\\}=\\frac{10}{21}\\end{aligned}$$",
+    "이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "4",
+   "label": "[3.4]",
+   "points": null,
+   "text": [
+    "문항 [3.3]에서 구한 $A_n$ 에 대하여 급수 $\\sum_{n=1}^{\\infty}A_{n}A_{n+1}$ 의 합을 구하시오.",
+    "풀어보기",
+    "문제1. 집합 $\\mathrm{X}=\\left\\{1,\\,2,\\,3,\\,4,\\,5 \\right\\}$ 에 대하여 다음 조건을 만족시키는 함수 $f:\\mathrm{X}\\,\\to \\,X$ 의 개수를 구하시오. (2023년 3월 학력평가)",
+    "(가) 집합 $\\mathrm{X}$ 의 임의의 두 원소 $x s u b 1$ , $x s u b 2$ 에 대하여 $x s u b 1<x s u b 2$ 이면 $f \\left(x s u b 1 \\right)\\le f \\left(x s u b 2 \\right)$ 이다.",
+    "(나) $f(2)\\ne 1$ 이고 $f(4)\\times f(5)<20$ 이다.",
+    "문제2. 함수 $f(x)=\\sin \\left(\\pi \\sqrt{x}\\right)$ 에 대하여 함수",
+    "$g(x)=\\int_{0}^{x}{t f(x-t)dt}$ $(x{\\ge}0)$",
+    "이 $x=a$ 에서 극대인 모든 $a$ 를 작은 수부터 크기순으로 나열할 때, $n$ 번째 수를 $a_{n}$ 이라 하자. $k^{2}<a_{6}<(k+1)^{2}$ 인 자연수 $k$ 의 값은? (2020년 9월 수능 모의평가)",
+    "① $11$ ② $14$ ③ $17$ ④ $20$ ⑤ $23$",
+    "문제3. 곡선 $y$ $=x e^{-2 x}$ 의 변곡점을 $\\mathrm{A}$ 라 하자. 곡선 $y$ $=x e^{-2 x}$ 위의 점 $\\mathrm{A}$ 에서의 접선이 $x$ 축과 만나는 점을 $\\mathrm{B}$ 라 할 때, 삼각형 $\\mathrm{OAB}$ 의 넓이는? (단, $\\mathrm{O}$ 는 원점이다.)",
+    "(2021년 7월 학력평가)",
+    "① $e^{-2}$ ② $3 e^{-2}$ ③ $1$ ④ $e^{2}$ ⑤ $3 e^2$"
+   ],
+   "answer": [
+    "부분합을 구하면",
+    "$S_{n}=\\sum_{k=1}^{n}\\frac{1}{e q a l i g n{(2 k-1)(2 k+1)\\\\}}=\\sum_{k=1}^{n}\\frac{1}{2}\\left(\\frac{1}{2 k-1}-\\frac{1}{2 k+1}\\right)=\\frac{n}{2 n+1}$",
+    "이므로",
+    "$\\sum_{n=1}^{\\infty}A_{n}A_{n+1}=\\lim_{n \\rightarrow \\infty}{\\frac{n}{2 n+1}=\\frac{1}{2}}$",
+    "이다."
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "함수의 개수"
+}
