@@ -1,0 +1,48 @@
+{
+ "num": 377,
+ "id": "경희대학교(자연계열)모의-2",
+ "univ": "경희대학교(자연계열) 모의",
+ "n": 2,
+ "year": 2026,
+ "title": "문제 2",
+ "head": "반지름의 길이가 $2$ 인 원 $O$ 위에 서로 다른 네 점 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ , $\\mathrm{D}$ 가 순서대로 시계 반대 방향으로 놓여있다. ${\\overline{\\mathrm{AB}}}={\\overline{\\mathrm{CD}}}=2$ 이고, 두 직선 $\\mathrm{AB}$ 와 $\\mathrm{CD}$ 가 이루는 예각의 크기가 $\\frac{\\pi}{6}$ 일 때, 다음 물음에 답하시오.",
+ "points": null,
+ "minutes": 40,
+ "info": {
+  "concepts": "연속확률변수, 확률밀도함수, 평면도형과 공간도형, 정사영, 이면각, 삼각함수의 덧셈정리, 원의 방정식, 등비급수",
+  "min": "국어, 수학, 영어, 탐구(2개과목 평균, 소수점 그대로 반영) 중 2개 영역 등급의 합이 5 이내 및 한국사 5등급 이내",
+  "field": "수학(3문항, 6문제)",
+  "time": "120분"
+ },
+ "pre": [],
+ "passage": [
+  "(1) ${\\overline{\\mathrm{BC}}}>{\\overline{\\mathrm{AD}}}$ 일 때, 선분 $\\mathrm{BC}$ 의 길이와 사각형 $\\mathrm{ABCD}$ 의 넓이를 구하고, 그 근거를 논술하시오. (16점)",
+  "(2) 원 $O$ 를 밑면으로 하고 높이가 $3$ 인 원기둥을 생각하고, 이때 다른 밑면인 원의 중심을 $\\mathrm{P}$ 라 하자. 원기둥을 선분 $\\mathrm{AB}$ 와 점 $\\mathrm{P}$ 를 지나는 평면으로 자를 때 생기는 단면의 넓이를 구하고, 그 근거를 논술하시오. (17점)"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[답안]",
+   "points": null,
+   "text": [],
+   "answer": [
+    "[그림] [논제 Ⅱ-(1)] (16점)",
+    "${a r c h{\\mathrm{AB}}}={a r c h{\\mathrm{DC}}}$ 이므로 두 원주각은 $\\angle \\mathrm{ADB}=\\angle D B C$ 이고, 이에 따라 선분 $\\mathrm{AD}$ 와 $\\mathrm{BC}$ 는 평행이므로 사각형 $\\mathrm{ABCD}$ 는 ${\\overline{\\mathrm{AB}}}={\\overline{D C}}$ 인 사다리꼴이다. 따라서 $\\angle \\mathrm{ABC}=\\angle D C B$ . 직선 $\\mathrm{AB}$ 와 직선 $\\mathrm{CD}$ 가 점 $\\mathrm{I}$ 에서 만난다고 하면, ${\\overline{\\mathrm{BC}}}>{\\overline{A D}}$ 이므로 <그림1>과 같이 두 직선의 교점이 점 $\\mathrm{A}$ 와 점 $\\mathrm{D}$ 에 가까운 곳에 생기고, $\\angle{\\mathrm{AID}}=\\frac{\\pi}{6}$ 이므로 $\\angle{\\mathrm{ABC}}=\\angle{D C B}=\\frac{5}{12}\\pi$ . 원 $O$ 의 중심을 점 $\\mathrm{O}$ 라고 할 때, 삼각형 $\\mathrm{AOB}$ 와 $\\mathrm{DOC}$ 가 정삼각형이므로 $\\angle{\\mathrm{OBC}}=\\angle{O C B}=\\frac{\\pi}{12}$ 이고, 따라서 $\\angle{\\mathrm{BOC}}=\\frac{5}{6}\\pi$ , $\\angle{\\mathrm{AOD}}=\\frac{\\pi}{2}$ 이므로 직각삼각형 $\\mathrm{AOD}$ 로부터 ${\\overline{\\mathrm{AD}}}=2 \\sqrt{2}$ .",
+    "또한 $\\angle{\\mathrm{ABC}}=\\frac{5}{12}\\pi$ 로부터 사다리꼴 $\\mathrm{ABCD}$ 의 높이 $y$ 에 대해 $\\frac{y}{2}=\\sin \\left(\\angle \\mathrm{ABC}\\right)=\\sin \\left(\\frac{5}{12}\\pi \\right)$ , 밑변의 길이 ${\\overline{\\mathrm{BC}}}$ 에 대하여 $x=\\frac{1}{2}\\left(\\overline{\\mathrm{BC}}-\\overline{A D}\\right)$ 라고 하면 $\\frac{x}{2}=\\cos \\left(\\angle \\mathrm{ABC}\\right)=\\cos \\left(\\frac{5}{12}\\pi \\right)$ .이때 $\\frac{5}{12}\\pi=\\frac{\\pi}{6}+\\frac{\\pi}{4}$ 이므로 삼각함수의 덧셈정리에 의해 $y=\\frac{\\sqrt{2}}{2}\\left(1+\\sqrt{3}\\right)$ , $x=\\frac{\\sqrt{2}}{2}\\left(\\sqrt{3}-1 \\right)$ .",
+    "따라서 ${\\overline{\\mathrm{BC}}}={\\overline{A D}}+2 x=\\sqrt{2}+\\sqrt{6}$ 이고, 사각형 $\\mathrm{ABCD}$ 의 넓이는 $\\frac{1}{2}\\left({\\overline{\\mathrm{AD}}}+{\\overline{B C}}\\right)y=3+2 \\sqrt{3}$ ."
+   ],
+   "rubric": [
+    "(4점) $\\angle \\mathrm{ABC}=\\angle D C B=\\frac{5}{12}\\pi$ 임을 확인한다.",
+    "(12점) 선분 $\\mathrm{BC}$ 의 길이와 사각형 $\\mathrm{ABCD}$ 의 넓이를 구한다.",
+    "[논제 Ⅱ-(2)] (17점)",
+    "<그림2>와 같이 원 $O$ 를 아래 밑면으로 하는 원기둥을 생각하고, 구하고자 하는 단면을 원기둥의 밑면으로 정사영한 영역의 넓이를 $S$ 라고 하자. $S$ 는 $($ 반지름이 $2$ 인 반원의 넓이 $)$ [그림] $-$ $($ 부채꼴 $\\mathrm{AOB}$ 의 넓이 $)+($ 삼각형 $\\mathrm{AOB}$ 의 넓이 $)$ 이다. 삼각형 $\\mathrm{AOB}$ 는 한 변의 길이가 $2$ 인 정삼각형이므로, $S=\\frac{4}{3}\\pi+\\sqrt{3}$ .",
+    "한편, 선분 $\\mathrm{AB}$ 를 포함하는 밑면과 구하고자 하는 단면 사이의 이면각을 $\\theta$ 라 하면, $\\overline{\\mathrm{OP}}=3$ 이고, 점 $\\mathrm{O}$ 로부터 선분 $\\mathrm{AB}$ 까지의 길이는 $\\sqrt{3}$ 이므로 $\\cos \\theta=\\frac{1}{2}$ 이다. 따라서 구하고자 하는 단면의 넓이는 정사영된 단면의 넓이 $S$ 로부터 $S \\div I D E \\cos \\theta=\\frac{8}{3}\\pi+2 \\sqrt{3}$ .",
+    "(8점) 구하고자 하는 단면의 정사영된 영역의 넓이를 구한다.",
+    "(9점) 단면과 밑면 사이의 이면각을 활용하여 단면의 넓이를 구한다."
+   ]
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": "연속확률변수"
+}

@@ -5,7 +5,7 @@
 """
 import re, json, sys, os
 
-UNIV = re.compile(r'^(\S+대학교.*?(수시|모의))\s*$')
+UNIV = re.compile(r'^((?:\S+대학교|KAIST|POSTECH|GIST|DGIST|UNIST)\S*.*?(수시|모의))\s*$')
 MAIN = re.compile(r'^\[\s*(?:문제|문항)\s*(\d+)\s*\]')
 SUB = re.compile(r'^\[\s*(?:문제|문항)?\s*(\d+)\s*[-.–]\s*([0-9ⅰⅱⅲⅳⅴⅵ]+)\s*\]')
 RUBRIC = re.compile(r'^(○\s*)?채점\s*기준')
