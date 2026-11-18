@@ -1,0 +1,100 @@
+{
+ "num": 1090,
+ "id": "최고난도500-038",
+ "subject": "확률과 통계",
+ "type": "30번형",
+ "typeDesc": "확률과 통계 · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12확통01-03]"
+ ],
+ "source": "ShrekMath 창작 · 수능 30번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 90,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "네 학생 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ , $\\mathrm{D}$ 가 네 동아리 $\\mathrm{P}$ , $\\mathrm{Q}$ , $\\mathrm{R}$ , $\\mathrm{S}$ 중 일부에 가입하려고 한다.",
+    "각 학생은 정확히 두 개의 동아리에 가입하고, 각 동아리에는 정확히 두 명의 학생이 가입하도록 하는 경우의 수를 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "네 학생 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ , $\\mathrm{D}$ 가 네 동아리 $\\mathrm{P}$ , $\\mathrm{Q}$ , $\\mathrm{R}$ , $\\mathrm{S}$ 중 일부에 가입하려고 한다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "각 학생은 정확히 두 개의 동아리에 가입하고, 각 동아리에는 정확히 두 명의 학생이 가입하도록 하는 경우의 수를 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "조합 — 학생과 동아리의 가입 배정",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 대칭으로 첫 학생을 고정한 뒤, 둘째 학생과의 겹침 정도(2개, 0개, 1개)에 따라 남은 자리의 구조가 강제되는 것을 이용",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "학생 $\\mathrm{A}$ 가 가입할 두 동아리를 정하는 방법은 $_{4}\\mathrm{C}_{2}=6$ 가지이고, 동아리의 이름만 바꾸면 모두 같은 상황이므로 $\\mathrm{A}$ 가 $\\mathrm{P}$ , $\\mathrm{Q}$ 에 가입한 경우를 센 뒤 $6$ 을 곱한다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "학생 $\\mathrm{B}$ 가 가입하는 두 동아리에 따라 나눈다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "(ⅰ) $\\mathrm{B}$ 도 $\\mathrm{P}$ , $\\mathrm{Q}$ 에 가입 ( $1$ 가지) : $\\mathrm{P}$ , $\\mathrm{Q}$ 는 이미 두 명이므로 $\\mathrm{C}$ , $\\mathrm{D}$ 는 모두 $\\mathrm{R}$ , $\\mathrm{S}$ 에 가입해야 한다. $1$ 가지이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "(ⅱ) $\\mathrm{B}$ 가 $\\mathrm{R}$ , $\\mathrm{S}$ 에 가입 ( $1$ 가지) : 네 동아리 모두 한 명씩 남으므로 $\\mathrm{C}$ 가 가입할 두 동아리를 아무렇게나 정하면 $\\mathrm{D}$ 는 나머지 두 동아리로 정해진다. $6$ 가지이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "(ⅲ) $\\mathrm{B}$ 가 $\\mathrm{P}$ , $\\mathrm{Q}$ 중 하나와 $\\mathrm{R}$ , $\\mathrm{S}$ 중 하나에 가입 ( $2 \\times 2=4$ 가지) : 예를 들어 $\\mathrm{P}$ , $\\mathrm{R}$ 이면 $\\mathrm{P}$ 는 꽉 찼고, $\\mathrm{Q}$ , $\\mathrm{R}$ 는 한 자리, $\\mathrm{S}$ 는 두 자리가 남는다. $\\mathrm{C}$ , $\\mathrm{D}$ 는 모두 $\\mathrm{S}$ 에 가입하고 $\\mathrm{Q}$ , $\\mathrm{R}$ 를 하나씩 나누어 가지므로 $2$ 가지이다. 따라서 $4 \\times 2=8$ 가지이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "$\\mathrm{A}$ 의 선택마다 $1+6+8=15$ 가지이므로 구하는 경우의 수는 $6 \\times 15=90$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

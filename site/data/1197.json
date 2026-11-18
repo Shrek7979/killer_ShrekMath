@@ -1,0 +1,147 @@
+{
+ "num": 1197,
+ "id": "최고난도500-145",
+ "subject": "확률과 통계",
+ "type": "29번형",
+ "typeDesc": "확률과 통계 · 수능 29번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12확통03-07]",
+  "[12확통03-05]"
+ ],
+ "source": "ShrekMath 창작 · 수능 29번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 64,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "정규분포 $\\mathrm{N}(m,\\,\\sigma^{2})$ 을 따르는 모집단의 확률변수를 $X$ 라 하고, 이 모집단에서 크기가 $n$ 인 표본을 임의추출하여 구한 표본평균을 $\\overline{X}_{n}$ 이라 하자.",
+    "다음 조건을 만족시킬 때, $\\mathrm{P}(\\overline{X}_{n}\\ge 11)\\le 0.023$ 을 만족시키는 자연수 $n$ 의 최솟값을 구하시오."
+   ]
+  },
+  {
+   "t": "box",
+   "items": [
+    "(가) $\\mathrm{E}\\left(\\overline{X}_{4}^{2}\\right)-\\mathrm{E}\\left(\\overline{X}_{16}^{2}\\right)=3$",
+    "(나) $\\mathrm{E}(X^{2})=116$"
+   ]
+  },
+  {
+   "t": "p",
+   "sents": [
+    "(단, $m>0$ , $\\sigma>0$ 이고, $Z$ 가 표준정규분포를 따르는 확률변수일 때, $\\mathrm{P}(0 \\le Z \\le 2)=0.477$ 로 계산한다.) [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "정규분포 $\\mathrm{N}(m,\\,\\sigma^{2})$ 을 따르는 모집단의 확률변수를 $X$ 라 하고, 이 모집단에서 크기가 $n$ 인 표본을 임의추출하여 구한 표본평균을 $\\overline{X}_{n}$ 이라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "다음 조건을 만족시킬 때, $\\mathrm{P}(\\overline{X}_{n}\\ge 11)\\le 0.023$ 을 만족시키는 자연수 $n$ 의 최솟값을 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    1,
+    0
+   ],
+   "text": "(가) $\\mathrm{E}\\left(\\overline{X}_{4}^{2}\\right)-\\mathrm{E}\\left(\\overline{X}_{16}^{2}\\right)=3$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    1,
+    1
+   ],
+   "text": "(나) $\\mathrm{E}(X^{2})=116$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    2,
+    0
+   ],
+   "text": "(단, $m>0$ , $\\sigma>0$ 이고, $Z$ 가 표준정규분포를 따르는 확률변수일 때, $\\mathrm{P}(0 \\le Z \\le 2)=0.477$ 로 계산한다.) [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "표본평균의 분포 — 표본평균의 제곱의 평균으로 모수 결정",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 표본평균의 제곱의 평균을 분산과 평균의 제곱으로 분해하여 모분산과 모평균을 따로 얻는 것",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$\\mathrm{E}\\left(\\overline{X}_{n}^{2}\\right)=\\mathrm{V}(\\overline{X}_{n})+\\left\\{\\mathrm{E}(\\overline{X}_{n})\\right\\}^{2}=\\frac{\\sigma^{2}}{n}+m^{2}$ 이다. 평균의 제곱 항이 $n$ 에 무관하다는 것이 핵심이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "(가)에서 $\\frac{\\sigma^{2}}{4}-\\frac{\\sigma^{2}}{16}=3$ , $\\sigma^{2}=16$ , $\\sigma=4$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "(나)에서 $\\sigma^{2}+m^{2}=116$ , $m^{2}=100$ 이고 $m>0$ 이므로 $m=10$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$\\overline{X}_{n}$ 은 $\\mathrm{N}\\left(10,\\,\\left(\\frac{4}{\\sqrt{n}}\\right)^{2}\\right)$ 을 따르므로",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "$$\\mathrm{P}(\\overline{X}_{n}\\ge 11)=\\mathrm{P}\\left(Z \\ge \\frac{\\sqrt{n}}{4}\\right)\\le 0.023=\\mathrm{P}(Z \\ge 2)$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "에서 $\\frac{\\sqrt{n}}{4}\\ge 2$ , $n \\ge 64$ 이다. 따라서 구하는 최솟값은 $64$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}
