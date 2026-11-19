@@ -123,6 +123,15 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 .grid{display:grid;gap:26px;margin-top:10px}
 .ghead{font-family:var(--disp);font-size:1.3rem;font-weight:700;color:#e5e5e5;margin:0 0 -16px;display:flex;align-items:center;gap:10px}
 .ghead .cnt{font-family:var(--mono);font-size:.8rem;color:var(--mute);font-weight:500}
+.ghead.link{cursor:pointer;width:max-content;max-width:100%}
+.ghead.link .more{font-family:var(--body);font-size:.78rem;font-weight:700;color:var(--mute);opacity:0;transform:translateX(-4px);transition:opacity .2s,transform .2s}
+.ghead.link:hover .more{opacity:1;transform:none;color:#fff}
+@media (hover:none){.ghead.link .more{opacity:1;transform:none}}
+.ghead .back{font-family:var(--body);font-size:.82rem;font-weight:700;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:4px 12px;margin-left:auto}
+.ghead .back:hover{background:rgba(255,255,255,.2)}
+.track.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;overflow:visible;scroll-snap-type:none;padding-top:26px;content-visibility:visible}
+.track.vgrid .card{flex:none;width:auto}
+@media (max-width:600px){.track.vgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
 .track{display:flex;gap:10px;overflow-x:auto;padding:16px 4px 22px;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:#444 transparent;margin:0 -4px}
 /* 화면 밖 줄은 그리지 않음 (모바일 관 전환 속도) */
 .track{content-visibility:auto;contain-intrinsic-size:auto 300px}
@@ -928,7 +937,13 @@ function artEl(text,subj,own,seed,hue,snip,img){
   d.classList.add('img');
   if(src){const im=el('img');im.alt='';d.append(im);lazyImg(im,jimg(src),d)}
   else d.innerHTML=poster(k,seed||text,hue||'var(--gold)');return d}
-function newRow(title,count){const grid=$('#grid');const h=el('div','ghead',esc(title)+(count?` <span class="cnt">${count}</span>`:''));const t=el('div','track');grid.append(h,t);return t}
+function newRow(title,count,go,back){const grid=$('#grid');const h=el('div','ghead'+(go?' link':''),esc(title)+(count?` <span class="cnt">${count}</span>`:'')+(go?' <span class="more">모두 보기 ›</span>':''));
+  if(go){h.setAttribute('role','button');h.tabIndex=0;h.title=title+'만 모아 보기';h.onclick=go;h.onkeydown=e=>{if(e.key==='Enter')go()}}
+  if(back){const b=el('button','back','← 전체 유형');b.onclick=back;h.append(b)}
+  const t=el('div','track'+(back?' vgrid':''));grid.append(h,t);return t}
+/* 유형 하나만 보기: 행 제목·유형 칩 공용. 선택되면 그 유형만 세로 격자로 */
+function setType(t){filt.type=t||'';document.querySelectorAll('#filters .chip[data-k=type]').forEach(c=>c.classList.toggle('on',c.dataset.v===filt.type));home();
+  const g=$('#grid');if(g){const y=g.getBoundingClientRect().top+window.scrollY-(($('.topbar')||{}).offsetHeight||0)-10;window.scrollTo({top:Math.max(0,y),behavior:'smooth'})}}
 /* 간격 복습: 오답·시간초과 문항은 3·7·14일 뒤에 '오늘의 복습'으로 */
 function daysSince(d){return Math.floor((Date.now()-new Date(d+'T00:00:00'))/86400000)}
 function dueReview(){return LIST.filter(x=>{const r=S.rec[x.num];if(!r||r.skip||(r.ok&&!r.over))return false;const k=r.reviews||0;const due=REVIEW_DAYS[Math.min(k,REVIEW_DAYS.length-1)];return daysSince(r.date)>=due})}
@@ -949,7 +964,7 @@ function homeKiller(){
   if(!L.length){grid.append(el('div','empty','조건에 맞는 문항이 없어요'));return}
   const due=dueReview();if(due.length&&!filt.hard&&!filt.subj&&!filt.type&&!filt.full&&!filt.wrong&&!filt.review&&!filt.todo){const tr=newRow('🔁 오늘의 복습 · 틀렸거나 늦었던 문항, 다시',due.length);for(const x of due){const c=el('button','card');c.style.setProperty('--dc','var(--d5)');c.dataset.big='R';c.innerHTML=`<div class="top"><span><span class="num">#${String(x.num).padStart(3,'0')}</span> · ${x.type}</span><span class="subj" style="--sc:${SC(x.subject)}">${x.subject}</span></div><div class="topic">${esc(x.topic)}</div><div class="meta"><span><span class="stars">${'★'.repeat(x.stars)}</span></span><span><span class="tag">${S.rec[x.num].ok?'시간 초과':'오답'} · ${daysSince(S.rec[x.num].date)}일 전</span></span></div>`;c.insertBefore(artEl(x.topic,x.subject,x.art,x.id,'var(--d5)'),c.querySelector('.topic'));c.onclick=()=>{const r=S.rec[x.num];S.rec[x.num]={skip:true,reviews:(r.reviews||0)+1,prev:r,date:r.date};delete S.rec[x.num];S._rv={num:x.num,reviews:(r.reviews||0)+1};save();location.hash='q'+x.num};tr.append(c)}}
   const groups=filt.hard?[['어려운 순',L]]:[...new Set(L.map(x=>x.type))].sort((a,b)=>parseInt(a)-parseInt(b)).map(t=>[t,L.filter(x=>x.type===t)]);
-  for(const [g,items] of groups){const track=newRow(g==='어려운 순'?g:`수능 ${g}`,items.length);for(const x of items){
+  for(const [g,items] of groups){const one=!!filt.type&&g===filt.type;const track=newRow(g==='어려운 순'?g:`수능 ${g}`,items.length,(g==='어려운 순'||one)?null:()=>setType(g),one?()=>setType(''):null);for(const x of items){
     const c=el('button','card');const rec=S.rec[x.num];c.style.setProperty('--dc',DC(x.stars));c.dataset.big=x.type.replace('번형','');
     c.innerHTML=`<div class="top"><span><span class="num">#${String(x.num).padStart(3,'0')}</span> · ${x.type}</span><span class="subj" style="--sc:${SC(x.subject)}">${x.subject}</span></div>
       <div class="topic">${esc(x.topic)}</div>
@@ -1055,7 +1070,8 @@ $('#randBtn').onclick=()=>{let pool,pre;if(S.tab==='essay'){pool=ELIST.filter(x=
   if(!pool.length){toast('이 관의 상품은 다 털었어요!');return}const x=pool[Math.floor(Math.random()*pool.length)];location.hash=pre+x.num};
 $('#tabs').onclick=e=>{const b=e.target.closest('button');if(!b)return;S.tab=b.dataset.tab;save();home()};
 $('#filters').onclick=e=>{const b=e.target.closest('.chip');if(!b||!b.dataset.k)return;const k=b.dataset.k;
-  if(k==='subj'||k==='type'){filt[k]=(filt[k]===b.dataset.v&&k==='type')?'':b.dataset.v;
+  if(k==='type'){setType(filt.type===b.dataset.v?'':b.dataset.v);return}
+  if(k==='subj'){filt[k]=b.dataset.v;
     document.querySelectorAll(`#filters .chip[data-k=${k}]`).forEach(c=>{c.classList.toggle('on',c.dataset.v===filt[k]);if(k==='subj'&&c.dataset.v)c.style.setProperty('--sc',SC(c.dataset.v))});}
   else{filt[k]=!filt[k];b.classList.toggle('on',filt[k])}
   home()};
