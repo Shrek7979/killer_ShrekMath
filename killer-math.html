@@ -184,6 +184,10 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 #op{min-height:100vh;display:flex;flex-direction:column}
 .opbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:linear-gradient(180deg,#000,#141414);border-bottom:1px solid var(--line);padding:10px 0;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
 .opbar .back{border:1.5px solid var(--line);border-radius:10px;padding:6px 12px;font-size:.9rem;font-weight:700}
+.opbar .logo{display:block;flex:none;text-decoration:none;cursor:pointer;font-family:var(--disp);font-weight:900;font-size:1.35rem;letter-spacing:-.02em;color:var(--red);line-height:1;text-shadow:0 2px 12px rgba(229,9,20,.35);white-space:nowrap;margin-right:6px}
+.opbar .logo small{display:block;font-size:.55rem;letter-spacing:.3em;color:var(--mute);font-weight:700;margin-top:2px}
+.opbar .logo .tot{display:inline-block;vertical-align:middle;margin-left:8px;padding:2px 8px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff;font-family:var(--mono);font-size:.7rem;font-weight:700;letter-spacing:0;text-shadow:none}
+.opbar .logo .tot:empty{display:none}
 .opbar .id{font-family:var(--mono);font-size:.8rem;color:var(--mute);display:flex;gap:8px;align-items:center}
 .opbar .ttl{font-family:var(--disp);font-size:1.4rem;flex:1;min-width:0}
 .opbar .diff{font-size:.84rem;font-weight:700;padding:5px 12px;border-radius:10px;background:color-mix(in srgb,var(--dc) 18%,transparent);color:var(--dc);white-space:nowrap}
@@ -370,6 +374,9 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
   .opbar .ttl{font-size:1rem}
   .opbar .back{padding:5px 9px;font-size:.85rem;white-space:nowrap;flex:none}
   .opbar .id{display:none}
+  .opbar .logo{font-size:1.05rem;margin-right:0}
+  .opbar .logo small{display:none}
+  .opbar .logo .tot{display:none}
   .opbar .ttl{font-size:1.05rem;order:0;flex:1;flex-basis:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .opbar .diff{font-size:.78rem;padding:4px 9px}
   .stages{padding:8px 0 2px}
@@ -402,6 +409,11 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
   .nav .cnt{font-size:.74rem}
   .katex-display{font-size:.95em}
   .lightmsg{display:none}
+}
+@media (max-width:600px){   /* 휴대폰: 로고·목록·난이도 한 줄, 문항 제목은 둘째 줄 */
+  .opbar{flex-wrap:wrap;row-gap:6px}
+  .opbar .ttl{order:9;flex:1 1 100%}
+  .opbar #opStars{margin-left:auto}
 }
 
 
@@ -560,6 +572,7 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
 
 <div id="op" class="wrap" hidden>
   <div class="opbar">
+    <a class="logo" id="logoOp" href="#" title="홈으로">킬러들의 수학몰<span class="tot" id="nTotal2"></span><small>KILLERS' MATH MALL · by ShrekMath</small></a>
     <button class="back" id="backBtn" data-en="← List">← 목록</button>
     <span class="id" id="opId"></span>
     <span class="ttl" id="opTitle"></span>
@@ -768,7 +781,7 @@ function home(){
   $('#op').hidden=true;$('#home').hidden=false;stopTimer();
   $('#author').textContent=SITE.author;document.querySelectorAll('.author').forEach(e=>e.textContent=SITE.author);
   if(SITE.blog){const a=$('#bloglink');a.hidden=false;a.href=SITE.blog;a.textContent='블로그 ↗'}
-  $('#nKiller').textContent=LIST.length;$('#nEssay').textContent=ELIST.length;$('#nJapan').textContent=JP().length;$('#nPast').textContent=PAST().length;$('#nTotal').textContent=(EN()?'Total ':'총 ')+(LIST.length+ELIST.length+JP().length+PAST().length).toLocaleString()+(EN()?'':'문항');
+  $('#nKiller').textContent=LIST.length;$('#nEssay').textContent=ELIST.length;$('#nJapan').textContent=JP().length;$('#nPast').textContent=PAST().length;setTot();
   document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.tab===S.tab));applyLang();
   const essay=S.tab==='essay', japan=S.tab==='japan', past=S.tab==='past', other=essay||japan||past;
   const sb=$('#setBtn');if(S.set&&!S.set.done){sb.textContent=`🎯 세트 이어서 (${S.set.idx+1}/${S.set.items.length})`;sb.onclick=()=>location.hash='q'+S.set.items[S.set.idx]}else{sb.textContent='🎯 모의 세트 (4문항 연속)';sb.onclick=makeSet}
@@ -1009,7 +1022,7 @@ function showSetResult(){const st=S.set;const box=$('#setResult');const ok=st.re
 $('#setResult').addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b){$('#setResult').hidden=true;S.set=null;save();location.hash='q'+b.dataset.go}});
 $('#setClose').onclick=()=>{$('#setResult').hidden=true;S.set=null;save();location.hash=''};
 $('#setBtn').onclick=makeSet;
-$('#logoHome').onclick=e=>{e.preventDefault();S.tab='killer';save();if(location.hash){history.pushState(null,'',location.pathname+location.search)}home();window.scrollTo({top:0,behavior:'smooth'})};
+$('#logoHome').onclick=$('#logoOp').onclick=e=>{e.preventDefault();S.tab='killer';save();if(location.hash){history.pushState(null,'',location.pathname+location.search)}home();window.scrollTo({top:0,behavior:'smooth'})};
 $('#jpBtn').onclick=()=>{S.jlang=JA()?'ko':'ja';save();applyLang();if(!$('#op').hidden&&mode==='japan'&&J)openJapan(J.num,cur);else home()};
 $('#langBtn').onclick=()=>{S.lang=EN()?'ko':'en';save();applyLang();if(!$('#op').hidden&&mode==='japan'&&J)openJapan(J.num,cur);else home()};
 $('#randBtn').onclick=()=>{let pool,pre;if(S.tab==='essay'){pool=ELIST.filter(x=>!S.erec[x.num]);pre='e'}else if(S.tab==='japan'){pool=JP().filter(x=>!S.jrec[x.num]);pre='j'}else if(S.tab==='past'){pool=PAST().filter(x=>!S.jrec[x.num]);pre='j'}else{pool=LIST.filter(x=>!S.rec[x.num]);pre='q'}
@@ -1372,7 +1385,8 @@ $('#fsUp2').onclick=()=>$('#fsUp').click();$('#fsDown2').onclick=()=>$('#fsDown'
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#fullSheet').hidden){$('#fsClose').click();e.stopImmediatePropagation()}},true);$('#lb').onclick=e=>{if(e.target.id==='lb')$('#lb').hidden=true};
 
 /* ───────── 라우팅 ───────── */
-function route(){const m=location.hash.match(/^#([qej])(\d+)(?:-(\d+))?$/);if(m){(m[1]==='q'?open:m[1]==='e'?openEssay:openJapan)(+m[2],+(m[3]||0))}else home()}
+function setTot(){try{$('#nTotal').textContent=(EN()?'Total ':'총 ')+(LIST.length+ELIST.length+JP().length+PAST().length).toLocaleString()+(EN()?'':'문항');$('#nTotal2').textContent=(EN()?'Total ':'총 ')+(LIST.length+ELIST.length+JP().length+PAST().length).toLocaleString()+(EN()?'':'문항');}catch(e){}}
+function route(){setTot();const m=location.hash.match(/^#([qej])(\d+)(?:-(\d+))?$/);if(m){(m[1]==='q'?open:m[1]==='e'?openEssay:openJapan)(+m[2],+(m[3]||0))}else home()}
 window.addEventListener('hashchange',route);
 
 /* ── 구독(페이월) ── */
