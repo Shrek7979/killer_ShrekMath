@@ -497,6 +497,39 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
   .topbar .cta{display:flex;align-items:center;height:30px;padding:0 9px;font-size:.82rem}
   .topbar .logo .meta{margin-top:12px;max-width:none}
 }
+/* ── 로그인·회원가입 ── */
+#auth{position:fixed;inset:0;z-index:60;display:grid;justify-items:center;align-items:start;overflow:auto;padding:calc(20px + env(safe-area-inset-top,0px)) 16px calc(20px + env(safe-area-inset-bottom,0px));background:rgba(8,8,8,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+#auth[hidden]{display:none}
+#auth .abox{margin:auto;width:100%;max-width:400px;background:#1b1b1b;border:1px solid #333;border-radius:14px;padding:26px 22px 20px;display:grid;gap:14px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+#auth .alogo{font-family:var(--disp);font-weight:900;font-size:1.5rem;color:var(--red);text-align:center;letter-spacing:-.02em}
+#auth .asub{text-align:center;color:var(--mute);font-size:.86rem;margin-top:-8px}
+#auth .atabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#111;border-radius:9px;padding:4px}
+#auth .atabs button{padding:9px 0;border-radius:6px;font-weight:700;color:var(--mute)}
+#auth .atabs button.on{background:#2b2b2b;color:#fff}
+#auth form{display:grid;gap:10px}
+#auth form[hidden]{display:none}
+#auth label{display:block;font-size:.78rem;font-weight:700;color:#bbb}
+#auth label>input,#auth label>select{display:block;margin-top:5px}
+#auth label .opt{font-weight:500;color:#777}
+#auth input[type=text],#auth input[type=password],#auth input[type=email],#auth select{font:inherit;font-size:1rem;padding:11px 12px;border-radius:8px;border:1px solid #444;background:#111;color:#fff;width:100%;min-width:0}
+#auth input:focus,#auth select:focus{outline:2px solid var(--red);outline-offset:0;border-color:transparent}
+#auth .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+#auth .chk{display:flex;gap:8px;align-items:flex-start;font-size:.84rem;font-weight:500;color:#ddd;line-height:1.45}
+#auth .chk input{margin-top:3px;flex:none;width:16px;height:16px;accent-color:var(--red)}
+#auth .chk a{color:#fff}
+#auth .abtn{background:var(--red);color:#fff;font-weight:800;font-size:1.05rem;padding:13px;border-radius:8px;margin-top:4px}
+#auth .abtn:disabled{opacity:.55}
+#auth .abtn.ghost{background:none;border:1px solid #444;color:#ddd;font-weight:700;font-size:.95rem;padding:10px}
+#auth .abtn.danger{background:none;border:1px solid #6b2a2e;color:#ff8a90;font-weight:700;font-size:.9rem;padding:9px}
+#auth .aerr{color:#ff8a90;font-size:.88rem;min-height:1.3em;text-align:center}
+#auth .anote{font-size:.76rem;color:#888;line-height:1.5}
+#auth dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:0;font-size:.95rem}
+#auth dt{color:var(--mute);font-size:.8rem;font-weight:700;align-self:center}
+#auth dd{margin:0;color:#fff;word-break:break-all}
+#acct{display:flex;justify-content:flex-end;align-items:center;gap:8px;margin:12px 0 0;font-size:.86rem;color:var(--mute)}
+#acct[hidden]{display:none}
+#acct b{color:#fff;font-weight:700}
+#acct .link{margin:0;font-size:.84rem}
 /* ── 학생 편의 개선 ── */
 #grid.nocv .track{content-visibility:visible}
 #resume{display:flex;align-items:center;gap:10px;margin:14px 0 0;padding:10px 14px;border-radius:10px;background:#1b1b1b;border:1px solid #2c2c2c;color:#e5e5e5;font-size:.95rem;width:100%;text-align:left}
@@ -555,6 +588,7 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
     </div>
   </div>
 
+  <div id="acct" hidden></div>
   <button id="resume" hidden></button>
   <div class="stats">
     <div class="tile" style="--tc:var(--red)">
@@ -673,6 +707,43 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
   </div>
   <div class="foot" data-enhtml="Made by <span class=&quot;author&quot;>ShrekMath</span> · Killers' Math Mall">만든이 · <span class="author"></span> · 킬러들의 수학몰</div>
 </div>
+<div id="auth" hidden><div class="abox">
+  <div class="alogo">킬러들의 수학몰</div>
+  <div class="asub" id="authSub">로그인하고 이용해 주세요</div>
+  <div class="atabs" id="authTabs"><button type="button" data-t="login" class="on">로그인</button><button type="button" data-t="signup">회원가입</button></div>
+  <form id="fLogin" autocomplete="on">
+    <label>아이디<input type="text" name="uid" autocomplete="username" autocapitalize="none" spellcheck="false" required></label>
+    <label>비밀번호<input type="password" name="pw" autocomplete="current-password" required></label>
+    <button class="abtn" type="submit">로그인</button>
+    <div class="anote">비밀번호를 잊었다면 선생님(운영자)에게 문의해 주세요. 풀이 기록은 이 기기에 그대로 남아 있습니다.</div>
+  </form>
+  <form id="fSignup" hidden autocomplete="on">
+    <label>아이디 <span class="opt">영문 소문자·숫자·밑줄 4~20자</span><input type="text" name="uid" autocomplete="username" autocapitalize="none" spellcheck="false" minlength="4" maxlength="20" pattern="[A-Za-z0-9_]{4,20}" required></label>
+    <label>비밀번호 <span class="opt">8자 이상</span><input type="password" name="pw" autocomplete="new-password" minlength="8" maxlength="72" required></label>
+    <label>비밀번호 확인<input type="password" name="pw2" autocomplete="new-password" minlength="8" maxlength="72" required></label>
+    <div class="two">
+      <label>닉네임<input type="text" name="nick" maxlength="20" autocomplete="nickname" required></label>
+      <label>학년<select name="grade" required><option value="">선택</option><option>고1</option><option>고2</option><option>고3</option><option>N수</option><option>교사</option><option>기타</option></select></label>
+    </div>
+    <div class="two">
+      <label>선택과목 <span class="opt">선택</span><select name="elective"><option value="">–</option><option>미적분</option><option>확률과 통계</option><option>기하</option></select></label>
+      <label>학교 <span class="opt">선택</span><input type="text" name="school" maxlength="40" autocomplete="organization"></label>
+    </div>
+    <label>이메일 <span class="opt">선택 · 비밀번호를 잊었을 때 본인 확인용</span><input type="email" name="email" maxlength="100" autocomplete="email"></label>
+    <label class="chk"><input type="checkbox" name="agree14" required><span>만 14세 이상입니다.</span></label>
+    <label class="chk"><input type="checkbox" name="agreePrivacy" required><span><a href="privacy.html" target="_blank" rel="noopener">개인정보 처리방침</a>을 읽었고, 위 정보의 수집·이용에 동의합니다.</span></label>
+    <button class="abtn" type="submit">가입하고 시작하기</button>
+    <div class="anote">실명·전화번호·생년월일은 받지 않습니다. 비밀번호는 암호화되어 저장됩니다.</div>
+  </form>
+  <form id="fAcct" hidden>
+    <dl id="acctInfo"></dl>
+    <button class="abtn ghost" type="button" id="acctClose">닫기</button>
+    <button class="abtn ghost" type="button" id="acctOut">로그아웃</button>
+    <label style="margin-top:8px">회원 탈퇴 <span class="opt">계정 정보가 서버에서 바로 삭제됩니다</span><input type="password" name="pw" autocomplete="current-password" placeholder="비밀번호 확인"></label>
+    <button class="abtn danger" type="submit">회원 탈퇴</button>
+  </form>
+  <div class="aerr" id="authErr"></div>
+</div></div>
 <div class="toast" id="toast"></div>
 <div id="lb" hidden><img id="lbimg" alt=""><button id="lbx">✕ 닫기</button></div>
 <div id="setResult" hidden><div class="kcard" style="--kc:var(--red);max-width:620px;width:100%"><div class="head"><div class="kind" id="setKind">모의 세트 · 결과</div><button class="btn ghost sm" id="setClose">닫기</button></div><div class="body" style="max-width:none"></div></div></div>
@@ -685,7 +756,8 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
 <script></script>
 <script>
 /* ───────── 설정 ───────── */
-const SITE={author:'ShrekMath', blog:'', sheetUrl:''};   // sheetUrl: Apps Script 웹 앱 URL (apps_script.gs 참고). 비우면 수집 안 함
+const SITE={author:'ShrekMath', blog:'', sheetUrl:'', login:'required'};   // login: 'required'(로그인해야 이용) · 'optional'(원하는 사람만) · 'off'(로그인 기능 끔)
+const _SITE_OLD=0;   // sheetUrl: Apps Script 웹 앱 URL (apps_script.gs 참고). 비우면 수집 안 함
 /* 모의 세트 두 종류: 수능 준킬러 자리(15·20·21·22) / 킬러 자리(29·30). 안 푼 문항이 없는 유형은 같은 세트의 다른 유형으로 채움 */
 const SETS={semi:{name:'준킬러 세트',btn:'🎯 준킬러 4제',sub:'15·20·21·22',types:['15번형','20번형','21번형','22번형']},
             kill:{name:'킬러 세트',btn:'💀 킬러 2제',sub:'29·30',types:['29번형','30번형']}};
@@ -1478,6 +1550,47 @@ function showVis(){const e=$('#nVisit');if(!e||!VIS)return;e.innerHTML='<span cl
 (function visit(){if(!/^https?:/.test(location.protocol))return;const d=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);let hit=true;try{hit=localStorage.getItem('km_vday')!==d}catch(e){}
   fetch('/api/visit'+(hit?'?hit=1':''),{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(!j||j.total==null)return;if(hit)try{localStorage.setItem('km_vday',d)}catch(e){}VIS=j;showVis()}).catch(()=>{})})();
 function setTot(){showVis();try{const h='<b>'+(LIST.length+ELIST.length+JP().length+PAST().length).toLocaleString()+'</b><i>'+(EN()?'items':'문항')+'</i>';$('#nTotal').innerHTML=h;$('#nTotal2').innerHTML=h;}catch(e){}}
+/* ───────── 로그인·회원가입 ─────────
+   서버(api/auth)가 응답하지 않으면 사이트가 막히지 않도록 '로그인 없이 이용'으로 넘어간다(이번 접속에 한해). */
+const AKEY='km_auth';let AUTH=null;try{AUTH=JSON.parse(localStorage.getItem(AKEY)||'null')}catch(e){}
+const authOn=()=>SITE.login&&SITE.login!=='off'&&location.protocol!=='file:';
+async function authCall(body){try{const r=await fetch('/api/auth',{method:'POST',headers:{'Content-Type':'application/json'},cache:'no-store',body:JSON.stringify(body)});let j={};try{j=await r.json()}catch(e){}
+  return {s:r.status,j,down:r.status>=500||r.status===404||r.status===405}}catch(e){return {s:0,j:{},down:true}}}
+function setAuth(a){AUTH=a;try{a?localStorage.setItem(AKEY,JSON.stringify(a)):localStorage.removeItem(AKEY)}catch(e){}showAcct()}
+function guestPass(msg){try{sessionStorage.setItem('km_guest','1')}catch(e){}$('#auth').hidden=true;showAcct();if(msg)toast(msg)}
+const isGuest=()=>{try{return sessionStorage.getItem('km_guest')==='1'}catch(e){return false}};
+function showAcct(){const e=$('#acct');if(!e)return;if(!authOn()){e.hidden=true;return}
+  if(AUTH&&AUTH.user){e.innerHTML=`<span>👤 <b>${esc(AUTH.user.nick)}</b> · ${esc(AUTH.user.grade)}</span><button class="link" id="acctBtn">내 정보</button>`;$('#acctBtn').onclick=()=>authView('acct')}
+  else{e.innerHTML=`<button class="link" id="acctBtn">로그인 / 회원가입</button>`;$('#acctBtn').onclick=()=>authView('login',true)}
+  e.hidden=false}
+function authView(v,closable){const a=$('#auth');$('#authErr').textContent='';$('#fLogin').hidden=v!=='login';$('#fSignup').hidden=v!=='signup';$('#fAcct').hidden=v!=='acct';$('#authTabs').hidden=v==='acct';
+  document.querySelectorAll('#authTabs button').forEach(b=>b.classList.toggle('on',b.dataset.t===v));
+  $('#authSub').textContent=v==='acct'?'내 정보':SITE.login==='required'?'로그인하고 이용해 주세요':'로그인하면 닉네임으로 기록을 남길 수 있어요';
+  if(v==='acct'&&AUTH){const u=AUTH.user;$('#acctInfo').innerHTML=[['아이디',u.uid],['닉네임',u.nick],['학년',u.grade],['선택과목',u.elective||'–'],['학교',u.school||'–'],['이메일',u.email||'–']].map(([k,x])=>`<dt>${k}</dt><dd>${esc(x)}</dd>`).join('')}
+  a.dataset.closable=(closable||v==='acct')?'1':'';a.hidden=false;a.scrollTop=0;
+  const f=v==='login'?$('#fLogin'):v==='signup'?$('#fSignup'):null;if(f&&window.innerWidth>900)setTimeout(()=>f.querySelector('input').focus(),50)}
+function authDone(j,hello){setAuth({token:j.token,user:j.user});if(!S.name){S.name=j.user.nick;save()}$('#auth').hidden=true;toast(`${j.user.nick}님, ${hello}`);if(!$('#home').hidden)home()}
+async function authSubmit(form,body,hello){const btn=form.querySelector('button[type=submit]');const err=$('#authErr');err.textContent='';btn.disabled=true;
+  const r=await authCall(body);btn.disabled=false;
+  if(r.down){if(body.action==='delete'){err.textContent='서버에 연결하지 못했어요. 잠시 뒤 다시 해 주세요.';return null}guestPass('지금은 서버에 연결할 수 없어 로그인 없이 이용합니다');return null}
+  if(!r.j.ok){err.textContent=r.j.msg||'처리하지 못했어요. 다시 해 주세요.';return null}
+  if(hello)authDone(r.j,hello);return r.j}
+$('#authTabs').onclick=e=>{const b=e.target.closest('button');if(b)authView(b.dataset.t,$('#auth').dataset.closable==='1')};
+$('#auth').addEventListener('click',e=>{if(e.target.id==='auth'&&$('#auth').dataset.closable==='1')$('#auth').hidden=true});
+$('#fLogin').onsubmit=e=>{e.preventDefault();const f=e.target;authSubmit(f,{action:'login',uid:f.uid.value,pw:f.pw.value},'다시 오셨네요')};
+$('#fSignup').onsubmit=e=>{e.preventDefault();const f=e.target;if(f.pw.value!==f.pw2.value){$('#authErr').textContent='비밀번호 확인이 일치하지 않아요.';f.pw2.focus();return}
+  authSubmit(f,{action:'signup',uid:f.uid.value,pw:f.pw.value,nick:f.nick.value,grade:f.grade.value,elective:f.elective.value,school:f.school.value,email:f.email.value,agree14:f.agree14.checked,agreePrivacy:f.agreePrivacy.checked},'환영합니다')};
+$('#acctClose').onclick=()=>{$('#auth').hidden=true};
+$('#acctOut').onclick=async()=>{const t=AUTH&&AUTH.token;setAuth(null);if(t)authCall({action:'logout',token:t});toast('로그아웃했어요');if(SITE.login==='required'&&!isGuest())authView('login');else $('#auth').hidden=true};
+$('#fAcct').onsubmit=async e=>{e.preventDefault();const f=e.target;if(!f.pw.value){$('#authErr').textContent='탈퇴하려면 비밀번호를 입력해 주세요.';f.pw.focus();return}
+  if(!confirm('정말 탈퇴할까요? 계정 정보가 서버에서 삭제되며 되돌릴 수 없습니다. (이 기기의 풀이 기록은 그대로 남습니다)'))return;
+  const j=await authSubmit(f,{action:'delete',token:AUTH&&AUTH.token,pw:f.pw.value});if(j){f.pw.value='';setAuth(null);toast('탈퇴 처리했어요. 이용해 주셔서 고맙습니다');if(SITE.login==='required'&&!isGuest())authView('login');else $('#auth').hidden=true}};
+async function initAuth(){if(!authOn())return;showAcct();
+  if(AUTH&&AUTH.token){const r=await authCall({action:'me',token:AUTH.token});   // 저장된 로그인은 바로 통과시키고, 뒤에서 확인만 한다(오프라인에서도 이용 가능)
+    if(r.s===401){setAuth(null);if(SITE.login==='required')authView('login')}else if(r.j.ok&&r.j.user)setAuth({token:AUTH.token,user:r.j.user});return}
+  if(SITE.login!=='required'||isGuest())return;
+  const probe=await authCall({action:'me',token:''});if(probe.down){guestPass('');return}   // 서버가 준비되지 않았으면 막지 않는다
+  authView('login')}
 let guard=null,homePos=null;   // guard: 풀이 중인 문항의 주소(실수로 나가기 방지) · homePos: 목록으로 돌아올 때 되돌릴 스크롤 위치
 function fillAuthor(){document.querySelectorAll('.author').forEach(e=>e.textContent=SITE.author)}
 function fitBar(){const tb=$('.topbar'),nv=$('#tabs');if(!tb||!nv)return;let d=0;if(window.innerWidth<=760&&!$('#home').hidden){d=Math.max(0,Math.round(nv.getBoundingClientRect().top-tb.getBoundingClientRect().top-6))}
@@ -1548,7 +1661,7 @@ async function showPay(){if(!PAY)return;let box=$('#payBox');
     msg('');
   }
 }
-(async()=>{await unlockData();LIST=await loadList();ELIST=await loadEList();JLIST=await loadJList();CATS=await loadCats();document.documentElement.style.setProperty('--fs',S.fs);updPro();route();if(await refreshPro()&&!$('#home').hidden)home()})();
+(async()=>{await unlockData();LIST=await loadList();ELIST=await loadEList();JLIST=await loadJList();CATS=await loadCats();document.documentElement.style.setProperty('--fs',S.fs);updPro();route();initAuth();if(await refreshPro()&&!$('#home').hidden)home()})();
 </script>
 
 </body>
