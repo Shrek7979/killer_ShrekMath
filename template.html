@@ -485,6 +485,11 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
 #auth[hidden]{display:none}
 #admin{position:fixed;inset:0;z-index:61;overflow:auto;padding:calc(16px + env(safe-area-inset-top,0px)) 14px calc(16px + env(safe-area-inset-bottom,0px));background:rgba(8,8,8,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 #admin[hidden]{display:none}
+#auth details.apw{background:#111;border:1px solid #2a2a2a;border-radius:9px;padding:11px 12px;margin-top:6px}
+#auth details.apw[hidden]{display:none}
+#auth details.apw summary{cursor:pointer;font-weight:700;font-size:.9rem;color:#ddd}
+#auth details.apw[open]{display:grid;gap:10px}
+#auth details.apw .abtn{width:100%}
 #admin .adbox{max-width:1100px;margin:0 auto;background:#1b1b1b;border:1px solid #333;border-radius:14px;padding:20px;display:grid;gap:14px}
 #admin .adhead{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
 #admin .adhead b{font-size:1.25rem;color:var(--red);margin-right:auto}
@@ -768,6 +773,12 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
     <button class="abtn ghost" type="button" id="acctClose">닫기</button>
     <button class="abtn ghost" type="button" id="acctAdmin" hidden>🛠 관리자 메뉴</button>
     <button class="abtn ghost" type="button" id="acctOut">로그아웃</button>
+    <details class="apw" id="acctChg"><summary>🔑 비밀번호 바꾸기</summary>
+      <label>현재 비밀번호<input type="password" name="pwOld" autocomplete="current-password"></label>
+      <label>새 비밀번호 <span class="opt">8자 이상</span><input type="password" name="pwNew" autocomplete="new-password" maxlength="72"></label>
+      <label>새 비밀번호 확인<input type="password" name="pwNew2" autocomplete="new-password" maxlength="72"></label>
+      <button class="abtn" type="button" id="acctChgBtn">비밀번호 바꾸기</button>
+    </details>
     <label style="margin-top:8px" id="acctPw">회원 탈퇴 <span class="opt">계정 정보가 서버에서 바로 삭제됩니다</span><input type="password" name="pw" autocomplete="current-password" placeholder="비밀번호 확인"></label>
     <button class="abtn danger" type="submit">회원 탈퇴</button>
   </form>
@@ -1603,7 +1614,7 @@ function authView(v,closable){const a=$('#auth');$('#authErr').textContent='';$(
   const gw=GID&&(v==='login'||v==='signup');$('#gWrap').hidden=!gw;if(gw)gsiReady();
   document.querySelectorAll('#authTabs button').forEach(b=>b.classList.toggle('on',b.dataset.t===v));
   $('#authSub').textContent=v==='acct'?'내 정보':v==='google'?'구글 계정으로 가입':SITE.login==='required'?'로그인하고 이용해 주세요':'로그인하면 닉네임으로 기록을 남길 수 있어요';
-  if(v==='acct'&&AUTH){const u=AUTH.user;$('#acctPw').hidden=!!u.google;$('#acctAdmin').hidden=!u.admin;$('#acctInfo').innerHTML=[['아이디',u.google?'Google 계정으로 로그인':u.uid],['닉네임',u.nick],['학년',u.grade],['선택과목',u.elective||'–'],['학교',u.school||'–'],['이메일',u.email||'–']].map(([k,x])=>`<dt>${k}</dt><dd>${esc(x)}</dd>`).join('')}
+  if(v==='acct'&&AUTH){const u=AUTH.user;$('#acctPw').hidden=!!u.google;$('#acctAdmin').hidden=!u.admin;{const c=$('#acctChg'),f=$('#fAcct');c.hidden=!!u.google;c.open=false;f.pwOld.value=f.pwNew.value=f.pwNew2.value=''}$('#acctInfo').innerHTML=[['아이디',u.google?'Google 계정으로 로그인':u.uid],['닉네임',u.nick],['학년',u.grade],['선택과목',u.elective||'–'],['학교',u.school||'–'],['이메일',u.email||'–']].map(([k,x])=>`<dt>${k}</dt><dd>${esc(x)}</dd>`).join('')}
   a.dataset.closable=(closable||v==='acct')?'1':'';a.hidden=false;a.scrollTop=0;
   const f=v==='login'?$('#fLogin'):v==='signup'?$('#fSignup'):null;if(f&&window.innerWidth>900)setTimeout(()=>f.querySelector('input').focus(),50)}
 function authDone(j,hello){setAuth({token:j.token,user:j.user});if(!S.name){S.name=j.user.nick;save()}$('#auth').hidden=true;toast(`${j.user.nick}님, ${hello}`);if(!$('#home').hidden)home()}
@@ -1622,6 +1633,18 @@ $('#acctOut').onclick=async()=>{const t=AUTH&&AUTH.token;setAuth(null);if(t)auth
 $('#fAcct').onsubmit=async e=>{e.preventDefault();const f=e.target;if(!(AUTH&&AUTH.user.google)&&!f.pw.value){$('#authErr').textContent='탈퇴하려면 비밀번호를 입력해 주세요.';f.pw.focus();return}
   if(!confirm('정말 탈퇴할까요? 계정 정보가 서버에서 삭제되며 되돌릴 수 없습니다. (이 기기의 풀이 기록은 그대로 남습니다)'))return;
   const j=await authSubmit(f,{action:'delete',token:AUTH&&AUTH.token,pw:f.pw.value});if(j){f.pw.value='';setAuth(null);toast('탈퇴 처리했어요. 이용해 주셔서 고맙습니다');if(SITE.login==='required'&&!isGuest())authView('login');else $('#auth').hidden=true}};
+/* 비밀번호 바꾸기 (아이디로 가입한 계정만) */
+$('#acctChgBtn').onclick=async()=>{const f=$('#fAcct'),err=$('#authErr'),b=$('#acctChgBtn');err.textContent='';
+  if(!f.pwOld.value){err.textContent='현재 비밀번호를 입력해 주세요.';f.pwOld.focus();return}
+  if(f.pwNew.value.length<8){err.textContent='새 비밀번호는 8자 이상으로 만들어 주세요.';f.pwNew.focus();return}
+  if(f.pwNew.value!==f.pwNew2.value){err.textContent='새 비밀번호 확인이 일치하지 않아요.';f.pwNew2.focus();return}
+  if(f.pwNew.value===f.pwOld.value){err.textContent='지금 비밀번호와 다른 비밀번호로 만들어 주세요.';f.pwNew.focus();return}
+  b.disabled=true;const r=await authCall({action:'password',token:AUTH&&AUTH.token,pw:f.pwOld.value,newPw:f.pwNew.value});b.disabled=false;
+  if(r.down){err.textContent='서버에 연결하지 못했어요. 잠시 뒤 다시 해 주세요.';return}
+  if(r.s===401&&!r.j.msg){setAuth(null);authView('login');return}
+  if(!r.j.ok){err.textContent=r.j.msg||'비밀번호를 바꾸지 못했어요.';return}
+  f.pwOld.value=f.pwNew.value=f.pwNew2.value='';$('#acctChg').open=false;$('#auth').hidden=true;toast('비밀번호를 바꿨어요. 다른 기기에서는 다시 로그인해야 해요')};
+['pwOld','pwNew','pwNew2'].forEach(n=>$('#fAcct')[n].addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();$('#acctChgBtn').click()}}));
 /* 관리자 메뉴: 서버가 ADMIN_EMAILS 에 든 구글 계정에만 admin:true 를 준다(서버도 요청마다 다시 확인한다) */
 let ADM=[];
 const adDate=t=>t?new Date(t).toLocaleDateString('ko-KR',{year:'2-digit',month:'2-digit',day:'2-digit'}):'–';
@@ -1642,7 +1665,7 @@ $('#adQ').oninput=adminDraw;$('#adClose').onclick=()=>{$('#admin').hidden=true;a
 $('#adTbl').onclick=async e=>{const b=e.target.closest('button[data-a]');if(!b)return;const id=b.closest('tr').dataset.id;const u=ADM.find(x=>x.id===id);if(!u)return;
   if(b.dataset.a==='reset'){if(!confirm(`${u.uid} (${u.nick}) 의 비밀번호를 임시 비밀번호로 바꿀까요?\n이 계정은 다른 기기에서도 로그아웃됩니다.`))return;
     b.disabled=true;const j=await adminCall({action:'admin_reset',id});b.disabled=false;
-    if(j)adMsg(`<b>${esc(u.uid)}</b> (${esc(u.nick)}) 임시 비밀번호: <code>${esc(j.temp)}</code> — 학생에게 알려 주세요. 이 창을 닫으면 다시 볼 수 없어요.`);return}
+    if(j)adMsg(`<b>${esc(u.uid)}</b> (${esc(u.nick)}) 임시 비밀번호: <code>${esc(j.temp)}</code> — 학생에게 알려 주고, 로그인한 뒤 '내 정보 → 비밀번호 바꾸기'로 바꾸도록 안내해 주세요. 이 창을 닫으면 다시 볼 수 없어요.`);return}
   if(b.dataset.a==='del'){if(!confirm(`${u.google?(u.email||u.uid):u.uid} (${u.nick}) 계정을 삭제할까요?\n계정 정보가 서버에서 바로 지워지며 되돌릴 수 없습니다.`))return;
     b.disabled=true;const j=await adminCall({action:'admin_delete',id});if(j){await adminOpen();adMsg(`<b>${esc(u.nick)}</b> 계정을 삭제했어요.`)}else b.disabled=false}};
 /* 구글 로그인: 서버에 GOOGLE_CLIENT_ID 가 설정돼 있을 때만 버튼이 나온다 */
