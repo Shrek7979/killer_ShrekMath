@@ -1209,7 +1209,7 @@ $('#exportBtn').onclick=async()=>{
 };
 
 /* ───────── 문항 열기 (킬러) ───────── */
-async function open(n,c){
+async function openKiller(n,c){
   mode='killer';D=await loadItem(n);E=null;if(!D){location.hash='';return}
   $('#home').hidden=true;$('#op').hidden=false;window.scrollTo(0,0);
   const rec=S.rec[n];unlocked=!!rec;
@@ -1322,7 +1322,7 @@ function renderCard(p){
   if(p.k==='end'){w.append(head('end'));const b=el('div','body');b.append(el('div','quote',md(D.line||`${D.topic}: 조건 ${D.conds.length}개가 어디서 쓰였는지 다시 말할 수 있으면 분석 끝.`)));
     const rec=S.rec[D.num];if(rec&&!rec.skip)b.append(el('p','lead',`이 문항 기록: ${rec.ok?'정답':'오답'} · ${mmss(rec.secs)}`));
     const row=el('div','btnrow primary');const nx=LIST.find(x=>x.num>D.num);if(nx){const nb=el('button','btn','다음 문항 → #'+String(nx.num).padStart(3,'0')+' '+esc(nx.topic));nb.onclick=()=>location.hash='q'+nx.num;row.append(nb)}
-    const re=el('button','btn ghost','다시 풀기');re.onclick=()=>{delete S.rec[D.num];save();unlocked=false;open(D.num,0)};row.append(re);
+    const re=el('button','btn ghost','다시 풀기');re.onclick=()=>{delete S.rec[D.num];save();unlocked=false;openKiller(D.num,0)};row.append(re);
     const hm=el('button','btn ghost','목록');hm.onclick=()=>location.hash='';row.append(hm);b.append(row);w.append(b);highlight([]);return w}
   return w;
 }
@@ -1330,8 +1330,8 @@ function renderCard(p){
 /* ───────── 실전 모드 (킬러) ───────── */
 function solveBody(){
   const b=el('div','body');const rec=S.rec[D.num];
-  if(rec&&!rec.skip){const row=el('div','btnrow');const g=el('button','btn','분석 시작 →');g.onclick=()=>go(1);const re=el('button','btn ghost','다시 풀기');re.onclick=()=>{delete S.rec[D.num];save();unlocked=false;open(D.num,0)};row.append(g,re);b.append(resultBox(rec));b.append(row);row.classList.add('primary');return b}
-  if(rec&&rec.skip){b.append(el('p','lead','채점 없이 열람한 문항이에요. 기록에 넣으려면 다시 풀어 보세요.'));const g=el('button','btn','분석 보기 →');g.onclick=()=>go(1);const re=el('button','btn ghost','풀어 보기');re.onclick=()=>{delete S.rec[D.num];save();unlocked=false;open(D.num,0)};const r2=el('div','btnrow');r2.append(g,re);b.append(r2);return b}
+  if(rec&&!rec.skip){const row=el('div','btnrow');const g=el('button','btn','분석 시작 →');g.onclick=()=>go(1);const re=el('button','btn ghost','다시 풀기');re.onclick=()=>{delete S.rec[D.num];save();unlocked=false;openKiller(D.num,0)};row.append(g,re);b.append(resultBox(rec));b.append(row);row.classList.add('primary');return b}
+  if(rec&&rec.skip){b.append(el('p','lead','채점 없이 열람한 문항이에요. 기록에 넣으려면 다시 풀어 보세요.'));const g=el('button','btn','분석 보기 →');g.onclick=()=>go(1);const re=el('button','btn ghost','풀어 보기');re.onclick=()=>{delete S.rec[D.num];save();unlocked=false;openKiller(D.num,0)};const r2=el('div','btnrow');r2.append(g,re);b.append(r2);return b}
   const lim=LIMIT[D.stars]||10;
   const SS=S.set;const inSet=SS&&!SS.done&&SS.items[SS.idx]===D.num;
   if(inSet){b.append(el('div','setbar',`${SS.kind==='kill'?'💀':'🎯'} ${setName(SS)} <span class="n">${SS.idx+1}/${SS.items.length}</span> · 전체 제한 <span class="n">${mmss(SS.total)}</span> · 한 시계로 연속 풀이`));
@@ -1623,7 +1623,7 @@ function route(){
   if(guard&&timer&&location.hash!==guard){if(!confirm('풀이 중입니다. 지금 나가면 이 문항의 시간 기록이 사라져요. 나갈까요?')){history.pushState(null,'',guard);return}if(S.run){delete S.run;save()}}
   guard=null;$('#fullSheet').hidden=true;$('#lb').hidden=true;document.body.style.overflow='';
   setTot();fillAuthor();const m=location.hash.match(/^#([qej])(\d+)(?:-(\d+))?$/);
-  if(m){if(!$('#home').hidden)homePos={tab:S.tab,y:window.scrollY,tr:[...document.querySelectorAll('#grid .track')].map(t=>t.scrollLeft)};(m[1]==='q'?open:m[1]==='e'?openEssay:openJapan)(+m[2],+(m[3]||0))}
+  if(m){if(!$('#home').hidden)homePos={tab:S.tab,y:window.scrollY,tr:[...document.querySelectorAll('#grid .track')].map(t=>t.scrollLeft)};(m[1]==='q'?openKiller:m[1]==='e'?openEssay:openJapan)(+m[2],+(m[3]||0))}
   else{home();const hp=homePos;homePos=null;
     if(hp&&hp.tab===S.tab){const put=()=>{const tr=document.querySelectorAll('#grid .track');if(tr.length===hp.tr.length)tr.forEach((t,i)=>{if(hp.tr[i])t.scrollLeft=hp.tr[i]})};
       const g=$('#grid');g.classList.add('nocv');void g.offsetHeight;window.scrollTo(0,hp.y);put();requestAnimationFrame(()=>{window.scrollTo(0,hp.y);put();requestAnimationFrame(()=>g.classList.remove('nocv'))})}}}
