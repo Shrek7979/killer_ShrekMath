@@ -97,7 +97,15 @@ p{word-break:keep-all}
 .fgrp .fl{font-size:.72rem;font-weight:800;color:#9a9a9a;letter-spacing:.08em;margin-right:4px;white-space:nowrap}
 .fchips{display:inline-flex;flex-wrap:wrap;gap:6px}
 .fgrp .chip{padding:5px 12px}
-.setchip{margin-left:auto}
+.setchips{margin-left:auto;display:inline-flex;gap:8px;flex-wrap:wrap}
+.setchip{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;color:#fff;font-weight:800}
+.setchip small{font-family:var(--mono);font-size:.72rem;font-weight:700;opacity:.75;letter-spacing:.02em}
+.setchip.semi{border-color:#ff9f3a;background:rgba(255,159,58,.14)}
+.setchip.semi:hover{background:rgba(255,159,58,.28);border-color:#ffb766}
+.setchip.kill{border-color:var(--red);background:var(--red)}
+.setchip.kill:hover{filter:brightness(1.12)}
+.setchip.go{box-shadow:0 0 0 2px rgba(255,255,255,.35) inset}
+@media (max-width:600px){.setchips{margin-left:0;width:100%;display:grid;grid-template-columns:1fr 1fr}.setchip{flex-direction:column;justify-content:center;gap:2px;padding:9px 6px;white-space:nowrap;line-height:1.2}}
 .chip{border:1px solid #555;background:transparent;border-radius:4px;padding:6px 14px;font-size:.92rem;color:#e5e5e5;font-weight:700}
 .chip:hover{border-color:#fff}
 .chip.on{background:#fff;color:#000;border-color:#fff}
@@ -544,7 +552,7 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
       <button class="chip" data-k="review" data-v="1">복습 필요 (오답·시간초과)</button>
       <button class="chip" data-k="todo" data-v="1">안 푼 문항만</button>
     </div>
-    <button class="chip setchip" id="setBtn" style="border-color:var(--red);color:#fff;background:var(--red)">🎯 모의 세트 (4문항 연속)</button>
+    <span class="setchips"><button class="chip setchip semi" id="setSemi" title="수능 15·20·21·22번 자리 준킬러 4문항을 한 시계로 연속 풀이">🎯 준킬러 4제 <small>15·20·21·22</small></button><button class="chip setchip kill" id="setKill" title="수능 29·30번 자리 킬러 2문항을 한 시계로 연속 풀이">💀 킬러 2제 <small>29·30</small></button></span>
   </div>
   <div class="filters" id="efilters" hidden>
     <div class="fgrp"><span class="fl">대학</span><select class="chip" id="univSel"><option value="">모든 대학</option></select></div>
@@ -626,7 +634,7 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
 </div>
 <div class="toast" id="toast"></div>
 <div id="lb" hidden><img id="lbimg" alt=""><button id="lbx">✕ 닫기</button></div>
-<div id="setResult" hidden><div class="kcard" style="--kc:var(--red);max-width:620px;width:100%"><div class="head"><div class="kind">모의 세트 · 결과</div><button class="btn ghost sm" id="setClose">닫기</button></div><div class="body" style="max-width:none"></div></div></div>
+<div id="setResult" hidden><div class="kcard" style="--kc:var(--red);max-width:620px;width:100%"><div class="head"><div class="kind" id="setKind">모의 세트 · 결과</div><button class="btn ghost sm" id="setClose">닫기</button></div><div class="body" style="max-width:none"></div></div></div>
 <div id="pauseVeil" hidden><div><b>일시정지</b><p>시계가 멈췄어요. 계속하려면 아래를 누르세요.</p><button class="btn" id="pauseResume">▶ 계속 풀기</button></div></div>
 <div id="fullSheet" hidden><div class="fsbar"><b data-en="Problem">문제</b><span class="tmr" id="fsTimer" hidden>00:00</span><button id="fsPause" hidden>⏸<span class="lbl" data-en=" Pause"> 일시정지</span></button><span class="hint" id="fsHint" hidden data-en="Tap image to zoom">그림을 누르면 확대</span><button id="fsDown2" data-en="A−">가−</button><button id="fsUp2" data-en="A+">가+</button><button id="fsAnswer" hidden data-en="✎ Answer">✎ 답</button><button id="fsClose" data-en="✕ Close">✕ 닫기</button></div><div class="exam open fsexam" id="fullExam"></div>
 <div class="fsfoot" id="fsFoot" hidden><div class="ansin" id="fsAnsRow"><span data-en="My answer">내 답</span><input id="fsAns" type="number" inputmode="numeric" min="1" max="999" placeholder="정답"><button class="btn" id="fsGrade" data-en="Check">채점</button></div><button class="btn" id="fsDone" hidden>풀이 완료 → 해설 보기</button></div></div>
@@ -642,7 +650,10 @@ window.__CATS__={};window.__JIMG__={"ess/s17-02-1q-0.webp": "data:image/webp;bas
 <script>
 /* ───────── 설정 ───────── */
 const SITE={author:'ShrekMath', blog:'', sheetUrl:''};   // sheetUrl: Apps Script 웹 앱 URL (apps_script.gs 참고). 비우면 수집 안 함
-const SET_TYPES=['20번형','21번형','29번형','30번형'];   // 모의 세트 구성(없는 유형은 다른 문항으로 채움)
+/* 모의 세트 두 종류: 수능 준킬러 자리(15·20·21·22) / 킬러 자리(29·30). 안 푼 문항이 없는 유형은 같은 세트의 다른 유형으로 채움 */
+const SETS={semi:{name:'준킬러 세트',btn:'🎯 준킬러 4제',sub:'15·20·21·22',types:['15번형','20번형','21번형','22번형']},
+            kill:{name:'킬러 세트',btn:'💀 킬러 2제',sub:'29·30',types:['29번형','30번형']}};
+const setName=st=>(SETS[st&&st.kind]||{name:'모의 세트'}).name;
 const REVIEW_DAYS=[3,7,14];   // 오답·시간초과 문항 복습 주기(일)
 const RANKS=[[0,'손님'],[3,'단골'],[10,'VIP'],[25,'점원'],[45,'매니저'],[72,'사장']];   // 마지막 기준은 전체 문항 수로 자동 조정
 const LIMIT={5:13,4:10,3:8,2:8};   // 제한시간(분): 킬러 13 · 고난도 10 · 준킬러 8
@@ -809,7 +820,10 @@ function home(){
   $('#nKiller').textContent=LIST.length;$('#nEssay').textContent=ELIST.length;$('#nJapan').textContent=JP().length;$('#nPast').textContent=PAST().length;setTot();
   document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.tab===S.tab));applyLang();
   const essay=S.tab==='essay', japan=S.tab==='japan', past=S.tab==='past', other=essay||japan||past;
-  const sb=$('#setBtn');if(S.set&&!S.set.done){sb.textContent=`🎯 세트 이어서 (${S.set.idx+1}/${S.set.items.length})`;sb.onclick=()=>location.hash='q'+S.set.items[S.set.idx]}else{sb.textContent='🎯 모의 세트 (4문항 연속)';sb.onclick=makeSet}
+  for(const [k,id] of [['semi','#setSemi'],['kill','#setKill']]){const sb=$(id);if(!sb)continue;const T=SETS[k];const live=S.set&&!S.set.done&&(S.set.kind||'')===k;
+    sb.classList.toggle('go',!!live);
+    if(live){sb.innerHTML=`▶ ${T.name} 이어서 <small>${S.set.idx+1}/${S.set.items.length}</small>`;sb.onclick=()=>location.hash='q'+S.set.items[S.set.idx]}
+    else{sb.innerHTML=`${T.btn} <small>${T.sub}</small>`;sb.onclick=()=>makeSet(k)}}
   $('#filters').hidden=other;$('#efilters').hidden=!essay;$('#jfilters').hidden=!japan;$('#pfilters').hidden=!past;
   $('#footKiller').hidden=other;$('#footEssay').hidden=!essay;$('#footJapan').hidden=!japan;$('#footPast').hidden=!past;
   $('#flowKiller').hidden=other;$('#flowEssay').hidden=!essay;$('#flowJapan').hidden=!japan;$('#flowPast').hidden=!past;$('#jpBtn').hidden=!japan;
@@ -1037,22 +1051,24 @@ $('#jUnivSel').onchange=e=>{jfilt.univ=e.target.value;home()};$('#jYearSel').onc
 $('#goList').onclick=()=>$('#filters').hidden?[...document.querySelectorAll('.filters')].find(f=>!f.hidden).scrollIntoView({behavior:'smooth',block:'start'}):$('#filters').scrollIntoView({behavior:'smooth',block:'start'});
 $('#nameBtn').onclick=askName;$('#nameSave').onclick=()=>{S.name=$('#nameInp').value.trim();save();$('#nameBox').hidden=true;flush();home();toast(S.name?'이름을 저장했어요':'이름을 지웠어요')};$('#nameInp').onkeydown=e=>{if(e.key==='Enter')$('#nameSave').click()};
 /* 모의 세트: 유형별 1문항씩, 제한시간 합산, 한 시계로 연속 풀이 */
-function makeSet(){const items=[];const used=new Set();
-  for(const t of SET_TYPES){const pool=LIST.filter(x=>x.type===t&&!S.rec[x.num]&&!used.has(x.num));const pick=pool.length?pool[Math.floor(Math.random()*pool.length)]:null;if(pick){items.push(pick.num);used.add(pick.num)}}
-  while(items.length<SET_TYPES.length){const pool=LIST.filter(x=>!S.rec[x.num]&&!used.has(x.num));if(!pool.length)break;const p=pool[Math.floor(Math.random()*pool.length)];items.push(p.num);used.add(p.num)}
-  if(items.length<2){toast('세트를 만들 미해결 문항이 부족해요');return}
+function makeSet(kind){const T=SETS[kind];if(!T)return;
+  if(S.set&&!S.set.done&&!confirm(`진행 중인 ${setName(S.set)}를 그만두고 새 ${T.name}를 시작할까요?`))return;
+  const items=[];const used=new Set();const fresh=x=>!S.rec[x.num]&&!used.has(x.num);const rnd=a=>a[Math.floor(Math.random()*a.length)];
+  for(const t of T.types){const pool=LIST.filter(x=>x.type===t&&fresh(x));if(pool.length){const p=rnd(pool);items.push(p.num);used.add(p.num)}}
+  while(items.length<T.types.length){const pool=LIST.filter(x=>T.types.includes(x.type)&&fresh(x));if(!pool.length)break;const p=rnd(pool);items.push(p.num);used.add(p.num)}
+  items.sort((a,b)=>parseInt(LIST.find(x=>x.num===a).type)-parseInt(LIST.find(x=>x.num===b).type));   // 시험지 순서대로
+  if(items.length<2){toast(`${T.name}를 만들 안 푼 문항이 부족해요`);return}
   const total=items.reduce((a,n)=>a+(LIMIT[LIST.find(x=>x.num===n).stars]||10),0)*60;
-  S.set={id:'S'+Date.now().toString(36),items,idx:0,total,start:Date.now(),results:[],done:false};save();location.hash='q'+items[0]}
+  S.set={id:'S'+Date.now().toString(36),kind,items,idx:0,total,start:Date.now(),results:[],done:false};save();location.hash='q'+items[0]}
 function setNext(ok,secs){const st=S.set;st.results.push({num:D.num,ok,secs});st.idx++;save();
   if(st.idx<st.items.length){toast(`${st.idx}/${st.items.length} 완료 · 다음 문항`);location.hash='q'+st.items[st.idx]}
   else{st.done=true;save();stopTimer();showSetResult()}}
-function showSetResult(){const st=S.set;const box=$('#setResult');const ok=st.results.filter(r=>r.ok).length;const used=st.results.reduce((a,r)=>a+r.secs,0);
+function showSetResult(){const st=S.set;const box=$('#setResult');$('#setKind').textContent=setName(st)+' · 결과';const ok=st.results.filter(r=>r.ok).length;const used=st.results.reduce((a,r)=>a+r.secs,0);
   box.querySelector('.body').innerHTML=`<div class="scoresum">${ok} / ${st.results.length} 정답</div><p class="lead">사용 시간 ${mmss(used)} / 제한 ${mmss(st.total)} ${used>st.total?'<span class="dbadge" style="--dc:#ff9f3a">초과</span>':''}</p>
    <table class="stable"><tr><th>문항</th><th>결과</th><th>시간</th><th></th></tr>${st.results.map(r=>{const x=LIST.find(y=>y.num===r.num)||{};return `<tr><td>#${String(r.num).padStart(3,'0')} ${esc(x.topic||'')}</td><td>${r.ok?'<b style="color:var(--green)">정답</b>':'<b style="color:var(--red)">오답</b>'}</td><td class="n">${mmss(r.secs)}</td><td><button class="btn ghost sm" data-go="${r.num}">분석</button></td></tr>`}).join('')}</table>`;
-  box.hidden=false;report({kind:'세트',num:'',id:st.id,title:st.items.map(n=>'#'+n).join(' '),result:`${ok}/${st.results.length}`,secs:used,limit:st.total,over:used>st.total,set:st.id})}
+  box.hidden=false;report({kind:'세트',num:'',id:st.id,title:setName(st)+' '+st.items.map(n=>'#'+n).join(' '),result:`${ok}/${st.results.length}`,secs:used,limit:st.total,over:used>st.total,set:st.id})}
 $('#setResult').addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b){$('#setResult').hidden=true;S.set=null;save();location.hash='q'+b.dataset.go}});
 $('#setClose').onclick=()=>{$('#setResult').hidden=true;S.set=null;save();location.hash=''};
-$('#setBtn').onclick=makeSet;
 $('#logoHome').onclick=$('#logoOp').onclick=e=>{e.preventDefault();S.tab='killer';save();if(location.hash){history.pushState(null,'',location.pathname+location.search)}home();window.scrollTo({top:0,behavior:'smooth'})};
 $('#jpBtn').onclick=()=>{S.jlang=JA()?'ko':'ja';save();applyLang();if(!$('#op').hidden&&mode==='japan'&&J)openJapan(J.num,cur);else home()};
 $('#langBtn').onclick=()=>{S.lang=EN()?'ko':'en';save();applyLang();if(!$('#op').hidden&&mode==='japan'&&J)openJapan(J.num,cur);else home()};
@@ -1204,7 +1220,7 @@ function solveBody(){
   if(rec&&rec.skip){b.append(el('p','lead','채점 없이 열람한 문항이에요. 기록에 넣으려면 다시 풀어 보세요.'));const g=el('button','btn','분석 보기 →');g.onclick=()=>go(1);const re=el('button','btn ghost','풀어 보기');re.onclick=()=>{delete S.rec[D.num];save();unlocked=false;open(D.num,0)};const r2=el('div','btnrow');r2.append(g,re);b.append(r2);return b}
   const lim=LIMIT[D.stars]||10;
   const SS=S.set;const inSet=SS&&!SS.done&&SS.items[SS.idx]===D.num;
-  if(inSet){b.append(el('div','setbar',`🎯 모의 세트 <span class="n">${SS.idx+1}/${SS.items.length}</span> · 전체 제한 <span class="n">${mmss(SS.total)}</span> · 한 시계로 연속 풀이`));
+  if(inSet){b.append(el('div','setbar',`${SS.kind==='kill'?'💀':'🎯'} ${setName(SS)} <span class="n">${SS.idx+1}/${SS.items.length}</span> · 전체 제한 <span class="n">${mmss(SS.total)}</span> · 한 시계로 연속 풀이`));
     b.append(el('h2',null,'바로 풀기 시작'));const tm=el('div','timer num','00:00');b.append(tm);const lm=el('div','lead num','');b.append(lm);
     const ai=el('div','ansin');const inp=el('input');inp.type='number';inp.min=1;inp.max=999;inp.id='answer';inp.placeholder='정답';const gb=el('button','btn','채점 · 다음');ai.append(el('span',null,'내 답'),inp,gb);b.append(ai);
     const itemStart=Date.now();$('#exam').classList.add('open');
