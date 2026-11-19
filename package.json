@@ -1,0 +1,9 @@
+{
+  "name": "killer-shrekmath",
+  "private": true,
+  "description": "킬러들의 수학몰 — 정적 사이트(site/) + 방문자 수 서버 함수(api/visit.js)",
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.2.1"
+  }
+}
