@@ -1,5 +1,6 @@
 // 회원가입·로그인 (Vercel 서버리스 함수 + Neon Postgres)
-//  POST /api/auth  { action: 'signup' | 'login' | 'me' | 'logout' | 'delete', ... }
+//  POST /api/auth  { action: 'signup' | 'login' | 'google' | 'config' | 'me' | 'logout' | 'delete', ... }
+//  · 구글 로그인: Vercel 환경변수 GOOGLE_CLIENT_ID 가 있을 때만 켜진다. 구글이 서명한 ID 토큰을 구글 서버에 확인받아 쓴다.
 //  · 비밀번호는 scrypt(솔트 포함)로 해시해 저장하고, 원문은 어디에도 남기지 않는다.
 //  · 로그인 토큰은 임의의 32바이트. DB에는 SHA-256 해시만 저장한다.
 //  · 수집 항목: 아이디, 비밀번호(해시), 닉네임, 학년 구분 (필수) / 이메일, 학교, 선택과목 (선택)
@@ -23,7 +24,18 @@ function checkPw(pw, stored) {
   return a.length === b.length && crypto.timingSafeEqual(a, b);
 }
 const clean = (v, max) => String(v == null ? '' : v).replace(/[\u0000-\u001f<>]/g, '').trim().slice(0, max);
-const pub = u => ({ uid: u.uid, nick: u.nick, grade: u.grade, email: u.email || '', school: u.school || '', elective: u.elective || '' });
+const pub = u => ({ uid: u.uid, nick: u.nick, grade: u.grade, email: u.email || '', school: u.school || '', elective: u.elective || '', google: !!u.google_sub });
+// 구글 ID 토큰 확인: 구글 tokeninfo 가 서명·만료를 검사해 준다. 우리 사이트용으로 발급된 토큰인지(aud)는 여기서 확인한다.
+async function verifyGoogle(credential, clientId) {
+  if (!credential || typeof credential !== 'string' || credential.length > 4096) return null;
+  const r = await fetch('https://oauth2.googleapis.com/tokeninfo?id_token=' + encodeURIComponent(credential));
+  if (!r.ok) return null;
+  const t = await r.json();
+  if (t.aud !== clientId) return null;
+  if (t.iss !== 'accounts.google.com' && t.iss !== 'https://accounts.google.com') return null;
+  if (!t.sub || Number(t.exp) * 1000 < Date.now()) return null;
+  return { sub: String(t.sub), email: String(t.email_verified) === 'true' ? String(t.email || '') : '', name: String(t.given_name || t.name || '') };
+}
 
 module.exports = async (req, res) => {
   res.setHeader('Cache-Control', 'no-store');
@@ -44,8 +56,11 @@ module.exports = async (req, res) => {
         created_at TIMESTAMPTZ NOT NULL DEFAULT now(), last_login TIMESTAMPTZ, fails INT NOT NULL DEFAULT 0, locked_until TIMESTAMPTZ)`;
       await sql`CREATE TABLE IF NOT EXISTS km_session (
         tok TEXT PRIMARY KEY, user_id BIGINT NOT NULL REFERENCES km_user(id) ON DELETE CASCADE, created_at TIMESTAMPTZ NOT NULL DEFAULT now())`;
+      await sql`ALTER TABLE km_user ADD COLUMN IF NOT EXISTS google_sub TEXT UNIQUE`;
+      await sql`ALTER TABLE km_user ALTER COLUMN pw DROP NOT NULL`;
       ready = true;
     }
+    const gid = process.env.GOOGLE_CLIENT_ID || '';
     const newSession = async userId => {
       const tok = crypto.randomBytes(32).toString('hex');
       await sql`INSERT INTO km_session (tok, user_id) VALUES (${sha(tok)}, ${userId})`;
@@ -78,13 +93,39 @@ module.exports = async (req, res) => {
       res.status(200).json({ ok: true, token: await newSession(rows[0].id), user: pub(rows[0]) }); return;
     }
 
+    if (action === 'config') { res.status(200).json({ ok: true, googleClientId: gid }); return; }
+
+    if (action === 'google') {
+      if (!gid) return bad('구글 로그인이 아직 설정되지 않았어요.', 503);
+      const g = await (module.exports._verifyGoogle || verifyGoogle)(b.credential, gid);
+      if (!g) return bad('구글 계정을 확인하지 못했어요. 다시 시도해 주세요.', 401);
+      const ex = await sql`SELECT * FROM km_user WHERE google_sub = ${g.sub}`;
+      if (ex[0]) {
+        await sql`UPDATE km_user SET last_login = now() WHERE id = ${ex[0].id}`;
+        res.status(200).json({ ok: true, token: await newSession(ex[0].id), user: pub(ex[0]) }); return;
+      }
+      // 처음 온 구글 계정: 닉네임·학년·동의를 받아야 가입된다. 아직 안 받았으면 그 화면을 띄우라고 알려 준다.
+      if (b.nick == null && b.grade == null) { res.status(200).json({ need: 'profile', suggest: clean(g.name, 20) }); return; }
+      const nick = clean(b.nick, 20), grade = String(b.grade || ''), school = clean(b.school, 40), elective = String(b.elective || '');
+      if (!nick) return bad('닉네임을 입력해 주세요.');
+      if (!GRADES.includes(grade)) return bad('학년 구분을 골라 주세요.');
+      if (!ELECTIVES.includes(elective)) return bad('선택과목 값이 올바르지 않아요.');
+      if (b.agree14 !== true || b.agreePrivacy !== true) return bad('만 14세 이상 확인과 개인정보 수집·이용 동의가 필요해요.');
+      const uid = 'g_' + sha(g.sub).slice(0, 14);
+      const rows = await sql`INSERT INTO km_user (uid, pw, nick, grade, email, school, elective, google_sub, last_login)
+        VALUES (${uid}, ${null}, ${nick}, ${grade}, ${g.email || null}, ${school || null}, ${elective || null}, ${g.sub}, now())
+        ON CONFLICT DO NOTHING RETURNING *`;
+      if (!rows.length) return bad('가입을 처리하지 못했어요. 다시 시도해 주세요.', 409);
+      res.status(200).json({ ok: true, token: await newSession(rows[0].id), user: pub(rows[0]) }); return;
+    }
+
     if (action === 'login') {
       const uid = String(b.uid || '').trim().toLowerCase(), pw = String(b.pw || '');
       if (!uid || !pw) return bad('아이디와 비밀번호를 입력해 주세요.');
       const r = await sql`SELECT *, (locked_until IS NOT NULL AND locked_until > now()) AS locked FROM km_user WHERE uid = ${uid}`;
       const u = r[0];
       if (u && u.locked) return bad('로그인 시도가 너무 많았어요. 5분 뒤에 다시 해 주세요.', 429);
-      if (!u || !checkPw(pw.slice(0, 72), u.pw)) {
+      if (!u || !u.pw || !checkPw(pw.slice(0, 72), u.pw)) {
         if (u) await sql`UPDATE km_user SET fails = fails + 1,
           locked_until = CASE WHEN fails + 1 >= 5 THEN now() + interval '5 minutes' ELSE locked_until END WHERE id = ${u.id}`;
         return bad('아이디 또는 비밀번호가 맞지 않아요.', 401);
@@ -100,7 +141,7 @@ module.exports = async (req, res) => {
       if (action === 'me') { res.status(200).json({ ok: true, user: pub(u) }); return; }
       if (action === 'logout') { await sql`DELETE FROM km_session WHERE tok = ${sha(b.token)}`; res.status(200).json({ ok: true }); return; }
       // 회원 탈퇴: 본인 확인을 위해 비밀번호를 다시 받고, 계정과 모든 로그인 기록을 지운다
-      if (!checkPw(String(b.pw || '').slice(0, 72), u.pw)) return bad('비밀번호가 맞지 않아요.', 401);
+      if (u.pw && !checkPw(String(b.pw || '').slice(0, 72), u.pw)) return bad('비밀번호가 맞지 않아요.', 401);   // 구글 가입 계정은 비밀번호가 없어 로그인 상태만 확인
       await sql`DELETE FROM km_user WHERE id = ${u.id}`;
       res.status(200).json({ ok: true }); return;
     }
