@@ -45,6 +45,8 @@ p{word-break:keep-all}
 .topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:8;display:flex;align-items:center;gap:26px;padding:14px 0;background:linear-gradient(180deg,rgba(0,0,0,.85),rgba(0,0,0,.6) 70%,transparent);backdrop-filter:blur(4px)}
 .topbar .logo{display:block;text-decoration:none;cursor:pointer;font-family:var(--disp);font-weight:900;font-size:1.55rem;letter-spacing:-.02em;color:var(--red);line-height:1;text-shadow:0 2px 12px rgba(229,9,20,.35);white-space:nowrap}
 .topbar .logo small{display:block;font-size:.6rem;letter-spacing:.3em;color:var(--mute);font-weight:700;margin-top:2px}
+.topbar .logo .tot{display:inline-block;vertical-align:middle;margin-left:10px;padding:3px 9px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff;font-family:var(--mono);font-size:.78rem;font-weight:700;letter-spacing:0;text-shadow:none}
+.topbar .logo .tot:empty{display:none}
 .topbar nav{display:flex;gap:4px;flex:1;flex-wrap:wrap}
 .topbar nav button{color:#e5e5e5;font-weight:700;font-size:1rem;padding:8px 12px;border-radius:6px;opacity:.75}
 .topbar nav button.on{opacity:1;color:#fff;background:rgba(255,255,255,.08)}
@@ -425,6 +427,7 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
 @media (max-width:760px){
   .topbar{flex-wrap:wrap;row-gap:8px;column-gap:8px;padding:8px 0 10px;background:rgba(10,10,10,.94)}
   .topbar .logo{flex:1;min-width:0;font-size:1.2rem}
+  .topbar .logo .tot{margin-left:6px;padding:2px 7px;font-size:.66rem}
   .topbar nav{order:3;flex:0 0 100%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;overflow:visible}
   .topbar nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:50px;padding:6px 2px;font-size:1.02rem;line-height:1.15;border-radius:8px;background:rgba(255,255,255,.07);opacity:.9}
   .topbar nav button.on{background:var(--red);color:#fff;opacity:1;box-shadow:0 4px 14px rgba(229,9,20,.35)}
@@ -447,7 +450,7 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
 
 <div id="home" class="wrap" hidden>
   <div class="topbar">
-    <a class="logo" id="logoHome" href="#" title="홈으로">킬러들의 수학몰<small>KILLERS' MATH MALL · by ShrekMath</small></a>
+    <a class="logo" id="logoHome" href="#" title="홈으로">킬러들의 수학몰<span class="tot" id="nTotal"></span><small>KILLERS' MATH MALL · by ShrekMath</small></a>
     <nav id="tabs">
       <button data-tab="killer" class="on">킬러관<span class="n" id="nKiller">0</span></button>
       <button data-tab="essay">논술관<span class="n" id="nEssay">0</span></button>
@@ -758,7 +761,7 @@ function home(){
   $('#op').hidden=true;$('#home').hidden=false;stopTimer();
   $('#author').textContent=SITE.author;document.querySelectorAll('.author').forEach(e=>e.textContent=SITE.author);
   if(SITE.blog){const a=$('#bloglink');a.hidden=false;a.href=SITE.blog;a.textContent='블로그 ↗'}
-  $('#nKiller').textContent=LIST.length;$('#nEssay').textContent=ELIST.length;$('#nJapan').textContent=JP().length;$('#nPast').textContent=PAST().length;
+  $('#nKiller').textContent=LIST.length;$('#nEssay').textContent=ELIST.length;$('#nJapan').textContent=JP().length;$('#nPast').textContent=PAST().length;$('#nTotal').textContent=(EN()?'Total ':'총 ')+(LIST.length+ELIST.length+JP().length+PAST().length).toLocaleString()+(EN()?'':'문항');
   document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.tab===S.tab));applyLang();
   const essay=S.tab==='essay', japan=S.tab==='japan', past=S.tab==='past', other=essay||japan||past;
   const sb=$('#setBtn');if(S.set&&!S.set.done){sb.textContent=`🎯 세트 이어서 (${S.set.idx+1}/${S.set.items.length})`;sb.onclick=()=>location.hash='q'+S.set.items[S.set.idx]}else{sb.textContent='🎯 모의 세트 (4문항 연속)';sb.onclick=makeSet}
