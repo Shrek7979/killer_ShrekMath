@@ -45,10 +45,15 @@ p{word-break:keep-all}
 .topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:8;display:flex;align-items:center;gap:26px;padding:14px 0;background:linear-gradient(180deg,rgba(0,0,0,.85),rgba(0,0,0,.6) 70%,transparent);backdrop-filter:blur(4px)}
 .topbar .logo{display:block;text-decoration:none;cursor:pointer;font-family:var(--disp);font-weight:900;font-size:1.55rem;letter-spacing:-.02em;color:var(--red);line-height:1;text-shadow:0 2px 12px rgba(229,9,20,.35);white-space:nowrap}
 .topbar .logo small{display:block;font-size:.6rem;letter-spacing:.3em;color:var(--mute);font-weight:700;margin-top:2px}
-.topbar .logo .tot{display:inline-block;vertical-align:middle;margin-left:10px;padding:3px 9px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff;font-family:var(--mono);font-size:.78rem;font-weight:700;letter-spacing:0;text-shadow:none}
-.topbar .logo .tot:empty{display:none}
-.topbar .logo .vis{display:inline-block;vertical-align:middle;margin-left:6px;padding:3px 9px;border-radius:999px;color:var(--mute);font-family:var(--mono);font-size:.72rem;font-weight:700;letter-spacing:0;text-shadow:none;border:1px solid rgba(255,255,255,.12)}
-.topbar .logo .vis b{color:#fff;font-weight:700}
+.topbar .logo .meta{display:inline-flex;align-items:center;vertical-align:middle;margin-left:12px;padding:4px 11px;gap:9px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-family:var(--body);font-size:.74rem;font-weight:500;letter-spacing:0;line-height:1.2;text-shadow:none;color:var(--mute)}
+.topbar .logo .meta:has(.tot:empty){display:none}
+.topbar .logo .tot,.topbar .logo .vis{display:inline-flex;align-items:baseline;gap:4px;white-space:nowrap}
+.topbar .logo .tot:empty,.topbar .logo .vis[hidden]{display:none}
+.topbar .logo .meta b{color:#fff;font-family:var(--mono);font-weight:700;font-variant-numeric:tabular-nums}
+.topbar .logo .meta i{font-style:normal}
+.topbar .logo .vis{padding-left:9px;border-left:1px solid rgba(255,255,255,.16)}
+.topbar .logo .vis .sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.3);align-self:center;margin:0 2px}
+.topbar .logo .vis .dot{width:6px;height:6px;border-radius:50%;background:#2ecc71;box-shadow:0 0 0 3px rgba(46,204,113,.18);align-self:center}
 .topbar nav{display:flex;gap:4px;flex:1;flex-wrap:wrap}
 .topbar nav button{color:#e5e5e5;font-weight:700;font-size:1rem;padding:8px 12px;border-radius:6px;opacity:.75}
 .topbar nav button.on{opacity:1;color:#fff;background:rgba(255,255,255,.08)}
@@ -188,6 +193,7 @@ select.chip{appearance:auto;color:#e5e5e5;background:#141414}
 .opbar .logo small{display:block;font-size:.55rem;letter-spacing:.3em;color:var(--mute);font-weight:700;margin-top:2px}
 .opbar .logo .tot{display:inline-block;vertical-align:middle;margin-left:8px;padding:2px 8px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff;font-family:var(--mono);font-size:.7rem;font-weight:700;letter-spacing:0;text-shadow:none}
 .opbar .logo .tot:empty{display:none}
+.opbar .logo .tot b{font-weight:700}.opbar .logo .tot i{font-style:normal;color:var(--mute);margin-left:3px;font-family:var(--body);font-weight:500}
 .opbar .id{font-family:var(--mono);font-size:.8rem;color:var(--mute);display:flex;gap:8px;align-items:center}
 .opbar .ttl{font-family:var(--disp);font-size:1.4rem;flex:1;min-width:0}
 .opbar .diff{font-size:.84rem;font-weight:700;padding:5px 12px;border-radius:10px;background:color-mix(in srgb,var(--dc) 18%,transparent);color:var(--dc);white-space:nowrap}
@@ -442,16 +448,20 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
   .topbar{flex-wrap:wrap;row-gap:8px;column-gap:8px;padding:8px 0 10px;background:rgba(10,10,10,.94)}
   .topbar .logo{flex:1;min-width:0;font-size:1.2rem}
   .topbar .logo{line-height:1.05}
-  .topbar .logo .meta{display:block;margin-top:4px;white-space:nowrap}
-  .topbar .logo .tot{margin:0;padding:1px 7px;font-size:.62rem}
-  .topbar .logo .vis{display:table;margin:3px 0 0;padding:1px 7px;font-size:.6rem}
-  .topbar .logo .vis[hidden]{display:none}
+  .topbar .logo .meta{display:flex;width:max-content;max-width:100%;margin:7px 0 0;padding:3px 10px;gap:8px;font-size:.68rem}
+  .topbar .logo .vis{padding-left:8px}
   .topbar nav{order:3;flex:0 0 100%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;overflow:visible}
   .topbar nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:50px;padding:6px 2px;font-size:1.02rem;line-height:1.15;border-radius:8px;background:rgba(255,255,255,.07);opacity:.9}
   .topbar nav button.on{background:var(--red);color:#fff;opacity:1;box-shadow:0 4px 14px rgba(229,9,20,.35)}
   .topbar nav button .n{margin:0;font-size:.72rem;color:rgba(255,255,255,.65)}
   .topbar nav button.on .n{color:rgba(255,255,255,.9)}
   .topbar .cta{padding:8px 11px;font-size:.9rem}
+}
+/* 좁은 휴대폰: 버튼을 위쪽에 낮게 붙여, 통계 줄이 버튼 아래로 지나가도 겹치지 않게 */
+@media (max-width:400px){
+  .topbar{align-items:flex-start}
+  .topbar .cta{display:flex;align-items:center;height:30px;padding:0 9px;font-size:.82rem}
+  .topbar .logo .meta{margin-top:12px;max-width:none}
 }
 </style>
 
@@ -1385,10 +1395,10 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#fullSheet').hi
 
 /* ───────── 라우팅 ───────── */
 var VIS=null;
-function showVis(){const e=$('#nVisit');if(!e||!VIS)return;e.innerHTML=(EN()?'Today <b>':'오늘 <b>')+VIS.today.toLocaleString()+(EN()?'</b> · Total <b>':'</b> · 누적 <b>')+VIS.total.toLocaleString()+'</b>';e.title=EN()?'Visitors (each device counted once a day)':'방문자 수 (같은 기기는 하루 한 번만 셉니다)';e.hidden=false}
+function showVis(){const e=$('#nVisit');if(!e||!VIS)return;e.innerHTML='<span class="dot"></span><i>'+(EN()?'Today':'오늘')+'</i><b>'+VIS.today.toLocaleString()+'</b><span class="sep"></span><i>'+(EN()?'Total':'누적')+'</i><b>'+VIS.total.toLocaleString()+'</b>';e.title=EN()?'Visitors (each device counted once a day)':'방문자 수 (같은 기기는 하루 한 번만 셉니다)';e.hidden=false}
 (function visit(){if(!/^https?:/.test(location.protocol))return;const d=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);let hit=true;try{hit=localStorage.getItem('km_vday')!==d}catch(e){}
   fetch('/api/visit'+(hit?'?hit=1':''),{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(!j||j.total==null)return;if(hit)try{localStorage.setItem('km_vday',d)}catch(e){}VIS=j;showVis()}).catch(()=>{})})();
-function setTot(){showVis();try{$('#nTotal').textContent=(EN()?'Total ':'총 ')+(LIST.length+ELIST.length+JP().length+PAST().length).toLocaleString()+(EN()?'':'문항');$('#nTotal2').textContent=(EN()?'Total ':'총 ')+(LIST.length+ELIST.length+JP().length+PAST().length).toLocaleString()+(EN()?'':'문항');}catch(e){}}
+function setTot(){showVis();try{const h='<b>'+(LIST.length+ELIST.length+JP().length+PAST().length).toLocaleString()+'</b><i>'+(EN()?'items':'문항')+'</i>';$('#nTotal').innerHTML=h;$('#nTotal2').innerHTML=h;}catch(e){}}
 function route(){setTot();const m=location.hash.match(/^#([qej])(\d+)(?:-(\d+))?$/);if(m){(m[1]==='q'?open:m[1]==='e'?openEssay:openJapan)(+m[2],+(m[3]||0))}else home()}
 window.addEventListener('hashchange',route);
 
