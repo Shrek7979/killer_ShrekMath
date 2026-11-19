@@ -1,0 +1,92 @@
+{
+ "num": 398,
+ "id": "MK-서울대학교면접대비제3회ShrekMath-2",
+ "univ": "서울대학교 면접 대비 제3회 (ShrekMath)",
+ "n": 2,
+ "year": 2026,
+ "title": "문제 2",
+ "head": "",
+ "points": null,
+ "minutes": 15,
+ "info": {
+  "concepts": "",
+  "time": "15분"
+ },
+ "pre": [],
+ "passage": [
+  "곡선 $y=x^{2}$ 위의 점 $(a_{n},\\,a_{n}^{2})$ 에서의 접선에 수직이고 이 점을 지나는 직선이 곡선 $y=x^{2}$ 과 다시 만나는 점의 $x$ 좌표를 $-a_{n+1}$ 이라고 하자. 이와 같은 방법으로 $a_{1}=1$ 인 수열 $\\{a_{n}\\}$ 을 정한다.",
+  "[그림]"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[2-1]",
+   "points": null,
+   "text": [
+    "$a_{n+1}$ 을 $a_{n}$ 에 대한 식으로 나타내시오."
+   ],
+   "answer": [
+    "점 $(a_{n},\\,a_{n}^{2})$ 에서의 접선의 기울기는 $2 a_{n}$ 이므로 이 점을 지나고 접선에 수직인 직선의 방정식은 $y-a_{n}^{2}=-\\frac{1}{2 a_{n}}(x-a_{n})$ 이다. $y=x^{2}$ 과 연립하면 $(x-a_{n})(x+a_{n})=-\\frac{1}{2 a_{n}}(x-a_{n})$ 이고 $x \\ne a_{n}$ 인 해는 $x=-a_{n}-\\frac{1}{2 a_{n}}$ 이다. 따라서 $a_{n+1}=a_{n}+\\frac{1}{2 a_{n}}$ 이다. ( $a_{1}=1>0$ 이므로 모든 자연수 $n$ 에 대하여 $a_{n}>0$ 이다.)"
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "[2-2]",
+   "points": null,
+   "text": [
+    "모든 자연수 $n$ 에 대하여 $n \\le a_{n}^{2}\\le n+\\frac{1+\\ln n}{4}$ 임을 보이시오."
+   ],
+   "answer": [
+    "문제 2-1의 식의 양변을 제곱하면",
+    "$a_{n+1}^{2}=a_{n}^{2}+1+\\frac{1}{4 a_{n}^{2}}$",
+    "이므로 $a_{n+1}^{2}>a_{n}^{2}+1$ 이다. $a_{1}^{2}=1$ 이고, $a_{k}^{2}\\ge k$ 이면 $a_{k+1}^{2}>k+1$ 이므로 수학적 귀납법에 의하여 모든 자연수 $n$ 에 대하여 $a_{n}^{2}\\ge n$ 이다.",
+    "$n=1$ 일 때 $a_{1}^{2}=1 \\le 1+\\frac{1}{4}$ 이다. $n \\ge 2$ 일 때 위의 등식에서 $n$ 대신 $k$ 를 쓰고 $k=1$ 부터 $k=n-1$ 까지 변끼리 더하고 $a_{k}^{2}\\ge k$ 를 이용하면",
+    "$a_{n}^{2}=n+\\frac{1}{4}\\sum_{k=1}^{n-1}\\frac{1}{a_{k}^{2}}\\le n+\\frac{1}{4}\\sum_{k=1}^{n-1}\\frac{1}{k}$",
+    "이다. $k \\ge 2$ 일 때 $k-1 \\le x \\le k$ 에서 $\\frac{1}{k}\\le \\frac{1}{x}$ 이므로 $\\frac{1}{k}\\le \\int_{k-1}^{k}\\frac{1}{x}dx$ 이고, 따라서",
+    "$\\sum_{k=1}^{n-1}\\frac{1}{k}\\le 1+\\int_{1}^{n-1}\\frac{1}{x}dx=1+\\ln(n-1)\\le 1+\\ln n$",
+    "이다. 그러므로 $a_{n}^{2}\\le n+\\frac{1+\\ln n}{4}$ 이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "3",
+   "label": "[2-3]",
+   "points": null,
+   "text": [
+    "두 극한값 $\\lim_{n \\to \\infty}\\frac{a_{n}}{\\sqrt{n}}$ 과 $\\lim_{n \\to \\infty}\\sqrt{n}(a_{n+1}-a_{n})$ 을 각각 구하시오."
+   ],
+   "answer": [
+    "$x \\ge 1$ 에서 $k(x)=2 \\sqrt{x}-\\ln x$ 라 하면 $k'(x)=\\frac{\\sqrt{x}-1}{x}\\ge 0$ 이고 $k(1)=2>0$ 이므로 $\\ln x \\le 2 \\sqrt{x}$ 이다. 따라서 $0 \\le \\frac{\\ln n}{n}\\le \\frac{2}{\\sqrt{n}}$ 이고 $\\lim_{n \\to \\infty}\\frac{\\ln n}{n}=0$ 이다.",
+    "문제 2-2에서 $1 \\le \\frac{a_{n}^{2}}{n}\\le 1+\\frac{1+\\ln n}{4 n}$ 이므로 $\\lim_{n \\to \\infty}\\frac{a_{n}^{2}}{n}=1$ 이고, $a_{n}>0$ 이므로 $\\lim_{n \\to \\infty}\\frac{a_{n}}{\\sqrt{n}}=1$ 이다.",
+    "또 $\\sqrt{n}(a_{n+1}-a_{n})=\\frac{\\sqrt{n}}{2 a_{n}}$ 이므로 $\\lim_{n \\to \\infty}\\sqrt{n}(a_{n+1}-a_{n})=\\frac{1}{2}$ 이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "4",
+   "label": "[2-4]",
+   "points": null,
+   "text": [
+    "극한값 $\\lim_{n \\to \\infty}\\frac{a_{n}^{2}-n}{\\ln n}$ 을 구하시오.",
+    "※ 제시문을 읽고 문제에 답하시오."
+   ],
+   "answer": [
+    "$c_{k}=\\frac{1+\\ln k}{4}$ 라 하면 문제 2-2에서 $a_{k}^{2}\\le k+c_{k}$ 이므로",
+    "$\\frac{1}{a_{k}^{2}}\\ge \\frac{1}{k+c_{k}}=\\frac{1}{k}-\\frac{c_{k}}{k(k+c_{k})}\\ge \\frac{1}{k}-\\frac{c_{k}}{k^{2}}$",
+    "이다. $\\ln k \\le 2 \\sqrt{k}$ 에서 $c_{k}\\le \\frac{1+2 \\sqrt{k}}{4}\\le \\frac{3 \\sqrt{k}}{4}$ 이므로 $\\frac{c_{k}}{k^{2}}\\le \\frac{3}{4 k \\sqrt{k}}$ 이다. $k \\ge 2$ 일 때 $\\frac{1}{k \\sqrt{k}}\\le \\int_{k-1}^{k}\\frac{1}{x \\sqrt{x}}dx$ 이므로 모든 자연수 $N$ 에 대하여",
+    "$\\sum_{k=1}^{N}\\frac{1}{k \\sqrt{k}}\\le 1+\\int_{1}^{N}\\frac{1}{x \\sqrt{x}}dx=3-\\frac{2}{\\sqrt{N}}<3$",
+    "이고, 따라서 $\\sum_{k=1}^{N}\\frac{c_{k}}{k^{2}}<\\frac{9}{4}$ 이다.",
+    "한편 $k \\le x \\le k+1$ 에서 $\\frac{1}{k}\\ge \\frac{1}{x}$ 이므로 $\\sum_{k=1}^{n-1}\\frac{1}{k}\\ge \\int_{1}^{n}\\frac{1}{x}dx=\\ln n$ 이다. 그러므로 $n \\ge 2$ 일 때",
+    "$a_{n}^{2}-n=\\frac{1}{4}\\sum_{k=1}^{n-1}\\frac{1}{a_{k}^{2}}\\ge \\frac{1}{4}\\left(\\ln n-\\frac{9}{4}\\right)$",
+    "이다. 문제 2-2의 결과와 함께 쓰면",
+    "$\\frac{1}{4}-\\frac{9}{16 \\ln n}\\le \\frac{a_{n}^{2}-n}{\\ln n}\\le \\frac{1}{4}+\\frac{1}{4 \\ln n}$",
+    "이고, $n \\to \\infty$ 일 때 양 끝의 식이 모두 $\\frac{1}{4}$ 에 수렴하므로 $\\lim_{n \\to \\infty}\\frac{a_{n}^{2}-n}{\\ln n}=\\frac{1}{4}$ 이다."
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": ""
+}

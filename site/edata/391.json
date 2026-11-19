@@ -1,0 +1,102 @@
+{
+ "num": 391,
+ "id": "MK-서울대학교면접대비제1회ShrekMath-1",
+ "univ": "서울대학교 면접 대비 제1회 (ShrekMath)",
+ "n": 1,
+ "year": 2026,
+ "title": "문제 1",
+ "head": "",
+ "points": null,
+ "minutes": 15,
+ "info": {
+  "concepts": "",
+  "time": "15분"
+ },
+ "pre": [
+  "※ 제시문을 읽고 문제에 답하시오."
+ ],
+ "passage": [
+  "곡선 $C$ 의 방정식은 $y=x^{2}$ 이다. 실수 $a$ 에 대하여 직선 $y=x-1$ 위의 점 $\\mathrm{A}(a,\\,a-1)$ 에서 곡선 $C$ 에 그은 두 접선의 접점을 각각 $\\mathrm{P}(p,\\,p^{2})$ , $\\mathrm{Q}(q,\\,q^{2})$ 이라고 하자. (단, $p<q$ )",
+  "[그림]"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[1-1]",
+   "points": null,
+   "text": [
+    "실수 $a$ 의 값에 관계없이 점 $\\mathrm{A}$ 에서 곡선 $C$ 에 서로 다른 두 접선을 그을 수 있음을 보이고, 직선 $\\mathrm{PQ}$ 가 $a$ 의 값에 관계없이 항상 지나는 점 $\\mathrm{F}$ 의 좌표를 구하시오. 또 $\\overline{\\mathrm{PF}}\\times \\overline{\\mathrm{FQ}}$ 의 최솟값을 구하시오."
+   ],
+   "answer": [
+    "곡선 $C$ 위의 점 $(s,\\,s^{2})$ 에서의 접선의 방정식은 $y=2 s x-s^{2}$ 이다. 이 직선이 점 $\\mathrm{A}(a,\\,a-1)$ 을 지나면 $s^{2}-2 a s+a-1=0$ 이다. 이 이차방정식의 판별식을 $D$ 라 하면",
+    "$\\frac{D}{4}=a^{2}-a+1=\\left(a-\\frac{1}{2}\\right)^{2}+\\frac{3}{4}>0$",
+    "이므로 서로 다른 두 실근 $p$ , $q$ 를 갖고, 접점이 다르면 접선도 다르므로 서로 다른 두 접선을 그을 수 있다. 근과 계수의 관계에서 $p+q=2 a$ , $p q=a-1$ 이다.",
+    "직선 $\\mathrm{PQ}$ 의 방정식은 $y=(p+q)x-p q$ , 즉 $y=2 a x-a+1$ 이다. 이를 $a$ 에 대하여 정리하면 $a(2 x-1)+(1-y)=0$ 이므로 직선 $\\mathrm{PQ}$ 는 $a$ 의 값에 관계없이 점 $\\mathrm{F}\\left(\\frac{1}{2},\\,1 \\right)$ 을 지난다.",
+    "$h(s)=s^{2}-2 a s+a-1$ 이라 하면 $h \\left(\\frac{1}{2}\\right)=-\\frac{3}{4}<0$ 이므로 $p<\\frac{1}{2}<q$ 이다. 세 점 $\\mathrm{P}$ , $\\mathrm{F}$ , $\\mathrm{Q}$ 는 기울기가 $2 a$ 인 직선 위에 있으므로 $\\overline{\\mathrm{PF}}=\\left(\\frac{1}{2}-p \\right)\\sqrt{1+4 a^{2}}$ , $\\overline{\\mathrm{FQ}}=\\left(q-\\frac{1}{2}\\right)\\sqrt{1+4 a^{2}}$ 이다. 따라서",
+    "$\\overline{\\mathrm{PF}}\\times \\overline{\\mathrm{FQ}}=\\left(1+4 a^{2}\\right)\\left(-p q+\\frac{p+q}{2}-\\frac{1}{4}\\right)=\\frac{3}{4}\\left(1+4 a^{2}\\right)$",
+    "이고, $a=0$ 일 때 최솟값 $\\frac{3}{4}$ 을 갖는다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "[1-2]",
+   "points": null,
+   "text": [
+    "삼각형 $\\mathrm{APQ}$ 의 넓이를 $S(a)$ , 선분 $\\mathrm{PQ}$ 와 곡선 $C$ 로 둘러싸인 도형의 넓이를 $T(a)$ 라고 하자. $S(a)$ 를 $a$ 에 대한 식으로 나타내고, $\\frac{S(a)}{T(a)}$ 의 값이 $a$ 의 값에 관계없이 일정함을 보이시오."
+   ],
+   "answer": [
+    "$a=\\frac{p+q}{2}$ , $a-1=p q$ 이므로 점 $\\mathrm{A}$ 의 좌표는 $\\left(\\frac{p+q}{2},\\,p q \\right)$ 이다. 점 $\\mathrm{A}$ 를 지나고 $y$ 축에 평행한 직선이 직선 $\\mathrm{PQ}$ 와 만나는 점을 $\\mathrm{M}$ 이라 하면 점 $\\mathrm{M}$ 의 $y$ 좌표는 $\\frac{(p+q)^{2}}{2}-p q=\\frac{p^{2}+q^{2}}{2}$ 이므로 $\\overline{\\mathrm{AM}}=\\frac{p^{2}+q^{2}}{2}-p q=\\frac{(q-p)^{2}}{2}$ 이다. 따라서",
+    "$S(a)=\\frac{1}{2}\\cdot \\overline{\\mathrm{AM}}\\cdot(q-p)=\\frac{(q-p)^{3}}{4}$",
+    "이다. $(q-p)^{2}=(p+q)^{2}-4 p q=4(a^{2}-a+1)$ 이므로 $S(a)=2 \\left(a^{2}-a+1 \\right)\\sqrt{a^{2}-a+1}$ 이다.",
+    "한편 $p \\le x \\le q$ 에서 직선 $\\mathrm{PQ}$ 가 곡선 $C$ 보다 위쪽에 있고 $(p+q)x-p q-x^{2}=-(x-p)(x-q)$ 이므로",
+    "$T(a)=\\int_{p}^{q}\\left\\{-(x-p)(x-q)\\right\\} dx=\\frac{(q-p)^{3}}{6}$",
+    "이다. 따라서 $\\frac{S(a)}{T(a)}=\\frac{3}{2}$ 으로 $a$ 의 값에 관계없이 일정하다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "3",
+   "label": "[1-3]",
+   "points": null,
+   "text": [
+    "$\\cos(\\angle \\mathrm{PAQ})$ 를 $a$ 에 대한 식으로 나타내고, $\\angle \\mathrm{PAQ}$ 의 크기가 최소가 되도록 하는 $a$ 의 값과 그때의 $\\cos(\\angle \\mathrm{PAQ})$ 의 값을 구하시오."
+   ],
+   "answer": [
+    "$\\vec{\\mathrm{AP}}=\\left(\\frac{p-q}{2},\\,p(p-q)\\right)=\\frac{p-q}{2}(1,\\,2 p)$ , $\\vec{\\mathrm{AQ}}=\\frac{q-p}{2}(1,\\,2 q)$ 이고 $p-q<0$ 이므로, $\\angle \\mathrm{PAQ}$ 는 두 벡터 $(-1,\\,-2 p)$ , $(1,\\,2 q)$ 가 이루는 각이다. 따라서",
+    "$\\cos(\\angle \\mathrm{PAQ})=\\frac{-(1+4 p q)}{\\sqrt{(1+4 p^{2})(1+4 q^{2})}}$",
+    "이다. $1+4 p q=4 a-3$ 이고, $p^{2}+q^{2}=4 a^{2}-2 a+2$ 에서 $(1+4 p^{2})(1+4 q^{2})=1+4(p^{2}+q^{2})+16 p^{2}q^{2}=32 a^{2}-40 a+25$ 이므로",
+    "$\\cos(\\angle \\mathrm{PAQ})=\\frac{3-4 a}{\\sqrt{32 a^{2}-40 a+25}}$",
+    "이다. 우변을 $c(a)$ 라 하면 $0<\\angle \\mathrm{PAQ}<\\pi$ 에서 코사인함수는 감소하므로 $\\angle \\mathrm{PAQ}$ 가 최소인 것은 $c(a)$ 가 최대인 것과 같다. 미분하여 정리하면",
+    "$c'(a)=\\frac{-8(2 a+5)}{\\left(32 a^{2}-40 a+25 \\right)\\sqrt{32 a^{2}-40 a+25}}$",
+    "이므로 $c(a)$ 는 $a<-\\frac{5}{2}$ 에서 증가하고 $a>-\\frac{5}{2}$ 에서 감소한다. 따라서 $a=-\\frac{5}{2}$ 일 때 $\\angle \\mathrm{PAQ}$ 가 최소이고, 그때 $\\cos(\\angle \\mathrm{PAQ})=\\frac{13}{\\sqrt{325}}=\\frac{\\sqrt{13}}{5}$ 이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "4",
+   "label": "[1-4]",
+   "points": null,
+   "text": [
+    "삼각형 $\\mathrm{APQ}$ 의 외접원의 중심의 좌표를 $a$ 에 대한 식으로 나타내고, 이 외접원의 중심과 직선 $y=x-1$ 사이의 거리의 최솟값을 구하시오.",
+    "※ 제시문을 읽고 문제에 답하시오."
+   ],
+   "answer": [
+    "외접원의 중심은 두 선분 $\\mathrm{AP}$ , $\\mathrm{AQ}$ 의 수직이등분선의 교점이다. 점 $\\mathrm{A}$ 의 좌표가 $\\left(\\frac{p+q}{2},\\,p q \\right)$ 이므로 선분 $\\mathrm{AP}$ 의 중점은 $\\left(\\frac{3 p+q}{4},\\,\\frac{p(p+q)}{2}\\right)$ 이고, 직선 $\\mathrm{AP}$ 는 기울기가 $2 p$ 인 접선이다. 따라서 선분 $\\mathrm{AP}$ 의 수직이등분선의 방정식은",
+    "$x-\\frac{3 p+q}{4}+2 p \\left\\{y-\\frac{p(p+q)}{2}\\right\\}=0$",
+    "이고, 선분 $\\mathrm{AQ}$ 의 수직이등분선의 방정식은 이 식에서 $p$ 와 $q$ 를 서로 바꾼 것이다. 두 식을 변끼리 빼면",
+    "$\\frac{q-p}{2}-2(q-p)y+(q-p)(p+q)^{2}=0$",
+    "이고 $p \\ne q$ 이므로 $y=\\frac{(p+q)^{2}}{2}+\\frac{1}{4}$ 이다. 이것을 첫 번째 식에 대입하면",
+    "$x=\\frac{3 p+q}{4}-\\frac{p}{2}-p(p+q)^{2}+p^{2}(p+q)=\\frac{(p+q)(1-4 p q)}{4}$",
+    "이다. $p+q=2 a$ , $p q=a-1$ 을 대입하면 외접원의 중심의 좌표는 $\\left(\\frac{a(5-4 a)}{2},\\,2 a^{2}+\\frac{1}{4}\\right)$ 이다.",
+    "이 점과 직선 $x-y-1=0$ 사이의 거리는",
+    "$\\frac{1}{\\sqrt{2}}\\left|\\frac{a(5-4 a)}{2}-2 a^{2}-\\frac{1}{4}-1 \\right|=\\frac{1}{\\sqrt{2}}\\left(4 a^{2}-\\frac{5}{2}a+\\frac{5}{4}\\right)=\\frac{1}{\\sqrt{2}}\\left\\{4 \\left(a-\\frac{5}{16}\\right)^{2}+\\frac{55}{64}\\right\\}$",
+    "이므로 $a=\\frac{5}{16}$ 일 때 최솟값 $\\frac{55}{64 \\sqrt{2}}=\\frac{55 \\sqrt{2}}{128}$ 를 갖는다."
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": ""
+}

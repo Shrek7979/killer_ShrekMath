@@ -1,0 +1,80 @@
+{
+ "num": 440,
+ "id": "MK-KAIST면접대비제2회ShrekMath-2",
+ "univ": "KAIST 면접 대비 제2회 (ShrekMath)",
+ "n": 2,
+ "year": 2026,
+ "title": "문제 2 · 5점",
+ "head": "",
+ "points": 5,
+ "minutes": 10,
+ "info": {
+  "concepts": "",
+  "time": "10분"
+ },
+ "pre": [],
+ "passage": [
+  "자연수 $n$ 에 대하여 함수 $f_{n}(x)$ 를",
+  "$f_{n}(x)=x^{3}-n x^{2}+(n-3)x+1$",
+  "이라 하자."
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "(1)",
+   "points": 1,
+   "text": [
+    "다음 명제의 참, 거짓을 판별하고 그 이유를 설명하시오. [1점]",
+    "모든 자연수 $n$ 에 대하여 방정식 $f_{n}(x)=0$ 은 열린구간 $(0,\\,1)$ 에서 적어도 하나의 실근을 갖는다."
+   ],
+   "answer": [
+    "참이다. $f_{n}(0)=1>0$ , $f_{n}(1)=1-n+(n-3)+1=-1<0$ 이고 $f_{n}(x)$ 는 연속함수이므로 사잇값의 정리에 의하여 $f_{n}(x)=0$ 은 열린구간 $(0,\\,1)$ 에서 적어도 하나의 실근을 갖는다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "(2)",
+   "points": 2,
+   "text": [
+    "방정식 $f_{n}(x)=0$ 의 한 근을 $\\alpha$ 라 할 때 $\\frac{1}{1-\\alpha}$ 도 이 방정식의 근임을 보이고, 이를 이용하여 방정식 $f_{n}(x)=0$ 이 서로 다른 세 실근을 가짐을 보이시오. [2점]"
+   ],
+   "answer": [
+    "$f_{n}(1)=-1$ 이므로 $\\alpha \\ne 1$ 이다. $\\beta=\\frac{1}{1-\\alpha}$ 라 하면",
+    "$(1-\\alpha)^{3}f_{n}(\\beta)=1-n(1-\\alpha)+(n-3)(1-\\alpha)^{2}+(1-\\alpha)^{3}$",
+    "이고, 우변을 전개하여 정리하면 $-\\alpha^{3}+n \\alpha^{2}-(n-3)\\alpha-1=-f_{n}(\\alpha)=0$ 이다. 따라서 $f_{n}(\\beta)=0$ 이다.",
+    "(1)에 의하여 $0<\\alpha<1$ 인 근 $\\alpha$ 가 존재한다. 이때 $\\beta=\\frac{1}{1-\\alpha}>1$ 도 근이고, 다시 $\\gamma=\\frac{1}{1-\\beta}<0$ 도 근이다. $\\gamma<0<\\alpha<1<\\beta$ 이므로 방정식 $f_{n}(x)=0$ 은 서로 다른 세 실근을 갖는다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "3",
+   "label": "(3)",
+   "points": 2,
+   "text": [
+    "방정식 $f_{n}(x)=0$ 의 세 실근을 작은 것부터 차례로 $\\gamma_{n}$ , $\\alpha_{n}$ , $\\beta_{n}$ 이라 할 때, 등식",
+    "$(\\beta_{n}-\\alpha_{n})(\\beta_{n}-\\gamma_{n})(\\alpha_{n}-\\gamma_{n})=n^{2}-3 n+9$",
+    "가 성립함을 보이고, $\\lim_{n \\to \\infty}n(\\beta_{n}-n+1)$ 의 값을 구하시오. [2점]"
+   ],
+   "answer": [
+    "(2)에서 $\\alpha_{n}=\\alpha$ , $\\beta_{n}=\\frac{1}{1-\\alpha}$ , $\\gamma_{n}=\\frac{1}{1-\\beta_{n}}=\\frac{\\alpha-1}{\\alpha}$ 이다. $w=\\alpha^{2}-\\alpha+1$ 이라 하면",
+    "$\\beta_{n}-\\alpha_{n}=\\frac{w}{1-\\alpha},\\,\\beta_{n}-\\gamma_{n}=\\frac{w}{\\alpha(1-\\alpha)},\\,\\alpha_{n}-\\gamma_{n}=\\frac{w}{\\alpha}$",
+    "이므로 세 값의 곱은 $\\frac{w^{3}}{\\alpha^{2}(1-\\alpha)^{2}}$ 이다.",
+    "한편 $f_{n}(\\alpha)=0$ 에서 $n \\alpha(\\alpha-1)=\\alpha^{3}-3 \\alpha+1$ 이다. $v=\\alpha(\\alpha-1)$ 이라 하면 $w=v+1$ 이고 $n v=\\alpha^{3}-3 \\alpha+1$ 이므로",
+    "$(n^{2}-3 n+9)v^{2}=(\\alpha^{3}-3 \\alpha+1)^{2}-3(\\alpha^{3}-3 \\alpha+1)(\\alpha^{2}-\\alpha)+9(\\alpha^{2}-\\alpha)^{2}$",
+    "이다. 우변을 전개하여 정리하면 $\\alpha^{6}-3 \\alpha^{5}+6 \\alpha^{4}-7 \\alpha^{3}+6 \\alpha^{2}-3 \\alpha+1$ 이고, 이것은 $(\\alpha^{2}-\\alpha+1)^{3}=(v+1)^{3}$ 을 전개한 식과 같다. 따라서",
+    "$(\\beta_{n}-\\alpha_{n})(\\beta_{n}-\\gamma_{n})(\\alpha_{n}-\\gamma_{n})=\\frac{(v+1)^{3}}{v^{2}}=n^{2}-3 n+9$",
+    "이다.",
+    "다음으로 근과 계수의 관계에서 $\\alpha_{n}+\\beta_{n}+\\gamma_{n}=n$ 이고 $\\alpha_{n}=1-\\frac{1}{\\beta_{n}}$ , $\\gamma_{n}=-\\frac{1}{\\beta_{n}-1}$ 이므로",
+    "$\\beta_{n}-n+1=\\frac{1}{\\beta_{n}}+\\frac{1}{\\beta_{n}-1}$",
+    "이다. $\\alpha_{n}<1$ , $\\gamma_{n}<0$ 에서 $\\beta_{n}>n-1$ 이고, 위 식에서 $n \\ge 3$ 일 때 $\\beta_{n}<n-1+\\frac{1}{n-1}+\\frac{1}{n-2}$ 이므로 $\\lim_{n \\to \\infty}\\frac{\\beta_{n}}{n}=1$ 이다. 따라서",
+    "$\\lim_{n \\to \\infty}n(\\beta_{n}-n+1)=\\lim_{n \\to \\infty}\\left(\\frac{n}{\\beta_{n}}+\\frac{n}{\\beta_{n}-1}\\right)=2$",
+    "이다."
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": ""
+}

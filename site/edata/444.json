@@ -1,0 +1,94 @@
+{
+ "num": 444,
+ "id": "MK-KAIST면접대비제4회ShrekMath-2",
+ "univ": "KAIST 면접 대비 제4회 (ShrekMath)",
+ "n": 2,
+ "year": 2026,
+ "title": "문제 2 · 5점",
+ "head": "",
+ "points": 5,
+ "minutes": 10,
+ "info": {
+  "concepts": "",
+  "time": "10분"
+ },
+ "pre": [],
+ "passage": [
+  "$x>0$ 에서 정의된 함수 $g(x)$ 를",
+  "$g(x)=\\frac{1}{\\ln \\left(1+\\frac{1}{x}\\right)}-x$",
+  "라 하자."
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "(1)",
+   "points": 1,
+   "text": [
+    "$x>0$ 일 때 부등식 $x-\\frac{x^{2}}{2}<\\ln(1+x)<x-\\frac{x^{2}}{2}+\\frac{x^{3}}{3}$ 이 성립함을 보이시오. [1점]",
+    "[그림]",
+    "[그림] 곡선 $y=\\ln(1+x)$ 와 두 곡선 $y=x-\\frac{x^{2}}{2}$ , $y=x-\\frac{x^{2}}{2}+\\frac{x^{3}}{3}$"
+   ],
+   "answer": [
+    "$u(x)=\\ln(1+x)-x+\\frac{x^{2}}{2}$ $(x \\ge 0)$ 이라 하면 $u(0)=0$ 이고 $x>0$ 에서",
+    "$u'(x)=\\frac{1}{1+x}-1+x=\\frac{x^{2}}{1+x}>0$",
+    "이므로 $x>0$ 일 때 $u(x)>0$ 이다. 또 $v(x)=x-\\frac{x^{2}}{2}+\\frac{x^{3}}{3}-\\ln(1+x)$ $(x \\ge 0)$ 이라 하면 $v(0)=0$ 이고 $x>0$ 에서",
+    "$v'(x)=1-x+x^{2}-\\frac{1}{1+x}=\\frac{x^{3}}{1+x}>0$",
+    "이므로 $x>0$ 일 때 $v(x)>0$ 이다. 따라서 주어진 부등식이 성립한다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "(2)",
+   "points": 2,
+   "text": [
+    "함수 $g(x)$ 가 $x>0$ 에서 증가함을 보이고, $\\lim_{x \\to \\infty}g(x)$ 의 값을 구하시오. [2점]"
+   ],
+   "answer": [
+    "$L(x)=\\ln \\left(1+\\frac{1}{x}\\right)=\\ln(x+1)-\\ln x$ 라 하면 $L(x)>0$ 이고 $L'(x)=\\frac{1}{x+1}-\\frac{1}{x}=-\\frac{1}{x(x+1)}$ 이므로",
+    "$g'(x)=-\\frac{L'(x)}{\\left\\{L(x)\\right\\}^{2}}-1=\\frac{1}{x(x+1)\\left\\{L(x)\\right\\}^{2}}-1$",
+    "이다. 따라서 $g'(x)>0$ 인 것은 $\\left\\{L(x)\\right\\}^{2}<\\frac{1}{x(x+1)}$ 인 것과 같다. $t=\\frac{1}{x}$ 이라 하면 $t>0$ 이고 $L(x)=\\ln(1+t)$ , $\\frac{1}{x(x+1)}=\\frac{t^{2}}{1+t}$ 이므로, $t>0$ 일 때",
+    "$\\ln(1+t)<\\frac{t}{\\sqrt{1+t}}$",
+    "임을 보이면 된다. $p s i(t)=\\frac{t}{\\sqrt{1+t}}-\\ln(1+t)$ $(t \\ge 0)$ 이라 하면 $p s i(0)=0$ 이고",
+    "$p s i'(t)=\\frac{2+t}{2(1+t)\\sqrt{1+t}}-\\frac{1}{1+t}=\\frac{2+t-2 \\sqrt{1+t}}{2(1+t)\\sqrt{1+t}}=\\frac{\\left(\\sqrt{1+t}-1 \\right)^{2}}{2(1+t)\\sqrt{1+t}}$",
+    "이므로 $t>0$ 에서 $p s i'(t)>0$ 이다. 따라서 $t>0$ 일 때 $p s i(t)>0$ 이고, $x>0$ 에서 $g'(x)>0$ 이므로 함수 $g(x)$ 는 증가한다.",
+    "다음으로 극한값을 구한다. $t=\\frac{1}{x}$ 이라 하면",
+    "$g(x)=\\frac{1}{\\ln(1+t)}-\\frac{1}{t}=\\frac{t-\\ln(1+t)}{t \\ln(1+t)}$",
+    "이고 $x \\to \\infty$ 일 때 $t \\to 0+$ 이다. $0<t<1$ 일 때 (1)에 의하여",
+    "$\\frac{t^{2}}{2}-\\frac{t^{3}}{3}<t-\\ln(1+t)<\\frac{t^{2}}{2}$",
+    "이다. 이 부등식의 왼쪽 변이 양수이므로 $\\ln(1+t)<t$ 이고, (1)에서 $\\ln(1+t)>t-\\frac{t^{2}}{2}$ 이므로 $t^{2}\\left(1-\\frac{t}{2}\\right)<t \\ln(1+t)<t^{2}$ 이다. 따라서 $0<t<1$ 일 때",
+    "$\\frac{1}{2}-\\frac{t}{3}<g(x)<\\frac{1}{2-t}$",
+    "이고, $t \\to 0+$ 일 때 양쪽 변이 모두 $\\frac{1}{2}$ 로 수렴하므로 $\\lim_{x \\to \\infty}g(x)=\\frac{1}{2}$ 이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "3",
+   "label": "(3)",
+   "points": 2,
+   "text": [
+    "모든 자연수 $n$ 에 대하여 부등식",
+    "$\\left(1+\\frac{1}{n}\\right)^{n+a}\\le e \\le \\left(1+\\frac{1}{n}\\right)^{n+b}$",
+    "이 성립하도록 하는 실수 $a$ 의 최댓값과 실수 $b$ 의 최솟값을 각각 구하시오. 또 극한값 $\\lim_{n \\to \\infty}n \\left\\{e-\\left(1+\\frac{1}{n}\\right)^{n}\\right\\}$ 을 구하시오. [2점]"
+   ],
+   "answer": [
+    "$\\ln \\left(1+\\frac{1}{n}\\right)>0$ 이므로 주어진 부등식의 각 변에 자연로그를 취하면",
+    "$(n+a)\\ln \\left(1+\\frac{1}{n}\\right)\\le 1 \\le(n+b)\\ln \\left(1+\\frac{1}{n}\\right)$",
+    "이고, 이것은 $a \\le g(n)\\le b$ 와 같다.",
+    "(2)에서 $g(x)$ 가 증가하므로 자연수 $n$ 에 대하여 $g(n)$ 의 최솟값은 $g(1)=\\frac{1}{\\ln 2}-1$ 이다. 따라서 모든 자연수 $n$ 에 대하여 $a \\le g(n)$ 일 조건은 $a \\le \\frac{1}{\\ln 2}-1$ 이고, $a$ 의 최댓값은 $\\frac{1}{\\ln 2}-1$ 이다.",
+    "또 $g(x)$ 가 증가하고 $\\lim_{x \\to \\infty}g(x)=\\frac{1}{2}$ 이므로, 임의의 자연수 $n$ 에 대하여 $g(n)<g(n+1)\\le \\frac{1}{2}$ 이다. 따라서 $b=\\frac{1}{2}$ 이면 모든 자연수 $n$ 에 대하여 $g(n)\\le b$ 이다. 한편 $b<\\frac{1}{2}$ 이면 $\\lim_{n \\to \\infty}g(n)=\\frac{1}{2}$ 이므로 $g(n)>b$ 인 자연수 $n$ 이 존재한다. 따라서 $b$ 의 최솟값은 $\\frac{1}{2}$ 이다.",
+    "마지막으로 극한값을 구한다. $g(n)$ 의 정의에서 $\\left\\{n+g(n)\\right\\} \\ln \\left(1+\\frac{1}{n}\\right)=1$ 이므로 $e=\\left(1+\\frac{1}{n}\\right)^{n+g(n)}$ 이다. $t_{n}=g(n)\\ln \\left(1+\\frac{1}{n}\\right)$ 이라 하면 $t_{n}>0$ 이고",
+    "$n \\left\\{e-\\left(1+\\frac{1}{n}\\right)^{n}\\right\\}=\\left(1+\\frac{1}{n}\\right)^{n}\\cdot n \\left(e^{t_{n}}-1 \\right)=\\left(1+\\frac{1}{n}\\right)^{n}\\cdot \\frac{e^{t_{n}}-1}{t_{n}}\\cdot n t_{n}$",
+    "이다. (1)에서 $x=\\frac{1}{n}$ 으로 놓으면 $1-\\frac{1}{2 n}<n \\ln \\left(1+\\frac{1}{n}\\right)<1$ 이므로 $\\lim_{n \\to \\infty}n \\ln \\left(1+\\frac{1}{n}\\right)=1$ 이고, 따라서",
+    "$\\lim_{n \\to \\infty}n t_{n}=\\lim_{n \\to \\infty}g(n)\\cdot n \\ln \\left(1+\\frac{1}{n}\\right)=\\frac{1}{2}$",
+    "이다. 이때 $t_{n}\\to 0$ 이므로 $\\lim_{n \\to \\infty}\\frac{e^{t_{n}}-1}{t_{n}}=1$ 이고, $\\lim_{n \\to \\infty}\\left(1+\\frac{1}{n}\\right)^{n}=e$ 이다. 따라서",
+    "$\\lim_{n \\to \\infty}n \\left\\{e-\\left(1+\\frac{1}{n}\\right)^{n}\\right\\}=e \\cdot 1 \\cdot \\frac{1}{2}=\\frac{e}{2}$",
+    "이다."
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": ""
+}

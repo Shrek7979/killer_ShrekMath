@@ -1,0 +1,112 @@
+{
+ "num": 403,
+ "id": "MK-서울대학교면접대비제5회ShrekMath-1",
+ "univ": "서울대학교 면접 대비 제5회 (ShrekMath)",
+ "n": 1,
+ "year": 2026,
+ "title": "문제 1",
+ "head": "",
+ "points": null,
+ "minutes": 15,
+ "info": {
+  "concepts": "",
+  "time": "15분"
+ },
+ "pre": [
+  "※ 제시문을 읽고 문제에 답하시오."
+ ],
+ "passage": [
+  "양수 $a$ 에 대하여 $0 \\le x<\\frac{\\pi}{2}$ 에서 정의된 함수 $f(x)$ 는 다음과 같다.",
+  "$f(x)=\\int_{0}^{x}(a \\cos t-\\sin t)\\ln(\\cos t)dt$",
+  "[그림]",
+  "[그림] 어떤 양수 $a$ 에 대한 함수 $y=f(x)$ 의 그래프의 예"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[1-1]",
+   "points": null,
+   "text": [
+    "$f'(x)$ 를 구하고, 함수 $f(x)$ 가 최솟값을 가짐을 보이시오. 또 $f(x)$ 가 최소가 되는 $x$ 의 값을 $\\alpha$ 라 할 때, $\\tan \\alpha$ 를 $a$ 에 대한 식으로 나타내시오."
+   ],
+   "answer": [
+    "피적분함수가 연속이므로 $f'(x)=(a \\cos x-\\sin x)\\ln(\\cos x)$ 이다.",
+    "$0<x<\\frac{\\pi}{2}$ 에서 $0<\\cos x<1$ 이므로 $\\ln(\\cos x)<0$ 이고, $a \\cos x-\\sin x=\\cos x(a-\\tan x)$ 이다. $\\tan x$ 는 $0 \\le x<\\frac{\\pi}{2}$ 에서 증가하며 $0$ 이상의 모든 실숫값을 가지므로 $\\tan \\alpha=a$ 인 $\\alpha$ 가 열린구간 $\\left(0,\\,\\frac{\\pi}{2}\\right)$ 에 단 하나 존재한다.",
+    "$0<x<\\alpha$ 이면 $a-\\tan x>0$ 이므로 $f'(x)<0$ 이고, $\\alpha<x<\\frac{\\pi}{2}$ 이면 $a-\\tan x<0$ 이므로 $f'(x)>0$ 이다. 따라서 $f(x)$ 는 $0 \\le x \\le \\alpha$ 에서 감소하고 $\\alpha \\le x<\\frac{\\pi}{2}$ 에서 증가하므로 $x=\\alpha$ 에서 최솟값을 갖는다. 이때 $\\tan \\alpha=a$ 이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "[1-2]",
+   "points": null,
+   "text": [
+    "$0 \\le x<\\frac{\\pi}{2}$ 일 때 정적분 $\\int_{0}^{x}\\cos t \\ln(\\cos t)dt$ 를 구하고, 함수 $f(x)$ 의 최솟값 $M(a)$ 를 $a$ 에 대한 식으로 나타내시오."
+   ],
+   "answer": [
+    "부분적분법에 의하여",
+    "$\\int_{0}^{x}\\cos t \\ln(\\cos t)dt=\\sin x \\ln(\\cos x)+\\int_{0}^{x}\\frac{\\sin^{2}t}{\\cos t}dt$",
+    "이고 $\\frac{\\sin^{2}t}{\\cos t}=\\frac{1}{\\cos t}-\\cos t$ 이다. 또",
+    "$\\frac{1}{\\cos t}=\\frac{\\cos t}{1-\\sin^{2}t}=\\frac{1}{2}\\left(\\frac{\\cos t}{1+\\sin t}+\\frac{\\cos t}{1-\\sin t}\\right)$",
+    "이므로",
+    "$\\int_{0}^{x}\\frac{1}{\\cos t}dt=\\frac{1}{2}\\ln \\frac{1+\\sin x}{1-\\sin x}=\\frac{1}{2}\\ln \\frac{(1+\\sin x)^{2}}{\\cos^{2}x}=\\ln(1+\\sin x)-\\ln(\\cos x)$",
+    "이다. 따라서",
+    "$\\int_{0}^{x}\\cos t \\ln(\\cos t)dt=(\\sin x-1)\\ln(\\cos x)+\\ln(1+\\sin x)-\\sin x$",
+    "이다. 이 값을 $I(x)$ 라 하자.",
+    "한편 $\\left\\{\\cos t \\ln(\\cos t)-\\cos t \\right\\}'=-\\sin t \\ln(\\cos t)$ 이므로 $\\int_{0}^{x}(-\\sin t)\\ln(\\cos t)dt=\\cos x \\ln(\\cos x)-\\cos x+1$ 이다. 따라서",
+    "$f(x)=a I(x)+\\cos x \\ln(\\cos x)-\\cos x+1$",
+    "이다.",
+    "$s=\\sqrt{1+a^{2}}$ 이라 하면 $\\tan \\alpha=a$ 에서 $\\cos \\alpha=\\frac{1}{s}$ , $\\sin \\alpha=\\frac{a}{s}$ 이고 $\\ln(\\cos \\alpha)=-\\frac{1}{2}\\ln(1+a^{2})$ , $\\ln(1+\\sin \\alpha)=\\ln(a+s)-\\frac{1}{2}\\ln(1+a^{2})$ 이다. 이것을 대입하면 $f(\\alpha)$ 에서 $\\ln(1+a^{2})$ 의 계수는",
+    "$-\\frac{1}{2}\\left\\{a \\left(\\frac{a}{s}-1 \\right)+a+\\frac{1}{s}\\right\\}=-\\frac{a^{2}+1}{2 s}=-\\frac{s}{2}$",
+    "이고, 나머지 항은 $a \\ln(a+s)-\\frac{a^{2}}{s}-\\frac{1}{s}+1=a \\ln(a+s)-s+1$ 이다. 따라서",
+    "$M(a)=1-\\sqrt{1+a^{2}}-\\frac{\\sqrt{1+a^{2}}}{2}\\ln(1+a^{2})+a \\ln \\left(a+\\sqrt{1+a^{2}}\\right)$",
+    "이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "3",
+   "label": "[1-3]",
+   "points": null,
+   "text": [
+    "$0<u<1$ 일 때 $-2 \\sqrt{u}<u \\ln u<0$ 임을 보이고, 극한값 $\\lim_{x \\to \\frac{\\pi}{2}-}f(x)$ 를 $a$ 에 대한 식으로 나타내시오."
+   ],
+   "answer": [
+    "$0<u<1$ 이면 $\\ln u<0$ 이므로 $u \\ln u<0$ 이다.",
+    "$w>1$ 일 때 $h(w)=w-\\ln w$ 라 하면 $h'(w)=1-\\frac{1}{w}>0$ 이고 $h(1)=1>0$ 이므로 $\\ln w<w$ 이다. $w=\\frac{1}{\\sqrt{u}}$ 을 대입하면 $-\\frac{1}{2}\\ln u<\\frac{1}{\\sqrt{u}}$ , 즉 $\\ln u>-\\frac{2}{\\sqrt{u}}$ 이므로 $u \\ln u>-2 \\sqrt{u}$ 이다. 따라서 $-2 \\sqrt{u}<u \\ln u<0$ 이고, 이로부터 $\\lim_{u \\to 0+}u \\ln u=0$ 이다.",
+    "$x \\to \\frac{\\pi}{2}-$ 일 때 $\\cos x \\to 0+$ 이므로 $\\cos x \\ln(\\cos x)\\to 0$ 이다. 또 $1-\\sin x=\\frac{\\cos^{2}x}{1+\\sin x}$ 이므로",
+    "$(\\sin x-1)\\ln(\\cos x)=-\\frac{\\cos x}{1+\\sin x}\\cdot \\cos x \\ln(\\cos x)\\to 0$",
+    "이다. 따라서 $I(x)\\to \\ln 2-1$ 이고",
+    "$\\lim_{x \\to \\frac{\\pi}{2}-}f(x)=a(\\ln 2-1)+0-0+1=1-(1-\\ln 2)a$",
+    "이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "4",
+   "label": "[1-4]",
+   "points": null,
+   "text": [
+    "방정식 $f(x)=0$ 이 열린구간 $\\left(0,\\,\\frac{\\pi}{2}\\right)$ 에서 실근을 갖도록 하는 양수 $a$ 의 값의 범위를 구하시오. 또 문제 1-2의 $M(a)$ 에 대하여 극한값 $\\lim_{a \\to \\infty}\\frac{M(a)}{a}$ 를 구하시오.",
+    "※ 제시문을 읽고 문제에 답하시오."
+   ],
+   "answer": [
+    "$L=1-(1-\\ln 2)a$ 라 하자. $f(0)=0$ 이고 $f(x)$ 는 $0 \\le x \\le \\alpha$ 에서 감소하므로 $0<x \\le \\alpha$ 에서 $f(x)<0$ 이다. 따라서 실근은 $\\alpha<x<\\frac{\\pi}{2}$ 에서만 생길 수 있고, 이 구간에서 $f(x)$ 는 증가한다.",
+    "$L>0$ 이면 문제 1-3의 극한에 의하여 $f(x_{1})>0$ 인 $x_{1}$ 이 $\\alpha<x_{1}<\\frac{\\pi}{2}$ 에 존재한다. $f(\\alpha)<0<f(x_{1})$ 이고 $f(x)$ 는 연속이므로 사잇값의 정리에 의하여 $f(x)=0$ 인 $x$ 가 $\\alpha$ 와 $x_{1}$ 사이에 존재한다.",
+    "$L \\le 0$ 이면 $\\alpha<x<\\frac{\\pi}{2}$ 인 임의의 $x$ 에 대하여, $x<x'<\\frac{\\pi}{2}$ 인 $x'$ 을 잡을 때 $f(x)<f(x')$ 이고 $f$ 가 증가하므로 $f(x')\\le L$ 이다. 따라서 $f(x)<L \\le 0$ 이므로 실근이 없다.",
+    "$1-\\ln 2>0$ 이므로 $L>0$ 은 $a<\\frac{1}{1-\\ln 2}$ 과 같다. 따라서 구하는 범위는 $0<a<\\frac{1}{1-\\ln 2}$ 이다.",
+    "다음으로 $s=\\frac{\\sqrt{1+a^{2}}}{a}$ 이라 하면 $a \\to \\infty$ 일 때 $s \\to 1$ 이고, $\\frac{1}{2}\\ln(1+a^{2})=\\ln a+\\ln s$ , $\\ln \\left(a+\\sqrt{1+a^{2}}\\right)=\\ln a+\\ln(1+s)$ 이므로",
+    "$\\frac{M(a)}{a}=\\frac{1}{a}-s-s(\\ln a+\\ln s)+\\ln a+\\ln(1+s)=\\frac{1}{a}-s-s \\ln s+\\ln(1+s)-(s-1)\\ln a$",
+    "이다. $s-1=\\frac{s^{2}-1}{s+1}=\\frac{1}{a^{2}(s+1)}$ 이고 $a>1$ 일 때 $0<\\ln a<a$ 이므로",
+    "$0<(s-1)\\ln a<\\frac{a}{a^{2}(s+1)}<\\frac{1}{2 a}$",
+    "에서 $\\lim_{a \\to \\infty}(s-1)\\ln a=0$ 이다. 따라서",
+    "$\\lim_{a \\to \\infty}\\frac{M(a)}{a}=0-1-0+\\ln 2-0=\\ln 2-1$",
+    "이다."
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": ""
+}

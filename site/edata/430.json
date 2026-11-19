@@ -1,0 +1,102 @@
+{
+ "num": 430,
+ "id": "MK-서울대학교모의면접최고난도ShrekMath-10",
+ "univ": "서울대학교 모의 면접 최고난도 (ShrekMath)",
+ "n": 10,
+ "year": 2026,
+ "title": "문제 10",
+ "head": "",
+ "points": null,
+ "minutes": 15,
+ "info": {
+  "concepts": "",
+  "time": "15분"
+ },
+ "pre": [],
+ "passage": [
+  "$n$ 은 자연수이다. $x>0$ 에서 정의된 두 곡선",
+  "$y=x^{n},\\,y=e^{-x}$",
+  "은 오직 한 점에서 만난다. 그 점의 $x$ 좌표를 $x_{n}$ 이라 하자.",
+  "필요하면 $t \\ge 0$ 일 때 부등식 $\\frac{t^{2}}{2}-\\frac{t^{3}}{6}\\le e^{-t}-1+t \\le \\frac{t^{2}}{2}$ 이 성립함을 증명 없이 이용할 수 있다.",
+  "[그림]"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[10-1]",
+   "points": null,
+   "text": [
+    "$x_{n}$ 과 $x_{n+1}$ 의 크기를 비교하고, 극한값 $\\lim_{n \\to \\infty}x_{n}$ 을 구하시오."
+   ],
+   "answer": [
+    "$x>0$ 에서 $x^{n}=e^{-x}$ 은 $n \\ln x+x=0$ 과 같다. $h_{n}(x)=n \\ln x+x$ 라 하면 $h_{n}'(x)=\\frac{n}{x}+1>0$ 이므로 $h_{n}(x)$ 는 증가하고, $h_{n}(1)=1>0$ 이므로 $0<x_{n}<1$ 이다.",
+    "$h_{n+1}(x_{n})=h_{n}(x_{n})+\\ln x_{n}=\\ln x_{n}<0=h_{n+1}(x_{n+1})$ 이고 $h_{n+1}(x)$ 가 증가하므로 $x_{n}<x_{n+1}$ 이다.",
+    "$h_{n}(x_{n})=0$ 에서 $\\ln x_{n}=-\\frac{x_{n}}{n}$ 이고 $0<x_{n}<1$ 이므로 $-\\frac{1}{n}<\\ln x_{n}<0$ , 즉 $e^{-\\frac{1}{n}}<x_{n}<1$ 이다. $\\lim_{n \\to \\infty}e^{-\\frac{1}{n}}=1$ 이므로",
+    "$\\lim_{n \\to \\infty}x_{n}=1$",
+    "이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "[10-2]",
+   "points": null,
+   "text": [
+    "극한값 $\\lim_{n \\to \\infty}n(1-x_{n})$ 을 구하시오."
+   ],
+   "answer": [
+    "$t_{n}=\\frac{x_{n}}{n}$ 이라 하면 문제 10-1에서 $x_{n}=e^{-t_{n}}$ 이고 $n \\to \\infty$ 일 때 $t_{n}\\to 0+$ 이다. $\\lim_{t \\to 0}\\frac{1-e^{-t}}{t}=1$ 이므로",
+    "$\\lim_{n \\to \\infty}n(1-x_{n})=\\lim_{n \\to \\infty}x_{n}\\times \\frac{1-e^{-t_{n}}}{t_{n}}=1$",
+    "이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "3",
+   "label": "[10-3]",
+   "points": null,
+   "text": [
+    "극한값 $\\lim_{n \\to \\infty}n \\left\\{n(1-x_{n})-1 \\right\\}$ 을 구하시오."
+   ],
+   "answer": [
+    "(제시된 부등식이 성립하는 이유) $t \\ge 0$ 에서 $k(t)=1-e^{-t}$ 라 하면 $0 \\le k(t)\\le t$ 이다. ( $k(0)=0$ 이고 $0<k'(t)=e^{-t}\\le 1$ 이기 때문이다.) $r(t)=e^{-t}-1+t$ 라 하면 $r(0)=0$ , $r'(t)=k(t)$ 이므로 $0$ 에서 $t$ 까지 적분하여 $0 \\le r(t)\\le \\frac{t^{2}}{2}$ 을 얻는다. 다시 $k(t)=t-r(t)\\ge t-\\frac{t^{2}}{2}$ 이므로 $r'(t)\\ge t-\\frac{t^{2}}{2}$ 이고, $0$ 에서 $t$ 까지 적분하면 $r(t)\\ge \\frac{t^{2}}{2}-\\frac{t^{3}}{6}$ 이다. 따라서",
+    "$\\frac{t^{2}}{2}-\\frac{t^{3}}{6}\\le e^{-t}-1+t \\le \\frac{t^{2}}{2}$",
+    "이다. 이 부등식의 각 변을 $t^{2}$ 으로 나누면 $\\lim_{t \\to 0+}\\frac{e^{-t}-1+t}{t^{2}}=\\frac{1}{2}$ 이다.",
+    "$n t_{n}=x_{n}$ 이므로",
+    "$n(1-x_{n})-1=n \\left(1-e^{-t_{n}}-t_{n}\\right)+x_{n}-1$",
+    "이고, 양변에 $n$ 을 곱하면",
+    "$n \\left\\{n(1-x_{n})-1 \\right\\}=-x_{n}^{2}\\times \\frac{e^{-t_{n}}-1+t_{n}}{t_{n}^{2}}-n(1-x_{n})$",
+    "이다. 문제 10-2에 의하여",
+    "$\\lim_{n \\to \\infty}n \\left\\{n(1-x_{n})-1 \\right\\}=-1 \\times \\frac{1}{2}-1=-\\frac{3}{2}$",
+    "이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "4",
+   "label": "[10-4]",
+   "points": null,
+   "text": [
+    "두 곡선과 $y$ 축으로 둘러싸인 도형의 넓이를 $S_{n}$ 이라 할 때, 극한값 $\\lim_{n \\to \\infty}S_{n}$ 과 $\\lim_{n \\to \\infty}n \\left(S_{n}-1+\\frac{1}{e}\\right)$ 을 각각 구하시오.",
+    "※ 제시문을 읽고 문제에 답하시오."
+   ],
+   "answer": [
+    "$x^{n}e^{x}$ 은 $x>0$ 에서 증가하고 $x=x_{n}$ 일 때 $1$ 이므로 $0<x<x_{n}$ 에서 $x^{n}<e^{-x}$ 이다. 따라서",
+    "$S_{n}=\\int_{0}^{x_{n}}\\left(e^{-x}-x^{n}\\right)dx=1-e^{-x_{n}}-\\frac{x_{n}^{n+1}}{n+1}$",
+    "이다. $x_{n}^{n}=e^{-x_{n}}$ 이므로 $\\frac{x_{n}^{n+1}}{n+1}=\\frac{x_{n}e^{-x_{n}}}{n+1}$ 이고 이 값은 $0$ 으로 수렴한다. 그러므로",
+    "$\\lim_{n \\to \\infty}S_{n}=1-\\frac{1}{e}$",
+    "이다. 또",
+    "$n \\left(S_{n}-1+\\frac{1}{e}\\right)=-n \\left(e^{-x_{n}}-e^{-1}\\right)-\\frac{n}{n+1}x_{n}e^{-x_{n}}$",
+    "이다. $\\delta_{n}=1-x_{n}$ 이라 하면 $\\delta_{n}\\to 0+$ 이고",
+    "$n \\left(e^{-x_{n}}-e^{-1}\\right)=\\frac{1}{e}\\times \\frac{e^{\\delta_{n}}-1}{\\delta_{n}}\\times n \\delta_{n}$",
+    "이다. $\\lim_{\\delta \\to 0}\\frac{e^{\\delta}-1}{\\delta}=1$ 이고 문제 10-2에 의하여 $n \\delta_{n}\\to 1$ 이므로 이 값은 $\\frac{1}{e}$ 로 수렴한다. 또 $\\frac{n}{n+1}x_{n}e^{-x_{n}}\\to \\frac{1}{e}$ 이므로",
+    "$\\lim_{n \\to \\infty}n \\left(S_{n}-1+\\frac{1}{e}\\right)=-\\frac{1}{e}-\\frac{1}{e}=-\\frac{2}{e}$",
+    "이다."
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": ""
+}

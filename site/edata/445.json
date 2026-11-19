@@ -1,0 +1,88 @@
+{
+ "num": 445,
+ "id": "MK-KAIST면접대비제5회ShrekMath-1",
+ "univ": "KAIST 면접 대비 제5회 (ShrekMath)",
+ "n": 1,
+ "year": 2026,
+ "title": "문제 1 · 5점",
+ "head": "",
+ "points": 5,
+ "minutes": 10,
+ "info": {
+  "concepts": "",
+  "time": "10분"
+ },
+ "pre": [],
+ "passage": [
+  "평면 위의 삼각형 $\\mathrm{OAB}$ 가",
+  "$\\left|\\vec{\\mathrm{OA}}\\right|=8,\\,\\left|\\vec{\\mathrm{OB}}\\right|=5,\\,\\vec{\\mathrm{OA}}\\cdot \\vec{\\mathrm{OB}}=32$",
+  "를 만족시킨다. 삼각형 $\\mathrm{OAB}$ 의 변과 내부로 이루어진 도형을 $T$ 라 하자.",
+  "<정의> 평면 위의 점 $\\mathrm{X}$ 에 대하여, 점 $\\mathrm{X}$ 와 도형 $T$ 에 속하는 점 사이의 거리의 최솟값을 $m(\\mathrm{X})$ , 최댓값을 $M(\\mathrm{X})$ 라 한다. (점 $\\mathrm{X}$ 가 $T$ 에 속하면 $m(\\mathrm{X})=0$ 이다.)",
+  "이때 중심이 $\\mathrm{X}$ 이고 반지름의 길이가 $r$ 인 원이 도형 $T$ 와 만나기 위한 필요충분조건은 $m(\\mathrm{X})\\le r \\le M(\\mathrm{X})$ 이다. 이 사실은 증명 없이 이용할 수 있다.",
+  "[그림]",
+  "[그림] 도형 $T$ 와 만나는 원의 예"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "(1)",
+   "points": 1,
+   "text": [
+    "$\\vec{\\mathrm{OQ}}=2 \\vec{\\mathrm{OB}}$ 인 점 $\\mathrm{Q}$ 에서 직선 $\\mathrm{AB}$ 에 내린 수선의 발을 $\\mathrm{H}$ 라 하자. $\\vec{\\mathrm{OH}}$ 를 $\\vec{\\mathrm{OA}}$ , $\\vec{\\mathrm{OB}}$ 로 나타내고, $m(\\mathrm{Q})$ 와 $M(\\mathrm{Q})$ 의 값을 각각 구하시오. [1점]",
+    "점 $\\mathrm{X}$ 가 평면 전체를 움직일 때, $M(\\mathrm{X})$ 가 최소가 되는 점 $\\mathrm{X}$ 는 삼각형 $\\mathrm{OAB}$ 의 외접원의 중심이다."
+   ],
+   "answer": [
+    "먼저 두 가지를 정리한다. $\\vec{\\mathrm{AB}}=\\vec{\\mathrm{OB}}-\\vec{\\mathrm{OA}}$ 이므로 $\\left|\\vec{\\mathrm{AB}}\\right|^{2}=25-2 \\cdot 32+64=25$ , 즉 $\\overline{\\mathrm{AB}}=5$ 이다.",
+    "또 임의의 점 $\\mathrm{X}$ 에 대하여 $M(\\mathrm{X})$ 는 세 길이 $\\overline{\\mathrm{XO}}$ , $\\overline{\\mathrm{XA}}$ , $\\overline{\\mathrm{XB}}$ 중 가장 큰 값이다. 그 이유는 다음과 같다. 선분 $\\mathrm{UV}$ 위의 점 $\\mathrm{Y}$ 를 $\\vec{\\mathrm{UY}}=s \\vec{\\mathrm{UV}}$ ( $0 \\le s \\le 1$ )로 나타내면 $\\overline{\\mathrm{XY}}^{2}=\\left|\\vec{\\mathrm{UV}}\\right|^{2}s^{2}-2 \\left(\\vec{\\mathrm{UX}}\\cdot \\vec{\\mathrm{UV}}\\right)s+\\left|\\vec{\\mathrm{UX}}\\right|^{2}$ 은 $s^{2}$ 의 계수가 양수인 이차함수이므로 $s=0$ 또는 $s=1$ 에서 최대이다. 즉 $\\overline{\\mathrm{XY}}$ 는 $\\overline{\\mathrm{XU}}$ , $\\overline{\\mathrm{XV}}$ 중 큰 값 이하이다. $T$ 의 임의의 점 $\\mathrm{Y}$ 는 점 $\\mathrm{O}$ 와 변 $\\mathrm{AB}$ 위의 어떤 점 $\\mathrm{Z}$ 를 이은 선분 위에 있으므로, $\\overline{\\mathrm{XY}}$ 는 $\\overline{\\mathrm{XO}}$ , $\\overline{\\mathrm{XZ}}$ 중 큰 값 이하이고, $\\overline{\\mathrm{XZ}}$ 는 $\\overline{\\mathrm{XA}}$ , $\\overline{\\mathrm{XB}}$ 중 큰 값 이하이다.",
+    "$\\vec{\\mathrm{AH}}=u \\vec{\\mathrm{AB}}$ 라 하면 $\\left(\\vec{\\mathrm{AQ}}-u \\vec{\\mathrm{AB}}\\right)\\cdot \\vec{\\mathrm{AB}}=0$ 이다. $\\vec{\\mathrm{AQ}}=2 \\vec{\\mathrm{OB}}-\\vec{\\mathrm{OA}}$ 이므로",
+    "$\\vec{\\mathrm{AQ}}\\cdot \\vec{\\mathrm{AB}}=\\left(2 \\vec{\\mathrm{OB}}-\\vec{\\mathrm{OA}}\\right)\\cdot \\left(\\vec{\\mathrm{OB}}-\\vec{\\mathrm{OA}}\\right)=50-64-32+64=18$",
+    "이고 $u=\\frac{18}{25}$ 이다. 따라서",
+    "$\\vec{\\mathrm{OH}}=\\vec{\\mathrm{OA}}+\\frac{18}{25}\\left(\\vec{\\mathrm{OB}}-\\vec{\\mathrm{OA}}\\right)=\\frac{7}{25}\\vec{\\mathrm{OA}}+\\frac{18}{25}\\vec{\\mathrm{OB}}$",
+    "이다. $0<u<1$ 이므로 점 $\\mathrm{H}$ 는 변 $\\mathrm{AB}$ 위에 있다.",
+    "$\\left|\\vec{\\mathrm{AQ}}\\right|^{2}=100-128+64=36$ 이므로 $\\overline{\\mathrm{QH}}^{2}=36-\\left(\\frac{18}{25}\\right)^{2}\\cdot 25=\\frac{576}{25}$ , 즉 $\\overline{\\mathrm{QH}}=\\frac{24}{5}$ 이다.",
+    "점 $\\mathrm{B}$ 는 선분 $\\mathrm{OQ}$ 의 중점이므로 두 점 $\\mathrm{O}$ , $\\mathrm{Q}$ 는 직선 $\\mathrm{AB}$ 에 대하여 서로 반대쪽에 있고, 도형 $T$ 는 직선 $\\mathrm{AB}$ 에 대하여 점 $\\mathrm{O}$ 와 같은 쪽(직선 포함)에 있다. 따라서 $T$ 의 임의의 점 $\\mathrm{Y}$ 에 대하여 선분 $\\mathrm{QY}$ 는 직선 $\\mathrm{AB}$ 와 어떤 점 $\\mathrm{Z}$ 에서 만나고 $\\overline{\\mathrm{QY}}\\ge \\overline{\\mathrm{QZ}}\\ge \\overline{\\mathrm{QH}}$ 이다. 점 $\\mathrm{H}$ 는 $T$ 에 속하므로 $m(\\mathrm{Q})=\\frac{24}{5}$ 이다.",
+    "또 $\\overline{\\mathrm{QO}}=10$ , $\\overline{\\mathrm{QA}}=6$ , $\\overline{\\mathrm{QB}}=5$ 이므로 $M(\\mathrm{Q})=10$ 이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "(2)",
+   "points": 2,
+   "text": [
+    "위 명제의 참, 거짓을 판별하고 그 이유를 설명하시오. 또 $M(\\mathrm{X})$ 의 최솟값을 구하고, 그때의 $\\vec{\\mathrm{OX}}$ 를 $\\vec{\\mathrm{OA}}$ , $\\vec{\\mathrm{OB}}$ 로 나타내시오. [2점]"
+   ],
+   "answer": [
+    "거짓이다. 임의의 점 $\\mathrm{X}$ 에 대하여",
+    "$M(\\mathrm{X})\\ge \\frac{\\overline{\\mathrm{XO}}+\\overline{\\mathrm{XA}}}{2}\\ge \\frac{\\overline{\\mathrm{OA}}}{2}=4$",
+    "이다. 등호가 성립하려면 점 $\\mathrm{X}$ 가 선분 $\\mathrm{OA}$ 위에 있고 $\\overline{\\mathrm{XO}}=\\overline{\\mathrm{XA}}$ 이어야 하므로 $\\mathrm{X}$ 는 선분 $\\mathrm{OA}$ 의 중점 $\\mathrm{N}$ 이어야 한다. 이때",
+    "$\\left|\\vec{\\mathrm{NB}}\\right|^{2}=\\left|\\vec{\\mathrm{OB}}-\\frac{1}{2}\\vec{\\mathrm{OA}}\\right|^{2}=25-32+16=9$",
+    "에서 $\\overline{\\mathrm{NB}}=3 \\le 4$ 이므로 $M(\\mathrm{N})=4$ 이다. 따라서 $M(\\mathrm{X})$ 의 최솟값은 $4$ 이고, 그때 $\\vec{\\mathrm{OX}}=\\frac{1}{2}\\vec{\\mathrm{OA}}$ 이다.",
+    "외접원의 중심은 세 꼭짓점까지의 거리가 모두 같은 점인데, $\\overline{\\mathrm{NO}}=\\overline{\\mathrm{NA}}=4$ , $\\overline{\\mathrm{NB}}=3$ 이므로 점 $\\mathrm{N}$ 은 외접원의 중심이 아니다. 따라서 명제는 거짓이다. (참고: $\\vec{\\mathrm{BO}}\\cdot \\vec{\\mathrm{BA}}=25-32=-7<0$ 이므로 각 $\\mathrm{OBA}$ 가 둔각이고, 외접원의 반지름의 길이는 $\\frac{25}{6}$ 로 $4$ 보다 크다.)"
+   ],
+   "rubric": []
+  },
+  {
+   "k": "3",
+   "label": "(3)",
+   "points": 2,
+   "text": [
+    "양수 $r$ 에 대하여, 반지름의 길이가 $r$ 인 원이 도형 $T$ 와 만나도록 하는 원의 중심 전체가 나타내는 도형의 넓이를 $S(r)$ 라 하자. $0<r \\le 4$ 일 때 $S(r)$ 를 $r$ 에 대한 식으로 나타내고, $r>4$ 일 때 $S(r)<\\pi r^{2}+18 r+12$ 임을 보이시오. [2점]"
+   ],
+   "answer": [
+    "$0<r \\le 4$ 일 때: (2)에 의하여 모든 점 $\\mathrm{X}$ 에 대하여 $M(\\mathrm{X})\\ge 4 \\ge r$ 이므로, 원이 $T$ 와 만날 조건은 $m(\\mathrm{X})\\le r$ 이다. 이 조건을 만족시키는 점 $\\mathrm{X}$ 전체는 다음과 같이 겹치지 않는 부분으로 나뉜다.",
+    "(i) $T$ 에 속하는 점. 넓이는 $\\frac{1}{2}\\sqrt{8^{2}\\cdot 5^{2}-32^{2}}=12$ 이다.",
+    "(ii) $T$ 의 바깥에 있고 $T$ 에서 가장 가까운 점이 한 변 위(양 끝 점 제외)에 있는 점. 각 변을 한 변으로 하고 바깥쪽으로 폭이 $r$ 인 직사각형 세 개를 이루며, 넓이의 합은 $(8+5+5)r=18 r$ 이다.",
+    "(iii) $T$ 의 바깥에 있고 $T$ 에서 가장 가까운 점이 꼭짓점인 점. 각 꼭짓점에서 그 꼭짓점을 지나는 두 변에 각각 수직인 두 반직선 사이에 놓인, 반지름의 길이가 $r$ 인 부채꼴을 이룬다. 꼭짓점의 내각의 크기가 $\\theta$ 이면 부채꼴의 중심각의 크기는 $2 \\pi-\\frac{\\pi}{2}-\\frac{\\pi}{2}-\\theta=\\pi-\\theta$ 이므로, 세 부채꼴의 중심각의 크기의 합은 $3 \\pi-\\pi=2 \\pi$ 이고 넓이의 합은 $\\pi r^{2}$ 이다.",
+    "따라서 $S(r)=\\pi r^{2}+18 r+12$ 이다.",
+    "$r>4$ 일 때: 위와 같은 이유로 $m(\\mathrm{X})\\le r$ 인 점 $\\mathrm{X}$ 전체의 넓이는 $\\pi r^{2}+18 r+12$ 이고, $S(r)$ 는 이 중에서 $M(\\mathrm{X})\\ge r$ 인 부분의 넓이이다. 선분 $\\mathrm{OA}$ 의 중점 $\\mathrm{N}$ 에 대하여 $\\overline{\\mathrm{XN}}<r-4$ 인 점 $\\mathrm{X}$ 를 생각하자. 꼭짓점 $\\mathrm{O}$ , $\\mathrm{A}$ , $\\mathrm{B}$ 각각에 대하여 그 꼭짓점을 $\\mathrm{V}$ 라 하면 $\\overline{\\mathrm{XV}}\\le \\overline{\\mathrm{XN}}+\\overline{\\mathrm{NV}}<(r-4)+4=r$ 이므로 $M(\\mathrm{X})<r$ 이다. 한편 점 $\\mathrm{N}$ 은 $T$ 에 속하므로 $m(\\mathrm{X})\\le \\overline{\\mathrm{XN}}<r$ 이다. 즉 중심이 $\\mathrm{N}$ 이고 반지름의 길이가 $r-4$ 인 원의 내부는 $m(\\mathrm{X})\\le r$ 인 부분에 포함되지만 원이 $T$ 와 만나지 않는 중심들로 이루어져 있다. 따라서",
+    "$S(r)\\le \\pi r^{2}+18 r+12-\\pi(r-4)^{2}<\\pi r^{2}+18 r+12$",
+    "이다."
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": ""
+}
