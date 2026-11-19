@@ -482,6 +482,29 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
   .topbar .cta{display:flex;align-items:center;height:30px;padding:0 9px;font-size:.82rem}
   .topbar .logo .meta{margin-top:12px;max-width:none}
 }
+/* ── 학생 편의 개선 ── */
+#grid.nocv .track{content-visibility:visible}
+#resume{display:flex;align-items:center;gap:10px;margin:14px 0 0;padding:10px 14px;border-radius:10px;background:#1b1b1b;border:1px solid #2c2c2c;color:#e5e5e5;font-size:.95rem;width:100%;text-align:left}
+#resume[hidden]{display:none}
+#resume:hover{border-color:#555}
+#resume .k{flex:none;font-size:.72rem;font-weight:800;letter-spacing:.06em;color:#fff;background:var(--red);border-radius:999px;padding:3px 10px}
+#resume.run .k{background:#ff9f3a;color:#111}
+#resume .t{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#resume .go{flex:none;font-weight:700;color:#fff}
+#home.returning .hero{min-height:0;padding:26px 0 18px}
+#home.returning .hero p,#home.returning .hero .sub,#home.returning .hero .go,#home.returning .hero .byline{display:none}
+#home.returning .hero h1{font-size:clamp(1.4rem,3.4vw,2.2rem)}
+.result .reveal{font:inherit;font-family:var(--mono);font-weight:700;color:#fff;background:rgba(255,255,255,.14);border:1px dashed rgba(255,255,255,.45);border-radius:6px;padding:1px 10px;cursor:pointer}
+.fgrp.jump input{width:5.2em;font:inherit;font-family:var(--mono);font-size:.92rem;padding:5px 8px;border-radius:4px;border:1px solid #555;background:#111;color:#fff}
+@media (max-width:600px){
+  .filters{gap:6px}
+  .fgrp{display:flex;width:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .fgrp::-webkit-scrollbar{display:none}
+  .fgrp .fchips{flex-wrap:nowrap}
+  .fgrp .chip,.fgrp select.chip{flex:none;white-space:nowrap}
+  .fgrp .fl{position:sticky;left:-10px;z-index:1;background:#1b1b1b;padding:6px 6px 6px 10px;margin:0 0 0 -10px}
+  .fgrp.jump{width:auto}
+}
 </style>
 
 <div id="gate" class="wrap" hidden>
@@ -517,6 +540,7 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
     </div>
   </div>
 
+  <button id="resume" hidden></button>
   <div class="stats">
     <div class="tile" style="--tc:var(--red)">
       <div class="lbl">회원 등급</div>
@@ -552,6 +576,7 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
       <button class="chip" data-k="review" data-v="1">복습 필요 (오답·시간초과)</button>
       <button class="chip" data-k="todo" data-v="1">안 푼 문항만</button>
     </div>
+    <div class="fgrp jump"><span class="fl">번호</span><input type="number" inputmode="numeric" min="1" placeholder="#번호" data-p="q" aria-label="문항 번호로 바로 가기"><button class="chip" data-jump>이동</button></div>
     <span class="setchips"><button class="chip setchip semi" id="setSemi" title="수능 15·20·21·22번 자리 준킬러 4문항을 한 시계로 연속 풀이">🎯 준킬러 4제 <small>15·20·21·22</small></button><button class="chip setchip kill" id="setKill" title="수능 29·30번 자리 킬러 2문항을 한 시계로 연속 풀이">💀 킬러 2제 <small>29·30</small></button></span>
   </div>
   <div class="filters" id="efilters" hidden>
@@ -561,6 +586,7 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
       <button class="chip" data-k="round" data-v="모의">모의</button>
     </div>
     <div class="fgrp"><span class="fl">보기</span><button class="chip" data-k="todo" data-v="1">안 푼 문제만</button></div>
+    <div class="fgrp jump"><span class="fl">번호</span><input type="number" inputmode="numeric" min="1" placeholder="#번호" data-p="e" aria-label="문항 번호로 바로 가기"><button class="chip" data-jump>이동</button></div>
   </div>
   <div class="filters" id="pfilters" hidden>
     <div class="fgrp"><span class="fl" data-en="Exam">시험</span>
@@ -815,6 +841,7 @@ async function unlockData(){
 function home(){
   if(window.__footPastKo==null)window.__footPastKo=$('#footPast').innerHTML;
   $('#op').hidden=true;$('#home').hidden=false;stopTimer();
+  $('#home').classList.toggle('returning',!!(Object.keys(S.rec||{}).length||Object.keys(S.erec||{}).length||Object.keys(S.jrec||{}).length));showResume();requestAnimationFrame(fitBar);
   $('#author').textContent=SITE.author;document.querySelectorAll('.author').forEach(e=>e.textContent=SITE.author);
   if(SITE.blog){const a=$('#bloglink');a.hidden=false;a.href=SITE.blog;a.textContent='블로그 ↗'}
   $('#nKiller').textContent=LIST.length;$('#nEssay').textContent=ELIST.length;$('#nJapan').textContent=JP().length;$('#nPast').textContent=PAST().length;setTot();
@@ -947,7 +974,7 @@ function newRow(title,count,go,back){const grid=$('#grid');const h=el('div','ghe
   const t=el('div','track'+(back?' vgrid':''));grid.append(h,t);return t}
 /* 유형 하나만 보기: 행 제목·유형 칩 공용. 선택되면 그 유형만 세로 격자로 */
 function setType(t){filt.type=t||'';document.querySelectorAll('#filters .chip[data-k=type]').forEach(c=>c.classList.toggle('on',c.dataset.v===filt.type));home();
-  const g=$('#grid');if(g){const y=g.getBoundingClientRect().top+window.scrollY-(($('.topbar')||{}).offsetHeight||0)-10;window.scrollTo({top:Math.max(0,y),behavior:'smooth'})}}
+  const g=$('#grid');if(g){const y=g.getBoundingClientRect().top+window.scrollY-((($('.topbar')||{}).offsetHeight||0)-(window.__tbHide||0))-10;window.scrollTo({top:Math.max(0,y),behavior:'smooth'})}}
 /* 간격 복습: 오답·시간초과 문항은 3·7·14일 뒤에 '오늘의 복습'으로 */
 function daysSince(d){return Math.floor((Date.now()-new Date(d+'T00:00:00'))/86400000)}
 function dueReview(){return LIST.filter(x=>{const r=S.rec[x.num];if(!r||r.skip||(r.ok&&!r.over))return false;const k=r.reviews||0;const due=REVIEW_DAYS[Math.min(k,REVIEW_DAYS.length-1)];return daysSince(r.date)>=due})}
@@ -1060,7 +1087,7 @@ function makeSet(kind){const T=SETS[kind];if(!T)return;
   if(items.length<2){toast(`${T.name}를 만들 안 푼 문항이 부족해요`);return}
   const total=items.reduce((a,n)=>a+(LIMIT[LIST.find(x=>x.num===n).stars]||10),0)*60;
   S.set={id:'S'+Date.now().toString(36),kind,items,idx:0,total,start:Date.now(),results:[],done:false};save();location.hash='q'+items[0]}
-function setNext(ok,secs){const st=S.set;st.results.push({num:D.num,ok,secs});st.idx++;save();
+function setNext(ok,secs){guard=null;const st=S.set;st.results.push({num:D.num,ok,secs});st.idx++;save();
   if(st.idx<st.items.length){toast(`${st.idx}/${st.items.length} 완료 · 다음 문항`);location.hash='q'+st.items[st.idx]}
   else{st.done=true;save();stopTimer();showSetResult()}}
 function showSetResult(){const st=S.set;const box=$('#setResult');$('#setKind').textContent=setName(st)+' · 결과';const ok=st.results.filter(r=>r.ok).length;const used=st.results.reduce((a,r)=>a+r.secs,0);
@@ -1142,6 +1169,7 @@ function buildPages(){
 }
 function go(i,silent){
   if(i<0||i>=pages.length)return;
+  {const h=(location.hash.match(/^#([qej]\d+)/)||[])[1],t=(($('#opId').textContent||'').split('·')[0].trim()+' · '+($('#opTitle').textContent||'')).trim();if(h&&(!S.last||S.last.h!==h||S.last.t!==t)){S.last={h,t};save()}}
   if(!timer)hideTimers();
   if(i>0&&!unlocked){i=0;toast(LP()?'Solve it first (or skip) to unlock':mode==='killer'?'먼저 풀고 채점해야 분석이 열려요':LJ()?'先に解いて「解答完了」を押すと開きます':'먼저 풀고 완료를 눌러야 열려요')}
   cur=i;const p=pages[i];
@@ -1223,7 +1251,7 @@ function solveBody(){
   if(inSet){b.append(el('div','setbar',`${SS.kind==='kill'?'💀':'🎯'} ${setName(SS)} <span class="n">${SS.idx+1}/${SS.items.length}</span> · 전체 제한 <span class="n">${mmss(SS.total)}</span> · 한 시계로 연속 풀이`));
     b.append(el('h2',null,'바로 풀기 시작'));const tm=el('div','timer num','00:00');b.append(tm);const lm=el('div','lead num','');b.append(lm);
     const ai=el('div','ansin');const inp=el('input');inp.type='number';inp.min=1;inp.max=999;inp.id='answer';inp.placeholder='정답';const gb=el('button','btn','채점 · 다음');ai.append(el('span',null,'내 답'),inp,gb);b.append(ai);
-    const itemStart=Date.now();$('#exam').classList.add('open');
+    const itemStart=Date.now();$('#exam').classList.add('open');guard=location.hash;
     stopTimer();warned=false;paused=false;t0=SS.start;timer=setInterval(()=>{if(paused)return;showTime(Math.floor((Date.now()-t0)/1000),SS.total,tm,lm,'전체 제한시간 초과 · 끝까지 풀어도 됩니다')},500);showTime(Math.floor((Date.now()-t0)/1000),SS.total,tm,lm,'');wake(true);
     const grade=()=>{if(inp.value==='')return;const secs=Math.floor((Date.now()-itemStart)/1000);const ok=String(inp.value).trim()==String(D.answer);
       S.rec[D.num]={ok,ans:inp.value,answer:D.answer,secs,over:false,set:SS.id,date:new Date().toISOString().slice(0,10)};save();
@@ -1236,18 +1264,20 @@ function solveBody(){
   const tm=el('div','timer num','00:00');b.append(tm);const lm=el('div','lead num',`제한 ${mmss(lim*60)}`);b.append(lm);
   const row=el('div','btnrow primary');const st=el('button','btn','실전 시작');const skip=el('button','btn ghost sm','채점 없이 분석만 볼래요');row.append(st,skip);b.append(row);
   const ai=el('div','ansin');ai.hidden=true;const inp=el('input');inp.type='number';inp.min=1;inp.max=999;inp.id='answer';inp.placeholder='정답';const gb=el('button','btn','채점');ai.append(el('span',null,'내 답'),inp,gb);b.append(ai);
-  st.onclick=()=>{unlocked=false;$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;ai.hidden=false;t0=Date.now();stopTimer();
-    startTimer(lim*60,tm,lm,'제한시간 초과 · 끝까지 풀어도 됩니다');if(window.innerWidth>900)inp.focus();else{$('#fullBtn').click()}};
-  const grade=()=>{if(inp.value==='')return;stopTimer();const secs=Math.floor((Date.now()-t0)/1000);const ok=String(inp.value).trim()==String(D.answer);
+  const begin=from=>{unlocked=false;$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;ai.hidden=false;stopTimer();
+    startTimer(lim*60,tm,lm,'제한시간 초과 · 끝까지 풀어도 됩니다',from);S.run={n:D.num,t0};save();if(window.innerWidth>900)inp.focus();else{$('#fullBtn').click()}};
+  st.onclick=()=>begin();
+  if(S.run&&S.run.n===D.num&&Date.now()-S.run.t0<3*3600e3){const n0=D.num,f=S.run.t0;setTimeout(()=>{if(mode==='killer'&&D&&D.num===n0&&!timer&&!S.rec[n0]&&!$('#op').hidden){begin(f);toast('풀던 문항이에요 · 시간을 이어서 잽니다')}},80)}
+  const grade=()=>{if(inp.value==='')return;stopTimer();delete S.run;const secs=Math.floor((Date.now()-t0)/1000);const ok=String(inp.value).trim()==String(D.answer);
     S.rec[D.num]={ok,ans:inp.value,answer:D.answer,secs,over:secs>lim*60,date:new Date().toISOString().slice(0,10),reviews:(S._rv&&S._rv.num===D.num)?S._rv.reviews:0};S._rv=null;save();
     report({kind:'킬러',num:D.num,id:D.id,title:D.topic,result:ok?'정답':'오답',ans:inp.value,answer:D.answer,secs,limit:lim*60,over:secs>lim*60,set:S.set&&S.set.items.includes(D.num)?S.set.id:''});
     if(S.set&&!S.set.done&&S.set.items.includes(D.num)){setNext(ok,secs);return}
     unlocked=true;buildPages();go(0)};
   gb.onclick=grade;inp.onkeydown=e=>{if(e.key==='Enter')grade()};
-  skip.onclick=()=>{S.rec[D.num]={skip:true,date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(1)};
+  skip.onclick=()=>{delete S.run;S.rec[D.num]={skip:true,date:new Date().toISOString().slice(0,10)};save();unlocked=true;buildPages();go(1)};
   return b;
 }
-function resultBox(rec){const r=el('div','result '+(rec.ok?'ok':'no'));r.innerHTML=`<div class="big">${rec.ok?'정답입니다':'오답입니다'}</div><div>내 답 <b class="num">${esc(rec.ans)}</b> · 정답 <b class="num">${esc(rec.answer)}</b> · 걸린 시간 <b class="num">${mmss(rec.secs)}</b>${rec.over?' <span class="dbadge" style="--dc:#ff9f3a">제한시간 초과</span>':''}</div><div class="lead">${rec.ok?'맞았어도 조건을 어디서 썼는지 설명할 수 있어야 진짜 내 것. 분석로 확인하세요.':'어느 조건에서 길을 잃었는지 조건 분석부터 따라가 보세요.'}</div>`;return r}
+function resultBox(rec){const r=el('div','result '+(rec.ok?'ok':'no'));r.innerHTML=`<div class="big">${rec.ok?'정답입니다':'오답입니다'}</div><div>내 답 <b class="num">${esc(rec.ans)}</b> · 정답 ${rec.ok?`<b class="num">${esc(rec.answer)}</b>`:`<button class="reveal" data-a="${esc(rec.answer)}" onclick="this.outerHTML='<b class=&quot;num&quot;>'+this.dataset.a+'</b>'">눌러서 보기</button>`} · 걸린 시간 <b class="num">${mmss(rec.secs)}</b>${rec.over?' <span class="dbadge" style="--dc:#ff9f3a">제한시간 초과</span>':''}</div><div class="lead">${rec.ok?'맞았어도 조건을 어디서 썼는지 설명할 수 있어야 진짜 내 것. 분석으로 확인하세요.':'정답을 보기 전에 ‘다시 풀기’로 한 번 더 도전할 수 있어요. 막혔다면 조건 분석부터 따라가 보세요.'}</div>`;return r}
 let warned=false,paused=false,pausedAt=0;
 function showTime(s,limSec,tm,lm,overMsg){const t=mmss(s);const left=limSec-s;const over=left<0;const warn=!over&&left<=60;
   tm.textContent=t;tm.classList.toggle('over',over);tm.classList.toggle('warn',warn);
@@ -1256,9 +1286,9 @@ function showTime(s,limSec,tm,lm,overMsg){const t=mmss(s);const left=limSec-s;co
   if(over&&warned!=='over'){warned='over';try{navigator.vibrate&&navigator.vibrate(300)}catch(e){}}
   for(const id of ['fsTimer','sheetTimer']){const e=$('#'+id);e.hidden=false;e.textContent=(over?'+':'')+mmss(Math.abs(left));e.classList.toggle('over',over);e.classList.toggle('warn',warn)}
   $('#fsPause').hidden=false;$('#sheetPause').hidden=false;}
-function startTimer(limSec,tm,lm,overMsg){stopTimer();warned=false;paused=false;t0=Date.now();
-  timer=setInterval(()=>{if(paused)return;showTime(Math.floor((Date.now()-t0)/1000),limSec,tm,lm,overMsg)},500);showTime(0,limSec,tm,lm,overMsg);wake(true)}
-function togglePause(){if(!timer)return;paused=!paused;if(paused){pausedAt=Date.now();$('#pauseVeil').hidden=false}else{const d=Date.now()-pausedAt;t0+=d;if(S.set&&!S.set.done){S.set.start+=d;save()}$('#pauseVeil').hidden=true}
+function startTimer(limSec,tm,lm,overMsg,from){stopTimer();warned=false;paused=false;t0=from||Date.now();guard=location.hash;
+  timer=setInterval(()=>{if(paused)return;showTime(Math.floor((Date.now()-t0)/1000),limSec,tm,lm,overMsg)},500);showTime(Math.floor((Date.now()-t0)/1000),limSec,tm,lm,overMsg);wake(true)}
+function togglePause(){if(!timer)return;paused=!paused;if(paused){pausedAt=Date.now();$('#pauseVeil').hidden=false}else{const d=Date.now()-pausedAt;t0+=d;if(S.run){S.run.t0+=d;save()}if(S.set&&!S.set.done){S.set.start+=d;save()}$('#pauseVeil').hidden=true}
   $('#fsPause').innerHTML=paused?'▶<span class="lbl"> 계속</span>':'⏸<span class="lbl" data-en=" Pause"> 일시정지</span>';$('#sheetPause').textContent=paused?'▶':'⏸'}
 let wakeLock=null;async function wake(on){try{if(on&&'wakeLock' in navigator){wakeLock=await navigator.wakeLock.request('screen')}else if(!on&&wakeLock){await wakeLock.release();wakeLock=null}}catch(e){}}
 document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&timer&&!wakeLock)wake(true)});
@@ -1434,11 +1464,30 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#fullSheet').hi
 
 /* ───────── 라우팅 ───────── */
 var VIS=null;
-function showVis(){const e=$('#nVisit');if(!e||!VIS)return;e.innerHTML='<span class="dot"></span><i>'+(EN()?'Today':'오늘')+'</i><b>'+VIS.today.toLocaleString()+'</b><span class="sep"></span><i>'+(EN()?'Total':'누적')+'</i><b>'+VIS.total.toLocaleString()+'</b>';e.title=EN()?'Visitors (each device counted once a day)':'방문자 수 (같은 기기는 하루 한 번만 셉니다)';e.hidden=false}
+function showVis(){const e=$('#nVisit');if(!e||!VIS)return;e.innerHTML='<span class="dot"></span><i>'+(EN()?'Today':'오늘')+'</i><b>'+VIS.today.toLocaleString()+'</b><span class="sep"></span><i>'+(EN()?'Total':'누적')+'</i><b>'+VIS.total.toLocaleString()+'</b>';e.title=EN()?'Visitors (each device counted once a day)':'방문자 수 (같은 기기는 하루 한 번만 셉니다)';e.hidden=false;requestAnimationFrame(fitBar)}
 (function visit(){if(!/^https?:/.test(location.protocol))return;const d=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);let hit=true;try{hit=localStorage.getItem('km_vday')!==d}catch(e){}
   fetch('/api/visit'+(hit?'?hit=1':''),{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(!j||j.total==null)return;if(hit)try{localStorage.setItem('km_vday',d)}catch(e){}VIS=j;showVis()}).catch(()=>{})})();
 function setTot(){showVis();try{const h='<b>'+(LIST.length+ELIST.length+JP().length+PAST().length).toLocaleString()+'</b><i>'+(EN()?'items':'문항')+'</i>';$('#nTotal').innerHTML=h;$('#nTotal2').innerHTML=h;}catch(e){}}
-function route(){setTot();const m=location.hash.match(/^#([qej])(\d+)(?:-(\d+))?$/);if(m){(m[1]==='q'?open:m[1]==='e'?openEssay:openJapan)(+m[2],+(m[3]||0))}else home()}
+let guard=null,homePos=null;   // guard: 풀이 중인 문항의 주소(실수로 나가기 방지) · homePos: 목록으로 돌아올 때 되돌릴 스크롤 위치
+function fillAuthor(){document.querySelectorAll('.author').forEach(e=>e.textContent=SITE.author)}
+function fitBar(){const tb=$('.topbar'),nv=$('#tabs');if(!tb||!nv)return;let d=0;if(window.innerWidth<=760&&!$('#home').hidden){d=Math.max(0,Math.round(nv.getBoundingClientRect().top-tb.getBoundingClientRect().top-6))}
+  window.__tbHide=d;tb.style.top=d?`calc(env(safe-area-inset-top,0px) - ${d}px)`:''}
+window.addEventListener('resize',()=>fitBar());
+function showResume(){const e=$('#resume');if(!e)return;const run=S.run&&!S.rec[S.run.n]&&Date.now()-S.run.t0<3*3600e3&&LIST.some(x=>x.num===S.run.n);
+  if(run){const x=LIST.find(y=>y.num===S.run.n);e.className='run';e.innerHTML=`<span class="k">풀던 중</span><span class="t">#${String(x.num).padStart(3,'0')} · ${esc(x.topic)} · 시간이 계속 가고 있어요</span><span class="go">이어서 ›</span>`;e.onclick=()=>location.hash='q'+x.num;e.hidden=false;return}
+  if(S.last&&S.last.h){e.className='';e.innerHTML=`<span class="k">최근 본 문항</span><span class="t">${esc(S.last.t||'')}</span><span class="go">다시 열기 ›</span>`;e.onclick=()=>location.hash=S.last.h;e.hidden=false}else e.hidden=true}
+function route(){
+  if(guard&&timer&&location.hash!==guard){if(!confirm('풀이 중입니다. 지금 나가면 이 문항의 시간 기록이 사라져요. 나갈까요?')){history.pushState(null,'',guard);return}if(S.run){delete S.run;save()}}
+  guard=null;$('#fullSheet').hidden=true;$('#lb').hidden=true;document.body.style.overflow='';
+  setTot();fillAuthor();const m=location.hash.match(/^#([qej])(\d+)(?:-(\d+))?$/);
+  if(m){if(!$('#home').hidden)homePos={tab:S.tab,y:window.scrollY,tr:[...document.querySelectorAll('#grid .track')].map(t=>t.scrollLeft)};(m[1]==='q'?open:m[1]==='e'?openEssay:openJapan)(+m[2],+(m[3]||0))}
+  else{home();const hp=homePos;homePos=null;
+    if(hp&&hp.tab===S.tab){const put=()=>{const tr=document.querySelectorAll('#grid .track');if(tr.length===hp.tr.length)tr.forEach((t,i)=>{if(hp.tr[i])t.scrollLeft=hp.tr[i]})};
+      const g=$('#grid');g.classList.add('nocv');void g.offsetHeight;window.scrollTo(0,hp.y);put();requestAnimationFrame(()=>{window.scrollTo(0,hp.y);put();requestAnimationFrame(()=>g.classList.remove('nocv'))})}}}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-jump]');if(b)jumpTo(b.parentNode.querySelector('input'))});
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.matches&&e.target.matches('.fgrp.jump input'))jumpTo(e.target)});
+function jumpTo(inp){const n=parseInt(inp.value,10);if(!n){inp.focus();return}const k=inp.dataset.p;const ok=(k==='q'?LIST:ELIST).some(x=>x.num===n);
+  if(!ok){toast(`${k==='q'?'#':'#E'}${n}번 문항은 없어요`);return}inp.value='';location.hash=k+n}
 window.addEventListener('hashchange',route);
 
 /* ── 구독(페이월) ── */
