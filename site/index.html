@@ -1612,7 +1612,7 @@ let GID='',GCRED='',gsiState=0;
 function gsiReady(){if(!GID)return;const draw=()=>{try{const w=Math.max(200,Math.min(360,$('#auth .abox').clientWidth-46));google.accounts.id.renderButton($('#gBtn'),{theme:'outline',size:'large',text:'continue_with',shape:'rectangular',logo_alignment:'center',locale:'ko',width:w})}catch(e){$('#gWrap').hidden=true}};
   if(gsiState===2){draw();return}if(gsiState===1)return;gsiState=1;
   const sc=document.createElement('script');sc.src='https://accounts.google.com/gsi/client';sc.async=true;
-  sc.onload=()=>{try{google.accounts.id.initialize({client_id:GID,callback:onGoogle,auto_select:false,ux_mode:'popup'});gsiState=2;draw()}catch(e){$('#gWrap').hidden=true}};
+  sc.onload=()=>{try{google.accounts.id.initialize({client_id:GID,callback:onGoogle,auto_select:false,ux_mode:'popup',use_fedcm_for_button:false});gsiState=2;draw()}catch(e){$('#gWrap').hidden=true}};
   sc.onerror=()=>{gsiState=0;$('#gWrap').hidden=true};document.head.append(sc)}
 async function onGoogle(resp){GCRED=(resp&&resp.credential)||'';if(!GCRED)return;const err=$('#authErr');err.textContent='';
   const r=await authCall({action:'google',credential:GCRED});
