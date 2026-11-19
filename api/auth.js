@@ -1,5 +1,8 @@
 // 회원가입·로그인 (Vercel 서버리스 함수 + Neon Postgres)
-//  POST /api/auth  { action: 'signup' | 'login' | 'google' | 'config' | 'me' | 'logout' | 'delete', ... }
+//  POST /api/auth  { action: 'signup' | 'login' | 'google' | 'config' | 'me' | 'logout' | 'delete'
+//                   | 'admin_list' | 'admin_reset' | 'admin_delete', ... }
+//  · 관리자: Vercel 환경변수 ADMIN_EMAILS(쉼표로 구분)에 든 이메일의 '구글 로그인' 계정만 관리자다.
+//    아이디 가입 때 적는 이메일은 확인되지 않은 값이라 관리자 판정에 쓰지 않는다.
 //  · 구글 로그인: Vercel 환경변수 GOOGLE_CLIENT_ID 가 있을 때만 켜진다. 구글이 서명한 ID 토큰을 구글 서버에 확인받아 쓴다.
 //  · 비밀번호는 scrypt(솔트 포함)로 해시해 저장하고, 원문은 어디에도 남기지 않는다.
 //  · 로그인 토큰은 임의의 32바이트. DB에는 SHA-256 해시만 저장한다.
@@ -24,7 +27,11 @@ function checkPw(pw, stored) {
   return a.length === b.length && crypto.timingSafeEqual(a, b);
 }
 const clean = (v, max) => String(v == null ? '' : v).replace(/[\u0000-\u001f<>]/g, '').trim().slice(0, max);
-const pub = u => ({ uid: u.uid, nick: u.nick, grade: u.grade, email: u.email || '', school: u.school || '', elective: u.elective || '', google: !!u.google_sub });
+const adminEmails = () => String(process.env.ADMIN_EMAILS || '').toLowerCase().split(/[\s,]+/).filter(Boolean);
+const isAdmin = u => !!(u && u.google_sub && u.email && adminEmails().includes(String(u.email).toLowerCase()));
+const pub = u => ({ uid: u.uid, nick: u.nick, grade: u.grade, email: u.email || '', school: u.school || '', elective: u.elective || '', google: !!u.google_sub, admin: isAdmin(u) });
+// 임시 비밀번호: 헷갈리는 글자(0·o·1·l·i)를 뺀 10자
+const tempPw = () => { const A = 'abcdefghjkmnpqrstuvwxyz23456789'; let s = ''; for (let i = 0; i < 10; i++) s += A[crypto.randomInt(A.length)]; return s; };
 // 구글 ID 토큰 확인: 구글 tokeninfo 가 서명·만료를 검사해 준다. 우리 사이트용으로 발급된 토큰인지(aud)는 여기서 확인한다.
 async function verifyGoogle(credential, clientId) {
   if (!credential || typeof credential !== 'string' || credential.length > 4096) return null;
@@ -133,6 +140,46 @@ module.exports = async (req, res) => {
       await sql`UPDATE km_user SET fails = 0, locked_until = NULL, last_login = now() WHERE id = ${u.id}`;
       if (Math.random() < 0.05) await sql`DELETE FROM km_session WHERE created_at < now() - make_interval(days => ${SESSION_DAYS})`;
       res.status(200).json({ ok: true, token: await newSession(u.id), user: pub(u) }); return;
+    }
+
+    if (typeof action === 'string' && action.startsWith('admin_')) {
+      const u = await userOf(b.token);
+      if (!u) { res.status(401).json({ error: 'not signed in', msg: '로그인이 만료되었어요. 다시 로그인해 주세요.' }); return; }
+      if (!isAdmin(u)) return bad('관리자만 쓸 수 있어요.', 403);
+      if (action === 'admin_list') {
+        const rows = await sql`SELECT id, uid, nick, grade, email, school, elective, created_at, last_login,
+          (google_sub IS NOT NULL) AS google, (locked_until IS NOT NULL AND locked_until > now()) AS locked
+          FROM km_user ORDER BY created_at DESC LIMIT 5000`;
+        const week = Date.now() - 7 * 864e5, grade = {}, elective = {}, via = { '구글': 0, '아이디': 0 };
+        GRADES.forEach(g => { grade[g] = 0; });
+        ['미적분', '확률과 통계', '기하', '미선택'].forEach(e => { elective[e] = 0; });
+        const users = rows.map(r => {
+          grade[r.grade] = (grade[r.grade] || 0) + 1;
+          const e = r.elective || '미선택'; elective[e] = (elective[e] || 0) + 1;
+          via[r.google ? '구글' : '아이디']++;
+          return { id: String(r.id), uid: r.uid, nick: r.nick, grade: r.grade, email: r.email || '', school: r.school || '', elective: r.elective || '',
+            created_at: r.created_at, last_login: r.last_login, google: !!r.google, locked: !!r.locked, self: String(r.id) === String(u.id) };
+        });
+        const stats = { total: users.length, week: rows.filter(r => new Date(r.created_at).getTime() > week).length, grade, elective, via };
+        res.status(200).json({ ok: true, users, stats }); return;
+      }
+      const id = String(b.id == null ? '' : b.id);
+      if (!/^\d{1,18}$/.test(id)) return bad('대상 회원이 올바르지 않아요.');
+      const t = (await sql`SELECT id, uid, google_sub FROM km_user WHERE id = ${id}`)[0];
+      if (!t) return bad('이미 없는 회원이에요. 목록을 새로고침해 주세요.', 404);
+      if (action === 'admin_reset') {
+        if (t.google_sub) return bad('구글로 가입한 계정은 비밀번호가 없어요.');
+        const temp = tempPw();
+        await sql`UPDATE km_user SET pw = ${hashPw(temp)}, fails = 0, locked_until = NULL WHERE id = ${t.id}`;
+        await sql`DELETE FROM km_session WHERE user_id = ${t.id}`;   // 이 계정의 다른 기기 로그인도 풀린다
+        res.status(200).json({ ok: true, temp }); return;
+      }
+      if (action === 'admin_delete') {
+        if (String(t.id) === String(u.id)) return bad('관리자 본인 계정은 여기서 지울 수 없어요.');
+        await sql`DELETE FROM km_user WHERE id = ${t.id}`;
+        res.status(200).json({ ok: true }); return;
+      }
+      return bad('알 수 없는 요청이에요.');
     }
 
     if (action === 'me' || action === 'logout' || action === 'delete') {
