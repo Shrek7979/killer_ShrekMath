@@ -500,6 +500,30 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
 /* ── 로그인·회원가입 ── */
 #auth{position:fixed;inset:0;z-index:60;display:grid;justify-items:center;align-items:start;overflow:auto;padding:calc(20px + env(safe-area-inset-top,0px)) 16px calc(20px + env(safe-area-inset-bottom,0px));background:rgba(8,8,8,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 #auth[hidden]{display:none}
+#admin{position:fixed;inset:0;z-index:61;overflow:auto;padding:calc(16px + env(safe-area-inset-top,0px)) 14px calc(16px + env(safe-area-inset-bottom,0px));background:rgba(8,8,8,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+#admin[hidden]{display:none}
+#admin .adbox{max-width:1100px;margin:0 auto;background:#1b1b1b;border:1px solid #333;border-radius:14px;padding:20px;display:grid;gap:14px}
+#admin .adhead{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+#admin .adhead b{font-size:1.25rem;color:var(--red);margin-right:auto}
+#admin .adhead span{color:var(--mute);font-size:.9rem;width:100%;order:3}
+#admin .adstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+#admin .adstats>div{background:#111;border:1px solid #2a2a2a;border-radius:10px;padding:12px}
+#admin .adstats h4{margin:0 0 8px;font-size:.8rem;color:#aaa;font-weight:700}
+#admin .adchip{display:inline-block;margin:0 6px 6px 0;padding:4px 10px;border-radius:999px;background:#262626;font-size:.84rem;color:#ddd}
+#admin .adchip b{color:#fff;margin-left:2px}
+#admin input[type=search]{font:inherit;width:100%;padding:10px 12px;border-radius:8px;border:1px solid #444;background:#111;color:#fff}
+#admin .admsg{min-height:1.2em;font-size:.9rem;color:#ddd}
+#admin .admsg code{background:#000;border:1px solid var(--red);border-radius:6px;padding:2px 8px;font-size:1.05rem;color:#fff;letter-spacing:.06em;user-select:all}
+#admin .adwrap{overflow-x:auto;border:1px solid #2a2a2a;border-radius:10px}
+#admin table{width:100%;border-collapse:collapse;font-size:.86rem;min-width:820px}
+#admin th,#admin td{padding:8px 10px;border-bottom:1px solid #262626;text-align:left;white-space:nowrap}
+#admin th{background:#141414;color:#aaa;font-weight:700;position:sticky;top:0}
+#admin td.adact{text-align:right}
+#admin td.adact button{padding:5px 10px;border-radius:6px;border:1px solid #555;color:#ddd;font-size:.8rem;margin-left:4px}
+#admin td.adact button.danger{border-color:var(--red);color:#ff8a85}
+#admin .adg{display:inline-block;font-size:.7rem;font-weight:800;padding:1px 5px;border-radius:4px;background:#fff;color:#4285f4}
+#admin .adlock{font-size:.72rem;color:#ffb44d}
+#admin .adempty{text-align:center;color:var(--mute);padding:24px}
 #auth .abox{margin:auto;width:100%;max-width:400px;background:#1b1b1b;border:1px solid #333;border-radius:14px;padding:26px 22px 20px;display:grid;gap:14px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
 #auth .alogo{font-family:var(--disp);font-weight:900;font-size:1.5rem;color:var(--red);text-align:center;letter-spacing:-.02em}
 #auth .asub{text-align:center;color:var(--mute);font-size:.86rem;margin-top:-8px}
@@ -759,11 +783,19 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
   <form id="fAcct" hidden>
     <dl id="acctInfo"></dl>
     <button class="abtn ghost" type="button" id="acctClose">닫기</button>
+    <button class="abtn ghost" type="button" id="acctAdmin" hidden>🛠 관리자 메뉴</button>
     <button class="abtn ghost" type="button" id="acctOut">로그아웃</button>
     <label style="margin-top:8px" id="acctPw">회원 탈퇴 <span class="opt">계정 정보가 서버에서 바로 삭제됩니다</span><input type="password" name="pw" autocomplete="current-password" placeholder="비밀번호 확인"></label>
     <button class="abtn danger" type="submit">회원 탈퇴</button>
   </form>
   <div class="aerr" id="authErr"></div>
+</div></div>
+<div id="admin" hidden><div class="adbox">
+  <div class="adhead"><b>관리자 메뉴</b><button class="btn ghost sm" type="button" id="adReload">새로고침</button><button class="btn ghost sm" type="button" id="adClose">닫기</button><span id="adSum"></span></div>
+  <div class="adstats" id="adStats"></div>
+  <input type="search" id="adQ" placeholder="아이디·닉네임·이메일·학교로 찾기" autocomplete="off">
+  <div class="admsg" id="adMsg"></div>
+  <div class="adwrap"><table id="adTbl"><thead><tr><th>아이디</th><th>닉네임</th><th>학년</th><th>선택과목</th><th>학교</th><th>가입일</th><th>최근 접속</th><th></th></tr></thead><tbody></tbody></table></div>
 </div></div>
 <div class="toast" id="toast"></div>
 <div id="lb" hidden><img id="lbimg" alt=""><button id="lbx">✕ 닫기</button></div>
@@ -1581,14 +1613,14 @@ function setAuth(a){AUTH=a;try{a?localStorage.setItem(AKEY,JSON.stringify(a)):lo
 function guestPass(msg){try{sessionStorage.setItem('km_guest','1')}catch(e){}$('#auth').hidden=true;showAcct();if(msg)toast(msg)}
 const isGuest=()=>{try{return sessionStorage.getItem('km_guest')==='1'}catch(e){return false}};
 function showAcct(){const e=$('#acct');if(!e)return;if(!authOn()){e.hidden=true;return}
-  if(AUTH&&AUTH.user){e.innerHTML=`<span>👤 <b>${esc(AUTH.user.nick)}</b> · ${esc(AUTH.user.grade)}</span><button class="link" id="acctBtn">내 정보</button>`;$('#acctBtn').onclick=()=>authView('acct')}
+  if(AUTH&&AUTH.user){e.innerHTML=`<span>👤 <b>${esc(AUTH.user.nick)}</b> · ${esc(AUTH.user.grade)}</span><button class="link" id="acctBtn">내 정보</button>`+(AUTH.user.admin?`<button class="link" id="admBtn">🛠 관리자</button>`:'');$('#acctBtn').onclick=()=>authView('acct');if(AUTH.user.admin)$('#admBtn').onclick=adminOpen}
   else{e.innerHTML=`<button class="link" id="acctBtn">로그인 / 회원가입</button>`;$('#acctBtn').onclick=()=>authView('login',true)}
   e.hidden=false}
 function authView(v,closable){const a=$('#auth');$('#authErr').textContent='';$('#fLogin').hidden=v!=='login';$('#fSignup').hidden=v!=='signup';$('#fAcct').hidden=v!=='acct';$('#fGoogle').hidden=v!=='google';$('#authTabs').hidden=v==='acct'||v==='google';
   const gw=GID&&(v==='login'||v==='signup');$('#gWrap').hidden=!gw;if(gw)gsiReady();
   document.querySelectorAll('#authTabs button').forEach(b=>b.classList.toggle('on',b.dataset.t===v));
   $('#authSub').textContent=v==='acct'?'내 정보':v==='google'?'구글 계정으로 가입':SITE.login==='required'?'로그인하고 이용해 주세요':'로그인하면 닉네임으로 기록을 남길 수 있어요';
-  if(v==='acct'&&AUTH){const u=AUTH.user;$('#acctPw').hidden=!!u.google;$('#acctInfo').innerHTML=[['아이디',u.google?'Google 계정으로 로그인':u.uid],['닉네임',u.nick],['학년',u.grade],['선택과목',u.elective||'–'],['학교',u.school||'–'],['이메일',u.email||'–']].map(([k,x])=>`<dt>${k}</dt><dd>${esc(x)}</dd>`).join('')}
+  if(v==='acct'&&AUTH){const u=AUTH.user;$('#acctPw').hidden=!!u.google;$('#acctAdmin').hidden=!u.admin;$('#acctInfo').innerHTML=[['아이디',u.google?'Google 계정으로 로그인':u.uid],['닉네임',u.nick],['학년',u.grade],['선택과목',u.elective||'–'],['학교',u.school||'–'],['이메일',u.email||'–']].map(([k,x])=>`<dt>${k}</dt><dd>${esc(x)}</dd>`).join('')}
   a.dataset.closable=(closable||v==='acct')?'1':'';a.hidden=false;a.scrollTop=0;
   const f=v==='login'?$('#fLogin'):v==='signup'?$('#fSignup'):null;if(f&&window.innerWidth>900)setTimeout(()=>f.querySelector('input').focus(),50)}
 function authDone(j,hello){setAuth({token:j.token,user:j.user});if(!S.name){S.name=j.user.nick;save()}$('#auth').hidden=true;toast(`${j.user.nick}님, ${hello}`);if(!$('#home').hidden)home()}
@@ -1607,6 +1639,29 @@ $('#acctOut').onclick=async()=>{const t=AUTH&&AUTH.token;setAuth(null);if(t)auth
 $('#fAcct').onsubmit=async e=>{e.preventDefault();const f=e.target;if(!(AUTH&&AUTH.user.google)&&!f.pw.value){$('#authErr').textContent='탈퇴하려면 비밀번호를 입력해 주세요.';f.pw.focus();return}
   if(!confirm('정말 탈퇴할까요? 계정 정보가 서버에서 삭제되며 되돌릴 수 없습니다. (이 기기의 풀이 기록은 그대로 남습니다)'))return;
   const j=await authSubmit(f,{action:'delete',token:AUTH&&AUTH.token,pw:f.pw.value});if(j){f.pw.value='';setAuth(null);toast('탈퇴 처리했어요. 이용해 주셔서 고맙습니다');if(SITE.login==='required'&&!isGuest())authView('login');else $('#auth').hidden=true}};
+/* 관리자 메뉴: 서버가 ADMIN_EMAILS 에 든 구글 계정에만 admin:true 를 준다(서버도 요청마다 다시 확인한다) */
+let ADM=[];
+const adDate=t=>t?new Date(t).toLocaleDateString('ko-KR',{year:'2-digit',month:'2-digit',day:'2-digit'}):'–';
+const adMsg=h=>{$('#adMsg').innerHTML=h||''};
+async function adminCall(body){const r=await authCall(Object.assign({},body,{token:AUTH&&AUTH.token}));
+  if(r.down){adMsg('서버에 연결하지 못했어요. 잠시 뒤 다시 해 주세요.');return null}
+  if(!r.j.ok){adMsg(esc(r.j.msg||'처리하지 못했어요.'));return null}return r.j}
+async function adminOpen(){$('#auth').hidden=true;$('#admin').hidden=false;adMsg('불러오는 중…');
+  const j=await adminCall({action:'admin_list'});if(!j)return;ADM=j.users||[];adminStats(j.stats||{});adminDraw();adMsg('')}
+function adminStats(s){const chips=o=>Object.entries(o||{}).map(([k,v])=>`<span class="adchip">${esc(k)} <b>${v}</b></span>`).join('');
+  $('#adSum').textContent=`회원 ${s.total||0}명 · 최근 7일 가입 ${s.week||0}명`;
+  $('#adStats').innerHTML=`<div><h4>학년별</h4>${chips(s.grade)}</div><div><h4>선택과목별</h4>${chips(s.elective)}</div><div><h4>가입 방법</h4>${chips(s.via)}</div>`}
+function adminDraw(){const q=$('#adQ').value.trim().toLowerCase();
+  const rows=ADM.filter(u=>!q||[u.uid,u.nick,u.email,u.school].some(x=>String(x||'').toLowerCase().includes(q)));
+  $('#adTbl tbody').innerHTML=rows.map(u=>`<tr data-id="${esc(u.id)}"><td>${u.google?'<span class="adg">G</span> '+esc(u.email||u.uid):esc(u.uid)}${u.locked?' <span class="adlock">잠김</span>':''}${u.self?' (나)':''}</td><td>${esc(u.nick)}</td><td>${esc(u.grade)}</td><td>${esc(u.elective||'–')}</td><td>${esc(u.school||'–')}</td><td>${adDate(u.created_at)}</td><td>${adDate(u.last_login)}</td><td class="adact">${u.google?'':'<button type="button" data-a="reset">비밀번호 초기화</button>'}${u.self?'':'<button type="button" data-a="del" class="danger">삭제</button>'}</td></tr>`).join('')
+    ||`<tr><td colspan="8" class="adempty">${q?'찾는 회원이 없어요':'아직 회원이 없어요'}</td></tr>`}
+$('#adQ').oninput=adminDraw;$('#adClose').onclick=()=>{$('#admin').hidden=true;adMsg('')};$('#adReload').onclick=adminOpen;$('#acctAdmin').onclick=adminOpen;
+$('#adTbl').onclick=async e=>{const b=e.target.closest('button[data-a]');if(!b)return;const id=b.closest('tr').dataset.id;const u=ADM.find(x=>x.id===id);if(!u)return;
+  if(b.dataset.a==='reset'){if(!confirm(`${u.uid} (${u.nick}) 의 비밀번호를 임시 비밀번호로 바꿀까요?\n이 계정은 다른 기기에서도 로그아웃됩니다.`))return;
+    b.disabled=true;const j=await adminCall({action:'admin_reset',id});b.disabled=false;
+    if(j)adMsg(`<b>${esc(u.uid)}</b> (${esc(u.nick)}) 임시 비밀번호: <code>${esc(j.temp)}</code> — 학생에게 알려 주세요. 이 창을 닫으면 다시 볼 수 없어요.`);return}
+  if(b.dataset.a==='del'){if(!confirm(`${u.google?(u.email||u.uid):u.uid} (${u.nick}) 계정을 삭제할까요?\n계정 정보가 서버에서 바로 지워지며 되돌릴 수 없습니다.`))return;
+    b.disabled=true;const j=await adminCall({action:'admin_delete',id});if(j){await adminOpen();adMsg(`<b>${esc(u.nick)}</b> 계정을 삭제했어요.`)}else b.disabled=false}};
 /* 구글 로그인: 서버에 GOOGLE_CLIENT_ID 가 설정돼 있을 때만 버튼이 나온다 */
 let GID='',GCRED='',gsiState=0;
 function gsiReady(){if(!GID)return;const draw=()=>{try{const w=Math.max(200,Math.min(360,$('#auth .abox').clientWidth-46));google.accounts.id.renderButton($('#gBtn'),{theme:'outline',size:'large',text:'continue_with',shape:'rectangular',logo_alignment:'center',locale:'ko',width:w})}catch(e){$('#gWrap').hidden=true}};
