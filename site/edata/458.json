@@ -1,0 +1,90 @@
+{
+ "num": 458,
+ "id": "MK-KAIST모의면접ShrekMath-2",
+ "univ": "KAIST 모의 면접 (ShrekMath)",
+ "n": 2,
+ "year": 2026,
+ "title": "문제 2 · 5점",
+ "head": "",
+ "points": 5,
+ "minutes": 10,
+ "info": {
+  "concepts": "",
+  "time": "10분"
+ },
+ "pre": [],
+ "passage": [
+  "함수 $f(x)=\\ln x$ $(x>0)$ 의 그래프를 이용하여 $n!$ 의 크기를 어림하려고 한다. $a$ , $b$ 는 $0<a<b$ 인 실수이다.",
+  "[그림]",
+  "[그림] 곡선 $y=\\ln x$ 와 이 곡선 위의 두 점을 이은 선분, 그리고 곡선 위의 한 점에서의 접선"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "(1)",
+   "points": 1,
+   "text": [
+    "다음 두 명제의 참, 거짓을 각각 판별하고 그 이유를 설명하시오. [1점]",
+    "(가) $\\ln \\frac{a+b}{2}>\\frac{\\ln a+\\ln b}{2}$",
+    "(나) $\\int_{a}^{b}\\ln x d x>(b-a)\\ln \\frac{a+b}{2}$"
+   ],
+   "answer": [
+    "$f(x)=\\ln x$ 에서 $f'(x)=\\frac{1}{x}$ , $f''(x)=-\\frac{1}{x^{2}}<0$ 이다. 다음 두 사실을 먼저 보인다.",
+    "사실 1. $c>0$ 일 때, $x>0$ 인 모든 실수 $x$ 에 대하여 $\\ln x \\le \\ln c+\\frac{x-c}{c}$ 이고 등호는 $x=c$ 일 때만 성립한다. 즉 곡선 $y=\\ln x$ 는 곡선 위의 점에서의 접선보다 위쪽에 있지 않다.",
+    "(증명) $u(x)=\\ln c+\\frac{x-c}{c}-\\ln x$ 라 하면 $u'(x)=\\frac{1}{c}-\\frac{1}{x}$ 이므로 $u(x)$ 는 $0<x<c$ 에서 감소하고 $x>c$ 에서 증가한다. $u(c)=0$ 이므로 $u(x)\\ge 0$ 이고 등호는 $x=c$ 일 때만 성립한다.",
+    "사실 2. $a<x<b$ 일 때 $\\ln x>\\ln a+\\frac{\\ln b-\\ln a}{b-a}(x-a)$ 이다. 즉 곡선 $y=\\ln x$ 는 두 점 $(a,\\,\\ln a)$ , $(b,\\,\\ln b)$ 를 이은 선분보다 위쪽에 있다.",
+    "(증명) $v(x)=\\ln x-\\ln a-\\frac{\\ln b-\\ln a}{b-a}(x-a)$ 라 하면 $v(a)=v(b)=0$ 이고 $v'(x)=\\frac{1}{x}-\\frac{\\ln b-\\ln a}{b-a}$ 는 감소한다. 롤의 정리에 의하여 $v'(x_{0})=0$ 인 $x_{0}$ 이 $a$ 와 $b$ 사이에 존재하고, $v'(x)$ 가 감소하므로 $a<x<x_{0}$ 에서 $v'(x)>0$ , $x_{0}<x<b$ 에서 $v'(x)<0$ 이다. 따라서 $v(x)$ 는 $a \\le x \\le x_{0}$ 에서 증가하고 $x_{0}\\le x \\le b$ 에서 감소하므로 $a<x<b$ 에서 $v(x)>0$ 이다.",
+    "(가) 참이다. 사실 2에서 $x=\\frac{a+b}{2}$ 를 대입하면 $\\ln \\frac{a+b}{2}>\\ln a+\\frac{\\ln b-\\ln a}{2}=\\frac{\\ln a+\\ln b}{2}$ 이다.",
+    "(나) 거짓이다. $c=\\frac{a+b}{2}$ 라 하면 사실 1에 의하여 $\\ln x \\le \\ln c+\\frac{x-c}{c}$ 이고 등호는 $x=c$ 일 때만 성립하므로",
+    "$\\int_{a}^{b}\\ln x d x<\\int_{a}^{b}\\left(\\ln c+\\frac{x-c}{c}\\right)dx=(b-a)\\ln c$",
+    "이다. ( $\\int_{a}^{b}(x-c)dx=0$ 이기 때문이다.) 따라서 $\\int_{a}^{b}\\ln x d x<(b-a)\\ln \\frac{a+b}{2}$ 이고, 명제 (나)는 거짓이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "(2)",
+   "points": 2,
+   "text": [
+    "부등식 $\\int_{a}^{b}\\ln x d x>\\frac{(b-a)(\\ln a+\\ln b)}{2}$ 가 성립함을 보이시오. [2점]"
+   ],
+   "answer": [
+    "사실 2의 부등식의 양변을 $a$ 에서 $b$ 까지 적분하면",
+    "$\\int_{a}^{b}\\ln x d x>(b-a)\\ln a+\\frac{\\ln b-\\ln a}{b-a}\\cdot \\frac{(b-a)^{2}}{2}=\\frac{(b-a)(\\ln a+\\ln b)}{2}$",
+    "이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "3",
+   "label": "(3)",
+   "points": 2,
+   "text": [
+    "모든 자연수 $n$ 에 대하여 부등식",
+    "$e \\left(\\frac{n}{e}\\right)^{n}\\le n!\\le e \\sqrt{n}\\left(\\frac{n}{e}\\right)^{n}$",
+    "이 성립함을 보이고, 극한값 $\\lim_{n \\to \\infty}\\frac{\\sqrt[n]{n!}}{n}$ 을 구하시오. [2점] (단, $\\lim_{n \\to \\infty}\\frac{\\ln n}{n}=0$ 임은 증명 없이 이용할 수 있다.)",
+    "교사용: 문항 해설 및 예시 답안"
+   ],
+   "answer": [
+    "$\\int_{1}^{n}\\ln x d x=\\left[x \\ln x-x \\right]_{1}^{n}=n \\ln n-n+1$ 이다.",
+    "$n=1$ 일 때 주어진 부등식의 세 변은 모두 $1$ 이므로 성립한다. $n \\ge 2$ 라 하자.",
+    "오른쪽 부등식: (2)에서 $a=k$ , $b=k+1$ 로 두면 $\\frac{\\ln k+\\ln(k+1)}{2}<\\int_{k}^{k+1}\\ln x d x$ 이다. $k=1,\\,2,\\,\\cdots,\\,n-1$ 에 대하여 변끼리 더하면 좌변은 $\\ln 1+\\ln 2+\\cdots+\\ln n-\\frac{\\ln 1+\\ln n}{2}=\\ln n!-\\frac{1}{2}\\ln n$ 이므로",
+    "$\\ln n!-\\frac{1}{2}\\ln n<n \\ln n-n+1$",
+    "이다. 따라서 $n!<e \\sqrt{n}\\left(\\frac{n}{e}\\right)^{n}$ 이다.",
+    "왼쪽 부등식: $\\ln x$ 는 증가하므로 $k \\ge 2$ 일 때 $\\int_{k-1}^{k}\\ln x d x<\\ln k$ 이다. $k=2,\\,3,\\,\\cdots,\\,n$ 에 대하여 변끼리 더하면",
+    "$n \\ln n-n+1<\\ln 2+\\ln 3+\\cdots+\\ln n=\\ln n!$",
+    "이다. 따라서 $n!>e \\left(\\frac{n}{e}\\right)^{n}$ 이다.",
+    "이상에서 모든 자연수 $n$ 에 대하여 주어진 부등식이 성립한다.",
+    "부등식의 각 변에 자연로그를 취하고 $n$ 으로 나눈 뒤 $\\ln n$ 을 빼면",
+    "$\\frac{1}{n}-1 \\le \\ln \\frac{\\sqrt[n]{n!}}{n}\\le \\frac{1}{n}+\\frac{\\ln n}{2 n}-1$",
+    "이다. $n \\to \\infty$ 일 때 양 끝의 식은 모두 $-1$ 에 수렴하므로 $\\lim_{n \\to \\infty}\\ln \\frac{\\sqrt[n]{n!}}{n}=-1$ 이고, 지수함수는 연속이므로",
+    "$\\lim_{n \\to \\infty}\\frac{\\sqrt[n]{n!}}{n}=\\frac{1}{e}$",
+    "이다."
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": ""
+}

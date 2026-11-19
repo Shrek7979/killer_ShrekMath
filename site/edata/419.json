@@ -1,0 +1,105 @@
+{
+ "num": 419,
+ "id": "MK-서울대학교면접대비제10회ShrekMath-2",
+ "univ": "서울대학교 면접 대비 제10회 (ShrekMath)",
+ "n": 2,
+ "year": 2026,
+ "title": "문제 2",
+ "head": "",
+ "points": null,
+ "minutes": 15,
+ "info": {
+  "concepts": "",
+  "time": "15분"
+ },
+ "pre": [],
+ "passage": [
+  "자연수 $n$ 에 대하여 $a_{n}$ 과 $I_{n}$ 을 다음과 같이 정의한다.",
+  "$a_{n}=\\sum_{k=1}^{n}\\ln \\left(1+\\frac{k}{n^{2}}\\right),\\,I_{n}=\\int_{0}^{1}\\ln \\left(1+\\frac{x}{n}\\right)dx$"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[2-1]",
+   "points": null,
+   "text": [
+    "$x \\ge 0$ 일 때 부등식 $x-\\frac{x^{2}}{2}\\le \\ln(1+x)\\le x-\\frac{x^{2}}{2}+\\frac{x^{3}}{3}$ 이 성립함을 보이시오."
+   ],
+   "answer": [
+    "$s \\ge 0$ 일 때",
+    "$\\frac{1}{1+s}-(1-s)=\\frac{s^{2}}{1+s}\\ge 0,\\,\\left(1-s+s^{2}\\right)-\\frac{1}{1+s}=\\frac{s^{3}}{1+s}\\ge 0$",
+    "이므로 $1-s \\le \\frac{1}{1+s}\\le 1-s+s^{2}$ 이다. $x \\ge 0$ 일 때 이 부등식의 각 변을 $0$ 에서 $x$ 까지 적분하면",
+    "$x-\\frac{x^{2}}{2}\\le \\int_{0}^{x}\\frac{1}{1+s}ds \\le x-\\frac{x^{2}}{2}+\\frac{x^{3}}{3}$",
+    "이고 $\\int_{0}^{x}\\frac{1}{1+s}ds=\\ln(1+x)$ 이므로 주어진 부등식이 성립한다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "[2-2]",
+   "points": null,
+   "text": [
+    "$I_{n}$ 을 $n$ 에 대한 식으로 나타내고, 모든 자연수 $n$ 에 대하여 부등식 $n I_{n}<a_{n}<n I_{n}+\\ln \\left(1+\\frac{1}{n}\\right)$ 이 성립함을 보이시오. 또 극한값 $\\lim_{n \\to \\infty}a_{n}$ 을 구하시오."
+   ],
+   "answer": [
+    "$\\left\\{(x+n)\\ln \\left(1+\\frac{x}{n}\\right)-x \\right\\}'=\\ln \\left(1+\\frac{x}{n}\\right)$ 이므로",
+    "$I_{n}=(n+1)\\ln \\left(1+\\frac{1}{n}\\right)-1$",
+    "이다.",
+    "$f(x)=\\ln \\left(1+\\frac{x}{n}\\right)$ 는 $x \\ge 0$ 에서 증가하는 함수이므로, 자연수 $k$ ( $1 \\le k \\le n$ )에 대하여 $\\frac{k-1}{n}<x<\\frac{k}{n}$ 이면 $f \\left(\\frac{k-1}{n}\\right)<f(x)<f \\left(\\frac{k}{n}\\right)$ 이다. 따라서",
+    "$\\frac{1}{n}\\ln \\left(1+\\frac{k-1}{n^{2}}\\right)<\\int_{\\frac{k-1}{n}}^{\\frac{k}{n}}f(x)dx<\\frac{1}{n}\\ln \\left(1+\\frac{k}{n^{2}}\\right)$",
+    "이다. 이 부등식을 $k=1,\\,2,\\,\\cdots,\\,n$ 에 대하여 변끼리 더하면, 가운데 변의 합은 $I_{n}$ , 오른쪽 변의 합은 $\\frac{a_{n}}{n}$ 이고, 왼쪽 변의 합은 $\\frac{1}{n}\\left\\{a_{n}-\\ln \\left(1+\\frac{1}{n}\\right)\\right\\}$ 이다. 따라서 $a_{n}-\\ln \\left(1+\\frac{1}{n}\\right)<n I_{n}<a_{n}$ , 즉",
+    "$n I_{n}<a_{n}<n I_{n}+\\ln \\left(1+\\frac{1}{n}\\right)$",
+    "이다.",
+    "$0 \\le x \\le 1$ 일 때 $0 \\le \\frac{x}{n}\\le 1$ 이므로 $\\frac{x^{3}}{3 n^{3}}\\le \\frac{x^{2}}{2 n^{2}}$ 이고, 문제 2-1에서 $\\frac{x}{n}-\\frac{x^{2}}{2 n^{2}}\\le \\ln \\left(1+\\frac{x}{n}\\right)\\le \\frac{x}{n}$ 이므로 $0$ 에서 $1$ 까지 적분하면 $\\frac{1}{2 n}-\\frac{1}{6 n^{2}}\\le I_{n}\\le \\frac{1}{2 n}$ , 즉 $\\frac{1}{2}-\\frac{1}{6 n}\\le n I_{n}\\le \\frac{1}{2}$ 이다. 따라서 $\\lim_{n \\to \\infty}n I_{n}=\\frac{1}{2}$ 이다. 또 $\\lim_{n \\to \\infty}\\ln \\left(1+\\frac{1}{n}\\right)=0$ 이므로 위의 부등식에서 $\\lim_{n \\to \\infty}a_{n}=\\frac{1}{2}$ 이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "3",
+   "label": "[2-3]",
+   "points": null,
+   "text": [
+    "두 극한값 $\\lim_{n \\to \\infty}n \\left(a_{n}-\\frac{1}{2}\\right)$ 과 $\\lim_{n \\to \\infty}n \\left(a_{n}-n I_{n}\\right)$ 을 각각 구하시오."
+   ],
+   "answer": [
+    "문제 2-1의 부등식에 $x=\\frac{k}{n^{2}}$ 를 대입하여 $k=1,\\,2,\\,\\cdots,\\,n$ 에 대하여 더하면",
+    "$\\sum_{k=1}^{n}\\left(\\frac{k}{n^{2}}-\\frac{k^{2}}{2 n^{4}}\\right)\\le a_{n}\\le \\sum_{k=1}^{n}\\left(\\frac{k}{n^{2}}-\\frac{k^{2}}{2 n^{4}}+\\frac{k^{3}}{3 n^{6}}\\right)$",
+    "이다. $L_{n}=\\frac{n+1}{2 n}-\\frac{(n+1)(2 n+1)}{12 n^{3}}$ 이라 하면 왼쪽 변은 $L_{n}$ 이고 오른쪽 변은 $L_{n}+\\frac{(n+1)^{2}}{12 n^{4}}$ 이므로",
+    "$\\frac{1}{2}-\\frac{(n+1)(2 n+1)}{12 n^{2}}\\le n \\left(a_{n}-\\frac{1}{2}\\right)\\le \\frac{1}{2}-\\frac{(n+1)(2 n+1)}{12 n^{2}}+\\frac{(n+1)^{2}}{12 n^{3}}$",
+    "이다. $n \\to \\infty$ 일 때 양 끝의 극한값이 모두 $\\frac{1}{2}-\\frac{1}{6}=\\frac{1}{3}$ 이므로 $\\lim_{n \\to \\infty}n \\left(a_{n}-\\frac{1}{2}\\right)=\\frac{1}{3}$ 이다.",
+    "다음으로 $0 \\le x \\le 1$ 일 때 문제 2-1에서",
+    "$\\frac{x}{n}-\\frac{x^{2}}{2 n^{2}}\\le \\ln \\left(1+\\frac{x}{n}\\right)\\le \\frac{x}{n}-\\frac{x^{2}}{2 n^{2}}+\\frac{x^{3}}{3 n^{3}}$",
+    "이므로 $0$ 에서 $1$ 까지 적분하면 $\\frac{1}{2 n}-\\frac{1}{6 n^{2}}\\le I_{n}\\le \\frac{1}{2 n}-\\frac{1}{6 n^{2}}+\\frac{1}{12 n^{3}}$ 이다. 따라서 $-\\frac{1}{6}\\le n \\left(n I_{n}-\\frac{1}{2}\\right)\\le-\\frac{1}{6}+\\frac{1}{12 n}$ 이고 $\\lim_{n \\to \\infty}n \\left(n I_{n}-\\frac{1}{2}\\right)=-\\frac{1}{6}$ 이다.",
+    "$n \\left(a_{n}-n I_{n}\\right)=n \\left(a_{n}-\\frac{1}{2}\\right)-n \\left(n I_{n}-\\frac{1}{2}\\right)$ 이므로",
+    "$\\lim_{n \\to \\infty}n \\left(a_{n}-n I_{n}\\right)=\\frac{1}{3}+\\frac{1}{6}=\\frac{1}{2}$",
+    "이다. (문제 2-2의 부등식만으로는 $n \\left(a_{n}-n I_{n}\\right)$ 이 $0$ 과 $n \\ln \\left(1+\\frac{1}{n}\\right)$ 사이에 있다는 것만 알 수 있어 극한값이 정해지지 않는다.)"
+   ],
+   "rubric": []
+  },
+  {
+   "k": "4",
+   "label": "[2-4]",
+   "points": null,
+   "text": [
+    "자연수 $n$ 에 대하여 $P_{n}=\\left(1+\\frac{1}{n^{2}}\\right)\\left(1+\\frac{2}{n^{2}}\\right)\\left(1+\\frac{3}{n^{2}}\\right)\\cdots \\left(1+\\frac{n}{n^{2}}\\right)$ 이라고 하자. 모든 자연수 $n$ 에 대하여 $P_{n}>\\sqrt{e}$ 임을 보이시오. 또 수열 $\\left\\{n^{\\alpha}\\left(P_{n}-\\sqrt{e}\\right)\\right\\}$ 가 수렴하도록 하는 실수 $\\alpha$ 의 값의 범위를 구하고, 그때의 극한값을 구하시오.",
+    "※ 제시문을 읽고 문제에 답하시오."
+   ],
+   "answer": [
+    "$\\ln P_{n}=a_{n}$ 이므로 $P_{n}=e^{a_{n}}$ 이고, $P_{n}>\\sqrt{e}$ 는 $a_{n}>\\frac{1}{2}$ 과 같다.",
+    "$n=1$ 일 때 $a_{1}=\\ln 2$ 이고 $e<4$ 에서 $\\sqrt{e}<2$ 이므로 $a_{1}>\\frac{1}{2}$ 이다.",
+    "$n \\ge 2$ 일 때 문제 2-3에서 $a_{n}\\ge L_{n}$ 이고",
+    "$L_{n}-\\frac{1}{2}=\\frac{1}{2 n}-\\frac{2 n^{2}+3 n+1}{12 n^{3}}=\\frac{4 n^{2}-3 n-1}{12 n^{3}}=\\frac{(4 n+1)(n-1)}{12 n^{3}}>0$",
+    "이므로 $a_{n}>\\frac{1}{2}$ 이다. 따라서 모든 자연수 $n$ 에 대하여 $P_{n}>\\sqrt{e}$ 이다.",
+    "$h_{n}=a_{n}-\\frac{1}{2}$ 이라 하면 $h_{n}>0$ 이고, 문제 2-2, 2-3에서 $\\lim_{n \\to \\infty}h_{n}=0$ , $\\lim_{n \\to \\infty}n h_{n}=\\frac{1}{3}$ 이다. $P_{n}-\\sqrt{e}=\\sqrt{e}\\left(e^{h_{n}}-1 \\right)$ 이므로",
+    "$n \\left(P_{n}-\\sqrt{e}\\right)=\\sqrt{e}\\cdot \\frac{e^{h_{n}}-1}{h_{n}}\\cdot n h_{n}$",
+    "이고, $\\lim_{h \\to 0}\\frac{e^{h}-1}{h}=1$ 이므로 $\\lim_{n \\to \\infty}n \\left(P_{n}-\\sqrt{e}\\right)=\\frac{\\sqrt{e}}{3}$ 이다.",
+    "$n^{\\alpha}\\left(P_{n}-\\sqrt{e}\\right)=n^{\\alpha-1}\\cdot n \\left(P_{n}-\\sqrt{e}\\right)$ 이고 $n \\left(P_{n}-\\sqrt{e}\\right)$ 는 양수 $\\frac{\\sqrt{e}}{3}$ 에 수렴한다. $\\alpha<1$ 이면 $n^{\\alpha-1}\\to 0$ 이므로 극한값은 $0$ 이고, $\\alpha=1$ 이면 극한값은 $\\frac{\\sqrt{e}}{3}$ 이며, $\\alpha>1$ 이면 $n^{\\alpha-1}\\to \\infty$ 이므로 발산한다.",
+    "따라서 수렴하도록 하는 $\\alpha$ 의 값의 범위는 $\\alpha \\le 1$ 이고, 극한값은 $\\alpha<1$ 일 때 $0$ , $\\alpha=1$ 일 때 $\\frac{\\sqrt{e}}{3}$ 이다."
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": ""
+}

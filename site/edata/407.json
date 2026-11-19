@@ -1,0 +1,107 @@
+{
+ "num": 407,
+ "id": "MK-서울대학교면접대비제6회ShrekMath-2",
+ "univ": "서울대학교 면접 대비 제6회 (ShrekMath)",
+ "n": 2,
+ "year": 2026,
+ "title": "문제 2",
+ "head": "",
+ "points": null,
+ "minutes": 15,
+ "info": {
+  "concepts": "",
+  "time": "15분"
+ },
+ "pre": [],
+ "passage": [
+  "좌표공간에서 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 가 다음 조건을 모두 만족시키면서 움직인다. (단, $\\mathrm{O}$ 는 원점이다.)",
+  "(가) 점 $\\mathrm{P}$ 는 $z$ 축 위에 있고, 점 $\\mathrm{Q}$ 는 $x y$ 평면 위에 있다.",
+  "(나) $\\overline{\\mathrm{PQ}}=1$",
+  "두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 가 조건 (가), (나)를 만족시키면서 빠짐없이 움직일 때, 선분 $\\mathrm{PQ}$ 가 지나가며 생기는 입체를 $K$ 라고 하자.",
+  "[그림]"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[2-1]",
+   "points": null,
+   "text": [
+    "$\\lambda$ 는 $0<\\lambda<1$ 인 상수이다. 선분 $\\mathrm{PQ}$ 를 $\\lambda:(1-\\lambda)$ 로 내분하는 점을 $\\mathrm{R}$ 라 할 때, 점 $\\mathrm{R}$ 전체가 나타내는 도형의 방정식을 구하시오. 또 이 도형으로 둘러싸인 입체의 부피를 $V(\\lambda)$ 라 할 때, $V(\\lambda)$ 의 최댓값을 구하시오."
+   ],
+   "answer": [
+    "$\\mathrm{P}(0,\\,0,\\,p)$ 라 하자. 점 $\\mathrm{Q}$ 는 $x y$ 평면 위에 있으므로 $\\overline{\\mathrm{PQ}}^{2}=p^{2}+\\overline{\\mathrm{OQ}}^{2}=1$ 이고, 따라서 $-1 \\le p \\le 1$ , $\\overline{\\mathrm{OQ}}=\\sqrt{1-p^{2}}$ 이다. 즉 $\\mathrm{Q}(u,\\,v,\\,0)$ 이라 하면 $u^{2}+v^{2}=1-p^{2}$ 이다. 거꾸로 $p^{2}+u^{2}+v^{2}=1$ 인 실수 $p$ , $u$ , $v$ 에 대하여 두 점 $(0,\\,0,\\,p)$ , $(u,\\,v,\\,0)$ 은 조건 (가), (나)를 만족시킨다.",
+    "점 $\\mathrm{R}$ 는 선분 $\\mathrm{PQ}$ 를 $\\lambda:(1-\\lambda)$ 로 내분하므로 $\\mathrm{R}(\\lambda u,\\,\\lambda v,\\,(1-\\lambda)p)$ 이다. $\\mathrm{R}(x,\\,y,\\,z)$ 라 하면 $u=\\frac{x}{\\lambda}$ , $v=\\frac{y}{\\lambda}$ , $p=\\frac{z}{1-\\lambda}$ 이므로 $p^{2}+u^{2}+v^{2}=1$ 에서",
+    "$\\frac{x^{2}+y^{2}}{\\lambda^{2}}+\\frac{z^{2}}{(1-\\lambda)^{2}}=1$",
+    "이다. 거꾸로 이 방정식을 만족시키는 점 $(x,\\,y,\\,z)$ 에 대하여 $u$ , $v$ , $p$ 를 위와 같이 정하면 $p^{2}+u^{2}+v^{2}=1$ 이므로 이 점은 점 $\\mathrm{R}$ 가 될 수 있다. 따라서 구하는 도형의 방정식은 위와 같다.",
+    "이 도형으로 둘러싸인 입체를 평면 $z=s$ ( $-(1-\\lambda)\\le s \\le 1-\\lambda$ )로 자른 단면은 반지름의 길이가 $\\lambda \\sqrt{1-\\frac{s^{2}}{(1-\\lambda)^{2}}}$ 인 원이므로",
+    "$V(\\lambda)=\\int_{-(1-\\lambda)}^{1-\\lambda}\\pi \\lambda^{2}\\left\\{1-\\frac{s^{2}}{(1-\\lambda)^{2}}\\right\\} ds=\\pi \\lambda^{2}\\left\\{2(1-\\lambda)-\\frac{2}{3}(1-\\lambda)\\right\\}=\\frac{4}{3}\\pi \\lambda^{2}(1-\\lambda)$",
+    "이다. $h(\\lambda)=\\lambda^{2}(1-\\lambda)$ 라 하면 $h'(\\lambda)=\\lambda(2-3 \\lambda)$ 이므로 $h(\\lambda)$ 는 $0<\\lambda<1$ 에서 $\\lambda=\\frac{2}{3}$ 일 때 최댓값 $\\frac{4}{27}$ 을 갖는다. 따라서 $V(\\lambda)$ 의 최댓값은 $\\frac{16}{81}\\pi$ 이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "[2-2]",
+   "points": null,
+   "text": [
+    "$0<t<1$ 인 실수 $t$ 에 대하여 입체 $K$ 를 평면 $z=t$ 로 자른 단면의 넓이 $S(t)$ 를 $t$ 에 대한 식으로 나타내시오."
+   ],
+   "answer": [
+    "$\\mathrm{P}(0,\\,0,\\,p)$ 일 때 선분 $\\mathrm{PQ}$ 위의 점의 $z$ 좌표는 $0$ 과 $p$ 사이의 값(또는 그 양 끝 값)이므로, 선분 $\\mathrm{PQ}$ 가 평면 $z=t$ 와 만나려면 $t \\le p \\le 1$ 이어야 한다. 이때 교점을 $\\mathrm{X}$ 라 하면 점 $\\mathrm{X}$ 는 선분 $\\mathrm{PQ}$ 를 $(p-t):t$ 로 내분하는 점이므로( $p=t$ 이면 $\\mathrm{X}=\\mathrm{P}$ ) 점 $\\mathrm{X}$ 와 $z$ 축 사이의 거리는",
+    "$r(p)=\\frac{p-t}{p}\\cdot \\overline{\\mathrm{OQ}}=\\left(1-\\frac{t}{p}\\right)\\sqrt{1-p^{2}}$",
+    "이다. $p$ 를 고정하고 점 $\\mathrm{Q}$ 가 $x y$ 평면에서 원점을 중심으로 하고 반지름의 길이가 $\\sqrt{1-p^{2}}$ 인 원 위를 움직이면, 점 $\\mathrm{X}$ 는 평면 $z=t$ 위에서 점 $(0,\\,0,\\,t)$ 를 중심으로 하고 반지름의 길이가 $r(p)$ 인 원(또는 한 점)을 그린다.",
+    "$t<p<1$ 에서",
+    "$r'(p)=\\frac{t}{p^{2}}\\sqrt{1-p^{2}}-\\left(1-\\frac{t}{p}\\right)\\frac{p}{\\sqrt{1-p^{2}}}=\\frac{t(1-p^{2})-p^{2}(p-t)}{p^{2}\\sqrt{1-p^{2}}}=\\frac{t-p^{3}}{p^{2}\\sqrt{1-p^{2}}}$",
+    "이다. $0<t<1$ 이므로 $t<t^{\\frac{1}{3}}<1$ 이고, $r(p)$ 는 $p=t^{\\frac{1}{3}}$ 에서 최댓값",
+    "$\\left(1-t^{\\frac{2}{3}}\\right)\\sqrt{1-t^{\\frac{2}{3}}}$",
+    "을 갖는다. 또 $r(p)$ 는 $t \\le p \\le 1$ 에서 연속이고 $r(t)=r(1)=0$ 이므로, 사잇값의 정리에 의하여 $r(p)$ 는 $0$ 부터 이 최댓값까지의 모든 값을 갖는다. 따라서 단면은 점 $(0,\\,0,\\,t)$ 를 중심으로 하고 반지름의 길이가 $\\left(1-t^{\\frac{2}{3}}\\right)\\sqrt{1-t^{\\frac{2}{3}}}$ 인 원과 그 내부이고",
+    "$S(t)=\\pi \\left(1-t^{\\frac{2}{3}}\\right)^{3}$",
+    "이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "3",
+   "label": "[2-3]",
+   "points": null,
+   "text": [
+    "입체 $K$ 의 부피를 구하시오. 또 입체 $K$ 의 $z x$ 평면 위로의 정사영의 넓이를 구하시오."
+   ],
+   "answer": [
+    "점 $\\mathrm{P}(0,\\,0,\\,p)$ 를 점 $(0,\\,0,\\,-p)$ 로 바꾸어도 조건이 유지되므로 입체 $K$ 는 $x y$ 평면에 대하여 대칭이다. 평면 $z=0$ , $z=1$ 과의 공통부분은 부피에 영향을 주지 않으므로 $K$ 의 부피는",
+    "$2 \\int_{0}^{1}\\pi \\left(1-t^{\\frac{2}{3}}\\right)^{3}dt=2 \\pi \\int_{0}^{1}\\left(1-3 t^{\\frac{2}{3}}+3 t^{\\frac{4}{3}}-t^{2}\\right)dt=2 \\pi \\left(1-\\frac{9}{5}+\\frac{9}{7}-\\frac{1}{3}\\right)=\\frac{32}{105}\\pi$",
+    "이다.",
+    "다음으로 $R(t)=\\left(1-t^{\\frac{2}{3}}\\right)\\sqrt{1-t^{\\frac{2}{3}}}$ 이라 하자. ( $0 \\le t \\le 1$ ) $t=0$ 일 때에는 $\\mathrm{P}=\\mathrm{O}$ , $\\overline{\\mathrm{OQ}}=1$ 인 선분들이 $x y$ 평면 위의 반지름의 길이가 $1$ 인 원과 그 내부를 채우고, $t=1$ 일 때에는 한 점 $(0,\\,0,\\,1)$ 뿐이므로, $0 \\le t \\le 1$ 인 모든 $t$ 에 대하여 $K$ 를 평면 $z=t$ 로 자른 단면은 $z$ 축 위의 점을 중심으로 하고 반지름의 길이가 $R(t)$ 인 원과 그 내부(또는 한 점)이다. 이 단면의 $z x$ 평면 위로의 정사영은 $z=t$ , $-R(t)\\le x \\le R(t)$ 인 선분이다. 따라서 $K$ 의 $z x$ 평면 위로의 정사영은 $z x$ 평면에서 $\\left|x \\right|\\le R \\left(\\left|z \\right|\\right)$ , $\\left|z \\right|\\le 1$ 인 영역이고, 그 넓이는 $4 \\int_{0}^{1}R(t)dt$ 이다.",
+    "$t=\\sin^{3}\\theta$ $\\left(0 \\le \\theta \\le \\frac{\\pi}{2}\\right)$ 로 치환하면 $1-t^{\\frac{2}{3}}=\\cos^{2}\\theta$ , $R(t)=\\cos^{3}\\theta$ , $\\frac{dt}{d \\theta}=3 \\sin^{2}\\theta \\cos \\theta$ 이므로",
+    "$4 \\int_{0}^{1}R(t)dt=12 \\int_{0}^{\\frac{\\pi}{2}}\\cos^{4}\\theta \\sin^{2}\\theta d \\theta$",
+    "이다. $\\cos^{4}\\theta \\sin^{2}\\theta=\\frac{1}{4}\\sin^{2}2 \\theta \\cdot \\frac{1+\\cos 2 \\theta}{2}=\\frac{1-\\cos 4 \\theta}{16}+\\frac{1}{8}\\sin^{2}2 \\theta \\cos 2 \\theta$ 이고",
+    "$\\int_{0}^{\\frac{\\pi}{2}}\\frac{1-\\cos 4 \\theta}{16}d \\theta=\\frac{\\pi}{32},\\,\\int_{0}^{\\frac{\\pi}{2}}\\frac{1}{8}\\sin^{2}2 \\theta \\cos 2 \\theta d \\theta=\\left[\\frac{1}{48}\\sin^{3}2 \\theta \\right]_{0}^{\\frac{\\pi}{2}}=0$",
+    "이므로 구하는 정사영의 넓이는 $12 \\cdot \\frac{\\pi}{32}=\\frac{3}{8}\\pi$ 이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "4",
+   "label": "[2-4]",
+   "points": null,
+   "text": [
+    "중심이 원점이고 반지름의 길이가 $\\rho$ 인 구 위의 모든 점이 입체 $K$ 에 속하도록 하는 $\\rho$ 의 최댓값을 구하시오. 또 $\\rho$ 가 이 최댓값일 때, 이 구 위의 점 중 입체 $K$ 의 겉면 위에 있는 점 전체가 나타내는 도형의 길이를 구하시오.",
+    "※ 제시문을 읽고 문제에 답하시오."
+   ],
+   "answer": [
+    "문제 2-3에서 본 것과 대칭성에 의하여 점 $(x,\\,y,\\,z)$ 가 입체 $K$ 에 속할 조건은 $\\left|z \\right|\\le 1$ 이고 $\\sqrt{x^{2}+y^{2}}\\le R \\left(\\left|z \\right|\\right)$ 인 것이다. $d=\\sqrt{x^{2}+y^{2}}$ 이라 하고 양변을 $\\frac{2}{3}$ 제곱하여 정리하면 이 조건은",
+    "$d^{\\frac{2}{3}}+\\left|z \\right|^{\\frac{2}{3}}\\le 1$",
+    "과 같고, $K$ 의 겉면 위의 점은 이 식에서 등호가 성립하는 점이다.",
+    "$u=d^{\\frac{2}{3}}$ , $v=\\left|z \\right|^{\\frac{2}{3}}$ 이라 하면 $u \\ge 0$ , $v \\ge 0$ 이고, 점 $(x,\\,y,\\,z)$ 가 중심이 원점이고 반지름의 길이가 $\\rho$ 인 구 위에 있을 조건은 $d^{2}+z^{2}=\\rho^{2}$ , 즉 $u^{3}+v^{3}=\\rho^{2}$ 이다. 그런데",
+    "$4(u^{3}+v^{3})-(u+v)^{3}=3(u+v)(u-v)^{2}\\ge 0$",
+    "이므로 구 위의 모든 점에서 $u+v \\le \\left(4 \\rho^{2}\\right)^{\\frac{1}{3}}$ 이고, 등호는 $u=v$ 일 때, 즉 $d=\\left|z \\right|=\\frac{\\rho}{\\sqrt{2}}$ 일 때 성립한다. 구 위에는 $d=\\left|z \\right|$ 인 점이 있으므로, 구 위의 모든 점이 $K$ 에 속할 필요충분조건은 $\\left(4 \\rho^{2}\\right)^{\\frac{1}{3}}\\le 1$ , 즉 $\\rho \\le \\frac{1}{2}$ 이다. 따라서 $\\rho$ 의 최댓값은 $\\frac{1}{2}$ 이다.",
+    "$\\rho=\\frac{1}{2}$ 일 때 구 위의 점 중 $u+v=1$ 인 점은 $d=\\left|z \\right|=\\frac{\\sqrt{2}}{4}$ 인 점이므로, 구하는 도형은 두 평면 $z=\\frac{\\sqrt{2}}{4}$ , $z=-\\frac{\\sqrt{2}}{4}$ 위에 있고 반지름의 길이가 $\\frac{\\sqrt{2}}{4}$ 인 두 원이다. 그 길이는 $2 \\times 2 \\pi \\times \\frac{\\sqrt{2}}{4}=\\sqrt{2}\\pi$ 이다.",
+    "(참고: 직각삼각형 $\\mathrm{OPQ}$ 에서 빗변 $\\mathrm{PQ}$ 의 중점과 원점 사이의 거리는 항상 $\\frac{1}{2}$ 이다. 즉 모든 선분 $\\mathrm{PQ}$ 의 중점이 이 구 위에 있으며, 이 구는 문제 2-1에서 $\\lambda=\\frac{1}{2}$ 인 경우의 도형이다.)"
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": ""
+}

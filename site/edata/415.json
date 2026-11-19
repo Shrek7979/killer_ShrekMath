@@ -1,0 +1,115 @@
+{
+ "num": 415,
+ "id": "MK-서울대학교면접대비제9회ShrekMath-1",
+ "univ": "서울대학교 면접 대비 제9회 (ShrekMath)",
+ "n": 1,
+ "year": 2026,
+ "title": "문제 1",
+ "head": "",
+ "points": null,
+ "minutes": 15,
+ "info": {
+  "concepts": "",
+  "time": "15분"
+ },
+ "pre": [
+  "※ 제시문을 읽고 문제에 답하시오."
+ ],
+ "passage": [
+  "좌표평면에서 네 점 $(2,\\,1)$ , $(-2,\\,1)$ , $(-2,\\,-1)$ , $(2,\\,-1)$ 을 꼭짓점으로 하는 직사각형이 있다. $-2<a<2$ , $-1 \\le b \\le 1$ 인 두 실수 $a$ , $b$ 에 대하여 이 직사각형의 네 변 위에 각각 놓인 네 점",
+  "$\\mathrm{A}(a,\\,-1),\\,\\mathrm{B}(2,\\,b),\\,\\mathrm{C}(-a,\\,1),\\,\\mathrm{D}(-2,\\,-b)$",
+  "를 생각한다. 점 $\\mathrm{O}$ 는 원점이다.",
+  "[그림]"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[1-1]",
+   "points": null,
+   "text": [
+    "사각형 $\\mathrm{ABCD}$ 가 평행사변형임을 보이고, 그 넓이 $S$ 를 $a$ , $b$ 에 대한 식으로 나타내시오. 또 사각형 $\\mathrm{ABCD}$ 가 마름모일 때 $S$ 의 최댓값과 최솟값을 구하시오."
+   ],
+   "answer": [
+    "$\\vec{\\mathrm{AB}}=(2-a,\\,b+1)$ , $\\vec{\\mathrm{DC}}=(-a+2,\\,1+b)$ 이므로 $\\vec{\\mathrm{AB}}=\\vec{\\mathrm{DC}}$ 이다. 또 아래에서 구한 넓이가 양수이므로 네 점은 한 직선 위에 있지 않다. 따라서 사각형 $\\mathrm{ABCD}$ 는 평행사변형이다.",
+    "$\\vec{\\mathrm{OC}}=-\\vec{\\mathrm{OA}}$ , $\\vec{\\mathrm{OD}}=-\\vec{\\mathrm{OB}}$ 이므로 두 대각선은 원점 $\\mathrm{O}$ 에서 서로를 이등분하고, 평행사변형의 넓이는 삼각형 $\\mathrm{OAB}$ 의 넓이의 $4$ 배이다. 삼각형 $\\mathrm{OAB}$ 의 넓이는 $\\frac{1}{2}\\left|a \\cdot b-(-1)\\cdot 2 \\right|=\\frac{1}{2}\\left|a b+2 \\right|$ 이고, $\\left|a \\right|<2$ , $\\left|b \\right|\\le 1$ 에서 $a b>-2$ 이므로",
+    "$S=2(a b+2)$",
+    "이다.",
+    "평행사변형이 마름모일 조건은 두 대각선이 서로 수직인 것이므로 $\\vec{\\mathrm{OA}}\\cdot \\vec{\\mathrm{OB}}=2 a-b=0$ , 즉 $b=2 a$ 이다. $-1 \\le b \\le 1$ 이므로 $-\\frac{1}{2}\\le a \\le \\frac{1}{2}$ 이고, 이때 $S=4 \\left(a^{2}+1 \\right)$ 이다. 따라서 $S$ 는 $a=0$ 일 때 최솟값 $4$ , $a=\\frac{1}{2}$ 또는 $a=-\\frac{1}{2}$ 일 때 최댓값 $5$ 를 갖는다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "[1-2]",
+   "points": null,
+   "text": [
+    "사각형 $\\mathrm{ABCD}$ 의 둘레의 길이의 최솟값을 구하고, 둘레의 길이가 최소일 때 넓이 $S$ 가 가질 수 있는 값의 범위를 구하시오."
+   ],
+   "answer": [
+    "둘레의 길이는 $2 \\left(\\left|\\vec{\\mathrm{AB}}\\right|+\\left|\\vec{\\mathrm{BC}}\\right|\\right)$ 이고 $\\vec{\\mathrm{AB}}=(2-a,\\,b+1)$ , $\\vec{\\mathrm{BC}}=(-a-2,\\,1-b)$ 이다.",
+    "크기가 $1$ 인 두 벡터 $\\vec{u}=\\left(\\frac{2}{\\sqrt{5}},\\,\\frac{1}{\\sqrt{5}}\\right)$ , $\\vec{v}=\\left(-\\frac{2}{\\sqrt{5}},\\,\\frac{1}{\\sqrt{5}}\\right)$ 을 생각하자. 임의의 벡터 $\\vec{w}$ 와 크기가 $1$ 인 벡터 $\\vec{e}$ 가 이루는 각의 크기를 $\\theta$ 라 하면 $\\vec{w}\\cdot \\vec{e}=\\left|\\vec{w}\\right|\\cos \\theta \\le \\left|\\vec{w}\\right|$ 이므로",
+    "$\\left|\\vec{\\mathrm{AB}}\\right|+\\left|\\vec{\\mathrm{BC}}\\right|\\ge \\vec{\\mathrm{AB}}\\cdot \\vec{u}+\\vec{\\mathrm{BC}}\\cdot \\vec{v}=\\frac{2(2-a)+(b+1)}{\\sqrt{5}}+\\frac{2(a+2)+(1-b)}{\\sqrt{5}}=\\frac{10}{\\sqrt{5}}=2 \\sqrt{5}$",
+    "이다. 등호는 $\\vec{\\mathrm{AB}}$ 가 $\\vec{u}$ 와 같은 방향이고 $\\vec{\\mathrm{BC}}$ 가 $\\vec{v}$ 와 같은 방향일 때 성립한다. $\\vec{\\mathrm{AB}}$ 가 $(2,\\,1)$ 과 평행하면 $2-a=2(b+1)$ , 즉 $a=-2 b$ 이고, 이때 $-2<a<2$ 에서 $-1<b<1$ 이며",
+    "$\\vec{\\mathrm{AB}}=(b+1)(2,\\,1),\\,\\vec{\\mathrm{BC}}=(1-b)(-2,\\,1)$",
+    "에서 $b+1>0$ , $1-b>0$ 이므로 실제로 등호가 성립한다. 따라서 둘레의 길이의 최솟값은 $4 \\sqrt{5}$ 이고, 최소가 되는 것은 $a=-2 b$ $(-1<b<1)$ 일 때이다.",
+    "이때 $S=2 \\left(-2 b^{2}+2 \\right)=4 \\left(1-b^{2}\\right)$ 이고 $0 \\le b^{2}<1$ 이므로 $0<S \\le 4$ 이다.",
+    "(참고: 둘레의 길이가 최소인 평행사변형은 각 변이 직사각형의 두 대각선 중 하나와 평행한 것이다.)"
+   ],
+   "rubric": []
+  },
+  {
+   "k": "3",
+   "label": "[1-3]",
+   "points": null,
+   "text": [
+    "사각형 $\\mathrm{ABCD}$ 가 마름모일 때, 원점 $\\mathrm{O}$ 에서 직선 $\\mathrm{AB}$ 에 내린 수선의 발을 $\\mathrm{H}$ 라고 하자. $\\vec{\\mathrm{OH}}$ 를 $\\vec{\\mathrm{OA}}$ , $\\vec{\\mathrm{OB}}$ 로 나타내고, 사각형 $\\mathrm{ABCD}$ 가 마름모가 되도록 $a$ , $b$ 의 값이 변할 때 점 $\\mathrm{H}$ 가 나타내는 도형의 길이를 구하시오."
+   ],
+   "answer": [
+    "문제 1-1에서 $b=2 a$ , $-\\frac{1}{2}\\le a \\le \\frac{1}{2}$ 이고 $\\vec{\\mathrm{OA}}\\cdot \\vec{\\mathrm{OB}}=0$ 이다. 또 $\\left|\\vec{\\mathrm{OA}}\\right|^{2}=a^{2}+1$ , $\\left|\\vec{\\mathrm{OB}}\\right|^{2}=4+4 a^{2}=4 \\left(a^{2}+1 \\right)$ 이다.",
+    "점 $\\mathrm{H}$ 는 직선 $\\mathrm{AB}$ 위에 있으므로 실수 $s$ 에 대하여 $\\vec{\\mathrm{OH}}=(1-s)\\vec{\\mathrm{OA}}+s \\vec{\\mathrm{OB}}$ 로 쓸 수 있다. $\\vec{\\mathrm{OH}}\\cdot \\vec{\\mathrm{AB}}=0$ 이고 $\\vec{\\mathrm{AB}}=\\vec{\\mathrm{OB}}-\\vec{\\mathrm{OA}}$ 이므로",
+    "$\\left\\{(1-s)\\vec{\\mathrm{OA}}+s \\vec{\\mathrm{OB}}\\right\\} \\cdot \\left(\\vec{\\mathrm{OB}}-\\vec{\\mathrm{OA}}\\right)=-(1-s)\\left(a^{2}+1 \\right)+4 s \\left(a^{2}+1 \\right)=0$",
+    "에서 $s=\\frac{1}{5}$ 이다. 따라서",
+    "$\\vec{\\mathrm{OH}}=\\frac{4}{5}\\vec{\\mathrm{OA}}+\\frac{1}{5}\\vec{\\mathrm{OB}}$",
+    "이다. 좌표로 나타내면 $\\mathrm{H}\\left(\\frac{4 a+2}{5},\\,\\frac{2 a-4}{5}\\right)$ 이므로, $a$ 가 $-\\frac{1}{2}$ 에서 $\\frac{1}{2}$ 까지 변할 때 점 $\\mathrm{H}$ 는 점 $(0,\\,-1)$ 에서 점 $\\left(\\frac{4}{5},\\,-\\frac{3}{5}\\right)$ 까지 직선 $x-2 y=2$ 위의 선분을 그린다. 그 길이는",
+    "$\\sqrt{\\left(\\frac{4}{5}\\right)^{2}+\\left(\\frac{2}{5}\\right)^{2}}=\\frac{2 \\sqrt{5}}{5}$",
+    "이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "4",
+   "label": "[1-4]",
+   "points": null,
+   "text": [
+    "사각형 $\\mathrm{ABCD}$ 가 마름모가 되도록 $a$ , $b$ 의 값이 변할 때, 선분 $\\mathrm{AB}$ 가 지나는 부분의 넓이를 구하시오.",
+    "※ 제시문을 읽고 문제에 답하시오."
+   ],
+   "answer": [
+    "마름모일 때 $\\mathrm{A}(a,\\,-1)$ , $\\mathrm{B}(2,\\,2 a)$ 이고 $-\\frac{1}{2}\\le a \\le \\frac{1}{2}$ 이다. 선분 $\\mathrm{AB}$ 위의 점 $(x,\\,y)$ 는 $a \\le x \\le 2$ 이고",
+    "$y=-1+\\frac{(2 a+1)(x-a)}{2-a}$",
+    "를 만족시킨다. $x$ 를 고정하고, 우변을 $a$ 에 대한 함수로 보아 $h(a)$ 라 하자. $x$ 좌표가 이 고정된 값인 점 중 선분 $\\mathrm{AB}$ 가 지나는 점의 $y$ 좌표는, $-\\frac{1}{2}\\le a \\le \\frac{1}{2}$ 이고 $a \\le x$ 인 $a$ 에 대한 $h(a)$ 의 값 전체이다. 이러한 $a$ 가 존재하려면 $-\\frac{1}{2}\\le x \\le 2$ 이어야 하고, 이때 $a$ 의 범위는 $-\\frac{1}{2}\\le a \\le m$ (단, $m$ 은 $x$ 와 $\\frac{1}{2}$ 중 크지 않은 수)이다. $h(a)$ 는 이 구간에서 연속이므로 $h(a)$ 의 값 전체는 최솟값과 최댓값 사이의 모든 실수이다.",
+    "이 구간에서 $2 a+1 \\ge 0$ , $x-a \\ge 0$ , $2-a>0$ 이므로 $h(a)\\ge-1$ 이고 $h \\left(-\\frac{1}{2}\\right)=-1$ 이다. 따라서 최솟값은 $-1$ 이다.",
+    "최댓값을 구하자. 미분하여 정리하면",
+    "$h'(a)=\\frac{(-4 a+2 x-1)(2-a)+(2 a+1)(x-a)}{(2-a)^{2}}=\\frac{2 a^{2}-8 a+5 x-2}{(2-a)^{2}}$",
+    "이다. $a<2$ 에서 분자 $2 a^{2}-8 a+5 x-2$ 는 감소하고, 그 값이 $0$ 이 되는 $a$ 는",
+    "$a_{0}=2-\\frac{\\sqrt{20-10 x}}{2}$",
+    "이다. 즉 $h(a)$ 는 $a<a_{0}$ 에서 증가하고 $a_{0}<a<2$ 에서 감소한다.",
+    "$a_{0}\\ge-\\frac{1}{2}$ 는 $\\sqrt{20-10 x}\\le 5$ , 즉 $x \\ge-\\frac{1}{2}$ 와 같고, $a_{0}\\le \\frac{1}{2}$ 는 $\\sqrt{20-10 x}\\ge 3$ , 즉 $x \\le \\frac{11}{10}$ 과 같다. 또 $a_{0}\\le x$ 는 $2(2-x)\\le \\sqrt{10(2-x)}$ , 즉 $4(2-x)\\le 10$ 과 같으므로 $x \\ge-\\frac{1}{2}$ 이면 성립한다.",
+    "(i) $-\\frac{1}{2}\\le x \\le \\frac{11}{10}$ 일 때: $-\\frac{1}{2}\\le a_{0}\\le m$ 이므로 최댓값은 $h(a_{0})$ 이다. $s=\\sqrt{20-10 x}$ 라 하면 $x=2-\\frac{s^{2}}{10}$ , $a_{0}=2-\\frac{s}{2}$ 이므로 $2 a_{0}+1=5-s$ , $x-a_{0}=\\frac{s(5-s)}{10}$ , $2-a_{0}=\\frac{s}{2}$ 이고",
+    "$h(a_{0})=-1+\\frac{(5-s)^{2}}{5}=4-2 s+\\frac{s^{2}}{5}=8-2 x-2 \\sqrt{20-10 x}$",
+    "이다.",
+    "(ii) $\\frac{11}{10}\\le x \\le 2$ 일 때: $a_{0}\\ge \\frac{1}{2}$ 이므로 $h(a)$ 는 $-\\frac{1}{2}\\le a \\le \\frac{1}{2}$ 에서 증가하고, 최댓값은 $h \\left(\\frac{1}{2}\\right)=-1+\\frac{2}{3}(2 x-1)=\\frac{4 x-5}{3}$ 이다.",
+    "따라서 선분 $\\mathrm{AB}$ 가 지나는 부분은 $-\\frac{1}{2}\\le x \\le 2$ 에서 직선 $y=-1$ 의 위쪽, 그리고 (i)의 곡선과 (ii)의 직선의 아래쪽에 있는 부분(경계 포함)이고, 구하는 넓이는",
+    "$\\int_{-\\frac{1}{2}}^{\\frac{11}{10}}\\left(9-2 x-2 \\sqrt{20-10 x}\\right)dx+\\int_{\\frac{11}{10}}^{2}\\frac{4 x-2}{3}dx$",
+    "이다. 첫 번째 정적분에서 $9 x-x^{2}$ 의 값의 차는 $\\frac{72}{5}-\\frac{24}{25}=\\frac{336}{25}$ 이고, $\\int 2 \\sqrt{20-10 x}dx=-\\frac{2}{15}(20-10 x)\\sqrt{20-10 x}+C$ 이므로 뒤의 항의 정적분은 $\\frac{2}{15}(125-27)=\\frac{196}{15}$ 이다. 따라서 첫 번째 정적분의 값은 $\\frac{336}{25}-\\frac{196}{15}=\\frac{28}{75}$ 이다. 두 번째 정적분의 값은 $\\frac{2 x^{2}-2 x}{3}$ 의 값의 차 $\\frac{4}{3}-\\frac{11}{150}=\\frac{63}{50}$ 이다. 따라서 구하는 넓이는",
+    "$\\frac{28}{75}+\\frac{63}{50}=\\frac{49}{30}$",
+    "이다.",
+    "(참고: (i)의 곡선은 원점을 초점으로 하는 포물선 $(2 x+y)^{2}=8(2-x+2 y)$ 의 일부이고, 선분 $\\mathrm{AB}$ 는 항상 이 포물선에 접한다. 문제 1-3의 직선 $x-2 y=2$ 는 이 포물선의 꼭짓점에서의 접선이다.)"
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": ""
+}

@@ -1,0 +1,100 @@
+{
+ "num": 416,
+ "id": "MK-서울대학교면접대비제9회ShrekMath-2",
+ "univ": "서울대학교 면접 대비 제9회 (ShrekMath)",
+ "n": 2,
+ "year": 2026,
+ "title": "문제 2",
+ "head": "",
+ "points": null,
+ "minutes": 15,
+ "info": {
+  "concepts": "",
+  "time": "15분"
+ },
+ "pre": [],
+ "passage": [
+  "$x \\ge 0$ 에서 정의된 함수 $f(x)=x e^{x}$ 은 역함수를 갖는다. 함수 $f(x)$ 의 역함수를 $g(x)$ 라고 하자. 즉, $0$ 이상의 실수 $x$ 에 대하여 $g(x)$ 는 $g(x)e^{g(x)}=x$ 를 만족시키는 $0$ 이상의 실수이다.",
+  "[그림]"
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "[2-1]",
+   "points": null,
+   "text": [
+    "함수 $f(x)$ 가 $x \\ge 0$ 에서 증가함을 보이고, $g'(e)$ 의 값과 극한값 $\\lim_{x \\to 0+}\\frac{x-g(x)}{x^{2}}$ 을 각각 구하시오."
+   ],
+   "answer": [
+    "$x \\ge 0$ 에서 $f'(x)=(x+1)e^{x}>0$ 이므로 $f(x)$ 는 증가한다. 또 $f(0)=0$ 이고 $f(x)\\ge x$ 이므로 $f(x)$ 의 치역은 $0$ 이상의 실수 전체이고, 역함수 $g(x)$ 는 $x \\ge 0$ 에서 정의된 증가함수이다.",
+    "$f(1)=e$ 이므로 $g(e)=1$ 이고, 역함수의 미분법에 의하여 $g'(e)=\\frac{1}{f'(1)}=\\frac{1}{2 e}$ 이다.",
+    "$y=g(x)$ 라 하면 $x=y e^{y}$ 이다. $x>0$ 일 때 $0<y \\le y e^{y}=x$ 이므로 $x \\to 0+$ 일 때 $y \\to 0+$ 이다. 따라서",
+    "$\\lim_{x \\to 0+}\\frac{x-g(x)}{x^{2}}=\\lim_{y \\to 0+}\\frac{y e^{y}-y}{y^{2}e^{2 y}}=\\lim_{y \\to 0+}\\frac{e^{y}-1}{y}\\cdot \\frac{1}{e^{2 y}}=1$",
+    "이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "[2-2]",
+   "points": null,
+   "text": [
+    "양수 $t$ 에 대하여 정적분 $\\int_{0}^{t}g(x)dx$ 를 $t$ 와 $g(t)$ 에 대한 식으로 나타내고, $\\int_{0}^{2 e^{2}}g(x)dx$ 의 값을 구하시오."
+   ],
+   "answer": [
+    "$a=g(t)$ 라 하면 $a e^{a}=t$ 이다. $x=f(y)$ 로 치환하면 $dx=f'(y)dy$ 이고 $g(f(y))=y$ 이므로",
+    "$\\int_{0}^{t}g(x)dx=\\int_{0}^{a}y f'(y)dy=a f(a)-\\int_{0}^{a}f(y)dy$",
+    "이다. $\\int y e^{y}dy=(y-1)e^{y}+C$ 이므로 $\\int_{0}^{a}f(y)dy=(a-1)e^{a}+1$ 이고, $e^{a}=\\frac{t}{a}$ 이므로",
+    "$\\int_{0}^{t}g(x)dx=a t-\\frac{(a-1)t}{a}-1=t \\left\\{g(t)-1+\\frac{1}{g(t)}\\right\\}-1$",
+    "이다.",
+    "$f(2)=2 e^{2}$ 이므로 $g \\left(2 e^{2}\\right)=2$ 이고 $\\int_{0}^{2 e^{2}}g(x)dx=2 e^{2}\\left(2-1+\\frac{1}{2}\\right)-1=3 e^{2}-1$ 이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "3",
+   "label": "[2-3]",
+   "points": null,
+   "text": [
+    "모든 양수 $y$ 에 대하여 $\\ln y<2 \\sqrt{y}$ 임을 보이고, 이를 이용하여 두 극한값 $\\lim_{x \\to \\infty}\\frac{g(x)}{\\ln x}$ 와 $\\lim_{t \\to \\infty}\\frac{1}{t \\ln t}\\int_{0}^{t}g(x)dx$ 를 각각 구하시오."
+   ],
+   "answer": [
+    "$y>0$ 에서 $k(y)=2 \\sqrt{y}-\\ln y$ 라 하면 $k'(y)=\\frac{1}{\\sqrt{y}}-\\frac{1}{y}=\\frac{\\sqrt{y}-1}{y}$ 이므로 $k(y)$ 는 $y=1$ 에서 최솟값 $k(1)=2$ 를 갖는다. 따라서 $k(y)>0$ , 즉 $\\ln y<2 \\sqrt{y}$ 이다.",
+    "이로부터 $y>1$ 일 때 $0<\\frac{\\ln y}{y}<\\frac{2}{\\sqrt{y}}$ 이므로 $\\lim_{y \\to \\infty}\\frac{\\ln y}{y}=0$ 이다.",
+    "$y=g(x)$ 라 하자. 임의의 양수 $N$ 에 대하여 $x>f(N)$ 이면 $g(x)>N$ 이므로 $x \\to \\infty$ 일 때 $y \\to \\infty$ 이다. $x=y e^{y}$ 에서 $\\ln x=y+\\ln y$ 이므로",
+    "$\\lim_{x \\to \\infty}\\frac{g(x)}{\\ln x}=\\lim_{y \\to \\infty}\\frac{y}{y+\\ln y}=\\lim_{y \\to \\infty}\\frac{1}{1+\\frac{\\ln y}{y}}=1$",
+    "이다.",
+    "또 $a=g(t)$ 라 하면 문제 2-2에서",
+    "$\\frac{1}{t \\ln t}\\int_{0}^{t}g(x)dx=\\frac{a-1+\\frac{1}{a}-\\frac{1}{t}}{a+\\ln a}=\\frac{1-\\frac{1}{a}+\\frac{1}{a^{2}}-\\frac{1}{a t}}{1+\\frac{\\ln a}{a}}$",
+    "이고, $t \\to \\infty$ 일 때 $a \\to \\infty$ 이므로 극한값은 $1$ 이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "4",
+   "label": "[2-4]",
+   "points": null,
+   "text": [
+    "다음 극한값을 구하시오.",
+    "$\\lim_{x \\to \\infty}\\frac{\\ln x}{\\ln(\\ln x)}\\left\\{g(x)-\\ln x+\\ln(\\ln x)\\right\\}$",
+    "※ 제시문을 읽고 문제에 답하시오."
+   ],
+   "answer": [
+    "$y=g(x)$ 라 하면 $\\ln x=y+\\ln y$ 이다. $x$ 가 충분히 크면 $y>1$ 이고, $c=\\frac{\\ln y}{y}$ 라 하면 $c>0$ 이며 문제 2-3에서 $x \\to \\infty$ 일 때 $c \\to 0$ 이다. 이때",
+    "$\\ln(\\ln x)=\\ln(y+\\ln y)=\\ln y+\\ln(1+c)$",
+    "이므로",
+    "$g(x)-\\ln x+\\ln(\\ln x)=y-(y+\\ln y)+\\ln y+\\ln(1+c)=\\ln(1+c)$",
+    "이다. 따라서 주어진 식은",
+    "$\\frac{y+\\ln y}{\\ln y+\\ln(1+c)}\\cdot \\ln(1+c)=\\frac{\\ln(1+c)}{c}\\cdot \\frac{c(y+\\ln y)}{\\ln y+\\ln(1+c)}$",
+    "와 같다. 여기서 $c(y+\\ln y)=\\frac{\\ln y}{y}\\cdot y(1+c)=(1+c)\\ln y$ 이므로",
+    "$\\frac{c(y+\\ln y)}{\\ln y+\\ln(1+c)}=\\frac{1+c}{1+\\frac{\\ln(1+c)}{\\ln y}}$",
+    "이다. $x \\to \\infty$ 일 때 $c \\to 0+$ , $\\ln y \\to \\infty$ 이고 $\\lim_{c \\to 0}\\frac{\\ln(1+c)}{c}=1$ 이므로 구하는 극한값은 $1 \\cdot \\frac{1}{1+0}=1$ 이다.",
+    "(참고: 이 결과는 $x$ 가 충분히 클 때 $g(x)$ 가 $\\ln x-\\ln(\\ln x)+\\frac{\\ln(\\ln x)}{\\ln x}$ 에 가까움을 뜻한다.)"
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": ""
+}

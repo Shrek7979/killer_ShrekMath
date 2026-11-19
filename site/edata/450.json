@@ -1,0 +1,101 @@
+{
+ "num": 450,
+ "id": "MK-KAIST면접대비제7회ShrekMath-2",
+ "univ": "KAIST 면접 대비 제7회 (ShrekMath)",
+ "n": 2,
+ "year": 2026,
+ "title": "문제 2 · 5점",
+ "head": "",
+ "points": 5,
+ "minutes": 10,
+ "info": {
+  "concepts": "",
+  "time": "10분"
+ },
+ "pre": [],
+ "passage": [
+  "자연수 $n$ 에 대하여 닫힌구간 $[0,\\,1]$ 에서 정의된 함수 $y=\\left|\\sin n \\pi x \\right|$ 를 생각한다."
+ ],
+ "subs": [
+  {
+   "k": "1",
+   "label": "(1)",
+   "points": 1,
+   "text": [
+    "다음 두 명제의 참, 거짓을 각각 판별하고 그 이유를 설명하시오. [1점]",
+    "(가) $\\int_{0}^{1}\\left|\\sin n \\pi x \\right|dx$ 의 값은 자연수 $n$ 의 값에 관계없이 일정하다.",
+    "(나) $\\int_{0}^{1}x \\left|\\sin n \\pi x \\right|dx$ 의 값은 자연수 $n$ 의 값이 커질수록 커진다."
+   ],
+   "answer": [
+    "$k=1,\\,2,\\,\\cdots,\\,n$ 에 대하여 닫힌구간 $\\left[\\frac{k-1}{n},\\,\\frac{k}{n}\\right]$ 을 $I_{k}$ 라 하자. $I_{k}$ 에서 $n \\pi x=(k-1)\\pi+u$ 로 치환하면 $0 \\le u \\le \\pi$ 이고 $dx=\\frac{1}{n \\pi}du$ 이며 $\\left|\\sin n \\pi x \\right|=\\left|\\sin \\left((k-1)\\pi+u \\right)\\right|=\\sin u$ 이다. 따라서",
+    "$\\int_{\\frac{k-1}{n}}^{\\frac{k}{n}}\\left|\\sin n \\pi x \\right|dx=\\frac{1}{n \\pi}\\int_{0}^{\\pi}\\sin u du=\\frac{2}{n \\pi}$",
+    "이다. $\\cdots$ ㉠",
+    "(가) 참이다. ㉠을 $k=1,\\,2,\\,\\cdots,\\,n$ 에 대하여 더하면 $\\int_{0}^{1}\\left|\\sin n \\pi x \\right|dx=n \\cdot \\frac{2}{n \\pi}=\\frac{2}{\\pi}$ 로 $n$ 의 값에 관계없이 일정하다.",
+    "(나) 거짓이다. $x=1-s$ 로 치환하면 $\\left|\\sin n \\pi(1-s)\\right|=\\left|\\sin(n \\pi-n \\pi s)\\right|=\\left|\\sin n \\pi s \\right|$ 이므로",
+    "$\\int_{0}^{1}x \\left|\\sin n \\pi x \\right|dx=\\int_{0}^{1}(1-s)\\left|\\sin n \\pi s \\right|ds$",
+    "이다. 따라서 이 적분의 값을 $c_{n}$ 이라 하면 $2 c_{n}=\\int_{0}^{1}\\left|\\sin n \\pi x \\right|dx=\\frac{2}{\\pi}$ 이고 $c_{n}=\\frac{1}{\\pi}$ 이다. 즉 $n$ 의 값에 관계없이 일정하므로 $n$ 의 값이 커질수록 커지지 않는다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "2",
+   "label": "(2)",
+   "points": 2,
+   "text": [
+    "자연수 $n$ 에 대하여",
+    "$A_{n}=\\int_{0}^{1}e^{-x}\\left|\\sin n \\pi x \\right|dx$",
+    "라 하자. $A_{n}$ 을 $n$ 에 대한 식으로 나타내고, $\\lim_{n \\to \\infty}A_{n}$ 의 값을 구하시오. [2점]",
+    "[그림]",
+    "[그림] $n=6$ 일 때 함수 $y=\\frac{\\left|\\sin n \\pi x \\right|}{1+x^{2}}$ 의 그래프"
+   ],
+   "answer": [
+    "양수 $c$ 에 대하여 $J=\\int_{0}^{\\pi}e^{-c u}\\sin u du$ 라 하자. 부분적분법을 두 번 적용하면",
+    "$J=\\left[-e^{-c u}\\cos u \\right]_{0}^{\\pi}-c \\int_{0}^{\\pi}e^{-c u}\\cos u du=1+e^{-c \\pi}-c \\left\\{\\left[e^{-c u}\\sin u \\right]_{0}^{\\pi}+c J \\right\\}=1+e^{-c \\pi}-c^{2}J$",
+    "이므로 $J=\\frac{1+e^{-c \\pi}}{1+c^{2}}$ 이다.",
+    "구간 $I_{k}$ 에서 위와 같이 치환하면 $x=\\frac{k-1}{n}+\\frac{u}{n \\pi}$ 이므로",
+    "$\\int_{\\frac{k-1}{n}}^{\\frac{k}{n}}e^{-x}\\left|\\sin n \\pi x \\right|dx=\\frac{e^{-\\frac{k-1}{n}}}{n \\pi}\\int_{0}^{\\pi}e^{-\\frac{u}{n \\pi}}\\sin u du$",
+    "이다. $c=\\frac{1}{n \\pi}$ 일 때 $J=\\frac{n^{2}\\pi^{2}\\left(1+e^{-\\frac{1}{n}}\\right)}{n^{2}\\pi^{2}+1}$ 이고, 등비수열의 합에서",
+    "$\\sum_{k=1}^{n}e^{-\\frac{k-1}{n}}=\\frac{1-e^{-1}}{1-e^{-\\frac{1}{n}}}$",
+    "이므로",
+    "$A_{n}=\\frac{1}{n \\pi}\\cdot \\frac{n^{2}\\pi^{2}\\left(1+e^{-\\frac{1}{n}}\\right)}{n^{2}\\pi^{2}+1}\\cdot \\frac{1-e^{-1}}{1-e^{-\\frac{1}{n}}}=\\frac{n \\pi(e-1)\\left(e^{\\frac{1}{n}}+1 \\right)}{e \\left(n^{2}\\pi^{2}+1 \\right)\\left(e^{\\frac{1}{n}}-1 \\right)}$",
+    "이다. (마지막 등식에서는 $\\frac{1+e^{-\\frac{1}{n}}}{1-e^{-\\frac{1}{n}}}$ 의 분자와 분모에 $e^{\\frac{1}{n}}$ 을 곱하였다.)",
+    "$h=\\frac{1}{n}$ 이라 하면 $n \\left(e^{\\frac{1}{n}}-1 \\right)=\\frac{e^{h}-1}{h}$ 이고 $n \\to \\infty$ 일 때 $h \\to 0+$ 이므로 이 값은 $1$ 에 수렴한다. 따라서",
+    "$A_{n}=\\frac{n^{2}\\pi}{n^{2}\\pi^{2}+1}\\cdot \\frac{e-1}{e}\\cdot \\frac{e^{\\frac{1}{n}}+1}{n \\left(e^{\\frac{1}{n}}-1 \\right)}$",
+    "에서",
+    "$\\lim_{n \\to \\infty}A_{n}=\\frac{1}{\\pi}\\cdot \\frac{e-1}{e}\\cdot 2=\\frac{2(e-1)}{\\pi e}$",
+    "이다."
+   ],
+   "rubric": []
+  },
+  {
+   "k": "3",
+   "label": "(3)",
+   "points": 2,
+   "text": [
+    "자연수 $n$ 에 대하여",
+    "$B_{n}=\\int_{0}^{1}\\frac{\\left|\\sin n \\pi x \\right|}{1+x^{2}}dx$",
+    "라 하자. 모든 자연수 $n$ 에 대하여 $\\left|B_{n}-\\frac{1}{2}\\right|\\le \\frac{1}{n \\pi}$ 임을 보이고, $\\lim_{n \\to \\infty}B_{n}$ 의 값을 구하시오. [2점]"
+   ],
+   "answer": [
+    "$f(x)=\\frac{1}{1+x^{2}}$ 이라 하면 $f(x)$ 는 닫힌구간 $[0,\\,1]$ 에서 감소한다. 따라서 구간 $I_{k}$ 에서 $f \\left(\\frac{k}{n}\\right)\\le f(x)\\le f \\left(\\frac{k-1}{n}\\right)$ 이고, 각 변에 $\\left|\\sin n \\pi x \\right|\\ge 0$ 을 곱하여 $I_{k}$ 에서 적분하면 ㉠에 의하여",
+    "$\\frac{2}{n \\pi}f \\left(\\frac{k}{n}\\right)\\le \\int_{\\frac{k-1}{n}}^{\\frac{k}{n}}f(x)\\left|\\sin n \\pi x \\right|dx \\le \\frac{2}{n \\pi}f \\left(\\frac{k-1}{n}\\right)$",
+    "이다. $k=1,\\,2,\\,\\cdots,\\,n$ 에 대하여 더하면",
+    "$L_{n}\\le B_{n}\\le U_{n}$",
+    "이다. 단, $L_{n}=\\frac{2}{n \\pi}\\sum_{k=1}^{n}f \\left(\\frac{k}{n}\\right)$ , $U_{n}=\\frac{2}{n \\pi}\\sum_{k=1}^{n}f \\left(\\frac{k-1}{n}\\right)$ 이다.",
+    "한편 같은 부등식 $f \\left(\\frac{k}{n}\\right)\\le f(x)\\le f \\left(\\frac{k-1}{n}\\right)$ 을 그대로 $I_{k}$ 에서 적분하여 더하면",
+    "$\\frac{1}{n}\\sum_{k=1}^{n}f \\left(\\frac{k}{n}\\right)\\le \\int_{0}^{1}f(x)dx \\le \\frac{1}{n}\\sum_{k=1}^{n}f \\left(\\frac{k-1}{n}\\right)$",
+    "이므로 $L_{n}\\le \\frac{2}{\\pi}\\int_{0}^{1}f(x)dx \\le U_{n}$ 이다. $x=\\tan \\theta$ 로 치환하면 $dx=\\frac{1}{\\cos^{2}\\theta}d \\theta$ 이고 $\\frac{1}{1+\\tan^{2}\\theta}=\\cos^{2}\\theta$ 이므로",
+    "$\\int_{0}^{1}\\frac{1}{1+x^{2}}dx=\\int_{0}^{\\frac{\\pi}{4}}d \\theta=\\frac{\\pi}{4}$",
+    "이다. 따라서 $L_{n}\\le \\frac{1}{2}\\le U_{n}$ 이다.",
+    "두 수 $B_{n}$ 과 $\\frac{1}{2}$ 이 모두 $L_{n}$ 이상 $U_{n}$ 이하이므로",
+    "$\\left|B_{n}-\\frac{1}{2}\\right|\\le U_{n}-L_{n}=\\frac{2}{n \\pi}\\left\\{f(0)-f(1)\\right\\}=\\frac{2}{n \\pi}\\cdot \\frac{1}{2}=\\frac{1}{n \\pi}$",
+    "이다.",
+    "$n \\to \\infty$ 일 때 $\\frac{1}{n \\pi}\\to 0$ 이므로 $\\lim_{n \\to \\infty}B_{n}=\\frac{1}{2}$ 이다."
+   ],
+   "rubric": []
+  }
+ ],
+ "answer": [],
+ "rubric": [],
+ "field": ""
+}
