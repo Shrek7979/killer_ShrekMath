@@ -1,6 +1,6 @@
 // 회원가입·로그인 (Vercel 서버리스 함수 + Neon Postgres)
 //  POST /api/auth  { action: 'signup' | 'login' | 'google' | 'config' | 'me' | 'logout' | 'delete'
-//                   | 'admin_list' | 'admin_reset' | 'admin_delete', ... }
+//                   | 'password' | 'admin_list' | 'admin_reset' | 'admin_delete', ... }
 //  · 관리자: Vercel 환경변수 ADMIN_EMAILS(쉼표로 구분)에 든 이메일의 '구글 로그인' 계정만 관리자다.
 //    아이디 가입 때 적는 이메일은 확인되지 않은 값이라 관리자 판정에 쓰지 않는다.
 //  · 구글 로그인: Vercel 환경변수 GOOGLE_CLIENT_ID 가 있을 때만 켜진다. 구글이 서명한 ID 토큰을 구글 서버에 확인받아 쓴다.
@@ -182,11 +182,21 @@ module.exports = async (req, res) => {
       return bad('알 수 없는 요청이에요.');
     }
 
-    if (action === 'me' || action === 'logout' || action === 'delete') {
+    if (action === 'me' || action === 'logout' || action === 'delete' || action === 'password') {
       const u = await userOf(b.token);
       if (!u) { res.status(401).json({ error: 'not signed in', msg: '로그인이 만료되었어요. 다시 로그인해 주세요.' }); return; }
       if (action === 'me') { res.status(200).json({ ok: true, user: pub(u) }); return; }
       if (action === 'logout') { await sql`DELETE FROM km_session WHERE tok = ${sha(b.token)}`; res.status(200).json({ ok: true }); return; }
+      // 비밀번호 바꾸기: 현재 비밀번호를 확인한다. 다른 기기의 로그인은 풀고, 지금 기기는 그대로 둔다
+      if (action === 'password') {
+        if (!u.pw) return bad('구글로 가입한 계정은 비밀번호가 없어요.');
+        if (!checkPw(String(b.pw || '').slice(0, 72), u.pw)) return bad('현재 비밀번호가 맞지 않아요.', 401);
+        const np = String(b.newPw || '');
+        if (np.length < 8 || np.length > 72) return bad('새 비밀번호는 8자 이상으로 만들어 주세요.');
+        await sql`UPDATE km_user SET pw = ${hashPw(np)}, fails = 0, locked_until = NULL WHERE id = ${u.id}`;
+        await sql`DELETE FROM km_session WHERE user_id = ${u.id} AND tok <> ${sha(b.token)}`;
+        res.status(200).json({ ok: true }); return;
+      }
       // 회원 탈퇴: 본인 확인을 위해 비밀번호를 다시 받고, 계정과 모든 로그인 기록을 지운다
       if (u.pw && !checkPw(String(b.pw || '').slice(0, 72), u.pw)) return bad('비밀번호가 맞지 않아요.', 401);   // 구글 가입 계정은 비밀번호가 없어 로그인 상태만 확인
       await sql`DELETE FROM km_user WHERE id = ${u.id}`;
