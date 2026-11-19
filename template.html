@@ -509,6 +509,11 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
 #auth dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:0;font-size:.95rem}
 #auth dt{color:var(--mute);font-size:.8rem;font-weight:700;align-self:center}
 #auth dd{margin:0;color:#fff;word-break:break-all}
+#auth #gWrap{display:grid;gap:12px;justify-items:center}
+#auth #gWrap[hidden]{display:none}
+#auth #gBtn{min-height:44px;color-scheme:light}
+#auth .or{display:flex;align-items:center;gap:10px;width:100%;color:#777;font-size:.78rem}
+#auth .or::before,#auth .or::after{content:"";flex:1;height:1px;background:#333}
 #acct{display:flex;justify-content:flex-end;align-items:center;gap:8px;margin:12px 0 0;font-size:.86rem;color:var(--mute)}
 #acct[hidden]{display:none}
 #acct b{color:#fff;font-weight:700}
@@ -693,6 +698,7 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
 <div id="auth" hidden><div class="abox">
   <div class="alogo">킬러들의 수학몰</div>
   <div class="asub" id="authSub">로그인하고 이용해 주세요</div>
+  <div id="gWrap" hidden><div id="gBtn"></div><div class="or">또는 아이디로</div></div>
   <div class="atabs" id="authTabs"><button type="button" data-t="login" class="on">로그인</button><button type="button" data-t="signup">회원가입</button></div>
   <form id="fLogin" autocomplete="on">
     <label>아이디<input type="text" name="uid" autocomplete="username" autocapitalize="none" spellcheck="false" required></label>
@@ -718,11 +724,26 @@ details.orig summary{cursor:pointer;color:#8a8577;font-size:.9rem;margin-bottom:
     <button class="abtn" type="submit">가입하고 시작하기</button>
     <div class="anote">실명·전화번호·생년월일은 받지 않습니다. 비밀번호는 암호화되어 저장됩니다.</div>
   </form>
+  <form id="fGoogle" hidden>
+    <div class="anote" style="font-size:.86rem;color:#ccc">구글 계정이 확인됐어요. 처음이니 아래만 채우면 가입이 끝납니다.</div>
+    <div class="two">
+      <label>닉네임<input type="text" name="nick" maxlength="20" required></label>
+      <label>학년<select name="grade" required><option value="">선택</option><option>고1</option><option>고2</option><option>고3</option><option>N수</option><option>교사</option><option>기타</option></select></label>
+    </div>
+    <div class="two">
+      <label>선택과목 <span class="opt">선택</span><select name="elective"><option value="">–</option><option>미적분</option><option>확률과 통계</option><option>기하</option></select></label>
+      <label>학교 <span class="opt">선택</span><input type="text" name="school" maxlength="40"></label>
+    </div>
+    <label class="chk"><input type="checkbox" name="agree14" required><span>만 14세 이상입니다.</span></label>
+    <label class="chk"><input type="checkbox" name="agreePrivacy" required><span><a href="privacy.html" target="_blank" rel="noopener">개인정보 처리방침</a>을 읽었고, 위 정보와 구글 계정 이메일의 수집·이용에 동의합니다.</span></label>
+    <button class="abtn" type="submit">가입하고 시작하기</button>
+    <button class="abtn ghost" type="button" id="gCancel">취소</button>
+  </form>
   <form id="fAcct" hidden>
     <dl id="acctInfo"></dl>
     <button class="abtn ghost" type="button" id="acctClose">닫기</button>
     <button class="abtn ghost" type="button" id="acctOut">로그아웃</button>
-    <label style="margin-top:8px">회원 탈퇴 <span class="opt">계정 정보가 서버에서 바로 삭제됩니다</span><input type="password" name="pw" autocomplete="current-password" placeholder="비밀번호 확인"></label>
+    <label style="margin-top:8px" id="acctPw">회원 탈퇴 <span class="opt">계정 정보가 서버에서 바로 삭제됩니다</span><input type="password" name="pw" autocomplete="current-password" placeholder="비밀번호 확인"></label>
     <button class="abtn danger" type="submit">회원 탈퇴</button>
   </form>
   <div class="aerr" id="authErr"></div>
@@ -1546,10 +1567,11 @@ function showAcct(){const e=$('#acct');if(!e)return;if(!authOn()){e.hidden=true;
   if(AUTH&&AUTH.user){e.innerHTML=`<span>👤 <b>${esc(AUTH.user.nick)}</b> · ${esc(AUTH.user.grade)}</span><button class="link" id="acctBtn">내 정보</button>`;$('#acctBtn').onclick=()=>authView('acct')}
   else{e.innerHTML=`<button class="link" id="acctBtn">로그인 / 회원가입</button>`;$('#acctBtn').onclick=()=>authView('login',true)}
   e.hidden=false}
-function authView(v,closable){const a=$('#auth');$('#authErr').textContent='';$('#fLogin').hidden=v!=='login';$('#fSignup').hidden=v!=='signup';$('#fAcct').hidden=v!=='acct';$('#authTabs').hidden=v==='acct';
+function authView(v,closable){const a=$('#auth');$('#authErr').textContent='';$('#fLogin').hidden=v!=='login';$('#fSignup').hidden=v!=='signup';$('#fAcct').hidden=v!=='acct';$('#fGoogle').hidden=v!=='google';$('#authTabs').hidden=v==='acct'||v==='google';
+  const gw=GID&&(v==='login'||v==='signup');$('#gWrap').hidden=!gw;if(gw)gsiReady();
   document.querySelectorAll('#authTabs button').forEach(b=>b.classList.toggle('on',b.dataset.t===v));
-  $('#authSub').textContent=v==='acct'?'내 정보':SITE.login==='required'?'로그인하고 이용해 주세요':'로그인하면 닉네임으로 기록을 남길 수 있어요';
-  if(v==='acct'&&AUTH){const u=AUTH.user;$('#acctInfo').innerHTML=[['아이디',u.uid],['닉네임',u.nick],['학년',u.grade],['선택과목',u.elective||'–'],['학교',u.school||'–'],['이메일',u.email||'–']].map(([k,x])=>`<dt>${k}</dt><dd>${esc(x)}</dd>`).join('')}
+  $('#authSub').textContent=v==='acct'?'내 정보':v==='google'?'구글 계정으로 가입':SITE.login==='required'?'로그인하고 이용해 주세요':'로그인하면 닉네임으로 기록을 남길 수 있어요';
+  if(v==='acct'&&AUTH){const u=AUTH.user;$('#acctPw').hidden=!!u.google;$('#acctInfo').innerHTML=[['아이디',u.google?'Google 계정으로 로그인':u.uid],['닉네임',u.nick],['학년',u.grade],['선택과목',u.elective||'–'],['학교',u.school||'–'],['이메일',u.email||'–']].map(([k,x])=>`<dt>${k}</dt><dd>${esc(x)}</dd>`).join('')}
   a.dataset.closable=(closable||v==='acct')?'1':'';a.hidden=false;a.scrollTop=0;
   const f=v==='login'?$('#fLogin'):v==='signup'?$('#fSignup'):null;if(f&&window.innerWidth>900)setTimeout(()=>f.querySelector('input').focus(),50)}
 function authDone(j,hello){setAuth({token:j.token,user:j.user});if(!S.name){S.name=j.user.nick;save()}$('#auth').hidden=true;toast(`${j.user.nick}님, ${hello}`);if(!$('#home').hidden)home()}
@@ -1565,14 +1587,29 @@ $('#fSignup').onsubmit=e=>{e.preventDefault();const f=e.target;if(f.pw.value!==f
   authSubmit(f,{action:'signup',uid:f.uid.value,pw:f.pw.value,nick:f.nick.value,grade:f.grade.value,elective:f.elective.value,school:f.school.value,email:f.email.value,agree14:f.agree14.checked,agreePrivacy:f.agreePrivacy.checked},'환영합니다')};
 $('#acctClose').onclick=()=>{$('#auth').hidden=true};
 $('#acctOut').onclick=async()=>{const t=AUTH&&AUTH.token;setAuth(null);if(t)authCall({action:'logout',token:t});toast('로그아웃했어요');if(SITE.login==='required'&&!isGuest())authView('login');else $('#auth').hidden=true};
-$('#fAcct').onsubmit=async e=>{e.preventDefault();const f=e.target;if(!f.pw.value){$('#authErr').textContent='탈퇴하려면 비밀번호를 입력해 주세요.';f.pw.focus();return}
+$('#fAcct').onsubmit=async e=>{e.preventDefault();const f=e.target;if(!(AUTH&&AUTH.user.google)&&!f.pw.value){$('#authErr').textContent='탈퇴하려면 비밀번호를 입력해 주세요.';f.pw.focus();return}
   if(!confirm('정말 탈퇴할까요? 계정 정보가 서버에서 삭제되며 되돌릴 수 없습니다. (이 기기의 풀이 기록은 그대로 남습니다)'))return;
   const j=await authSubmit(f,{action:'delete',token:AUTH&&AUTH.token,pw:f.pw.value});if(j){f.pw.value='';setAuth(null);toast('탈퇴 처리했어요. 이용해 주셔서 고맙습니다');if(SITE.login==='required'&&!isGuest())authView('login');else $('#auth').hidden=true}};
+/* 구글 로그인: 서버에 GOOGLE_CLIENT_ID 가 설정돼 있을 때만 버튼이 나온다 */
+let GID='',GCRED='',gsiState=0;
+function gsiReady(){if(!GID)return;const draw=()=>{try{const w=Math.max(200,Math.min(360,$('#auth .abox').clientWidth-46));google.accounts.id.renderButton($('#gBtn'),{theme:'outline',size:'large',text:'continue_with',shape:'rectangular',logo_alignment:'center',locale:'ko',width:w})}catch(e){$('#gWrap').hidden=true}};
+  if(gsiState===2){draw();return}if(gsiState===1)return;gsiState=1;
+  const sc=document.createElement('script');sc.src='https://accounts.google.com/gsi/client';sc.async=true;
+  sc.onload=()=>{try{google.accounts.id.initialize({client_id:GID,callback:onGoogle,auto_select:false,ux_mode:'popup'});gsiState=2;draw()}catch(e){$('#gWrap').hidden=true}};
+  sc.onerror=()=>{gsiState=0;$('#gWrap').hidden=true};document.head.append(sc)}
+async function onGoogle(resp){GCRED=(resp&&resp.credential)||'';if(!GCRED)return;const err=$('#authErr');err.textContent='';
+  const r=await authCall({action:'google',credential:GCRED});
+  if(r.down){guestPass('지금은 서버에 연결할 수 없어 로그인 없이 이용합니다');return}
+  if(r.j.need==='profile'){authView('google',$('#auth').dataset.closable==='1');const f=$('#fGoogle');if(!f.nick.value)f.nick.value=r.j.suggest||'';return}
+  if(r.j.ok)authDone(r.j,'다시 오셨네요');else err.textContent=r.j.msg||'구글 로그인을 처리하지 못했어요.'}
+$('#fGoogle').onsubmit=e=>{e.preventDefault();const f=e.target;authSubmit(f,{action:'google',credential:GCRED,nick:f.nick.value,grade:f.grade.value,elective:f.elective.value,school:f.school.value,agree14:f.agree14.checked,agreePrivacy:f.agreePrivacy.checked},'환영합니다')};
+$('#gCancel').onclick=()=>authView('login',$('#auth').dataset.closable==='1');
 async function initAuth(){if(!authOn())return;showAcct();
+  const cfg=await authCall({action:'config'});GID=(cfg.j&&cfg.j.googleClientId)||'';if(GID&&!$('#auth').hidden&&($('#fLogin').hidden===false||$('#fSignup').hidden===false)){$('#gWrap').hidden=false;gsiReady()}
   if(AUTH&&AUTH.token){const r=await authCall({action:'me',token:AUTH.token});   // 저장된 로그인은 바로 통과시키고, 뒤에서 확인만 한다(오프라인에서도 이용 가능)
     if(r.s===401){setAuth(null);if(SITE.login==='required')authView('login')}else if(r.j.ok&&r.j.user)setAuth({token:AUTH.token,user:r.j.user});return}
   if(SITE.login!=='required'||isGuest())return;
-  const probe=await authCall({action:'me',token:''});if(probe.down){guestPass('');return}   // 서버가 준비되지 않았으면 막지 않는다
+  if(cfg.down){guestPass('');return}   // 서버가 준비되지 않았으면 막지 않는다
   authView('login')}
 let guard=null,homePos=null;   // guard: 풀이 중인 문항의 주소(실수로 나가기 방지) · homePos: 목록으로 돌아올 때 되돌릴 스크롤 위치
 function fillAuthor(){document.querySelectorAll('.author').forEach(e=>e.textContent=SITE.author)}
