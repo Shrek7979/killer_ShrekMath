@@ -1,7 +1,14 @@
 <title>킬러들의 수학몰</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap">
-<style>/*__KATEX_CSS__*/</style>
+<style>/*__KATEX_CSS__*//* 5지선다 번호 버튼 */
+.chpad{display:flex;gap:8px;flex-wrap:wrap}
+.chb{width:50px;height:50px;border-radius:50%;font-size:1.45rem;line-height:1;cursor:pointer;font-family:inherit;border:2px solid #3a3a3a;background:#1f1f1f;color:#eee;transition:transform .08s}
+.chb:hover{border-color:#e50914}.chb:active{transform:scale(.94)}
+.chb.on{background:#e50914;border-color:#e50914;color:#fff}
+#fullSheet .chb{border-color:#d6d0c2;background:#fff;color:#1f2937}#fullSheet .chb.on{background:#e50914;border-color:#e50914;color:#fff}
+.ansin .chpad~#answer,.ansin .chpad~#fsAns{display:none}
+</style>
 <style>
 /* 레이아웃: 늪(진한 이끼색) 위에 시험지(크림 종이)가 떠 있는 구조. 왼쪽 시험지 고정, 오른쪽 분석 카드 한 장. 좁으면 위아래로. */
 :root{
@@ -907,8 +914,8 @@ function renderPastCardEn(p){
     const tm=el('div','timer num','00:00');b.append(tm);const lm=el('div','lead num',`Limit ${mmss(lim*60)}`);b.append(lm);
     const row=el('div','btnrow primary');const st=el('button','btn','Start');const done=el('button','btn','Done');done.hidden=true;const skip=el('button','btn ghost sm','Skip — just show the answer');row.append(st,done,skip);b.append(row);
     const ai=el('div','ansin');ai.hidden=true;const inp=el('input');inp.type='number';inp.min=1;inp.max=999;inp.id='answer';inp.placeholder=J.choice?'1–5':'answer';const gb=el('button','btn','Check');ai.append(el('span',null,'My answer'),inp,gb);if(auto)b.append(ai);
-    st.onclick=()=>{$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;if(auto)ai.hidden=false;else done.hidden=false;startTimer(lim*60,tm,lm,'Over the time limit — you may keep going');if(window.innerWidth<=900)$('#fullBtn').click();else if(auto)inp.focus()};
-    const grade=()=>{if(inp.value==='')return;stopTimer();const secs=Math.floor((Date.now()-t0)/1000);const ok=String(inp.value).trim()==String(J.answer);
+    st.onclick=()=>{$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;if(auto)ai.hidden=false;else done.hidden=false;startTimer(lim*60,tm,lm,'Over the time limit — you may keep going');if(window.innerWidth<=900)$('#fullBtn').click();else if(auto&&!(J&&J.choice))inp.focus()};
+    const grade=()=>{if(inp.value===''){toast(J&&J.choice?'번호를 먼저 고르세요':'답을 입력하세요');return}stopTimer();const secs=Math.floor((Date.now()-t0)/1000);const ok=String(inp.value).trim()==String(J.answer);
       S.jrec[J.num]={secs,r:ok?'ok':'no',ans:inp.value,over:secs>lim*60,date:new Date().toISOString().slice(0,10)};save();
       report({kind:'기출',num:J.num,id:J.id,title:J.univ+' '+J.track,result:ok?'정답':'오답',ans:inp.value,answer:J.answer,secs,limit:lim*60,over:secs>lim*60});
       unlocked=true;buildPages();go(0)};
@@ -1382,7 +1389,7 @@ function solveBody(){
     const ai=el('div','ansin');const inp=el('input');inp.type='number';inp.min=1;inp.max=999;inp.id='answer';inp.placeholder='정답';const gb=el('button','btn','채점 · 다음');ai.append(el('span',null,'내 답'),inp,gb);b.append(ai);
     const itemStart=Date.now();$('#exam').classList.add('open');guard=location.hash;
     stopTimer();warned=false;paused=false;t0=SS.start;timer=setInterval(()=>{if(paused)return;showTime(Math.floor((Date.now()-t0)/1000),SS.total,tm,lm,'전체 제한시간 초과 · 끝까지 풀어도 됩니다')},500);showTime(Math.floor((Date.now()-t0)/1000),SS.total,tm,lm,'');wake(true);
-    const grade=()=>{if(inp.value==='')return;const secs=Math.floor((Date.now()-itemStart)/1000);const ok=String(inp.value).trim()==String(D.answer);
+    const grade=()=>{if(inp.value===''){toast(J&&J.choice?'번호를 먼저 고르세요':'답을 입력하세요');return}const secs=Math.floor((Date.now()-itemStart)/1000);const ok=String(inp.value).trim()==String(D.answer);
       S.rec[D.num]={ok,ans:inp.value,answer:D.answer,secs,over:false,set:SS.id,date:new Date().toISOString().slice(0,10)};save();
       report({kind:'킬러',num:D.num,id:D.id,title:D.topic,result:ok?'정답':'오답',ans:inp.value,answer:D.answer,secs,limit:lim*60,set:SS.id});setNext(ok,secs)};
     gb.onclick=grade;inp.onkeydown=e=>{if(e.key==='Enter')grade()};
@@ -1397,7 +1404,7 @@ function solveBody(){
     startTimer(lim*60,tm,lm,'제한시간 초과 · 끝까지 풀어도 됩니다',from);S.run={n:D.num,t0};save();if(window.innerWidth>900)inp.focus();else{$('#fullBtn').click()}};
   st.onclick=()=>begin();
   if(S.run&&S.run.n===D.num&&Date.now()-S.run.t0<3*3600e3){const n0=D.num,f=S.run.t0;setTimeout(()=>{if(mode==='killer'&&D&&D.num===n0&&!timer&&!S.rec[n0]&&!$('#op').hidden){begin(f);toast('풀던 문항이에요 · 시간을 이어서 잽니다')}},80)}
-  const grade=()=>{if(inp.value==='')return;stopTimer();delete S.run;const secs=Math.floor((Date.now()-t0)/1000);const ok=String(inp.value).trim()==String(D.answer);
+  const grade=()=>{if(inp.value===''){toast(J&&J.choice?'번호를 먼저 고르세요':'답을 입력하세요');return}stopTimer();delete S.run;const secs=Math.floor((Date.now()-t0)/1000);const ok=String(inp.value).trim()==String(D.answer);
     S.rec[D.num]={ok,ans:inp.value,answer:D.answer,secs,over:secs>lim*60,date:new Date().toISOString().slice(0,10),reviews:(S._rv&&S._rv.num===D.num)?S._rv.reviews:0};S._rv=null;save();
     report({kind:'킬러',num:D.num,id:D.id,title:D.topic,result:ok?'정답':'오답',ans:inp.value,answer:D.answer,secs,limit:lim*60,over:secs>lim*60,set:S.set&&S.set.items.includes(D.num)?S.set.id:''});
     if(S.set&&!S.set.done&&S.set.items.includes(D.num)){setNext(ok,secs);return}
@@ -1528,12 +1535,12 @@ function renderJapanCard(p){
     if(rec){b.append(el('div','result '+(rec.r==='no'?'no':'ok'),`<div class="big">${{ok:auto?'정답입니다':tj('맞았어요','正解'),part:tj('부분적으로 맞았어요','部分的に正解'),no:auto?'오답입니다':tj('틀렸어요','不正解')}[rec.r]||tj('풀이 완료','解答完了')}</div><div>${auto&&rec.ans!=null?`내 답 <b class="num">${esc(rec.ans)}</b> · 정답 <b class="num">${esc(J.answer)}</b> · `:''}${tj('걸린 시간','所要時間')} <b class="num">${mmss(rec.secs||0)}</b>${rec.over?` <span class="dbadge" style="--dc:#ff9f3a">${tj('제한시간 초과','制限時間超過')}</span>`:''}</div>`));
       const row=el('div','btnrow primary');const g=el('button','btn',isP?'진단 →':tj('해설 보기 →','解説を見る →'));g.onclick=()=>go(1);const re=el('button','btn ghost',tj('다시 풀기','もう一度解く'));re.onclick=()=>{delete S.jrec[J.num];save();unlocked=false;openJapan(J.num,0)};row.append(g,re);b.append(row);w.append(b);return w}
     b.append(el('h2',null,isP?'해설 없이, 시험처럼':tj('종이에 풀고, 끝나면 완료','紙に解いて、終わったら完了')));
-    b.append(el('p','lead',isP?`${J.univ} ${J.track}. 시작을 누르면 문제지가 열리고 시간이 갑니다. 제한시간 <b>${lim}분</b>. ${auto?(J.choice?'답은 ①~⑤ 중 번호(1~5)를 입력하세요.':'답은 자연수를 입력하세요.'):'이 문항은 정답이 아직 등록되지 않아, 풀이 완료 후 스스로 점검합니다.'}`:LJ()?`日本の大学入試はすべて記述式です。スタートを押すと問題が開き、時間が進みます。制限時間 <b>${lim}分</b>。解答を紙に書き、「解答完了」を押すと解説が開きます。${J.ja?'':'<br><i>この問題の日本語訳はまだありません(韓国語版を表示)。</i>'}`:`일본 대학 입시는 전부 서술형입니다. 시작을 누르면 문제가 열리고 시간이 갑니다. 제한시간 <b>${lim}분</b>. 풀이를 종이에 쓰고 ‘풀이 완료’를 누르면 해설이 열려요.`));
+    b.append(el('p','lead',isP?`${J.univ} ${J.track}. 시작을 누르면 문제지가 열리고 시간이 갑니다. 제한시간 <b>${lim}분</b>. ${auto?(J.choice?'답은 ①~⑤ 중 하나를 눌러 고른 뒤 채점을 누르세요.':'답은 숫자로 입력하세요.'):'이 문항은 정답이 아직 등록되지 않아, 풀이 완료 후 스스로 점검합니다.'}`:LJ()?`日本の大学入試はすべて記述式です。スタートを押すと問題が開き、時間が進みます。制限時間 <b>${lim}分</b>。解答を紙に書き、「解答完了」を押すと解説が開きます。${J.ja?'':'<br><i>この問題の日本語訳はまだありません(韓国語版を表示)。</i>'}`:`일본 대학 입시는 전부 서술형입니다. 시작을 누르면 문제가 열리고 시간이 갑니다. 제한시간 <b>${lim}분</b>. 풀이를 종이에 쓰고 ‘풀이 완료’를 누르면 해설이 열려요.`));
     const tm=el('div','timer num','00:00');b.append(tm);const lm=el('div','lead num',`${tj('제한','制限')} ${mmss(lim*60)}`);b.append(lm);
     const row=el('div','btnrow primary');const st=el('button','btn',tj('실전 시작','本番スタート'));const done=el('button','btn',tj('풀이 완료','解答完了'));done.hidden=true;const skip=el('button','btn ghost sm',isP?'풀지 않고 정답만 볼래요':tj('풀지 않고 해설만 볼래요','解かずに解説だけ見る'));row.append(st,done,skip);b.append(row);
-    const ai=el('div','ansin');ai.hidden=true;const inp=el('input');inp.type='number';inp.min=1;inp.max=999;inp.id='answer';inp.placeholder=J.choice?'번호 1~5':'정답';const gb=el('button','btn','채점');ai.append(el('span',null,'내 답'),inp,gb);if(auto)b.append(ai);
-    st.onclick=()=>{$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;if(auto)ai.hidden=false;else done.hidden=false;startTimer(lim*60,tm,lm,tj('제한시간 초과 · 끝까지 풀어도 됩니다','制限時間を超えました・最後まで解いてもかまいません'));if(window.innerWidth<=900)$('#fullBtn').click();else if(auto)inp.focus()};
-    const grade=()=>{if(inp.value==='')return;stopTimer();const secs=Math.floor((Date.now()-t0)/1000);const ok=String(inp.value).trim()==String(J.answer);
+    const ai=el('div','ansin');ai.hidden=true;const inp=el('input');inp.type='text';inp.inputMode='numeric';inp.pattern='[0-9]*';inp.maxLength=3;inp.oninput=()=>{inp.value=inp.value.replace(/[^0-9]/g,'')};inp.id='answer';inp.placeholder=J.choice?'번호 1~5':'숫자 입력';const gb=el('button','btn','채점');ai.append(el('span',null,'내 답'),inp,gb);if(J.choice)choicePad(ai,inp);if(auto)b.append(ai);
+    st.onclick=()=>{$('#exam').classList.add('open');st.hidden=true;skip.hidden=true;if(auto)ai.hidden=false;else done.hidden=false;startTimer(lim*60,tm,lm,tj('제한시간 초과 · 끝까지 풀어도 됩니다','制限時間を超えました・最後まで解いてもかまいません'));if(window.innerWidth<=900)$('#fullBtn').click();else if(auto&&!(J&&J.choice))inp.focus()};
+    const grade=()=>{if(inp.value===''){toast(J&&J.choice?'번호를 먼저 고르세요':'답을 입력하세요');return}stopTimer();const secs=Math.floor((Date.now()-t0)/1000);const ok=String(inp.value).trim()==String(J.answer);
       S.jrec[J.num]={secs,r:ok?'ok':'no',ans:inp.value,over:secs>lim*60,date:new Date().toISOString().slice(0,10)};save();
       report({kind:'기출',num:J.num,id:J.id,title:J.univ+' '+J.track,result:ok?'정답':'오답',ans:inp.value,answer:J.answer,secs,limit:lim*60,over:secs>lim*60});
       unlocked=true;buildPages();go(0)};
@@ -1581,9 +1588,11 @@ window.addEventListener('resize',measureBar);
 $('#fullExam').addEventListener('click',e=>{if(e.target.closest('img.pg')){e.stopPropagation();$('#fullExam').classList.toggle('zoom')}},true);
 $('.sheet .tools').addEventListener('click',e=>{if(e.target.closest('button'))return;if($('#exam').classList.contains('open'))$('#fullBtn').click()});
 $('#examText').addEventListener('click',e=>{if(!$('#exam').classList.contains('open'))return;if(e.target.closest('img.pg,summary,button,.langseg'))return;$('#fullBtn').click()});
-$('#fullBtn').onclick=()=>{if(!$('#exam').classList.contains('open')){toast('먼저 실전 시작을 눌러 문항을 여세요');return}$('#fullExam').innerHTML=$('#examText').innerHTML;$('#fullExam').classList.remove('zoom');$('#fsHint').hidden=!$('#fullExam').querySelector('img.pg');$('#fsAnswer').hidden=true;const solving=!!timer&&!unlocked;$('#fsFoot').hidden=!solving;const autoG=mode==='killer'||(mode==='japan'&&J&&J.kind==='past'&&J.answer!=null);$('#fsAnsRow').hidden=!(solving&&autoG);$('#fsDone').hidden=!(solving&&!autoG);$('#fsDone').textContent=mode==='essay'?'답안 작성 완료 → 예시답안':'풀이 완료 → 해설 보기';$('#fsAns').value='';$('#fullSheet').hidden=false;if(solving&&autoG&&window.innerWidth>900)setTimeout(()=>$('#fsAns').focus(),50);document.body.style.overflow='hidden'};
+$('#fullBtn').onclick=()=>{if(!$('#exam').classList.contains('open')){toast('먼저 실전 시작을 눌러 문항을 여세요');return}$('#fullExam').innerHTML=$('#examText').innerHTML;$('#fullExam').classList.remove('zoom');$('#fsHint').hidden=!$('#fullExam').querySelector('img.pg');$('#fsAnswer').hidden=true;const solving=!!timer&&!unlocked;$('#fsFoot').hidden=!solving;const autoG=mode==='killer'||(mode==='japan'&&J&&J.kind==='past'&&J.answer!=null);$('#fsAnsRow').hidden=!(solving&&autoG);$('#fsDone').hidden=!(solving&&!autoG);$('#fsDone').textContent=mode==='essay'?'답안 작성 완료 → 예시답안':'풀이 완료 → 해설 보기';$('#fsAns').value='';fsPad();$('#fullSheet').hidden=false;if(solving&&autoG&&window.innerWidth>900&&!(mode==='japan'&&J&&J.choice))setTimeout(()=>$('#fsAns').focus(),50);document.body.style.overflow='hidden'};
 $('#fsClose').onclick=()=>{$('#fullSheet').hidden=true;document.body.style.overflow=''};
-$('#fsGrade').onclick=()=>{const v=$('#fsAns').value.trim();if(!v){$('#fsAns').focus();return}const a=$('#answer');if(!a){toast('채점할 수 없어요');return}a.value=v;$('#fsClose').click();a.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}))};
+function choicePad(row,inp){const p=el('div','chpad');for(let n=1;n<=5;n++){const b=el('button','chb','①②③④⑤'[n-1]);b.type='button';b.setAttribute('aria-label',n+'번');b.onclick=()=>{inp.value=String(n);p.querySelectorAll('.chb').forEach(x=>x.classList.toggle('on',x===b))};p.append(b)}row.insertBefore(p,inp);return p}
+function fsPad(){const r=$('#fsAnsRow');const o=r.querySelector('.chpad');if(o)o.remove();const i=$('#fsAns');i.type='text';i.inputMode='numeric';i.maxLength=3;i.placeholder='숫자 입력';i.oninput=()=>{i.value=i.value.replace(/[^0-9]/g,'')};if(mode==='japan'&&J&&J.choice)choicePad(r,i)}
+$('#fsGrade').onclick=()=>{const v=$('#fsAns').value.trim();if(!v){if(mode==='japan'&&J&&J.choice)toast('번호를 먼저 고르세요');else $('#fsAns').focus();return}const a=$('#answer');if(!a){toast('채점할 수 없어요');return}a.value=v;$('#fsClose').click();a.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}))};
 $('#fsAns').onkeydown=e=>{if(e.key==='Enter')$('#fsGrade').click()};
 $('#fsDone').onclick=()=>{$('#fsClose').click();const b=[...document.querySelectorAll('#kcard button.btn')].find(x=>/완료/.test(x.textContent)&&!x.hidden);if(b)b.click()};
 $('#fsPause').onclick=togglePause;$('#sheetTimer').onclick=togglePause;$('#sheetPause').onclick=togglePause;$('#sheetTimer').title='누르면 일시정지';$('#pauseResume').onclick=togglePause;
