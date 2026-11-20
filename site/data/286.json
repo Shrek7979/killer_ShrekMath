@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2026학년도 6월 모의평가 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **80** — (나)를 무시하고 원 위의 최댓값 $(중심값)+40$으로 계산한 경우",
  "answer": 72,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -57,9 +57,11 @@
     1
    ],
    "text": "선분 ${\\mathrm{BD}}$ 위를 움직이는 점 ${\\mathrm{P}}$ 에 대하여 점 ${\\mathrm{Q}}$ 가 다음 조건을 만족시킨다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "움직이는 점 P",
+   "why": "P$(8s,6s)$, $0\\le s\\le1$.",
+   "uses": [
+    4
+   ]
   },
   {
    "id": "C3",
@@ -68,9 +70,11 @@
     0
    ],
    "text": "(가) $\\vec{{\\mathrm{PQ}}}\\cdot(\\vec{{\\mathrm{PQ}}}-\\vec{{\\mathrm{BC}}})=0$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(가) 지름 원",
+   "why": "중심 $\\mathrm P+(4,0)$, 반지름 $4$.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C4",
@@ -79,9 +83,12 @@
     0
    ],
    "text": "(나) 점 ${\\mathrm{Q}}$ 는 직사각형 ${\\mathrm{ABCD}}$ 의 내부 또는 둘레 위에 있다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(나) 범위 제한",
+   "why": "Q는 직사각형 안 또는 위. 최댓값·최솟값 후보가 이 제한을 만족하는지 확인.",
+   "uses": [
+    3,
+    4
+   ]
   },
   {
    "id": "C5",
@@ -90,50 +97,102 @@
     0
    ],
    "text": "$\\vec{{\\mathrm{AQ}}}\\cdot \\vec{{\\mathrm{AC}}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M-m$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\vec{\\mathrm{AQ}}\\cdot\\vec{\\mathrm{AC}}=8x-6y+36$.",
+   "uses": [
+    2,
+    5
+   ]
   }
  ],
  "intro": [
-  "점 P를 대각선 위로 옮기고 점 Q가 직사각형 안에 있어야 한다는 제한을 추가하여, 최댓값이 '원의 접점'이 아니라 '직사각형의 꼭짓점'에서 생기는 경우를 판단하게 함"
+  "(가) $\\vec{\\mathrm{PQ}}\\cdot(\\vec{\\mathrm{PQ}}-\\vec{\\mathrm{BC}})=0$ → Q는 P와 $\\mathrm{P}+\\vec{\\mathrm{BC}}$를 지름 양 끝으로 하는 원 위. P가 대각선 BD를 따라 움직이면 원이 미끄러집니다.",
+  "(나) ‘직사각형 안’ 제한 때문에 최댓값은 원의 접점이 아니라 **꼭짓점 C**에서 납니다. 최솟값은 제한에 걸리지 않는지 확인합니다."
  ],
  "topic": "평면벡터",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "$\\vec v\\cdot(\\vec v-\\vec w)=0$ → 지름 원",
+   "p": [
+    "$\\vec{\\mathrm{PQ}}\\perp\\vec{\\mathrm{P'Q}}$ ($\\vec{\\mathrm{PP'}}=\\vec w$) → PP'을 지름으로 하는 원."
+   ]
+  },
+  {
+   "h": "한 방향과의 내적은 일차식",
+   "p": [
+    "$\\vec{\\mathrm{AQ}}\\cdot\\vec v$는 Q의 좌표에 대한 일차식. 원 위에서의 최대·최소는 (중심에서의 값) $\\pm r|\\vec v|$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "${\\mathrm{B}}(0,0)$ , ${\\mathrm{C}}(8,0)$ , ${\\mathrm{D}}(8,6)$ , ${\\mathrm{A}}(0,6)$ 으로 놓자. (가)에서 $\\vec{{\\mathrm{PQ}}}\\cdot(\\vec{{\\mathrm{PQ}}}-\\vec{{\\mathrm{P}}{\\mathrm{P}}'})=0$ ( $\\vec{{\\mathrm{P}}{\\mathrm{P}}'}=\\vec{{\\mathrm{BC}}}$ )이므로 점 ${\\mathrm{Q}}$ 는 선분 ${\\mathrm{PP'}}$ 을 지름으로 하는 원, 즉 중심이 ${\\mathrm{P}}+(4,0)$ 이고 반지름의 길이가 $4$ 인 원 위에 있다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "지름 원"
   },
   {
    "n": 2,
    "text": "$\\vec{{\\mathrm{AC}}}=(8,-6)$ 이므로 $\\vec{{\\mathrm{AQ}}}\\cdot \\vec{{\\mathrm{AC}}}=8 x-6 y+36$ (점 ${\\mathrm{Q}}(x,y)$ )이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "내적을 일차식으로"
   },
   {
    "n": 3,
    "text": "최댓값: (나)에서 점 ${\\mathrm{Q}}$ 는 직사각형 위에 있으므로 $8 x-6 y \\le 8 \\times 8-6 \\times 0=64$ 이고, 등호는 ${\\mathrm{Q}}={\\mathrm{C}}$ 일 때이다. ${\\mathrm{P}}(8 s,6 s)$ 라 하면 ${\\mathrm{C}}$ 가 원 위에 있을 조건은 $(8 s-4)^{2}+(6 s)^{2}=16$ , 즉 $s=\\frac{16}{25}$ 이므로 가능하다. 따라서 $M=100$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "최댓값은 꼭짓점 C"
   },
   {
    "n": 4,
    "text": "최솟값: 원 위에서 $8 x-6 y$ 의 최솟값은 (중심에서의 값) $-4 \\times 10=28 s+32-40=28 s-8$ 이므로 $s=0$ 일 때 $-8$ 이 가장 작다. 이때의 점 ${\\mathrm{Q}}=(4,0)+4 \\left(-\\frac{4}{5},\\frac{3}{5}\\right)=\\left(\\frac{4}{5},\\frac{12}{5}\\right)$ 는 직사각형 내부에 있으므로 $m=-8+36=28$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2",
+    "C4"
+   ],
+   "title": "최솟값"
   },
   {
    "n": 5,
    "text": "따라서 $M-m=72$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "범위 제한 (나)",
+   "cond": "C4",
+   "text": [
+    "원만 보면 최댓값이 더 커 보이지만 그 점은 직사각형 밖입니다. 직사각형 안에서 $8x-6y$의 최댓값은 C에서 $64$, 그 C가 실제 어떤 원 위에 오는지($s=\\frac{16}{25}$) 확인해야 합니다."
+   ]
+  },
+  {
+   "h": "최솟값의 점이 안쪽인지",
+   "cond": "C4",
+   "text": [
+    "$s=0$일 때의 최소점 $\\left(\\frac45,\\frac{12}5\\right)$이 직사각형 안이라 제한에 걸리지 않습니다."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\vec{\\mathrm{AD}}$와의 내적",
+   "body": [
+    "좌표평면에서 $\\overline{\\mathrm{AB}}=6$, $\\overline{\\mathrm{BC}}=8$인 직사각형 ABCD의 선분 BD 위를 움직이는 점 P에 대하여 점 Q가 $\\vec{\\mathrm{PQ}}\\cdot(\\vec{\\mathrm{PQ}}-\\vec{\\mathrm{BC}})=0$을 만족시키고 직사각형 ABCD의 내부 또는 둘레 위에 있다. $\\vec{\\mathrm{AQ}}\\cdot\\vec{\\mathrm{AD}}$의 최댓값과 최솟값의 차를 구하시오."
+   ],
+   "answer": 64,
+   "hint": "$\\vec{\\mathrm{AD}}=(8,0)$, 값 $=8x$. Q의 $x$좌표는 $0$(P$=$B일 때 B)부터 $8$(C 등)까지."
+  }
+ ],
+ "line": "원 위의 최대·최소도 ‘범위 제한’이 있으면 경계(꼭짓점)에서 날 수 있다.",
  "note": ""
 }

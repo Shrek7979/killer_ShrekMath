@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 30번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **42** — $a_9a_{10}$을 $\\frac\\pi{40}$으로 계산한 경우 · $q=1$로 둔 경우",
  "answer": 22,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -53,9 +53,13 @@
     0
    ],
    "text": "$a_{n}=\\int_{0}^{\\frac{\\pi}{2}}\\sin^{n}x dx$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "수열",
+   "why": "$a_n=\\int_0^{\\pi/2}\\sin^nx\\,dx$. $0\\le\\sin x\\le1$이라 $n$이 커질수록 작아집니다.",
+   "uses": [
+    1,
+    2,
+    4
+   ]
   },
   {
    "id": "C3",
@@ -75,9 +79,13 @@
     1
    ],
    "text": "$a_{9}a_{10}=\\frac{\\pi}{p}$이고 $\\lim_{n \\to \\infty}n a_{n}^{2}=\\frac{\\pi}{q}$일 때, $p+q$의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$a_9a_{10}$과 $\\lim na_n^2$. 둘 다 불변량 $(n+1)a_na_{n+1}=\\frac\\pi2$에서 나옵니다.",
+   "uses": [
+    3,
+    4,
+    5
+   ]
   },
   {
    "id": "C5",
@@ -91,43 +99,94 @@
    "uses": []
   }
  ],
- "intro": [],
+ "intro": [
+  "$\\int\\sin^nx\\,dx$의 부분적분 점화식 $(n+1)a_{n+1}=na_{n-1}$에 $a_n$을 곱하면 $(n+1)a_na_{n+1}$이 **항상 같은 값**($\\frac\\pi2$)이 됩니다. 월리스 곱의 핵심입니다.",
+  "극한은 $a_{n+1}<a_n<a_{n-1}$로 샌드위치를 만들어 구합니다."
+ ],
  "topic": "부분적분법으로 얻는 관계식과 수열의 극한",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "부분적분 점화식",
+   "p": [
+    "$\\sin^{n+1}=\\sin^n\\cdot\\sin$으로 나누어 부분적분, $\\cos^2=1-\\sin^2$."
+   ]
+  },
+  {
+   "h": "불변량과 샌드위치",
+   "p": [
+    "$(n+1)a_na_{n+1}=\\frac\\pi2$. 그리고 $a_{n+1}<a_n<a_{n-1}$에 $na_n$을 곱해 양쪽을 $\\frac\\pi2$로 몰아넣습니다."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$n \\ge 2$일 때 부분적분법에 의하여 $a_{n+1}=\\left[-\\cos x \\sin^{n}x \\right]_{0}^{\\frac{\\pi}{2}}+n \\int_{0}^{\\frac{\\pi}{2}}\\sin^{n-1}x \\cos^{2}x dx=n(a_{n-1}-a_{n+1})$이므로 $(n+1)a_{n+1}=n a_{n-1}$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "점화식"
   },
   {
    "n": 2,
    "text": "양변에 $a_{n}$을 곱하면 $(n+1)a_{n}a_{n+1}=n a_{n-1}a_{n}$이므로 수열 $\\left\\{(n+1)a_{n}a_{n+1}\\right\\}$의 모든 항은 $2 a_{1}a_{2}=2 \\times 1 \\times \\frac{\\pi}{4}=\\frac{\\pi}{2}$와 같다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "불변량 $\\frac\\pi2$"
   },
   {
    "n": 3,
    "text": "따라서 $10 a_{9}a_{10}=\\frac{\\pi}{2}$에서 $a_{9}a_{10}=\\frac{\\pi}{20}$, $p=20$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$a_9a_{10}$"
   },
   {
    "n": 4,
    "text": "$0 \\le x \\le \\frac{\\pi}{2}$에서 $0 \\le \\sin x \\le 1$이므로 $a_{n+1}<a_{n}<a_{n-1}$이고, 각 변에 $n a_{n}$을 곱하면 $n a_{n}a_{n+1}<n a_{n}^{2}<n a_{n-1}a_{n}$, 즉 $\\frac{n}{n+1}\\times \\frac{\\pi}{2}<n a_{n}^{2}<\\frac{\\pi}{2}$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2",
+    "C4"
+   ],
+   "title": "샌드위치"
   },
   {
    "n": 5,
    "text": "수열의 극한의 대소 관계에 의하여 $\\lim_{n \\to \\infty}n a_{n}^{2}=\\frac{\\pi}{2}$이므로 $q=2$이고 $p+q=22$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$(n+1)$의 $n$",
+   "cond": "C4",
+   "text": [
+    "$a_9a_{10}$은 $n=9$: $10a_9a_{10}=\\frac\\pi2$. $n=10$으로 착각하면 $\\frac\\pi{22}$이 됩니다."
+   ]
+  },
+  {
+   "h": "불변량의 초기값",
+   "cond": "C2",
+   "text": [
+    "$2a_1a_2=2\\times1\\times\\frac\\pi4=\\frac\\pi2$. $a_2=\\frac\\pi4$를 직접 계산해 두세요."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 더 큰 번호",
+   "body": [
+    "자연수 $n$에 대하여 $a_n=\\displaystyle\\int_0^{\\frac\\pi2}\\sin^nx\\,dx$라 하자. $a_{19}a_{20}=\\dfrac\\pi p$일 때, 자연수 $p$의 값을 구하시오."
+   ],
+   "answer": 40,
+   "hint": "$20a_{19}a_{20}=\\frac\\pi2$."
+  }
+ ],
+ "line": "월리스 적분: $(n+1)a_na_{n+1}=\\frac\\pi2$는 변하지 않는다.",
  "note": ""
 }

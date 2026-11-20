@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2026학년도 6월 모의평가 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **72** — 최솟값을 $t=0$이 아닌 다른 위치에서 계산한 경우",
  "answer": 80,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -50,9 +50,13 @@
     1
    ],
    "text": "선분 ${\\mathrm{BC}}$ 위를 움직이는 점 ${\\mathrm{P}}$ 에 대하여 점 ${\\mathrm{Q}}$ 가",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "움직이는 점 P",
+   "why": "P는 선분 BC 위: $\\mathrm P(t,0)$, $0\\le t\\le8$.",
+   "uses": [
+    2,
+    4,
+    5
+   ]
   },
   {
    "id": "C3",
@@ -61,9 +65,12 @@
     0
    ],
    "text": "$\\vec{{\\mathrm{QP}}}\\cdot \\vec{{\\mathrm{QD}}}=0$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "수직 조건",
+   "why": "$\\angle\\mathrm{PQD}=90°$ → PD를 지름으로 하는 원.",
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C4",
@@ -72,9 +79,12 @@
     0
    ],
    "text": "을 만족시킬 때, $\\vec{{\\mathrm{AQ}}}\\cdot \\vec{{\\mathrm{AD}}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\vec{\\mathrm{AD}}=(8,0)$이므로 내적은 $8\\times$(Q의 $x$좌표).",
+   "uses": [
+    1,
+    6
+   ]
   },
   {
    "id": "C5",
@@ -89,50 +99,101 @@
   }
  ],
  "intro": [
-  "' $\\vec{{\\mathrm{PQ}}}\\cdot(\\vec{{\\mathrm{PQ}}}-\\vec{{\\mathrm{AB}}})=0$ '을 '선분 PD를 지름으로 하는 원'으로 바꾸어 원의 중심과 반지름이 함께 변하게 하고, 최솟값만이 아니라 최댓값까지 묻도록 변형"
+  "$\\vec{\\mathrm{QP}}\\cdot\\vec{\\mathrm{QD}}=0$ → Q는 **PD를 지름으로 하는 원** 위. P가 움직이면 원의 중심과 반지름이 함께 변합니다.",
+  "$\\vec{\\mathrm{AQ}}\\cdot\\vec{\\mathrm{AD}}$는 Q의 $x$좌표의 $8$배이므로, 결국 ‘움직이는 원들의 $x$좌표 범위’를 묻는 문제입니다."
  ],
  "topic": "평면벡터",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "좌표로 내적을 한 성분으로",
+   "p": [
+    "$\\vec{\\mathrm{AD}}$가 $x$축과 평행하면 $\\vec{\\mathrm{AQ}}\\cdot\\vec{\\mathrm{AD}}=8\\times(x_Q-0)$."
+   ]
+  },
+  {
+   "h": "원의 $x$좌표 범위",
+   "p": [
+    "중심 $x$좌표 $\\pm$ 반지름. 중심과 반지름이 $t$의 함수일 때 각각의 증감을 따로 봅니다."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "${\\mathrm{B}}(0,0)$ , ${\\mathrm{C}}(8,0)$ , ${\\mathrm{D}}(8,6)$ , ${\\mathrm{A}}(0,6)$ 으로 놓으면 $\\vec{{\\mathrm{AD}}}=(8,0)$ 이므로 $\\vec{{\\mathrm{AQ}}}\\cdot \\vec{{\\mathrm{AD}}}$ 의 값은 점 ${\\mathrm{Q}}$ 의 $x$ 좌표의 $8$ 배이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "좌표 설정"
   },
   {
    "n": 2,
    "text": "$\\vec{{\\mathrm{QP}}}\\cdot \\vec{{\\mathrm{QD}}}=0$ 이므로 점 ${\\mathrm{Q}}$ 는 선분 ${\\mathrm{PD}}$ 를 지름으로 하는 원 위에 있다. ${\\mathrm{P}}(t,0)(0 \\le t \\le 8)$ 이면 이 원의 중심의 $x$ 좌표는 $\\frac{t+8}{2}$ , 반지름의 길이는 $\\frac{\\sqrt{(8-t)^{2}+36}}{2}$ 이므로 점 ${\\mathrm{Q}}$ 의 $x$ 좌표의 최댓값과 최솟값은",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2",
+    "C3"
+   ],
+   "title": "PD 지름 원"
   },
   {
    "n": 3,
    "text": "$$\\frac{t+8+\\sqrt{(8-t)^{2}+36}}{2},\\frac{t+8-\\sqrt{(8-t)^{2}+36}}{2}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "$x$좌표의 범위"
   },
   {
    "n": 4,
    "text": "이다. $t$ 가 증가할 때 $\\sqrt{(8-t)^{2}+36}$ 의 감소량은 $t$ 의 증가량보다 작으므로 두 식은 모두 $t$ 에 대하여 증가한다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$t$에 대한 증감"
   },
   {
    "n": 5,
    "text": "따라서 점 ${\\mathrm{Q}}$ 의 $x$ 좌표의 최댓값은 $t=8$ 일 때 $\\frac{16+6}{2}=11$ , 최솟값은 $t=0$ 일 때 $\\frac{8-10}{2}=-1$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "최대·최소"
   },
   {
    "n": 6,
    "text": "$M=88$ , $m=-8$ 이므로 $M+m=80$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "최대와 최소가 같은 $t$에서 나오지 않음",
+   "cond": "C2",
+   "text": [
+    "최댓값은 $t=8$, 최솟값은 $t=0$. 두 식이 모두 $t$에 대해 증가함을 확인해야 합니다."
+   ]
+  },
+  {
+   "h": "$x$좌표가 음수일 수 있음",
+   "cond": "C4",
+   "text": [
+    "$t=0$일 때 원이 왼쪽으로 삐져나가 $x_Q=-1$. 그래서 $m=-8$로 음수입니다."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 차를 묻기",
+   "body": [
+    "좌표평면에서 $\\overline{\\mathrm{AB}}=6$, $\\overline{\\mathrm{BC}}=8$인 직사각형 ABCD의 선분 BC 위를 움직이는 점 P에 대하여 점 Q가 $\\vec{\\mathrm{QP}}\\cdot\\vec{\\mathrm{QD}}=0$을 만족시킬 때, $\\vec{\\mathrm{AQ}}\\cdot\\vec{\\mathrm{AD}}$의 최댓값과 최솟값의 차를 구하시오."
+   ],
+   "answer": 96,
+   "hint": "$88-(-8)=96$."
+  }
+ ],
+ "line": "수직 조건 → 지름 원. 한 방향과의 내적 → 한 좌표.",
  "note": ""
 }

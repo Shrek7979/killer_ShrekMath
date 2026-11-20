@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2024학년도 9월 모의평가 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **216** — 최솟값을 끝점에서, 최댓값을 수선의 발에서 잡은 경우",
  "answer": 198,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -28,9 +28,11 @@
     0
    ],
    "text": "좌표평면에서 $\\overline{{\\mathrm{AB}}}=\\overline{{\\mathrm{AC}}}=6$ 이고 $\\angle{\\mathrm{BAC}}=\\frac{\\pi}{2}$ 인 직각삼각형 ${\\mathrm{ABC}}$ 가 있다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "직각이등변삼각형",
+   "why": "A$(0,0)$, B$(6,0)$, C$(0,6)$, 무게중심 G$(2,2)$.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C2",
@@ -39,44 +41,89 @@
     1
    ],
    "text": "선분 ${\\mathrm{BC}}$ 위를 움직이는 점 ${\\mathrm{X}}$ 에 대하여 $|\\vec{{\\mathrm{XA}}}+\\vec{{\\mathrm{XB}}}+\\vec{{\\mathrm{XC}}}|$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M^{2}+m^{2}$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "선분 BC 위의 점 X",
+   "why": "$|\\vec{\\mathrm{XA}}+\\vec{\\mathrm{XB}}+\\vec{\\mathrm{XC}}|=3|\\vec{\\mathrm{XG}}|$의 최대·최소.",
+   "uses": [
+    1,
+    2,
+    3,
+    4
+   ]
   }
  ],
  "intro": [
-  "두 벡터의 합 대신 세 벡터의 합을 무게중심으로 모으고, 선분 위 점까지의 거리의 최댓값(끝점)과 최솟값(수선의 발)을 함께 묻도록 변형"
+  "$\\vec{\\mathrm{XA}}+\\vec{\\mathrm{XB}}+\\vec{\\mathrm{XC}}=3\\vec{\\mathrm{XG}}$ (G는 무게중심). 세 벡터의 합이 **무게중심까지의 거리 하나**로 바뀝니다.",
+  "선분 위의 점에서 G까지의 거리: 최소는 수선의 발(선분 위에 있으면), 최대는 끝점."
  ],
  "topic": "평면벡터",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "무게중심과 벡터의 합",
+   "p": [
+    "$\\vec{\\mathrm{XA}}+\\vec{\\mathrm{XB}}+\\vec{\\mathrm{XC}}=3\\vec{\\mathrm{XG}}$. 두 점이면 중점, 세 점이면 무게중심."
+   ]
+  },
+  {
+   "h": "선분까지의 거리",
+   "p": [
+    "수선의 발이 선분 위에 있으면 그것이 최소, 최대는 두 끝점 중 먼 쪽."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "${\\mathrm{A}}(0,0)$ , ${\\mathrm{B}}(6,0)$ , ${\\mathrm{C}}(0,6)$ 으로 놓고 삼각형 ${\\mathrm{ABC}}$ 의 무게중심을 ${\\mathrm{G}}(2,2)$ 라 하면 $\\vec{{\\mathrm{XA}}}+\\vec{{\\mathrm{XB}}}+\\vec{{\\mathrm{XC}}}=3 \\vec{{\\mathrm{XG}}}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "무게중심으로 묶기"
   },
   {
    "n": 2,
    "text": "직선 ${\\mathrm{BC}}$ : $x+y=6$ 과 점 ${\\mathrm{G}}$ 사이의 거리는 $\\frac{|2+2-6|}{\\sqrt{2}}=\\sqrt{2}$ 이고, 수선의 발 $(3,3)$ 은 선분 ${\\mathrm{BC}}$ 위에 있으므로 $m=3 \\sqrt{2}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "최솟값"
   },
   {
    "n": 3,
    "text": "$|\\vec{{\\mathrm{XG}}}|$ 는 끝점에서 최대이고 $|\\vec{{\\mathrm{BG}}}|=|\\vec{{\\mathrm{CG}}}|=\\sqrt{20}$ 이므로 $M=3 \\sqrt{20}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "최댓값"
   },
   {
    "n": 4,
    "text": "따라서 $M^{2}+m^{2}=180+18=198$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "수선의 발이 선분 안에 있는지",
+   "cond": "C2",
+   "text": [
+    "$(3,3)$은 BC의 중점이라 선분 위. 밖에 있으면 최솟값도 끝점에서 납니다."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 한 변 12",
+   "body": [
+    "좌표평면에서 $\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AC}}=12$, $\\angle\\mathrm{BAC}=\\frac\\pi2$인 직각삼각형 ABC의 선분 BC 위를 움직이는 점 X에 대하여 $|\\vec{\\mathrm{XA}}+\\vec{\\mathrm{XB}}+\\vec{\\mathrm{XC}}|$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $M^2+m^2$의 값을 구하시오."
+   ],
+   "answer": 792,
+   "hint": "G$(4,4)$, 거리 최소 $2\\sqrt2$ → $m^2=72$, 최대 $\\sqrt{80}$ → $M^2=720$."
+  }
+ ],
+ "line": "세 벡터의 합은 무게중심으로. 선분 위 점까지 거리: 수선의 발과 끝점.",
  "note": ""
 }

@@ -1,0 +1,96 @@
+{
+ "wrong": "예상 오답 **16** — $1+B$ 대신 $B$를 $\\cos x$의 계수로 쓴 경우",
+ "intro": [
+  "적분 안에 $x$와 $t$가 섞여 있으면 **덧셈정리로 분리**합니다. $\\sin(x+t)=\\sin x\\cos t+\\cos x\\sin t$로 쓰면 적분값은 상수 $A$, $B$가 되고, $f(x)$는 $\\sin x$와 $\\cos x$의 일차결합으로 정해집니다.",
+  "그 다음은 $A$, $B$의 정의에 $f$를 다시 넣어 연립방정식을 푸는 순서입니다."
+ ],
+ "conds": {
+  "C2": {
+   "label": "적분 방정식",
+   "why": "$\\frac1\\pi\\int_0^\\pi f(t)\\sin(x+t)dt$를 덧셈정리로 펼치면 $A\\sin x+B\\cos x$. 따라서 $f(x)=A\\sin x+(1+B)\\cos x$.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$f$의 최댓값 $M=\\sqrt{A^2+(1+B)^2}$. 삼각함수의 합성.",
+   "uses": [
+    4
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "정적분은 상수",
+   "p": [
+    "적분변수가 $t$이고 구간이 고정이면 $\\int f(t)\\cos t\\,dt$는 상수입니다. 미지수로 두고 식을 세웁니다."
+   ]
+  },
+  {
+   "h": "직교성",
+   "p": [
+    "$\\int_0^\\pi\\sin^2t\\,dt=\\int_0^\\pi\\cos^2t\\,dt=\\frac\\pi2$, $\\int_0^\\pi\\sin t\\cos t\\,dt=0$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "덧셈정리로 분리",
+   "text": "$\\sin(x+t)=\\sin x \\cos t+\\cos x \\sin t$이므로 $A=\\frac{1}{\\pi}\\int_{0}^{\\pi}f(t)\\cos t dt$, $B=\\frac{1}{\\pi}\\int_{0}^{\\pi}f(t)\\sin t dt$라 하면 $f(x)=A \\sin x+(1+B)\\cos x$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$A$, $B$의 관계식",
+   "text": "$\\int_{0}^{\\pi}\\cos^{2}t dt=\\int_{0}^{\\pi}\\sin^{2}t dt=\\frac{\\pi}{2}$, $\\int_{0}^{\\pi}\\sin t \\cos t dt=0$이므로 $A=\\frac{1+B}{2}$, $B=\\frac{A}{2}$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "연립",
+   "text": "연립하면 $A=\\frac{2}{3}$, $B=\\frac{1}{3}$이므로 $f(x)=\\frac{2}{3}\\sin x+\\frac{4}{3}\\cos x$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "합성으로 최댓값",
+   "text": "$M^{2}=\\frac{4}{9}+\\frac{16}{9}=\\frac{20}{9}$이므로 $9 M^{2}=20$",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\cos x$의 계수는 $1+B$",
+   "cond": "C2",
+   "text": [
+    "앞에 있는 $\\cos x$를 잊고 $B\\cos x$만 쓰면 연립식이 틀어집니다."
+   ]
+  },
+  {
+   "h": "$x$를 적분 밖으로",
+   "cond": "C2",
+   "text": [
+    "$\\sin x$, $\\cos x$는 $t$에 대해 상수라 적분 밖으로 나옵니다. 이것이 분리의 핵심입니다."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 계수를 바꾸면",
+   "body": [
+    "연속함수 $f(x)$가 모든 실수 $x$에 대하여 $f(x)=\\cos x+\\dfrac1{2\\pi}\\displaystyle\\int_0^\\pi f(t)\\sin(x+t)dt$를 만족시킨다. $f(x)$의 최댓값을 $M$이라 할 때, $225M^2$의 값을 구하시오."
+   ],
+   "answer": 272,
+   "hint": "$A=\\tfrac{1+B}4$, $B=\\tfrac A4$ → $A=\\tfrac4{15}$, $B=\\tfrac1{15}$, $f=\\tfrac4{15}\\sin x+\\tfrac{16}{15}\\cos x$, $M^2=\\tfrac{272}{225}$."
+  }
+ ],
+ "line": "적분 속 $x+t$는 덧셈정리로 분리. 정적분은 상수로 두고 연립."
+}
