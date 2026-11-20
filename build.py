@@ -243,7 +243,45 @@ def past_items(start, extra=False):
                     'answer': a, 'choice': x['choice']})
         if x['id'] in EN:
             out[-1]['en'] = EN[x['id']]
+        if x['id'] in PAST_SIM:
+            out[-1]['sim'] = sim_of(PAST_SIM[x['id']])
     return out
+
+
+# ── 기출관 유사문항(쌍둥이 문제): src/past/sim/batch*.py 의 S = {id: dict(q, ch, a, sol)} ──
+CIRC = '①②③④⑤'
+
+
+def _load_sims():
+    import glob, importlib.util
+    S = {}
+    for f in sorted(glob.glob(os.path.join(ROOT, 'src/past/sim/batch*.py'))):
+        spec = importlib.util.spec_from_file_location('b', f); m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+        S.update(m.S)
+    return S
+
+
+PAST_SIM = _load_sims()
+
+
+def sim_blocks(html):
+    """유사문항 문자열(KaTeX $…$, <br>, 조건 상자 [[…]]) → 화면 블록 [{p:…},{box:[…]}]"""
+    out = []
+    for part in re.split(r'(\[\[.*?\]\])', html, flags=re.S):
+        if part.startswith('[['):
+            out.append({'box': [l.strip() for l in re.split(r'<br\s*/?>', part[2:-2]) if l.strip()]})
+        else:
+            for line in re.split(r'<br\s*/?>', part):
+                line = line.strip()
+                if line: out.append({'p': line})
+    return out
+
+
+def sim_of(m):
+    q = sim_blocks(m['q'])
+    if m.get('ch'): q.append({'ch': [c.strip()[1:-1] if c.strip().startswith('$') and c.strip().endswith('$') else c for c in m['ch']]})
+    ans = f"{CIRC[m['a'] - 1]} {m['ch'][m['a'] - 1]}" if m.get('ch') else f"${m['a']}$"
+    return {'ko': q, 'ans': {'ko': ans}, 'sol': {'ko': sim_blocks(m['sol'])}}
 
 
 ART_EXT = ('.webp', '.png', '.jpg', '.jpeg')

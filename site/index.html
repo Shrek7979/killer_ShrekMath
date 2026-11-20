@@ -1179,7 +1179,7 @@ function homeJapan(){
   let last='',track=null;
   const mk=(x,track)=>{
     const c=el('button','card');const rec=S.jrec[x.num];c.style.setProperty('--dc',DC(x.stars));c.dataset.big=x.year.slice(2);
-    c.innerHTML=`<div class="top"><span><span class="num">#J${JNO(x)}</span> · ${x.year} · ${x.num0}${JA()?'番':'번'}${x.ja?` <b class="jab">${JA()?'日・類題':'日·유사'}</b>`:''}</span><span class="subj" style="--sc:${SC(x.subj==='미적분'?'미적분Ⅱ':x.subj)}">${esc(jS(x))}</span></div>
+    c.innerHTML=`<div class="top"><span><span class="num">#J${JNO(x)}</span> · ${x.year} · ${x.num0}${JA()?'番':'번'}${x.ja?` <b class="jab">${JA()?'日・類題':'日·유사'}</b>`:x.sim?' <b class="jab" style="background:#1f9d55">유사</b>':''}</span><span class="subj" style="--sc:${SC(x.subj==='미적분'?'미적분Ⅱ':x.subj)}">${esc(jS(x))}</span></div>
       <div class="topic">${esc(jU(x))} · ${esc(jT(x))}</div>
       <div class="meta"><span><span class="stars">${'★'.repeat(x.stars)}${'☆'.repeat(5-x.stars)}</span><span class="dbadge">${JA()?(x.stars>=5?'最難関':x.stars>=3?'難関':'中級'):(x.stars>=5?'최고난도':x.stars>=3?'고난도':'중급')}</span></span><span><span class="tag" style="white-space:normal;line-height:1.3">${esc((JA()&&x.ja?((x.ja.find(b=>b.p)||{}).p||'').replace(/\$|\\[a-z]+|[{}]/g,''):x.text).slice(0,30))}…</span></span></div>`;
     c.insertBefore(artEl(x.text,x.subj,x.art,x.id,DC(x.stars),null,x.qimg&&x.qimg[0]),c.querySelector('.topic'));tagPay(c,x);
@@ -1560,7 +1560,7 @@ function renderJapanCard(p){
     w.append(b);return w}
   if(p.k==='intro'&&isP){w.append(head('intro'));const b=el('div','body');b.append(el('h2',null,`${esc(J.univ)} · ${esc(J.track)}`));
     b.append(el('dl','kv',`<dt>출처</dt><dd>한국교육과정평가원 · ${J.year}학년도 ${J.month==='11월'?'대학수학능력시험':'대학수학능력시험 '+J.month+' 모의평가'} (홀수형)</dd><dt>과목</dt><dd>${esc(J.part)}</dd><dt>형식</dt><dd>${J.choice?'5지선다형':'단답형'} · 4점</dd><dt>난이도</dt><dd><span class="stars" style="--dc:${DC(J.stars)}">${'★'.repeat(J.stars)}</span> ${J.stars>=5?'킬러':J.stars>=4?'고난도':'준킬러'} · 제한 ${lim}분</dd><dt>정답</dt><dd class="num">${J.answer==null?'미등록 (스스로 점검)':(J.choice?['①','②','③','④','⑤'][J.answer-1]||J.answer:J.answer)}</dd>`));
-    b.append(el('p','note','평가원 기출은 해설을 싣지 않습니다. EBSi(ebsi.co.kr) 기출문제 해설이나 교사의 풀이로 확인하세요. 같은 번호 자리의 창작 문항은 킬러관에 있습니다.'));
+    b.append(el('p','note','평가원 기출은 해설을 싣지 않습니다. EBSi(ebsi.co.kr) 기출문제 해설이나 교사의 풀이로 확인하세요. 같은 번호 자리의 창작 문항은 킬러관에 있습니다.'+(J.sim?' 이 문항은 다음 단계에 유사문항(쌍둥이 문제)이 있어요.':'')));
     const row=el('div','btnrow');const kb=el('button','btn ghost',`킬러관의 ${J.num0}번형 보기`);kb.onclick=()=>{S.tab='killer';filt.type=`${J.num0}번형`;save();location.hash='';};if(LIST.some(x=>x.type===`${J.num0}번형`))row.append(kb);b.append(row);w.append(b);return w}
   if(p.k==='intro'&&LJ()){w.append(head('intro'));const b=el('div','body');b.append(el('h2',null,esc(jU(J))));
     const first=J.ja?(J.ja.find(x=>x.p)||{}).p||'':'';
@@ -1572,7 +1572,7 @@ function renderJapanCard(p){
   if(p.k==='answer'){w.append(head('answer',`해설 ${p.i+1}/${p.n}`));const b=el('div','body');b.style.maxWidth='none';if(LJ()&&p.i===0)b.append(el('p','note','※ 解説は韓国語版です。'));
     const im=el('img','pg');im.src=jimg(J.simg[p.i]);im.alt='해설';b.append(im);w.append(b);return w}
   if(p.k==='sim'){w.append(head('sim'));const b=el('div','body');const s=J.sim;let ja=JA();
-    const ja2=!s.ko;if(ja2)ja=true;if(!ja2)b.append(langSeg(jaRefresh));
+    const ja2=!s.ko;if(ja2)ja=true;if(!s.ja)ja=false;if(!ja2&&s.ja)b.append(langSeg(jaRefresh));
     b.append(el('p','lead',ja?'原題と同じ考え方で、条件を変えた問題です。紙に解いてから答えを確かめましょう。':'원문제와 같은 아이디어로 조건을 바꾼 문제입니다. 종이에 풀고 나서 답을 확인하세요.'));
     const q=el('div');renderEnBlocks(q,ja?s.ja:s.ko);if(ja)q.lang='ja';b.append(q);
     const bt=el('button','btn',ja?'答えと解説を見る':'정답·풀이 보기');const an=el('div','simans');an.hidden=true;if(ja)an.lang='ja';
