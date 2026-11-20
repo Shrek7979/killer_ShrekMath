@@ -1,4 +1,4 @@
-import sys;sys.path.insert(0,'/tmp/claude-0/-home-claude/6c68019e-cd2e-53f9-8137-25a894479233/scratchpad/an');from mk import I
+import sys;sys.path.insert(0,__import__('os').path.dirname(__file__));from mk import I
 
 I('30A-04',"예상 오답 **4** — $k$를 구하고 $e^k$ 대신 $k/\\ln2$를 답한 경우 · 교점이 $y=x$ 위에만 있다고 보고 풀이를 멈춘 경우",
  ["함수와 역함수의 교점은 보통 $y=x$ 위에서 찾지만, **감소함수**는 예외입니다. $y=x$ 밖에서 $(p,q)$, $(q,p)$처럼 대칭인 쌍으로 만날 수 있습니다.",

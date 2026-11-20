@@ -1,4 +1,4 @@
-import sys;sys.path.insert(0,'/tmp/claude-0/-home-claude/6c68019e-cd2e-53f9-8137-25a894479233/scratchpad/an');from mk import I
+import sys;sys.path.insert(0,__import__('os').path.dirname(__file__));from mk import I
 CIR=("원 위의 점과 정점의 거리",[r"중심까지 거리 $d$, 반지름 $r$이면 원 위의 점까지 거리는 $|d-r|$부터 $d+r$까지."])
 DOT1=("한 방향과의 내적은 일차식",[r"$\vec{\mathrm{AQ}}\cdot\vec v$는 Q의 좌표에 대한 일차식. 원 위에서의 최대·최소는 (중심에서의 값) $\pm r|\vec v|$."])
 

@@ -1,4 +1,4 @@
-import sys;sys.path.insert(0,'/tmp/claude-0/-home-claude/6c68019e-cd2e-53f9-8137-25a894479233/scratchpad/an');from mk import I
+import sys;sys.path.insert(0,__import__('os').path.dirname(__file__));from mk import I
 
 I('30A-01',"예상 오답 **22** — 극댓값 $t=4$에서 $g(4)$를 $3$으로 세는 경우 · **17** — 마지막에 $a$를 더하지 않은 경우",
  ["접선이 점 $(0,t)$를 지난다는 말은 **접선의 $y$절편이 $t$**라는 뜻입니다. 접점 $s$마다 $y$절편 $h(s)$가 하나씩 정해지니, $g(t)$는 결국 ‘$h(s)=t$의 실근의 개수’를 세는 함수가 됩니다.",

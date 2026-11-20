@@ -1,4 +1,4 @@
-import sys;sys.path.insert(0,'/tmp/claude-0/-home-claude/6c68019e-cd2e-53f9-8137-25a894479233/scratchpad/an');from mk import I
+import sys;sys.path.insert(0,__import__('os').path.dirname(__file__));from mk import I
 MID=("중점으로 내적 모으기",[r"$\vec{\mathrm{PA}}\cdot\vec{\mathrm{PB}}=|\vec{\mathrm{PK}}|^2-|\vec{\mathrm{KA}}|^2$ (K는 AB의 중점). 두 벡터의 내적을 **한 점까지의 거리**로 바꾸는 공식입니다."])
 CIR=("원 위의 점과 정점의 거리",[r"중심 O, 반지름 $r$인 원 위의 점 P와 점 N 사이 거리는 $|\overline{\mathrm{ON}}-r|$에서 $\overline{\mathrm{ON}}+r$까지."])
 

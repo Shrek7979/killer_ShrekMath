@@ -1,4 +1,4 @@
-import sys;sys.path.insert(0,'/tmp/claude-0/-home-claude/6c68019e-cd2e-53f9-8137-25a894479233/scratchpad/an');from mk import I
+import sys;sys.path.insert(0,__import__('os').path.dirname(__file__));from mk import I
 
 I('30B-09',"예상 오답 **3** — 적분상수를 빼서 $F(\\ln3)=3\\ln3$으로 계산한 경우",
  ["$\\int_0^1f(xt)dt$처럼 적분변수 $t$와 바깥 변수 $x$가 곱해져 있으면 $xt=s$로 치환해 $\\frac1x\\int_0^xf(s)ds$로 바꿉니다.",

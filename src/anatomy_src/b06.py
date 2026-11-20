@@ -1,4 +1,4 @@
-import sys;sys.path.insert(0,'/tmp/claude-0/-home-claude/6c68019e-cd2e-53f9-8137-25a894479233/scratchpad/an');from mk import I
+import sys;sys.path.insert(0,__import__('os').path.dirname(__file__));from mk import I
 CIR=("원 위의 점과 정점의 거리",[r"중심이 $\mathrm{P'}$, 반지름 $r$인 원 위의 점과 정점 B의 거리는 $|\overline{\mathrm{BP'}}-r|$에서 $\overline{\mathrm{BP'}}+r$까지."])
 
 I('추가30·기하-06',"예상 오답 **35** — 가장 가까운 점을 $\\mathrm{C'}$로 잡아 $m$을 잘못 구한 경우",
