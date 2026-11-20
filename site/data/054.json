@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 30번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **12** — $\\int_\\pi^{3\\pi/2}|f|$를 $\\int_0^{\\pi/2}f$ (절댓값 없이)로 계산한 경우",
  "answer": 13,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -54,9 +54,11 @@
     0
    ],
    "text": "(가) $\\int_{0}^{\\pi}f(x)dx=6$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(가)",
+   "why": "$\\int_0^\\pi(a\\sin x+b\\cos x)dx=2a$ → $a=3$.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C3",
@@ -65,9 +67,12 @@
     1
    ],
    "text": "(나) $\\int_{0}^{\\pi}\\left|f(x)\\right|dx=10$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(나)",
+   "why": "$\\int_0^\\pi|f|=2\\sqrt{a^2+b^2}=10$ → $b=-4$ ($b<0$).",
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C4",
@@ -76,54 +81,110 @@
     0
    ],
    "text": "$\\int_{0}^{\\frac{3}{2}\\pi}\\left|f(x)\\right|dx$의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\int_0^{3\\pi/2}|f|=10+\\int_\\pi^{3\\pi/2}|f|$, 뒤쪽은 $f(x+\\pi)=-f(x)$로 $\\int_0^{\\pi/2}|f|$.",
+   "uses": [
+    4,
+    5,
+    6
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "$a\\sin x+b\\cos x$는 합성하면 $R\\sin(x+\\theta)$. $|\\sin|$의 주기가 $\\pi$이므로 **어떤 길이 $\\pi$ 구간**에서도 $\\int|f|=2R$입니다. 이것으로 $R$이 나옵니다.",
+  "남은 $\\frac\\pi2$ 구간은 부호가 바뀌는 점에서 끊어 계산합니다."
+ ],
  "topic": "삼각함수의 합성과 절댓값의 정적분",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "삼각함수의 합성",
+   "p": [
+    "$a\\sin x+b\\cos x=\\sqrt{a^2+b^2}\\sin(x+\\theta)$. 절댓값 적분은 진폭만으로 결정됩니다."
+   ]
+  },
+  {
+   "h": "절댓값 적분",
+   "p": [
+    "부호가 바뀌는 점 $\\alpha$에서 나누고 부정적분 $F$로 계산: $-\\{F(\\alpha)-F(0)\\}+\\{F(\\frac\\pi2)-F(\\alpha)\\}$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "(가)에서 $\\int_{0}^{\\pi}f(x)dx=2 a=6$이므로 $a=3$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "(가)로 $a$"
   },
   {
    "n": 2,
    "text": "$f(x)=\\sqrt{a^{2}+b^{2}}\\sin(x+\\theta)$로 나타낼 수 있고 함수 $\\left|\\sin x \\right|$의 주기는 $\\pi$이므로 $\\int_{0}^{\\pi}\\left|f(x)\\right|dx=\\sqrt{a^{2}+b^{2}}\\int_{0}^{\\pi}\\sin x dx=2 \\sqrt{a^{2}+b^{2}}$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "길이 $\\pi$ 구간의 $\\int|f|$"
   },
   {
    "n": 3,
    "text": "(나)에서 $\\sqrt{9+b^{2}}=5$이고 $b<0$이므로 $b=-4$, 즉 $f(x)=3 \\sin x-4 \\cos x$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "(나)로 $b$"
   },
   {
    "n": 4,
    "text": "$f(x+\\pi)=-f(x)$이므로 $\\int_{\\pi}^{\\frac{3}{2}\\pi}\\left|f(x)\\right|dx=\\int_{0}^{\\frac{\\pi}{2}}\\left|f(x)\\right|dx$이다. $0<x<\\frac{\\pi}{2}$에서 $f(\\alpha)=0$인 $\\alpha$는 $\\sin \\alpha=\\frac{4}{5}$, $\\cos \\alpha=\\frac{3}{5}$를 만족시키고, $f(x)$의 한 부정적분은 $F(x)=-3 \\cos x-4 \\sin x$이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "뒤 구간을 앞으로"
   },
   {
    "n": 5,
    "text": "$\\int_{0}^{\\frac{\\pi}{2}}\\left|f(x)\\right|dx=-\\left\\{F(\\alpha)-F(0)\\right\\}+\\left\\{F \\left(\\frac{\\pi}{2}\\right)-F(\\alpha)\\right\\}=-(-5+3)+(-4+5)=3$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "부호를 나눠 적분"
   },
   {
    "n": 6,
    "text": "따라서 구하는 값은 $10+3=13$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$b$의 부호",
+   "cond": "C3",
+   "text": [
+    "$\\sqrt{9+b^2}=5$에서 $b=\\pm4$. 조건 $b<0$으로 하나를 고릅니다."
+   ]
+  },
+  {
+   "h": "$[0,\\frac\\pi2]$에서 부호 변화",
+   "cond": "C4",
+   "text": [
+    "$f(0)=-4<0$, $f(\\frac\\pi2)=3>0$. 중간 $\\alpha$($\\tan\\alpha=\\frac43$)에서 부호가 바뀌므로 그냥 적분하면 $-1$+… 식이 상쇄됩니다."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 계수를 바꾸면",
+   "body": [
+    "두 상수 $a$, $b$ $(b<0)$에 대하여 $f(x)=a\\sin x+b\\cos x$가 $\\displaystyle\\int_0^\\pi f(x)dx=8$, $\\displaystyle\\int_0^\\pi|f(x)|dx=10$을 만족시킬 때, $\\displaystyle\\int_0^{\\frac32\\pi}|f(x)|dx$의 값을 구하시오."
+   ],
+   "answer": 13,
+   "hint": "$a=4$, $b=-3$, $\\int_0^{\\pi/2}|f|=1+2=3$ → $13$."
+  }
+ ],
+ "line": "합성하면 길이 $\\pi$ 구간의 절댓값 적분은 $2R$. 나머지는 부호가 바뀌는 점에서 끊는다.",
  "note": ""
 }

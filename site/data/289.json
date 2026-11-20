@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2025학년도 6월 모의평가 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **17** — 최솟값을 묻는데 $13+4$를 쓴 경우 · 방향 제한을 확인하지 않은 경우",
  "answer": 9,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -38,9 +38,12 @@
     0
    ],
    "text": "두 초점이 ${\\mathrm{F}}(5,0)$ , ${\\mathrm{F}}'(-5,0)$ 인 쌍곡선 $\\frac{x^{2}}{16}-\\frac{y^{2}}{9}=1$ 위의 점 중 $x$ 좌표가 양수인 점 ${\\mathrm{P}}$ 에 대하여 점 ${\\mathrm{Q}}$ 가",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "쌍곡선",
+   "why": "$a=4$, $c=5$. 오른쪽 가지 위의 점 P: $\\overline{\\mathrm{PF'}}-\\overline{\\mathrm{PF}}=8$.",
+   "uses": [
+    1,
+    4
+   ]
   },
   {
    "id": "C2",
@@ -49,9 +52,13 @@
     0
    ],
    "text": "$(|\\vec{{\\mathrm{PF}}}|+8)\\vec{{\\mathrm{F}}'{\\mathrm{Q}}}=4 \\vec{{\\mathrm{F}}'{\\mathrm{P}}}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "벡터 조건",
+   "why": "$\\vec{\\mathrm{F'Q}}=4\\cdot\\dfrac{\\vec{\\mathrm{F'P}}}{|\\vec{\\mathrm{F'P}}|}$.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
   },
   {
    "id": "C3",
@@ -71,56 +78,103 @@
     1
    ],
    "text": "점 ${\\mathrm{A}}(7,5)$ 에 대하여 $|\\vec{{\\mathrm{AQ}}}|$ 의 최솟값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "A$(7,5)$에서 Q까지 거리의 최솟값.",
+   "uses": [
+    5,
+    6
+   ]
   }
  ],
  "intro": [
-  "계수를 바꾸어 $|\\vec{{\\mathrm{F'Q}}}|=4$ 가 되게 하고, 최댓값 대신 최솟값을 물어 '점근선의 기울기로 제한되는 방향'에 A의 방향이 포함되는지 확인하게 함"
+  "$|\\vec{\\mathrm{PF}}|+8$은 쌍곡선의 정의로 $|\\vec{\\mathrm{PF'}}|$. 그래서 Q는 F'에서 P 방향으로 길이 $4$인 점, 자취는 반지름 $4$인 원의 **일부**(오른쪽 가지 방향만).",
+  "A 방향이 그 허용 범위(기울기 $|k|<\\frac34$) 안인지 확인해야 $13-4$를 쓸 수 있습니다."
  ],
  "topic": "이차곡선과 벡터",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "쌍곡선의 정의",
+   "p": [
+    "$|\\overline{\\mathrm{PF'}}-\\overline{\\mathrm{PF}}|=2a$."
+   ]
+  },
+  {
+   "h": "초점을 지나는 직선과 한 가지",
+   "p": [
+    "F'을 지나는 직선이 오른쪽 가지와 만나려면 기울기의 절댓값이 점근선 기울기 $\\frac34$보다 작아야 합니다."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "쌍곡선의 정의에서 $|\\vec{{\\mathrm{P}}{\\mathrm{F}}'}|-|\\vec{{\\mathrm{PF}}}|=8$ 이므로 $|\\vec{{\\mathrm{PF}}}|+8=|\\vec{{\\mathrm{P}}{\\mathrm{F}}'}|$ 이고",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "정의로 바꾸기"
   },
   {
    "n": 2,
    "text": "$$\\vec{{\\mathrm{F}}'{\\mathrm{Q}}}=\\frac{4}{|\\vec{{\\mathrm{F}}'{\\mathrm{P}}}|}\\vec{{\\mathrm{F}}'{\\mathrm{P}}}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "단위벡터의 4배"
   },
   {
    "n": 3,
    "text": "즉 점 ${\\mathrm{Q}}$ 는 반직선 ${\\mathrm{F'P}}$ 위에서 $|\\vec{{\\mathrm{F}}'{\\mathrm{Q}}}|=4$ 인 점이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "자취"
   },
   {
    "n": 4,
    "text": "점 ${\\mathrm{F}}'$ 을 지나고 기울기가 $k$ 인 직선이 오른쪽 가지와 만나려면 $|k|<\\frac{3}{4}$ 이어야 하고, 이때 ${\\mathrm{F}}'$ 에서 오른쪽으로 향하는 반직선은 오른쪽 가지와 반드시 만난다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "방향 제한"
   },
   {
    "n": 5,
    "text": "$\\vec{{\\mathrm{F}}'{\\mathrm{A}}}=(12,5)$ 의 기울기는 $\\frac{5}{12}<\\frac{3}{4}$ 이므로 반직선 ${\\mathrm{F'A}}$ 위의 $|\\vec{{\\mathrm{F}}'{\\mathrm{Q}}}|=4$ 인 점이 점 ${\\mathrm{Q}}$ 가 될 수 있다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "A의 방향 확인"
   },
   {
    "n": 6,
    "text": "따라서 $|\\vec{{\\mathrm{AQ}}}|\\ge|\\vec{{\\mathrm{A}}{\\mathrm{F}}'}|-|\\vec{{\\mathrm{F}}'{\\mathrm{Q}}}|=13-4=9$ 이고 최솟값은 $9$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "허용 방향",
+   "cond": "C1",
+   "text": [
+    "Q의 자취는 원 전체가 아니라 기울기 $|k|<\\frac34$인 방향의 호. $\\vec{\\mathrm{F'A}}$의 기울기 $\\frac5{12}$가 범위 안이라 등호가 성립합니다."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 계수 3",
+   "body": [
+    "쌍곡선 $\\frac{x^2}{16}-\\frac{y^2}9=1$의 두 초점 F$(5,0)$, F'$(-5,0)$과 $x$좌표가 양수인 쌍곡선 위의 점 P에 대하여 점 Q가 $(|\\vec{\\mathrm{PF}}|+8)\\vec{\\mathrm{F'Q}}=3\\vec{\\mathrm{F'P}}$를 만족시킨다. 점 A$(7,5)$에 대하여 $|\\vec{\\mathrm{AQ}}|$의 최솟값을 구하시오."
+   ],
+   "answer": 10,
+   "hint": "$|\\vec{\\mathrm{F'Q}}|=3$, $|\\vec{\\mathrm{AF'}}|=13$, 방향 허용 → $13-3$."
+  }
+ ],
+ "line": "$\\overline{\\mathrm{PF}}+2a$는 다른 초점까지의 거리. 자취가 호이면 방향이 허용 범위인지 확인.",
  "note": ""
 }

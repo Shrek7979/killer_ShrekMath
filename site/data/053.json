@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 30번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **-15** — $a_4$를 $a_3$의 점화식에서 한 번 덜 돌린 경우 · $\\alpha=0$으로 둔 경우",
  "answer": 33,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -52,9 +52,13 @@
     0
    ],
    "text": "$a_{n}=\\int_{1}^{e}(\\ln x)^{n}dx$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "적분으로 정의된 수열",
+   "why": "$a_n=\\int_1^e(\\ln x)^n dx$. $0\\le\\ln x\\le1$이라 $a_n$은 양수이고 점점 작아집니다.",
+   "uses": [
+    1,
+    2,
+    4
+   ]
   },
   {
    "id": "C3",
@@ -74,48 +78,101 @@
     1
    ],
    "text": "$\\lim_{n \\to \\infty}n a_{n}=\\alpha$일 때, $a_{4}=p \\alpha+q$를 만족시키는 두 정수 $p$, $q$에 대하여 $p-q$의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\alpha=\\lim na_n$, 그리고 $a_4$를 $\\alpha$와 정수로 표현. $e$가 무리수라서 $p$, $q$가 유일합니다.",
+   "uses": [
+    3,
+    5
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "$\\int(\\ln x)^n dx$는 부분적분 한 번으로 $a_{n+1}=e-(n+1)a_n$이라는 **점화식**이 됩니다. 이 식 하나로 극한도, $a_4$도 구합니다.",
+  "$na_n$의 극한은 점화식을 $na_n=e-a_{n+1}-a_n$으로 바꾸고 $a_n\\to0$을 쓰면 끝입니다."
+ ],
  "topic": "부분적분법과 수열의 극한",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "부분적분 점화식",
+   "p": [
+    "$\\int(\\ln x)^{n+1}dx=x(\\ln x)^{n+1}-(n+1)\\int(\\ln x)^n dx$."
+   ]
+  },
+  {
+   "h": "수열의 극한과 부등식",
+   "p": [
+    "$(n+1)a_n<e$이면 $0<a_n<\\frac e{n+1}$ → $a_n\\to0$. 샌드위치 정리."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "부분적분법에 의하여 $a_{n+1}=\\left[x(\\ln x)^{n+1}\\right]_{1}^{e}-(n+1)\\int_{1}^{e}(\\ln x)^{n}dx=e-(n+1)a_{n}$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "점화식"
   },
   {
    "n": 2,
    "text": "$1 \\le x \\le e$에서 $0 \\le \\ln x \\le 1$이므로 $a_{n}>0$이고, 위 식에서 $(n+1)a_{n}=e-a_{n+1}<e$, 즉 $0<a_{n}<\\frac{e}{n+1}$이므로 $\\lim_{n \\to \\infty}a_{n}=0$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$a_n\\to0$"
   },
   {
    "n": 3,
    "text": "$n a_{n}=e-a_{n+1}-a_{n}$이므로 $\\alpha=\\lim_{n \\to \\infty}n a_{n}=e$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$\\alpha=e$"
   },
   {
    "n": 4,
    "text": "$a_{1}=\\left[x \\ln x-x \\right]_{1}^{e}=1$이므로 $a_{2}=e-2$, $a_{3}=e-3(e-2)=6-2 e$, $a_{4}=e-4(6-2 e)=9 e-24$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$a_1$부터 $a_4$까지"
   },
   {
    "n": 5,
    "text": "$e$는 무리수이므로 $p=9$, $q=-24$이고 $p-q=33$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$p$, $q$ 결정"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\alpha$를 $0$으로 보기",
+   "cond": "C4",
+   "text": [
+    "$a_n\\to0$이어도 $na_n$은 $0$이 아닐 수 있습니다. 점화식에서 $na_n=e-a_{n+1}-a_n\\to e$."
+   ]
+  },
+  {
+   "h": "$p$, $q$가 정수라는 조건",
+   "cond": "C4",
+   "text": [
+    "$a_4=9e-24$, $\\alpha=e$이므로 $p=9$, $q=-24$. $p-q$에서 부호 실수 주의."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $a_5$",
+   "body": [
+    "자연수 $n$에 대하여 $a_n=\\displaystyle\\int_1^e(\\ln x)^n dx$라 하자. $a_5=pe+q$를 만족시키는 두 정수 $p$, $q$에 대하여 $p+q$의 값을 구하시오."
+   ],
+   "answer": 76,
+   "hint": "$a_5=e-5a_4=e-5(9e-24)=-44e+120$. $p+q=76$."
+  }
+ ],
+ "line": "$(\\ln x)^n$의 적분은 부분적분 점화식. 극한은 점화식을 변형해 구한다.",
  "note": ""
 }

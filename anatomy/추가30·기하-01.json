@@ -1,0 +1,116 @@
+{
+ "wrong": "예상 오답 **137** — $|\\vec{\\mathrm{PN}}|^2-9$에서 $9$를 한 번만 빼고 더한 경우 · $S$를 직선으로 본 경우",
+ "intro": [
+  "$|\\vec a+\\vec b|=|\\vec a-\\vec b|$는 제곱하면 $\\vec a\\cdot\\vec b=0$. 즉 $\\angle\\mathrm{AXB}=90°$ → 점 X는 **AB를 지름으로 하는 원** 위.",
+  "구하는 내적은 CD의 중점 N을 이용해 $|\\vec{\\mathrm{PN}}|^2-9$로 바뀌고, 원 위의 점에서 N까지의 거리 범위만 알면 됩니다."
+ ],
+ "conds": {
+  "C1": {
+   "label": "직사각형",
+   "why": "$\\overline{\\mathrm{AB}}=6$, $\\overline{\\mathrm{BC}}=8$. AB의 중점 K와 CD의 중점 N 사이 거리 $8$.",
+   "uses": [
+    2,
+    4
+   ]
+  },
+  "C2": {
+   "label": "벡터 조건",
+   "why": "제곱해서 정리하면 $\\vec{\\mathrm{XA}}\\cdot\\vec{\\mathrm{XB}}=0$.",
+   "uses": [
+    1
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$\\vec{\\mathrm{PC}}\\cdot\\vec{\\mathrm{PD}}$의 최대·최소의 합.",
+   "uses": [
+    3,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "$|\\vec a+\\vec b|=|\\vec a-\\vec b|$ ⇔ $\\vec a\\perp\\vec b$",
+   "p": [
+    "양변 제곱 후 정리하면 $4\\vec a\\cdot\\vec b=0$. 직각을 보는 점의 자취는 원(탈레스)."
+   ]
+  },
+  {
+   "h": "중점으로 내적 모으기",
+   "p": [
+    "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=|\\vec{\\mathrm{PK}}|^2-|\\vec{\\mathrm{KA}}|^2$ (K는 AB의 중점). 두 벡터의 내적을 **한 점까지의 거리**로 바꾸는 공식입니다."
+   ]
+  },
+  {
+   "h": "원 위의 점과 정점의 거리",
+   "p": [
+    "중심 O, 반지름 $r$인 원 위의 점 P와 점 N 사이 거리는 $|\\overline{\\mathrm{ON}}-r|$에서 $\\overline{\\mathrm{ON}}+r$까지."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "$S$는 AB를 지름으로 하는 원",
+   "text": "$|\\vec{{\\mathrm{XA}}}+\\vec{{\\mathrm{XB}}}|^{2}=|\\vec{{\\mathrm{XA}}}-\\vec{{\\mathrm{XB}}}|^{2}$ 에서 $\\vec{{\\mathrm{XA}}}\\cdot \\vec{{\\mathrm{XB}}}=0$ 이므로 $S$ 는 선분 ${\\mathrm{AB}}$ 를 지름으로 하는 원, 즉 선분 ${\\mathrm{AB}}$ 의 중점 ${\\mathrm{K}}$ 를 중심으로 하고 반지름의 길이가 $3$ 인 원이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "CD의 중점 N",
+   "text": "선분 ${\\mathrm{CD}}$ 의 중점을 ${\\mathrm{N}}$ 이라 하면 $\\vec{{\\mathrm{NC}}}=-\\vec{{\\mathrm{ND}}}$ , $|\\vec{{\\mathrm{NC}}}|=3$ 이므로",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "내적을 거리로",
+   "text": "$$\\vec{{\\mathrm{PC}}}\\cdot \\vec{{\\mathrm{PD}}}=(\\vec{{\\mathrm{PN}}}+\\vec{{\\mathrm{NC}}})\\cdot(\\vec{{\\mathrm{PN}}}-\\vec{{\\mathrm{NC}}})=|\\vec{{\\mathrm{PN}}}|^{2}-9$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "거리의 범위",
+   "text": "$\\overline{{\\mathrm{KN}}}=8$ 이므로 $8-3 \\le|\\vec{{\\mathrm{PN}}}|\\le 8+3$ , 즉 $5 \\le|\\vec{{\\mathrm{PN}}}|\\le 11$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $M=121-9=112$ , $m=25-9=16$ 이고 $M+m=128$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$|\\vec{\\mathrm{NC}}|^2=9$",
+   "cond": "C4",
+   "text": [
+    "$\\overline{\\mathrm{CD}}=6$이므로 $|\\vec{\\mathrm{NC}}|=3$. $16$을 빼면($\\overline{\\mathrm{BC}}$의 절반) 틀립니다."
+   ]
+  },
+  {
+   "h": "원 위의 점 P의 범위",
+   "cond": "C1",
+   "text": [
+    "$\\overline{\\mathrm{KN}}=8$이 반지름 $3$보다 크므로 거리 범위는 $[5,11]$. 원 전체를 돌 수 있으니 양 끝이 모두 실현됩니다."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\overline{\\mathrm{BC}}=10$",
+   "body": [
+    "좌표평면에서 $\\overline{\\mathrm{AB}}=6$, $\\overline{\\mathrm{BC}}=10$인 직사각형 ABCD가 있다. $|\\vec{\\mathrm{XA}}+\\vec{\\mathrm{XB}}|=|\\vec{\\mathrm{XA}}-\\vec{\\mathrm{XB}}|$를 만족시키는 점 X가 나타내는 도형 위의 점 P에 대하여 $\\vec{\\mathrm{PC}}\\cdot\\vec{\\mathrm{PD}}$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $M+m$의 값을 구하시오."
+   ],
+   "answer": 200,
+   "hint": "$|\\vec{\\mathrm{PN}}|\\in[7,13]$: $M=169-9$, $m=49-9$."
+  }
+ ],
+ "line": "$|\\vec a+\\vec b|=|\\vec a-\\vec b|$는 수직. 두 벡터의 내적은 중점까지의 거리로 바꾼다."
+}

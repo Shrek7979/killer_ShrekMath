@@ -1,0 +1,138 @@
+{
+ "wrong": "예상 오답 — (가)를 수직 조건으로만 읽고 P, R의 위치를 정하지 못하는 경우 · 무게중심 대신 외심을 중심으로 잡은 경우",
+ "intro": [
+  "(가)의 $(\\vec{\\mathrm{PB}}+\\vec{\\mathrm{PQ}})\\cdot\\vec{\\mathrm{BC}}=0$은 ‘P에서 BQ의 중점으로 가는 벡터가 BC에 수직’, 즉 **$\\overline{\\mathrm{PB}}=\\overline{\\mathrm{PQ}}$인 이등변삼각형**입니다.",
+  "(나)로 Q가 정해지고, 마지막 조건은 삼각형 PQR의 **무게중심 G**를 중심으로 하는 원. A에서 그 원까지의 거리 범위를 구하면 끝입니다."
+ ],
+ "conds": {
+  "C1": {
+   "label": "삼각형",
+   "why": "$\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AC}}=10$, $\\overline{\\mathrm{BC}}=12$. B$(0,0)$, C$(12,0)$, A$(6,8)$.",
+   "uses": [
+    2
+   ]
+  },
+  "C3": {
+   "label": "(가) 이등변 조건",
+   "why": "$\\vec{\\mathrm{PB}}+\\vec{\\mathrm{PQ}}=2\\vec{\\mathrm{PK}}$(K: BQ의 중점) $\\perp$ BC → $\\overline{\\mathrm{PB}}=\\overline{\\mathrm{PQ}}$. R도 같은 방식.",
+   "uses": [
+    1,
+    3
+   ]
+  },
+  "C4": {
+   "label": "(나) 길이 비",
+   "why": "$\\overline{\\mathrm{PQ}}=\\frac56q$, $\\overline{\\mathrm{QR}}=\\frac56(12-q)$ → $q=8$.",
+   "uses": [
+    4
+   ]
+  },
+  "C5": {
+   "label": "묻는 것",
+   "why": "$3|\\vec{\\mathrm{XG}}|=4$: G 중심 반지름 $\\frac43$인 원. $M=\\overline{\\mathrm{AG}}+\\frac43$, $m=\\overline{\\mathrm{AG}}-\\frac43$.",
+   "uses": [
+    5,
+    6,
+    7
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "중점 벡터와 수직",
+   "p": [
+    "$\\vec{\\mathrm{PB}}+\\vec{\\mathrm{PQ}}=2\\vec{\\mathrm{PK}}$. 이것이 BQ에 수직이면 P는 BQ의 수직이등분선 위."
+   ]
+  },
+  {
+   "h": "세 벡터의 합 → 무게중심",
+   "p": [
+    "$\\vec{\\mathrm{XP}}+\\vec{\\mathrm{XQ}}+\\vec{\\mathrm{XR}}=3\\vec{\\mathrm{XG}}$."
+   ]
+  },
+  {
+   "h": "원 위의 점과 정점의 거리",
+   "p": [
+    "중심까지 거리 $d$, 반지름 $r$이면 원 위의 점까지 거리는 $|d-r|$부터 $d+r$까지."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "(가) → 이등변",
+   "text": "$\\vec{{\\mathrm{PB}}}+\\vec{{\\mathrm{PQ}}}=2 \\vec{{\\mathrm{PK}}}$ ( ${\\mathrm{K}}$ 는 선분 ${\\mathrm{BQ}}$ 의 중점)이고 이것이 $\\vec{{\\mathrm{BC}}}$ 에 수직이므로 점 ${\\mathrm{P}}$ 에서 직선 ${\\mathrm{BC}}$ 에 내린 수선의 발이 ${\\mathrm{K}}$ 이다. 즉 $\\overline{{\\mathrm{PB}}}=\\overline{{\\mathrm{PQ}}}$ 이고, 같은 방법으로 $\\overline{{\\mathrm{RC}}}=\\overline{{\\mathrm{RQ}}}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "좌표 설정",
+   "text": "${\\mathrm{B}}(0,0)$ , ${\\mathrm{C}}(12,0)$ , ${\\mathrm{A}}(6,8)$ , ${\\mathrm{Q}}(q,0)$ 으로 놓으면 직선 ${\\mathrm{AB}}$ 는 $y=\\frac{4}{3}x$ , 직선 ${\\mathrm{AC}}$ 는 $y=\\frac{4}{3}(12-x)$ 이므로",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "P, Q, R을 $q$로",
+   "text": "$${\\mathrm{P}}\\left(\\frac{q}{2},\\frac{2 q}{3}\\right),{\\mathrm{R}}\\left(\\frac{q+12}{2},\\frac{2(12-q)}{3}\\right),\\overline{{\\mathrm{PQ}}}=\\frac{5 q}{6},\\overline{{\\mathrm{QR}}}=\\frac{5(12-q)}{6}$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "(나)로 $q=8$",
+   "text": "(나)에서 $q=2(12-q)$ , $q=8$ 이므로 ${\\mathrm{P}}\\left(4,\\frac{16}{3}\\right)$ , ${\\mathrm{Q}}(8,0)$ , ${\\mathrm{R}}\\left(10,\\frac{8}{3}\\right)$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "무게중심 원",
+   "text": "삼각형 ${\\mathrm{PQR}}$ 의 무게중심 ${\\mathrm{G}}\\left(\\frac{22}{3},\\frac{8}{3}\\right)$ 에 대하여 $|\\vec{{\\mathrm{XP}}}+\\vec{{\\mathrm{XQ}}}+\\vec{{\\mathrm{XR}}}|=3|\\vec{{\\mathrm{XG}}}|=4$ 이므로 점 ${\\mathrm{X}}$ 는 중심이 ${\\mathrm{G}}$ , 반지름의 길이가 $\\frac{4}{3}$ 인 원 위에 있다.",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "$\\overline{\\mathrm{AG}}$",
+   "text": "$|\\vec{{\\mathrm{AG}}}|^{2}=\\left(\\frac{4}{3}\\right)^{2}+\\left(\\frac{16}{3}\\right)^{2}=\\frac{272}{9}$ 이고 $M=|\\vec{{\\mathrm{AG}}}|+\\frac{4}{3}$ , $m=|\\vec{{\\mathrm{AG}}}|-\\frac{4}{3}$ 이므로",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$$M^{2}+m^{2}=2 \\left(\\frac{272}{9}+\\frac{16}{9}\\right)=64$$",
+   "uses": [
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "(가)를 수선의 발로 읽기",
+   "cond": "C3",
+   "text": [
+    "‘$\\vec{\\mathrm{PB}}+\\vec{\\mathrm{PQ}}$가 BC에 수직’을 바로 해석하지 못하면 P, R을 정할 수 없습니다. 중점 벡터로 바꾸는 것이 열쇠."
+   ]
+  },
+  {
+   "h": "$M^2+m^2=2(d^2+r^2)$",
+   "cond": "C5",
+   "text": [
+    "$(d+r)^2+(d-r)^2=2(d^2+r^2)$. $d$를 루트로 구하지 않아도 됩니다."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $|\\vec{\\mathrm{PQ}}|=|\\vec{\\mathrm{QR}}|$",
+   "body": [
+    "$\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AC}}=10$, $\\overline{\\mathrm{BC}}=12$인 삼각형 ABC에서 선분 AB 위의 점 P, 선분 BC 위의 점 Q, 선분 CA 위의 점 R가 $(\\vec{\\mathrm{PB}}+\\vec{\\mathrm{PQ}})\\cdot\\vec{\\mathrm{BC}}=0$, $(\\vec{\\mathrm{RC}}+\\vec{\\mathrm{RQ}})\\cdot\\vec{\\mathrm{BC}}=0$, $|\\vec{\\mathrm{PQ}}|=|\\vec{\\mathrm{QR}}|$를 만족시킨다. $|\\vec{\\mathrm{XP}}+\\vec{\\mathrm{XQ}}+\\vec{\\mathrm{XR}}|=4$인 점 X에 대하여 $|\\vec{\\mathrm{AX}}|$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $9(M^2+m^2)$의 값을 구하시오."
+   ],
+   "answer": 544,
+   "hint": "$q=6$: P$(3,4)$, Q$(6,0)$, R$(9,4)$, G$\\left(6,\\tfrac83\\right)$, $\\overline{\\mathrm{AG}}=\\tfrac{16}3$. $2\\left(\\tfrac{256}9+\\tfrac{16}9\\right)=\\tfrac{544}9$."
+  }
+ ],
+ "line": "$(\\vec{\\mathrm{PB}}+\\vec{\\mathrm{PQ}})\\perp\\overline{\\mathrm{BQ}}$이면 이등변. 세 벡터의 합은 무게중심."
+}
