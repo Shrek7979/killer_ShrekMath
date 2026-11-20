@@ -556,7 +556,10 @@ def main():
                 '<script>if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(()=>{}))</script>\n'
                 '</head>\n<body>\n__BODY__\n</body>\n</html>\n')
     with open(os.path.join(SITE, 'index.html'), 'w', encoding='utf-8') as f:
-        f.write(skeleton.replace('__BODY__', tpl.replace('/*__INLINE_DATA__*/', locals().get('pay_js', ''))))
+        # 사이트에서는 수식 라이브러리를 직접 둔다 (학교망 등에서 CDN이 막혀도 수식이 깨지지 않게). 단일 파일은 CDN 그대로.
+        site_tpl = tpl.replace('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js', '/lib/katex.min.js').replace('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js', '/lib/auto-render.min.js')
+        f.write(skeleton.replace('__BODY__', site_tpl.replace('/*__INLINE_DATA__*/', locals().get('pay_js', ''))))
+    shutil.copytree(os.path.join(ROOT, 'src', 'lib'), os.path.join(SITE, 'lib'), dirs_exist_ok=True)
     # 아이콘: src/icon/ (원본 source.png 에서 만든 PNG/ICO) 를 site/ 루트로 복사
     ICON = os.path.join(ROOT, 'src', 'icon')
     for fn in ('favicon.ico', 'favicon-32.png', 'favicon-64.png', 'apple-touch-icon.png', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png'):
