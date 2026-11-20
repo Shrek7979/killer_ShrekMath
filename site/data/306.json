@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2025학년도 대학수학능력시험 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **1089** — 반원 제한 없이 최솟값을 $-15$로 계산한 경우",
  "answer": 891,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -60,9 +60,11 @@
     0
    ],
    "text": "$|\\vec{{\\mathrm{XB}}}+\\vec{{\\mathrm{XC}}}|=|\\vec{{\\mathrm{XB}}}-\\vec{{\\mathrm{XC}}}|$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "수직 조건",
+   "why": "$\\vec{\\mathrm{XB}}\\cdot\\vec{\\mathrm{XC}}=0$ → 중심 $(6,3)$, 반지름 $3$인 원.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C3",
@@ -71,9 +73,12 @@
     0
    ],
    "text": "를 만족시키는 점 ${\\mathrm{X}}$ 가 나타내는 도형 중 정사각형 ${\\mathrm{ABCD}}$ 의 내부 또는 둘레 위에 있는 부분을 $S$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "반원",
+   "why": "정사각형 안 → $x\\le6$인 반원.",
+   "uses": [
+    1,
+    5
+   ]
   },
   {
    "id": "C4",
@@ -93,9 +98,11 @@
     0
    ],
    "text": "$4 \\vec{{\\mathrm{PQ}}}=\\vec{{\\mathrm{PA}}}+2 \\vec{{\\mathrm{PD}}}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "Q의 정의",
+   "why": "$\\mathrm Q=\\frac14(\\mathrm P+\\mathrm A+2\\mathrm D)$.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C6",
@@ -115,62 +122,113 @@
     1
    ],
    "text": "점 ${\\mathrm{E}}(2,3)$ 에 대하여 $\\vec{{\\mathrm{BQ}}}\\cdot \\vec{{\\mathrm{BE}}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M \\times m$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\vec{\\mathrm{BQ}}\\cdot\\vec{\\mathrm{BE}}$의 최대·최소의 곱.",
+   "uses": [
+    3,
+    4,
+    6,
+    7
+   ]
   }
  ],
  "intro": [
-  "도형 S를 반원으로 제한하고 내적의 방향 벡터를 $(-4,3)$ 으로 잡아, 최댓값은 접점에서, 최솟값은 반원의 끝점에서 생기도록 설계"
+  "$|\\vec{\\mathrm{XB}}+\\vec{\\mathrm{XC}}|=|\\vec{\\mathrm{XB}}-\\vec{\\mathrm{XC}}|$ → BC를 지름으로 하는 원, 정사각형 안쪽만이라 **반원**. Q는 P의 일차식이라 내적도 P의 일차식.",
+  "원 위 일차식의 최대·최소는 ‘중심값 ± 반지름×크기’지만, 반원이면 한쪽이 끝점으로 바뀔 수 있습니다."
  ],
  "topic": "평면벡터",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "벡터식 → 위치벡터",
+   "p": [
+    "$4(\\mathrm Q-\\mathrm P)=(\\mathrm A-\\mathrm P)+2(\\mathrm D-\\mathrm P)$."
+   ]
+  },
+  {
+   "h": "반원 위 일차식",
+   "p": [
+    "$\\vec{\\mathrm{KP}}\\cdot\\vec w$의 최대 방향이 반원 안이면 $3|\\vec w|$, 아니면 끝점. 최소도 마찬가지."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$|\\vec{{\\mathrm{XB}}}+\\vec{{\\mathrm{XC}}}|=|\\vec{{\\mathrm{XB}}}-\\vec{{\\mathrm{XC}}}|$ 에서 $\\vec{{\\mathrm{XB}}}\\cdot \\vec{{\\mathrm{XC}}}=0$ 이므로 $S$ 는 중심이 $(6,3)$ , 반지름의 길이가 $3$ 인 원 중 $x \\le 6$ 인 반원이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2",
+    "C3"
+   ],
+   "title": "반원 $S$"
   },
   {
    "n": 2,
    "text": "$4(\\vec{{\\mathrm{OQ}}}-\\vec{{\\mathrm{OP}}})=\\vec{{\\mathrm{OA}}}+2 \\vec{{\\mathrm{OD}}}-3 \\vec{{\\mathrm{OP}}}$ 에서 $\\vec{{\\mathrm{OQ}}}=\\frac{1}{4}(\\vec{{\\mathrm{OP}}}+\\vec{{\\mathrm{OA}}}+2 \\vec{{\\mathrm{OD}}})$ 이다. $\\vec{w}=\\vec{{\\mathrm{BE}}}=(-4,3)$ 이라 하면",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "Q의 위치"
   },
   {
    "n": 3,
    "text": "$$\\vec{{\\mathrm{BQ}}}\\cdot \\vec{w}=\\frac{1}{4}\\left(\\vec{{\\mathrm{OP}}}\\cdot \\vec{w}+36 \\right)+24$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C7"
+   ],
+   "title": "내적 정리"
   },
   {
    "n": 4,
    "text": "$\\vec{{\\mathrm{OP}}}\\cdot \\vec{w}=-15+\\vec{{\\mathrm{KP}}}\\cdot \\vec{w}$ ( ${\\mathrm{K}}(6,3)$ )이고 $\\vec{{\\mathrm{KP}}}=3(\\cos t,\\sin t)$ , $\\frac{\\pi}{2}\\le t \\le \\frac{3 \\pi}{2}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C7"
+   ],
+   "title": "중심 기준 분해"
   },
   {
    "n": 5,
    "text": "$\\vec{{\\mathrm{KP}}}\\cdot \\vec{w}$ 의 최댓값은 $\\vec{{\\mathrm{KP}}}$ 가 $\\vec{w}$ 와 같은 방향일 때 $15$ 이고 이때 ${\\mathrm{P}}\\left(\\frac{18}{5},\\frac{24}{5}\\right)$ 는 반원 위에 있다. 최솟값은 반원의 끝점 중 $\\vec{w}$ 와 이루는 각이 큰 쪽 ${\\mathrm{P}}={\\mathrm{B}}$ 에서 $(0,-3)\\cdot(-4,3)=-9$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "반원에서 최대·최소"
   },
   {
    "n": 6,
    "text": "따라서 $\\vec{{\\mathrm{OP}}}\\cdot \\vec{w}$ 의 범위는 $-24$ 이상 $0$ 이하이고, $m=\\frac{12}{4}+24=27$ , $M=\\frac{36}{4}+24=33$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C7"
+   ],
+   "title": "범위"
   },
   {
    "n": 7,
    "text": "$$M \\times m=891$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C7"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "최솟값은 끝점 B",
+   "cond": "C3",
+   "text": [
+    "$\\vec{\\mathrm{KP}}$가 $-\\vec w=(4,-3)$ 방향이면 $-15$지만 그 점은 $x>6$이라 반원 밖. 끝점 B에서 $-9$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · E$(3,4)$",
+   "body": [
+    "네 점 A$(0,0)$, B$(6,0)$, C$(6,6)$, D$(0,6)$에 대하여 $|\\vec{\\mathrm{XB}}+\\vec{\\mathrm{XC}}|=|\\vec{\\mathrm{XB}}-\\vec{\\mathrm{XC}}|$를 만족시키는 점 X 중 정사각형 ABCD의 내부 또는 둘레 위에 있는 부분을 $S$라 하자. $S$ 위의 점 P에 대하여 $4\\vec{\\mathrm{PQ}}=\\vec{\\mathrm{PA}}+2\\vec{\\mathrm{PD}}$인 점을 Q라 할 때, 점 E$(3,4)$에 대하여 $\\vec{\\mathrm{BQ}}\\cdot\\vec{\\mathrm{BE}}$의 최댓값을 $M$, 최솟값을 $m$이라 하자. $4(M+m)$의 값을 구하시오."
+   ],
+   "answer": 231,
+   "hint": "$\\vec w=(-3,4)$, 값 $=\\frac{\\mathrm P\\cdot\\vec w}4+30$, $\\mathrm P\\cdot\\vec w=-6+\\vec{\\mathrm{KP}}\\cdot\\vec w\\in[-18,9]$ (최소는 끝점 $(6,0)$). $M=32.25$, $m=25.5$."
+  }
+ ],
+ "line": "반원 위 일차식: 최대 방향이 반원 안인지, 아니면 끝점인지.",
  "note": ""
 }

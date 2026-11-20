@@ -1,0 +1,173 @@
+{
+ "wrong": "예상 오답 **100** — 넓이를 $\\vec e$와 무관하다고 보고 $10^2$으로 답한 경우",
+ "intro": [
+  "앞 문항(39)의 사각형 버전. 최대 조건에서 네 벡터가 같은 방향 $\\vec e$, 방향은 자유. 대각선 $\\vec{\\mathrm{PR}}=\\vec u+2\\vec e$, $\\vec{\\mathrm{QT}}=\\vec v+2\\vec e$.",
+  "사각형 넓이 $\\frac12ab\\sin\\varphi$ = 두 대각선 벡터로 만든 삼각형 OUV의 넓이. 밑변 UV가 고정이라 높이만 움직입니다."
+ ],
+ "conds": {
+  "C1": {
+   "label": "정사각형과 내분점",
+   "why": "E, F, G, H는 각 변의 $1:3$ 내분점.",
+   "uses": [
+    3
+   ]
+  },
+  "C3": {
+   "label": "(가) 네 원",
+   "why": "반지름 $1,2,3,4$.",
+   "uses": [
+    2,
+    4,
+    10
+   ]
+  },
+  "C4": {
+   "label": "(나)",
+   "why": "고정 부분 $\\frac34(\\vec{\\mathrm{AB}}+\\cdots)=\\vec0$.",
+   "uses": [
+    1
+   ]
+  },
+  "C5": {
+   "label": "묻는 것",
+   "why": "$|\\vec{\\mathrm{AX}}|$ 최대일 때 사각형 PQRT 넓이의 최대·최소의 곱.",
+   "uses": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    11,
+    12,
+    13
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "대각선과 사각형 넓이",
+   "p": [
+    "볼록사각형의 넓이 $=\\frac12\\times$(두 대각선 길이)$\\times\\sin$(사잇각)."
+   ]
+  },
+  {
+   "h": "평행이동된 직선과 점의 거리",
+   "p": [
+    "직선을 $\\vec w$만큼 옮기는 것 = 점을 $-\\vec w$만큼 옮기는 것."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "고정 부분 $\\vec0$",
+   "text": "$\\vec{{\\mathrm{PB}}}+\\vec{{\\mathrm{QC}}}+\\vec{{\\mathrm{RD}}}+\\vec{{\\mathrm{TA}}}=(\\vec{{\\mathrm{EB}}}+\\vec{{\\mathrm{FC}}}+\\vec{{\\mathrm{GD}}}+\\vec{{\\mathrm{HA}}})-(\\vec{{\\mathrm{EP}}}+\\vec{{\\mathrm{FQ}}}+\\vec{{\\mathrm{GR}}}+\\vec{{\\mathrm{HT}}})$ 이고 $\\vec{{\\mathrm{EB}}}+\\vec{{\\mathrm{FC}}}+\\vec{{\\mathrm{GD}}}+\\vec{{\\mathrm{HA}}}=\\frac{3}{4}(\\vec{{\\mathrm{AB}}}+\\vec{{\\mathrm{BC}}}+\\vec{{\\mathrm{CD}}}+\\vec{{\\mathrm{DA}}})=\\vec{0}$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "최대 조건",
+   "text": "따라서 $|\\vec{{\\mathrm{AX}}}|\\le 1+2+3+4=10$ 이고, 등호는 단위벡터 $\\vec{e}=(\\cos \\theta,\\sin \\theta)$ 에 대하여 $\\vec{{\\mathrm{EP}}}=\\vec{e}$ , $\\vec{{\\mathrm{FQ}}}=2 \\vec{e}$ , $\\vec{{\\mathrm{GR}}}=3 \\vec{e}$ , $\\vec{{\\mathrm{HT}}}=4 \\vec{e}$ 일 때 성립한다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "좌표",
+   "text": "${\\mathrm{A}}(0,4)$ , ${\\mathrm{B}}(0,0)$ , ${\\mathrm{C}}(4,0)$ , ${\\mathrm{D}}(4,4)$ 로 놓으면 ${\\mathrm{E}}(0,3)$ , ${\\mathrm{F}}(1,0)$ , ${\\mathrm{G}}(4,1)$ , ${\\mathrm{H}}(3,4)$ 이고, $\\vec{u}=\\vec{{\\mathrm{EG}}}=(4,-2)$ , $\\vec{v}=\\vec{{\\mathrm{FH}}}=(2,4)$ 라 하면 사각형 ${\\mathrm{PQRT}}$ 의 두 대각선은",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "대각선",
+   "text": "$$\\vec{{\\mathrm{PR}}}=\\vec{u}+2 \\vec{e},\\vec{{\\mathrm{QT}}}=\\vec{v}+2 \\vec{e}$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "넓이 공식",
+   "text": "이다. 두 대각선의 길이를 $a$ , $b$ , 두 대각선이 이루는 각의 크기를 $v a r \\phi$ 라 하면 사각형 ${\\mathrm{PQRT}}$ 의 넓이는 $\\frac{1}{2}a b \\sin v a r \\phi$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "삼각형 OUV",
+   "text": "원점 ${\\mathrm{O}}$ 에 대하여 $\\vec{{\\mathrm{OU}}}=\\vec{{\\mathrm{PR}}}$ , $\\vec{{\\mathrm{OV}}}=\\vec{{\\mathrm{QT}}}$ 인 두 점 ${\\mathrm{U}}$ , ${\\mathrm{V}}$ 를 잡으면 삼각형 ${\\mathrm{OUV}}$ 의 넓이도 $\\frac{1}{2}a b \\sin v a r \\phi$ 이므로 두 넓이는 같다. 그런데",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "UV 고정",
+   "text": "$$\\vec{{\\mathrm{UV}}}=\\vec{{\\mathrm{QT}}}-\\vec{{\\mathrm{PR}}}=\\vec{v}-\\vec{u}=(-2,6)$$",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "높이",
+   "text": "은 $\\vec{e}$ 와 관계없이 일정하므로, 삼각형 ${\\mathrm{OUV}}$ 의 밑변을 ${\\mathrm{UV}}$ $\\left(\\overline{{\\mathrm{UV}}}=2 \\sqrt{10}\\right)$ 로 보면 넓이는 점 ${\\mathrm{O}}$ 와 직선 ${\\mathrm{UV}}$ 사이의 거리(높이)로 정해진다.",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "직선 평행이동",
+   "text": "두 점 ${\\mathrm{U}}$ , ${\\mathrm{V}}$ 는 각각 두 점 ${\\mathrm{U}}_{0}(4,-2)$ , ${\\mathrm{V}}_{0}(2,4)$ 를 $2 \\vec{e}$ 만큼 평행이동한 점이다. 직선 ${\\mathrm{U}}_{0}{\\mathrm{V}}_{0}$ 의 방정식은 $3 x+y=10$ 이고, 직선 ${\\mathrm{UV}}$ 는 이 직선을 $2 \\vec{e}$ 만큼 평행이동한 직선이므로, 점 ${\\mathrm{O}}$ 와 직선 ${\\mathrm{UV}}$ 사이의 거리는 점 ${\\mathrm{O}}$ 를 $-2 \\vec{e}$ 만큼 평행이동한 점 ${\\mathrm{K}}$ 와 직선 $3 x+y=10$ 사이의 거리와 같다.",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "K의 원",
+   "text": "점 ${\\mathrm{K}}$ 는 원점을 중심으로 하고 반지름의 길이가 $2$ 인 원 위의 점이고, $\\vec{e}$ 의 방향이 자유로우므로 이 원 위의 모든 점이 될 수 있다. 원점과 직선 $3 x+y=10$ 사이의 거리는 $\\frac{10}{\\sqrt{10}}=\\sqrt{10}$ $(>2)$ 이므로 점 ${\\mathrm{K}}$ 와 이 직선 사이의 거리의 범위는 $\\sqrt{10}-2$ 이상 $\\sqrt{10}+2$ 이하이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "넓이 식",
+   "text": "따라서 사각형 ${\\mathrm{PQRT}}$ 의 넓이는 $\\frac{1}{2}\\times 2 \\sqrt{10}\\times h=\\sqrt{10}h$ ( $h$ 는 위의 높이)이므로",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "$M$, $m$",
+   "text": "$$M=\\sqrt{10}\\left(\\sqrt{10}+2 \\right)=10+2 \\sqrt{10},m=\\sqrt{10}\\left(\\sqrt{10}-2 \\right)=10-2 \\sqrt{10}$$",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이고 $M \\times m=100-40=60$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\vec e$가 자유",
+   "cond": "C3",
+   "text": [
+    "넓이는 K가 반지름 $2$인 원 위를 돌 때 직선까지 거리로 결정됩니다."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 한 변 8",
+   "body": [
+    "한 변의 길이가 $8$인 정사각형 ABCD에서 선분 AB, BC, CD, DA를 각각 $1:3$으로 내분하는 점을 E, F, G, H라 하자. 다섯 점 P, Q, R, T, X가 $|\\vec{\\mathrm{EP}}|=1$, $|\\vec{\\mathrm{FQ}}|=2$, $|\\vec{\\mathrm{GR}}|=3$, $|\\vec{\\mathrm{HT}}|=4$, $\\vec{\\mathrm{AX}}=\\vec{\\mathrm{PB}}+\\vec{\\mathrm{QC}}+\\vec{\\mathrm{RD}}+\\vec{\\mathrm{TA}}$를 만족시킨다. $|\\vec{\\mathrm{AX}}|$가 최대가 되도록 하는 다섯 점에 대하여 사각형 PQRT의 넓이의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $M\\times m$의 값을 구하시오."
+   ],
+   "answer": 1440,
+   "hint": "$\\vec{\\mathrm{UV}}=(-4,12)$, 직선 $3x+y=20$, 원점 거리 $2\\sqrt{10}$. 넓이 $2\\sqrt{10}\\,h$, $h=2\\sqrt{10}\\pm2$ → $40\\times36$."
+  }
+ ],
+ "line": "대각선으로 사각형 넓이 → 고정 밑변 삼각형 → 높이는 원 위 점과 직선의 거리."
+}
