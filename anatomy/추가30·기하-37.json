@@ -1,0 +1,135 @@
+{
+ "wrong": "예상 오답 **232** — $\\mathrm P_0$를 제한 없는 최솟값 방향으로 잡은 경우",
+ "intro": [
+  "앞 단계는 익숙한 구조: $\\vec{\\mathrm{AQ}}=\\vec{\\mathrm{AB}}+\\vec{\\mathrm{BQ}}$로 쪼개 Q를 $-\\vec{\\mathrm{AP}}$ 방향으로. 남은 $\\vec{\\mathrm{AP}}\\cdot\\vec{\\mathrm{AB}}$는 **$\\cos t\\le0$ 제한** 때문에 끝점 $t=\\frac{3\\pi}2$에서 최소.",
+  "$\\mathrm P_0$, $\\mathrm Q_0$가 정해지면 뒷부분은 선분 위 점에 대한 이차식."
+ ],
+ "conds": {
+  "C2": {
+   "label": "조건",
+   "why": "P: A 중심 반지름 $2$, Q: B 중심 반지름 $2$, $\\vec{\\mathrm{OA}}\\cdot\\vec{\\mathrm{OP}}\\le36$ → P의 $x\\le6$.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C4": {
+   "label": "최소가 되는 점",
+   "why": "$\\mathrm P_0(6,-2)$, $\\mathrm Q_0(0,10)$.",
+   "uses": [
+    1,
+    4,
+    5
+   ]
+  },
+  "C5": {
+   "label": "묻는 것",
+   "why": "선분 $\\mathrm{AP_0}$ 위 X에 대해 $\\vec{\\mathrm{XB}}\\cdot\\vec{\\mathrm{XQ_0}}$의 최대·최소의 합.",
+   "uses": [
+    6,
+    7,
+    8,
+    9
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "원의 중심을 거쳐 쪼개기",
+   "p": [
+    "$\\vec{\\mathrm{AQ}}=\\vec{\\mathrm{AB}}+\\vec{\\mathrm{BQ}}$, $\\vec{\\mathrm{AP}}\\cdot\\vec{\\mathrm{BQ}}\\ge-4$."
+   ]
+  },
+  {
+   "h": "제한된 각에서의 사인 함수",
+   "p": [
+    "$20\\sin(t-\\alpha)$, $t\\in[\\frac\\pi2,\\frac{3\\pi}2]$. 최소는 끝점."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "쪼개기",
+   "text": "$\\vec{{\\mathrm{AP}}}\\cdot \\vec{{\\mathrm{AQ}}}=\\vec{{\\mathrm{AP}}}\\cdot \\vec{{\\mathrm{AB}}}+\\vec{{\\mathrm{AP}}}\\cdot \\vec{{\\mathrm{BQ}}}\\ge \\vec{{\\mathrm{AP}}}\\cdot \\vec{{\\mathrm{AB}}}-4$ 이고 등호는 $\\vec{{\\mathrm{BQ}}}=-\\vec{{\\mathrm{AP}}}$ 일 때 성립한다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "각의 범위",
+   "text": "$\\vec{{\\mathrm{AP}}}=2(\\cos t,\\sin t)$ 라 하면 $\\vec{{\\mathrm{OA}}}\\cdot \\vec{{\\mathrm{OP}}}=6(6+2 \\cos t)\\le 36$ 에서 $\\cos t \\le 0$ , 즉 $\\frac{\\pi}{2}\\le t \\le \\frac{3 \\pi}{2}$ 이다. $\\vec{{\\mathrm{AB}}}=(-6,8)$ 이므로",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "합성",
+   "text": "$$\\vec{{\\mathrm{AP}}}\\cdot \\vec{{\\mathrm{AB}}}=-12 \\cos t+16 \\sin t=20 \\sin(t-\\alpha)\\left(\\cos \\alpha=\\frac{4}{5},\\sin \\alpha=\\frac{3}{5}\\right)$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "최소",
+   "text": "$\\frac{\\pi}{2}-\\alpha \\le t-\\alpha \\le \\frac{3 \\pi}{2}-\\alpha$ 에서 $\\sin(t-\\alpha)$ 는 $t=\\frac{3 \\pi}{2}$ 일 때 최솟값 $-\\frac{4}{5}$ 를 가지므로 최솟값은 $-16$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "$\\mathrm P_0$, $\\mathrm Q_0$",
+   "text": "따라서 $\\vec{{\\mathrm{A}}{\\mathrm{P}}_{0}}=(0,-2)$ , $\\vec{{\\mathrm{B}}{\\mathrm{Q}}_{0}}=(0,2)$ 이고 ${\\mathrm{P}}_{0}(6,-2)$ , ${\\mathrm{Q}}_{0}(0,10)$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "X의 좌표",
+   "text": "선분 ${\\mathrm{A}}{\\mathrm{P}}_{0}$ 위의 점 ${\\mathrm{X}}(6,y)$ $(-2 \\le y \\le 0)$ 에 대하여",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "내적 식",
+   "text": "$$\\vec{{\\mathrm{XB}}}\\cdot \\vec{{\\mathrm{X}}{\\mathrm{Q}}_{0}}=(-6,8-y)\\cdot(-6,10-y)=36+(8-y)(10-y)$$",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "범위",
+   "text": "는 $y$ 가 감소할수록 증가하므로 $m=36+80=116$ ( $y=0$ ), $M=36+120=156$ ( $y=-2$ )이다.",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $M+m=272$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "제한 $\\vec{\\mathrm{OA}}\\cdot\\vec{\\mathrm{OP}}\\le36$",
+   "cond": "C2",
+   "text": [
+    "이 조건이 없으면 최소는 $-20$이고 방향이 달라집니다. 반원으로 제한되어 끝점에서 $-16$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $|\\vec{\\mathrm{BQ}}|=3$",
+   "body": [
+    "두 점 A$(6,0)$, B$(0,8)$에 대하여 두 점 P, Q가 $|\\vec{\\mathrm{AP}}|=2$, $|\\vec{\\mathrm{BQ}}|=3$, $\\vec{\\mathrm{OA}}\\cdot\\vec{\\mathrm{OP}}\\le36$을 만족시킨다. $\\vec{\\mathrm{AP}}\\cdot\\vec{\\mathrm{AQ}}$가 최소가 되도록 하는 P, Q를 $\\mathrm P_0$, $\\mathrm Q_0$이라 할 때, 선분 $\\mathrm{AP_0}$ 위를 움직이는 점 X에 대하여 $\\vec{\\mathrm{XB}}\\cdot\\vec{\\mathrm{XQ_0}}$의 최댓값을 $M$, 최솟값을 $m$이라 하자. $M+m$의 값을 구하시오. (단, O는 원점)"
+   ],
+   "answer": 290,
+   "hint": "$\\mathrm P_0(6,-2)$, $\\mathrm Q_0(0,11)$. $36+(8-y)(11-y)$: $y=0$에서 $124$, $y=-2$에서 $166$."
+  }
+ ],
+ "line": "제한된 원 위 최소는 끝점. 정해진 점으로 선분 위 이차식."
+}
