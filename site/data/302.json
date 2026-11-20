@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2025학년도 6월 모의평가 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **20** — $\\theta$의 범위를 $(0,\\frac\\pi2)$로 두고 다른 각에서 최대를 잡은 경우",
  "answer": 17,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -39,9 +39,11 @@
     0
    ],
    "text": "두 초점이 ${\\mathrm{F}}(4,0)$ , ${\\mathrm{F}}'(-4,0)$ 인 타원 $\\frac{x^{2}}{25}+\\frac{y^{2}}{9}=1$ 위의 점 중 $x$ 좌표가 $0$ 이상이고 $y$ 좌표가 양수인 점 ${\\mathrm{P}}$ 에 대하여 점 ${\\mathrm{X}}$ 가",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "타원과 P의 범위",
+   "why": "$\\frac{x^2}{25}+\\frac{y^2}9=1$, 초점 $(\\pm4,0)$. P는 $x\\ge0$, $y>0$.",
+   "uses": [
+    3
+   ]
   },
   {
    "id": "C2",
@@ -50,9 +52,12 @@
     0
    ],
    "text": "$\\vec{{\\mathrm{PX}}}=\\frac{|\\vec{{\\mathrm{PF}}}|}{|\\vec{{\\mathrm{P}}{\\mathrm{F}}'}|}\\vec{{\\mathrm{F}}'{\\mathrm{P}}}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "벡터 조건",
+   "why": "$\\vec{\\mathrm{F'X}}=\\left(1+\\frac{\\overline{\\mathrm{PF}}}{\\overline{\\mathrm{PF'}}}\\right)\\vec{\\mathrm{F'P}}$ → 길이 $10$.",
+   "uses": [
+    1,
+    2
+   ]
   },
   {
    "id": "C3",
@@ -72,9 +77,11 @@
     1
    ],
    "text": "선분 ${\\mathrm{FX}}$ 의 중점을 ${\\mathrm{M}}$ 이라 할 때, 점 ${\\mathrm{B}}(-1,7)$ 에 대하여 $\\vec{{\\mathrm{OM}}}\\cdot \\vec{{\\mathrm{OB}}}$ 의 최댓값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\vec{\\mathrm{OM}}\\cdot\\vec{\\mathrm{OB}}$의 최댓값.",
+   "uses": [
+    4
+   ]
   },
   {
    "id": "C5",
@@ -89,38 +96,84 @@
   }
  ],
  "intro": [
-  "타원의 정의로 $|\\vec{{\\mathrm{F'X}}}|=10$ 을 얻고 중점 M이 원 위의 호를 그림을 파악한 뒤, 호의 끝점에서 최댓값이 생기는 경우를 판단하게 함"
+  "$\\vec{\\mathrm{PX}}$의 계수가 $\\frac{\\overline{\\mathrm{PF}}}{\\overline{\\mathrm{PF'}}}$이라 $\\overline{\\mathrm{F'X}}=\\overline{\\mathrm{PF'}}+\\overline{\\mathrm{PF}}=10$ (타원의 정의). 중점연결정리로 $|\\vec{\\mathrm{OM}}|=5$.",
+  "P의 범위(제1사분면, $x\\ge0$)가 방향각을 $(0,\\theta_0]$으로 자릅니다. 그 안에서 내적이 증가하므로 끝 $\\theta_0$에서 최대."
  ],
  "topic": "이차곡선과 벡터",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "타원의 정의",
+   "p": [
+    "$\\overline{\\mathrm{PF}}+\\overline{\\mathrm{PF'}}=2a$."
+   ]
+  },
+  {
+   "h": "중점연결정리",
+   "p": [
+    "$\\vec{\\mathrm{OM}}=\\frac12\\vec{\\mathrm{F'X}}$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$\\vec{{\\mathrm{F}}'{\\mathrm{X}}}=\\vec{{\\mathrm{F}}'{\\mathrm{P}}}+\\vec{{\\mathrm{PX}}}=\\left(1+\\frac{|\\vec{{\\mathrm{PF}}}|}{|\\vec{{\\mathrm{P}}{\\mathrm{F}}'}|}\\right)\\vec{{\\mathrm{F}}'{\\mathrm{P}}}$ 이므로 $|\\vec{{\\mathrm{F}}'{\\mathrm{X}}}|=|\\vec{{\\mathrm{P}}{\\mathrm{F}}'}|+|\\vec{{\\mathrm{PF}}}|=10$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$\\overline{\\mathrm{F'X}}=10$"
   },
   {
    "n": 2,
    "text": "${\\mathrm{O}}$ 는 선분 ${\\mathrm{FF'}}$ 의 중점이므로 $\\vec{{\\mathrm{OM}}}=\\frac{1}{2}\\vec{{\\mathrm{F}}'{\\mathrm{X}}}$ , 즉 $\\vec{{\\mathrm{OM}}}=5(\\cos \\theta,\\sin \\theta)$ ( $\\theta$ 는 $\\vec{{\\mathrm{F}}'{\\mathrm{P}}}$ 가 $x$ 축의 양의 방향과 이루는 각)이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$\\vec{\\mathrm{OM}}$"
   },
   {
    "n": 3,
    "text": "점 ${\\mathrm{P}}$ 의 $x$ 좌표가 $0$ 이상이고 $y$ 좌표가 양수이므로 $0<\\theta \\le \\theta_{0}$ 이고, $\\theta_{0}$ 은 ${\\mathrm{P}}(0,3)$ 일 때로 $\\vec{{\\mathrm{F}}'{\\mathrm{P}}}=(4,3)$ 에서 $\\cos \\theta_{0}=\\frac{4}{5}$ , $\\sin \\theta_{0}=\\frac{3}{5}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "각의 범위"
   },
   {
    "n": 4,
    "text": "$\\vec{{\\mathrm{OM}}}\\cdot \\vec{{\\mathrm{OB}}}=5(-\\cos \\theta+7 \\sin \\theta)$ 는 $0<\\theta \\le \\theta_{0}$ 에서 증가하므로 ( $-\\cos \\theta$ 와 $\\sin \\theta$ 모두 증가) $\\theta=\\theta_{0}$ , 즉 ${\\mathrm{M}}(4,3)$ 일 때 최댓값 $-4+21=17$ 을 갖는다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "최댓값"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "각의 끝 $\\theta_0$",
+   "cond": "C1",
+   "text": [
+    "P$(0,3)$일 때 $\\vec{\\mathrm{F'P}}=(4,3)$. 이 이상 기울면 P의 $x$좌표가 음수."
+   ]
+  },
+  {
+   "h": "증가 확인",
+   "cond": "C4",
+   "text": [
+    "$-\\cos\\theta+7\\sin\\theta$는 $0<\\theta<\\frac\\pi2$에서 증가. 그래서 끝점에서 최대."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · B$(1,7)$",
+   "body": [
+    "두 초점이 F$(4,0)$, F'$(-4,0)$인 타원 $\\frac{x^2}{25}+\\frac{y^2}9=1$ 위의 $x$좌표가 $0$ 이상이고 $y$좌표가 양수인 점 P에 대하여 점 X가 $\\vec{\\mathrm{PX}}=\\frac{|\\vec{\\mathrm{PF}}|}{|\\vec{\\mathrm{PF'}}|}\\vec{\\mathrm{F'P}}$를 만족시킨다. 선분 FX의 중점을 M이라 할 때, 점 B$(1,7)$에 대하여 $\\vec{\\mathrm{OM}}\\cdot\\vec{\\mathrm{OB}}$의 최댓값을 구하시오."
+   ],
+   "answer": 25,
+   "hint": "$5(\\cos\\theta+7\\sin\\theta)$, $\\tan\\theta_0=\\frac34<7$이라 범위에서 증가 → $\\theta_0$: $5\\left(\\frac45+\\frac{21}5\\right)=25$."
+  }
+ ],
+ "line": "정의 + 중점연결정리로 길이 고정. 방향각의 범위 끝을 확인.",
  "note": ""
 }

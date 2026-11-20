@@ -1,0 +1,95 @@
+{
+ "wrong": "예상 오답 **96** — $\\vec{\\mathrm{AQ}}\\cdot\\vec{\\mathrm{AD}}$의 범위를 $[0,16]$으로 둔 경우",
+ "intro": [
+  "$\\vec{\\mathrm{AX}}=\\frac12(\\vec{\\mathrm{AP}}+\\vec{\\mathrm{AQ}})$이므로 내적도 반반. P와 Q는 **독립**이라 각각의 범위를 따로 구해 더하면 됩니다.",
+  "$\\vec{\\mathrm{AQ}}\\cdot\\vec{\\mathrm{AD}}=16+\\vec{\\mathrm{DQ}}\\cdot\\vec{\\mathrm{AD}}$, 뒤 항은 $\\pm4$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "정육각형과 원",
+   "why": "한 변 $2$인 정육각형 둘레 위의 P, D 중심 반지름 $1$인 원 위의 Q. $\\overline{\\mathrm{AD}}=4$.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C2": {
+   "label": "벡터식",
+   "why": "X는 P와 Q의 중점 (A 기준).",
+   "uses": [
+    1
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$\\vec{\\mathrm{AX}}\\cdot\\vec{\\mathrm{AD}}$의 최대·최소의 곱.",
+   "uses": [
+    4
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "정사영과 내적",
+   "p": [
+    "$\\vec{\\mathrm{AP}}\\cdot\\vec{\\mathrm{AD}}=\\overline{\\mathrm{AD}}\\times$(P의 AD 방향 정사영 길이)."
+   ]
+  },
+  {
+   "h": "독립인 두 점",
+   "p": [
+    "$f(\\mathrm P)+g(\\mathrm Q)$의 범위는 각 범위의 합."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "내적을 반반",
+   "text": "$\\vec{{\\mathrm{AX}}}\\cdot \\vec{{\\mathrm{AD}}}=\\frac{1}{2}\\left(\\vec{{\\mathrm{AP}}}\\cdot \\vec{{\\mathrm{AD}}}+\\vec{{\\mathrm{AQ}}}\\cdot \\vec{{\\mathrm{AD}}}\\right)$ 이고, 두 점 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ 는 서로 독립적으로 움직인다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "P 부분 $[0,16]$",
+   "text": "$\\overline{{\\mathrm{AD}}}=4$ 이고 정육각형의 모든 점은 직선 ${\\mathrm{AD}}$ 위로의 정사영이 선분 ${\\mathrm{AD}}$ 위에 있으므로 $0 \\le \\vec{{\\mathrm{AP}}}\\cdot \\vec{{\\mathrm{AD}}}\\le 16$ 이다( ${\\mathrm{P}}={\\mathrm{A}}$ 일 때 $0$ , ${\\mathrm{P}}={\\mathrm{D}}$ 일 때 $16$ ).",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "Q 부분 $[12,20]$",
+   "text": "$\\vec{{\\mathrm{AQ}}}\\cdot \\vec{{\\mathrm{AD}}}=|\\vec{{\\mathrm{AD}}}|^{2}+\\vec{{\\mathrm{DQ}}}\\cdot \\vec{{\\mathrm{AD}}}=16+\\vec{{\\mathrm{DQ}}}\\cdot \\vec{{\\mathrm{AD}}}$ 이고 $-4 \\le \\vec{{\\mathrm{DQ}}}\\cdot \\vec{{\\mathrm{AD}}}\\le 4$ 이므로 $12 \\le \\vec{{\\mathrm{AQ}}}\\cdot \\vec{{\\mathrm{AD}}}\\le 20$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $6 \\le \\vec{{\\mathrm{AX}}}\\cdot \\vec{{\\mathrm{AD}}}\\le 18$ 이고 구하는 곱은 $108$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "Q 부분을 D 기준으로",
+   "cond": "C1",
+   "text": [
+    "$\\vec{\\mathrm{AQ}}=\\vec{\\mathrm{AD}}+\\vec{\\mathrm{DQ}}$. D 기준으로 쪼개야 원의 반지름이 그대로 들어갑니다."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $|\\vec{\\mathrm{DQ}}|=2$",
+   "body": [
+    "한 변의 길이가 $2$인 정육각형 ABCDEF의 변 위를 움직이는 점 P와 $|\\vec{\\mathrm{DQ}}|=2$를 만족시키는 점 Q에 대하여 점 X가 $\\vec{\\mathrm{AX}}=\\frac12(\\vec{\\mathrm{AP}}+\\vec{\\mathrm{AQ}})$를 만족시킨다. $\\vec{\\mathrm{AX}}\\cdot\\vec{\\mathrm{AD}}$의 최댓값과 최솟값의 곱을 구하시오."
+   ],
+   "answer": 80,
+   "hint": "Q 부분 $16\\pm8$ → $[8,24]$, 합 $[8,40]$, 절반 $[4,20]$."
+  }
+ ],
+ "line": "독립인 두 점의 식은 따로 범위를 구해 더한다. 원 위 점은 중심을 거쳐 쪼갠다."
+}
