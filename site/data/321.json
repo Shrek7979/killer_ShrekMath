@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2022학년도 9월 모의평가 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **149** — 조건 $\\vec{\\mathrm{BX}}\\cdot\\vec{\\mathrm{BQ_0}}\\ge-7$을 무시하고 $s=1$을 쓴 경우",
  "answer": 189,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -52,9 +52,12 @@
     0
    ],
    "text": "$|\\vec{{\\mathrm{AP}}}|=1,|\\vec{{\\mathrm{BQ}}}|=2,\\vec{{\\mathrm{AP}}}\\cdot \\vec{{\\mathrm{OB}}}\\ge 0$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건",
+   "why": "P: A 중심 반지름 $1$, Q: B 중심 반지름 $2$, $\\vec{\\mathrm{AP}}\\cdot\\vec{\\mathrm{OB}}\\ge0$ → P의 $y\\ge0$.",
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C3",
@@ -74,9 +77,12 @@
     1
    ],
    "text": "$\\vec{{\\mathrm{AP}}}\\cdot \\vec{{\\mathrm{AQ}}}$ 의 값이 최소가 되도록 하는 두 점 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ 를 각각 ${\\mathrm{P}}_{0}$ , ${\\mathrm{Q}}_{0}$ 이라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "최소가 되는 점",
+   "why": "$\\mathrm P_0(4,0)$, $\\mathrm Q_0(-2,4)$.",
+   "uses": [
+    1,
+    4
+   ]
   },
   {
    "id": "C5",
@@ -85,9 +91,13 @@
     2
    ],
    "text": "선분 ${\\mathrm{A}}{\\mathrm{P}}_{0}$ 위의 점 ${\\mathrm{X}}$ 에 대하여 $\\vec{{\\mathrm{BX}}}\\cdot \\vec{{\\mathrm{B}}{\\mathrm{Q}}_{0}}\\ge-7$ 일 때, $|\\vec{{\\mathrm{Q}}_{0}{\\mathrm{X}}}|^{2}$ 의 최댓값은 $\\frac{q}{p}$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "X의 제한과 묻는 것",
+   "why": "X$(3+s,0)$, $-6-2s\\ge-7$ → $s\\le\\frac12$. $|\\vec{\\mathrm{Q_0X}}|^2$의 최댓값.",
+   "uses": [
+    5,
+    6,
+    7
+   ]
   },
   {
    "id": "C6",
@@ -113,56 +123,108 @@
   }
  ],
  "intro": [
-  "두 원의 위치와 반지름, P의 제한 조건(반원)을 바꾸고, 두 번째 단계의 조건을 일차부등식으로 바꾸어 선분의 일부에서 최댓값을 찾게 함"
+  "앞 단계: $\\vec{\\mathrm{AQ}}=\\vec{\\mathrm{AB}}+\\vec{\\mathrm{BQ}}$로 쪼개기, P는 $\\sin t\\ge0$ 제한으로 끝점 $t=0$에서 최소.",
+  "뒤 단계: 선분 위 X에 대한 **부등식 제한**이 $s$의 범위를 자르고, 그 안에서 거리 제곱의 최대를 찾습니다."
  ],
  "topic": "평면벡터",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "원의 중심을 거쳐 쪼개기",
+   "p": [
+    "$\\vec{\\mathrm{AP}}\\cdot\\vec{\\mathrm{BQ}}\\ge-2$, 등호는 $\\vec{\\mathrm{BQ}}=-2\\vec{\\mathrm{AP}}$."
+   ]
+  },
+  {
+   "h": "부등식으로 범위 자르기",
+   "p": [
+    "일차 부등식이 매개변수의 범위를 정하고, 그 안에서 단조 함수는 끝점에서 최대."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$\\vec{{\\mathrm{AP}}}\\cdot \\vec{{\\mathrm{AQ}}}=\\vec{{\\mathrm{AP}}}\\cdot \\vec{{\\mathrm{AB}}}+\\vec{{\\mathrm{AP}}}\\cdot \\vec{{\\mathrm{BQ}}}\\ge \\vec{{\\mathrm{AP}}}\\cdot \\vec{{\\mathrm{AB}}}-2$ (등호: $\\vec{{\\mathrm{BQ}}}=-2 \\vec{{\\mathrm{AP}}}$ )",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "쪼개기"
   },
   {
    "n": 2,
    "text": "$\\vec{{\\mathrm{AP}}}=(\\cos t,\\sin t)$ 라 하면 $\\vec{{\\mathrm{AP}}}\\cdot \\vec{{\\mathrm{OB}}}=4 \\sin t \\ge 0$ 에서 $0 \\le t \\le \\pi$ 이고, $\\vec{{\\mathrm{AB}}}=(-3,4)$ 에서",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "각의 범위"
   },
   {
    "n": 3,
    "text": "$$\\vec{{\\mathrm{AP}}}\\cdot \\vec{{\\mathrm{AB}}}=-3 \\cos t+4 \\sin t \\ge-3 \\cos t \\ge-3$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "하한"
   },
   {
    "n": 4,
    "text": "이므로 $t=0$ 일 때 최솟값 $-3$ 이다. 따라서 ${\\mathrm{P}}_{0}(4,0)$ , ${\\mathrm{Q}}_{0}(0,4)+(-2,0)=(-2,4)$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$\\mathrm P_0$, $\\mathrm Q_0$"
   },
   {
    "n": 5,
    "text": "선분 ${\\mathrm{A}}{\\mathrm{P}}_{0}$ 위의 점 ${\\mathrm{X}}(3+s,0)$ $(0 \\le s \\le 1)$ 에 대하여 $\\vec{{\\mathrm{BX}}}\\cdot \\vec{{\\mathrm{B}}{\\mathrm{Q}}_{0}}=(3+s,-4)\\cdot(-2,0)=-6-2 s \\ge-7$ 에서 $s \\le \\frac{1}{2}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "X의 범위"
   },
   {
    "n": 6,
    "text": "$|\\vec{{\\mathrm{Q}}_{0}{\\mathrm{X}}}|^{2}=(5+s)^{2}+16$ 은 $s=\\frac{1}{2}$ 일 때 최대 $\\frac{121}{4}+16=\\frac{185}{4}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "최대"
   },
   {
    "n": 7,
    "text": "따라서 $p+q=4+185=189$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "반원 제한",
+   "cond": "C2",
+   "text": [
+    "제한이 없으면 최소 방향이 바뀝니다. $y\\ge0$이라 $t=0$."
+   ]
+  },
+  {
+   "h": "$s$의 상한",
+   "cond": "C5",
+   "text": [
+    "조건이 $s\\le\\frac12$를 줍니다. 거리는 $s$에 대해 증가라 $s=\\frac12$에서 최대."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $|\\vec{\\mathrm{BQ}}|=3$, 조건 $\\ge-10$",
+   "body": [
+    "두 점 A$(3,0)$, B$(0,4)$에 대하여 두 점 P, Q가 $|\\vec{\\mathrm{AP}}|=1$, $|\\vec{\\mathrm{BQ}}|=3$, $\\vec{\\mathrm{AP}}\\cdot\\vec{\\mathrm{OB}}\\ge0$을 만족시킨다. $\\vec{\\mathrm{AP}}\\cdot\\vec{\\mathrm{AQ}}$가 최소가 되도록 하는 P, Q를 $\\mathrm P_0$, $\\mathrm Q_0$이라 하자. 선분 $\\mathrm{AP_0}$ 위의 점 X에 대하여 $\\vec{\\mathrm{BX}}\\cdot\\vec{\\mathrm{BQ_0}}\\ge-10$일 때, $|\\vec{\\mathrm{Q_0X}}|^2$의 최댓값은 $\\frac qp$이다. $p+q$의 값을 구하시오. (단, O는 원점, $p$, $q$는 서로소인 자연수)"
+   ],
+   "answer": 514,
+   "hint": "$\\mathrm Q_0(-3,4)$, $-9-3s\\ge-10$ → $s\\le\\frac13$. $\\left(\\frac{19}3\\right)^2+16=\\frac{505}9$."
+  }
+ ],
+ "line": "제한이 있는 최소 → 끝점. 부등식 제한 → 매개변수 범위.",
  "note": ""
 }

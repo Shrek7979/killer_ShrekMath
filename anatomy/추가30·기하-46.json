@@ -1,0 +1,117 @@
+{
+ "wrong": "예상 오답 **1036** — 최솟값을 원 위의 가장 가까운 점(삼각형 밖)에서 잡은 경우",
+ "intro": [
+  "세 거리 제곱의 합 → 무게중심 G로 모아 $|\\vec{\\mathrm{XG}}|=4$. X는 G 중심 반지름 4인 원 중 **삼각형 안쪽 부분**.",
+  "$\\vec{\\mathrm{XB}}\\cdot\\vec{\\mathrm{XC}}=|\\vec{\\mathrm{XN}}|^2-\\frac{225}4$. 가장 가까운 점이 삼각형 밖으로 나가면, 남은 호의 끝(직선 BC와의 교점)이 최솟값 후보가 됩니다."
+ ],
+ "conds": {
+  "C1": {
+   "label": "삼각형과 X",
+   "why": "A$(0,0)$, B$(12,0)$, C$(0,9)$, X는 삼각형 내부 또는 둘레.",
+   "uses": [
+    3,
+    4
+   ]
+  },
+  "C2": {
+   "label": "거리 제곱의 합",
+   "why": "$3|\\vec{\\mathrm{XG}}|^2+150=198$ → $|\\vec{\\mathrm{XG}}|=4$.",
+   "uses": [
+    1
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$\\vec{\\mathrm{XB}}\\cdot\\vec{\\mathrm{XC}}$의 최대·최소의 곱.",
+   "uses": [
+    2,
+    5,
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "무게중심과 거리 제곱의 합",
+   "p": [
+    "$\\sum|\\vec{\\mathrm{XA_i}}|^2=n|\\vec{\\mathrm{XG}}|^2+\\sum|\\vec{\\mathrm{GA_i}}|^2$."
+   ]
+  },
+  {
+   "h": "중점으로 내적 모으기",
+   "p": [
+    "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=|\\vec{\\mathrm{PK}}|^2-|\\vec{\\mathrm{KA}}|^2$ (K: AB의 중점)."
+   ]
+  },
+  {
+   "h": "잘린 원 위의 최대·최소",
+   "p": [
+    "원의 일부만 허용되면, 원 전체의 최대·최소점이 허용 범위 안인지 확인하고 아니면 호의 끝점을 비교."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "$|\\vec{\\mathrm{XG}}|=4$",
+   "text": "삼각형 ${\\mathrm{ABC}}$ 의 무게중심 ${\\mathrm{G}}(4,3)$ 에 대하여 $\\sum|\\vec{{\\mathrm{XA}}}|^{2}=3|\\vec{{\\mathrm{XG}}}|^{2}+(25+73+52)=3|\\vec{{\\mathrm{XG}}}|^{2}+150$ 이므로 $|\\vec{{\\mathrm{XG}}}|=4$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "중점 N",
+   "text": "선분 ${\\mathrm{BC}}$ 의 중점 ${\\mathrm{N}}\\left(6,\\frac{9}{2}\\right)$ 에 대하여 $\\vec{{\\mathrm{XB}}}\\cdot \\vec{{\\mathrm{XC}}}=|\\vec{{\\mathrm{XN}}}|^{2}-\\frac{225}{4}$ 이고, $|\\vec{{\\mathrm{GN}}}|=\\frac{5}{2}$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "최댓값",
+   "text": "최댓값: $|\\vec{{\\mathrm{XN}}}|$ 이 최대인 점은 ${\\mathrm{X}}={\\mathrm{G}}-4 \\times \\frac{\\vec{{\\mathrm{GN}}}}{|\\vec{{\\mathrm{GN}}}|}=\\left(\\frac{4}{5},\\frac{3}{5}\\right)$ 으로 삼각형 내부에 있으므로 $|\\vec{{\\mathrm{XN}}}|=\\frac{13}{2}$ , $M=\\frac{169}{4}-\\frac{225}{4}=-14$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "최솟값 (잘린 호)",
+   "text": "최솟값: $|\\vec{{\\mathrm{XN}}}|$ 이 최소인 원 위의 점 $\\left(\\frac{36}{5},\\frac{27}{5}\\right)$ 은 $3 x+4 y>36$ 이므로 삼각형 밖에 있다. 원과 직선 ${\\mathrm{BC}}$ ( $3 x+4 y=36$ )의 교점은 $(8,3)$ , $\\left(\\frac{72}{25},\\frac{171}{25}\\right)$ 이고, 원 중 삼각형 밖으로 나가는 부분은 이 두 점 사이의 호이다. $|\\vec{{\\mathrm{XN}}}|$ 은 $\\vec{{\\mathrm{GX}}}$ 와 $\\vec{{\\mathrm{GN}}}$ 이 이루는 각이 작을수록 작으므로 남은 호에서는 끝점 $(8,3)$ 에서 최소이다. ( $\\vec{{\\mathrm{GX}}}=(4,0)$ 과 $\\vec{{\\mathrm{GN}}}$ 이 이루는 각의 코사인은 $\\frac{4}{5}$ 로, 다른 끝점보다 크다. 또 $y<0$ 인 부분은 $\\vec{{\\mathrm{GN}}}$ 과 이루는 각이 더 크다.)",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$m$",
+   "text": "$|\\vec{{\\mathrm{XN}}}|^{2}=4+\\frac{9}{4}=\\frac{25}{4}$ 이므로 $m=\\frac{25}{4}-\\frac{225}{4}=-50$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $M \\times m=700$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "가장 가까운 점이 삼각형 밖",
+   "cond": "C1",
+   "text": [
+    "$\\left(\\frac{36}5,\\frac{27}5\\right)$은 $3x+4y>36$. 그래서 최솟값은 호의 끝 $(8,3)$에서."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 합 162",
+   "body": [
+    "세 점 A$(0,0)$, B$(12,0)$, C$(0,9)$에 대하여 삼각형 ABC의 내부 또는 둘레 위의 점 X가 $|\\vec{\\mathrm{XA}}|^2+|\\vec{\\mathrm{XB}}|^2+|\\vec{\\mathrm{XC}}|^2=162$를 만족시킬 때, $\\vec{\\mathrm{XB}}\\cdot\\vec{\\mathrm{XC}}$의 최댓값을 $M$, 최솟값을 $m$이라 하자. $M\\times m$의 값을 구하시오."
+   ],
+   "answer": 2016,
+   "hint": "$|\\vec{\\mathrm{XG}}|=2$, 원 전체가 삼각형 안. $|\\vec{\\mathrm{XN}}|\\in\\left[\\frac12,\\frac92\\right]$ → $M=-36$, $m=-56$."
+  }
+ ],
+ "line": "거리 제곱의 합 → 무게중심 원. 원이 잘리면 끝점을 확인."
+}

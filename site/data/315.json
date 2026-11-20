@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2026학년도 9월 모의평가 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **52** — $M\\times m$을 $\\overline{\\mathrm{AK}}^2$ 대신 $r^2$로 계산한 경우",
  "answer": 65,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -46,9 +46,11 @@
     0
    ],
    "text": "좌표평면에서 $\\overline{{\\mathrm{AB}}}=\\overline{{\\mathrm{AC}}}=10$ , $\\overline{{\\mathrm{BC}}}=16$ 인 삼각형 ${\\mathrm{ABC}}$ 가 있다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "삼각형",
+   "why": "$\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AC}}=10$, $\\overline{\\mathrm{BC}}=16$: B$(0,0)$, C$(16,0)$, A$(8,6)$.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C2",
@@ -68,9 +70,12 @@
     0
    ],
    "text": "(가) $(\\vec{{\\mathrm{PB}}}+\\vec{{\\mathrm{PQ}}})\\cdot \\vec{{\\mathrm{BC}}}=0$ , $(\\vec{{\\mathrm{RC}}}+\\vec{{\\mathrm{RQ}}})\\cdot \\vec{{\\mathrm{BC}}}=0$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(가) 이등변",
+   "why": "$\\vec{\\mathrm{PB}}+\\vec{\\mathrm{PQ}}=2\\vec{\\mathrm{PK}}$ (K: BQ 중점) $\\perp$ BC.",
+   "uses": [
+    1,
+    2
+   ]
   },
   {
    "id": "C4",
@@ -79,9 +84,11 @@
     0
    ],
    "text": "(나) $|\\vec{{\\mathrm{PQ}}}|=3|\\vec{{\\mathrm{QR}}}|$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(나) 길이 비",
+   "why": "$\\frac{5q}8=3\\cdot\\frac{5(16-q)}8$ → $q=12$.",
+   "uses": [
+    3
+   ]
   },
   {
    "id": "C5",
@@ -90,74 +97,131 @@
     0
    ],
    "text": "$|\\vec{{\\mathrm{XP}}}+\\vec{{\\mathrm{XR}}}|=4|\\vec{{\\mathrm{XQ}}}|$ 를 만족시키는 점 ${\\mathrm{X}}$ 에 대하여 $|\\vec{{\\mathrm{AX}}}|$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M \\times m$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건과 묻는 것",
+   "why": "$|\\vec{\\mathrm{XP}}+\\vec{\\mathrm{XR}}|=2|\\vec{\\mathrm{XN}}|$ → $|\\vec{\\mathrm{XN}}|=2|\\vec{\\mathrm{XQ}}|$. A에서 X까지 거리의 최대·최소의 곱.",
+   "uses": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
   }
  ],
  "intro": [
-  "마지막 조건을 '두 점까지의 거리의 비가 일정한 점(아폴로니오스의 원)'으로 바꾸어 원의 방정식을 직접 세우고, 원 밖의 점에서의 최대·최소의 곱을 구하게 함"
+  "(가)는 이등변 조건($\\overline{\\mathrm{PB}}=\\overline{\\mathrm{PQ}}$, $\\overline{\\mathrm{RC}}=\\overline{\\mathrm{RQ}}$), (나)가 Q의 위치를 정합니다.",
+  "마지막 조건 $|\\vec{\\mathrm{XN}}|=2|\\vec{\\mathrm{XQ}}|$는 거리의 비가 일정한 점 → **아폴로니오스 원**. 그리고 $M\\times m=\\overline{\\mathrm{AK}}^2-r^2$ (점의 원에 대한 방멱)."
  ],
  "topic": "평면벡터",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "아폴로니오스의 원",
+   "p": [
+    "두 정점까지 거리의 비가 $k\\ (\\ne1)$로 일정한 점의 자취는 원."
+   ]
+  },
+  {
+   "h": "방멱",
+   "p": [
+    "원 밖의 점에서 원까지 최대·최소 거리의 곱 $=(d+r)(d-r)=d^2-r^2$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
-   "text": "문항 11과 같이 (가)에서 $\\overline{{\\mathrm{PB}}}=\\overline{{\\mathrm{PQ}}}$ , $\\overline{{\\mathrm{RC}}}=\\overline{{\\mathrm{RQ}}}$ 이다. ${\\mathrm{B}}(0,0)$ , ${\\mathrm{C}}(16,0)$ , ${\\mathrm{A}}(8,6)$ , ${\\mathrm{Q}}(q,0)$ 으로 놓으면 직선 ${\\mathrm{AB}}$ 는 $y=\\frac{3}{4}x$ , 직선 ${\\mathrm{AC}}$ 는 $y=\\frac{3}{4}(16-x)$ 이므로",
-   "uses": [],
-   "title": ""
+   "text": "(가)에서 $\\overline{{\\mathrm{PB}}}=\\overline{{\\mathrm{PQ}}}$ , $\\overline{{\\mathrm{RC}}}=\\overline{{\\mathrm{RQ}}}$ 이다. ${\\mathrm{B}}(0,0)$ , ${\\mathrm{C}}(16,0)$ , ${\\mathrm{A}}(8,6)$ , ${\\mathrm{Q}}(q,0)$ 으로 놓으면 직선 ${\\mathrm{AB}}$ 는 $y=\\frac{3}{4}x$ , 직선 ${\\mathrm{AC}}$ 는 $y=\\frac{3}{4}(16-x)$ 이므로",
+   "uses": [
+    "C3",
+    "C1"
+   ],
+   "title": "이등변과 좌표"
   },
   {
    "n": 2,
    "text": "$${\\mathrm{P}}\\left(\\frac{q}{2},\\frac{3 q}{8}\\right),{\\mathrm{R}}\\left(\\frac{q+16}{2},\\frac{3(16-q)}{8}\\right),\\overline{{\\mathrm{PQ}}}=\\frac{5 q}{8},\\overline{{\\mathrm{QR}}}=\\frac{5(16-q)}{8}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "P, R를 $q$로"
   },
   {
    "n": 3,
    "text": "(나)에서 $q=3(16-q)$ , $q=12$ 이므로 ${\\mathrm{P}}\\left(6,\\frac{9}{2}\\right)$ , ${\\mathrm{Q}}(12,0)$ , ${\\mathrm{R}}\\left(14,\\frac{3}{2}\\right)$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$q=12$"
   },
   {
    "n": 4,
    "text": "선분 ${\\mathrm{PR}}$ 의 중점 ${\\mathrm{N}}(10,3)$ 에 대하여 $|\\vec{{\\mathrm{XP}}}+\\vec{{\\mathrm{XR}}}|=2|\\vec{{\\mathrm{XN}}}|$ 이므로 조건은 $|\\vec{{\\mathrm{XN}}}|=2|\\vec{{\\mathrm{XQ}}}|$ , 즉 $(x-10)^{2}+(y-3)^{2}=4 \\{(x-12)^{2}+y^{2}\\}$ 이고 정리하면",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "중점 N과 비 조건"
   },
   {
    "n": 5,
    "text": "$$x^{2}+y^{2}-\\frac{76}{3}x+2 y+\\frac{467}{3}=0$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "원의 방정식"
   },
   {
    "n": 6,
    "text": "즉",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "정리"
   },
   {
    "n": 7,
    "text": "$$\\left(x-\\frac{38}{3}\\right)^{2}+(y+1)^{2}=\\frac{52}{9}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "표준형"
   },
   {
    "n": 8,
    "text": "중심을 ${\\mathrm{K}}$ , 반지름의 길이를 $r$ 이라 하면 $M \\times m=(\\overline{{\\mathrm{AK}}}+r)(\\overline{{\\mathrm{AK}}}-r)=\\overline{{\\mathrm{AK}}}^{2}-r^{2}$ 이고",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "방멱"
   },
   {
    "n": 9,
    "text": "$$\\overline{{\\mathrm{AK}}}^{2}-r^{2}=\\left(\\frac{14}{3}\\right)^{2}+7^{2}-\\frac{52}{9}=\\frac{196+441-52}{9}=65$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$M\\times m$은 루트 없이",
+   "cond": "C5",
+   "text": [
+    "$\\overline{\\mathrm{AK}}$, $r$을 각각 구하지 않아도 $\\overline{\\mathrm{AK}}^2-r^2$으로 끝납니다."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $|\\vec{\\mathrm{PQ}}|=|\\vec{\\mathrm{QR}}|$",
+   "body": [
+    "$\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AC}}=10$, $\\overline{\\mathrm{BC}}=16$인 삼각형 ABC의 선분 AB, BC, CA 위의 점 P, Q, R가 $(\\vec{\\mathrm{PB}}+\\vec{\\mathrm{PQ}})\\cdot\\vec{\\mathrm{BC}}=0$, $(\\vec{\\mathrm{RC}}+\\vec{\\mathrm{RQ}})\\cdot\\vec{\\mathrm{BC}}=0$, $|\\vec{\\mathrm{PQ}}|=|\\vec{\\mathrm{QR}}|$를 만족시킨다. $|\\vec{\\mathrm{XP}}+\\vec{\\mathrm{XR}}|=4|\\vec{\\mathrm{XQ}}|$를 만족시키는 점 X에 대하여 $|\\vec{\\mathrm{AX}}|$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $M\\times m$의 값을 구하시오."
+   ],
+   "answer": 45,
+   "hint": "$q=8$, N$(8,3)$, Q$(8,0)$ → 원 $(x-8)^2+(y+1)^2=4$. $7^2-2^2$."
+  }
+ ],
+ "line": "거리의 비가 일정 → 아폴로니오스 원. 최대×최소 = 방멱.",
  "note": ""
 }

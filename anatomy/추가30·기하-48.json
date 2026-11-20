@@ -1,0 +1,118 @@
+{
+ "wrong": "예상 오답 **25** — 두 범위 중 한쪽 끝을 포함하지 않거나 겹친다고 본 경우",
+ "intro": [
+  "조건식에서 $\\vec{\\mathrm{OP}}\\cdot\\vec{\\mathrm{OQ}}=7$: 중심각이 고정. 그런데 이번엔 P, Q가 **반원** 위에 있어서 두 점의 위치가 제한됩니다.",
+  "$\\vec{\\mathrm{BP}}\\cdot\\vec{\\mathrm{AQ}}=5(x_P-x_Q)-18$로 정리되고, $x_P-x_Q$를 합차 공식으로 쓰면 범위가 두 구간으로 나옵니다."
+ ],
+ "conds": {
+  "C1": {
+   "label": "반원",
+   "why": "지름 AB$=10$, 직선 AB 한쪽의 반원(끝점 포함).",
+   "uses": [
+    2,
+    4,
+    5
+   ]
+  },
+  "C2": {
+   "label": "조건식",
+   "why": "$\\vec{\\mathrm{OP}}\\cdot\\vec{\\mathrm{OQ}}=7$ → $\\cos\\angle\\mathrm{POQ}=\\frac7{25}$.",
+   "uses": [
+    1
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$\\vec{\\mathrm{BP}}\\cdot\\vec{\\mathrm{AQ}}$가 될 수 있는 정수의 개수.",
+   "uses": [
+    3,
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "O 기준 전개",
+   "p": [
+    "$\\vec{\\mathrm{BP}}\\cdot\\vec{\\mathrm{AQ}}=(\\vec{\\mathrm{OP}}-\\vec{\\mathrm{OB}})\\cdot(\\vec{\\mathrm{OQ}}-\\vec{\\mathrm{OA}})$."
+   ]
+  },
+  {
+   "h": "합차 공식",
+   "p": [
+    "$\\cos a-\\cos b=-2\\sin\\frac{a+b}2\\sin\\frac{a-b}2$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "중심각",
+   "text": "$\\vec{{\\mathrm{OP}}}\\cdot \\vec{{\\mathrm{OQ}}}=7$ 이므로 $\\cos(\\angle{\\mathrm{POQ}})=\\frac{7}{25}$ 이고, $\\angle{\\mathrm{POQ}}=2 \\gamma$ 라 하면 $\\cos \\gamma=\\frac{4}{5}$ , $\\sin \\gamma=\\frac{3}{5}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "좌표",
+   "text": "${\\mathrm{A}}(-5,0)$ , ${\\mathrm{B}}(5,0)$ , 반원을 $y \\ge 0$ 인 부분으로 놓고 ${\\mathrm{P}}(5 \\cos a,5 \\sin a)$ , ${\\mathrm{Q}}(5 \\cos b,5 \\sin b)$ $(0 \\le a,b \\le \\pi$ , $|a-b|=2 \\gamma)$ 라 하면",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "O 기준 전개",
+   "text": "$$\\vec{{\\mathrm{BP}}}\\cdot \\vec{{\\mathrm{AQ}}}=\\vec{{\\mathrm{OP}}}\\cdot \\vec{{\\mathrm{OQ}}}-\\vec{{\\mathrm{OP}}}\\cdot \\vec{{\\mathrm{OA}}}-\\vec{{\\mathrm{OB}}}\\cdot \\vec{{\\mathrm{OQ}}}+\\vec{{\\mathrm{OA}}}\\cdot \\vec{{\\mathrm{OB}}}=5(x_{P}-x_{Q})-18$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "합차 공식과 범위",
+   "text": "$x_{P}-x_{Q}=5(\\cos a-\\cos b)=-10 \\sin \\frac{a+b}{2}\\sin \\frac{a-b}{2}$ 이고 $\\frac{a+b}{2}$ 는 $\\gamma$ 이상 $\\pi-\\gamma$ 이하의 모든 값을 가지므로 $\\sin \\frac{a+b}{2}$ 의 범위는 $\\frac{3}{5}$ 이상 $1$ 이하이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "두 경우",
+   "text": "$a-b=2 \\gamma$ 이면 $x_{P}-x_{Q}=-6 \\sin \\frac{a+b}{2}$ 의 범위는 $-6$ 이상 $-\\frac{18}{5}$ 이하, $a-b=-2 \\gamma$ 이면 $\\frac{18}{5}$ 이상 $6$ 이하이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $\\vec{{\\mathrm{BP}}}\\cdot \\vec{{\\mathrm{AQ}}}$ 의 값의 범위는 $-48$ 이상 $-36$ 이하 또는 $0$ 이상 $12$ 이하이고, 정수의 개수는 $13+13=26$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "반원 제한",
+   "cond": "C1",
+   "text": [
+    "$\\frac{a+b}2\\in[\\gamma,\\pi-\\gamma]$. 원 전체라면 범위가 더 넓어집니다."
+   ]
+  },
+  {
+   "h": "두 구간",
+   "cond": "C4",
+   "text": [
+    "P가 Q의 왼쪽이냐 오른쪽이냐에 따라 부호가 다른 두 구간. 각각 정수를 세어 더합니다."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 둔각",
+   "body": [
+    "길이가 $10$인 선분 AB를 지름으로 하는 원 중 직선 AB의 한쪽에 있는 반원(양 끝점 포함) 위의 두 점 P, Q가 $16(\\vec{\\mathrm{PA}}+\\vec{\\mathrm{PB}})\\cdot(\\vec{\\mathrm{QA}}+\\vec{\\mathrm{QB}})+7|\\vec{\\mathrm{PQ}}|^2=0$을 만족시킨다. $\\vec{\\mathrm{BP}}\\cdot\\vec{\\mathrm{AQ}}$의 값이 될 수 있는 모든 정수의 개수를 구하시오."
+   ],
+   "answer": 18,
+   "hint": "$\\vec{\\mathrm{OP}}\\cdot\\vec{\\mathrm{OQ}}=-7$, $\\cos\\gamma=\\frac35$. 값 $=5(x_P-x_Q)-32$, $|x_P-x_Q|\\in\\left[\\frac{32}5,8\\right]$ → $[-72,-64]\\cup[0,8]$."
+  }
+ ],
+ "line": "고정된 중심각 + 반원 제한 → 합차 공식으로 범위."
+}

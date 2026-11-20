@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2023학년도 대학수학능력시험 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **108** — $|\\vec{\\mathrm{XK}}|^2$에서 높이 $6$을 빼먹은 경우",
  "answer": 432,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -39,8 +39,8 @@
     0
    ],
    "text": "한 모서리의 길이가 $6$ 인 정사면체 ${\\mathrm{ABCD}}$ 가 있다.",
-   "label": "",
-   "why": "",
+   "label": "정사면체",
+   "why": "모서리 $6$, 높이 $2\\sqrt6$, 무게중심 O는 높이의 $\\frac14$ 지점.",
    "uses": []
   },
   {
@@ -61,9 +61,14 @@
     0
    ],
    "text": "$|\\vec{{\\mathrm{XA}}}|^{2}+|\\vec{{\\mathrm{XB}}}|^{2}+|\\vec{{\\mathrm{XC}}}|^{2}+|\\vec{{\\mathrm{XD}}}|^{2}=96$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "거리 제곱의 합",
+   "why": "$=96$ → $|\\vec{\\mathrm{XO}}|^2=\\frac{21}2$ → 평면 위 원: 중심 G, 반지름 $3$.",
+   "uses": [
+    1,
+    2,
+    3,
+    4
+   ]
   },
   {
    "id": "C4",
@@ -72,9 +77,14 @@
     0
    ],
    "text": "을 만족시킬 때, $\\vec{{\\mathrm{XA}}}\\cdot \\vec{{\\mathrm{XB}}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\vec{\\mathrm{XA}}\\cdot\\vec{\\mathrm{XB}}$의 최대·최소의 차의 제곱.",
+   "uses": [
+    5,
+    6,
+    7,
+    8
+   ]
   },
   {
    "id": "C5",
@@ -89,62 +99,115 @@
   }
  ],
  "intro": [
-  "거리의 제곱의 합이 일정한 점이 무게중심을 중심으로 하는 구 위에 있음을 이용하고, 그 구와 평면의 교선(원) 위에서 내적의 범위를 구하게 함"
+  "네 거리 제곱의 합은 **무게중심 O**로 모읍니다: $\\sum|\\vec{\\mathrm{XA}}|^2=4|\\vec{\\mathrm{XO}}|^2+\\sum|\\vec{\\mathrm{OA}}|^2$. 그러면 X는 O에서 일정 거리 → 평면 BCD와 만나 **원**.",
+  "남은 내적은 중점 K로 모으고, 높이와 정사영 거리로 나눠 원 위 점과 $\\mathrm K'$의 거리 범위를 씁니다."
  ],
  "topic": "공간도형과 공간좌표",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "무게중심과 거리 제곱의 합",
+   "p": [
+    "$\\sum|\\vec{\\mathrm{XA_i}}|^2=n|\\vec{\\mathrm{XO}}|^2+\\sum|\\vec{\\mathrm{OA_i}}|^2$ (O: 무게중심)."
+   ]
+  },
+  {
+   "h": "중점으로 내적 모으기",
+   "p": [
+    "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=|\\vec{\\mathrm{PK}}|^2-|\\vec{\\mathrm{KA}}|^2$ (K: AB의 중점)."
+   ]
+  },
+  {
+   "h": "공간 거리 분해",
+   "p": [
+    "$|\\vec{\\mathrm{XK}}|^2=\\overline{\\mathrm{KK'}}^2+|\\vec{\\mathrm{XK'}}|^2$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "정사면체의 무게중심을 ${\\mathrm{O}}$ 라 하면 $\\vec{{\\mathrm{OA}}}+\\vec{{\\mathrm{OB}}}+\\vec{{\\mathrm{OC}}}+\\vec{{\\mathrm{OD}}}=\\vec{0}$ 이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "무게중심으로"
   },
   {
    "n": 2,
    "text": "$$\\sum|\\vec{{\\mathrm{XA}}}|^{2}=4|\\vec{{\\mathrm{XO}}}|^{2}+\\sum|\\vec{{\\mathrm{OA}}}|^{2}=4|\\vec{{\\mathrm{XO}}}|^{2}+4 \\times \\frac{27}{2}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "공식"
   },
   {
    "n": 3,
    "text": "( $|\\vec{{\\mathrm{OA}}}|=\\frac{3}{4}\\times 2 \\sqrt{6}=\\frac{3 \\sqrt{6}}{2}$ ). 따라서 $|\\vec{{\\mathrm{XO}}}|^{2}=\\frac{21}{2}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "$|\\vec{\\mathrm{XO}}|^2$"
   },
   {
    "n": 4,
    "text": "삼각형 ${\\mathrm{BCD}}$ 의 무게중심 ${\\mathrm{G}}$ 에 대하여 $\\overline{{\\mathrm{OG}}}=\\frac{1}{4}\\times 2 \\sqrt{6}=\\frac{\\sqrt{6}}{2}$ 이고 $\\vec{{\\mathrm{OG}}}$ 는 평면 ${\\mathrm{BCD}}$ 에 수직이므로 $|\\vec{{\\mathrm{XG}}}|^{2}=\\frac{21}{2}-\\frac{3}{2}=9$ , 즉 점 ${\\mathrm{X}}$ 는 평면 ${\\mathrm{BCD}}$ 위에서 중심이 ${\\mathrm{G}}$ , 반지름의 길이가 $3$ 인 원 위에 있다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "원"
   },
   {
    "n": 5,
    "text": "선분 ${\\mathrm{AB}}$ 의 중점 ${\\mathrm{K}}$ 에 대하여 $\\vec{{\\mathrm{XA}}}\\cdot \\vec{{\\mathrm{XB}}}=|\\vec{{\\mathrm{XK}}}|^{2}-9$ 이고, ${\\mathrm{K}}$ 의 평면 ${\\mathrm{BCD}}$ 위로의 정사영 ${\\mathrm{K}}'$ 은 선분 ${\\mathrm{BG}}$ 의 중점, $\\overline{{\\mathrm{K}}{\\mathrm{K}}'}=\\sqrt{6}$ , $\\overline{{\\mathrm{G}}{\\mathrm{K}}'}=\\sqrt{3}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "중점 K"
   },
   {
    "n": 6,
    "text": "$|\\vec{{\\mathrm{XK}}}|^{2}=6+|\\vec{{\\mathrm{X}}{\\mathrm{K}}'}|^{2}$ 이고 $3-\\sqrt{3}\\le|\\vec{{\\mathrm{X}}{\\mathrm{K}}'}|\\le 3+\\sqrt{3}$ 이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "분해와 범위"
   },
   {
    "n": 7,
    "text": "$$M=6+(3+\\sqrt{3})^{2}-9=9+6 \\sqrt{3},m=9-6 \\sqrt{3}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$M$, $m$"
   },
   {
    "n": 8,
    "text": "따라서 $(M-m)^{2}=(12 \\sqrt{3})^{2}=432$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\mathrm K'$이 원 안에 있음",
+   "cond": "C4",
+   "text": [
+    "$\\overline{\\mathrm{GK'}}=\\sqrt3<3$이라 거리 범위는 $3\\pm\\sqrt3$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 합이 76",
+   "body": [
+    "한 모서리의 길이가 $6$인 정사면체 ABCD의 평면 BCD 위의 점 X가 $|\\vec{\\mathrm{XA}}|^2+|\\vec{\\mathrm{XB}}|^2+|\\vec{\\mathrm{XC}}|^2+|\\vec{\\mathrm{XD}}|^2=76$을 만족시킬 때, $\\vec{\\mathrm{XA}}\\cdot\\vec{\\mathrm{XB}}$의 최댓값을 $M$, 최솟값을 $m$이라 하자. $(M-m)^2$의 값을 구하시오."
+   ],
+   "answer": 192,
+   "hint": "$|\\vec{\\mathrm{XO}}|^2=\\frac{22}4$, 반지름 $2$. $|\\vec{\\mathrm{XK'}}|\\in[2-\\sqrt3,2+\\sqrt3]$, $M-m=8\\sqrt3$."
+  }
+ ],
+ "line": "거리 제곱의 합은 무게중심으로. 공간 거리는 높이와 정사영으로 나눈다.",
  "note": ""
 }
