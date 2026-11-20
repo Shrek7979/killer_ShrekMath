@@ -279,7 +279,7 @@ def sim_blocks(html):
 
 def sim_of(m):
     q = sim_blocks(m['q'])
-    if m.get('ch'): q.append({'ch': [c.strip()[1:-1] if c.strip().startswith('$') and c.strip().endswith('$') else c for c in m['ch']]})
+    if m.get('ch'): q.append({'ch': [(c.strip()[1:-1] if c.strip().startswith('$') and c.strip().endswith('$') else c).replace('\\frac', '\\dfrac') for c in m['ch']]})
     ans = f"{CIRC[m['a'] - 1]} {m['ch'][m['a'] - 1]}" if m.get('ch') else f"${m['a']}$"
     return {'ko': q, 'ans': {'ko': ans}, 'sol': {'ko': sim_blocks(m['sol'])}}
 
