@@ -1,4 +1,4 @@
-import sys;sys.path.insert(0,'/tmp/claude-0/-home-claude/6c68019e-cd2e-53f9-8137-25a894479233/scratchpad/an');from mk import I
+import sys;sys.path.insert(0,__import__('os').path.dirname(__file__));from mk import I
 
 I('30B-01',"예상 오답 **29** — $\\int fg\\,dx$를 $\\frac12(f(\\ln2)-f(0))^2$처럼 계산한 경우 · $f$, $g$를 따로 구하려다 막히는 경우",
  ["$f'=g$, $g'=f$처럼 **서로의 도함수**가 되는 두 함수는 합 $f+g$와 차 $f-g$로 바꾸면 각각 $e^x$, $e^{-x}$의 상수배가 됩니다.",
