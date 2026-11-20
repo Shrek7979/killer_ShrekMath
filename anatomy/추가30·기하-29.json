@@ -1,0 +1,110 @@
+{
+ "wrong": "예상 오답 **36** — X를 무게중심으로 잡은 경우",
+ "intro": [
+  "$\\vec{\\mathrm{XA}}\\cdot\\vec{\\mathrm{XB}}=\\vec{\\mathrm{XB}}\\cdot\\vec{\\mathrm{XC}}$ ⇔ $\\vec{\\mathrm{XB}}\\cdot\\vec{\\mathrm{CA}}=0$. 세 내적이 같다 = X에서 꼭짓점으로 가는 벡터가 대변에 수직 → **수심**.",
+  "그 다음은 중점 공식 하나: $\\vec{\\mathrm{PX}}\\cdot\\vec{\\mathrm{PA}}=|\\vec{\\mathrm{PK}}|^2-(\\frac{\\overline{\\mathrm{XA}}}2)^2$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "세 점",
+   "why": "A$(0,6)$, B$(-2,0)$, C$(4,0)$.",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "세 내적이 같다",
+   "why": "차를 만들면 $\\vec{\\mathrm{XB}}\\cdot\\vec{\\mathrm{CA}}=0$, $\\vec{\\mathrm{XC}}\\cdot\\vec{\\mathrm{AB}}=0$ → 수심.",
+   "uses": [
+    1
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "선분 BC 위의 P에 대해 $\\vec{\\mathrm{PX}}\\cdot\\vec{\\mathrm{PA}}$의 최대·최소.",
+   "uses": [
+    3,
+    4,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "내적이 같다 → 수직",
+   "p": [
+    "$\\vec u\\cdot\\vec v=\\vec u\\cdot\\vec w$ ⇔ $\\vec u\\cdot(\\vec v-\\vec w)=0$."
+   ]
+  },
+  {
+   "h": "중점으로 내적 모으기",
+   "p": [
+    "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=|\\vec{\\mathrm{PK}}|^2-|\\vec{\\mathrm{KA}}|^2$ (K: AB의 중점)."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "수심",
+   "text": "$\\vec{{\\mathrm{XA}}}\\cdot \\vec{{\\mathrm{XB}}}=\\vec{{\\mathrm{XB}}}\\cdot \\vec{{\\mathrm{XC}}}$ 에서 $\\vec{{\\mathrm{XB}}}\\cdot(\\vec{{\\mathrm{XA}}}-\\vec{{\\mathrm{XC}}})=\\vec{{\\mathrm{XB}}}\\cdot \\vec{{\\mathrm{CA}}}=0$ 이므로 점 ${\\mathrm{X}}$ 는 점 ${\\mathrm{B}}$ 를 지나고 직선 ${\\mathrm{CA}}$ 에 수직인 직선 위에 있다. 같은 방법으로 점 ${\\mathrm{C}}$ 를 지나고 직선 ${\\mathrm{AB}}$ 에 수직인 직선 위에도 있으므로 ${\\mathrm{X}}$ 는 삼각형 ${\\mathrm{ABC}}$ 의 수심이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "X의 좌표",
+   "text": "점 ${\\mathrm{A}}$ 를 지나고 ${\\mathrm{BC}}$ 에 수직인 직선은 $x=0$ 이고, 점 ${\\mathrm{B}}$ 를 지나고 $\\vec{{\\mathrm{CA}}}=(-4,6)$ 에 수직인 직선은 $-4(x+2)+6 y=0$ 이므로 ${\\mathrm{X}}\\left(0,\\frac{4}{3}\\right)$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "중점 공식",
+   "text": "선분 ${\\mathrm{XA}}$ 의 중점 ${\\mathrm{K}}\\left(0,\\frac{11}{3}\\right)$ 에 대하여 $\\vec{{\\mathrm{PX}}}\\cdot \\vec{{\\mathrm{PA}}}=|\\vec{{\\mathrm{PK}}}|^{2}-\\left(\\frac{7}{3}\\right)^{2}$ 이다. ${\\mathrm{P}}(t,0)$ $(-2 \\le t \\le 4)$ 이면 $|\\vec{{\\mathrm{PK}}}|^{2}=t^{2}+\\frac{121}{9}$ 이므로",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "$t^2+8$",
+   "text": "$$\\vec{{\\mathrm{PX}}}\\cdot \\vec{{\\mathrm{PA}}}=t^{2}+8$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $m=8$ ( $t=0$ ), $M=24$ ( $t=4$ )이고 $M+m=32$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "수심의 좌표",
+   "cond": "C1",
+   "text": [
+    "A에서의 수선은 $x=0$(BC가 $x$축). B에서 CA에 수직인 직선과의 교점 $\\left(0,\\frac43\\right)$."
+   ]
+  },
+  {
+   "h": "최댓값은 먼 끝점",
+   "cond": "C4",
+   "text": [
+    "$t^2$은 $|t|$가 큰 쪽. $t=4$ (C)에서 최대."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · B$(-3,0)$, C$(2,0)$",
+   "body": [
+    "좌표평면 위의 세 점 A$(0,6)$, B$(-3,0)$, C$(2,0)$에 대하여 점 X가 $\\vec{\\mathrm{XA}}\\cdot\\vec{\\mathrm{XB}}=\\vec{\\mathrm{XB}}\\cdot\\vec{\\mathrm{XC}}=\\vec{\\mathrm{XC}}\\cdot\\vec{\\mathrm{XA}}$를 만족시킨다. 선분 BC 위를 움직이는 점 P에 대하여 $\\vec{\\mathrm{PX}}\\cdot\\vec{\\mathrm{PA}}$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $M+m$의 값을 구하시오."
+   ],
+   "answer": 21,
+   "hint": "수심 X$(0,1)$, 값 $=t^2+6$, $t\\in[-3,2]$ → $m=6$, $M=15$."
+  }
+ ],
+ "line": "세 내적이 같으면 수심. 두 점에 대한 내적은 중점 공식."
+}

@@ -1,0 +1,120 @@
+{
+ "wrong": "예상 오답 **7** — 두 호 중 하나만 센 경우",
+ "intro": [
+  "$\\vec{\\mathrm{PQ}}=\\vec{\\mathrm{AB}}$이면 Q = P + (4,0). P가 A쪽 원, Q가 B쪽 원 위에 있어야 하고, $\\vec{\\mathrm{AP}}=\\vec{\\mathrm{BQ}}$가 같은 단위벡터의 2배가 됩니다.",
+  "$|\\vec{\\mathrm{OX}}|\\ge2$ 조건이 각도를 $\\cos\\theta\\in[-\\frac12,\\frac12]$로 자릅니다. Y = 4u는 반지름 4인 원의 **두 호**."
+ ],
+ "conds": {
+  "C2": {
+   "label": "도형",
+   "why": "A 또는 B 중심, 반지름 $2$인 두 원 중 원점에서 $2$ 이상 떨어진 부분.",
+   "uses": [
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  "C3": {
+   "label": "평행이동 관계",
+   "why": "Q = P + $(4,0)$.",
+   "uses": [
+    1,
+    3
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$\\vec{\\mathrm{OY}}=\\vec{\\mathrm{OP}}+\\vec{\\mathrm{OQ}}=4\\vec u$의 자취 길이.",
+   "uses": [
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "$\\vec{\\mathrm{PQ}}=\\vec v$ → 평행이동",
+   "p": [
+    "P가 있는 도형을 $\\vec v$만큼 옮긴 도형과 원래 도형이 만나는 곳에 Q가 있습니다."
+   ]
+  },
+  {
+   "h": "호의 길이",
+   "p": [
+    "반지름 $r$, 중심각 $\\theta$ → $r\\theta$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "Q = P + (4,0)",
+   "text": "$\\vec{{\\mathrm{PQ}}}=\\vec{{\\mathrm{AB}}}=(4,0)$ 이므로 ${\\mathrm{Q}}={\\mathrm{P}}+(4,0)$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "P가 B쪽 원이면 모순",
+   "text": "점 ${\\mathrm{P}}$ 가 원 $|\\vec{{\\mathrm{BX}}}|=2$ 위에 있으면 점 ${\\mathrm{Q}}$ 는 중심이 $(6,0)$ , 반지름의 길이가 $2$ 인 원 위에 있고, 이 원이 주어진 도형과 만나는 점은 $(4,0)$ 뿐인데 그때 ${\\mathrm{P}}={\\mathrm{O}}$ 가 되어 $|\\vec{{\\mathrm{OP}}}|\\ge 2$ 에 모순이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$\\vec{\\mathrm{AP}}=\\vec{\\mathrm{BQ}}=2\\vec u$",
+   "text": "따라서 점 ${\\mathrm{P}}$ 는 원 $|\\vec{{\\mathrm{AX}}}|=2$ 위에 있고, $\\vec{{\\mathrm{AP}}}=\\vec{{\\mathrm{BQ}}}=2 \\vec{u}$ ( $|\\vec{u}|=1$ )로 놓으면 점 ${\\mathrm{Q}}$ 는 원 $|\\vec{{\\mathrm{BX}}}|=2$ 위에 있다. $\\vec{u}=(\\cos \\theta,\\sin \\theta)$ 라 하면",
+   "uses": [
+    "C2",
+    "C3"
+   ]
+  },
+  {
+   "title": "거리 조건",
+   "text": "$$|\\vec{{\\mathrm{OP}}}|^{2}=8-8 \\cos \\theta \\ge 4,|\\vec{{\\mathrm{OQ}}}|^{2}=8+8 \\cos \\theta \\ge 4$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "각의 범위",
+   "text": "이므로 $-\\frac{1}{2}\\le \\cos \\theta \\le \\frac{1}{2}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "Y의 자취",
+   "text": "$\\vec{{\\mathrm{OY}}}=\\vec{{\\mathrm{OA}}}+\\vec{{\\mathrm{OB}}}+4 \\vec{u}=4 \\vec{u}$ 이므로 점 ${\\mathrm{Y}}$ 는 원 $x^{2}+y^{2}=16$ 위에서 중심각의 합이 $\\frac{\\pi}{3}+\\frac{\\pi}{3}=\\frac{2 \\pi}{3}$ 인 두 호를 그린다. 길이는 $4 \\times \\frac{2 \\pi}{3}=\\frac{8}{3}\\pi$ 이므로 $p+q=3+8=11$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "경우 하나를 버리는 근거",
+   "cond": "C2",
+   "text": [
+    "P가 B쪽 원 위면 Q는 $(6,0)$ 중심 원 위 → 도형과 만나는 점은 $(4,0)$뿐, 그때 P$=$O라 $|\\vec{\\mathrm{OP}}|\\ge2$에 모순."
+   ]
+  },
+  {
+   "h": "호는 두 개",
+   "cond": "C4",
+   "text": [
+    "$\\cos\\theta\\in[-\\frac12,\\frac12]$는 위쪽·아래쪽 두 구간. 중심각 합 $\\frac{2\\pi}3$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 크기 3",
+   "body": [
+    "좌표평면 위의 두 점 A$(-3,0)$, B$(3,0)$에 대하여 $(|\\vec{\\mathrm{AX}}|-3)(|\\vec{\\mathrm{BX}}|-3)=0$, $|\\vec{\\mathrm{OX}}|\\ge3$을 만족시키는 점 X가 나타내는 도형 위의 두 점 P, Q가 $\\vec{\\mathrm{PQ}}=\\vec{\\mathrm{AB}}$를 만족시킨다. $\\vec{\\mathrm{OY}}=\\vec{\\mathrm{OP}}+\\vec{\\mathrm{OQ}}$를 만족시키는 점 Y가 나타내는 도형의 길이가 $\\frac qp\\pi$일 때, $p+q$의 값을 구하시오. (단, $p$, $q$는 서로소인 자연수)"
+   ],
+   "answer": 5,
+   "hint": "$|\\vec{\\mathrm{OP}}|^2=18-18\\cos\\theta\\ge9$ 등 → $\\cos\\theta\\in[-\\frac12,\\frac12]$. Y$=6\\vec u$, 길이 $6\\times\\frac{2\\pi}3=4\\pi$."
+  }
+ ],
+ "line": "$\\vec{\\mathrm{PQ}}=\\vec v$는 평행이동. 거리 조건이 각을 잘라 호를 만든다."
+}
