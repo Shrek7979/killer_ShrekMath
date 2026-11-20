@@ -1,0 +1,66 @@
+import sys;sys.path.insert(0,__import__('os').path.dirname(__file__));from mk import I
+MID=("중점으로 내적 모으기",[r"$\vec{\mathrm{PA}}\cdot\vec{\mathrm{PB}}=|\vec{\mathrm{PK}}|^2-|\vec{\mathrm{KA}}|^2$ (K: AB의 중점)."])
+
+I('추가30·기하-41',"예상 오답 **52** — $M\\times m$을 $\\overline{\\mathrm{AK}}^2$ 대신 $r^2$로 계산한 경우",
+ ["(가)는 이등변 조건($\\overline{\\mathrm{PB}}=\\overline{\\mathrm{PQ}}$, $\\overline{\\mathrm{RC}}=\\overline{\\mathrm{RQ}}$), (나)가 Q의 위치를 정합니다.",
+  "마지막 조건 $|\\vec{\\mathrm{XN}}|=2|\\vec{\\mathrm{XQ}}|$는 거리의 비가 일정한 점 → **아폴로니오스 원**. 그리고 $M\\times m=\\overline{\\mathrm{AK}}^2-r^2$ (점의 원에 대한 방멱)."],
+ {'C1':("삼각형",r"$\overline{\mathrm{AB}}=\overline{\mathrm{AC}}=10$, $\overline{\mathrm{BC}}=16$: B$(0,0)$, C$(16,0)$, A$(8,6)$."),
+  'C3':("(가) 이등변",r"$\vec{\mathrm{PB}}+\vec{\mathrm{PQ}}=2\vec{\mathrm{PK}}$ (K: BQ 중점) $\perp$ BC."),
+  'C4':("(나) 길이 비",r"$\frac{5q}8=3\cdot\frac{5(16-q)}8$ → $q=12$."),
+  'C5':("조건과 묻는 것",r"$|\vec{\mathrm{XP}}+\vec{\mathrm{XR}}|=2|\vec{\mathrm{XN}}|$ → $|\vec{\mathrm{XN}}|=2|\vec{\mathrm{XQ}}|$. A에서 X까지 거리의 최대·최소의 곱.")},
+ [("아폴로니오스의 원",[r"두 정점까지 거리의 비가 $k\ (\ne1)$로 일정한 점의 자취는 원."]),
+  ("방멱",[r"원 밖의 점에서 원까지 최대·최소 거리의 곱 $=(d+r)(d-r)=d^2-r^2$."])],
+ [("이등변과 좌표",['C3','C1']),("P, R를 $q$로",['C3']),("$q=12$",['C4']),("중점 N과 비 조건",['C5']),("원의 방정식",['C5']),("정리",['C5']),("표준형",['C5']),("방멱",['C5']),("답",['C5'])],
+ [("$M\\times m$은 루트 없이",'C5',[r"$\overline{\mathrm{AK}}$, $r$을 각각 구하지 않아도 $\overline{\mathrm{AK}}^2-r^2$으로 끝납니다."])],
+ [("변형 · $|\\vec{\\mathrm{PQ}}|=|\\vec{\\mathrm{QR}}|$",[r"$\overline{\mathrm{AB}}=\overline{\mathrm{AC}}=10$, $\overline{\mathrm{BC}}=16$인 삼각형 ABC의 선분 AB, BC, CA 위의 점 P, Q, R가 $(\vec{\mathrm{PB}}+\vec{\mathrm{PQ}})\cdot\vec{\mathrm{BC}}=0$, $(\vec{\mathrm{RC}}+\vec{\mathrm{RQ}})\cdot\vec{\mathrm{BC}}=0$, $|\vec{\mathrm{PQ}}|=|\vec{\mathrm{QR}}|$를 만족시킨다. $|\vec{\mathrm{XP}}+\vec{\mathrm{XR}}|=4|\vec{\mathrm{XQ}}|$를 만족시키는 점 X에 대하여 $|\vec{\mathrm{AX}}|$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $M\times m$의 값을 구하시오."],45,r"$q=8$, N$(8,3)$, Q$(8,0)$ → 원 $(x-8)^2+(y+1)^2=4$. $7^2-2^2$.")],
+ "거리의 비가 일정 → 아폴로니오스 원. 최대×최소 = 방멱.")
+
+I('추가30·기하-42',"예상 오답 **900** — 최솟값을 $\\theta=\\theta_0$ 끝점에서 잡은 경우",
+ ["$\\vec{\\mathrm{PX}}$의 계수 덕분에 $\\overline{\\mathrm{F'X}}=2a=10$, 중점연결정리로 $|\\vec{\\mathrm{ON}}|=5$. N은 반지름 5인 원의 **호** 위($0\\le\\theta\\le\\theta_0$).",
+  "$\\vec{\\mathrm{NA}}\\cdot\\vec{\\mathrm{NB}}=|\\vec{\\mathrm{NK}}|^2-5$, $|\\vec{\\mathrm{NK}}|^2$은 $\\cos(\\theta-\\beta)$의 일차식. 호 안에서 최대·최소를 판정합니다."],
+ {'C1':("타원과 P",r"$\frac{x^2}{25}+\frac{y^2}{16}=1$, 초점 $(\pm3,0)$, P는 제1사분면(경계 포함)."),
+  'C2':("벡터 조건",r"$\overline{\mathrm{F'X}}=\overline{\mathrm{PF'}}+\overline{\mathrm{PF}}=10$."),
+  'C4':("묻는 것",r"$\vec{\mathrm{NA}}\cdot\vec{\mathrm{NB}}$의 최대·최소의 곱.")},
+ [("정의 + 중점연결정리",[r"$\vec{\mathrm{ON}}=\frac12\vec{\mathrm{F'X}}$."]),MID,
+  ("호 위의 코사인",[r"$\cos(\theta-\beta)$는 $\theta=\beta$에서 최대, 호의 끝점 중 $\beta$에서 먼 쪽에서 최소."])],
+ [("$|\\vec{\\mathrm{ON}}|=5$",['C2']),("각의 범위",['C1']),("중점 공식",['C4']),("$|\\vec{\\mathrm{NK}}|^2$",['C4']),("호에서 최대·최소",['C1']),("답",['C4'])],
+ [("끝점 비교",'C1',[r"$\theta=0$: $\cos\beta=\frac45$, $\theta=\theta_0$: $\cos(\theta_0-\beta)=\frac{24}{25}$. 더 작은 $\frac45$가 최소."])],
+ [("변형 · A$(9,7)$, B$(7,5)$",[r"두 초점이 F$(3,0)$, F'$(-3,0)$인 타원 $\frac{x^2}{25}+\frac{y^2}{16}=1$ 위의 $x$, $y$좌표가 모두 $0$ 이상인 점 P에 대하여 점 X가 $\vec{\mathrm{PX}}=\frac{|\vec{\mathrm{PF}}|}{|\vec{\mathrm{PF'}}|}\vec{\mathrm{F'P}}$를 만족시킨다. 선분 FX의 중점을 N이라 할 때, 두 점 A$(9,7)$, B$(7,5)$에 대하여 $\vec{\mathrm{NA}}\cdot\vec{\mathrm{NB}}$의 최댓값을 $M$, 최솟값을 $m$이라 하자. $M\times m$의 값을 구하시오."],989,r"K$(8,6)$ 그대로, $|\vec{\mathrm{KA}}|^2=2$ → $[25-2,\ 45-2]$, $23\times43$.")],
+ "정의로 길이 고정 → 원의 호. 중점 공식 → 코사인의 범위.")
+
+I('추가30·기하-43',"예상 오답 **166** — $\\theta\\to\\alpha$의 극한값을 최솟값으로 쓴 경우",
+ ["쌍곡선의 정의로 $\\overline{\\mathrm{F'Q}}=8$, $|\\vec{\\mathrm{ON}}|=4$. P가 오른쪽 가지 위쪽을 움직이면 방향각은 $0$부터 점근선 각 $\\alpha$ **직전까지**(열린 끝).",
+  "열린 끝에서는 값이 ‘도달하지 않는’ 극한. 최솟값이 다른 끝에서 실제로 나오는지 비교해야 합니다."],
+ {'C1':("쌍곡선과 Q",r"$\overline{\mathrm{PF'}}-\overline{\mathrm{PF}}=8$, $\overline{\mathrm{PQ}}=\overline{\mathrm{PF}}$ → $\overline{\mathrm{F'Q}}=8$."),
+  'C2':("묻는 것",r"$\vec{\mathrm{NA}}\cdot\vec{\mathrm{NB}}=|\vec{\mathrm{NK}}|^2-5$ (K$(12,5)$)의 최대·최소의 합.")},
+ [("방향각의 범위",[r"꼭짓점에서 $\theta=0$, 무한히 멀어지면 점근선 방향 $\alpha$에 가까워짐. $\alpha$ 자체는 불가."]),MID],
+ [("$|\\vec{\\mathrm{ON}}|=4$",['C1']),("$0\\le\\theta<\\alpha$",['C1']),("중점 공식",['C2']),("$|\\vec{\\mathrm{NK}}|^2$",['C2']),("최소가 실제로 얻어짐",['C2']),("답",['C2'])],
+ [("열린 끝",'C1',[r"$\theta\to\alpha$에서의 값은 최솟값 후보가 아닙니다. 다른 끝 $\theta=0$의 값이 더 작아서 다행히 최솟값이 존재."])],
+ [("변형 · A$(14,5)$, B$(10,5)$",[r"두 초점이 F$(5,0)$, F'$(-5,0)$인 쌍곡선 $\frac{x^2}{16}-\frac{y^2}9=1$ 위의 $x$좌표가 양수이고 $y$좌표가 $0$ 이상인 점 P에 대하여 선분 PF' 위의 점 Q가 $|\vec{\mathrm{PQ}}|=|\vec{\mathrm{PF}}|$를 만족시킨다. 선분 FQ의 중점을 N이라 할 때, 두 점 A$(14,5)$, B$(10,5)$에 대하여 $\vec{\mathrm{NA}}\cdot\vec{\mathrm{NB}}$의 최댓값을 $M$, 최솟값을 $m$이라 하자. $M+m$의 값을 구하시오."],162,r"K$(12,5)$, $|\vec{\mathrm{KA}}|^2=4$ → $[81-4,\ 89-4]$.")],
+ "점근선 방향은 열린 끝. 최솟값이 실제로 얻어지는지 끝점을 비교.")
+
+I('추가30·기하-44',"예상 오답 **108** — $|\\vec{\\mathrm{XK}}|^2$에서 높이 $6$을 빼먹은 경우",
+ ["네 거리 제곱의 합은 **무게중심 O**로 모읍니다: $\\sum|\\vec{\\mathrm{XA}}|^2=4|\\vec{\\mathrm{XO}}|^2+\\sum|\\vec{\\mathrm{OA}}|^2$. 그러면 X는 O에서 일정 거리 → 평면 BCD와 만나 **원**.",
+  "남은 내적은 중점 K로 모으고, 높이와 정사영 거리로 나눠 원 위 점과 $\\mathrm K'$의 거리 범위를 씁니다."],
+ {'C1':("정사면체",r"모서리 $6$, 높이 $2\sqrt6$, 무게중심 O는 높이의 $\frac14$ 지점."),
+  'C3':("거리 제곱의 합",r"$=96$ → $|\vec{\mathrm{XO}}|^2=\frac{21}2$ → 평면 위 원: 중심 G, 반지름 $3$."),
+  'C4':("묻는 것",r"$\vec{\mathrm{XA}}\cdot\vec{\mathrm{XB}}$의 최대·최소의 차의 제곱.")},
+ [("무게중심과 거리 제곱의 합",[r"$\sum|\vec{\mathrm{XA_i}}|^2=n|\vec{\mathrm{XO}}|^2+\sum|\vec{\mathrm{OA_i}}|^2$ (O: 무게중심)."]),MID,
+  ("공간 거리 분해",[r"$|\vec{\mathrm{XK}}|^2=\overline{\mathrm{KK'}}^2+|\vec{\mathrm{XK'}}|^2$."])],
+ [("무게중심으로",['C3']),("공식",['C3']),("$|\\vec{\\mathrm{XO}}|^2$",['C3']),("원",['C3']),("중점 K",['C4']),("분해와 범위",['C4']),("$M$, $m$",['C4']),("답",['C4'])],
+ [("$\\mathrm K'$이 원 안에 있음",'C4',[r"$\overline{\mathrm{GK'}}=\sqrt3<3$이라 거리 범위는 $3\pm\sqrt3$."])],
+ [("변형 · 합이 76",[r"한 모서리의 길이가 $6$인 정사면체 ABCD의 평면 BCD 위의 점 X가 $|\vec{\mathrm{XA}}|^2+|\vec{\mathrm{XB}}|^2+|\vec{\mathrm{XC}}|^2+|\vec{\mathrm{XD}}|^2=76$을 만족시킬 때, $\vec{\mathrm{XA}}\cdot\vec{\mathrm{XB}}$의 최댓값을 $M$, 최솟값을 $m$이라 하자. $(M-m)^2$의 값을 구하시오."],192,r"$|\vec{\mathrm{XO}}|^2=\frac{22}4$, 반지름 $2$. $|\vec{\mathrm{XK'}}|\in[2-\sqrt3,2+\sqrt3]$, $M-m=8\sqrt3$.")],
+ "거리 제곱의 합은 무게중심으로. 공간 거리는 높이와 정사영으로 나눈다.")
+
+I('추가30·기하-45',"예상 오답 **80** — P의 범위를 원 전체로 둔 경우",
+ ["세 내적이 같다 → X는 **수심**. 외접원이 원점 중심이라 수심은 $\\vec{\\mathrm{OA}}+\\vec{\\mathrm{OB}}+\\vec{\\mathrm{OC}}$로도 바로 구해집니다.",
+  "중점 공식 후 $|\\vec{\\mathrm{PK}}|^2=29-4y$로 $y$의 일차식. P의 $y$ 범위만 알면 끝."],
+ {'C1':("세 점",r"원 $x^2+y^2=25$ 위의 A$(0,5)$, B$(-4,-3)$, C$(4,-3)$."),
+  'C2':("세 내적이 같다",r"→ 수심 X$(0,-1)$."),
+  'C4':("묻는 것",r"$y\le-3$인 원 위의 P에 대해 $\vec{\mathrm{PA}}\cdot\vec{\mathrm{PX}}$의 최대·최소의 합.")},
+ [("수심",[r"$\vec{\mathrm{XB}}\cdot(\vec{\mathrm{XA}}-\vec{\mathrm{XC}})=0$ 등. 외심이 원점이면 수심 $=\mathrm A+\mathrm B+\mathrm C$."]),MID,
+  ("원 위에서 $x^2$ 소거",[r"$x^2=25-y^2$를 대입하면 거리 제곱이 $y$의 일차식."])],
+ [("수심",['C2']),("중점 공식",['C4']),("$29-4y$",['C1']),("범위",['C4']),("답",['C4'])],
+ [("P의 범위",'C4',[r"$-5\le y\le-3$. 원 전체로 두면 범위가 달라집니다."])],
+ [("변형 · 위쪽 호",[r"원 $x^2+y^2=25$ 위의 세 점 A$(0,5)$, B$(-4,-3)$, C$(4,-3)$에 대하여 점 X가 $\vec{\mathrm{XA}}\cdot\vec{\mathrm{XB}}=\vec{\mathrm{XB}}\cdot\vec{\mathrm{XC}}=\vec{\mathrm{XC}}\cdot\vec{\mathrm{XA}}$를 만족시킨다. 원 $x^2+y^2=25$ 위의 점 중 $y$좌표가 $3$ 이상인 점 P에 대하여 $\vec{\mathrm{PA}}\cdot\vec{\mathrm{PX}}$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $M+m$의 값을 구하시오."],8,r"$29-4y\in[9,17]$ → $[0,8]$.")],
+ "세 내적이 같으면 수심. 원 위에서 $x^2$을 소거하면 일차식.")

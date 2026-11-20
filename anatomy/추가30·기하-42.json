@@ -1,0 +1,117 @@
+{
+ "wrong": "예상 오답 **900** — 최솟값을 $\\theta=\\theta_0$ 끝점에서 잡은 경우",
+ "intro": [
+  "$\\vec{\\mathrm{PX}}$의 계수 덕분에 $\\overline{\\mathrm{F'X}}=2a=10$, 중점연결정리로 $|\\vec{\\mathrm{ON}}|=5$. N은 반지름 5인 원의 **호** 위($0\\le\\theta\\le\\theta_0$).",
+  "$\\vec{\\mathrm{NA}}\\cdot\\vec{\\mathrm{NB}}=|\\vec{\\mathrm{NK}}|^2-5$, $|\\vec{\\mathrm{NK}}|^2$은 $\\cos(\\theta-\\beta)$의 일차식. 호 안에서 최대·최소를 판정합니다."
+ ],
+ "conds": {
+  "C1": {
+   "label": "타원과 P",
+   "why": "$\\frac{x^2}{25}+\\frac{y^2}{16}=1$, 초점 $(\\pm3,0)$, P는 제1사분면(경계 포함).",
+   "uses": [
+    2,
+    5
+   ]
+  },
+  "C2": {
+   "label": "벡터 조건",
+   "why": "$\\overline{\\mathrm{F'X}}=\\overline{\\mathrm{PF'}}+\\overline{\\mathrm{PF}}=10$.",
+   "uses": [
+    1
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$\\vec{\\mathrm{NA}}\\cdot\\vec{\\mathrm{NB}}$의 최대·최소의 곱.",
+   "uses": [
+    3,
+    4,
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "정의 + 중점연결정리",
+   "p": [
+    "$\\vec{\\mathrm{ON}}=\\frac12\\vec{\\mathrm{F'X}}$."
+   ]
+  },
+  {
+   "h": "중점으로 내적 모으기",
+   "p": [
+    "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=|\\vec{\\mathrm{PK}}|^2-|\\vec{\\mathrm{KA}}|^2$ (K: AB의 중점)."
+   ]
+  },
+  {
+   "h": "호 위의 코사인",
+   "p": [
+    "$\\cos(\\theta-\\beta)$는 $\\theta=\\beta$에서 최대, 호의 끝점 중 $\\beta$에서 먼 쪽에서 최소."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "$|\\vec{\\mathrm{ON}}|=5$",
+   "text": "$\\vec{{\\mathrm{F}}'{\\mathrm{X}}}=\\vec{{\\mathrm{F}}'{\\mathrm{P}}}+\\vec{{\\mathrm{PX}}}=\\left(1+\\frac{|\\vec{{\\mathrm{PF}}}|}{|\\vec{{\\mathrm{P}}{\\mathrm{F}}'}|}\\right)\\vec{{\\mathrm{F}}'{\\mathrm{P}}}$ 이므로 $|\\vec{{\\mathrm{F}}'{\\mathrm{X}}}|=|\\vec{{\\mathrm{P}}{\\mathrm{F}}'}|+|\\vec{{\\mathrm{PF}}}|=10$ 이다. ${\\mathrm{O}}$ 는 선분 ${\\mathrm{FF'}}$ 의 중점이므로 $\\vec{{\\mathrm{ON}}}=\\frac{1}{2}\\vec{{\\mathrm{F}}'{\\mathrm{X}}}=5(\\cos \\theta,\\sin \\theta)$ ( $\\theta$ 는 $\\vec{{\\mathrm{F}}'{\\mathrm{P}}}$ 의 방향각)이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "각의 범위",
+   "text": "점 ${\\mathrm{P}}$ 가 $(5,0)$ 에서 $(0,4)$ 까지 움직이므로 $0 \\le \\theta \\le \\theta_{0}$ , $\\cos \\theta_{0}=\\frac{3}{5}$ , $\\sin \\theta_{0}=\\frac{4}{5}$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "중점 공식",
+   "text": "선분 ${\\mathrm{AB}}$ 의 중점 ${\\mathrm{K}}(8,6)$ 에 대하여 $\\vec{{\\mathrm{NA}}}\\cdot \\vec{{\\mathrm{NB}}}=|\\vec{{\\mathrm{NK}}}|^{2}-5$ 이고",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "$|\\vec{\\mathrm{NK}}|^2$",
+   "text": "$$|\\vec{{\\mathrm{NK}}}|^{2}=25+100-2 \\vec{{\\mathrm{ON}}}\\cdot \\vec{{\\mathrm{OK}}}=125-100 \\cos(\\theta-\\beta)\\left(\\cos \\beta=\\frac{4}{5},\\sin \\beta=\\frac{3}{5}\\right)$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "호에서 최대·최소",
+   "text": "$0<\\beta<\\theta_{0}$ 이므로 $\\cos(\\theta-\\beta)$ 의 최댓값은 $1$ , 최솟값은 끝점에서 $\\theta=0$ 일 때 $\\frac{4}{5}$ , $\\theta=\\theta_{0}$ 일 때 $\\frac{24}{25}$ 중 작은 $\\frac{4}{5}$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $25 \\le|\\vec{{\\mathrm{NK}}}|^{2}\\le 45$ , $20 \\le \\vec{{\\mathrm{NA}}}\\cdot \\vec{{\\mathrm{NB}}}\\le 40$ 이고 $M \\times m=800$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "끝점 비교",
+   "cond": "C1",
+   "text": [
+    "$\\theta=0$: $\\cos\\beta=\\frac45$, $\\theta=\\theta_0$: $\\cos(\\theta_0-\\beta)=\\frac{24}{25}$. 더 작은 $\\frac45$가 최소."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · A$(9,7)$, B$(7,5)$",
+   "body": [
+    "두 초점이 F$(3,0)$, F'$(-3,0)$인 타원 $\\frac{x^2}{25}+\\frac{y^2}{16}=1$ 위의 $x$, $y$좌표가 모두 $0$ 이상인 점 P에 대하여 점 X가 $\\vec{\\mathrm{PX}}=\\frac{|\\vec{\\mathrm{PF}}|}{|\\vec{\\mathrm{PF'}}|}\\vec{\\mathrm{F'P}}$를 만족시킨다. 선분 FX의 중점을 N이라 할 때, 두 점 A$(9,7)$, B$(7,5)$에 대하여 $\\vec{\\mathrm{NA}}\\cdot\\vec{\\mathrm{NB}}$의 최댓값을 $M$, 최솟값을 $m$이라 하자. $M\\times m$의 값을 구하시오."
+   ],
+   "answer": 989,
+   "hint": "K$(8,6)$ 그대로, $|\\vec{\\mathrm{KA}}|^2=2$ → $[25-2,\\ 45-2]$, $23\\times43$."
+  }
+ ],
+ "line": "정의로 길이 고정 → 원의 호. 중점 공식 → 코사인의 범위."
+}

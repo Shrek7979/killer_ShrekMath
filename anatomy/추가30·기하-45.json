@@ -1,0 +1,109 @@
+{
+ "wrong": "예상 오답 **80** — P의 범위를 원 전체로 둔 경우",
+ "intro": [
+  "세 내적이 같다 → X는 **수심**. 외접원이 원점 중심이라 수심은 $\\vec{\\mathrm{OA}}+\\vec{\\mathrm{OB}}+\\vec{\\mathrm{OC}}$로도 바로 구해집니다.",
+  "중점 공식 후 $|\\vec{\\mathrm{PK}}|^2=29-4y$로 $y$의 일차식. P의 $y$ 범위만 알면 끝."
+ ],
+ "conds": {
+  "C1": {
+   "label": "세 점",
+   "why": "원 $x^2+y^2=25$ 위의 A$(0,5)$, B$(-4,-3)$, C$(4,-3)$.",
+   "uses": [
+    3
+   ]
+  },
+  "C2": {
+   "label": "세 내적이 같다",
+   "why": "→ 수심 X$(0,-1)$.",
+   "uses": [
+    1
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$y\\le-3$인 원 위의 P에 대해 $\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PX}}$의 최대·최소의 합.",
+   "uses": [
+    2,
+    4,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "수심",
+   "p": [
+    "$\\vec{\\mathrm{XB}}\\cdot(\\vec{\\mathrm{XA}}-\\vec{\\mathrm{XC}})=0$ 등. 외심이 원점이면 수심 $=\\mathrm A+\\mathrm B+\\mathrm C$."
+   ]
+  },
+  {
+   "h": "중점으로 내적 모으기",
+   "p": [
+    "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=|\\vec{\\mathrm{PK}}|^2-|\\vec{\\mathrm{KA}}|^2$ (K: AB의 중점)."
+   ]
+  },
+  {
+   "h": "원 위에서 $x^2$ 소거",
+   "p": [
+    "$x^2=25-y^2$를 대입하면 거리 제곱이 $y$의 일차식."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "수심",
+   "text": "점 ${\\mathrm{X}}$ 는 삼각형 ${\\mathrm{ABC}}$ 의 수심이다. 점 ${\\mathrm{A}}$ 를 지나고 ${\\mathrm{BC}}$ 에 수직인 직선은 $x=0$ , 점 ${\\mathrm{B}}$ 를 지나고 $\\vec{{\\mathrm{CA}}}=(-4,8)$ 에 수직인 직선은 $-4(x+4)+8(y+3)=0$ 이므로 ${\\mathrm{X}}(0,-1)$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "중점 공식",
+   "text": "선분 ${\\mathrm{AX}}$ 의 중점 ${\\mathrm{K}}(0,2)$ 에 대하여 $\\vec{{\\mathrm{PA}}}\\cdot \\vec{{\\mathrm{PX}}}=|\\vec{{\\mathrm{PK}}}|^{2}-9$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "$29-4y$",
+   "text": "${\\mathrm{P}}(x,y)$ 가 원 위에 있으므로 $|\\vec{{\\mathrm{PK}}}|^{2}=x^{2}+(y-2)^{2}=25-y^{2}+y^{2}-4 y+4=29-4 y$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "범위",
+   "text": "$-5 \\le y \\le-3$ 이므로 $41 \\le|\\vec{{\\mathrm{PK}}}|^{2}\\le 49$ , $32 \\le \\vec{{\\mathrm{PA}}}\\cdot \\vec{{\\mathrm{PX}}}\\le 40$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $M+m=72$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "P의 범위",
+   "cond": "C4",
+   "text": [
+    "$-5\\le y\\le-3$. 원 전체로 두면 범위가 달라집니다."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 위쪽 호",
+   "body": [
+    "원 $x^2+y^2=25$ 위의 세 점 A$(0,5)$, B$(-4,-3)$, C$(4,-3)$에 대하여 점 X가 $\\vec{\\mathrm{XA}}\\cdot\\vec{\\mathrm{XB}}=\\vec{\\mathrm{XB}}\\cdot\\vec{\\mathrm{XC}}=\\vec{\\mathrm{XC}}\\cdot\\vec{\\mathrm{XA}}$를 만족시킨다. 원 $x^2+y^2=25$ 위의 점 중 $y$좌표가 $3$ 이상인 점 P에 대하여 $\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PX}}$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $M+m$의 값을 구하시오."
+   ],
+   "answer": 8,
+   "hint": "$29-4y\\in[9,17]$ → $[0,8]$."
+  }
+ ],
+ "line": "세 내적이 같으면 수심. 원 위에서 $x^2$을 소거하면 일차식."
+}
