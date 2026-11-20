@@ -2,14 +2,14 @@
    - 페이지·목록(JSON): 네트워크 우선, 안 되면 캐시 (오프라인)
    - 문제 이미지·KaTeX·글꼴: 캐시 우선 (한 번 본 문제는 오프라인에서도 열림) */
 const V = '__VERSION__';
-const SHELL = 'shell-' + V, RUN = 'run-v1';
+const SHELL = 'shell-' + V, RUN = 'run-' + V;
 const PRE = ['/', '/list.json', '/elist.json', '/jlist.json', '/cats.json', '/manifest.json', '/icon-192.png', '/icon-512.png', '/favicon-32.png', '/privacy'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(SHELL).then(c => Promise.all(PRE.map(u => c.add(u).catch(() => {})))).then(() => self.skipWaiting()));
 });
 self.addEventListener('activate', e => {
-  e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith('shell-') && k !== SHELL).map(k => caches.delete(k))))
+  e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => (k.startsWith('shell-') && k !== SHELL) || (k.startsWith('run-') && k !== RUN)).map(k => caches.delete(k))))
     .then(() => self.clients.claim()));
 });
 
