@@ -1,0 +1,140 @@
+{
+ "wrong": "예상 오답 — $\\bar Y$의 표준편차를 $\\frac{12}{4\\sqrt n}$으로 둔 경우",
+ "intro": [
+  "$\\bar X\\sim\\mathrm N(m,\\frac{144}n)$, $\\bar Y\\sim\\mathrm N(m,\\frac{36}n)$.",
+  "꼬리 같음 → $n$ 소거 → $m=48$; $0.023$ → $n=36$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "표본",
+   "why": "$\\mathrm N(m,12^2)$, 크기 $n$과 $4n$.",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "조건",
+   "why": "$P(\\bar X\\ge52)=P(\\bar Y\\le46)=0.023$.",
+   "uses": [
+    2,
+    3,
+    4
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "$k=P(47\\le\\bar Y\\le50)$.",
+   "uses": [
+    5,
+    6
+   ]
+  },
+  "C4": {
+   "label": "답",
+   "why": "$1000k$.",
+   "uses": [
+    7
+   ]
+  },
+  "C5": {
+   "label": "표",
+   "why": "$1$, $2$.",
+   "uses": [
+    4
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "표본평균",
+   "p": [
+    "표준편차 $\\frac\\sigma{\\sqrt n}$."
+   ]
+  },
+  {
+   "h": "꼬리 비교",
+   "p": [
+    "표준화 값 같음."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "분포",
+   "text": "$\\overline{X}$ 는 정규분포 ${\\mathrm{N}}\\left(m,\\,\\frac{12^{2}}{n}\\right)$ , $\\overline{Y}$ 는 정규분포 ${\\mathrm{N}}\\left(m,\\,\\frac{6^{2}}{n}\\right)$ 을 따른다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$${\\mathrm{P}}(\\overline{X}\\ge 52)={\\mathrm{P}}\\left(Z \\ge \\frac{(52-m)\\sqrt{n}}{12}\\right),\\,\\,\\,{\\mathrm{P}}(\\overline{Y}\\le 46)={\\mathrm{P}}\\left(Z \\ge \\frac{(m-46)\\sqrt{n}}{6}\\right)$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$m$",
+   "text": "이 두 값이 같으므로 $\\frac{52-m}{12}=\\frac{m-46}{6}$ , 즉 $52-m=2 m-92$ 에서 $m=48$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$n$",
+   "text": "${\\mathrm{P}}(\\overline{X}\\ge 52)={\\mathrm{P}}\\left(Z \\ge \\frac{\\sqrt{n}}{3}\\right)=0.023=0.5-0.477$ 이므로 $\\frac{\\sqrt{n}}{3}=2$ , $n=36$ 이다.",
+   "uses": [
+    "C2",
+    "C5"
+   ]
+  },
+  {
+   "title": "$\\bar Y$",
+   "text": "이때 $\\overline{Y}$ 는 정규분포 ${\\mathrm{N}}(48,\\,1^{2})$ 을 따르므로",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "확률",
+   "text": "$${\\mathrm{P}}(47 \\le \\overline{Y}\\le 50)={\\mathrm{P}}(-1 \\le Z \\le 2)=0.341+0.477=0.818$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이고 $1000 \\times k=818$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\sqrt{4n}=2\\sqrt n$",
+   "cond": "C1",
+   "text": [
+    "$\\frac{12}{2\\sqrt n}$."
+   ]
+  },
+  {
+   "h": "$n$ 소거",
+   "cond": "C2",
+   "text": [
+    "양변 $\\sqrt n$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $0.159$, $P(46\\le\\bar Y\\le52)$",
+   "body": [
+    "(같은 설정에서) $P(\\bar X\\ge52)=P(\\bar Y\\le46)=0.159$일 때, $P(46\\le\\bar Y\\le52)$의 값을 $k$라 하자. $1000\\times k$의 값을 구하시오. (단, $P(0\\le Z\\le1)=0.341$, $P(0\\le Z\\le2)=0.477$)"
+   ],
+   "answer": 954,
+   "hint": "$m=48$, $n=9$: $\\bar Y\\sim\\mathrm N(48,2^2)$ → $P(|Z|\\le2)$."
+  }
+ ],
+ "line": "꼬리 같음으로 평균 → 확률값으로 $n$."
+}

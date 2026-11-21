@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2025학년도 9월 모의평가 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $\\mathrm E(\\overline{\\mathrm{OP}}^2)=\\mathrm E(U)^2+\\mathrm E(W)^2$로 계산한 경우",
  "answer": 308,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -41,8 +41,8 @@
     0
    ],
    "text": "좌표평면의 원점에 점 ${\\mathrm{P}}$ 가 있다.",
-   "label": "",
-   "why": "",
+   "label": "시작",
+   "why": "원점.",
    "uses": []
   },
   {
@@ -52,8 +52,8 @@
     1
    ],
    "text": "$6$ 이하의 자연수 $a$ 에 대하여 한 개의 주사위를 사용하여 다음 시행을 한다.",
-   "label": "",
-   "why": "",
+   "label": "변수",
+   "why": "$a\\le6$.",
    "uses": []
   },
   {
@@ -63,9 +63,11 @@
     0
    ],
    "text": "주사위를 한 번 던져 나온 눈의 수가 $a$ 이하이면 점 ${\\mathrm{P}}$ 를 $x$ 축의 양의 방향으로 $2$ 만큼 이동시키고, $a$ 보다 크면 점 ${\\mathrm{P}}$ 를 $y$ 축의 양의 방향으로 $1$ 만큼 이동시킨다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "이동",
+   "why": "$\\le a$: $x$로 $+2$, $>a$: $y$로 $+1$.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C4",
@@ -74,9 +76,11 @@
     0
    ],
    "text": "이 시행을 $18$ 번 반복한 후 점 ${\\mathrm{P}}$ 의 $x$ 좌표와 $y$ 좌표를 각각 확률변수 $U$ , $W$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "변수",
+   "why": "$18$번 뒤 좌표 $U$, $W$.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C5",
@@ -85,50 +89,104 @@
     1
    ],
    "text": "${\\mathrm{E}}(U)={\\mathrm{E}}(W)$ 일 때, 원점 ${\\mathrm{O}}$ 에 대하여 ${\\mathrm{E}}\\left(\\overline{{\\mathrm{OP}}}^{2}\\right)$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건",
+   "why": "$\\mathrm E(U)=\\mathrm E(W)$; $\\mathrm E(\\overline{\\mathrm{OP}}^2)$.",
+   "uses": [
+    2,
+    3,
+    4,
+    5
+   ]
   }
  ],
  "intro": [
-  "수직선 위의 이동을 좌표평면 위의 두 방향 이동으로 바꾸어 $x$ 좌표와 $y$ 좌표를 하나의 이항분포로 함께 나타내게 하고, 평균 조건으로 $a$ 를 정한 뒤 ${\\mathrm{E}}(X^{2})={\\mathrm{V}}(X)+\\{{\\mathrm{E}}(X)\\}^{2}$ 를 두 번 쓰게 함"
+  "$Y\\sim\\mathrm B(18,\\frac a6)$, $U=2Y$, $W=18-Y$ → $a=2$.",
+  "$\\mathrm E(U^2)+\\mathrm E(W^2)$, 각각 $\\mathrm V+\\mathrm E^2$."
  ],
  "topic": "통계",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "이항분포",
+   "p": [
+    "$\\mathrm E=np$, $\\mathrm V=npq$."
+   ]
+  },
+  {
+   "h": "이차 모멘트",
+   "p": [
+    "$\\mathrm E(X^2)=\\mathrm V+\\mathrm E^2$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$18$ 번의 시행 중 점 ${\\mathrm{P}}$ 가 $x$ 축의 방향으로 이동한 횟수를 $Y$ 라 하면 $Y$ 는 이항분포 ${\\mathrm{B}}\\left(18,\\,\\frac{a}{6}\\right)$ 를 따르고, $U=2 Y$ , $W=18-Y$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3",
+    "C4"
+   ],
+   "title": "설정"
   },
   {
    "n": 2,
    "text": "${\\mathrm{E}}(U)={\\mathrm{E}}(W)$ 에서 $2 \\times 3 a=18-3 a$ 이므로 $a=2$ 이다. 따라서 $Y$ 는 ${\\mathrm{B}}\\left(18,\\,\\frac{1}{3}\\right)$ 을 따르고 ${\\mathrm{E}}(Y)=6$ , ${\\mathrm{V}}(Y)=4$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "$a$"
   },
   {
    "n": 3,
    "text": "$${\\mathrm{E}}(Y^{2})=4+6^{2}=40,\\,\\,\\,{\\mathrm{E}}(U^{2})=4 \\times 40=160$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "$U^2$"
   },
   {
    "n": 4,
    "text": "이다. 또 $W=18-Y$ 는 이항분포 ${\\mathrm{B}}\\left(18,\\,\\frac{2}{3}\\right)$ 를 따르므로 ${\\mathrm{E}}(W)=12$ , ${\\mathrm{V}}(W)=4$ 이고 ${\\mathrm{E}}(W^{2})=4+144=148$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "$W^2$"
   },
   {
    "n": 5,
    "text": "$\\overline{{\\mathrm{OP}}}^{2}=U^{2}+W^{2}$ 이므로 ${\\mathrm{E}}\\left(\\overline{{\\mathrm{OP}}}^{2}\\right)=160+148=308$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "제곱의 기댓값",
+   "cond": "C5",
+   "text": [
+    "$\\ne$ 기댓값의 제곱."
+   ]
+  },
+  {
+   "h": "$\\mathrm V(W)=\\mathrm V(Y)$",
+   "cond": "C5",
+   "text": [
+    "$18-Y$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 둘 다 $1$만큼",
+   "body": [
+    "(같은 시행에서 이동 거리를 바꾸어) 눈이 $a$ 이하이면 $x$축 방향으로 $1$, $a$보다 크면 $y$축 방향으로 $1$만큼 이동할 때, $\\mathrm E(U)=\\mathrm E(W)$이면 $\\mathrm E(\\overline{\\mathrm{OP}}^2)$의 값을 구하시오."
+   ],
+   "answer": 171,
+   "hint": "$a=3$: $2\\times\\left(\\frac92+81\\right)$."
+  }
+ ],
+ "line": "하나의 이항변수로 두 좌표 → 이차 모멘트.",
  "note": ""
 }
