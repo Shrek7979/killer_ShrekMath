@@ -1,0 +1,131 @@
+{
+ "wrong": "예상 오답 — $\\sigma=2$인 경우를 배제하지 않은 경우",
+ "intro": [
+  "$\\frac{t-10}2=\\frac{t-m}\\sigma$의 해가 $6$ 하나 → $\\sigma\\ne2$, $m=6+2\\sigma$.",
+  "(나) → $\\sigma=4$, $m=14$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "분포",
+   "why": "$X\\sim\\mathrm N(10,2^2)$, $Y\\sim\\mathrm N(m,\\sigma^2)$.",
+   "uses": []
+  },
+  "C2": {
+   "label": "(가)",
+   "why": "$P(X\\le t)=P(Y\\le t)$인 $t$는 $6$뿐.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
+  },
+  "C3": {
+   "label": "(나)",
+   "why": "$P(Y\\le10)=0.159$.",
+   "uses": [
+    4
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$1000P(12\\le Y\\le22)$.",
+   "uses": [
+    5,
+    6
+   ]
+  },
+  "C5": {
+   "label": "표",
+   "why": "$0.5$, $1$, $2$.",
+   "uses": [
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "누적확률 같음",
+   "p": [
+    "표준화 값 같음."
+   ]
+  },
+  {
+   "h": "일차방정식",
+   "p": [
+    "해가 하나 ⟺ 기울기 다름."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "변환",
+   "text": "${\\mathrm{P}}(X \\le t)={\\mathrm{P}}\\left(Z \\le \\frac{t-10}{2}\\right)$ , ${\\mathrm{P}}(Y \\le t)={\\mathrm{P}}\\left(Z \\le \\frac{t-m}{\\sigma}\\right)$ 이므로 ${\\mathrm{P}}(X \\le t)={\\mathrm{P}}(Y \\le t)$ 일 필요충분조건은 $\\frac{t-10}{2}=\\frac{t-m}{\\sigma}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$\\sigma\\ne2$",
+   "text": "$\\sigma=2$ 이면 이 식은 $m=10$ 일 때 모든 실수 $t$ 에 대하여 성립하고, $m \\ne 10$ 일 때 성립하는 $t$ 가 없으므로 (가)를 만족시키지 않는다. 따라서 $\\sigma \\ne 2$ 이고, $t$ 에 대한 일차방정식의 해가 $6$ 이므로",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "관계",
+   "text": "$$\\frac{6-10}{2}=\\frac{6-m}{\\sigma},\\,\\,\\,m=6+2 \\sigma$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "(나)",
+   "text": "이다. (나)에서 ${\\mathrm{P}}\\left(Z \\le \\frac{10-m}{\\sigma}\\right)=0.159=0.5-0.341$ 이므로 $\\frac{10-m}{\\sigma}=-1$ 이다. $10-6-2 \\sigma=-\\sigma$ 에서 $\\sigma=4$ , $m=14$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "확률",
+   "text": "$${\\mathrm{P}}(12 \\le Y \\le 22)={\\mathrm{P}}(-0.5 \\le Z \\le 2)=0.191+0.477=0.668$$",
+   "uses": [
+    "C4",
+    "C5"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이므로 $1000 \\times k=668$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\sigma=2$",
+   "cond": "C2",
+   "text": [
+    "모든 $t$ 또는 없음."
+   ]
+  },
+  {
+   "h": "$0.159$",
+   "cond": "C3",
+   "text": [
+    "$Z=-1$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $t=8$, $P(Y\\ge16)=0.159$",
+   "body": [
+    "$X\\sim\\mathrm N(10,2^2)$, $Y\\sim\\mathrm N(m,\\sigma^2)$이 (가) $P(X\\le t)=P(Y\\le t)$인 실수 $t$는 $8$뿐 (나) $P(Y\\ge16)=0.159$를 만족시킬 때, $P(8\\le Y\\le14)$의 값을 $k$라 하자. $1000\\times k$의 값을 구하시오."
+   ],
+   "answer": 532,
+   "hint": "$m=8+\\sigma$ → $\\sigma=4$, $m=12$: $P(-1\\le Z\\le0.5)$."
+  }
+ ],
+ "line": "교점 하나 → 표준화 일차식 → 모수."
+}

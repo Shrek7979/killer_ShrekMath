@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2026학년도 대학수학능력시험 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — Q의 $y$좌표를 $y_1$로 두어 FQ를 잘못 계산한 경우",
  "answer": 320,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -28,9 +28,11 @@
     0
    ],
    "text": "초점이 ${\\mathrm{F}}$ 인 포물선 $y^{2}=4 p x$ $(p>0)$ 위의 제1사분면에 있는 점 ${\\mathrm{P}}$ 에서의 접선이 $y$ 축, $x$ 축과 만나는 점을 각각 ${\\mathrm{Q}}$ , ${\\mathrm{R}}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "설정",
+   "why": "$y^2=4px$, P(제1사분면)의 접선의 절편 Q($y$축), R($x$축).",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C2",
@@ -39,50 +41,103 @@
     1
    ],
    "text": "$\\overline{{\\mathrm{FQ}}}=2 \\sqrt{5}$ 이고 삼각형 ${\\mathrm{PFR}}$ 의 넓이가 $40$ 일 때, $\\overline{{\\mathrm{PR}}}^{2}$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건",
+   "why": "$\\overline{\\mathrm{FQ}}=2\\sqrt5$, △PFR$=40$; $\\overline{\\mathrm{PR}}^2$.",
+   "uses": [
+    2,
+    3,
+    4,
+    5
+   ]
   }
  ],
  "intro": [
-  "준선의 수선의 발 대신 접선의 두 절편을 써서 '점 Q가 선분 PR의 중점이고 삼각형 PFR가 이등변삼각형'임을 찾게 하고, 두 조건으로 $p$ 와 점 P를 함께 결정하게 함"
+  "Q$\\left(0,\\frac{y_1}2\\right)$, R$(-x_1,0)$ → $\\mathrm{FQ}^2=p(p+x_1)$.",
+  "넓이 → $y_1=4p$, $x_1=4p$ → $p=2$."
  ],
  "topic": "이차곡선",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "접선 절편",
+   "p": [
+    "$y_1y=2p(x+x_1)$."
+   ]
+  },
+  {
+   "h": "이등변",
+   "p": [
+    "$\\mathrm{FR}=\\mathrm{FP}$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "${\\mathrm{P}}(x_{1},\\,y_{1})$ 이라 하면 $y_{1}^{2}=4 p x_{1}$ 이고, 접선의 방정식은 $y_{1}y=2 p(x+x_{1})$ 이다. $x=0$ 을 대입하면 $y=\\frac{2 p x_{1}}{y_{1}}=\\frac{y_{1}}{2}$ 이므로 ${\\mathrm{Q}}\\left(0,\\,\\frac{y_{1}}{2}\\right)$ , $y=0$ 을 대입하면 ${\\mathrm{R}}(-x_{1},\\,0)$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "절편"
   },
   {
    "n": 2,
    "text": "$\\overline{{\\mathrm{FQ}}}^{2}=p^{2}+\\frac{y_{1}^{2}}{4}=p^{2}+p x_{1}=p(p+x_{1})=20$ 이고, $\\overline{{\\mathrm{FR}}}=p+x_{1}$ 이므로 삼각형 ${\\mathrm{PFR}}$ 의 넓이는 $\\frac{1}{2}(p+x_{1})y_{1}=40$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "식"
   },
   {
    "n": 3,
    "text": "첫째 식에서 $p+x_{1}=\\frac{20}{p}$ 이고, 둘째 식에서 $y_{1}=\\frac{80}{p+x_{1}}=4 p$ 이다. $y_{1}^{2}=4 p x_{1}$ 에 대입하면 $16 p^{2}=4 p x_{1}$ , 즉 $x_{1}=4 p$ 이므로 $5 p=\\frac{20}{p}$ , $p=2$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "해"
   },
   {
    "n": 4,
    "text": "따라서 $x_{1}=8$ , $y_{1}=8$ 이고 ${\\mathrm{R}}(-8,\\,0)$ 이므로 $\\overline{{\\mathrm{PR}}}^{2}=16^{2}+8^{2}=320$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "답"
   },
   {
    "n": 5,
    "text": "(참고: ${\\mathrm{Q}}$ 는 선분 ${\\mathrm{PR}}$ 의 중점이고 $\\overline{{\\mathrm{FR}}}=p+x_{1}=\\overline{{\\mathrm{FP}}}$ 이므로 $\\overline{{\\mathrm{FQ}}}$ 와 $\\overline{{\\mathrm{PR}}}$ 이 서로 수직이다.)",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "참고"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "Q 중점",
+   "cond": "C2",
+   "text": [
+    "PR의 중점."
+   ]
+  },
+  {
+   "h": "$x_1=4p$",
+   "cond": "C2",
+   "text": [
+    "$y_1^2=4px_1$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\sqrt{10}$, 넓이 $30$",
+   "body": [
+    "(같은 설정에서) $\\overline{\\mathrm{FQ}}=\\sqrt{10}$이고 삼각형 PFR의 넓이가 $30$일 때, $\\overline{\\mathrm{PR}}^2$의 값을 구하시오."
+   ],
+   "answer": 360,
+   "hint": "$y_1=6p$, $x_1=9p$, $p=1$: P$(9,6)$, R$(-9,0)$."
+  }
+ ],
+ "line": "포물선 접선 절편 → 중점·이등변 구조.",
  "note": ""
 }

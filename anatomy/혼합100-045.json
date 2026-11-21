@@ -1,0 +1,104 @@
+{
+ "wrong": "예상 오답 — T가 원 위에 있음을 놓쳐 S를 따로 구하려 한 경우",
+ "intro": [
+  "T$(-x_1,0)$, FT$=$FP → T도 원 위, TS는 지름.",
+  "$\\tan\\frac\\pi6=\\frac{2p}{y_1}$ → $r=4p$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "설정",
+   "why": "$y^2=4px$, P의 접선 $x$절편 T.",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "원",
+   "why": "중심 F, P 지남, $x$축과 S($\\ne$T).",
+   "uses": [
+    1
+   ]
+  },
+  "C3": {
+   "label": "조건",
+   "why": "$\\angle$PTS$=\\frac\\pi6$, △PTS$=24\\sqrt3$; $\\overline{\\mathrm{PT}}^2$.",
+   "uses": [
+    2,
+    3,
+    4
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "포물선 정의",
+   "p": [
+    "FP$=x_1+p$."
+   ]
+  },
+  {
+   "h": "원주각",
+   "p": [
+    "지름 → 직각."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "T",
+   "text": "${\\mathrm{P}}(x_{1},\\,y_{1})$ 이라 하면 접선 $y_{1}y=2 p(x+x_{1})$ 의 $x$ 절편은 $-x_{1}$ 이므로 ${\\mathrm{T}}(-x_{1},\\,0)$ 이고 $\\overline{{\\mathrm{FT}}}=x_{1}+p=\\overline{{\\mathrm{FP}}}$ 이다. 즉 ${\\mathrm{T}}$ 도 원 위에 있고, 원의 중심 ${\\mathrm{F}}$ 가 $x$ 축 위에 있으므로 선분 ${\\mathrm{TS}}$ 는 원의 지름이며 $\\angle{\\mathrm{TPS}}=\\frac{\\pi}{2}$ 이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "좌표",
+   "text": "접선의 기울기 $\\frac{2 p}{y_{1}}=\\tan \\frac{\\pi}{6}$ 에서 $y_{1}=2 \\sqrt{3}p$ , $x_{1}=\\frac{y_{1}^{2}}{4 p}=3 p$ 이고 원의 반지름의 길이는 $r=x_{1}+p=4 p$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "넓이",
+   "text": "$\\overline{{\\mathrm{PT}}}=2 r \\cos \\frac{\\pi}{6}=\\sqrt{3}r$ , $\\overline{{\\mathrm{PS}}}=2 r \\sin \\frac{\\pi}{6}=r$ 이므로 넓이는 $\\frac{\\sqrt{3}}{2}r^{2}=8 \\sqrt{3}p^{2}=24 \\sqrt{3}$ , $p^{2}=3$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $\\overline{{\\mathrm{PT}}}^{2}=3 r^{2}=48 p^{2}=144$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\angle\\mathrm{TPS}=\\frac\\pi2$",
+   "cond": "C3",
+   "text": [
+    "지름 TS."
+   ]
+  },
+  {
+   "h": "$x_1=3p$",
+   "cond": "C3",
+   "text": [
+    "$\\frac{12p^2}{4p}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 넓이 $6\\sqrt3$",
+   "body": [
+    "(같은 설정에서) $\\angle\\mathrm{PTS}=\\frac\\pi6$이고 삼각형 PTS의 넓이가 $6\\sqrt3$일 때, $\\overline{\\mathrm{PT}}^2$의 값을 구하시오."
+   ],
+   "answer": 36,
+   "hint": "$p^2=\\frac34$ → $48p^2$."
+  }
+ ],
+ "line": "접선 절편도 원 위 → 지름 원주각."
+}

@@ -1,0 +1,123 @@
+{
+ "wrong": "예상 오답 — H를 BC 위 임의의 점으로 두고 KH⊥BD를 쓰지 않은 경우",
+ "intro": [
+  "AK⊥BD → (삼수선) HK⊥BD → BH$=\\frac{\\mathrm{BK}}{\\cos\\angle\\mathrm{DBC}}$.",
+  "AC⊥CD (삼수선) → $S=\\frac12\\cdot3\\cdot\\sqrt7$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "종이",
+   "why": "직사각형 AB$=3$, BC$=4$.",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "접기",
+   "why": "BD로 접음, A의 수선의 발이 BC 위.",
+   "uses": [
+    2,
+    3,
+    4
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "△ACD 넓이 $S$, $4S^2$.",
+   "uses": [
+    5,
+    6
+   ]
+  },
+  "C4": {
+   "label": "단서",
+   "why": "두께 무시.",
+   "uses": []
+  }
+ },
+ "concepts": [
+  {
+   "h": "삼수선 정리",
+   "p": [
+    "두 번 사용."
+   ]
+  },
+  {
+   "h": "직각삼각형",
+   "p": [
+    "높이·사영."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "길이",
+   "text": "접기 전 직사각형에서 ${\\mathrm{A}}$ 에서 $\\overline{{\\mathrm{BD}}}$ 에 내린 수선의 발을 ${\\mathrm{K}}$ 라 하면 $\\overline{{\\mathrm{BD}}}=5$ , $\\overline{{\\mathrm{AK}}}=\\frac{12}{5}$ , $\\overline{{\\mathrm{BK}}}=\\frac{9}{5}$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "H",
+   "text": "접은 뒤 ${\\mathrm{A}}$ 에서 평면 ${\\mathrm{BCD}}$ 에 내린 수선의 발을 ${\\mathrm{H}}$ 라 하면 $\\overline{{\\mathrm{AK}}}$ 와 $\\overline{{\\mathrm{BD}}}$ 가 서로 수직이므로 삼수선 정리에 의하여 $\\overline{{\\mathrm{HK}}}$ 와 $\\overline{{\\mathrm{BD}}}$ 가 서로 수직이다. 즉 ${\\mathrm{H}}$ 는 평면 ${\\mathrm{BCD}}$ 에서 ${\\mathrm{K}}$ 를 지나고 ${\\mathrm{BD}}$ 에 수직인 직선과 $\\overline{{\\mathrm{BC}}}$ 의 교점이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "BH",
+   "text": "$\\cos(\\angle{\\mathrm{DBC}})=\\frac{4}{5}$ 이므로 $\\overline{{\\mathrm{BH}}}=\\frac{\\overline{{\\mathrm{BK}}}}{\\cos(\\angle{\\mathrm{DBC}})}=\\frac{9}{4}$ , $\\overline{{\\mathrm{KH}}}=\\frac{9}{4}\\times \\frac{3}{5}=\\frac{27}{20}$ 이다. 따라서",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "AH",
+   "text": "$$\\overline{{\\mathrm{AH}}}^{2}=\\overline{{\\mathrm{AK}}}^{2}-\\overline{{\\mathrm{KH}}}^{2}=\\frac{144}{25}-\\frac{729}{400}=\\frac{63}{16},\\,\\,\\,\\overline{{\\mathrm{HC}}}=4-\\frac{9}{4}=\\frac{7}{4}$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "AC",
+   "text": "이고 $\\overline{{\\mathrm{AC}}}^{2}=\\frac{63}{16}+\\frac{49}{16}=7$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "한편 선분 ${\\mathrm{AH}}$ 가 평면 ${\\mathrm{BCD}}$ 에 수직이고 $\\overline{{\\mathrm{HC}}}$ 와 $\\overline{{\\mathrm{CD}}}$ 가 서로 수직이므로 삼수선 정리에 의하여 $\\overline{{\\mathrm{AC}}}$ 와 $\\overline{{\\mathrm{CD}}}$ 가 서로 수직이다. 따라서 $S=\\frac{1}{2}\\times 3 \\times \\sqrt{7}$ 이고 $4 S^{2}=9 \\times 7=63$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "HC⊥CD",
+   "cond": "C3",
+   "text": [
+    "직사각형."
+   ]
+  },
+  {
+   "h": "$\\frac{63}{16}$",
+   "cond": "C2",
+   "text": [
+    "$\\frac{144}{25}-\\frac{729}{400}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $6\\times8$",
+   "body": [
+    "$\\overline{\\mathrm{AB}}=6$, $\\overline{\\mathrm{BC}}=8$인 직사각형 종이 ABCD를 대각선 BD로 접어 A에서 평면 BCD에 내린 수선의 발이 선분 BC 위에 오게 하였다. 삼각형 ACD의 넓이를 $S$라 할 때, $4S^2$의 값을 구하시오."
+   ],
+   "answer": 1008,
+   "hint": "닮음 $2$배: $S=6\\sqrt7$."
+  }
+ ],
+ "line": "삼수선 두 번 → 숨은 직각."
+}

@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2022학년도 대학수학능력시험 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 원 전체에서 최대·최소를 구해 삼각형 영역을 무시한 경우",
  "answer": 192,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -45,8 +45,8 @@
     0
    ],
    "text": "$\\overline{{\\mathrm{OA}}}=6$ , $\\overline{{\\mathrm{OB}}}=4$ , $\\angle{\\mathrm{AOB}}=\\frac{\\pi}{3}$ 인 삼각형 ${\\mathrm{OAB}}$ 에 대하여 점 ${\\mathrm{P}}$ 가 다음 조건을 만족시킨다.",
-   "label": "",
-   "why": "",
+   "label": "삼각형",
+   "why": "OA$=6$, OB$=4$, $\\angle$O$=\\frac\\pi3$.",
    "uses": []
   },
   {
@@ -56,9 +56,12 @@
     0
    ],
    "text": "(가) $\\vec{{\\mathrm{OP}}}=s \\vec{{\\mathrm{OA}}}+t \\vec{{\\mathrm{OB}}}$ $(s \\ge 0,\\,t \\ge 0,\\,s+t \\le 1)$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(가)",
+   "why": "P는 삼각형 내부 또는 둘레.",
+   "uses": [
+    1,
+    2
+   ]
   },
   {
    "id": "C3",
@@ -67,9 +70,11 @@
     0
    ],
    "text": "(나) $\\angle{\\mathrm{OPA}}=\\frac{\\pi}{2}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(나)",
+   "why": "$\\angle$OPA$=\\frac\\pi2$.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C4",
@@ -78,56 +83,112 @@
     0
    ],
    "text": "$\\vec{{\\mathrm{OP}}}\\cdot \\vec{{\\mathrm{OB}}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $7(M+m)$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\vec{\\mathrm{OP}}\\cdot\\vec{\\mathrm{OB}}$의 최대 $M$, 최소 $m$; $7(M+m)$.",
+   "uses": [
+    3,
+    4,
+    5,
+    6
+   ]
   }
  ],
  "intro": [
-  "평행사변형 영역을 삼각형 영역으로 바꾸고, (나)를 직선 조건 대신 '선분 OA를 지름으로 하는 원'으로 바꾸어 삼각형 안에 남는 호의 양 끝(두 수선의 발)을 찾게 함"
+  "P는 OA 지름 원 위, 삼각형 안의 호 H$_1$~H$_2$.",
+  "$\\vec{\\mathrm{OP}}\\cdot\\vec{\\mathrm{OB}}=6+12\\cos(\\varphi-\\frac\\pi3)$, 호 끝점에서."
  ],
  "topic": "평면벡터",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "원주각",
+   "p": [
+    "지름 → 직각."
+   ]
+  },
+  {
+   "h": "중심 분해",
+   "p": [
+    "$\\vec{\\mathrm{OP}}=\\vec{\\mathrm{OM}}+\\vec{\\mathrm{MP}}$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "${\\mathrm{O}}(0,\\,0)$ , ${\\mathrm{A}}(6,\\,0)$ , ${\\mathrm{B}}(2,\\,2 \\sqrt{3})$ 으로 놓자. (가)는 ${\\mathrm{P}}$ 가 삼각형 ${\\mathrm{OAB}}$ 의 내부 또는 둘레 위에 있다는 뜻이고, (나)는 ${\\mathrm{P}}$ 가 선분 ${\\mathrm{OA}}$ 를 지름으로 하는 원(중심 ${\\mathrm{M}}(3,\\,0)$ , 반지름의 길이 $3$ ) 위의 ${\\mathrm{O}}$ , ${\\mathrm{A}}$ 가 아닌 점이라는 뜻이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2",
+    "C3"
+   ],
+   "title": "자취"
   },
   {
    "n": 2,
    "text": "이 원 위의 점 중 삼각형에 들어가는 부분은, ${\\mathrm{O}}$ 에서 직선 ${\\mathrm{AB}}$ 에 내린 수선의 발 ${\\mathrm{H}}_{1}$ 부터 ${\\mathrm{A}}$ 에서 직선 ${\\mathrm{OB}}$ 에 내린 수선의 발 ${\\mathrm{H}}_{2}$ 까지의 호이다. ( $\\angle{\\mathrm{OH}}_{1}{\\mathrm{A}}=\\angle{\\mathrm{OH}}_{2}{\\mathrm{A}}=\\frac{\\pi}{2}$ 이므로 두 점 모두 원 위에 있다.) $\\vec{{\\mathrm{MP}}}$ 가 $x$ 축의 양의 방향과 이루는 각을 $\\varphi$ 라 하면 ${\\mathrm{H}}_{2}$ 에서 $\\varphi=\\frac{2}{3}\\pi$ 이고, ${\\mathrm{H}}_{1}$ 에서 $\\cos \\varphi_{1}=-\\frac{1}{7}$ , $\\sin \\varphi_{1}=\\frac{4 \\sqrt{3}}{7}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "호"
   },
   {
    "n": 3,
    "text": "$$\\vec{{\\mathrm{OP}}}\\cdot \\vec{{\\mathrm{OB}}}=\\vec{{\\mathrm{OM}}}\\cdot \\vec{{\\mathrm{OB}}}+\\vec{{\\mathrm{MP}}}\\cdot \\vec{{\\mathrm{OB}}}=6+12 \\cos \\left(\\varphi-\\frac{\\pi}{3}\\right)$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "식"
   },
   {
    "n": 4,
    "text": "이다. $\\varphi_{1}\\le \\varphi \\le \\frac{2}{3}\\pi$ 에서 $\\varphi-\\frac{\\pi}{3}$ 는 $0$ 과 $\\pi$ 사이의 값이므로 $\\cos \\left(\\varphi-\\frac{\\pi}{3}\\right)$ 는 $\\varphi$ 가 커질수록 감소한다. $\\cos \\left(\\varphi_{1}-\\frac{\\pi}{3}\\right)=-\\frac{1}{14}+\\frac{12}{14}=\\frac{11}{14}$ 이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "단조"
   },
   {
    "n": 5,
    "text": "$$M=6+\\frac{66}{7}=\\frac{108}{7},\\,\\,\\,m=6+12 \\times \\frac{1}{2}=12$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "값"
   },
   {
    "n": 6,
    "text": "이다. 따라서 $7(M+m)=108+84=192$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "끝점",
+   "cond": "C2",
+   "text": [
+    "두 수선의 발."
+   ]
+  },
+  {
+   "h": "$\\frac{11}{14}$",
+   "cond": "C4",
+   "text": [
+    "H$_1$의 각."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $7(M-m)$",
+   "body": [
+    "(같은 조건에서) $7(M-m)$의 값을 구하시오."
+   ],
+   "answer": 24,
+   "hint": "$108-84$."
+  }
+ ],
+ "line": "원 위 자취 ∩ 영역 → 호 끝점.",
  "note": ""
 }

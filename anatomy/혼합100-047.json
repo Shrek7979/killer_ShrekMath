@@ -1,0 +1,109 @@
+{
+ "wrong": "예상 오답 — $\\overline{\\mathrm{AQ}}\\times\\overline{\\mathrm{A'R}}=b^2$를 찾지 못해 접점을 직접 구하려다 막힌 경우",
+ "intro": [
+  "$y=mx+n$, $n^2=a^2m^2+b^2$ → $\\mathrm{AQ}\\cdot\\mathrm{A'R}=n^2-a^2m^2=b^2=16$.",
+  "FQ → $a-c=2$ → $a=5$, $c=3$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "타원",
+   "why": "초점 $(\\pm c,0)$, 꼭짓점 A, A'.",
+   "uses": []
+  },
+  "C2": {
+   "label": "접선",
+   "why": "P(제1사분면)의 접선이 $x=\\pm a$와 Q, R.",
+   "uses": [
+    1
+   ]
+  },
+  "C3": {
+   "label": "조건",
+   "why": "AQ$=2$, A'R$=8$, FQ$=2\\sqrt2$; △QF'R 넓이.",
+   "uses": [
+    2,
+    3,
+    4,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "기울기형 접선",
+   "p": [
+    "$n^2=a^2m^2+b^2$."
+   ]
+  },
+  {
+   "h": "수직 판정",
+   "p": [
+    "내적 $0$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "접선",
+   "text": "접선을 $y=m x+n$ 이라 하면 $n^{2}=a^{2}m^{2}+b^{2}$ 이다. ${\\mathrm{Q}}(a,\\,m a+n)$ , ${\\mathrm{R}}(-a,\\,-m a+n)$ 이고 ${\\mathrm{P}}$ 가 제1사분면에 있으므로 두 $y$ 좌표는 모두 양수이다. 따라서",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "곱",
+   "text": "$$\\overline{{\\mathrm{AQ}}}\\times \\overline{{\\mathrm{A'R}}}=n^{2}-a^{2}m^{2}=b^{2}=16$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$a$, $c$",
+   "text": "이다. $\\overline{{\\mathrm{FQ}}}^{2}=(a-c)^{2}+4=8$ 에서 $a-c=2$ 이고, $(a-c)(a+c)=b^{2}=16$ 에서 $a+c=8$ 이므로 $a=5$ , $c=3$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "좌표",
+   "text": "${\\mathrm{Q}}(5,\\,2)$ , ${\\mathrm{R}}(-5,\\,8)$ , ${\\mathrm{F'}}(-3,\\,0)$ 에서 $\\vec{{\\mathrm{F'Q}}}=(8,\\,2)$ , $\\vec{{\\mathrm{F'R}}}=(-2,\\,8)$ 이므로 $\\vec{{\\mathrm{F'Q}}}\\cdot \\vec{{\\mathrm{F'R}}}=0$ 이고 $|\\vec{{\\mathrm{F'Q}}}|=|\\vec{{\\mathrm{F'R}}}|=\\sqrt{68}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 삼각형 ${\\mathrm{QF'R}}$ 의 넓이는 $\\frac{1}{2}\\times 68=34$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$(a-c)(a+c)=b^2$",
+   "cond": "C3",
+   "text": [
+    "$c^2=a^2-b^2$."
+   ]
+  },
+  {
+   "h": "직각이등변",
+   "cond": "C3",
+   "text": [
+    "$\\vec{\\mathrm{F'Q}}\\perp\\vec{\\mathrm{F'R}}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $1$, $9$, $\\sqrt2$",
+   "body": [
+    "(같은 설정에서) $\\overline{\\mathrm{AQ}}=1$, $\\overline{\\mathrm{A'R}}=9$, $\\overline{\\mathrm{FQ}}=\\sqrt2$일 때, 삼각형 QF'R의 넓이를 구하시오."
+   ],
+   "answer": 41,
+   "hint": "$b^2=9$, $a=5$, $c=4$: Q$(5,1)$, R$(-5,9)$, F'$(-4,0)$ → $\\frac{82}2$."
+  }
+ ],
+ "line": "평행 접선 사이 절편 곱 $=b^2$."
+}
