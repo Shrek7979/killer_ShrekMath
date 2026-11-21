@@ -10,9 +10,9 @@
  ],
  "source": "2026 수능 기출 변형 · 2026학년도 수능 기하 29번 (포물선 위의 점·준선의 수선의 발·초점으로 만든 삼각형의 둘레와 넓이, 타원과의 융합)",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 타원의 장축을 $\\overline{\\mathrm{FH}}$로 잡은 경우",
  "answer": 144,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -31,9 +31,14 @@
     0
    ],
    "text": "초점이 $\\mathrm{F}(p,\\,0)$ ( $p>0$ )이고 준선이 $x=-p$ 인 포물선 위의 제 $1$ 사분면의 점 $\\mathrm{A}$ 에서 준선에 내린 수선의 발을 $\\mathrm{H}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "포물선",
+   "why": "초점 $(p,0)$, 준선 $x=-p$, A에서 준선의 수선의 발 H.",
+   "uses": [
+    1,
+    3,
+    4,
+    5
+   ]
   },
   {
    "id": "C2",
@@ -42,9 +47,12 @@
     1
    ],
    "text": "두 점 $\\mathrm{F}$ , $\\mathrm{H}$ 를 초점으로 하고 점 $\\mathrm{A}$ 를 지나는 타원의 단축의 길이가 $40$ 이고, 삼각형 $\\mathrm{AFH}$ 의 둘레의 길이가 $80$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "타원",
+   "why": "초점 F, H, A를 지남, 단축 $40$, △AFH 둘레 $80$.",
+   "uses": [
+    1,
+    2
+   ]
   },
   {
    "id": "C3",
@@ -53,56 +61,109 @@
     2
    ],
    "text": "점 $\\mathrm{A}$ 의 $x$ 좌표를 $\\alpha$ 라 할 때, $p \\times \\alpha$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$p\\alpha$.",
+   "uses": [
+    6
+   ]
   }
  ],
  "intro": [
-  "변형 포인트: 타원의 두 초점을 포물선의 초점 F와 수선의 발 H로 두어 '장반경 = AF = AH'가 되도록 설계하고, 단축·둘레 조건에서 타원을 먼저 확정한 뒤 포물선 방정식으로 p와 A의 좌표를 역산하게 함(그림 없이 서술형으로 제시)"
+  "$\\overline{\\mathrm{AF}}=\\overline{\\mathrm{AH}}=a$, $\\overline{\\mathrm{FH}}=2c$.",
+  "$a+c=40$, $a^2-c^2=400$ → $a=25$, $c=15$; $\\overline{\\mathrm{FH}}^2=4p(\\alpha+p)$."
  ],
  "topic": "포물선과 타원의 정의",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "포물선 정의",
+   "p": [
+    "$\\overline{\\mathrm{AF}}=\\overline{\\mathrm{AH}}$."
+   ]
+  },
+  {
+   "h": "타원 정의",
+   "p": [
+    "$a^2=b^2+c^2$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "포물선의 정의에 의하여 $\\overline{\\mathrm{AF}}=\\overline{\\mathrm{AH}}$ 이다. 타원의 장축의 길이를 $2 a$ , 두 초점 사이의 거리를 $2 c$ , 단축의 길이를 $2 b$ 라 하면 점 $\\mathrm{A}$ 가 타원 위에 있으므로 $2 a=\\overline{\\mathrm{AF}}+\\overline{\\mathrm{AH}}=2 \\overline{\\mathrm{AF}}$ , 즉 $a=\\overline{\\mathrm{AF}}=\\overline{\\mathrm{AH}}$ 이고 $2 c=\\overline{\\mathrm{FH}}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "정의"
   },
   {
    "n": 2,
    "text": "삼각형 $\\mathrm{AFH}$ 의 둘레의 길이는 $2 a+2 c=80$ 이므로 $a+c=40$ 이고, $2 b=40$ 에서 $b=20$ 이므로 $a^{2}-c^{2}=b^{2}=400$ , 즉 $(a-c)(a+c)=400$ 에서 $a-c=10$ 이다. 따라서 $a=25$ , $c=15$ 이고 $\\overline{\\mathrm{AF}}=\\overline{\\mathrm{AH}}=25$ , $\\overline{\\mathrm{FH}}=30$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$a$, $c$"
   },
   {
    "n": 3,
    "text": "$\\mathrm{A}(\\alpha,\\,\\beta)$ ( $\\alpha>0$ , $\\beta>0$ )라 하면 $\\mathrm{H}(-p,\\,\\beta)$ 이고 $\\overline{\\mathrm{AH}}=\\alpha+p=25$ , $\\beta^{2}=4 p \\alpha$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "좌표"
   },
   {
    "n": 4,
    "text": "$$\\overline{\\mathrm{FH}}^{2}=(2 p)^{2}+\\beta^{2}=4 p^{2}+4 p \\alpha=4 p(\\alpha+p)=100 p=900$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "$\\overline{\\mathrm{FH}}$"
   },
   {
    "n": 5,
    "text": "이므로 $p=9$ , $\\alpha=16$ , $\\beta=24$ 이다. (실제로 $\\overline{\\mathrm{AF}}=\\sqrt{7^{2}+24^{2}}=25$ 임을 확인할 수 있다.)",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "값"
   },
   {
    "n": 6,
    "text": "따라서 $p \\times \\alpha=9 \\times 16=144$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\beta^2=4p\\alpha$",
+   "cond": "C1",
+   "text": [
+    "포물선 방정식."
+   ]
+  },
+  {
+   "h": "검산",
+   "cond": "C3",
+   "text": [
+    "$\\sqrt{7^2+24^2}=25$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 단축 $20$, 둘레 $40$",
+   "body": [
+    "(같은 설정에서) 두 점 F, H를 초점으로 하고 A를 지나는 타원의 단축의 길이가 $20$, 삼각형 AFH의 둘레의 길이가 $40$일 때, $p\\times\\alpha$의 값을 구하시오."
+   ],
+   "answer": 36,
+   "hint": "절반 축소: $p=\\frac92$, $\\alpha=8$."
+  }
+ ],
+ "line": "두 정의 결합 → 타원 확정 → 포물선 역산.",
  "note": ""
 }

@@ -1,0 +1,124 @@
+{
+ "wrong": "예상 오답 — $\\theta'$을 구할 때 $\\sec^2\\theta$로 나누지 않은 경우",
+ "intro": [
+  "$\\tan\\theta=\\frac{2t}{t^2+3}$ → $\\theta(a)=\\theta(1)$ → $a=3$.",
+  "양변 미분: $\\sec^2\\theta\\cdot\\theta'$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "점",
+   "why": "A$(0,1)$, B$(0,3)$, P$(t,0)$, $\\theta=\\angle$APB.",
+   "uses": [
+    1,
+    2
+   ]
+  },
+  "C2": {
+   "label": "조건",
+   "why": "$\\theta(a)=\\theta(1)$, $a\\ne1$.",
+   "uses": [
+    3
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "$\\theta'(1)-\\theta'(a)=\\frac qp$.",
+   "uses": [
+    4,
+    5
+   ]
+  },
+  "C6": {
+   "label": "단서",
+   "why": "서로소.",
+   "uses": [
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "탄젠트 뺄셈",
+   "p": [
+    "$\\tan(\\alpha-\\beta)$."
+   ]
+  },
+  {
+   "h": "음함수 미분",
+   "p": [
+    "$(\\tan\\theta)'=\\sec^2\\theta\\,\\theta'$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "각",
+   "text": "원점을 ${\\mathrm{O}}$ 라 하면 $\\tan \\left(\\angle{\\mathrm{OPB}}\\right)=\\frac{3}{t}$ , $\\tan \\left(\\angle{\\mathrm{OPA}}\\right)=\\frac{1}{t}$ 이고 $\\theta(t)=\\angle{\\mathrm{OPB}}-\\angle{\\mathrm{OPA}}$ 이므로",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$\\tan$",
+   "text": "$$\\tan \\theta(t)=\\frac{\\frac{3}{t}-\\frac{1}{t}}{1+\\frac{3}{t^{2}}}=\\frac{2 t}{t^{2}+3}$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$a$",
+   "text": "이다. $\\theta(a)=\\theta(1)$ 이면 $\\frac{2 a}{a^{2}+3}=\\frac{1}{2}$ 에서 $a^{2}-4 a+3=0$ 이므로 $a=3$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "미분",
+   "text": "양변을 $t$ 에 대하여 미분하면 $\\frac{1}{\\cos^{2}\\theta(t)}\\times \\theta'(t)=\\frac{2 \\left(3-t^{2}\\right)}{\\left(t^{2}+3 \\right)^{2}}$ 이다. $t=1$ , $t=3$ 에서 모두 $\\tan \\theta=\\frac{1}{2}$ , $\\frac{1}{\\cos^{2}\\theta}=1+\\tan^{2}\\theta=\\frac{5}{4}$ 이고 우변은 각각 $\\frac{1}{4}$ , $-\\frac{1}{12}$ 이므로",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "값",
+   "text": "$$\\theta'(1)=\\frac{1}{5},\\,\\,\\,\\theta'(3)=-\\frac{1}{15}$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이다. $\\theta'(1)-\\theta'(3)=\\frac{4}{15}$ 이므로 $p+q=15+4=19$ 이다.",
+   "uses": [
+    "C6"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\sec^2$ 같음",
+   "cond": "C3",
+   "text": [
+    "두 점에서 $\\tan$ 같음."
+   ]
+  },
+  {
+   "h": "부호",
+   "cond": "C3",
+   "text": [
+    "$t=3$에서 감소."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · B$(0,4)$",
+   "body": [
+    "두 점 A$(0,1)$, B$(0,4)$와 양수 $t$에 대하여 P$(t,0)$, $\\angle$APB$=\\theta(t)$라 하자. $1$이 아닌 양수 $a$에 대하여 $\\theta(a)=\\theta(1)$일 때, $\\theta'(1)-\\theta'(a)=\\frac qp$이다. $p+q$의 값을 구하시오. (단, $p$와 $q$는 서로소인 자연수)"
+   ],
+   "answer": 181,
+   "hint": "$a=4$: $\\frac9{34}+\\frac9{136}=\\frac{45}{136}$."
+  }
+ ],
+ "line": "각의 탄젠트 → 같은 값의 두 점 → 음함수 미분."
+}
