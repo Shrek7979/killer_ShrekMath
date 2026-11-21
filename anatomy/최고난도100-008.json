@@ -1,0 +1,123 @@
+{
+ "wrong": "예상 오답 — 두 넓이를 각각 근사해 $\\theta^3$ 차수의 차를 잃은 경우",
+ "intro": [
+  "원주각 → △PQR ∼ △BAR, 닮음비 $\\cos3\\theta$.",
+  "$f-g=f\\sin^23\\theta$, $f\\sim\\frac{4\\theta}3$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "도형",
+   "why": "지름 AB$=2$, $\\angle$PAB$=\\theta$, $\\angle$QBA$=2\\theta$, R=AP∩BQ.",
+   "uses": [
+    1,
+    2
+   ]
+  },
+  "C2": {
+   "label": "함수",
+   "why": "$f$=△ABR, $g$=△PQR.",
+   "uses": [
+    3,
+    4,
+    5
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "$\\lim\\frac{f-g}{\\theta^3}$.",
+   "uses": [
+    6
+   ]
+  },
+  "C5": {
+   "label": "단서",
+   "why": "$0<\\theta<\\frac\\pi6$.",
+   "uses": []
+  }
+ },
+ "concepts": [
+  {
+   "h": "원주각",
+   "p": [
+    "같은 호의 원주각."
+   ]
+  },
+  {
+   "h": "닮음",
+   "p": [
+    "넓이비 = 닮음비²."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "직각",
+   "text": "$\\angle{\\mathrm{APB}}=\\angle{\\mathrm{AQB}}=\\frac{\\pi}{2}$ 이고, 점 ${\\mathrm{R}}$ 는 선분 ${\\mathrm{AP}}$ 와 선분 ${\\mathrm{BQ}}$ 위에 있다. 원주각의 성질에서",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "각",
+   "text": "$$\\angle{\\mathrm{RPQ}}=\\angle{\\mathrm{APQ}}=\\angle{\\mathrm{ABQ}}=2 \\theta,\\,\\,\\,\\angle{\\mathrm{RQP}}=\\angle{\\mathrm{BQP}}=\\angle{\\mathrm{BAP}}=\\theta$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "닮음비",
+   "text": "이므로 삼각형 ${\\mathrm{PQR}}$ 와 삼각형 ${\\mathrm{BAR}}$ 는 닮음이고 닮음비는 $\\overline{{\\mathrm{PQ}}}:\\overline{{\\mathrm{AB}}}$ 이다. $\\angle{\\mathrm{QAB}}=\\frac{\\pi}{2}-2 \\theta$ 이므로 $\\angle{\\mathrm{PAQ}}=\\frac{\\pi}{2}-3 \\theta$ 이고, 현 ${\\mathrm{PQ}}$ 의 길이는 $\\overline{{\\mathrm{PQ}}}=2 \\sin \\left(\\frac{\\pi}{2}-3 \\theta \\right)=2 \\cos 3 \\theta$ 이다. 따라서",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "차",
+   "text": "$$g(\\theta)=f(\\theta)\\cos^{2}3 \\theta,\\,\\,\\,f(\\theta)-g(\\theta)=f(\\theta)\\sin^{2}3 \\theta$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$f$",
+   "text": "이다. 삼각형 ${\\mathrm{ABR}}$ 에서 $\\angle{\\mathrm{ARB}}=\\pi-3 \\theta$ 이므로 사인법칙에서 $\\overline{{\\mathrm{AR}}}=\\frac{2 \\sin 2 \\theta}{\\sin 3 \\theta}$ 이고 $f(\\theta)=\\frac{1}{2}\\times 2 \\times \\overline{{\\mathrm{AR}}}\\times \\sin \\theta=\\frac{2 \\sin 2 \\theta \\sin \\theta}{\\sin 3 \\theta}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$$\\lim_{\\theta \\to 0+}\\frac{f(\\theta)-g(\\theta)}{\\theta^{3}}=\\lim_{\\theta \\to 0+}2 \\times \\frac{\\sin 2 \\theta}{\\theta}\\times \\frac{\\sin \\theta}{\\theta}\\times \\frac{\\sin 3 \\theta}{\\theta}=2 \\times 2 \\times 1 \\times 3=12$$",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\mathrm{PQ}=2\\cos3\\theta$",
+   "cond": "C2",
+   "text": [
+    "$\\angle$PAQ$=\\frac\\pi2-3\\theta$."
+   ]
+  },
+  {
+   "h": "정확한 상쇄",
+   "cond": "C3",
+   "text": [
+    "근사 없이 $\\sin^2$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\angle\\mathrm{QBA}=3\\theta$",
+   "body": [
+    "(같은 반원에서) $\\angle\\mathrm{PAB}=\\theta$, $\\angle\\mathrm{QBA}=3\\theta$ $\\left(0<\\theta<\\frac\\pi8\\right)$일 때, 같은 $f$, $g$에 대하여 $\\lim_{\\theta\\to0+}\\frac{f(\\theta)-g(\\theta)}{\\theta^3}$의 값을 구하시오."
+   ],
+   "answer": 24,
+   "hint": "닮음비 $\\cos4\\theta$: $\\frac{6\\theta}4\\cdot16\\theta^2$."
+  }
+ ],
+ "line": "원주각 닮음 → 차를 정확히."
+}

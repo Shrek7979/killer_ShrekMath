@@ -1,0 +1,142 @@
+{
+ "wrong": "예상 오답 — $r=\\frac13$을 택해 $s=-1$이 되는 모순을 확인하지 않은 경우",
+ "intro": [
+  "곱의 급수 조건 → $r+s=2rs$.",
+  "절댓값 조건 → $|r|=\\frac13$ → $r=-\\frac13$, $s=\\frac15$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "수열",
+   "why": "두 등비, 급수 수렴.",
+   "uses": [
+    1,
+    6
+   ]
+  },
+  "C2": {
+   "label": "조건",
+   "why": "$\\sum a_nb_n=\\sum a_n\\sum b_n$, $4\\sum|a_{2n-1}|=39\\sum|a_{3n}|$.",
+   "uses": [
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$150\\sum\\left(\\frac{a_{3n}}{a_n}+\\frac{b_{3n}}{b_n}\\right)$.",
+   "uses": [
+    7,
+    8,
+    9
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "곱의 등비급수",
+   "p": [
+    "공비 $rs$."
+   ]
+  },
+  {
+   "h": "삼차 인수분해",
+   "p": [
+    "$(3t-1)(13t^2+16t+4)$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "설정",
+   "text": "$a_{n}=a r^{n-1}$ , $b_{n}=b s^{n-1}$ $(0<\\left|r \\right|<1,\\,0<\\left|s \\right|<1)$ 이라 하자. $\\sum a_{n}b_{n}=\\frac{a b}{1-r s}$ 이므로 첫째 조건은 $\\frac{1}{1-r s}=\\frac{1}{(1-r)(1-s)}$ , 즉",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$r+s=2rs$",
+   "text": "$$r+s=2 r s$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "절댓값",
+   "text": "이다. $t=\\left|r \\right|$ 라 하면 $\\sum \\left|a_{2 n-1}\\right|=\\frac{\\left|a \\right|}{1-t^{2}}$ , $\\sum \\left|a_{3 n}\\right|=\\frac{\\left|a \\right|t^{2}}{1-t^{3}}$ 이므로 둘째 조건은 $4 \\left(1-t^{3}\\right)=39 t^{2}\\left(1-t^{2}\\right)$ 이고, 양변을 $1-t$ 로 나누면",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "인수분해",
+   "text": "$$4 \\left(1+t+t^{2}\\right)=39 t^{2}(1+t),\\,\\,\\,39 t^{3}+35 t^{2}-4 t-4=(3 t-1)\\left(13 t^{2}+16 t+4 \\right)=0$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$t$",
+   "text": "이다. $t>0$ 이면 $13 t^{2}+16 t+4>0$ 이므로 $t=\\frac{1}{3}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "부호",
+   "text": "$r+s=2 r s$ 에서 $s=\\frac{r}{2 r-1}$ 이다. $r=\\frac{1}{3}$ 이면 $s=-1$ 이 되어 $\\sum b_{n}$ 이 수렴하지 않으므로 모순이다. 따라서 $r=-\\frac{1}{3}$ 이고 $s=\\frac{-\\frac{1}{3}}{-\\frac{5}{3}}=\\frac{1}{5}$ 이다( $\\left|s \\right|<1$ ).",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "비",
+   "text": "$\\frac{a_{3 n}}{a_{n}}=r^{2 n}$ , $\\frac{b_{3 n}}{b_{n}}=s^{2 n}$ 이므로",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "합",
+   "text": "$$\\sum_{n=1}^{\\infty}\\left(\\frac{a_{3 n}}{a_{n}}+\\frac{b_{3 n}}{b_{n}}\\right)=\\frac{\\frac{1}{9}}{1-\\frac{1}{9}}+\\frac{\\frac{1}{25}}{1-\\frac{1}{25}}=\\frac{1}{8}+\\frac{1}{24}=\\frac{1}{6}$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이고 구하는 값은 $150 \\times \\frac{1}{6}=25$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$|s|<1$",
+   "cond": "C1",
+   "text": [
+    "$r>0$ 배제."
+   ]
+  },
+  {
+   "h": "$r^{2n}$",
+   "cond": "C4",
+   "text": [
+    "$\\frac{a_{3n}}{a_n}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 곱 수열 합",
+   "body": [
+    "(같은 두 수열에서) $80\\times\\sum_{n=1}^\\infty\\frac{a_nb_n}{a_1b_1}$의 값을 구하시오."
+   ],
+   "answer": 75,
+   "hint": "$\\frac1{1-rs}=\\frac{15}{16}$."
+  }
+ ],
+ "line": "곱 급수 조건 → $r+s=2rs$ → 부호 결정."
+}

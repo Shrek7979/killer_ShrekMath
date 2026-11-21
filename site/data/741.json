@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 1차 Q30 23번( 2024학년도 9월 모의평가 30번) 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 두 반지름을 각각 $\\theta^2$으로만 근사해 최고차 상쇄 뒤의 항을 잃은 경우",
  "answer": 200,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -39,8 +39,8 @@
     0
    ],
    "text": "길이가 $4$ 인 선분 ${\\mathrm{AB}}$ 를 지름으로 하는 원 위의 점 ${\\mathrm{P}}$ 를 $\\angle{\\mathrm{PAB}}=\\theta$ $\\left(0<\\theta<\\frac{\\pi}{2}\\right)$ 가 되도록 잡는다.",
-   "label": "",
-   "why": "",
+   "label": "원",
+   "why": "지름 AB$=4$, $\\angle$PAB$=\\theta$.",
    "uses": []
   },
   {
@@ -50,9 +50,11 @@
     1
    ],
    "text": "점 ${\\mathrm{B}}$ 에서 이 원에 접하는 직선을 $l$ 이라 할 때, 직선 ${\\mathrm{AP}}$ 가 직선 $l$ 과 만나는 점을 ${\\mathrm{Q}}$ , 점 ${\\mathrm{P}}$ 에서 이 원에 접하는 직선이 직선 $l$ 과 만나는 점을 ${\\mathrm{R}}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "점",
+   "why": "B의 접선 $l$, AP∩$l$=Q, P의 접선∩$l$=R.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C3",
@@ -61,9 +63,14 @@
     2
    ],
    "text": "삼각형 ${\\mathrm{PRB}}$ 에 내접하는 원의 반지름의 길이를 $f(\\theta)$ , 삼각형 ${\\mathrm{PQR}}$ 에 내접하는 원의 반지름의 길이를 $g(\\theta)$ 라 할 때,",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "함수",
+   "why": "$f$: △PRB 내접원, $g$: △PQR 내접원.",
+   "uses": [
+    2,
+    3,
+    4,
+    5
+   ]
   },
   {
    "id": "C4",
@@ -72,9 +79,13 @@
     0
    ],
    "text": "$100 \\times \\lim_{\\theta \\to 0+}\\frac{2 f(\\theta)-g(\\theta)}{\\theta \\times f(\\theta)}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$100\\lim\\frac{2f-g}{\\theta f}$.",
+   "uses": [
+    6,
+    7,
+    8
+   ]
   },
   {
    "id": "C5",
@@ -89,62 +100,116 @@
   }
  ],
  "intro": [
-  "넓이 대신 두 이등변삼각형의 내접원의 반지름을 비교하게 하여, 점 ${\\mathrm{R}}$ 가 선분 ${\\mathrm{BQ}}$ 의 중점이고 두 삼각형의 넓이가 같다는 사실로 두 반지름을 닫힌 꼴로 구한 뒤, 최고차가 상쇄되는 차의 극한을 구하게 함"
+  "R은 BQ 중점, 두 삼각형 넓이 같음.",
+  "$f=\\frac{2\\sin^2\\theta}{1+\\cos\\theta}$, $g=\\frac{2\\sin^2\\theta}{1+\\sin\\theta}$ — 닫힌 꼴."
  ],
  "topic": "여러 가지 함수의 미분",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "접선 길이",
+   "p": [
+    "RP$=$RB."
+   ]
+  },
+  {
+   "h": "내접원",
+   "p": [
+    "$r=\\frac{2S}{\\text{둘레}}$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "원의 중심을 ${\\mathrm{O}}$ 라 하면 $\\angle{\\mathrm{POB}}=2 \\theta$ 이다. 점 ${\\mathrm{R}}$ 에서 원에 그은 두 접선의 길이가 같으므로 $\\overline{{\\mathrm{RP}}}=\\overline{{\\mathrm{RB}}}$ 이고, 직각삼각형 ${\\mathrm{BPQ}}$ $\\left(\\angle{\\mathrm{BPQ}}=\\frac{\\pi}{2}\\right)$ 에서 $\\angle{\\mathrm{RPQ}}=\\frac{\\pi}{2}-\\angle{\\mathrm{RPB}}=\\frac{\\pi}{2}-\\angle{\\mathrm{RBP}}=\\angle{\\mathrm{RQP}}$ 이므로 $\\overline{{\\mathrm{RQ}}}=\\overline{{\\mathrm{RP}}}$ 이다. 따라서 ${\\mathrm{R}}$ 는 선분 ${\\mathrm{BQ}}$ 의 중점이고 $\\overline{{\\mathrm{RP}}}=\\overline{{\\mathrm{RB}}}=\\overline{{\\mathrm{RQ}}}=\\frac{1}{2}\\times 4 \\tan \\theta=2 \\tan \\theta$ 이다. 사각형 ${\\mathrm{OPRB}}$ 에서 $\\angle{\\mathrm{OPR}}=\\angle{\\mathrm{OBR}}=\\frac{\\pi}{2}$ 이므로 $\\angle{\\mathrm{PRB}}=\\pi-2 \\theta$ 이고",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "구조"
   },
   {
    "n": 2,
    "text": "$$({삼 각 형 P R B 의 넓 이})=\\frac{1}{2}\\times(2 \\tan \\theta)^{2}\\times \\sin(\\pi-2 \\theta)=2 \\tan^{2}\\theta \\sin 2 \\theta=\\frac{4 \\sin^{3}\\theta}{\\cos \\theta}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "넓이"
   },
   {
    "n": 3,
    "text": "이다. 두 삼각형 ${\\mathrm{PRB}}$ , ${\\mathrm{PQR}}$ 는 밑변의 길이 $\\overline{{\\mathrm{RB}}}=\\overline{{\\mathrm{RQ}}}$ 와 높이(점 ${\\mathrm{P}}$ 와 직선 $l$ 사이의 거리)가 같으므로 넓이도 같다. 또 $\\overline{{\\mathrm{PB}}}=4 \\sin \\theta$ , $\\overline{{\\mathrm{PQ}}}=\\overline{{\\mathrm{AQ}}}-\\overline{{\\mathrm{AP}}}=\\frac{4}{\\cos \\theta}-4 \\cos \\theta=\\frac{4 \\sin^{2}\\theta}{\\cos \\theta}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "등적"
   },
   {
    "n": 4,
    "text": "삼각형 ${\\mathrm{PRB}}$ 의 둘레의 길이는 $4 \\tan \\theta+4 \\sin \\theta=\\frac{4 \\sin \\theta(1+\\cos \\theta)}{\\cos \\theta}$ , 삼각형 ${\\mathrm{PQR}}$ 의 둘레의 길이는 $4 \\tan \\theta+\\frac{4 \\sin^{2}\\theta}{\\cos \\theta}=\\frac{4 \\sin \\theta(1+\\sin \\theta)}{\\cos \\theta}$ 이므로 (내접원의 반지름) $=\\frac{2 \\times({넓 이})}{({둘 레})}$ 에서",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "둘레"
   },
   {
    "n": 5,
    "text": "$$f(\\theta)=\\frac{2 \\sin^{2}\\theta}{1+\\cos \\theta},\\,\\,\\,g(\\theta)=\\frac{2 \\sin^{2}\\theta}{1+\\sin \\theta}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "닫힌 꼴"
   },
   {
    "n": 6,
    "text": "이다. 따라서",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "정리"
   },
   {
    "n": 7,
    "text": "$$\\frac{2 f(\\theta)-g(\\theta)}{\\theta f(\\theta)}=\\frac{1}{\\theta}\\left(2-\\frac{1+\\cos \\theta}{1+\\sin \\theta}\\right)=\\frac{1}{1+\\sin \\theta}\\left(\\frac{1-\\cos \\theta}{\\theta}+\\frac{2 \\sin \\theta}{\\theta}\\right)\\to 0+2=2$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "극한"
   },
   {
    "n": 8,
    "text": "이고 구하는 값은 $200$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\angle\\mathrm{RPQ}=\\angle\\mathrm{RQP}$",
+   "cond": "C2",
+   "text": [
+    "R이 중점."
+   ]
+  },
+  {
+   "h": "$\\frac{1-\\cos\\theta}\\theta\\to0$",
+   "cond": "C4",
+   "text": [
+    "고차."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $f-\\frac g2$",
+   "body": [
+    "(같은 설정에서) $100\\times\\lim_{\\theta\\to0+}\\frac{2f(\\theta)-g(\\theta)}{2\\theta f(\\theta)}+100\\times\\lim_{\\theta\\to0+}\\frac{g(\\theta)}{\\theta^2}$의 값을 구하시오."
+   ],
+   "answer": 300,
+   "hint": "첫 극한 $1$, 둘째 $2$."
+  }
+ ],
+ "line": "등적 이등변 → 닫힌 꼴 → 차의 극한.",
  "note": ""
 }

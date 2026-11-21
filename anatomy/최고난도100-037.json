@@ -1,0 +1,112 @@
+{
+ "wrong": "예상 오답 — 비를 $\\frac{(3n)!}{(2n)!^2}$ 등으로 잘못 정리한 경우",
+ "intro": [
+  "비 $=\\prod_{k=1}^n\\frac{2n+k}{n+k}$.",
+  "로그 → $\\int_0^1\\{\\ln(2+x)-\\ln(1+x)\\}dx$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "극한",
+   "why": "$\\lim\\left(\\frac{{}_{3n}\\mathrm C_n}{{}_{2n}\\mathrm C_n}\\right)^{1/n}=\\frac qp$.",
+   "uses": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  "C3": {
+   "label": "단서",
+   "why": "서로소.",
+   "uses": [
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "곱 → 합",
+   "p": [
+    "로그."
+   ]
+  },
+  {
+   "h": "구분구적",
+   "p": [
+    "$\\frac1n\\sum f\\left(\\frac kn\\right)$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "정리",
+   "text": "$$\\frac{_{3 n}{\\mathrm{C}}_{n}}{_{2 n}{\\mathrm{C}}_{n}}=\\frac{(3 n)!}{n!(2 n)!}\\times \\frac{n!n!}{(2 n)!}=\\frac{(3 n)!}{(2 n)!}\\div \\frac{(2 n)!}{n!}=\\frac{(2 n+1)(2 n+2)\\cdots(3 n)}{(n+1)(n+2)\\cdots(2 n)}$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "곱",
+   "text": "즉 이 값은 $\\frac{2 n+1}{n+1}\\times \\frac{2 n+2}{n+2}\\times \\cdots \\times \\frac{3 n}{2 n}$ 이므로 자연로그를 취하면",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "로그",
+   "text": "$$\\frac{1}{n}\\ln \\frac{_{3 n}{\\mathrm{C}}_{n}}{_{2 n}{\\mathrm{C}}_{n}}=\\frac{1}{n}\\sum_{k=1}^{n}\\left\\{\\ln \\left(2+\\frac{k}{n}\\right)-\\ln \\left(1+\\frac{k}{n}\\right)\\right\\}$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "적분",
+   "text": "이고 이 값은 $\\int_{0}^{1}\\left\\{\\ln(2+x)-\\ln(1+x)\\right\\} dx$ 로 수렴한다. $\\int \\ln(c+x)dx=(c+x)\\ln(c+x)-x+C$ 이므로",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "계산",
+   "text": "$$\\int_{0}^{1}\\left\\{\\ln(2+x)-\\ln(1+x)\\right\\} dx=(3 \\ln 3-2 \\ln 2)-2 \\ln 2=\\ln \\frac{27}{16}$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "지수함수의 연속성에 의하여 극한값은 $\\frac{27}{16}$ 이고 $p+q=16+27=43$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\int\\ln(c+x)$",
+   "cond": "C1",
+   "text": [
+    "$(c+x)\\ln(c+x)-x$."
+   ]
+  },
+  {
+   "h": "연속성",
+   "cond": "C1",
+   "text": [
+    "$e^{\\lim}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\frac{{}_{4n}\\mathrm C_n}{{}_{3n}\\mathrm C_n}$",
+   "body": [
+    "$\\lim_{n\\to\\infty}\\left(\\frac{{}_{4n}\\mathrm C_n}{{}_{3n}\\mathrm C_n}\\right)^{\\frac1n}=\\frac qp$일 때, $p+q$의 값을 구하시오. (단, $p$와 $q$는 서로소인 자연수)"
+   ],
+   "answer": 1753,
+   "hint": "$\\prod\\frac{3n+k}{2n+k}$ → $10\\ln2-6\\ln3$ → $\\frac{1024}{729}$."
+  }
+ ],
+ "line": "조합 비 → 곱 → 로그 → 정적분."
+}
