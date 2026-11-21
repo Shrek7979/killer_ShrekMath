@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2026학년도 대학수학능력시험 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **9** — $t\\ge0$에서 교점을 $1$개로 센 경우",
  "answer": 10,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -40,9 +40,11 @@
     0
    ],
    "text": "함수 $f(x)=x e^{-x}$ 에 대하여 곡선 $y=f(x)$ 위의 점 중 접선의 기울기가 최소인 점을 ${\\mathrm{A}}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "점 A",
+   "why": "$f=xe^{-x}$의 접선 기울기 최소점.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C2",
@@ -51,9 +53,14 @@
     1
    ],
    "text": "실수 $t$ 에 대하여 점 ${\\mathrm{A}}$ 를 지나고 기울기가 $t$ 인 직선이 곡선 $y=f(x)$ 와 만나는 서로 다른 점의 개수를 $g(t)$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "직선과 $g(t)$",
+   "why": "A를 지나는 기울기 $t$인 직선과의 교점 개수.",
+   "uses": [
+    2,
+    3,
+    4,
+    5
+   ]
   },
   {
    "id": "C3",
@@ -62,9 +69,11 @@
     2
    ],
    "text": "함수 $g(t)$ 가 불연속인 $t$ 의 값을 $\\alpha$ , $\\beta$ $(\\alpha<\\beta)$ 라 할 때,",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "불연속점",
+   "why": "$\\alpha<\\beta$.",
+   "uses": [
+    6
+   ]
   },
   {
    "id": "C4",
@@ -73,9 +82,11 @@
     0
    ],
    "text": "$g(\\alpha)+\\lim_{t \\to \\alpha+}g(t)+g(\\beta)+\\lim_{t \\to \\beta-}g(t)-e^{2}\\alpha$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$g(\\alpha)+\\lim_{\\alpha+}g+g(\\beta)+\\lim_{\\beta-}g-e^2\\alpha$.",
+   "uses": [
+    6
+   ]
   },
   {
    "id": "C5",
@@ -95,56 +106,110 @@
     1
    ],
    "text": "(단, $\\lim_{x \\to \\infty}x e^{-x}=0$ ) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "단서",
+   "why": "$xe^{-x}\\to0$.",
+   "uses": [
+    5
+   ]
   }
  ],
  "intro": [
-  "고정된 점을 지나는 직선과 곡선의 교점의 개수를, 고정점이 변곡점이라는 사실과 곡선의 점근선을 함께 이용해 판단하게 함"
+  "접선 기울기 최소인 점 = $f'$의 최솟점 = 변곡점 A$(2,2e^{-2})$.",
+  "$\\varphi'=f'-t$의 근 개수로 $\\varphi$의 증감이 정해지고, $\\varphi(2)=0$과 끝 극한으로 근의 개수."
  ],
  "topic": "도함수의 활용",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "직선과 곡선의 교점 개수",
+   "p": [
+    "$\\varphi=f-(\\text{직선})$의 증감과 끝 극한으로 근의 개수를 센다."
+   ]
+  },
+  {
+   "h": "변곡점을 지나는 직선",
+   "p": [
+    "변곡점의 접선 기울기가 $f'$의 극값 — 기준선."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$f'(x)=(1-x)e^{-x}$ , $f''(x)=(x-2)e^{-x}$ 이므로 $f'(x)$ 는 $x=2$ 에서 최솟값 $-e^{-2}$ 를 갖는다. 즉 ${\\mathrm{A}}\\left(2,\\,2 e^{-2}\\right)$ 이다. 또 $f'(x)$ 는 $x<2$ 에서 $\\infty$ 에서 $-e^{-2}$ 까지 감소하고, $x>2$ 에서 $-e^{-2}$ 에서 $0$ 에 가까워지며 증가한다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "A"
   },
   {
    "n": 2,
    "text": "$\\varphi(x)=f(x)-t(x-2)-2 e^{-2}$ 이라 하면 $\\varphi(2)=0$ , $\\varphi'(x)=f'(x)-t$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$\\varphi$"
   },
   {
    "n": 3,
    "text": "(i) $t \\le-e^{-2}$ 이면 $\\varphi'(x)\\ge 0$ 이므로 $\\varphi(x)$ 는 증가하고 $g(t)=1$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$t\\le-e^{-2}$"
   },
   {
    "n": 4,
    "text": "(ii) $-e^{-2}<t<0$ 이면 $f'(x)=t$ 인 $x$ 가 $x_{1}<2<x_{2}$ 로 두 개이고, $\\varphi(x)$ 는 $x_{1}$ 에서 극대, $x_{2}$ 에서 극소이며 $\\varphi(x_{1})>\\varphi(2)=0>\\varphi(x_{2})$ 이다. $x \\to-\\infty$ 일 때 $\\varphi(x)\\to-\\infty$ , $x \\to \\infty$ 일 때 $\\varphi(x)\\to \\infty$ 이므로 $g(t)=3$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$-e^{-2}<t<0$"
   },
   {
    "n": 5,
    "text": "(iii) $t \\ge 0$ 이면 $f'(x)=t$ 인 $x$ 는 $x_{0}\\le 1$ 하나뿐이고 $\\varphi(x)$ 는 $x_{0}$ 에서 최대이다. $\\varphi(x_{0})>\\varphi(2)=0$ 이고 $x \\to \\pm \\infty$ 일 때 $\\varphi(x)$ 는 음수이므로 $g(t)=2$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2",
+    "C6"
+   ],
+   "title": "$t\\ge0$"
   },
   {
    "n": 6,
    "text": "따라서 $\\alpha=-e^{-2}$ , $\\beta=0$ 이고, 구하는 값은 $1+3+2+3+1=10$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3",
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$t\\ge0$의 끝 극한",
+   "cond": "C6",
+   "text": [
+    "$x\\to\\infty$에서 $f\\to0$, 직선은 $+\\infty$ — $\\varphi\\to-\\infty$."
+   ]
+  },
+  {
+   "h": "$-e^2\\alpha=1$",
+   "cond": "C4",
+   "text": [
+    "$\\alpha=-e^{-2}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 다른 조합",
+   "body": [
+    "(같은 $g(t)$에 대하여) $g(\\alpha)\\times g(\\beta)+\\lim_{t\\to\\alpha-}g(t)+\\lim_{t\\to\\beta+}g(t)-e^2\\alpha$의 값을 구하시오."
+   ],
+   "answer": 6,
+   "hint": "$1\\times2+1+2+1=6$."
+  }
+ ],
+ "line": "변곡점을 지나는 직선: 기울기를 $f'$의 극값과 $0$으로 나눠 본다.",
  "note": ""
 }
