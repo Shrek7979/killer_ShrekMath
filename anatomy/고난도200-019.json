@@ -1,0 +1,104 @@
+{
+ "wrong": "예상 오답 **100** — $\\frac{1-\\cos x}{x^2}\\to1$로 잘못 계산한 경우",
+ "intro": [
+  "$x=\\frac\\pi n$: $A_n=n\\tan x$, $B_n=n\\sin x\\cos x$, $\\frac{l_n}2=n\\sin x$.",
+  "분수가 정확히 $1+\\cos x$로 정리되어 $n^2(1-\\cos\\frac\\pi n)$만 남습니다."
+ ],
+ "conds": {
+  "C1": {
+   "label": "세 양",
+   "why": "외접·내접 정$n$각형의 넓이, 내접 정$n$각형의 둘레.",
+   "uses": [
+    1,
+    2
+   ]
+  },
+  "C2": {
+   "label": "극한",
+   "why": "$\\lim n^2\\left\\{2-\\frac{A_n-B_n}{A_n-l_n/2}\\right\\}=k\\pi^2$.",
+   "uses": [
+    3,
+    4,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "정$n$각형 넓이",
+   "p": [
+    "외접: $n\\tan\\frac\\pi n$, 내접: $\\frac n2\\sin\\frac{2\\pi}n$."
+   ]
+  },
+  {
+   "h": "$\\frac{1-\\cos x}{x^2}\\to\\frac12$",
+   "p": [
+    "$1-\\cos x=\\frac{\\sin^2x}{1+\\cos x}$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "삼각함수로",
+   "text": "$x=\\frac{\\pi}{n}$ 이라 하면 $A_{n}=n \\tan x$ , $B_{n}=\\frac{n}{2}\\sin 2 x=n \\sin x \\cos x$ , $\\frac{l_{n}}{2}=n \\sin x$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "차",
+   "text": "$$A_{n}-B_{n}=n \\tan x \\left(1-\\cos^{2}x \\right)=n \\tan x \\sin^{2}x,\\,\\,\\,A_{n}-\\frac{l_{n}}{2}=n \\tan x \\left(1-\\cos x \\right)$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "정리",
+   "text": "이므로 $\\frac{A_{n}-B_{n}}{A_{n}-\\frac{l_{n}}{2}}=\\frac{\\sin^{2}x}{1-\\cos x}=1+\\cos x$ 이다. 따라서",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "극한",
+   "text": "$$n^{2}\\left\\{2-\\frac{A_{n}-B_{n}}{A_{n}-\\frac{l_{n}}{2}}\\right\\}=n^{2}\\left(1-\\cos \\frac{\\pi}{n}\\right)=\\pi^{2}\\times \\frac{1-\\cos x}{x^{2}}=\\pi^{2}\\times \\frac{\\sin^{2}x}{x^{2}}\\times \\frac{1}{1+\\cos x}\\to \\frac{\\pi^{2}}{2}$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이다. $k=\\frac{1}{2}$ 이므로 $100 k=50$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "정확한 정리",
+   "cond": "C2",
+   "text": [
+    "근사하지 말고 $\\sin^2x=(1-\\cos x)(1+\\cos x)$로 약분."
+   ]
+  },
+  {
+   "h": "$\\frac12$",
+   "cond": "C2",
+   "text": [
+    "$\\frac{1-\\cos x}{x^2}\\to\\frac12$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $n^2(A_n-B_n)$",
+   "body": [
+    "$3$ 이상의 자연수 $n$에 대하여 반지름의 길이가 $1$인 원에 외접하는 정$n$각형의 넓이를 $A_n$, 내접하는 정$n$각형의 넓이를 $B_n$이라 하자. $\\lim_{n\\to\\infty}n^2(A_n-B_n)=k\\pi^3$일 때, $100k$의 값을 구하시오."
+   ],
+   "answer": 100,
+   "hint": "$A_n-B_n=n\\tan x\\sin^2x\\sim nx^3=\\frac{\\pi^3}{n^2}$."
+  }
+ ],
+ "line": "다각형 넓이를 삼각함수로 → 정확한 약분 → 기본 극한."
+}

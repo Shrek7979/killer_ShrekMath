@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2024학년도 대학수학능력시험 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **$-11$** — $\\sin^2\\frac{2\\pi}3=\\frac34$의 부호를 틀려 $b=+\\frac34$로 쓴 경우",
  "answer": 43,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -39,9 +39,11 @@
     0
    ],
    "text": "실수 $x$ 에 대하여",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "정의역",
+   "why": "실수 $x$.",
+   "uses": [
+    3
+   ]
   },
   {
    "id": "C2",
@@ -50,9 +52,13 @@
     0
    ],
    "text": "$f(x)=\\sum_{n=1}^{\\infty}4^{n}\\sin^{4}\\frac{x}{2^{n}}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "급수",
+   "why": "$f(x)=\\sum4^n\\sin^4\\frac x{2^n}$.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
   },
   {
    "id": "C3",
@@ -72,9 +78,11 @@
     1
    ],
    "text": "$f \\left(\\frac{2 \\pi}{3}\\right)=a \\pi^{2}+b$ 일 때, $36(a-b)$ 의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$f\\left(\\frac{2\\pi}3\\right)=a\\pi^2+b$, $36(a-b)$.",
+   "uses": [
+    4
+   ]
   },
   {
    "id": "C5",
@@ -89,38 +97,85 @@
   }
  ],
  "intro": [
-  "$\\sin^{2}2 y=4 \\sin^{2}y-4 \\sin^{4}y$ 를 이용하여 일반항을 이웃한 두 항의 차로 나타내고, 부분합의 극한에서 $\\lim_{y \\to 0}\\frac{\\sin y}{y}=1$ 을 쓰게 함"
+  "$\\sin^22y=4\\sin^2y-4\\sin^4y$를 뒤집으면 $4\\sin^4y=4\\sin^2y-\\sin^22y$ — 이웃한 두 항의 차.",
+  "부분합의 남는 항 $4^N\\sin^2\\frac x{2^N}\\to x^2$. 그래서 $f(x)=x^2-\\sin^2x$."
  ],
  "topic": "급수",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "배각 공식으로 망원",
+   "p": [
+    "$4^n\\sin^4\\frac x{2^n}=4^n\\sin^2\\frac x{2^n}-4^{n-1}\\sin^2\\frac x{2^{n-1}}$."
+   ]
+  },
+  {
+   "h": "$\\frac{\\sin y}y\\to1$",
+   "p": [
+    "$4^N\\sin^2\\frac x{2^N}=x^2\\left(\\frac{\\sin y_N}{y_N}\\right)^2$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$\\sin^{2}2 y=4 \\sin^{2}y \\cos^{2}y=4 \\sin^{2}y-4 \\sin^{4}y$ 이므로 $4 \\sin^{4}y=4 \\sin^{2}y-\\sin^{2}2 y$ 이다. $y=\\frac{x}{2^{n}}$ 을 대입하고 $4^{n-1}$ 을 곱하면",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "항등식"
   },
   {
    "n": 2,
    "text": "$$4^{n}\\sin^{4}\\frac{x}{2^{n}}=4^{n}\\sin^{2}\\frac{x}{2^{n}}-4^{n-1}\\sin^{2}\\frac{x}{2^{n-1}}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "항 변형"
   },
   {
    "n": 3,
    "text": "이다. 제 $N$ 항까지의 부분합은 $4^{N}\\sin^{2}\\frac{x}{2^{N}}-\\sin^{2}x$ 이고, $4^{N}\\sin^{2}\\frac{x}{2^{N}}=x^{2}\\left(\\frac{\\sin y_{N}}{y_{N}}\\right)^{2}\\to x^{2}$ $\\left(y_{N}=\\frac{x}{2^{N}}\\right)$ 이므로 $f(x)=x^{2}-\\sin^{2}x$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "부분합과 $f$"
   },
   {
    "n": 4,
    "text": "$f \\left(\\frac{2 \\pi}{3}\\right)=\\frac{4}{9}\\pi^{2}-\\frac{3}{4}$ 이므로 $a=\\frac{4}{9}$ , $b=-\\frac{3}{4}$ 이고 $36(a-b)=16+27=43$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$b$의 부호",
+   "cond": "C4",
+   "text": [
+    "$-\\sin^2x$ → $b=-\\frac34$, $a-b=\\frac49+\\frac34$."
+   ]
+  },
+  {
+   "h": "남는 항",
+   "cond": "C2",
+   "text": [
+    "첫 항 쪽은 $-\\sin^2x$, 끝 쪽은 $x^2$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $f\\left(\\frac\\pi2\\right)$",
+   "body": [
+    "실수 $x$에 대하여 $f(x)=\\sum_{n=1}^\\infty4^n\\sin^4\\frac x{2^n}$이라 하자. $f\\left(\\frac\\pi2\\right)=a\\pi^2+b$일 때, $36(a-b)$의 값을 구하시오. (단, $a$, $b$는 유리수)"
+   ],
+   "answer": 45,
+   "hint": "$\\frac{\\pi^2}4-1$ → $36\\times\\frac54$."
+  }
+ ],
+ "line": "배각 공식 → 망원급수 → 남는 항의 극한.",
  "note": ""
 }
