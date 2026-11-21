@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2026학년도 대학수학능력시험 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $\\mathrm E(X^2)$를 $\\mathrm V(X)$로 답한 경우",
  "answer": 307,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -30,9 +30,12 @@
     0
    ],
    "text": "확률변수 $X$ 가 이항분포 ${\\mathrm{B}}\\left(n,\\,\\frac{1}{4}\\right)$ 을 따른다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "분포",
+   "why": "$\\mathrm B\\left(n,\\frac14\\right)$.",
+   "uses": [
+    1,
+    3
+   ]
   },
   {
    "id": "C2",
@@ -41,9 +44,12 @@
     1
    ],
    "text": "$0 \\le k \\le n$ 인 정수 $k$ 에 대하여 ${\\mathrm{P}}(X=k)$ 가 최대가 되도록 하는 $k$ 의 값이 $5$ 와 $6$ 뿐일 때, ${\\mathrm{E}}(X^{2})=\\frac{q}{p}$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건",
+   "why": "최대가 되는 $k$가 $5$, $6$뿐; $\\mathrm E(X^2)=\\frac qp$.",
+   "uses": [
+    2,
+    4
+   ]
   },
   {
    "id": "C3",
@@ -63,50 +69,100 @@
     3
    ],
    "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "단서",
+   "why": "서로소.",
+   "uses": [
+    5
+   ]
   }
  ],
  "intro": [
-  "이항분포의 확률을 직접 계산하는 대신, 이웃한 두 확률의 비 $\\frac{{\\mathrm{P}}(X=k+1)}{{\\mathrm{P}}(X=k)}$ 로 확률이 최대인 $k$ 를 조사하여 $n$ 을 결정하게 함"
+  "$\\frac{P(k+1)}{P(k)}=\\frac{n-k}{3(k+1)}$ — $P(5)=P(6)$ → $n=23$.",
+  "$\\mathrm E(X^2)=\\mathrm V+\\mathrm E^2$."
  ],
  "topic": "이항분포",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "이웃 확률의 비",
+   "p": [
+    "$>1$이면 증가."
+   ]
+  },
+  {
+   "h": "이차 모멘트",
+   "p": [
+    "$\\mathrm E(X^2)=\\mathrm V(X)+\\mathrm E(X)^2$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$\\frac{{\\mathrm{P}}(X=k+1)}{{\\mathrm{P}}(X=k)}=\\frac{_{n}{\\mathrm{C}}_{k+1}}{_{n}{\\mathrm{C}}_{k}}\\times \\frac{1}{3}=\\frac{n-k}{3(k+1)}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "비"
   },
   {
    "n": 2,
    "text": "${\\mathrm{P}}(X=5)={\\mathrm{P}}(X=6)$ 이어야 하므로 $\\frac{n-5}{18}=1$ , $n=23$ 이다. 이때 $\\frac{23-k}{3(k+1)}>1 \\,<\\to \\,k<5$ 이므로 ${\\mathrm{P}}(X=k)$ 는 $k \\le 5$ 에서 증가, ${\\mathrm{P}}(X=5)={\\mathrm{P}}(X=6)$ , $k \\ge 6$ 에서 감소하여 최대가 되는 $k$ 는 $5$ , $6$ 뿐이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$n$"
   },
   {
    "n": 3,
    "text": "${\\mathrm{E}}(X)=\\frac{23}{4}$ , ${\\mathrm{V}}(X)=23 \\times \\frac{1}{4}\\times \\frac{3}{4}=\\frac{69}{16}$ 이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "모수"
   },
   {
    "n": 4,
    "text": "$${\\mathrm{E}}(X^{2})=\\frac{69}{16}+\\frac{529}{16}=\\frac{598}{16}=\\frac{299}{8}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$\\mathrm E(X^2)$"
   },
   {
    "n": 5,
    "text": "따라서 $p+q=8+299=307$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "동점",
+   "cond": "C2",
+   "text": [
+    "비가 정확히 $1$."
+   ]
+  },
+  {
+   "h": "단조 확인",
+   "cond": "C2",
+   "text": [
+    "$k<5$에서 증가."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\mathrm B\\left(n,\\frac13\\right)$, $4$와 $5$",
+   "body": [
+    "확률변수 $X$가 $\\mathrm B\\left(n,\\frac13\\right)$을 따르고, $P(X=k)$가 최대가 되도록 하는 $k$의 값이 $4$와 $5$뿐일 때, $\\mathrm E(X^2)=\\frac qp$이다. $p+q$의 값을 구하시오. (단, $p$와 $q$는 서로소인 자연수)"
+   ],
+   "answer": 233,
+   "hint": "$\\frac{n-4}{10}=1$ → $n=14$: $\\frac{28}9+\\frac{196}9$."
+  }
+ ],
+ "line": "이웃 확률의 비로 최빈값 → $n$.",
  "note": ""
 }
