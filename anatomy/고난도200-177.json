@@ -1,0 +1,136 @@
+{
+ "wrong": "예상 오답 — $\\sum d^2(n-d)$ 계산에서 $\\left\\{\\frac{n(n-1)}2\\right\\}^2$를 빠뜨린 경우",
+ "intro": [
+  "$P(X=d)=\\frac{n-d}{{}_n\\mathrm C_2}$ → $\\mathrm E=\\frac{n+1}3$ → $n=14$.",
+  "$\\mathrm E(X^2)=\\frac{n(n+1)}6$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "정의",
+   "why": "$1\\sim n$에서 $2$장, 차 $X$.",
+   "uses": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8
+   ]
+  },
+  "C2": {
+   "label": "조건",
+   "why": "$\\mathrm E(X)=5$; $\\mathrm V(3X)$.",
+   "uses": [
+    5,
+    9
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "거듭제곱 합",
+   "p": [
+    "$\\sum k$, $\\sum k^2$, $\\sum k^3$."
+   ]
+  },
+  {
+   "h": "분산",
+   "p": [
+    "$\\mathrm V(aX)=a^2\\mathrm V$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "개수",
+   "text": "두 수의 차가 $d$ ( $d=1,\\,2,\\,\\cdots,\\,n-1$ )인 두 수의 쌍은 $(1,\\,1+d),\\,(2,\\,2+d),\\,\\cdots,\\,(n-d,\\,n)$ 의 $n-d$ 가지이므로",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "분포",
+   "text": "$${\\mathrm{P}}(X=d)=\\frac{n-d}{_{n}{\\mathrm{C}}_{2}}$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "합",
+   "text": "이다. 이때",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$$\\sum_{d=1}^{n-1}d(n-d)=n \\times \\frac{(n-1)n}{2}-\\frac{(n-1)n(2 n-1)}{6}=\\frac{(n-1)n(n+1)}{6}$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$n$",
+   "text": "이므로 ${\\mathrm{E}}(X)=\\frac{(n-1)n(n+1)}{6}\\times \\frac{2}{n(n-1)}=\\frac{n+1}{3}$ 이다. $\\frac{n+1}{3}=5$ 에서 $n=14$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "제곱합",
+   "text": "또",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$$\\sum_{d=1}^{n-1}d^{2}(n-d)=n \\times \\frac{(n-1)n(2 n-1)}{6}-\\left\\{\\frac{(n-1)n}{2}\\right\\}^{2}=\\frac{n^{2}(n-1)(n+1)}{12}$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$\\mathrm E(X^2)$",
+   "text": "이므로 ${\\mathrm{E}}(X^{2})=\\frac{n(n+1)}{6}$ 이고, $n=14$ 일 때 ${\\mathrm{E}}(X^{2})=35$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 ${\\mathrm{V}}(X)=35-5^{2}=10$ 이고 ${\\mathrm{V}}(3 X)=9 \\times 10=90$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\frac{n+1}3$",
+   "cond": "C2",
+   "text": [
+    "평균."
+   ]
+  },
+  {
+   "h": "$9$배",
+   "cond": "C2",
+   "text": [
+    "$3^2$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\mathrm E(X)=4$",
+   "body": [
+    "(같은 시행에서) $\\mathrm E(X)=4$일 때, $\\mathrm V(3X)$의 값을 구하시오."
+   ],
+   "answer": 54,
+   "hint": "$n=11$: $\\mathrm E(X^2)=22$, $\\mathrm V=6$."
+  }
+ ],
+ "line": "차의 분포 → 거듭제곱 합 → 평균으로 $n$."
+}

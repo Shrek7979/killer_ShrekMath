@@ -1,0 +1,129 @@
+{
+ "wrong": "예상 오답 — 방정식을 $t+2t=m$으로 세워 평균을 $36$으로 둔 경우",
+ "intro": [
+  "$P(X\\le2t)=P(X\\ge t)$ ⟺ $3t=2m$ → $m=18$.",
+  "$P(X\\ge24)=0.159$ → $\\sigma=6$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "분포",
+   "why": "$\\mathrm N(m,\\sigma^2)$.",
+   "uses": []
+  },
+  "C2": {
+   "label": "방정식",
+   "why": "$P(X\\le t)+P(X\\le2t)=1$.",
+   "uses": [
+    1
+   ]
+  },
+  "C3": {
+   "label": "근",
+   "why": "$t=12$.",
+   "uses": [
+    2
+   ]
+  },
+  "C4": {
+   "label": "조건",
+   "why": "$P(X\\ge24)=0.159$; $k=P(9\\le X\\le27)$.",
+   "uses": [
+    3,
+    4
+   ]
+  },
+  "C5": {
+   "label": "묻는 것",
+   "why": "$1000k$.",
+   "uses": [
+    5
+   ]
+  },
+  "C6": {
+   "label": "표",
+   "why": "$1$, $1.5$.",
+   "uses": [
+    4
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "대칭",
+   "p": [
+    "$P(X\\le c)=P(X\\ge d)$ ⟺ $c+d=2m$."
+   ]
+  },
+  {
+   "h": "표준화",
+   "p": [
+    "$Z=\\frac{X-m}\\sigma$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "변환",
+   "text": "${\\mathrm{P}}(X \\le t)+{\\mathrm{P}}(X \\le 2 t)=1$ 은 ${\\mathrm{P}}(X \\le 2 t)=1-{\\mathrm{P}}(X \\le t)={\\mathrm{P}}(X \\ge t)$ 와 같다. 정규분포 곡선은 직선 $x=m$ 에 대하여 대칭이므로 ${\\mathrm{P}}(X \\le c)={\\mathrm{P}}(X \\ge d)$ 일 필요충분조건은 $c+d=2 m$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$m$",
+   "text": "따라서 $2 t+t=2 m$ , 즉 $t=\\frac{2 m}{3}$ 이 유일한 실근이고 $\\frac{2 m}{3}=12$ 에서 $m=18$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$\\sigma$",
+   "text": "${\\mathrm{P}}(X \\ge 24)={\\mathrm{P}}\\left(Z \\ge \\frac{6}{\\sigma}\\right)=0.159=0.5-0.341$ 이므로 $\\frac{6}{\\sigma}=1$ , $\\sigma=6$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "확률",
+   "text": "$${\\mathrm{P}}(9 \\le X \\le 27)={\\mathrm{P}}(-1.5 \\le Z \\le 1.5)=2 \\times 0.433=0.866$$",
+   "uses": [
+    "C4",
+    "C6"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이므로 $1000 \\times k=866$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "유일한 근",
+   "cond": "C3",
+   "text": [
+    "$t=\\frac{2m}3$."
+   ]
+  },
+  {
+   "h": "$0.159$",
+   "cond": "C4",
+   "text": [
+    "$Z=1$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 근 $16$, $P(X\\ge30)=0.159$",
+   "body": [
+    "(같은 방정식의 실근이 $16$이고) $P(X\\ge30)=0.159$일 때, $P(18\\le X\\le33)$의 값을 $k$라 하자. $1000\\times k$의 값을 구하시오."
+   ],
+   "answer": 774,
+   "hint": "$m=24$, $\\sigma=6$: $P(-1\\le Z\\le1.5)$."
+  }
+ ],
+ "line": "누적확률 방정식 → 대칭 → 평균."
+}
