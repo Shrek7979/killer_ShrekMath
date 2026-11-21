@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2026학년도 9월 모의평가 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $C_2$의 장축 길이를 PF로 착각한 경우",
  "answer": 768,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -31,9 +31,11 @@
     0
    ],
    "text": "두 초점이 ${\\mathrm{F}}(c,\\,0)$ , ${\\mathrm{F'}}(-c,\\,0)$ $(c>0)$ 인 타원 $C_{1}$ 이 있다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "$C_1$",
+   "why": "초점 F, F′인 타원.",
+   "uses": [
+    3
+   ]
   },
   {
    "id": "C2",
@@ -42,9 +44,11 @@
     1
    ],
    "text": "점 ${\\mathrm{F}}$ 를 지나고 $x$ 축에 수직인 직선이 타원 $C_{1}$ 과 만나는 점 중 제 $1$ 사분면에 있는 점을 ${\\mathrm{P}}$ , 선분 ${\\mathrm{PF'}}$ 이 $y$ 축과 만나는 점을 ${\\mathrm{Q}}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "점",
+   "why": "F 지나 수직선과 $C_1$의 교점 P, PF′와 $y$축 교점 Q.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C3",
@@ -53,9 +57,12 @@
     2
    ],
    "text": "두 점 ${\\mathrm{P}}$ , ${\\mathrm{F}}$ 를 초점으로 하고 점 ${\\mathrm{Q}}$ 를 지나는 타원을 $C_{2}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "$C_2$",
+   "why": "초점 P, F, Q를 지나는 타원.",
+   "uses": [
+    1,
+    4
+   ]
   },
   {
    "id": "C4",
@@ -64,9 +71,11 @@
     3
    ],
    "text": "두 타원 $C_{1}$ , $C_{2}$ 가 만나는 점 중 하나를 ${\\mathrm{R}}$ 라 할 때, $\\overline{{\\mathrm{RF'}}}-\\overline{{\\mathrm{RP}}}=3$ 이고 타원 $C_{2}$ 의 장축의 길이는 $5$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건",
+   "why": "교점 R: RF′$-$RP$=3$, $C_2$ 장축 $5$.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C5",
@@ -75,50 +84,101 @@
     4
    ],
    "text": "두 타원 $C_{1}$ , $C_{2}$ 의 단축의 길이의 곱을 $k$ 라 할 때, $k^{2}$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "단축 곱 $k$, $k^2$.",
+   "uses": [
+    5
+   ]
   }
  ],
  "intro": [
-  "세로로 긴 타원을 가로로 긴 타원으로 바꾸고, 꼭짓점 조건 대신 '점 ${\\mathrm{Q}}$ 를 지난다'는 조건에서 $C_{2}$ 의 장축의 길이가 $\\overline{{\\mathrm{PF'}}}$ 임을 찾게 함"
+  "Q는 직각삼각형 PFF′의 빗변 중점 → QP$=$QF → $C_2$ 장축 $=$PF′$=5$.",
+  "R: RF+RF′$=2a$, RP+RF$=5$ → RF′$-$RP$=2a-5$."
  ],
  "topic": "타원",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "타원의 정의",
+   "p": [
+    "$\\overline{\\mathrm{PF}}+\\overline{\\mathrm{PF'}}=2a$, $c^2=a^2-b^2$."
+   ]
+  },
+  {
+   "h": "빗변 중점",
+   "p": [
+    "직각삼각형의 외심."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "${\\mathrm{Q}}$ 는 선분 ${\\mathrm{PF'}}$ 의 중점이고 직각삼각형 ${\\mathrm{PFF'}}$ 의 빗변의 중점이므로 $\\overline{{\\mathrm{QP}}}=\\overline{{\\mathrm{QF}}}=\\frac{1}{2}\\overline{{\\mathrm{PF'}}}$ 이다. 점 ${\\mathrm{Q}}$ 가 $C_{2}$ 위에 있으므로 $C_{2}$ 의 장축의 길이는 $\\overline{{\\mathrm{QP}}}+\\overline{{\\mathrm{QF}}}=\\overline{{\\mathrm{PF'}}}=5$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2",
+    "C3"
+   ],
+   "title": "$C_2$ 장축"
   },
   {
    "n": 2,
    "text": "$C_{1}$ 의 장축의 길이를 $2 a$ 라 하면 점 ${\\mathrm{R}}$ 에 대하여 $\\overline{{\\mathrm{RF}}}+\\overline{{\\mathrm{RF'}}}=2 a$ , $\\overline{{\\mathrm{RP}}}+\\overline{{\\mathrm{RF}}}=5$ 이므로 $\\overline{{\\mathrm{RF'}}}-\\overline{{\\mathrm{RP}}}=2 a-5=3$ , $a=4$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$a$"
   },
   {
    "n": 3,
    "text": "$\\overline{{\\mathrm{PF}}}=8-5=3$ , $(2 c)^{2}=25-9=16$ 에서 $c=2$ 이므로 $C_{1}$ 의 단축의 길이는 $2 \\sqrt{16-4}=4 \\sqrt{3}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "$C_1$"
   },
   {
    "n": 4,
    "text": "$C_{2}$ 는 두 초점 사이의 거리가 $\\overline{{\\mathrm{PF}}}=3$ , 장축의 길이가 $5$ 이므로 단축의 길이는 $2 \\sqrt{\\frac{25}{4}-\\frac{9}{4}}=4$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "$C_2$"
   },
   {
    "n": 5,
    "text": "$k=4 \\sqrt{3}\\times 4=16 \\sqrt{3}$ 이므로 $k^{2}=768$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "두 정의 빼기",
+   "cond": "C4",
+   "text": [
+    "RF 소거."
+   ]
+  },
+  {
+   "h": "$C_2$의 $c$",
+   "cond": "C3",
+   "text": [
+    "초점 거리 $\\frac{\\mathrm{PF}}2$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · RF′$-$RP$=4$, 장축 $6$",
+   "body": [
+    "(같은 설정에서) 두 타원의 교점 R에 대하여 $\\overline{\\mathrm{RF'}}-\\overline{\\mathrm{RP}}=4$이고 $C_2$의 장축의 길이가 $6$일 때, 두 타원의 단축의 길이의 곱을 $k$라 하자. $k^2$의 값을 구하시오."
+   ],
+   "answer": 1600,
+   "hint": "$a=5$, PF$=4$, $c=\\sqrt5$: $4\\sqrt5\\times2\\sqrt5$."
+  }
+ ],
+ "line": "두 타원 → 정의 두 개를 빼서 미지수 소거.",
  "note": ""
 }

@@ -1,0 +1,129 @@
+{
+ "wrong": "예상 오답 — Q를 선분 F′P 위로 잡아 F′Q$=$PF′$-$PF$=2a$로 계산한 경우",
+ "intro": [
+  "P에서의 접선은 ∠F′PF의 이등분선 → 이등변삼각형 PQF에서 접선 ∥ QF.",
+  "접선 $y=5x-1$과 비교 → $b^2=y_1$, $x_1=5a^2$. F′Q$=$PF′+PF."
+ ],
+ "conds": {
+  "C1": {
+   "label": "설정",
+   "why": "제1사분면 P, 반직선 F′P의 연장선 위 Q: PQ$=$PF.",
+   "uses": [
+    1,
+    2
+   ]
+  },
+  "C2": {
+   "label": "묻는 것",
+   "why": "PF$\\times$PF′.",
+   "uses": [
+    6
+   ]
+  },
+  "C3": {
+   "label": "단서",
+   "why": "$a,b>0$.",
+   "uses": []
+  },
+  "C4": {
+   "label": "(가)",
+   "why": "F′Q$=50$, QF 기울기 $5$.",
+   "uses": [
+    3,
+    5
+   ]
+  },
+  "C5": {
+   "label": "(나)",
+   "why": "P의 접선이 $(0,-1)$을 지남.",
+   "uses": [
+    4
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "쌍곡선의 정의",
+   "p": [
+    "$\\mathrm{PF'}-\\mathrm{PF}=2a$ (오른쪽 가지)."
+   ]
+  },
+  {
+   "h": "접선의 반사 성질",
+   "p": [
+    "쌍곡선 접선은 초점각의 이등분선."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "거리 식",
+   "text": "${\\mathrm{P}}(x_{1},\\,y_{1})$ 이라 하자. $\\overline{{\\mathrm{PF'}}}-\\overline{{\\mathrm{PF}}}=2 a$ , $\\overline{{\\mathrm{PF'}}}^{2}-\\overline{{\\mathrm{PF}}}^{2}=4 c x_{1}$ 이므로 $\\overline{{\\mathrm{PF'}}}+\\overline{{\\mathrm{PF}}}=\\frac{2 c x_{1}}{a}$ , 즉 $\\overline{{\\mathrm{PF}}}=\\frac{c}{a}x_{1}-a$ , $\\overline{{\\mathrm{PF'}}}=\\frac{c}{a}x_{1}+a$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "이등분",
+   "text": "점 ${\\mathrm{P}}$ 에서의 접선이 $x$ 축과 만나는 점 ${\\mathrm{T}}\\left(\\frac{a^{2}}{x_{1}},\\,0 \\right)$ 에 대하여 $\\frac{\\overline{{\\mathrm{TF'}}}}{\\overline{{\\mathrm{TF}}}}=\\frac{c+\\frac{a^{2}}{x_{1}}}{c-\\frac{a^{2}}{x_{1}}}=\\frac{c x_{1}+a^{2}}{c x_{1}-a^{2}}=\\frac{\\overline{{\\mathrm{PF'}}}}{\\overline{{\\mathrm{PF}}}}$ 이므로 접선은 $\\angle{\\mathrm{F'PF}}$ 의 이등분선이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "평행",
+   "text": "한편 $\\overline{{\\mathrm{PQ}}}=\\overline{{\\mathrm{PF}}}$ 이므로 $\\angle{\\mathrm{PQF}}=\\angle{\\mathrm{PFQ}}=\\frac{1}{2}\\angle{\\mathrm{F'PF}}$ 이고, 따라서 접선은 직선 ${\\mathrm{QF}}$ 와 평행하다. 즉 접선의 기울기는 $5$ 이고 (나)에서 접선은 $y=5 x-1$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "비교",
+   "text": "접선 $\\frac{x_{1}x}{a^{2}}-\\frac{y_{1}y}{b^{2}}=1$ 과 비교하면 $\\frac{b^{2}}{y_{1}}=1$ , $\\frac{b^{2}x_{1}}{a^{2}y_{1}}=5$ 이므로 $b^{2}=y_{1}$ , $x_{1}=5 a^{2}$ 이다. 점 ${\\mathrm{P}}$ 가 쌍곡선 위에 있으므로 $25 a^{2}-y_{1}=1$ , $b^{2}=25 a^{2}-1$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "$a$",
+   "text": "(가)에서 $\\overline{{\\mathrm{F'Q}}}=\\overline{{\\mathrm{PF'}}}+\\overline{{\\mathrm{PF}}}=\\frac{2 c x_{1}}{a}=10 a c=50$ , $a c=5$ 이므로 $a^{2}(a^{2}+25 a^{2}-1)=25$ , $26 a^{4}-a^{2}-25=0$ , $a^{2}=1$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$a=1$ , $c=5$ , $x_{1}=5$ 이므로 $\\overline{{\\mathrm{PF}}}=24$ , $\\overline{{\\mathrm{PF'}}}=26$ 이고 $\\overline{{\\mathrm{PF}}}\\times \\overline{{\\mathrm{PF'}}}=624$",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "연장선",
+   "cond": "C1",
+   "text": [
+    "F′Q$=$PF′+PF$=\\frac{2cx_1}a$."
+   ]
+  },
+  {
+   "h": "이등변",
+   "cond": "C4",
+   "text": [
+    "∠PQF$=\\frac12$∠F′PF."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 기울기 $3$, F′Q$=18$",
+   "body": [
+    "(같은 설정에서) (가) $\\overline{\\mathrm{F'Q}}=18$이고 직선 QF의 기울기는 $3$ (나) P에서의 쌍곡선의 접선은 $(0,-1)$을 지난다를 만족시킬 때, $\\overline{\\mathrm{PF}}\\times\\overline{\\mathrm{PF'}}$의 값을 구하시오."
+   ],
+   "answer": 80,
+   "hint": "$x_1=3a^2$, $b^2=9a^2-1$, $6ac=18$ → $a=1$, $c=3$: $8\\times10$."
+  }
+ ],
+ "line": "접선 = 초점각 이등분선 → 평행."
+}

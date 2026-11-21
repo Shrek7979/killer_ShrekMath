@@ -1,0 +1,112 @@
+{
+ "wrong": "예상 오답 — $C_2$의 준선을 $x=k+p$로 잡아 FT$_2$를 틀린 경우",
+ "intro": [
+  "FT$_1=$FP$=$FT$_2$ → F는 T$_1$T$_2$의 중점, ∠T$_1$PT$_2=90°$.",
+  "T$_1$T$_2=10$, 높이 $y_1=\\frac{48}{10}$ → $x_1$, $p$, $k$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "곡선",
+   "why": "$C_1:y^2=4px$, $C_2$: 초점 F, 꼭짓점 $(k,0)$ ($k>p$).",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "점",
+   "why": "제1사분면 교점 P, 두 접선의 $x$절편 T$_1$, T$_2$.",
+   "uses": [
+    1,
+    2
+   ]
+  },
+  "C3": {
+   "label": "조건",
+   "why": "PT$_1=8$, PT$_2=6$; $10(p+k)$.",
+   "uses": [
+    3,
+    4,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "포물선의 정의",
+   "p": [
+    "초점까지 거리 = 준선까지 거리."
+   ]
+  },
+  {
+   "h": "직각삼각형",
+   "p": [
+    "빗변 중점까지 거리 같음 ⟺ 직각."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "T$_1$",
+   "text": "${\\mathrm{P}}(x_{1},\\,y_{1})$ 이라 하자. $C_{1}$ 의 점 ${\\mathrm{P}}$ 에서의 접선 $y_{1}y=2 p(x+x_{1})$ 에서 ${\\mathrm{T}}_{1}(-x_{1},\\,0)$ 이므로 $\\overline{{\\mathrm{F}}{\\mathrm{T}}_{1}}=x_{1}+p=\\overline{{\\mathrm{FP}}}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "T$_2$",
+   "text": "$C_{2}$ 는 $y^{2}=-4(k-p)(x-k)$ 이고 준선은 $x=2 k-p$ 이므로 $\\overline{{\\mathrm{FP}}}=2 k-p-x_{1}$ 이다. $C_{2}$ 의 점 ${\\mathrm{P}}$ 에서의 접선 $y_{1}y=-2(k-p)(x+x_{1})+4 k(k-p)$ 에서 ${\\mathrm{T}}_{2}(2 k-x_{1},\\,0)$ 이므로 $\\overline{{\\mathrm{F}}{\\mathrm{T}}_{2}}=2 k-x_{1}-p=\\overline{{\\mathrm{FP}}}$ 이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "직각",
+   "text": "따라서 ${\\mathrm{F}}$ 는 선분 ${\\mathrm{T}}_{1}{\\mathrm{T}}_{2}$ 의 중점이고 $\\overline{{\\mathrm{FP}}}=\\overline{{\\mathrm{F}}{\\mathrm{T}}_{1}}=\\overline{{\\mathrm{F}}{\\mathrm{T}}_{2}}$ 이므로 $\\angle{\\mathrm{T}}_{1}{\\mathrm{P}}{\\mathrm{T}}_{2}=\\frac{\\pi}{2}$ 이다. $\\overline{{\\mathrm{T}}_{1}{\\mathrm{T}}_{2}}=10$ , $\\overline{{\\mathrm{FP}}}=5$ 이고 $y_{1}=\\frac{8 \\times 6}{10}=\\frac{24}{5}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$x_1$, $p$",
+   "text": "$\\overline{{\\mathrm{P}}{\\mathrm{T}}_{1}}^{2}=4 x_{1}^{2}+y_{1}^{2}=64$ 에서 $x_{1}=\\frac{16}{5}$ , $p=5-x_{1}=\\frac{9}{5}$ 이다. (실제로 $4 p x_{1}=\\frac{576}{25}=y_{1}^{2}$ 이다.) $2 k-p-x_{1}=5$ 에서 $k=5$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $10(p+k)=10 \\times \\frac{34}{5}=68$",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$C_2$ 준선",
+   "cond": "C1",
+   "text": [
+    "$x=2k-p$."
+   ]
+  },
+  {
+   "h": "높이",
+   "cond": "C3",
+   "text": [
+    "$\\frac{8\\cdot6}{10}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · PT$_1=6$, PT$_2=8$",
+   "body": [
+    "(같은 설정에서) $\\overline{\\mathrm{PT_1}}=6$, $\\overline{\\mathrm{PT_2}}=8$일 때, $10(p+k)$의 값을 구하시오."
+   ],
+   "answer": 82,
+   "hint": "$x_1=\\frac95$, $p=\\frac{16}5$, $k=5$."
+  }
+ ],
+ "line": "공초점 포물선 → 접선 절편 → 직각."
+}

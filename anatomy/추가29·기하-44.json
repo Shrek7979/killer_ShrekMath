@@ -1,0 +1,112 @@
+{
+ "wrong": "예상 오답 — Q를 오른쪽 가지로 보아 QF′$-$QF$=4$로 계산한 경우",
+ "intro": [
+  "Q는 왼쪽 가지 → QF$-$QF′$=4$. PQ$=$QF′$=u$ → PF$=2u+4$, PF′$=18-2u$.",
+  "∠F에서 두 삼각형의 코사인 비교 → $u=6$ → 정삼각형."
+ ],
+ "conds": {
+  "C1": {
+   "label": "곡선",
+   "why": "$\\frac{x^2}{121}+\\frac{y^2}{72}=1$, $\\frac{x^2}4-\\frac{y^2}{45}=1$, 초점 $(\\pm7,0)$.",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "조건",
+   "why": "제2사분면 P, PF와 쌍곡선의 교점 Q($x<0$), PQ$=$QF′.",
+   "uses": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "PQF′ 넓이 $S$, $S^2$.",
+   "uses": [
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "타원의 정의",
+   "p": [
+    "$\\overline{\\mathrm{PF}}+\\overline{\\mathrm{PF'}}=2a$."
+   ]
+  },
+  {
+   "h": "쌍곡선의 정의",
+   "p": [
+    "$|\\overline{\\mathrm{PF'}}-\\overline{\\mathrm{PF}}|=2a$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "길이",
+   "text": "점 ${\\mathrm{Q}}$ 는 쌍곡선의 왼쪽 부분 위에 있으므로 $\\overline{{\\mathrm{QF}}}-\\overline{{\\mathrm{QF'}}}=4$ 이다. $\\overline{{\\mathrm{PQ}}}=\\overline{{\\mathrm{QF'}}}=u$ 라 하면 $\\overline{{\\mathrm{QF}}}=u+4$ , $\\overline{{\\mathrm{PF}}}=2 u+4$ 이고 타원의 정의에 의하여 $\\overline{{\\mathrm{PF'}}}=22-(2 u+4)=18-2 u$ 이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "공통각",
+   "text": "두 삼각형 ${\\mathrm{QF'F}}$ , ${\\mathrm{PF'F}}$ 에서 $\\angle{\\mathrm{QFF'}}=\\angle{\\mathrm{PFF'}}$ 이므로 코사인법칙에 의하여",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$$\\frac{(u+4)^{2}+196-u^{2}}{2 \\times 14(u+4)}=\\frac{(2 u+4)^{2}+196-(18-2 u)^{2}}{2 \\times 14(2 u+4)}$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$u$",
+   "text": "이다. 정리하면 $(8 u+212)(2 u+4)=(88 u-112)(u+4)$ , $u^{2}-3 u-18=0$ , $u=6$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$\\overline{{\\mathrm{PQ}}}=\\overline{{\\mathrm{QF'}}}=\\overline{{\\mathrm{PF'}}}=6$ 이므로 삼각형 ${\\mathrm{PQF'}}$ 은 정삼각형이고 $S=\\frac{\\sqrt{3}}{4}\\times 36=9 \\sqrt{3}$ 이다. 따라서 $S^{2}=243$",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "같은 각",
+   "cond": "C2",
+   "text": [
+    "Q가 PF 위 — ∠QFF′$=$∠PFF′."
+   ]
+  },
+  {
+   "h": "정삼각형",
+   "cond": "C3",
+   "text": [
+    "세 변 모두 $6$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · PF×PF′",
+   "body": [
+    "(같은 조건에서) $\\overline{\\mathrm{PF}}\\times\\overline{\\mathrm{PF'}}$의 값을 구하시오."
+   ],
+   "answer": 96,
+   "hint": "$16\\times6$."
+  }
+ ],
+ "line": "공통각 → 두 삼각형 코사인 비교."
+}

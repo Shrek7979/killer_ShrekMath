@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2025학년도 9월 모의평가 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — HF$^2$을 $c^2+x^2$으로 써서 비 조건을 잘못 세운 경우",
  "answer": 32,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -29,9 +29,13 @@
     0
    ],
    "text": "두 초점이 ${\\mathrm{F}}(c,\\,0)$ , ${\\mathrm{F'}}(-c,\\,0)$ $(c>0)$ 인 타원 $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ $(a>b>0)$ 과 점 ${\\mathrm{F}}$ 를 초점으로 하고 $y$ 축을 준선으로 하는 포물선이 제 $1$ 사분면에서 만나는 점을 ${\\mathrm{P}}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "곡선",
+   "why": "타원과 포물선(초점 F, 준선 $y$축)의 교점 P.",
+   "uses": [
+    1,
+    3,
+    4
+   ]
   },
   {
    "id": "C2",
@@ -40,9 +44,11 @@
     1
    ],
    "text": "점 ${\\mathrm{P}}$ 에서 $y$ 축에 내린 수선의 발을 ${\\mathrm{H}}$ 라 할 때, $\\overline{{\\mathrm{PH}}}:\\overline{{\\mathrm{HF}}}=3:2 \\sqrt{2}$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "비",
+   "why": "PH : HF $=3:2\\sqrt2$.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C3",
@@ -51,50 +57,100 @@
     2
    ],
    "text": "타원의 단축의 길이가 $16 \\sqrt{2}$ 일 때, 삼각형 ${\\mathrm{PF'F}}$ 의 둘레의 길이를 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건",
+   "why": "단축 $16\\sqrt2$일 때 PF′F 둘레.",
+   "uses": [
+    5
+   ]
   }
  ],
  "intro": [
-  "쌍곡선을 타원으로 바꾸고 $c$ 를 미지수로 남겨 비의 조건으로 $a=3 c$ 라는 관계를 먼저 얻게 함"
+  "준선 $y$축 → PF$=$PH$=x$, $y^2=2cx-c^2$, HF$^2=c^2+y^2=2cx$.",
+  "$x=\\frac94c$ → PF′$=\\frac{15}4c$ → $a=3c$, $b^2=8c^2$."
  ],
  "topic": "타원과 포물선",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "타원의 정의",
+   "p": [
+    "$\\overline{\\mathrm{PF}}+\\overline{\\mathrm{PF'}}=2a$, $c^2=a^2-b^2$."
+   ]
+  },
+  {
+   "h": "포물선의 정의",
+   "p": [
+    "초점까지 거리 = 준선까지 거리."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "${\\mathrm{P}}(x,\\,y)$ 라 하면 포물선의 정의에 의하여 $\\overline{{\\mathrm{PF}}}=\\overline{{\\mathrm{PH}}}=x$ 이고 $(x-c)^{2}+y^{2}=x^{2}$ , 즉 $y^{2}=2 c x-c^{2}$ 이다. ${\\mathrm{H}}(0,\\,y)$ 이므로 $\\overline{{\\mathrm{HF}}}^{2}=c^{2}+y^{2}=2 c x$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "포물선"
   },
   {
    "n": 2,
    "text": "$\\overline{{\\mathrm{PH}}}:\\overline{{\\mathrm{HF}}}=3:2 \\sqrt{2}$ 에서 $8 x^{2}=9 \\times 2 c x$ , $x=\\frac{9}{4}c$ 이다. 이때",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$x$"
   },
   {
    "n": 3,
    "text": "$$\\overline{{\\mathrm{PF'}}}^{2}=(x+c)^{2}+y^{2}=x^{2}+4 c x=\\frac{81}{16}c^{2}+9 c^{2}=\\frac{225}{16}c^{2}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "PF′"
   },
   {
    "n": 4,
    "text": "이므로 $\\overline{{\\mathrm{PF'}}}=\\frac{15}{4}c$ 이고 $2 a=\\frac{9}{4}c+\\frac{15}{4}c=6 c$ , $a=3 c$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "$a=3c$"
   },
   {
    "n": 5,
    "text": "$b^{2}=9 c^{2}-c^{2}=8 c^{2}=128$ 에서 $c=4$ 이다. 따라서 삼각형 ${\\mathrm{PF'F}}$ 의 둘레는 $2 a+2 c=8 c=32$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "H의 좌표",
+   "cond": "C1",
+   "text": [
+    "$(0,y)$ — HF는 대각선 길이."
+   ]
+  },
+  {
+   "h": "둘레",
+   "cond": "C3",
+   "text": [
+    "$2a+2c=8c$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 단축 $8\\sqrt2$",
+   "body": [
+    "(같은 조건에서) 타원의 단축의 길이가 $8\\sqrt2$일 때, 삼각형 PF′F의 둘레의 길이를 구하시오."
+   ],
+   "answer": 16,
+   "hint": "$8c^2=32$ → $c=2$."
+  }
+ ],
+ "line": "포물선 정의 → 비 → $a$와 $c$의 관계.",
  "note": ""
 }
