@@ -1,0 +1,112 @@
+{
+ "wrong": "예상 오답 — 원주각을 중심각으로 바꾸지 않고 ∠POB$=\\theta$로 계산한 경우",
+ "intro": [
+  "원주각 $\\theta$, $2\\theta$ → 중심각 $2\\theta$, $4\\theta$.",
+  "$T=\\sin2\\theta+\\frac12\\sin4\\theta$, $T'=2(2\\cos2\\theta-1)(\\cos2\\theta+1)$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "도형",
+   "why": "지름 AB$=2$ 반원 위 P, Q: ∠PAB$=\\theta$, ∠QAB$=2\\theta$.",
+   "uses": [
+    1,
+    2
+   ]
+  },
+  "C2": {
+   "label": "묻는 것",
+   "why": "ABPQ 넓이 최댓값 $S$, $16S^2$.",
+   "uses": [
+    3,
+    4,
+    5
+   ]
+  },
+  "C3": {
+   "label": "단서",
+   "why": "$0<\\theta<\\frac\\pi4$.",
+   "uses": [
+    4
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "원주각과 중심각",
+   "p": [
+    "중심각 = 원주각 × 2."
+   ]
+  },
+  {
+   "h": "배각",
+   "p": [
+    "$\\cos4\\theta=2\\cos^22\\theta-1$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "중심각",
+   "text": "선분 ${\\mathrm{AB}}$ 의 중점을 ${\\mathrm{O}}$ 라 하면 원주각과 중심각의 관계에서 $\\angle{\\mathrm{POB}}=2 \\theta$ , $\\angle{\\mathrm{QOB}}=4 \\theta$ , $\\angle{\\mathrm{QOA}}=\\pi-4 \\theta$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "분할",
+   "text": "사각형 ${\\mathrm{ABPQ}}$ 의 넓이를 $T(\\theta)$ 라 하면 세 삼각형 ${\\mathrm{OBP}}$ , ${\\mathrm{OPQ}}$ , ${\\mathrm{OQA}}$ 의 넓이의 합이므로",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$$T(\\theta)=\\frac{1}{2}\\sin 2 \\theta+\\frac{1}{2}\\sin 2 \\theta+\\frac{1}{2}\\sin 4 \\theta=\\sin 2 \\theta+\\frac{1}{2}\\sin 4 \\theta$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "미분",
+   "text": "이다. $T'(\\theta)=2 \\cos 2 \\theta+2 \\cos 4 \\theta=2(2 \\cos 2 \\theta-1)(\\cos 2 \\theta+1)$ 이고, $0<\\theta<\\frac{\\pi}{4}$ 에서 $\\cos 2 \\theta+1>0$ 이므로 $T'(\\theta)$ 의 부호는 $\\cos 2 \\theta=\\frac{1}{2}$ , 즉 $\\theta=\\frac{\\pi}{6}$ 에서 양에서 음으로 바뀐다.",
+   "uses": [
+    "C2",
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "최댓값은 $S=T \\left(\\frac{\\pi}{6}\\right)=\\frac{\\sqrt{3}}{2}+\\frac{\\sqrt{3}}{4}=\\frac{3 \\sqrt{3}}{4}$ 이므로 $16 S^{2}=16 \\times \\frac{27}{16}=27$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "세 삼각형",
+   "cond": "C1",
+   "text": [
+    "OBP, OPQ, OQA."
+   ]
+  },
+  {
+   "h": "$\\theta=\\frac\\pi6$",
+   "cond": "C2",
+   "text": [
+    "$\\cos2\\theta=\\frac12$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · AB$=4$",
+   "body": [
+    "길이가 $4$인 선분 AB를 지름으로 하는 반원의 호 위에 두 점 P, Q를 ∠PAB$=\\theta$, ∠QAB$=2\\theta$가 되도록 잡을 때, 사각형 ABPQ의 넓이의 최댓값을 $S$라 하자. $16S^2$의 값을 구하시오. (단, $0<\\theta<\\frac\\pi4$)"
+   ],
+   "answer": 432,
+   "hint": "넓이 $4$배 → $S=3\\sqrt3$."
+  }
+ ],
+ "line": "원 위 도형 넓이 → 중심각 분할 → 미분."
+}

@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2023학년도 6월 모의평가 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — QT를 $\\frac4{\\cos\\theta}-4$로 잡아 $f$의 차수를 틀린 경우",
  "answer": 12,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -40,8 +40,8 @@
     0
    ],
    "text": "반지름의 길이가 $4$ 이고 중심각의 크기가 $\\frac{\\pi}{2}$ 인 부채꼴 ${\\mathrm{OAB}}$ 가 있다.",
-   "label": "",
-   "why": "",
+   "label": "부채꼴",
+   "why": "반지름 $4$, 중심각 $\\frac\\pi2$.",
    "uses": []
   },
   {
@@ -51,9 +51,11 @@
     1
    ],
    "text": "호 ${\\mathrm{AB}}$ 위의 점 ${\\mathrm{P}}$ 에 대하여 $\\angle{\\mathrm{AOP}}=\\theta$ 라 하고, 점 ${\\mathrm{P}}$ 에서 선분 ${\\mathrm{OA}}$ 에 내린 수선의 발을 ${\\mathrm{Q}}$ , 점 ${\\mathrm{P}}$ 에서 호 ${\\mathrm{AB}}$ 에 접하는 직선이 직선 ${\\mathrm{OA}}$ 와 만나는 점을 ${\\mathrm{T}}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "점",
+   "why": "P (∠AOP$=\\theta$), 수선 발 Q, 접선과 OA 교점 T.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C3",
@@ -62,9 +64,12 @@
     2
    ],
    "text": "삼각형 ${\\mathrm{PQT}}$ 의 넓이를 $f(\\theta)$ , 삼각형 ${\\mathrm{APQ}}$ 의 넓이를 $g(\\theta)$ 라 할 때,",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "넓이",
+   "why": "$f=$[PQT], $g=$[APQ].",
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C4",
@@ -73,9 +78,11 @@
     0
    ],
    "text": "$\\lim_{\\theta \\to 0+}\\frac{f(\\theta)+g(\\theta)}{\\theta^{3}}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "극한",
+   "why": "$\\lim\\frac{f+g}{\\theta^3}$.",
+   "uses": [
+    4
+   ]
   },
   {
    "id": "C5",
@@ -95,44 +102,90 @@
     1
    ],
    "text": "(단, $0<\\theta<\\frac{\\pi}{2}$ ) [4점]",
-   "label": "",
-   "why": "",
+   "label": "단서",
+   "why": "$0<\\theta<\\frac\\pi2$.",
    "uses": []
   }
  ],
  "intro": [
-  "수선의 발과 접선을 이용한 두 삼각형의 넓이를 모두 $\\theta^{3}$ 차수로 맞추어 극한값을 구하게 함"
+  "OT$=\\frac4{\\cos\\theta}$ → QT$=\\frac{4\\sin^2\\theta}{\\cos\\theta}$, $f=\\frac{8\\sin^3\\theta}{\\cos\\theta}\\sim8\\theta^3$.",
+  "$g=8\\sin\\theta(1-\\cos\\theta)\\sim4\\theta^3$."
  ],
  "topic": "여러 가지 미분법",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "삼각 극한",
+   "p": [
+    "$\\frac{1-\\cos\\theta}{\\theta^2}\\to\\frac12$."
+   ]
+  },
+  {
+   "h": "접선 ⊥ 반지름",
+   "p": [
+    "∠OPT$=90°$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$\\overline{{\\mathrm{PQ}}}=4 \\sin \\theta$ , $\\overline{{\\mathrm{OQ}}}=4 \\cos \\theta$ 이고, $\\angle{\\mathrm{OPT}}=\\frac{\\pi}{2}$ 이므로 $\\overline{{\\mathrm{OT}}}=\\frac{4}{\\cos \\theta}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "길이"
   },
   {
    "n": 2,
    "text": "$\\overline{{\\mathrm{QT}}}=\\frac{4}{\\cos \\theta}-4 \\cos \\theta=\\frac{4 \\sin^{2}\\theta}{\\cos \\theta}$ 이므로 $f(\\theta)=\\frac{1}{2}\\times 4 \\sin \\theta \\times \\frac{4 \\sin^{2}\\theta}{\\cos \\theta}=\\frac{8 \\sin^{3}\\theta}{\\cos \\theta}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "$f$"
   },
   {
    "n": 3,
    "text": "$\\overline{{\\mathrm{AQ}}}=4-4 \\cos \\theta$ 이므로 $g(\\theta)=\\frac{1}{2}\\times 4 \\sin \\theta \\times 4(1-\\cos \\theta)=8 \\sin \\theta(1-\\cos \\theta)$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "$g$"
   },
   {
    "n": 4,
    "text": "$\\theta \\to 0+$ 일 때 $\\frac{f(\\theta)}{\\theta^{3}}=\\frac{8}{\\cos \\theta}\\left(\\frac{\\sin \\theta}{\\theta}\\right)^{3}\\to 8$ , $\\frac{g(\\theta)}{\\theta^{3}}=8 \\times \\frac{\\sin \\theta}{\\theta}\\times \\frac{1-\\cos \\theta}{\\theta^{2}}\\to 4$ 이므로 구하는 값은 $12$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "극한"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "QT",
+   "cond": "C2",
+   "text": [
+    "OT$-$OQ."
+   ]
+  },
+  {
+   "h": "차수",
+   "cond": "C4",
+   "text": [
+    "둘 다 $\\theta^3$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 반지름 $2$",
+   "body": [
+    "반지름이 $2$이고 중심각이 $\\frac\\pi2$인 부채꼴 OAB에서 (같은 방법으로) 삼각형 PQT의 넓이를 $f(\\theta)$, 삼각형 APQ의 넓이를 $g(\\theta)$라 할 때, $\\lim_{\\theta\\to0+}\\frac{f(\\theta)+g(\\theta)}{\\theta^3}$의 값을 구하시오."
+   ],
+   "answer": 3,
+   "hint": "넓이 $\\frac14$배."
+  }
+ ],
+ "line": "부채꼴 넓이 극한 → 차수 맞추기.",
  "note": ""
 }

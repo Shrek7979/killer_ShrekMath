@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2025학년도 9월 모의평가 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 치환 배율 $2$를 빠뜨려 $\\frac23$로 계산한 경우",
  "answer": 7,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "eq",
@@ -32,9 +32,12 @@
     0
    ],
    "text": "$\\lim_{n \\to \\infty}\\sum_{k=1}^{n}\\frac{\\pi}{n}\\sin^{3}\\frac{k \\pi}{2 n}=\\frac{q}{p}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "극한",
+   "why": "$\\lim\\sum\\frac\\pi n\\sin^3\\frac{k\\pi}{2n}=\\frac qp$.",
+   "uses": [
+    1,
+    2
+   ]
   },
   {
    "id": "C2",
@@ -43,9 +46,11 @@
     0
    ],
    "text": "일 때, $p+q$ 의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$p+q$.",
+   "uses": [
+    3
+   ]
   },
   {
    "id": "C3",
@@ -54,38 +59,85 @@
     1
    ],
    "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "단서",
+   "why": "서로소.",
+   "uses": [
+    3
+   ]
   }
  ],
  "intro": [
-  "급수의 합을 망원급수 대신 정적분과 급수의 관계로 계산하게 하고, 삼각함수의 거듭제곱 적분을 치환적분으로 처리하게 함"
+  "리만 합 → $\\int_0^\\pi\\sin^3\\frac x2dx$.",
+  "$u=\\frac x2$ ($dx=2du$), $v=\\cos u$ 치환."
  ],
  "topic": "여러 가지 적분법",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "정적분과 급수",
+   "p": [
+    "$\\lim\\sum f(x_k)\\Delta x=\\int f$."
+   ]
+  },
+  {
+   "h": "홀수 거듭제곱",
+   "p": [
+    "$\\sin^3=(1-\\cos^2)\\sin$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$x_{k}=\\frac{k \\pi}{n}$ , $\\delta x=\\frac{\\pi}{n}$ 으로 보면 정적분과 급수의 관계에 의하여 주어진 극한은 $\\int_{0}^{\\pi}\\sin^{3}\\frac{x}{2}dx$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "리만 합"
   },
   {
    "n": 2,
    "text": "$\\frac{x}{2}=u$ 로 치환하면 $\\int_{0}^{\\pi}\\sin^{3}\\frac{x}{2}dx=2 \\int_{0}^{\\frac{\\pi}{2}}\\sin^{3}u du=2 \\int_{0}^{\\frac{\\pi}{2}}(1-\\cos^{2}u)\\sin u du$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "치환"
   },
   {
    "n": 3,
    "text": "다시 $\\cos u=v$ 로 치환하면 $2 \\int_{0}^{1}(1-v^{2})dv=2 \\times \\frac{2}{3}=\\frac{4}{3}$ 이다. 따라서 $p+q=3+4=7$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2",
+    "C3"
+   ],
+   "title": "계산"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\Delta x=\\frac\\pi n$",
+   "cond": "C1",
+   "text": [
+    "구간 $[0,\\pi]$."
+   ]
+  },
+  {
+   "h": "$\\frac23$",
+   "cond": "C2",
+   "text": [
+    "$\\int_0^1(1-v^2)dv$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\sin^5$",
+   "body": [
+    "$\\lim_{n\\to\\infty}\\sum_{k=1}^n\\frac\\pi n\\sin^5\\frac{k\\pi}{2n}=\\frac qp$일 때, $p+q$의 값을 구하시오. (단, $p$와 $q$는 서로소인 자연수)"
+   ],
+   "answer": 31,
+   "hint": "$2\\int_0^1(1-v^2)^2dv=\\frac{16}{15}$."
+  }
+ ],
+ "line": "리만 합 → 치환적분.",
  "note": ""
 }
