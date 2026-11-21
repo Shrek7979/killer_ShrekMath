@@ -1,0 +1,148 @@
+{
+ "wrong": "예상 오답 — 조건부확률의 분모에 $\\frac a6$만 쓰고 $W$ 쪽을 빠뜨린 경우",
+ "intro": [
+  "$P(U\\le1)=\\frac14$, $P(W\\le1)=\\frac34$ → 베이즈로 $a=2$.",
+  "$P(X\\le t)=\\frac13\\cdot\\frac{t^2}4+\\frac23\\left(t-\\frac{t^2}4\\right)$ — 이차방정식."
+ ],
+ "conds": {
+  "C1": {
+   "label": "밀도",
+   "why": "$U$: $(0,0)$–$(2,1)$, $W$: $(0,1)$–$(2,0)$.",
+   "uses": [
+    2,
+    6
+   ]
+  },
+  "C3": {
+   "label": "시행",
+   "why": "눈 $\\le a$이면 $U$, 아니면 $W$.",
+   "uses": [
+    7
+   ]
+  },
+  "C4": {
+   "label": "조건",
+   "why": "$X\\le1$일 때 $U$였을 확률 $\\frac17$.",
+   "uses": [
+    1,
+    3,
+    4,
+    5
+   ]
+  },
+  "C5": {
+   "label": "묻는 것",
+   "why": "$P(X\\le t)=\\frac12$인 $t=m-\\sqrt n$, $m+n$.",
+   "uses": [
+    8,
+    9
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "베이즈",
+   "p": [
+    "$P(U|X\\le1)=\\frac{P(U)P(\\cdot|U)}{\\sum}$."
+   ]
+  },
+  {
+   "h": "혼합 누적확률",
+   "p": [
+    "$P(X\\le t)=\\sum P(\\text{선택})F(t)$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 조건부확률로 혼합 비율을 먼저 정한 뒤, 두 밀도함수의 누적확률을 가중합하여 이차방정식으로 푸는 것",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "두 확률",
+   "text": "$\\mathrm{P}(U \\le 1)=\\frac{1}{2}\\times 1 \\times \\frac{1}{2}=\\frac{1}{4}$ , $\\mathrm{P}(W \\le 1)=1-\\frac{1}{4}=\\frac{3}{4}$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "정의",
+   "text": "조건부확률의 정의에서",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$$\\frac{\\frac{a}{6}\\times \\frac{1}{4}}{\\frac{a}{6}\\times \\frac{1}{4}+\\frac{6-a}{6}\\times \\frac{3}{4}}=\\frac{a}{18-2 a}=\\frac{1}{7}$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "$a=2$",
+   "text": "이므로 $7 a=18-2 a$ , $a=2$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "누적",
+   "text": "$0 \\le t \\le 2$ 에서 $\\mathrm{P}(U \\le t)=\\frac{t^{2}}{4}$ , $\\mathrm{P}(W \\le t)=t-\\frac{t^{2}}{4}$ 이므로 확률의 덧셈정리와 곱셈정리에 의하여",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "혼합",
+   "text": "$$\\mathrm{P}(X \\le t)=\\frac{1}{3}\\times \\frac{t^{2}}{4}+\\frac{2}{3}\\left(t-\\frac{t^{2}}{4}\\right)=-\\frac{t^{2}}{12}+\\frac{2 t}{3}$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "방정식",
+   "text": "$-\\frac{t^{2}}{12}+\\frac{2 t}{3}=\\frac{1}{2}$ 에서 $t^{2}-8 t+6=0$ , $t=4 \\pm \\sqrt{10}$ 이고 $0 \\le t \\le 2$ 이므로 $t=4-\\sqrt{10}$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $m+n=4+10=14$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "범위",
+   "cond": "C5",
+   "text": [
+    "$t=4+\\sqrt{10}>2$ 제외."
+   ]
+  },
+  {
+   "h": "$W$ 누적",
+   "cond": "C1",
+   "text": [
+    "$\\int_0^t\\left(1-\\frac x2\\right)dx$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\frac34$",
+   "body": [
+    "(같은 조건에서) $P(X\\le t)=\\frac34$를 만족시키는 실수 $t$의 값이 $m-\\sqrt n$일 때, $m+n$의 값을 구하시오. (단, $m$, $n$은 자연수)"
+   ],
+   "answer": 11,
+   "hint": "$t^2-8t+9=0$ → $t=4-\\sqrt7$."
+  }
+ ],
+ "line": "베이즈로 혼합 비율 → 누적확률의 가중합."
+}
