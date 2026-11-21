@@ -1,0 +1,134 @@
+{
+ "wrong": "예상 오답 **196** — Q와 직선 AB의 거리를 $\\overline{\\mathrm{MK}}=7$로만 보아 $M=14$로 계산한 경우",
+ "intro": [
+  "중점 M으로 $\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=|\\mathrm{PM}|^2-4$ → 두 구의 교선(원). 중심 K($\\overline{\\mathrm{OK}}=3$), 반지름 $4$.",
+  "AB는 $x$축 방향 — Q와의 거리는 $\\vec{\\mathrm{MQ}}$에서 $x$성분을 뺀 크기 $\\sqrt{49+16\\sin^2\\varphi}$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "구와 점",
+   "why": "$S:x^2+y^2+z^2=25$, A$(2,6,8)$, B$(-2,6,8)$.",
+   "uses": [
+    3
+   ]
+  },
+  "C2": {
+   "label": "원",
+   "why": "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=61$인 P의 집합.",
+   "uses": [
+    1,
+    2,
+    4,
+    5
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "원 위 Q에 대해 $\\triangle\\mathrm{QAB}$ 넓이의 최댓값 $M$, $M^2$.",
+   "uses": [
+    6,
+    7,
+    8
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "중점으로 내적 모으기",
+   "p": [
+    "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=|\\vec{\\mathrm{PM}}|^2-|\\vec{\\mathrm{MA}}|^2$."
+   ]
+  },
+  {
+   "h": "두 구의 교선",
+   "p": [
+    "두 중심을 잇는 직선에 수직인 평면 위의 원."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "구",
+   "text": "선분 ${\\mathrm{AB}}$ 의 중점을 ${\\mathrm{M}}(0,\\,6,\\,8)$ 이라 하면 $\\vec{{\\mathrm{PA}}}\\cdot \\vec{{\\mathrm{PB}}}=|\\vec{{\\mathrm{PM}}}|^{2}-|\\vec{{\\mathrm{MA}}}|^{2}=|\\vec{{\\mathrm{PM}}}|^{2}-4$ 이므로 조건은 $|\\vec{{\\mathrm{PM}}}|^{2}=65$ 이다. 즉 구하는 원은 구 $S$ 와 구 $|\\vec{{\\mathrm{PM}}}|=\\sqrt{65}$ 의 교선이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "교선",
+   "text": "$|\\vec{{\\mathrm{OM}}}|=10$ 이고, 교선 위의 점 ${\\mathrm{P}}$ 에서 직선 ${\\mathrm{OM}}$ 에 내린 수선의 발을 ${\\mathrm{K}}$ , $\\overline{{\\mathrm{OK}}}=x$ 라 하면 $25-x^{2}=65-(10-x)^{2}$ 에서 $x=3$ 이다. 따라서 원의 중심은 ${\\mathrm{K}}=\\frac{3}{10}\\vec{{\\mathrm{OM}}}$ 에 해당하는 점, 반지름의 길이는 $4$ 이고, 원은 직선 ${\\mathrm{OM}}$ 에 수직인 평면 위에 있다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "방향",
+   "text": "직선 ${\\mathrm{AB}}$ 는 $x$ 축에 평행하고 점 ${\\mathrm{M}}$ 을 지난다. 원의 평면은 $x$ 축에 평행한 방향을 포함하므로(직선 ${\\mathrm{OM}}$ 이 $x$ 축에 수직), 원 위의 점 ${\\mathrm{Q}}$ 를",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "매개화",
+   "text": "$$\\vec{{\\mathrm{KQ}}}=4 \\cos \\varphi \\vec{e}_{1}+4 \\sin \\varphi \\vec{e}_{2}$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "단위벡터",
+   "text": "로 나타낼 수 있다. 여기서 $\\vec{e}_{1}=(1,\\,0,\\,0)$ , $\\vec{e}_{2}=\\left(0,\\,\\frac{4}{5},\\,-\\frac{3}{5}\\right)$ 은 서로 수직인 단위벡터이고 둘 다 $\\vec{{\\mathrm{OM}}}$ 에 수직이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "거리",
+   "text": "점 ${\\mathrm{Q}}$ 와 직선 ${\\mathrm{AB}}$ 사이의 거리는 $\\vec{{\\mathrm{MQ}}}$ 에서 $x$ 축 방향 성분을 뺀 벡터의 크기이다. $\\vec{{\\mathrm{MK}}}$ 는 길이가 $7$ 이고 $\\vec{{\\mathrm{OM}}}$ 방향이므로 $\\vec{e}_{2}$ 와 수직이고 $x$ 성분이 $0$ 이다. 따라서",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$$({거 리})^{2}=|\\vec{{\\mathrm{MK}}}+4 \\sin \\varphi \\vec{e}_{2}|^{2}=49+16 \\sin^{2}\\varphi \\le 65$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이다. 최대 거리는 $\\sqrt{65}$ 이므로 $M=\\frac{1}{2}\\times 4 \\times \\sqrt{65}=2 \\sqrt{65}$ , $M^{2}=260$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$x$성분 제거",
+   "cond": "C3",
+   "text": [
+    "점과 직선의 거리 = 방향 성분을 뺀 나머지."
+   ]
+  },
+  {
+   "h": "$\\overline{\\mathrm{OK}}=3$",
+   "cond": "C2",
+   "text": [
+    "$25-x^2=65-(10-x)^2$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 내적 81",
+   "body": [
+    "구 $S:x^2+y^2+z^2=25$와 두 점 A$(2,6,8)$, B$(-2,6,8)$에 대하여 $S$ 위의 점 P 중 $\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=81$인 점의 집합은 원이다. 이 원 위의 점 Q에 대하여 삼각형 QAB의 넓이의 최댓값을 $M$이라 할 때, $M^2$의 값을 구하시오."
+   ],
+   "answer": 340,
+   "hint": "$|\\mathrm{PM}|^2=85$ → $\\overline{\\mathrm{OK}}=2$, 반지름 $\\sqrt{21}$, $\\overline{\\mathrm{MK}}=8$ → 거리 최대 $\\sqrt{85}$."
+  }
+ ],
+ "line": "내적 일정 → 구. 두 구의 교선 → 원. 점과 직선 거리는 방향 성분 제거."
+}
