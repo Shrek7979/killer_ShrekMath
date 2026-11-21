@@ -1,0 +1,96 @@
+{
+ "wrong": "예상 오답 — $\\angle\\mathrm{ADC}$를 $\\frac23\\pi$로 두거나 BD를 구할 때 코사인 값을 틀린 경우",
+ "intro": [
+  "AC$=7$, 내접 → $\\angle\\mathrm{ADC}=\\frac\\pi3$ → AD$=8$.",
+  "BD는 두 삼각형의 코사인법칙(또는 톨레미)으로 $\\frac{55}7$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "사각형",
+   "why": "원에 내접, AB$=3$, BC$=5$, CD$=5$, $\\angle\\mathrm{ABC}=\\frac23\\pi$.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
+  },
+  "C2": {
+   "label": "묻는 것",
+   "why": "$7\\times\\overline{\\mathrm{BD}}$.",
+   "uses": [
+    4
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "원에 내접하는 사각형",
+   "p": [
+    "대각의 합 $\\pi$."
+   ]
+  },
+  {
+   "h": "톨레미 정리",
+   "p": [
+    "$\\mathrm{AC}\\cdot\\mathrm{BD}=\\mathrm{AB}\\cdot\\mathrm{CD}+\\mathrm{BC}\\cdot\\mathrm{AD}$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "AD",
+   "text": "삼각형 ${\\mathrm{ABC}}$ 에서 $\\overline{{\\mathrm{AC}}}^{2}=9+25+15=49$ 이다. 원에 내접하므로 $\\angle{\\mathrm{ADC}}=\\frac{\\pi}{3}$ 이고, 삼각형 ${\\mathrm{ACD}}$ 에서 $49=25+\\overline{{\\mathrm{AD}}}^{2}-5 \\overline{{\\mathrm{AD}}}$ 이므로 $\\overline{{\\mathrm{AD}}}=8$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "코사인",
+   "text": "$\\angle{\\mathrm{BAD}}=\\theta$ 라 하면 $\\angle{\\mathrm{BCD}}=\\pi-\\theta$ 이므로 코사인법칙에 의하여 $\\overline{{\\mathrm{BD}}}^{2}=9+64-48 \\cos \\theta=25+25+50 \\cos \\theta$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "BD",
+   "text": "$\\cos \\theta=\\frac{23}{98}$ 이므로 $\\overline{{\\mathrm{BD}}}^{2}=73-\\frac{48 \\times 23}{98}=\\frac{3025}{49}$ , $\\overline{{\\mathrm{BD}}}=\\frac{55}{7}$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $7 \\times \\overline{{\\mathrm{BD}}}=55$",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "대각",
+   "cond": "C1",
+   "text": [
+    "$\\pi-\\frac23\\pi$."
+   ]
+  },
+  {
+   "h": "검산",
+   "cond": "C2",
+   "text": [
+    "$7\\cdot\\mathrm{BD}=15+40$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · CD$=3$",
+   "body": [
+    "원에 내접하는 사각형 ABCD에서 $\\overline{\\mathrm{AB}}=3$, $\\overline{\\mathrm{BC}}=5$, $\\overline{\\mathrm{CD}}=3$, $\\angle\\mathrm{ABC}=\\frac23\\pi$일 때, $7\\times\\overline{\\mathrm{BD}}$의 값을 구하시오."
+   ],
+   "answer": 49,
+   "hint": "AD$=8$, BD$=\\frac{9+40}7=7$."
+  }
+ ],
+ "line": "내접 사각형 → 대각 + 톨레미."
+}
