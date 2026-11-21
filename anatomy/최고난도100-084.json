@@ -1,0 +1,134 @@
+{
+ "wrong": "예상 오답 — 내부 조건을 쓰지 않고 $t=1$, $p=4$를 택한 경우",
+ "intro": [
+  "F는 △TAB의 외심, $R=p+t$; $\\vec{\\mathrm{XA}}\\cdot\\vec{\\mathrm{XB}}=\\mathrm{XM}^2-16$.",
+  "XM 최대 $2t$ → $t=4$, $p=1$; 최소 $2p$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "설정",
+   "why": "$y^2=4px$, $x$축 위 T의 두 접선, 접점 A, B.",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "조건",
+   "why": "F는 내부, AB$=8$.",
+   "uses": [
+    1,
+    4,
+    6
+   ]
+  },
+  "C3": {
+   "label": "최대",
+   "why": "외접원 위 X, $\\vec{\\mathrm{XA}}\\cdot\\vec{\\mathrm{XB}}$ 최대 $48$, 최소 $m$.",
+   "uses": [
+    2,
+    3,
+    5
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "△TAB 넓이 $S$, $S-m$.",
+   "uses": [
+    7
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "중점 내적",
+   "p": [
+    "$\\mathrm{XM}^2-\\mathrm{MA}^2$."
+   ]
+  },
+  {
+   "h": "원 위 점과 내부 점 거리",
+   "p": [
+    "$R\\pm\\mathrm{FM}$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "접점",
+   "text": "${\\mathrm{T}}(-t,\\,0)$ $(t>0)$ 이라 하자. 포물선 위의 점 $(x_{0},\\,y_{0})$ 에서의 접선 $y_{0}y=2 p(x+x_{0})$ 이 점 ${\\mathrm{T}}$ 를 지나면 $x_{0}=t$ 이므로 ${\\mathrm{A}}(t,\\,2 \\sqrt{p t})$ , ${\\mathrm{B}}(t,\\,-2 \\sqrt{p t})$ 이고 $\\overline{{\\mathrm{AB}}}=4 \\sqrt{p t}=8$ 에서 $p t=4$ 이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "외심",
+   "text": "포물선의 정의에서 $\\overline{{\\mathrm{FA}}}=\\overline{{\\mathrm{FB}}}=t+p$ 이고 $\\overline{{\\mathrm{FT}}}=p+t$ 이므로 점 ${\\mathrm{F}}$ 는 삼각형 ${\\mathrm{TAB}}$ 의 외심이고 외접원의 반지름의 길이는 $R=p+t$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "내적",
+   "text": "선분 ${\\mathrm{AB}}$ 의 중점 ${\\mathrm{M}}(t,\\,0)$ 에 대하여 $\\vec{{\\mathrm{XA}}}\\cdot \\vec{{\\mathrm{XB}}}=\\overline{{\\mathrm{XM}}}^{2}-\\overline{{\\mathrm{MA}}}^{2}=\\overline{{\\mathrm{XM}}}^{2}-16$ 이다. 점 ${\\mathrm{M}}$ 은 외접원의 내부에 있으므로 $\\overline{{\\mathrm{XM}}}$ 의 최댓값은 $R+\\overline{{\\mathrm{FM}}}$ , 최솟값은 $R-\\overline{{\\mathrm{FM}}}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "범위",
+   "text": "점 ${\\mathrm{F}}$ 가 삼각형 ${\\mathrm{TAB}}$ 의 내부에 있으므로 $p<t$ 이고 $\\overline{{\\mathrm{FM}}}=t-p$ 이다. 따라서 $\\overline{{\\mathrm{XM}}}$ 의 최댓값은 $2 t$ , 최솟값은 $2 p$ 이고",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "값",
+   "text": "$$4 t^{2}-16=48,\\,\\,\\,t=4,\\,\\,\\,p=1$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "배제",
+   "text": "이다. (내부 조건이 없으면 $t=1$ , $p=4$ 도 최댓값 $48$ 을 주지만, 이때 ${\\mathrm{F}}(4,\\,0)$ 은 삼각형 밖에 있다.)",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$m=4 p^{2}-16=-12$ , $S=\\frac{1}{2}\\times \\overline{{\\mathrm{AB}}}\\times \\overline{{\\mathrm{TM}}}=\\frac{1}{2}\\times 8 \\times 8=32$ 이므로 $S-m=44$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$p<t$",
+   "cond": "C2",
+   "text": [
+    "F가 내부."
+   ]
+  },
+  {
+   "h": "FM$=t-p$",
+   "cond": "C3",
+   "text": [
+    "$x$축 위."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · AB$=12$, 최대 $288$",
+   "body": [
+    "(같은 설정에서) $\\overline{\\mathrm{AB}}=12$이고 외접원 위의 점 X에 대하여 $\\vec{\\mathrm{XA}}\\cdot\\vec{\\mathrm{XB}}$의 최댓값이 $288$일 때, 최솟값을 $m$, 삼각형 TAB의 넓이를 $S$라 하자. $S-m$의 값을 구하시오."
+   ],
+   "answer": 140,
+   "hint": "$pt=9$, $4t^2-36=288$ → $t=9$, $p=1$: $m=-32$, $S=108$."
+  }
+ ],
+ "line": "초점 = 외심 → 중점 내적 → 최대·최소."
+}
