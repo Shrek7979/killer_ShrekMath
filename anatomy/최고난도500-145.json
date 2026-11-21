@@ -1,0 +1,140 @@
+{
+ "wrong": "예상 오답 — $E(\\bar X_n^2)=\\frac{E(X^2)}n$으로 계산한 경우",
+ "intro": [
+  "$E(\\bar X_n^2)=\\frac{\\sigma^2}n+m^2$ — $m^2$은 $n$과 무관.",
+  "(가)로 $\\sigma^2$, (나)로 $m$, 그다음 부등식으로 $n$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "설정",
+   "why": "$\\mathrm N(m,\\sigma^2)$, 표본평균 $\\bar X_n$.",
+   "uses": [
+    5
+   ]
+  },
+  "C3": {
+   "label": "(가)",
+   "why": "$E(\\bar X_4^2)-E(\\bar X_{16}^2)=3$.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
+  },
+  "C4": {
+   "label": "(나)",
+   "why": "$E(X^2)=116$.",
+   "uses": [
+    4
+   ]
+  },
+  "C2": {
+   "label": "묻는 것",
+   "why": "$P(\\bar X_n\\ge11)\\le0.023$인 $n$의 최솟값.",
+   "uses": [
+    6,
+    7
+   ]
+  },
+  "C5": {
+   "label": "표",
+   "why": "$0.477$.",
+   "uses": [
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "표준화",
+   "p": [
+    "$Z=\\frac{X-m}\\sigma$, 표본평균은 $\\frac\\sigma{\\sqrt n}$."
+   ]
+  },
+  {
+   "h": "제곱의 평균",
+   "p": [
+    "$E(Y^2)=V(Y)+E(Y)^2$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 표본평균의 제곱의 평균을 분산과 평균의 제곱으로 분해하여 모분산과 모평균을 따로 얻는 것",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "분해",
+   "text": "$\\mathrm{E}\\left(\\overline{X}_{n}^{2}\\right)=\\mathrm{V}(\\overline{X}_{n})+\\left\\{\\mathrm{E}(\\overline{X}_{n})\\right\\}^{2}=\\frac{\\sigma^{2}}{n}+m^{2}$ 이다. 평균의 제곱 항이 $n$ 에 무관하다는 것이 핵심이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$\\sigma$",
+   "text": "(가)에서 $\\frac{\\sigma^{2}}{4}-\\frac{\\sigma^{2}}{16}=3$ , $\\sigma^{2}=16$ , $\\sigma=4$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$m$",
+   "text": "(나)에서 $\\sigma^{2}+m^{2}=116$ , $m^{2}=100$ 이고 $m>0$ 이므로 $m=10$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "분포",
+   "text": "$\\overline{X}_{n}$ 은 $\\mathrm{N}\\left(10,\\,\\left(\\frac{4}{\\sqrt{n}}\\right)^{2}\\right)$ 을 따르므로",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "부등식",
+   "text": "$$\\mathrm{P}(\\overline{X}_{n}\\ge 11)=\\mathrm{P}\\left(Z \\ge \\frac{\\sqrt{n}}{4}\\right)\\le 0.023=\\mathrm{P}(Z \\ge 2)$$",
+   "uses": [
+    "C2",
+    "C5"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "에서 $\\frac{\\sqrt{n}}{4}\\ge 2$ , $n \\ge 64$ 이다. 따라서 구하는 최솟값은 $64$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$m^2$ 소거",
+   "cond": "C3",
+   "text": [
+    "차를 하면 평균 항이 사라짐."
+   ]
+  },
+  {
+   "h": "방향",
+   "cond": "C2",
+   "text": [
+    "$\\frac{\\sqrt n}4\\ge2$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $0.159$",
+   "body": [
+    "(같은 조건에서) $P(\\bar X_n\\ge11)\\le0.159$를 만족시키는 자연수 $n$의 최솟값을 구하시오. (단, $P(0\\le Z\\le1)=0.341$로 계산한다.)"
+   ],
+   "answer": 16,
+   "hint": "$\\frac{\\sqrt n}4\\ge1$."
+  }
+ ],
+ "line": "제곱의 평균 = 분산 + 평균² → 차로 분산."
+}
