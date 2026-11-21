@@ -1,0 +1,142 @@
+{
+ "wrong": "예상 오답 — 분모(마지막에 I일 확률)를 구하지 않고 $\\frac{33}{162}$을 답으로 쓴 경우",
+ "intro": [
+  "I에서는 I로 못 감 → 첫째·셋째는 I 아님 → 경로 $6$가지.",
+  "경로별 확률을 곱하고 III 횟수로 분류."
+ ],
+ "conds": {
+  "C2": {
+   "label": "I",
+   "why": "II 카드 $2$, III 카드 $1$.",
+   "uses": [
+    2
+   ]
+  },
+  "C3": {
+   "label": "II",
+   "why": "I $1$, III $1$.",
+   "uses": [
+    2
+   ]
+  },
+  "C4": {
+   "label": "III",
+   "why": "I $2$, II $1$.",
+   "uses": [
+    2
+   ]
+  },
+  "C5": {
+   "label": "조건",
+   "why": "I에서 시작, $4$번 이동 후 I.",
+   "uses": [
+    1,
+    3,
+    4
+   ]
+  },
+  "C6": {
+   "label": "사건",
+   "why": "III으로 정확히 $1$번.",
+   "uses": [
+    4
+   ]
+  },
+  "C7": {
+   "label": "묻는 것",
+   "why": "$p+q$.",
+   "uses": [
+    5
+   ]
+  },
+  "C8": {
+   "label": "단서",
+   "why": "서로소.",
+   "uses": [
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "조건부확률",
+   "p": [
+    "$P(B|A)=\\frac{P(A\\cap B)}{P(A)}$."
+   ]
+  },
+  {
+   "h": "마르코프 경로",
+   "p": [
+    "전이확률의 곱."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 주머니 I에서는 I로 갈 수 없다는 구조로 첫째·셋째 위치를 제한하여 경로를 모두 나열",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "경로",
+   "text": "옮겨 간 주머니를 차례로 적으면 네 번째는 ${\\mathrm{I}}$ 이고, ${\\mathrm{I}}$ 에서는 ${\\mathrm{I}}$ 로 옮겨 갈 수 없으므로 첫 번째와 세 번째는 ${\\mathrm{I}}$ 가 아니다. 따라서 가능한 경로는 다음 $6$ 가지이다. 각 단계의 확률은 ${\\mathrm{I}}\\to{\\mathrm{II}}$ : $\\frac{2}{3}$ , ${\\mathrm{I}}\\to{\\mathrm{III}}$ : $\\frac{1}{3}$ , ${\\mathrm{II}}\\to{\\mathrm{I}}$ , ${\\mathrm{II}}\\to{\\mathrm{III}}$ : $\\frac{1}{2}$ , ${\\mathrm{III}}\\to{\\mathrm{I}}$ : $\\frac{2}{3}$ , ${\\mathrm{III}}\\to{\\mathrm{II}}$ : $\\frac{1}{3}$ 이다.",
+   "uses": [
+    "C2",
+    "C3",
+    "C4"
+   ]
+  },
+  {
+   "title": "목록",
+   "text": "${\\mathrm{II}}$ , ${\\mathrm{I}}$ , ${\\mathrm{II}}$ , ${\\mathrm{I}}$ : $\\frac{2}{3}\\times \\frac{1}{2}\\times \\frac{2}{3}\\times \\frac{1}{2}=\\frac{18}{162}$ ( ${\\mathrm{III}}$ $0$ 번) / ${\\mathrm{II}}$ , ${\\mathrm{I}}$ , ${\\mathrm{III}}$ , ${\\mathrm{I}}$ : $\\frac{2}{3}\\times \\frac{1}{2}\\times \\frac{1}{3}\\times \\frac{2}{3}=\\frac{12}{162}$ ( $1$ 번) / ${\\mathrm{II}}$ , ${\\mathrm{III}}$ , ${\\mathrm{II}}$ , ${\\mathrm{I}}$ : $\\frac{2}{3}\\times \\frac{1}{2}\\times \\frac{1}{3}\\times \\frac{1}{2}=\\frac{9}{162}$ ( $1$ 번) / ${\\mathrm{III}}$ , ${\\mathrm{I}}$ , ${\\mathrm{II}}$ , ${\\mathrm{I}}$ : $\\frac{1}{3}\\times \\frac{2}{3}\\times \\frac{2}{3}\\times \\frac{1}{2}=\\frac{12}{162}$ ( $1$ 번) / ${\\mathrm{III}}$ , ${\\mathrm{I}}$ , ${\\mathrm{III}}$ , ${\\mathrm{I}}$ : $\\frac{1}{3}\\times \\frac{2}{3}\\times \\frac{1}{3}\\times \\frac{2}{3}=\\frac{8}{162}$ ( $2$ 번) / ${\\mathrm{III}}$ , ${\\mathrm{II}}$ , ${\\mathrm{III}}$ , ${\\mathrm{I}}$ : $\\frac{1}{3}\\times \\frac{1}{3}\\times \\frac{1}{2}\\times \\frac{2}{3}=\\frac{6}{162}$ ( $2$ 번)",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "합",
+   "text": "마지막에 ${\\mathrm{I}}$ 에 있을 확률은 $\\frac{65}{162}$ 이고, 그중 ${\\mathrm{III}}$ 으로 정확히 한 번 옮겨 간 경우는 $\\frac{12+9+12}{162}=\\frac{33}{162}$ 이다.",
+   "uses": [
+    "C5",
+    "C6"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "구하는 확률은 $\\frac{33}{65}$ 이고 $p+q=65+33=98$ 이다.",
+   "uses": [
+    "C7",
+    "C8"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "I→I 불가",
+   "cond": "C2",
+   "text": [
+    "I 주머니에 I 카드 없음."
+   ]
+  },
+  {
+   "h": "세 경로",
+   "cond": "C6",
+   "text": [
+    "$12+9+12$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $5$번",
+   "body": [
+    "(같은 세 주머니와 시행에서) 시행을 $5$번 반복하였더니 마지막에 주머니 I에 있었을 때, $5$번 중 주머니 III으로 옮겨 간 횟수가 정확히 $1$일 확률은 $\\frac qp$이다. $p+q$의 값을 구하시오. (단, $p$와 $q$는 서로소인 자연수)"
+   ],
+   "answer": 35,
+   "hint": "경로 나열로 계산."
+  }
+ ],
+ "line": "카드가 가리키는 이동 → 경로 나열."
+}
