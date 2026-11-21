@@ -1,0 +1,147 @@
+{
+ "wrong": "예상 오답 — $\\vec c=-\\vec a$인 경우를 배제하지 않거나 (ⅱ)를 빠뜨린 경우",
+ "intro": [
+  "(가) → 두 현 AB, CD의 중점이 원점 대칭 → $\\{\\vec c,\\vec d\\}=\\{-\\vec a,-\\vec b\\}$ 또는 지름.",
+  "두 경우 모두 $2|\\vec p|^2-14$ — 네 점이 안 정해져도 값은 결정."
+ ],
+ "conds": {
+  "C1": {
+   "label": "원",
+   "why": "$x^2+y^2=25$ 위 서로 다른 A, B, C, D.",
+   "uses": [
+    6
+   ]
+  },
+  "C2": {
+   "label": "(가)",
+   "why": "$\\vec a+\\vec b+\\vec c+\\vec d=\\vec0$.",
+   "uses": [
+    1,
+    2,
+    4
+   ]
+  },
+  "C3": {
+   "label": "(나)",
+   "why": "$\\vec a\\cdot\\vec c=-7$.",
+   "uses": [
+    2
+   ]
+  },
+  "C4": {
+   "label": "P",
+   "why": "E$(1,7)$–G$(7,1)$ 선분 위, $\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PC}}+\\vec{\\mathrm{PB}}\\cdot\\vec{\\mathrm{PD}}$의 $M$, $m$.",
+   "uses": [
+    3,
+    5,
+    7
+   ]
+  },
+  "C5": {
+   "label": "묻는 것",
+   "why": "$M+m$.",
+   "uses": [
+    7
+   ]
+  },
+  "C6": {
+   "label": "단서",
+   "why": "O는 원점.",
+   "uses": []
+  }
+ },
+ "concepts": [
+  {
+   "h": "현의 중점",
+   "p": [
+    "중점이 정해지면 현 하나(중점 ≠ O)."
+   ]
+  },
+  {
+   "h": "원점까지 거리",
+   "p": [
+    "선분 위 최소: 수선의 발이 선분 안인지."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "중점",
+   "text": "위치벡터를 $\\vec{a}$ , $\\vec{b}$ , $\\vec{c}$ , $\\vec{d}$ , $\\vec{p}$ 라 하고, 선분 ${\\mathrm{AB}}$ , ${\\mathrm{CD}}$ 의 중점을 각각 ${\\mathrm{M}}$ , ${\\mathrm{L}}$ 이라 하면 (가)에서 $\\vec{{\\mathrm{OM}}}=-\\vec{{\\mathrm{OL}}}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "(ⅰ)",
+   "text": "(i) ${\\mathrm{M}}\\ne{\\mathrm{O}}$ 일 때: 중점이 ${\\mathrm{M}}$ 인 현은 ${\\mathrm{M}}$ 을 지나고 ${\\mathrm{OM}}$ 에 수직인 직선 위의 현 하나뿐이고 양 끝은 $\\vec{{\\mathrm{OM}}}\\pm \\vec{w}$ (단, $\\vec{w}$ 는 $\\vec{{\\mathrm{OM}}}$ 에 수직)이다. 중점이 $-\\vec{{\\mathrm{OM}}}$ 인 현의 양 끝은 $-\\vec{{\\mathrm{OM}}}\\pm \\vec{w}$ 이므로 $\\{\\vec{c},\\,\\vec{d}\\}=\\{-\\vec{a},\\,-\\vec{b}\\}$ 이다. $\\vec{c}=-\\vec{a}$ 이면 $\\vec{a}\\cdot \\vec{c}=-25 \\ne-7$ 이므로 $\\vec{c}=-\\vec{b}$ , $\\vec{d}=-\\vec{a}$ 이고 (나)에서 $\\vec{a}\\cdot \\vec{b}=7$ 이다. 따라서",
+   "uses": [
+    "C2",
+    "C3"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$$\\vec{{\\mathrm{PA}}}\\cdot \\vec{{\\mathrm{PC}}}+\\vec{{\\mathrm{PB}}}\\cdot \\vec{{\\mathrm{PD}}}=(\\vec{p}-\\vec{a})\\cdot(\\vec{p}+\\vec{b})+(\\vec{p}-\\vec{b})\\cdot(\\vec{p}+\\vec{a})=2|\\vec{p}|^{2}-2 \\vec{a}\\cdot \\vec{b}=2|\\vec{p}|^{2}-14$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "(ⅱ)",
+   "text": "(ii) ${\\mathrm{M}}={\\mathrm{O}}$ 일 때: $\\vec{b}=-\\vec{a}$ , $\\vec{d}=-\\vec{c}$ 이고",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$$(\\vec{p}-\\vec{a})\\cdot(\\vec{p}-\\vec{c})+(\\vec{p}+\\vec{a})\\cdot(\\vec{p}+\\vec{c})=2|\\vec{p}|^{2}+2 \\vec{a}\\cdot \\vec{c}=2|\\vec{p}|^{2}-14$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "존재",
+   "text": "두 경우 모두 (가), (나)를 만족시키는 서로 다른 네 점이 실제로 있고, 값은 $2|\\vec{{\\mathrm{OP}}}|^{2}-14$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "범위",
+   "text": "점 ${\\mathrm{P}}$ 는 직선 $x+y=8$ 위의 $1 \\le x \\le 7$ 인 부분을 움직인다. 원점에서 이 직선에 내린 수선의 발 $(4,\\,4)$ 는 선분 위에 있으므로 $|\\vec{{\\mathrm{OP}}}|^{2}$ 의 최솟값은 $32$ 이고, 최댓값은 양 끝점에서 $50$ 이다. 따라서 $m=64-14=50$ , $M=100-14=86$ 이고 $M+m=136$ 이다.",
+   "uses": [
+    "C4",
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\vec c=-\\vec a$",
+   "cond": "C3",
+   "text": [
+    "$-25\\ne-7$."
+   ]
+  },
+  {
+   "h": "값 결정",
+   "cond": "C4",
+   "text": [
+    "두 경우 같은 식."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · E$(1,9)$, G$(9,1)$",
+   "body": [
+    "(같은 조건의 네 점에 대하여) 두 점 E$(1,9)$, G$(9,1)$에 대하여 선분 EG 위의 점 P가 있을 때, $\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PC}}+\\vec{\\mathrm{PB}}\\cdot\\vec{\\mathrm{PD}}$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $M+m$의 값을 구하시오."
+   ],
+   "answer": 236,
+   "hint": "$|\\mathrm{OP}|^2\\in[50,82]$ → $86+150$."
+  }
+ ],
+ "line": "합이 영벡터 → 중점 대칭 → 짝짓기."
+}

@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 3차 R3_기하B 16번( 2023학년도 대학수학능력시험 30번) 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — K와 평면 AEF 사이의 거리를 P와의 거리 $4$로 그대로 써서 $72$로 계산한 경우",
  "answer": 36,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -29,9 +29,12 @@
     0
    ],
    "text": "$\\overline{{\\mathrm{AB}}}=12$ 인 직사각형 모양의 종이 ${\\mathrm{ABCD}}$ 에서 선분 ${\\mathrm{BC}}$ 위의 점 ${\\mathrm{E}}$ 와 선분 ${\\mathrm{CD}}$ 위의 점 ${\\mathrm{F}}$ 에 대하여, 세 선분 ${\\mathrm{AE}}$ , ${\\mathrm{EF}}$ , ${\\mathrm{FA}}$ 를 접는 선으로 하여 종이를 접었더니 세 점 ${\\mathrm{B}}$ , ${\\mathrm{C}}$ , ${\\mathrm{D}}$ 가 한 점 ${\\mathrm{P}}$ 에서 만나 사면체 ${\\mathrm{PAEF}}$ 가 만들어졌다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "접기",
+   "why": "AB$=12$ 직사각형, E∈BC, F∈CD, B, C, D가 P에서 만남.",
+   "uses": [
+    1,
+    2
+   ]
   },
   {
    "id": "C2",
@@ -40,9 +43,12 @@
     1
    ],
    "text": "사면체 ${\\mathrm{PAEF}}$ 의 네 꼭짓점을 모두 지나는 구의 중심을 ${\\mathrm{K}}$ 라 할 때, 사면체 ${\\mathrm{KAEF}}$ 의 부피를 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "외접구 중심 K, 사면체 KAEF의 부피.",
+   "uses": [
+    3,
+    4
+   ]
   },
   {
    "id": "C3",
@@ -51,44 +57,93 @@
     2
    ],
    "text": "(단, 종이의 두께는 고려하지 않는다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "단서",
+   "why": "종이 두께 무시.",
+   "uses": [
+    1
+   ]
   }
  ],
  "intro": [
-  "정사각형과 중점을 주던 조건을 직사각형과 임의의 두 점으로 바꾸어 접힘 조건에서 정사각형·중점임을 스스로 찾게 하고, 세 모서리가 서로 수직인 사면체의 외접구 중심과 면 사이의 거리를 무게중심을 지나는 직선 위의 비로 구하게 함"
+  "접힘 → AB$=$AD (정사각형), E, F는 중점, P에서 세 모서리 직교.",
+  "외접구 중심 K$(6,3,3)$, $\\vec{\\mathrm{PG}}=\\frac23\\vec{\\mathrm{PK}}$ → 거리 $4\\times\\frac12$."
  ],
  "topic": "공간도형과 공간좌표",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "직각 사면체",
+   "p": [
+    "직교 세 모서리 → 외접구 중심은 직육면체 대각선 중점."
+   ]
+  },
+  {
+   "h": "무게중심과 비",
+   "p": [
+    "P, G, K 일직선."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "접은 뒤 $\\overline{{\\mathrm{AP}}}=\\overline{{\\mathrm{AB}}}=\\overline{{\\mathrm{AD}}}$ 이므로 $\\overline{{\\mathrm{AD}}}=12$ 이고 종이는 정사각형이다. 또 $\\overline{{\\mathrm{EB}}}=\\overline{{\\mathrm{EP}}}=\\overline{{\\mathrm{EC}}}$ , $\\overline{{\\mathrm{FC}}}=\\overline{{\\mathrm{FP}}}=\\overline{{\\mathrm{FD}}}$ 이므로 ${\\mathrm{E}}$ , ${\\mathrm{F}}$ 는 각각 선분 ${\\mathrm{BC}}$ , ${\\mathrm{CD}}$ 의 중점이다. 꼭짓점의 각이 보존되므로 $\\angle{\\mathrm{APE}}=\\angle{\\mathrm{EPF}}=\\angle{\\mathrm{FPA}}=\\frac{\\pi}{2}$ 이고 $\\overline{{\\mathrm{PA}}}=12$ , $\\overline{{\\mathrm{PE}}}=\\overline{{\\mathrm{PF}}}=6$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C3"
+   ],
+   "title": "접힘 조건"
   },
   {
    "n": 2,
    "text": "${\\mathrm{P}}$ 를 원점으로 하여 ${\\mathrm{A}}(12,\\,0,\\,0)$ , ${\\mathrm{E}}(0,\\,6,\\,0)$ , ${\\mathrm{F}}(0,\\,0,\\,6)$ 으로 놓으면 네 점에서 같은 거리에 있는 점은 ${\\mathrm{K}}(6,\\,3,\\,3)$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "좌표"
   },
   {
    "n": 3,
    "text": "사면체 ${\\mathrm{PAEF}}$ 의 부피는 $\\frac{1}{6}\\times 12 \\times 6 \\times 6=72$ 이고 삼각형 ${\\mathrm{AEF}}$ 의 넓이는 $144-36-36-18=54$ 이므로 점 ${\\mathrm{P}}$ 와 평면 ${\\mathrm{AEF}}$ 사이의 거리는 $\\frac{3 \\times 72}{54}=4$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "거리"
   },
   {
    "n": 4,
    "text": "삼각형 ${\\mathrm{AEF}}$ 의 무게중심 ${\\mathrm{G}}(4,\\,2,\\,2)$ 는 평면 ${\\mathrm{AEF}}$ 위에 있고 $\\vec{{\\mathrm{PG}}}=\\frac{2}{3}\\vec{{\\mathrm{PK}}}$ 이므로 세 점 ${\\mathrm{P}}$ , ${\\mathrm{G}}$ , ${\\mathrm{K}}$ 는 한 직선 위에 있고 $\\overline{{\\mathrm{PG}}}:\\overline{{\\mathrm{GK}}}=2:1$ 이다. 따라서 점 ${\\mathrm{K}}$ 와 평면 ${\\mathrm{AEF}}$ 사이의 거리는 $4 \\times \\frac{1}{2}=2$ 이고, 사면체 ${\\mathrm{KAEF}}$ 의 부피는 $\\frac{1}{3}\\times 54 \\times 2=36$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "비"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "AEF 넓이",
+   "cond": "C2",
+   "text": [
+    "$144-36-36-18$."
+   ]
+  },
+  {
+   "h": "$2:1$",
+   "cond": "C2",
+   "text": [
+    "G는 PK의 $\\frac23$ 지점."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · AB$=24$",
+   "body": [
+    "$\\overline{\\mathrm{AB}}=24$인 직사각형 ABCD에서 (같은 방법으로) 세 선분 AE, EF, FA를 접는 선으로 접어 B, C, D가 한 점 P에서 만나 사면체 PAEF가 만들어졌다. 네 꼭짓점을 지나는 구의 중심을 K라 할 때, 사면체 KAEF의 부피를 구하시오."
+   ],
+   "answer": 288,
+   "hint": "닮음비 $2$ → $36\\times8$."
+  }
+ ],
+ "line": "접기 → 길이·각 보존 → 직교 사면체.",
  "note": ""
 }

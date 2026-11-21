@@ -1,0 +1,214 @@
+{
+ "wrong": "예상 오답 — 열린 끝점 $184$까지 정수에 넣어 $12$개로 센 경우",
+ "intro": [
+  "$\\vec{\\mathrm{FP}}\\cdot\\vec{\\mathrm{FF'}}\\ge0$ → $4<x_1\\le5$.",
+  "수선의 발 N은 원 $x^2+y^2=16$ 위, 방향 = $\\vec{\\mathrm{F'P}}$ — 호의 한쪽 끝은 열림."
+ ],
+ "conds": {
+  "C1": {
+   "label": "쌍곡선",
+   "why": "$\\frac{x^2}{16}-\\frac{y^2}9=1$, 제1사분면 P, $\\vec{\\mathrm{FP}}\\cdot\\vec{\\mathrm{FF'}}\\ge0$.",
+   "uses": [
+    1,
+    7,
+    8,
+    9
+   ]
+  },
+  "C2": {
+   "label": "N",
+   "why": "P의 접선에 F에서 내린 수선의 발.",
+   "uses": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    10,
+    11
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "A$(15,9)$, B$(15,7)$, $\\vec{\\mathrm{NA}}\\cdot\\vec{\\mathrm{NB}}$가 될 수 있는 정수 개수.",
+   "uses": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "중점 내적",
+   "p": [
+    "$\\vec{\\mathrm{XA}}\\cdot\\vec{\\mathrm{XB}}=|\\mathrm{XM}|^2-\\left(\\frac{\\mathrm{AB}}2\\right)^2$."
+   ]
+  },
+  {
+   "h": "초점에서 접선의 수선의 발",
+   "p": [
+    "보조원 $x^2+y^2=a^2$ 위."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "범위",
+   "text": "${\\mathrm{P}}(x_{1},\\,y_{1})$ 이라 하면 $\\vec{{\\mathrm{FP}}}\\cdot \\vec{{\\mathrm{FF'}}}=-10(x_{1}-5)\\ge 0$ 이므로 $4<x_{1}\\le 5$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "법선",
+   "text": "점 ${\\mathrm{P}}$ 에서의 접선은 $\\frac{x_{1}x}{16}-\\frac{y_{1}y}{9}=1$ , 즉 법선벡터가 $\\vec{n}=\\left(\\frac{x_{1}}{16},\\,-\\frac{y_{1}}{9}\\right)$ 인 직선 $\\vec{n}\\cdot(x,\\,y)=1$ 이다. 점 ${\\mathrm{N}}$ 은 점 ${\\mathrm{F}}$ 에서 $\\vec{n}$ 방향으로 옮긴 점이므로 $\\vec{{\\mathrm{ON}}}=\\vec{{\\mathrm{OF}}}-\\lambda \\vec{n}$ 으로 놓을 수 있고, ${\\mathrm{N}}$ 이 접선 위에 있으므로 $\\vec{n}\\cdot \\vec{{\\mathrm{OF}}}-\\lambda|\\vec{n}|^{2}=1$ 에서 $\\lambda=\\frac{\\vec{n}\\cdot \\vec{{\\mathrm{OF}}}-1}{|\\vec{n}|^{2}}$ 이다. $y_{1}^{2}=9 \\left(\\frac{x_{1}^{2}}{16}-1 \\right)$ 을 쓰면",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "계산",
+   "text": "$$|\\vec{n}|^{2}=\\frac{(5 x_{1}-16)(5 x_{1}+16)}{2304},\\,\\,\\,\\vec{n}\\cdot \\vec{{\\mathrm{OF}}}-1=\\frac{5 x_{1}-16}{16},\\,\\,\\,\\lambda=\\frac{144}{5 x_{1}+16}$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "정리",
+   "text": "이므로",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "N",
+   "text": "$$\\vec{{\\mathrm{ON}}}=\\left(5-\\frac{9 x_{1}}{5 x_{1}+16},\\,\\frac{16 y_{1}}{5 x_{1}+16}\\right)=\\frac{16}{5 x_{1}+16}(x_{1}+5,\\,y_{1})$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "원",
+   "text": "이다. 한편 $\\overline{{\\mathrm{PF'}}}^{2}-\\overline{{\\mathrm{PF}}}^{2}=20 x_{1}$ , $\\overline{{\\mathrm{PF'}}}-\\overline{{\\mathrm{PF}}}=8$ 에서 $\\overline{{\\mathrm{PF'}}}=\\frac{5 x_{1}+16}{4}$ 이므로 $\\vec{{\\mathrm{ON}}}=\\frac{4}{\\overline{{\\mathrm{PF'}}}}\\vec{{\\mathrm{F'P}}}$ 이다. 즉 점 ${\\mathrm{N}}$ 은 원 $x^{2}+y^{2}=16$ 위에 있고 $\\vec{{\\mathrm{ON}}}$ 의 방향은 $\\vec{{\\mathrm{F'P}}}$ 의 방향과 같다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "기울기",
+   "text": "직선 ${\\mathrm{F'P}}$ 의 기울기를 $s$ 라 하면",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$$s^{2}=\\frac{y_{1}^{2}}{(x_{1}+5)^{2}}=\\frac{9}{16}\\times \\left(1-\\frac{9}{x_{1}+5}\\right)\\times \\left(1-\\frac{1}{x_{1}+5}\\right)$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "증가",
+   "text": "이고 두 괄호는 모두 양수이며 $x_{1}$ 에 따라 증가하므로, $x_{1}$ 이 $4$ 보다 크고 $5$ 이하인 범위를 움직일 때 $s$ 는 연속적으로 증가하면서 $0$ 보다 크고 $x_{1}=5$ 일 때의 값 $\\frac{9/4}{10}=\\frac{9}{40}$ 이하인 모든 값을 가진다( $x_{1}=5$ 일 때 ${\\mathrm{P}}\\left(5,\\,\\frac{9}{4}\\right)$ ). 따라서",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "호",
+   "text": "$${\\mathrm{N}}=4(\\cos \\theta,\\,\\sin \\theta),\\,\\,\\,0<\\theta \\le \\theta_{1}\\,\\,\\left(\\cos \\theta_{1}=\\frac{40}{41},\\,\\sin \\theta_{1}=\\frac{9}{41}\\right)$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "정리",
+   "text": "이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "중점",
+   "text": "선분 ${\\mathrm{AB}}$ 의 중점 ${\\mathrm{K}}(15,\\,8)$ 에 대하여 $\\vec{{\\mathrm{NA}}}\\cdot \\vec{{\\mathrm{NB}}}=\\overline{{\\mathrm{NK}}}^{2}-1$ 이고, $\\overline{{\\mathrm{OK}}}=17$ , $\\vec{{\\mathrm{OK}}}$ 의 방향각을 $\\kappa$ $\\left(\\cos \\kappa=\\frac{15}{17},\\,\\sin \\kappa=\\frac{8}{17}\\right)$ 라 하면",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "거리",
+   "text": "$$\\overline{{\\mathrm{NK}}}^{2}=16+289-136 \\cos(\\theta-\\kappa)$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "단조",
+   "text": "이다. $\\tan \\kappa=\\frac{8}{15}>\\frac{9}{40}=\\tan \\theta_{1}$ 이므로 $-\\kappa<\\theta-\\kappa \\le \\theta_{1}-\\kappa<0$ 이고, 이 범위에서 $\\cos(\\theta-\\kappa)$ 는 $\\theta$ 에 따라 증가한다. 따라서",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "범위",
+   "text": "$$\\frac{15}{17}<\\cos(\\theta-\\kappa)\\le \\cos(\\theta_{1}-\\kappa)=\\frac{40}{41}\\times \\frac{15}{17}+\\frac{9}{41}\\times \\frac{8}{17}=\\frac{672}{697}$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "열림",
+   "text": "이고(왼쪽 끝은 포함되지 않음)",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "값",
+   "text": "$$\\frac{7129}{41}\\le \\overline{{\\mathrm{NK}}}^{2}<185,\\,\\,\\,\\frac{7088}{41}\\le \\vec{{\\mathrm{NA}}}\\cdot \\vec{{\\mathrm{NB}}}<184$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이며 이 범위의 모든 값을 가진다. $\\frac{7088}{41}=172.8 \\cdots$ 이므로 가능한 정수는 $173$ , $174$ , $\\cdots$ , $183$ 의 $11$ 개이다.",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "열림·닫힘",
+   "cond": "C3",
+   "text": [
+    "$x_1\\to4+$는 포함 안 됨."
+   ]
+  },
+  {
+   "h": "$\\tan\\kappa>\\tan\\theta_1$",
+   "cond": "C3",
+   "text": [
+    "호 전체가 K 방향보다 아래."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · A$(8,16)$, B$(8,14)$",
+   "body": [
+    "(같은 쌍곡선과 점 N에 대하여) 두 점 A$(8,16)$, B$(8,14)$에 대하여 $\\vec{\\mathrm{NA}}\\cdot\\vec{\\mathrm{NB}}$의 값이 될 수 있는 모든 정수의 개수를 구하시오."
+   ],
+   "answer": 24,
+   "hint": "K$(8,15)$: $[215.2\\cdots,240)$ → $216\\sim239$."
+  }
+ ],
+ "line": "초점 → 접선 수선의 발 = 보조원. 끝점의 개폐 구분."
+}
