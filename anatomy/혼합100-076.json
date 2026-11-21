@@ -1,0 +1,140 @@
+{
+ "wrong": "예상 오답 — $\\bar X$의 표준편차를 $\\sigma$로 두어 평균을 틀린 경우",
+ "intro": [
+  "(가): $\\frac{14-m}\\sigma=-\\frac{3(18-m)}\\sigma$ → $m=17$.",
+  "(나) → $\\sigma=3$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "표본",
+   "why": "$\\mathrm N(m,\\sigma^2)$, $n=9$.",
+   "uses": [
+    1
+   ]
+  },
+  "C3": {
+   "label": "(가)",
+   "why": "$P(X\\le14)=P(\\bar X\\ge18)$.",
+   "uses": [
+    2,
+    3,
+    4
+   ]
+  },
+  "C4": {
+   "label": "(나)",
+   "why": "$P(\\bar X\\le18)=0.841$.",
+   "uses": [
+    5
+   ]
+  },
+  "C5": {
+   "label": "묻는 것",
+   "why": "$k=P(11\\le X\\le20)$, $1000k$.",
+   "uses": [
+    6,
+    7
+   ]
+  },
+  "C6": {
+   "label": "표",
+   "why": "$1$, $2$.",
+   "uses": [
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "표본평균",
+   "p": [
+    "$\\frac\\sigma{\\sqrt9}$."
+   ]
+  },
+  {
+   "h": "반대쪽 꼬리",
+   "p": [
+    "부호 반대."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "분포",
+   "text": "$X$ 는 정규분포 ${\\mathrm{N}}(m,\\,\\sigma^{2})$ , $\\overline{X}$ 는 정규분포 ${\\mathrm{N}}\\left(m,\\,\\left(\\frac{\\sigma}{3}\\right)^{2}\\right)$ 을 따른다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "(가)",
+   "text": "(가)에서 ${\\mathrm{P}}\\left(Z \\le \\frac{14-m}{\\sigma}\\right)={\\mathrm{P}}\\left(Z \\ge \\frac{18-m}{\\sigma/3}\\right)$ 이므로",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$$\\frac{14-m}{\\sigma}=-\\frac{3(18-m)}{\\sigma},\\,\\,14-m=-54+3 m$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$m$",
+   "text": "이고 $m=17$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$\\sigma$",
+   "text": "(나)에서 ${\\mathrm{P}}\\left(Z \\le \\frac{3(18-17)}{\\sigma}\\right)=0.841=0.5+0.341$ 이므로 $\\frac{3}{\\sigma}=1$ , 즉 $\\sigma=3$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "확률",
+   "text": "$${\\mathrm{P}}(11 \\le X \\le 20)={\\mathrm{P}}(-2 \\le Z \\le 1)=0.477+0.341=0.818$$",
+   "uses": [
+    "C5",
+    "C6"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $1000 \\times k=818$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$3$배",
+   "cond": "C3",
+   "text": [
+    "표준화."
+   ]
+  },
+  {
+   "h": "$0.841$",
+   "cond": "C4",
+   "text": [
+    "$Z=1$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $P(X\\le10)$, $0.977$",
+   "body": [
+    "(같은 설정에서) (가) $P(X\\le10)=P(\\bar X\\ge18)$ (나) $P(\\bar X\\le18)=0.977$일 때, $P(13\\le X\\le19)$의 값을 $k$라 하자. $1000\\times k$의 값을 구하시오."
+   ],
+   "answer": 682,
+   "hint": "$m=16$, $\\frac6\\sigma=2$ → $\\sigma=3$: $P(|Z|\\le1)$."
+  }
+ ],
+ "line": "모집단과 표본평균의 표준화 비교."
+}
