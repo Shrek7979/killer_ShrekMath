@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2024학년도 대학수학능력시험 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 두 직선의 방향에 따라 합벡터가 달라진다고 보아 계산이 막힌 경우",
  "answer": 15,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -40,8 +40,8 @@
     0
    ],
    "text": "좌표평면 위의 세 점 ${\\mathrm{E}}(0,\\,4)$ , ${\\mathrm{F}}(4,\\,0)$ , ${\\mathrm{G}}(6,\\,0)$ 이 있다.",
-   "label": "",
-   "why": "",
+   "label": "점",
+   "why": "E$(0,4)$, F$(4,0)$, G$(6,0)$.",
    "uses": []
   },
   {
@@ -51,9 +51,13 @@
     1
    ],
    "text": "선분 ${\\mathrm{EF}}$ 위의 점 ${\\mathrm{P}}$ 를 지나고 서로 수직인 두 직선 $l_{1}$ , $l_{2}$ 가 원 $x^{2}+y^{2}=25$ 와 만나는 점을 각각 ${\\mathrm{A}}$ , ${\\mathrm{B}}$ 와 ${\\mathrm{C}}$ , ${\\mathrm{D}}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "두 직선",
+   "why": "P를 지나는 수직인 $l_1$, $l_2$, 원 $x^2+y^2=25$와 A, B / C, D.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
   },
   {
    "id": "C3",
@@ -62,9 +66,13 @@
     2
    ],
    "text": "두 직선 $l_{1}$ , $l_{2}$ 가 점 ${\\mathrm{P}}$ 를 지나며 서로 수직인 채로 움직이고 점 ${\\mathrm{P}}$ 가 선분 ${\\mathrm{EF}}$ 위를 움직일 때,",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "움직임",
+   "why": "P는 선분 EF 위, 두 직선은 수직인 채로 회전.",
+   "uses": [
+    4,
+    5,
+    8
+   ]
   },
   {
    "id": "C4",
@@ -73,9 +81,12 @@
     0
    ],
    "text": "$(\\vec{{\\mathrm{PA}}}+\\vec{{\\mathrm{PB}}}+\\vec{{\\mathrm{PC}}}+\\vec{{\\mathrm{PD}}})\\cdot \\vec{{\\mathrm{PG}}}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "식",
+   "why": "$(\\vec{\\mathrm{PA}}+\\vec{\\mathrm{PB}}+\\vec{\\mathrm{PC}}+\\vec{\\mathrm{PD}})\\cdot\\vec{\\mathrm{PG}}$.",
+   "uses": [
+    6,
+    7
+   ]
   },
   {
    "id": "C5",
@@ -95,80 +106,141 @@
     1
    ],
    "text": "$M+m$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$M+m$.",
+   "uses": [
+    9,
+    10
+   ]
   }
  ],
  "intro": [
-  "여러 점에 대한 벡터의 합을 다루는 구조를, 현의 중점과 직사각형을 이용해 합벡터가 두 직선의 방향과 관계없이 $2 \\vec{{\\mathrm{PO}}}$ 로 일정함을 찾게 하고, 선분 위에서 이차식의 최대·최소로 마무리하게 함"
+  "현의 중점 M$_1$, M$_2$로 $\\vec{\\mathrm{PA}}+\\vec{\\mathrm{PB}}=2\\vec{\\mathrm{PM_1}}$ 등. PM$_1$OM$_2$가 직사각형이라 합이 $2\\vec{\\mathrm{PO}}$로 일정.",
+  "OG의 중점 N으로 $2\\vec{\\mathrm{PO}}\\cdot\\vec{\\mathrm{PG}}=2(|\\mathrm{PN}|^2-9)$. 선분 EF 위에서 $|\\mathrm{PN}|^2$의 최대·최소."
  ],
  "topic": "평면벡터",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "현의 중점",
+   "p": [
+    "중심에서 현에 내린 수선의 발 = 현의 중점."
+   ]
+  },
+  {
+   "h": "직사각형의 대각선",
+   "p": [
+    "$\\vec{\\mathrm{PM_1}}+\\vec{\\mathrm{PM_2}}=\\vec{\\mathrm{PO}}$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "원의 중심을 ${\\mathrm{O}}$ 라 하고, 점 ${\\mathrm{O}}$ 에서 두 직선 $l_{1}$ , $l_{2}$ 에 내린 수선의 발을 각각 ${\\mathrm{M}}_{1}$ , ${\\mathrm{M}}_{2}$ 라 하자. ${\\mathrm{M}}_{1}$ , ${\\mathrm{M}}_{2}$ 는 각각 현 ${\\mathrm{AB}}$ , ${\\mathrm{CD}}$ 의 중점이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "수선의 발"
   },
   {
    "n": 2,
    "text": "$$\\vec{{\\mathrm{PA}}}+\\vec{{\\mathrm{PB}}}=2 \\vec{{\\mathrm{PM}}_{1}},\\,\\,\\,\\vec{{\\mathrm{PC}}}+\\vec{{\\mathrm{PD}}}=2 \\vec{{\\mathrm{PM}}_{2}}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "중점 합"
   },
   {
    "n": 3,
    "text": "이다. 두 직선 $l_{1}$ , $l_{2}$ 가 서로 수직이고 직선 ${\\mathrm{OM}}_{1}$ 은 $l_{1}$ 에, 직선 ${\\mathrm{OM}}_{2}$ 는 $l_{2}$ 에 수직이므로 사각형 ${\\mathrm{PM}}_{1}{\\mathrm{OM}}_{2}$ 는 직사각형(한 직선이 점 ${\\mathrm{O}}$ 를 지나면 선분)이고 $\\vec{{\\mathrm{PM}}_{1}}+\\vec{{\\mathrm{PM}}_{2}}=\\vec{{\\mathrm{PO}}}$ 이다. 따라서 두 직선의 방향과 관계없이",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "직사각형"
   },
   {
    "n": 4,
    "text": "$$\\vec{{\\mathrm{PA}}}+\\vec{{\\mathrm{PB}}}+\\vec{{\\mathrm{PC}}}+\\vec{{\\mathrm{PD}}}=2 \\vec{{\\mathrm{PO}}}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "일정한 합"
   },
   {
    "n": 5,
    "text": "이다. (선분 ${\\mathrm{EF}}$ 위의 점은 원점으로부터 거리가 $4$ 이하이므로 원의 내부에 있어 두 직선은 항상 원과 두 점에서 만난다.)",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "항상 두 점"
   },
   {
    "n": 6,
    "text": "선분 ${\\mathrm{OG}}$ 의 중점을 ${\\mathrm{N}}(3,\\,0)$ 이라 하면",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "중점 N"
   },
   {
    "n": 7,
    "text": "$$2 \\vec{{\\mathrm{PO}}}\\cdot \\vec{{\\mathrm{PG}}}=2(|\\vec{{\\mathrm{PN}}}|^{2}-9)$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "식"
   },
   {
    "n": 8,
    "text": "이다. 점 ${\\mathrm{N}}$ 에서 직선 ${\\mathrm{EF}}:x+y=4$ 에 내린 수선의 발 $\\left(\\frac{7}{2},\\,\\frac{1}{2}\\right)$ 은 선분 ${\\mathrm{EF}}$ 위에 있고 $|\\vec{{\\mathrm{PN}}}|^{2}$ 의 최솟값은 $\\frac{1}{2}$ 이다. 최댓값은 끝점에서 생기며 ${\\mathrm{E}}$ 에서 $9+16=25$ , ${\\mathrm{F}}$ 에서 $1$ 이므로 $25$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "최대·최소"
   },
   {
    "n": 9,
    "text": "$$M=2(25-9)=32,\\,\\,\\,m=2 \\left(\\frac{1}{2}-9 \\right)=-17$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C6"
+   ],
+   "title": "값"
   },
   {
    "n": 10,
    "text": "따라서 $M+m=15$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C6"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "방향과 무관",
+   "cond": "C3",
+   "text": [
+    "두 직선이 어떻게 돌아도 합은 $2\\vec{\\mathrm{PO}}$."
+   ]
+  },
+  {
+   "h": "수선의 발 위치",
+   "cond": "C3",
+   "text": [
+    "$\\left(\\frac72,\\frac12\\right)$이 선분 위 — 최솟값 $\\frac12$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · G$(0,-2)$",
+   "body": [
+    "세 점 E$(0,4)$, F$(4,0)$, G$(0,-2)$와 원 $x^2+y^2=25$에 대하여 (같은 방식으로) $(\\vec{\\mathrm{PA}}+\\vec{\\mathrm{PB}}+\\vec{\\mathrm{PC}}+\\vec{\\mathrm{PD}})\\cdot\\vec{\\mathrm{PG}}$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $M+m$의 값을 구하시오."
+   ],
+   "answer": 71,
+   "hint": "N$(0,-1)$: $|\\mathrm{PN}|^2$ 최대 $25$ (E), 최소 $\\frac{25}2$ (수선의 발) → $32+39$."
+  }
+ ],
+ "line": "현의 중점 + 직사각형 → 합벡터 $2\\vec{\\mathrm{PO}}$. 내적은 중점 거리로.",
  "note": ""
 }
