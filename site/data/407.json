@@ -103,7 +103,7 @@
   },
   {
    "n": 3,
-   "text": "오른쪽: $9-k \\le f(6)\\le f(7)\\le f(8)$ , $f(x)\\ge x$ 인 경우의 수를 $R(k)$ 라 하면 $x m a p s t o 9-x$ , $f m a p s t o 9-f$ 의 대칭에 의해 $R(k)=L(k)$ 이다.",
+   "text": "오른쪽: $9-k \\le f(6)\\le f(7)\\le f(8)$ , $f(x)\\ge x$ 인 경우의 수를 $R(k)$ 라 하면 $x \\mapsto 9-x$ , $f \\mapsto 9-f$ 의 대칭에 의해 $R(k)=L(k)$ 이다.",
    "uses": [],
    "title": ""
   },

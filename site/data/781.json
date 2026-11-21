@@ -96,7 +96,7 @@
  "steps": [
   {
    "n": 1,
-   "text": "$\\left\\{f(x)+e^{f(x)}\\right\\}'=f'(x)\\left\\{1+e^{f(x)}\\right\\}=1$ 이고 $f(0)=0$ 이므로 $f(x)+e^{f(x)}=x+1$ 이다. 즉 $v a r \\phi(u)=u+e^{u}-1$ 이라 하면 $v a r \\phi$ 는 증가하고 $f$ 는 $v a r \\phi$ 의 역함수이다. $v a r \\phi(1)=e$ 이므로 $f(e)=1$ 이다.",
+   "text": "$\\left\\{f(x)+e^{f(x)}\\right\\}'=f'(x)\\left\\{1+e^{f(x)}\\right\\}=1$ 이고 $f(0)=0$ 이므로 $f(x)+e^{f(x)}=x+1$ 이다. 즉 $\\varphi(u)=u+e^{u}-1$ 이라 하면 $\\varphi$ 는 증가하고 $f$ 는 $\\varphi$ 의 역함수이다. $\\varphi(1)=e$ 이므로 $f(e)=1$ 이다.",
    "uses": [],
    "title": ""
   },

@@ -33,6 +33,8 @@ WORDS = {
     'lrarrow': r'\leftrightarrow', 'uparrow': r'\uparrow', 'downarrow': r'\downarrow',
     'circ': r'\circ', 'ast': r'\ast', 'star': r'\star', 'oplus': r'\oplus', 'otimes': r'\otimes',
     'binom': r'\binom', 'choose': r'\binom',
+    'varepsilon': r'\varepsilon', 'varphi': r'\varphi', 'eta': r'\eta', 'psi': r'\psi', 'kappa': r'\kappa',
+    'zeta': r'\zeta', 'chi': r'\chi', 'omicron': r'o', 'mapsto': r'\mapsto',
 }
 # 글자가 붙어 있는 토큰(rmA, piover2, rootn …)을 쪼갤 때 쓰는 키워드 (긴 것부터)
 KEYS = sorted(set(list(WORDS) + ['over', 'root', 'of', 'rm', 'it', 'cases', 'left', 'right']), key=len, reverse=True)
@@ -297,6 +299,7 @@ def hwp2tex(s):
     out = out.replace(' _', '_').replace(' ^', '^').replace('_ ', '_').replace('^ ', '^')
     out = re.sub(r'\\left\\lbrace\s*', r'\\left\\{', out).replace(r'\right\rbrace', r'\right\}')
     out = re.sub(r'[_^]\{\}', '', out).replace('{}', '')  # 한글 수식의 빈 그룹
+    out = re.sub(r'([A-Za-z])_\{([a-z]) ?\1\}_\{', r'\1_{\2}\1_{', out)  # a_{na}_{n+1} 오타 → a_{n}a_{n+1}
     if top_break:
         out = r'\begin{aligned}' + out + r'\end{aligned}'
     return out

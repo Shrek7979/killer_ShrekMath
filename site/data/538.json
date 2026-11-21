@@ -100,7 +100,7 @@
   },
   {
    "n": 3,
-   "text": "이다. 접선 $l$ 은 반지름 ${\\mathrm{OQ}}$ 에 수직이므로, $\\angle{\\mathrm{HOQ}}=v a r \\phi$ 라 하면 $\\overline{{\\mathrm{HK}}}=5-d \\cos v a r \\phi$ 이고 그 범위는 $5-d \\le \\overline{{\\mathrm{HK}}}\\le 5+d$ 이다. 따라서",
+   "text": "이다. 접선 $l$ 은 반지름 ${\\mathrm{OQ}}$ 에 수직이므로, $\\angle{\\mathrm{HOQ}}=\\varphi$ 라 하면 $\\overline{{\\mathrm{HK}}}=5-d \\cos \\varphi$ 이고 그 범위는 $5-d \\le \\overline{{\\mathrm{HK}}}\\le 5+d$ 이다. 따라서",
    "uses": [],
    "title": ""
   },
@@ -118,7 +118,7 @@
   },
   {
    "n": 6,
-   "text": "$f({\\mathrm{Q}})=\\sqrt{41}$ 이면 $\\overline{{\\mathrm{HK}}}^{2}=25$ , $5-2 \\cos v a r \\phi=5$ , $\\cos v a r \\phi=0$ 이므로 ${\\mathrm{Q}}_{1}$ , ${\\mathrm{Q}}_{2}$ 는 점 ${\\mathrm{O}}$ 를 지나고 직선 ${\\mathrm{OH}}$ 에 수직인 지름의 양 끝점이다. $\\overline{{\\mathrm{Q}}_{1}{\\mathrm{Q}}_{2}}=10$ 이고, 직선 ${\\mathrm{Q}}_{1}{\\mathrm{Q}}_{2}$ 와 점 ${\\mathrm{H}}$ 사이의 거리가 $2$ 이므로 삼수선 정리에 의하여 점 ${\\mathrm{P}}$ 와 직선 ${\\mathrm{Q}}_{1}{\\mathrm{Q}}_{2}$ 사이의 거리는 $\\sqrt{16+4}=2 \\sqrt{5}$ 이다.",
+   "text": "$f({\\mathrm{Q}})=\\sqrt{41}$ 이면 $\\overline{{\\mathrm{HK}}}^{2}=25$ , $5-2 \\cos \\varphi=5$ , $\\cos \\varphi=0$ 이므로 ${\\mathrm{Q}}_{1}$ , ${\\mathrm{Q}}_{2}$ 는 점 ${\\mathrm{O}}$ 를 지나고 직선 ${\\mathrm{OH}}$ 에 수직인 지름의 양 끝점이다. $\\overline{{\\mathrm{Q}}_{1}{\\mathrm{Q}}_{2}}=10$ 이고, 직선 ${\\mathrm{Q}}_{1}{\\mathrm{Q}}_{2}$ 와 점 ${\\mathrm{H}}$ 사이의 거리가 $2$ 이므로 삼수선 정리에 의하여 점 ${\\mathrm{P}}$ 와 직선 ${\\mathrm{Q}}_{1}{\\mathrm{Q}}_{2}$ 사이의 거리는 $\\sqrt{16+4}=2 \\sqrt{5}$ 이다.",
    "uses": [],
    "title": ""
   },

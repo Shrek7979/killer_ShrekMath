@@ -92,7 +92,7 @@
  "steps": [
   {
    "n": 1,
-   "text": "$x>0$ 에서 $\\tan x \\le 0$ 인 곳에는 교점이 없고, 각 구간 $\\left((n-1)\\pi,\\,(n-1)\\pi+\\frac{\\pi}{2}\\right)$ 에서 $\\tan x$ 는 $0$ 에서 한없이 커지고 $\\frac{12}{x}$ 는 양수이며 감소하므로 교점이 하나씩 있다. 따라서 $a_{n}=(n-1)\\pi+v a r \\varepsilon_{n}$ $\\left(0<v a r \\varepsilon_{n}<\\frac{\\pi}{2}\\right)$ 이고 $\\tan v a r \\varepsilon_{n}=\\frac{12}{a_{n}}$ 이다.",
+   "text": "$x>0$ 에서 $\\tan x \\le 0$ 인 곳에는 교점이 없고, 각 구간 $\\left((n-1)\\pi,\\,(n-1)\\pi+\\frac{\\pi}{2}\\right)$ 에서 $\\tan x$ 는 $0$ 에서 한없이 커지고 $\\frac{12}{x}$ 는 양수이며 감소하므로 교점이 하나씩 있다. 따라서 $a_{n}=(n-1)\\pi+\\varepsilon_{n}$ $\\left(0<\\varepsilon_{n}<\\frac{\\pi}{2}\\right)$ 이고 $\\tan \\varepsilon_{n}=\\frac{12}{a_{n}}$ 이다.",
    "uses": [
     "C1"
    ],
@@ -100,7 +100,7 @@
   },
   {
    "n": 2,
-   "text": "$\\lim_{n \\to \\infty}\\frac{a_{n}}{n}=\\pi$ 이고 $v a r \\varepsilon_{n}\\to 0$ 이므로 $n v a r \\varepsilon_{n}=\\frac{12 n}{a_{n}}\\times \\frac{v a r \\varepsilon_{n}}{\\tan v a r \\varepsilon_{n}}\\to \\frac{12}{\\pi}$ , 즉 첫째 항은 $12$ 이다.",
+   "text": "$\\lim_{n \\to \\infty}\\frac{a_{n}}{n}=\\pi$ 이고 $\\varepsilon_{n}\\to 0$ 이므로 $n \\varepsilon_{n}=\\frac{12 n}{a_{n}}\\times \\frac{\\varepsilon_{n}}{\\tan \\varepsilon_{n}}\\to \\frac{12}{\\pi}$ , 즉 첫째 항은 $12$ 이다.",
    "uses": [
     "C2"
    ],
@@ -108,7 +108,7 @@
   },
   {
    "n": 3,
-   "text": "탄젠트의 주기가 $\\pi$ 이므로 $\\tan(a_{n}-a_{n+1})=\\tan(v a r \\varepsilon_{n}-v a r \\varepsilon_{n+1})=\\frac{\\frac{12}{a_{n}}-\\frac{12}{a_{n+1}}}{1+\\frac{144}{a_{n a}_{n+1}}}=\\frac{12(a_{n+1}-a_{n})}{a_{n a}_{n+1}+144}$",
+   "text": "탄젠트의 주기가 $\\pi$ 이므로 $\\tan(a_{n}-a_{n+1})=\\tan(\\varepsilon_{n}-\\varepsilon_{n+1})=\\frac{\\frac{12}{a_{n}}-\\frac{12}{a_{n+1}}}{1+\\frac{144}{a_{n}a_{n+1}}}=\\frac{12(a_{n+1}-a_{n})}{a_{n}a_{n+1}+144}$",
    "uses": [
     "C2"
    ],

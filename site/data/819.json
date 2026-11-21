@@ -130,25 +130,25 @@
   },
   {
    "n": 12,
-   "text": "선분 ${\\mathrm{AB}}$ 의 중점 ${\\mathrm{K}}(15,\\,8)$ 에 대하여 $\\vec{{\\mathrm{NA}}}\\cdot \\vec{{\\mathrm{NB}}}=\\overline{{\\mathrm{NK}}}^{2}-1$ 이고, $\\overline{{\\mathrm{OK}}}=17$ , $\\vec{{\\mathrm{OK}}}$ 의 방향각을 $k a p p a$ $\\left(\\cos k a p p a=\\frac{15}{17},\\,\\sin k a p p a=\\frac{8}{17}\\right)$ 라 하면",
+   "text": "선분 ${\\mathrm{AB}}$ 의 중점 ${\\mathrm{K}}(15,\\,8)$ 에 대하여 $\\vec{{\\mathrm{NA}}}\\cdot \\vec{{\\mathrm{NB}}}=\\overline{{\\mathrm{NK}}}^{2}-1$ 이고, $\\overline{{\\mathrm{OK}}}=17$ , $\\vec{{\\mathrm{OK}}}$ 의 방향각을 $\\kappa$ $\\left(\\cos \\kappa=\\frac{15}{17},\\,\\sin \\kappa=\\frac{8}{17}\\right)$ 라 하면",
    "uses": [],
    "title": ""
   },
   {
    "n": 13,
-   "text": "$$\\overline{{\\mathrm{NK}}}^{2}=16+289-136 \\cos(\\theta-k a p p a)$$",
+   "text": "$$\\overline{{\\mathrm{NK}}}^{2}=16+289-136 \\cos(\\theta-\\kappa)$$",
    "uses": [],
    "title": ""
   },
   {
    "n": 14,
-   "text": "이다. $\\tan k a p p a=\\frac{8}{15}>\\frac{9}{40}=\\tan \\theta_{1}$ 이므로 $-k a p p a<\\theta-k a p p a \\le \\theta_{1}-k a p p a<0$ 이고, 이 범위에서 $\\cos(\\theta-k a p p a)$ 는 $\\theta$ 에 따라 증가한다. 따라서",
+   "text": "이다. $\\tan \\kappa=\\frac{8}{15}>\\frac{9}{40}=\\tan \\theta_{1}$ 이므로 $-\\kappa<\\theta-\\kappa \\le \\theta_{1}-\\kappa<0$ 이고, 이 범위에서 $\\cos(\\theta-\\kappa)$ 는 $\\theta$ 에 따라 증가한다. 따라서",
    "uses": [],
    "title": ""
   },
   {
    "n": 15,
-   "text": "$$\\frac{15}{17}<\\cos(\\theta-k a p p a)\\le \\cos(\\theta_{1}-k a p p a)=\\frac{40}{41}\\times \\frac{15}{17}+\\frac{9}{41}\\times \\frac{8}{17}=\\frac{672}{697}$$",
+   "text": "$$\\frac{15}{17}<\\cos(\\theta-\\kappa)\\le \\cos(\\theta_{1}-\\kappa)=\\frac{40}{41}\\times \\frac{15}{17}+\\frac{9}{41}\\times \\frac{8}{17}=\\frac{672}{697}$$",
    "uses": [],
    "title": ""
   },

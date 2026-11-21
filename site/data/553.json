@@ -82,7 +82,7 @@
   },
   {
    "n": 4,
-   "text": "$$\\vec{{\\mathrm{KQ}}}=4 \\cos v a r \\phi \\vec{e}_{1}+4 \\sin v a r \\phi \\vec{e}_{2}$$",
+   "text": "$$\\vec{{\\mathrm{KQ}}}=4 \\cos \\varphi \\vec{e}_{1}+4 \\sin \\varphi \\vec{e}_{2}$$",
    "uses": [],
    "title": ""
   },
@@ -100,7 +100,7 @@
   },
   {
    "n": 7,
-   "text": "$$({거 리})^{2}=|\\vec{{\\mathrm{MK}}}+4 \\sin v a r \\phi \\vec{e}_{2}|^{2}=49+16 \\sin^{2}v a r \\phi \\le 65$$",
+   "text": "$$({거 리})^{2}=|\\vec{{\\mathrm{MK}}}+4 \\sin \\varphi \\vec{e}_{2}|^{2}=49+16 \\sin^{2}\\varphi \\le 65$$",
    "uses": [],
    "title": ""
   },

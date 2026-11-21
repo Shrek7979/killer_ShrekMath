@@ -145,31 +145,31 @@
   },
   {
    "n": 3,
-   "text": "$f'(x)$ 는 양수이고 연속이며 증가하므로 $y=f(x)$ 는 아래로 볼록하다. 점 $(1,\\,0)$ 은 $f(1)=e-1>0$ 이므로 곡선 아래쪽에 있다. $v a r \\phi(x)=f(x)-m(x-1)$ 이라 하자.",
+   "text": "$f'(x)$ 는 양수이고 연속이며 증가하므로 $y=f(x)$ 는 아래로 볼록하다. 점 $(1,\\,0)$ 은 $f(1)=e-1>0$ 이므로 곡선 아래쪽에 있다. $\\varphi(x)=f(x)-m(x-1)$ 이라 하자.",
    "uses": [],
    "title": ""
   },
   {
    "n": 4,
-   "text": "① $m \\le 0$ : $v a r \\phi'(x)=f'(x)-m>0$ 이므로 $v a r \\phi$ 는 증가하고 $x \\to-\\infty$ 일 때 $v a r \\phi \\to-\\infty$ , $x \\to \\infty$ 일 때 $v a r \\phi \\to \\infty$ 이므로 $g(m)=1$ 이다. ( $m=0$ 이면 $f(x)=0$ 의 해는 $x=0$ 뿐이다.)",
+   "text": "① $m \\le 0$ : $\\varphi'(x)=f'(x)-m>0$ 이므로 $\\varphi$ 는 증가하고 $x \\to-\\infty$ 일 때 $\\varphi \\to-\\infty$ , $x \\to \\infty$ 일 때 $\\varphi \\to \\infty$ 이므로 $g(m)=1$ 이다. ( $m=0$ 이면 $f(x)=0$ 의 해는 $x=0$ 뿐이다.)",
    "uses": [],
    "title": ""
   },
   {
    "n": 5,
-   "text": "② $m>0$ : $x \\to \\pm \\infty$ 일 때 $v a r \\phi(x)\\to \\infty$ 이고 $v a r \\phi$ 는 아래로 볼록하므로 $v a r \\phi'(x_{0})=0$ 인 $x_{0}$ 가 유일하게 존재하며, $g(m)$ 은 최솟값 $v a r \\phi(x_{0})$ 의 부호에 따라 $2$ , $1$ , $0$ 이다.",
+   "text": "② $m>0$ : $x \\to \\pm \\infty$ 일 때 $\\varphi(x)\\to \\infty$ 이고 $\\varphi$ 는 아래로 볼록하므로 $\\varphi'(x_{0})=0$ 인 $x_{0}$ 가 유일하게 존재하며, $g(m)$ 은 최솟값 $\\varphi(x_{0})$ 의 부호에 따라 $2$ , $1$ , $0$ 이다.",
    "uses": [],
    "title": ""
   },
   {
    "n": 6,
-   "text": "$0<m \\le 1$ 이면 $f'(x_{0})=\\frac{1}{1-x_{0}}=m$ 에서 $x_{0}=1-\\frac{1}{m}\\le 0$ 이고 $v a r \\phi(x_{0})=\\ln m-m \\left(-\\frac{1}{m}\\right)=\\ln m+1$ 이다. 따라서 $0<m<\\frac{1}{e}$ 이면 $g(m)=2$ , $m=\\frac{1}{e}$ 이면 $g(m)=1$ , $\\frac{1}{e}<m \\le 1$ 이면 $g(m)=0$ 이다.",
+   "text": "$0<m \\le 1$ 이면 $f'(x_{0})=\\frac{1}{1-x_{0}}=m$ 에서 $x_{0}=1-\\frac{1}{m}\\le 0$ 이고 $\\varphi(x_{0})=\\ln m-m \\left(-\\frac{1}{m}\\right)=\\ln m+1$ 이다. 따라서 $0<m<\\frac{1}{e}$ 이면 $g(m)=2$ , $m=\\frac{1}{e}$ 이면 $g(m)=1$ , $\\frac{1}{e}<m \\le 1$ 이면 $g(m)=0$ 이다.",
    "uses": [],
    "title": ""
   },
   {
    "n": 7,
-   "text": "$m>1$ 이면 $e^{x_{0}}=m$ 에서 $x_{0}=\\ln m>0$ 이고 $v a r \\phi(x_{0})=(m-1)-m(\\ln m-1)=2 m-1-m \\ln m$ 이다. $p s i(m)=2 m-1-m \\ln m$ 이라 하면 $p s i'(m)=1-\\ln m$ 이므로 $p s i$ 는 $(1,\\,e)$ 에서 증가, $(e,\\,\\infty)$ 에서 감소하고 $p s i(1)=1>0$ , $p s i(e)=e-1>0$ , $\\lim_{m \\to \\infty}p s i(m)=-\\infty$ 이다. 따라서 $p s i(c)=0$ 인 $c>e$ 가 유일하게 존재하여 $1<m<c$ 이면 $g(m)=0$ , $m=c$ 이면 $g(m)=1$ , $m>c$ 이면 $g(m)=2$ 이다.",
+   "text": "$m>1$ 이면 $e^{x_{0}}=m$ 에서 $x_{0}=\\ln m>0$ 이고 $\\varphi(x_{0})=(m-1)-m(\\ln m-1)=2 m-1-m \\ln m$ 이다. $\\psi(m)=2 m-1-m \\ln m$ 이라 하면 $\\psi'(m)=1-\\ln m$ 이므로 $\\psi$ 는 $(1,\\,e)$ 에서 증가, $(e,\\,\\infty)$ 에서 감소하고 $\\psi(1)=1>0$ , $\\psi(e)=e-1>0$ , $\\lim_{m \\to \\infty}\\psi(m)=-\\infty$ 이다. 따라서 $\\psi(c)=0$ 인 $c>e$ 가 유일하게 존재하여 $1<m<c$ 이면 $g(m)=0$ , $m=c$ 이면 $g(m)=1$ , $m>c$ 이면 $g(m)=2$ 이다.",
    "uses": [],
    "title": ""
   },
@@ -181,7 +181,7 @@
   },
   {
    "n": 9,
-   "text": "따라서 $g(m)$ 이 불연속인 점은 $a=0$ , $b=\\frac{1}{e}$ , $c$ 의 세 개이고, $p s i(c)=0$ 에서 $2 c-1=c \\ln c$ , 즉 $\\frac{1}{c}+\\ln c=2$ 이다.",
+   "text": "따라서 $g(m)$ 이 불연속인 점은 $a=0$ , $b=\\frac{1}{e}$ , $c$ 의 세 개이고, $\\psi(c)=0$ 에서 $2 c-1=c \\ln c$ , 즉 $\\frac{1}{c}+\\ln c=2$ 이다.",
    "uses": [],
    "title": ""
   },

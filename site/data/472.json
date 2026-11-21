@@ -102,13 +102,13 @@
   },
   {
    "n": 2,
-   "text": "$v a r \\phi(x)=f(x)-f'(t)(x-t)-f(t)$ 라 하면 $v a r \\phi(t)=0$ , $v a r \\phi'(x)=f'(x)-f'(t)$ 이다.",
+   "text": "$\\varphi(x)=f(x)-f'(t)(x-t)-f(t)$ 라 하면 $\\varphi(t)=0$ , $\\varphi'(x)=f'(x)-f'(t)$ 이다.",
    "uses": [],
    "title": ""
   },
   {
    "n": 3,
-   "text": "(i) $0<t<e$ : $f'(x)=f'(t)$ 인 $x$ 는 $t$ 뿐이므로 $v a r \\phi(x)$ 는 $x=t$ 에서 최댓값 $0$ 을 갖고 $g(t)=1$ 이다.",
+   "text": "(i) $0<t<e$ : $f'(x)=f'(t)$ 인 $x$ 는 $t$ 뿐이므로 $\\varphi(x)$ 는 $x=t$ 에서 최댓값 $0$ 을 갖고 $g(t)=1$ 이다.",
    "uses": [],
    "title": ""
   },
@@ -120,19 +120,19 @@
   },
   {
    "n": 5,
-   "text": "(iii) $e<t<e^{\\frac{3}{2}}$ : $f'(x)=f'(t)$ 인 $x$ 는 $t$ 와 $t'$ $(t'>e^{\\frac{3}{2}})$ 이고 $v a r \\phi(x)$ 는 $t$ 에서 극대, $t'$ 에서 극소이다. $v a r \\phi(t')<0$ 이고 접선의 기울기가 음수이므로 $x \\to \\infty$ 일 때 $v a r \\phi(x)\\to \\infty$ 이다. 따라서 $g(t)=2$ 이다.",
+   "text": "(iii) $e<t<e^{\\frac{3}{2}}$ : $f'(x)=f'(t)$ 인 $x$ 는 $t$ 와 $t'$ $(t'>e^{\\frac{3}{2}})$ 이고 $\\varphi(x)$ 는 $t$ 에서 극대, $t'$ 에서 극소이다. $\\varphi(t')<0$ 이고 접선의 기울기가 음수이므로 $x \\to \\infty$ 일 때 $\\varphi(x)\\to \\infty$ 이다. 따라서 $g(t)=2$ 이다.",
    "uses": [],
    "title": ""
   },
   {
    "n": 6,
-   "text": "(iv) $t=e^{\\frac{3}{2}}$ : $v a r \\phi'(x)\\ge 0$ 이므로 $v a r \\phi(x)$ 는 증가하고 $g(t)=1$ 이다.",
+   "text": "(iv) $t=e^{\\frac{3}{2}}$ : $\\varphi'(x)\\ge 0$ 이므로 $\\varphi(x)$ 는 증가하고 $g(t)=1$ 이다.",
    "uses": [],
    "title": ""
   },
   {
    "n": 7,
-   "text": "(v) $t>e^{\\frac{3}{2}}$ : $f'(x)=f'(t)$ 인 $x$ 는 $t''$ $(e<t''<e^{\\frac{3}{2}})$ 와 $t$ 이고 $v a r \\phi(x)$ 는 $t''$ 에서 극대, $t$ 에서 극소이다. $v a r \\phi(t'')>0$ 이고 $x \\to 0+$ 일 때 $v a r \\phi(x)\\to-\\infty$ 이므로 $g(t)=2$ 이다.",
+   "text": "(v) $t>e^{\\frac{3}{2}}$ : $f'(x)=f'(t)$ 인 $x$ 는 $t''$ $(e<t''<e^{\\frac{3}{2}})$ 와 $t$ 이고 $\\varphi(x)$ 는 $t''$ 에서 극대, $t$ 에서 극소이다. $\\varphi(t'')>0$ 이고 $x \\to 0+$ 일 때 $\\varphi(x)\\to-\\infty$ 이므로 $g(t)=2$ 이다.",
    "uses": [],
    "title": ""
   },

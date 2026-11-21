@@ -82,7 +82,7 @@
   },
   {
    "n": 6,
-   "text": "$v a r \\phi(d)=\\frac{(d-2)e^{d}}{d+2}$ 라 하면 $v a r \\phi'(d)=\\frac{d^{2}e^{d}}{(d+2)^{2}}>0$ 이므로 $v a r \\phi(d)$ 는 증가하고, $v a r \\phi(4)=\\frac{2 e^{4}}{6}=\\frac{e^{4}}{3}$ 이므로 $d=4$ 이다.",
+   "text": "$\\varphi(d)=\\frac{(d-2)e^{d}}{d+2}$ 라 하면 $\\varphi'(d)=\\frac{d^{2}e^{d}}{(d+2)^{2}}>0$ 이므로 $\\varphi(d)$ 는 증가하고, $\\varphi(4)=\\frac{2 e^{4}}{6}=\\frac{e^{4}}{3}$ 이므로 $d=4$ 이다.",
    "uses": [],
    "title": ""
   },

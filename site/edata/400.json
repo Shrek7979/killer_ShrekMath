@@ -66,9 +66,9 @@
     "$t>1$ 일 때 $\\ln t>\\frac{2(t-1)}{t+1}$ 임을 보이고, 이를 이용하여 문제 1-2에서 구한 범위의 모든 $m$ 에 대하여 $\\beta \\gamma>e^{4}$ 임을 보이시오."
    ],
    "answer": [
-    "$v a r \\phi(t)=\\ln t-\\frac{2(t-1)}{t+1}$ $(t \\ge 1)$ 이라 하면",
-    "$v a r \\phi'(t)=\\frac{1}{t}-\\frac{4}{(t+1)^{2}}=\\frac{(t-1)^{2}}{t(t+1)^{2}}$",
-    "이므로 $t>1$ 에서 $v a r \\phi'(t)>0$ 이고 $v a r \\phi(1)=0$ 이다. 따라서 $t>1$ 일 때 $v a r \\phi(t)>0$ , 즉 $\\ln t>\\frac{2(t-1)}{t+1}$ 이다.",
+    "$\\varphi(t)=\\ln t-\\frac{2(t-1)}{t+1}$ $(t \\ge 1)$ 이라 하면",
+    "$\\varphi'(t)=\\frac{1}{t}-\\frac{4}{(t+1)^{2}}=\\frac{(t-1)^{2}}{t(t+1)^{2}}$",
+    "이므로 $t>1$ 에서 $\\varphi'(t)>0$ 이고 $\\varphi(1)=0$ 이다. 따라서 $t>1$ 일 때 $\\varphi(t)>0$ , 즉 $\\ln t>\\frac{2(t-1)}{t+1}$ 이다.",
     "$\\beta>1$ , $\\gamma>1$ 이므로 $\\ln \\beta>0$ , $\\ln \\gamma>0$ 이고, $(\\ln \\beta)^{2}=m \\beta$ , $(\\ln \\gamma)^{2}=m \\gamma$ 에서 $\\ln \\beta=\\sqrt{m \\beta}$ , $\\ln \\gamma=\\sqrt{m \\gamma}$ 이다. $p=\\sqrt{\\beta}$ , $q=\\sqrt{\\gamma}$ , $k=\\frac{\\sqrt{m}}{2}$ 이라 하면 $1<p<q$ 이고",
     "$\\ln p=k p,\\,\\ln q=k q$",
     "이다. 두 식을 변끼리 빼면 $\\ln q-\\ln p=k(q-p)$ 이므로 $k=\\frac{\\ln q-\\ln p}{q-p}$ 이고, 두 식을 변끼리 더하면",
