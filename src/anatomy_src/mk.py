@@ -10,7 +10,7 @@ def I(qid,wrong,intro,C,K,S,T,V,line):
     st=[]
     if all(len(s)==2 for s in S):
         assert len(S)==len(d['steps']),(qid,len(S),len(d['steps']))
-        for s,(t,u) in zip(d['steps'],S): st.append({'title':t,'text':re.sub(r'문항 ?\d+[과와] 같(은 방법으로|이) ?','',s['text']),'uses':u})
+        for s,(t,u) in zip(d['steps'],S): st.append({'title':t,'text':re.sub(r'(문항 ?\d+|\d+ ?번)[과와] 같(은 방법으로|은 이유로|이) ?','',s['text']),'uses':u})
     else:
         for s in S:
             if len(s)==2: raise SystemExit('mixed')

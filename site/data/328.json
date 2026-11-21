@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2024학년도 9월 모의평가 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **18** — $\\lim\\frac{S}{\\theta^3}$에서 $\\tan2\\theta\\approx\\theta$로 써서 $4$를 얻은 경우",
  "answer": 22,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -39,9 +39,11 @@
     0
    ],
    "text": "길이가 $4$ 인 선분 ${\\mathrm{AB}}$ 를 지름으로 하는 원 위의 점 ${\\mathrm{P}}$ 를 $\\angle{\\mathrm{PAB}}=\\theta$ 가 되도록 잡는다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "원과 각",
+   "why": "지름 $4$(반지름 $2$), $\\angle\\mathrm{PAB}=\\theta$ → 중심각 $2\\theta$.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C2",
@@ -50,9 +52,13 @@
     1
    ],
    "text": "점 ${\\mathrm{P}}$ 에서 이 원에 접하는 직선이 직선 ${\\mathrm{AB}}$ 와 만나는 점을 ${\\mathrm{T}}$ 라 하고, 삼각형 ${\\mathrm{PBT}}$ 의 넓이를 $S(\\theta)$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "접선과 넓이",
+   "why": "P에서의 접선 $\\perp$ OP. 삼각형 PBT의 밑변 BT, 높이는 P의 높이 $2\\sin2\\theta$.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
   },
   {
    "id": "C3",
@@ -61,9 +67,13 @@
     0
    ],
    "text": "$S' \\left(\\frac{\\pi}{6}\\right)+\\lim_{\\theta \\to 0+}\\frac{S(\\theta)}{\\theta^{3}}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$S'\\left(\\frac\\pi6\\right)$과 $\\lim\\frac{S}{\\theta^3}$의 합.",
+   "uses": [
+    4,
+    5,
+    6
+   ]
   },
   {
    "id": "C4",
@@ -83,56 +93,110 @@
     1
    ],
    "text": "(단, $0<\\theta<\\frac{\\pi}{4}$ ) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "범위",
+   "why": "$0<2\\theta<\\frac\\pi2$ → T는 B 바깥.",
+   "uses": [
+    1
+   ]
   }
  ],
  "intro": [
-  "수선 대신 접선을 이용해 넓이 함수를 만들고, 미분계수와 삼각함수의 극한을 함께 묻도록 구성"
+  "중심 O를 잡으면 $\\angle\\mathrm{POB}=2\\theta$(원주각의 두 배). 접선은 반지름에 수직이라 $\\overline{\\mathrm{OT}}=\\frac2{\\cos2\\theta}$.",
+  "넓이 $S=2\\tan2\\theta-2\\sin2\\theta$ 하나로 미분계수와 극한을 동시에 처리합니다."
  ],
  "topic": "여러 가지 미분법",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "원주각과 중심각",
+   "p": [
+    "같은 호에 대한 중심각은 원주각의 $2$배."
+   ]
+  },
+  {
+   "h": "삼각함수의 극한",
+   "p": [
+    "$\\tan2\\theta\\sim2\\theta$, $1-\\cos2\\theta=2\\sin^2\\theta\\sim2\\theta^2$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "원의 중심을 ${\\mathrm{O}}$ 라 하면 $\\angle{\\mathrm{POB}}=2 \\theta$ , $\\overline{{\\mathrm{OP}}}=2$ 이고 선분 ${\\mathrm{OP}}$ 와 직선 ${\\mathrm{PT}}$ 가 수직이므로 $\\overline{{\\mathrm{OT}}}=\\frac{2}{\\cos 2 \\theta}$ 이다. ( $0<2 \\theta<\\frac{\\pi}{2}$ 이므로 ${\\mathrm{T}}$ 는 ${\\mathrm{B}}$ 바깥쪽에 있다.)",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2",
+    "C5"
+   ],
+   "title": "중심각과 OT"
   },
   {
    "n": 2,
    "text": "삼각형 ${\\mathrm{PBT}}$ 에서 밑변 $\\overline{{\\mathrm{BT}}}=\\frac{2}{\\cos 2 \\theta}-2$ , 높이는 $2 \\sin 2 \\theta$ 이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "밑변·높이"
   },
   {
    "n": 3,
    "text": "$$S(\\theta)=2 \\tan 2 \\theta-2 \\sin 2 \\theta$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "넓이 함수"
   },
   {
    "n": 4,
    "text": "$S'(\\theta)=4 \\sec^{2}2 \\theta-4 \\cos 2 \\theta$ 이므로 $S' \\left(\\frac{\\pi}{6}\\right)=16-2=14$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "미분계수"
   },
   {
    "n": 5,
    "text": "$S(\\theta)=2 \\tan 2 \\theta(1-\\cos 2 \\theta)=4 \\tan 2 \\theta \\sin^{2}\\theta$ 이므로 $\\lim_{\\theta \\to 0+}\\frac{S(\\theta)}{\\theta^{3}}=4 \\times 2 \\times 1=8$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "극한"
   },
   {
    "n": 6,
    "text": "따라서 구하는 값은 $22$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\tan2\\theta$의 계수",
+   "cond": "C3",
+   "text": [
+    "$\\tan2\\theta\\sim2\\theta$입니다. $\\theta$로 쓰면 극한이 절반."
+   ]
+  },
+  {
+   "h": "$\\sec^2$ 미분의 $2$",
+   "cond": "C3",
+   "text": [
+    "$(\\tan2\\theta)'=2\\sec^22\\theta$. 계수 $2$를 빠뜨리지 않기."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 지름 8",
+   "body": [
+    "길이가 $8$인 선분 AB를 지름으로 하는 원 위의 점 P를 $\\angle\\mathrm{PAB}=\\theta$가 되도록 잡는다. 점 P에서 이 원에 접하는 직선이 직선 AB와 만나는 점을 T라 하고, 삼각형 PBT의 넓이를 $S(\\theta)$라 하자. $S'\\left(\\frac\\pi6\\right)+\\lim_{\\theta\\to0+}\\frac{S(\\theta)}{\\theta^3}$의 값을 구하시오. (단, $0<\\theta<\\frac\\pi4$)"
+   ],
+   "answer": 88,
+   "hint": "$S=8(\\tan2\\theta-\\sin2\\theta)$. $S'\\left(\\frac\\pi6\\right)=16\\times\\frac72=56$, 극한 $32$ → $88$."
+  }
+ ],
+ "line": "중심각 $2\\theta$ + 접선 $\\perp$ 반지름 → 넓이 함수 하나로 미분과 극한.",
  "note": ""
 }

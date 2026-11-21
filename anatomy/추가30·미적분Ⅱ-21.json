@@ -1,0 +1,96 @@
+{
+ "wrong": "예상 오답 **12** — 덧셈정리 분자 $\\frac6{a_n^2}-\\frac6{a_{n+1}^2}$에서 $(a_{n+1}+a_n)$ 인수를 놓쳐 둘째 항을 $6$으로 계산한 경우",
+ "intro": [
+  "교점은 주기마다 하나, $a_n=(n-1)\\pi+\\varepsilon_n$이고 $\\tan\\varepsilon_n=\\frac6{a_n^2}$ — 이번엔 오차가 $\\frac1{n^2}$ 속도로 줄어듭니다.",
+  "그래서 첫째 극한은 $n^2$을, 둘째 극한은 $a_n^3$을 곱해야 유한한 값이 나옵니다. 차수 맞추기가 핵심."
+ ],
+ "conds": {
+  "C1": {
+   "label": "교점 수열",
+   "why": "$\\tan x=\\frac6{x^2}$, 각 구간 $\\left((n-1)\\pi,(n-1)\\pi+\\frac\\pi2\\right)$에 하나.",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "두 극한",
+   "why": "$\\pi^2\\lim n^2\\varepsilon_n$과 $\\frac1\\pi\\lim a_n^3\\tan(\\varepsilon_n-\\varepsilon_{n+1})$.",
+   "uses": [
+    2,
+    3,
+    4
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "$\\frac{\\tan x}x\\to1$",
+   "p": [
+    "$\\varepsilon_n\\sim\\frac6{a_n^2}$, $\\frac{a_n}n\\to\\pi$."
+   ]
+  },
+  {
+   "h": "제곱의 차",
+   "p": [
+    "$\\frac1{a^2}-\\frac1{b^2}=\\frac{(b-a)(b+a)}{a^2b^2}$ — $a+b\\approx2a_n$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "교점 위치",
+   "text": "$a_{n}=(n-1)\\pi+v a r \\varepsilon_{n}$ $\\left(0<v a r \\varepsilon_{n}<\\frac{\\pi}{2}\\right)$ , $\\tan v a r \\varepsilon_{n}=\\frac{6}{a_{n}^{2}}$ 이다. (각 구간 $\\left((n-1)\\pi,\\,(n-1)\\pi+\\frac{\\pi}{2}\\right)$ 에서 $\\tan x$ 는 증가, $\\frac{6}{x^{2}}$ 은 감소하므로 교점이 하나씩 있다.)",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "첫째 극한",
+   "text": "$n^{2}v a r \\varepsilon_{n}=\\frac{6 n^{2}}{a_{n}^{2}}\\times \\frac{v a r \\varepsilon_{n}}{\\tan v a r \\varepsilon_{n}}\\to \\frac{6}{\\pi^{2}}$ 이므로 첫째 항은 $6$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "덧셈정리",
+   "text": "$$\\tan(a_{n}-a_{n+1})=\\tan(v a r \\varepsilon_{n}-v a r \\varepsilon_{n+1})=\\frac{\\frac{6}{a_{n}^{2}}-\\frac{6}{a_{n+1}^{2}}}{1+\\frac{36}{a_{n}^{2}a_{n+1}^{2}}}=\\frac{6(a_{n+1}-a_{n})(a_{n+1}+a_{n})}{a_{n}^{2}a_{n+1}^{2}+36}$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "둘째 극한과 답",
+   "text": "$a_{n+1}-a_{n}\\to \\pi$ , $\\frac{a_{n+1}}{a_{n}}\\to 1$ 이므로 $a_{n}^{3}\\tan(a_{n}-a_{n+1})\\to 6 \\pi \\times 2=12 \\pi$ , 즉 둘째 항은 $12$ 이다. 구하는 값은 $18$",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$(a_{n+1}+a_n)$",
+   "cond": "C2",
+   "text": [
+    "제곱의 차에서 나오는 $a_{n+1}+a_n\\approx2a_n$이 둘째 항을 $2$배로."
+   ]
+  },
+  {
+   "h": "곱할 차수",
+   "cond": "C2",
+   "text": [
+    "$\\varepsilon_n\\sim\\frac6{\\pi^2n^2}$ — $n$만 곱하면 $0$으로 갑니다."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $y=\\frac{10}{x^2}$",
+   "body": [
+    "$x>0$에서 두 곡선 $y=\\tan x$와 $y=\\frac{10}{x^2}$이 만나는 모든 점의 $x$좌표를 작은 수부터 크기순으로 나열할 때, $n$번째 수를 $a_n$이라 하자. $\\pi^2\\times\\lim_{n\\to\\infty}n^2\\{a_n-(n-1)\\pi\\}+\\frac1\\pi\\times\\lim_{n\\to\\infty}a_n^3\\tan(a_n-a_{n+1})$의 값을 구하시오."
+   ],
+   "answer": 30,
+   "hint": "첫째 항 $10$, 둘째 항 $10\\pi\\times2/\\pi=20$."
+  }
+ ],
+ "line": "오차의 수렴 속도 = 곡선의 차수. 곱하는 차수를 맞춰야 유한한 극한."
+}

@@ -1,0 +1,140 @@
+{
+ "wrong": "예상 오답 **5** — 끝점 $\\theta\\to\\frac\\pi6$에서 $S\\to0$이라 둘째 극한을 $0$으로 놓아 $\\frac23$만 남긴 경우",
+ "intro": [
+  "$\\angle\\mathrm{APB}=\\frac\\pi2$(지름의 원주각)로 AP, PB를 쓰고, 삼각형 QAB에 사인법칙으로 AQ를 구합니다.",
+  "$\\sin3\\theta=\\sin\\theta(3-4\\sin^2\\theta)$로 정리하면 $S=\\sin2\\theta\\cdot\\frac{1-4\\sin^2\\theta}{3-4\\sin^2\\theta}$. $\\theta=\\frac\\pi6$에서 $0$이 되는 인수 $1-2\\sin\\theta$가 둘째 극한의 열쇠."
+ ],
+ "conds": {
+  "C1": {
+   "label": "도형",
+   "why": "지름 $2$, $\\angle\\mathrm{PAB}=\\theta$, Q는 AP 위, $\\angle\\mathrm{QBA}=2\\theta$.",
+   "uses": [
+    1,
+    2
+   ]
+  },
+  "C2": {
+   "label": "넓이",
+   "why": "$S=\\triangle\\mathrm{QPB}=\\frac12\\overline{\\mathrm{QP}}\\cdot\\overline{\\mathrm{PB}}$.",
+   "uses": [
+    3
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "$\\lim_{\\theta\\to0+}\\frac S\\theta+\\lim_{\\theta\\to\\frac\\pi6-}\\frac{S}{\\frac\\pi6-\\theta}$.",
+   "uses": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "C6": {
+   "label": "범위",
+   "why": "$0<\\theta<\\frac\\pi6$ — Q가 선분 AP 위에 있는 범위.",
+   "uses": [
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "사인법칙",
+   "p": [
+    "$\\frac{\\overline{\\mathrm{AQ}}}{\\sin2\\theta}=\\frac{\\overline{\\mathrm{AB}}}{\\sin(\\pi-3\\theta)}$."
+   ]
+  },
+  {
+   "h": "삼배각 공식",
+   "p": [
+    "$\\sin3\\theta=3\\sin\\theta-4\\sin^3\\theta$."
+   ]
+  },
+  {
+   "h": "미분계수의 정의",
+   "p": [
+    "$\\lim_{\\theta\\to c}\\frac{F(\\theta)-F(c)}{\\theta-c}=F'(c)$, 여기서는 $F=1-2\\sin\\theta$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "AP, PB, AQ",
+   "text": "$\\angle{\\mathrm{APB}}=\\frac{\\pi}{2}$ 이므로 $\\overline{{\\mathrm{AP}}}=2 \\cos \\theta$ , $\\overline{{\\mathrm{PB}}}=2 \\sin \\theta$ 이다. 삼각형 ${\\mathrm{QAB}}$ 에서 $\\angle{\\mathrm{AQB}}=\\pi-3 \\theta$ 이므로 사인법칙에 의하여 $\\overline{{\\mathrm{AQ}}}=\\frac{2 \\sin 2 \\theta}{\\sin 3 \\theta}$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "QP",
+   "text": "$\\overline{{\\mathrm{QP}}}=2 \\cos \\theta-\\frac{2 \\sin 2 \\theta}{\\sin 3 \\theta}=2 \\cos \\theta \\times \\frac{\\sin 3 \\theta-2 \\sin \\theta}{\\sin 3 \\theta}$ 이고 $\\sin 3 \\theta=\\sin \\theta(3-4 \\sin^{2}\\theta)$ 이므로",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "넓이 함수",
+   "text": "$$S(\\theta)=\\frac{1}{2}\\overline{{\\mathrm{QP}}}\\times \\overline{{\\mathrm{PB}}}=\\sin 2 \\theta \\times \\frac{1-4 \\sin^{2}\\theta}{3-4 \\sin^{2}\\theta}$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$\\theta\\to0$",
+   "text": "$$\\lim_{\\theta \\to 0+}\\frac{S(\\theta)}{\\theta}=2 \\times \\frac{1}{3}=\\frac{2}{3}$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$\\theta\\to\\frac\\pi6$",
+   "text": "$1-4 \\sin^{2}\\theta=(1-2 \\sin \\theta)(1+2 \\sin \\theta)$ 이고 $\\lim_{\\theta \\to \\frac{\\pi}{6}-}\\frac{1-2 \\sin \\theta}{\\frac{\\pi}{6}-\\theta}=2 \\cos \\frac{\\pi}{6}=\\sqrt{3}$ 이므로",
+   "uses": [
+    "C3",
+    "C6"
+   ]
+  },
+  {
+   "title": "두 번째 극한값",
+   "text": "$$\\lim_{\\theta \\to \\frac{\\pi}{6}-}\\frac{S(\\theta)}{\\frac{\\pi}{6}-\\theta}=\\frac{\\sqrt{3}}{2}\\times \\sqrt{3}\\times \\frac{2}{2}=\\frac{3}{2}$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "구하는 값은 $\\frac{2}{3}+\\frac{3}{2}=\\frac{13}{6}$ 이므로 $p+q=19$",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\frac00$ 꼴",
+   "cond": "C3",
+   "text": [
+    "$\\theta\\to\\frac\\pi6$에서 분자·분모 모두 $0$. $0$으로 놓으면 안 됩니다."
+   ]
+  },
+  {
+   "h": "부호",
+   "cond": "C3",
+   "text": [
+    "$\\frac\\pi6-\\theta>0$, $1-2\\sin\\theta>0$ — 극한값은 양수."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 지름 4",
+   "body": [
+    "길이가 $4$인 선분 AB를 지름으로 하는 원 위의 점 P를 $\\angle\\mathrm{PAB}=\\theta$가 되도록 잡고, 선분 AP 위의 점 Q를 $\\angle\\mathrm{QBA}=2\\theta$가 되도록 잡는다. 삼각형 QPB의 넓이를 $S(\\theta)$라 할 때, $\\lim_{\\theta\\to0+}\\frac{S(\\theta)}\\theta+\\lim_{\\theta\\to\\frac\\pi6-}\\frac{S(\\theta)}{\\frac\\pi6-\\theta}=\\frac qp$이다. $p+q$의 값을 구하시오. (단, $0<\\theta<\\frac\\pi6$이고, $p$와 $q$는 서로소인 자연수)"
+   ],
+   "answer": 29,
+   "hint": "길이 $2$배 → 넓이 $4$배: $4\\times\\frac{13}6=\\frac{26}3$."
+  }
+ ],
+ "line": "사인법칙 + 삼배각으로 넓이 함수. $0$이 되는 끝점은 미분계수로."
+}
