@@ -1,0 +1,124 @@
+{
+ "wrong": "예상 오답 — $a_1$의 부호를 고려하지 않고 $\\sum a_n=\\lim S_n=0$으로 답한 경우",
+ "intro": [
+  "$S_n=\\frac1{n+1}+\\frac1{n+2}+\\frac1{n+3}$ (망원).",
+  "$n\\ge2$에서 $a_n<0$ → 절댓값 급수도 망원."
+ ],
+ "conds": {
+  "C1": {
+   "label": "수열",
+   "why": "부분합 $S_n$.",
+   "uses": [
+    4
+   ]
+  },
+  "C2": {
+   "label": "정의",
+   "why": "$S_n=\\sum_k\\frac3{(k+n)(k+n+3)}$.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$\\sum|a_n|=\\frac qp$.",
+   "uses": [
+    5
+   ]
+  },
+  "C5": {
+   "label": "단서",
+   "why": "서로소.",
+   "uses": [
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "세 칸 망원",
+   "p": [
+    "$\\frac1m-\\frac1{m+3}$."
+   ]
+  },
+  {
+   "h": "부호 확인",
+   "p": [
+    "$a_1>0$, $a_n<0$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "분해",
+   "text": "$\\frac{3}{(k+n)(k+n+3)}=\\frac{1}{k+n}-\\frac{1}{k+n+3}$ 이므로 제 $m$ 항까지의 부분합은",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "부분합",
+   "text": "$$\\frac{1}{n+1}+\\frac{1}{n+2}+\\frac{1}{n+3}-\\left(\\frac{1}{m+n+1}+\\frac{1}{m+n+2}+\\frac{1}{m+n+3}\\right)$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$S_n$",
+   "text": "이고, $m \\to \\infty$ 일 때 $S_{n}=\\frac{1}{n+1}+\\frac{1}{n+2}+\\frac{1}{n+3}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$a_n$",
+   "text": "$a_{1}=S_{1}=\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{4}=\\frac{13}{12}$ 이고, $n \\ge 2$ 일 때 $a_{n}=S_{n}-S_{n-1}=\\frac{1}{n+3}-\\frac{1}{n}<0$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "절댓값",
+   "text": "따라서 $n \\ge 2$ 일 때 $\\left|a_{n}\\right|=\\frac{1}{n}-\\frac{1}{n+3}$ 이고, $\\sum_{n=2}^{N}\\left(\\frac{1}{n}-\\frac{1}{n+3}\\right)=\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{4}-\\left(\\frac{1}{N+1}+\\frac{1}{N+2}+\\frac{1}{N+3}\\right)$ 이므로 이 급수의 합은 $\\frac{13}{12}$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$\\sum_{n=1}^{\\infty}\\left|a_{n}\\right|=\\frac{13}{12}+\\frac{13}{12}=\\frac{13}{6}$ 이므로 $p+q=6+13=19$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$a_1=S_1$",
+   "cond": "C1",
+   "text": [
+    "$\\frac{13}{12}$."
+   ]
+  },
+  {
+   "h": "대칭",
+   "cond": "C4",
+   "text": [
+    "$\\sum_{n\\ge2}|a_n|=a_1$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\frac2{(k+n)(k+n+2)}$",
+   "body": [
+    "수열 $\\{a_n\\}$의 부분합 $S_n$이 $S_n=\\sum_{k=1}^\\infty\\frac2{(k+n)(k+n+2)}$일 때, $\\sum_{n=1}^\\infty|a_n|=\\frac qp$이다. $p+q$의 값을 구하시오. (단, $p$와 $q$는 서로소인 자연수)"
+   ],
+   "answer": 8,
+   "hint": "$S_n=\\frac1{n+1}+\\frac1{n+2}$, $a_1=\\frac56$ → $\\frac53$."
+  }
+ ],
+ "line": "급수 부분합 → 일반항 부호 → 절댓값 망원."
+}

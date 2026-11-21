@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2026학년도 6월 모의평가 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $b_n$의 항 개수를 $n$개로 잡은 경우",
  "answer": 71,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -40,8 +40,8 @@
     0
    ],
    "text": "공비가 $0$ 이 아닌 등비수열 $\\{a_{n}\\}$ 에 대하여 수열 $\\{b_{n}\\}$ 을",
-   "label": "",
-   "why": "",
+   "label": "수열",
+   "why": "등비, 공비 $\\ne0$.",
    "uses": []
   },
   {
@@ -51,9 +51,12 @@
     0
    ],
    "text": "$b_{n}=\\sum_{k=n}^{2 n}a_{k}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "$b_n$",
+   "why": "$\\sum_{k=n}^{2n}a_k$.",
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C3",
@@ -73,9 +76,13 @@
     1
    ],
    "text": "$\\sum_{n=1}^{\\infty}a_{n}=4$ , $\\sum_{n=1}^{\\infty}b_{n}=\\frac{20}{3}$ 일 때, $\\sum_{n=1}^{\\infty}\\left(a_{n}\\right)^{3}=\\frac{q}{p}$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건",
+   "why": "$\\sum a_n=4$, $\\sum b_n=\\frac{20}3$; $\\sum a_n^3=\\frac qp$.",
+   "uses": [
+    1,
+    4,
+    5
+   ]
   },
   {
    "id": "C5",
@@ -95,56 +102,108 @@
     3
    ],
    "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "단서",
+   "why": "서로소.",
+   "uses": [
+    6
+   ]
   }
  ],
  "intro": [
-  "구간의 길이가 늘어나는 부분합을 일반항으로 하는 급수를 두 개의 등비급수로 분해하게 함"
+  "$b_n=\\frac a{1-r}(r^{n-1}-r^{2n})$ ($n+1$개 항).",
+  "$\\sum b_n$ → $2r^2+3r-2=0$ → $r=\\frac12$."
  ],
  "topic": "급수",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "등비 부분합",
+   "p": [
+    "$\\frac{a(1-r^m)}{1-r}$."
+   ]
+  },
+  {
+   "h": "분해",
+   "p": [
+    "두 등비급수의 차."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$a_{n}=a r^{n-1}$ $(-1<r<1,\\,r \\ne 0)$ 이라 하면 $a=4(1-r)$ 이고",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "설정"
   },
   {
    "n": 2,
    "text": "$$b_{n}=\\frac{a r^{n-1}\\left(1-r^{n+1}\\right)}{1-r}=\\frac{a}{1-r}\\left(r^{n-1}-r^{2 n}\\right)$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$b_n$"
   },
   {
    "n": 3,
    "text": "이다. 두 등비급수 $\\sum r^{n-1}$ , $\\sum r^{2 n}$ 이 모두 수렴하므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "수렴"
   },
   {
    "n": 4,
    "text": "$$\\sum_{n=1}^{\\infty}b_{n}=4 \\left(\\frac{1}{1-r}-\\frac{r^{2}}{1-r^{2}}\\right)=\\frac{4 \\left(1+r-r^{2}\\right)}{1-r^{2}}=\\frac{20}{3}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "식"
   },
   {
    "n": 5,
    "text": "에서 $3 \\left(1+r-r^{2}\\right)=5 \\left(1-r^{2}\\right)$ , 즉 $2 r^{2}+3 r-2=0$ 이고 $-1<r<1$ 이므로 $r=\\frac{1}{2}$ , $a=2$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$r$"
   },
   {
    "n": 6,
    "text": "$\\left(a_{n}\\right)^{3}$ 은 첫째항이 $8$ , 공비가 $\\frac{1}{8}$ 인 등비수열이므로 $\\sum_{n=1}^{\\infty}\\left(a_{n}\\right)^{3}=\\frac{8}{1-\\frac{1}{8}}=\\frac{64}{7}$ 이고, $p+q=7+64=71$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C6"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$n+1$개",
+   "cond": "C2",
+   "text": [
+    "$k=n\\sim2n$."
+   ]
+  },
+  {
+   "h": "$r=-2$ 제외",
+   "cond": "C4",
+   "text": [
+    "$|r|<1$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\sum b_n=\\frac{11}2$",
+   "body": [
+    "(같은 $b_n$에 대하여) $\\sum a_n=4$, $\\sum b_n=\\frac{11}2$일 때, $\\sum_{n=1}^\\infty(a_n)^3=\\frac qp$이다. $p+q$의 값을 구하시오. (단, $p$와 $q$는 서로소인 자연수)"
+   ],
+   "answer": 269,
+   "hint": "$3r^2+8r-3=0$ → $r=\\frac13$, $a=\\frac83$: $\\frac{256}{13}$."
+  }
+ ],
+ "line": "구간 합 → 두 등비급수 → 공비.",
  "note": ""
 }

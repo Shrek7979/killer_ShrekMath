@@ -1,0 +1,104 @@
+{
+ "wrong": "예상 오답 — Q의 $y$좌표를 $y_1$로 두어 FQ를 잘못 계산한 경우",
+ "intro": [
+  "Q$\\left(0,\\frac{y_1}2\\right)$, R$(-x_1,0)$ → $\\mathrm{FQ}^2=p(p+x_1)$.",
+  "넓이 → $y_1=4p$, $x_1=4p$ → $p=2$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "설정",
+   "why": "$y^2=4px$, P(제1사분면)의 접선의 절편 Q($y$축), R($x$축).",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "조건",
+   "why": "$\\overline{\\mathrm{FQ}}=2\\sqrt5$, △PFR$=40$; $\\overline{\\mathrm{PR}}^2$.",
+   "uses": [
+    2,
+    3,
+    4,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "접선 절편",
+   "p": [
+    "$y_1y=2p(x+x_1)$."
+   ]
+  },
+  {
+   "h": "이등변",
+   "p": [
+    "$\\mathrm{FR}=\\mathrm{FP}$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "절편",
+   "text": "${\\mathrm{P}}(x_{1},\\,y_{1})$ 이라 하면 $y_{1}^{2}=4 p x_{1}$ 이고, 접선의 방정식은 $y_{1}y=2 p(x+x_{1})$ 이다. $x=0$ 을 대입하면 $y=\\frac{2 p x_{1}}{y_{1}}=\\frac{y_{1}}{2}$ 이므로 ${\\mathrm{Q}}\\left(0,\\,\\frac{y_{1}}{2}\\right)$ , $y=0$ 을 대입하면 ${\\mathrm{R}}(-x_{1},\\,0)$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$\\overline{{\\mathrm{FQ}}}^{2}=p^{2}+\\frac{y_{1}^{2}}{4}=p^{2}+p x_{1}=p(p+x_{1})=20$ 이고, $\\overline{{\\mathrm{FR}}}=p+x_{1}$ 이므로 삼각형 ${\\mathrm{PFR}}$ 의 넓이는 $\\frac{1}{2}(p+x_{1})y_{1}=40$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "해",
+   "text": "첫째 식에서 $p+x_{1}=\\frac{20}{p}$ 이고, 둘째 식에서 $y_{1}=\\frac{80}{p+x_{1}}=4 p$ 이다. $y_{1}^{2}=4 p x_{1}$ 에 대입하면 $16 p^{2}=4 p x_{1}$ , 즉 $x_{1}=4 p$ 이므로 $5 p=\\frac{20}{p}$ , $p=2$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $x_{1}=8$ , $y_{1}=8$ 이고 ${\\mathrm{R}}(-8,\\,0)$ 이므로 $\\overline{{\\mathrm{PR}}}^{2}=16^{2}+8^{2}=320$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "참고",
+   "text": "(참고: ${\\mathrm{Q}}$ 는 선분 ${\\mathrm{PR}}$ 의 중점이고 $\\overline{{\\mathrm{FR}}}=p+x_{1}=\\overline{{\\mathrm{FP}}}$ 이므로 $\\overline{{\\mathrm{FQ}}}$ 와 $\\overline{{\\mathrm{PR}}}$ 이 서로 수직이다.)",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "Q 중점",
+   "cond": "C2",
+   "text": [
+    "PR의 중점."
+   ]
+  },
+  {
+   "h": "$x_1=4p$",
+   "cond": "C2",
+   "text": [
+    "$y_1^2=4px_1$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\sqrt{10}$, 넓이 $30$",
+   "body": [
+    "(같은 설정에서) $\\overline{\\mathrm{FQ}}=\\sqrt{10}$이고 삼각형 PFR의 넓이가 $30$일 때, $\\overline{\\mathrm{PR}}^2$의 값을 구하시오."
+   ],
+   "answer": 360,
+   "hint": "$y_1=6p$, $x_1=9p$, $p=1$: P$(9,6)$, R$(-9,0)$."
+  }
+ ],
+ "line": "포물선 접선 절편 → 중점·이등변 구조."
+}

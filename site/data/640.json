@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2024학년도 대학수학능력시험 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 등비급수 합을 $\\frac{\\sin\\theta}{1-\\cos\\theta}$로 첫째항을 잘못 잡은 경우",
  "answer": 9,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -39,9 +39,11 @@
     0
    ],
    "text": "$0<\\theta \\le \\frac{\\pi}{2}$ 인 실수 $\\theta$ 에 대하여",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "범위",
+   "why": "$0<\\theta\\le\\frac\\pi2$.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C2",
@@ -50,9 +52,11 @@
     0
    ],
    "text": "$f(\\theta)=\\sum_{n=1}^{\\infty}\\sin \\theta \\cos^{n}\\theta$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "함수",
+   "why": "$f=\\sum\\sin\\theta\\cos^n\\theta$.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C3",
@@ -72,9 +76,13 @@
     1
    ],
    "text": "$\\int_{\\frac{\\pi}{3}}^{\\frac{\\pi}{2}}f(\\theta)d \\theta=p+q \\ln 2$ 일 때, $4(q-p)^{2}$ 의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "적분",
+   "why": "$\\int_{\\pi/3}^{\\pi/2}f=p+q\\ln2$; $4(q-p)^2$.",
+   "uses": [
+    3,
+    4,
+    5
+   ]
   },
   {
    "id": "C5",
@@ -83,50 +91,101 @@
     2
    ],
    "text": "(단, $p$ , $q$ 는 유리수이다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "단서",
+   "why": "유리수.",
+   "uses": [
+    5
+   ]
   }
  ],
  "intro": [
-  "등비급수로 정의된 함수를 구한 뒤 치환적분으로 정적분을 계산하게 함"
+  "첫째항 $\\sin\\theta\\cos\\theta$, 공비 $\\cos\\theta$.",
+  "$u=\\cos\\theta$ 치환 → $\\int_0^{1/2}\\frac u{1-u}du$."
  ],
  "topic": "급수",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "등비급수",
+   "p": [
+    "$\\frac{\\text{첫째항}}{1-r}$."
+   ]
+  },
+  {
+   "h": "치환",
+   "p": [
+    "$du=-\\sin\\theta\\,d\\theta$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$0<\\theta \\le \\frac{\\pi}{2}$ 에서 $0 \\le \\cos \\theta<1$ 이므로 등비급수가 수렴하고",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "수렴"
   },
   {
    "n": 2,
    "text": "$$f(\\theta)=\\frac{\\sin \\theta \\cos \\theta}{1-\\cos \\theta}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$f$"
   },
   {
    "n": 3,
    "text": "이다. $\\cos \\theta=u$ 로 치환하면 $du=-\\sin \\theta d \\theta$ 이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "치환"
   },
   {
    "n": 4,
    "text": "$$\\int_{\\frac{\\pi}{3}}^{\\frac{\\pi}{2}}f(\\theta)d \\theta=\\int_{0}^{\\frac{1}{2}}\\frac{u}{1-u}du=\\int_{0}^{\\frac{1}{2}}\\left(-1+\\frac{1}{1-u}\\right)du=\\left[-u-\\ln(1-u)\\right]_{0}^{\\frac{1}{2}}=-\\frac{1}{2}+\\ln 2$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "적분"
   },
   {
    "n": 5,
    "text": "이다. $p=-\\frac{1}{2}$ , $q=1$ 이므로 $4(q-p)^{2}=4 \\times \\frac{9}{4}=9$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4",
+    "C5"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$n=1$부터",
+   "cond": "C2",
+   "text": [
+    "첫째항에 $\\cos\\theta$."
+   ]
+  },
+  {
+   "h": "구간 뒤집기",
+   "cond": "C4",
+   "text": [
+    "$\\frac12\\to0$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\cos^{n+1}\\theta$",
+   "body": [
+    "$0<\\theta\\le\\frac\\pi2$에 대하여 $f(\\theta)=\\sum_{n=1}^\\infty\\sin\\theta\\cos^{n+1}\\theta$라 하자. $\\int_{\\pi/3}^{\\pi/2}f(\\theta)d\\theta=p+q\\ln2$일 때, $64(q-p)^2$의 값을 구하시오. (단, $p$, $q$는 유리수)"
+   ],
+   "answer": 169,
+   "hint": "$\\int_0^{1/2}\\frac{u^2}{1-u}du=-\\frac58+\\ln2$."
+  }
+ ],
+ "line": "등비급수 함수 → $\\cos$ 치환 → 유리함수.",
  "note": ""
 }
