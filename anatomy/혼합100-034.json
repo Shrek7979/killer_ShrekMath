@@ -1,0 +1,128 @@
+{
+ "wrong": "예상 오답 — $\\frac{\\frac1n}{e^{2/n}-1}\\to\\frac12$ 대신 $1$로 계산해 $2(e^2-1)$을 얻은 경우",
+ "intro": [
+  "$n$등분하면 각 구간의 적분이 공비 $e^{\\frac2n}$인 등비수열.",
+  "한 구간의 적분은 부분적분 두 번($e^{ax}\\sin bx$ 공식)."
+ ],
+ "conds": {
+  "C2": {
+   "label": "수열",
+   "why": "$a_n=\\int_0^1e^{2x}|\\sin n\\pi x|dx$.",
+   "uses": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "C4": {
+   "label": "극한",
+   "why": "$\\pi\\lim a_n=pe^2+q$; $100p+q$.",
+   "uses": [
+    5,
+    6,
+    7
+   ]
+  },
+  "C5": {
+   "label": "단서",
+   "why": "$p$, $q$ 유리수.",
+   "uses": [
+    7
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "주기 분할",
+   "p": [
+    "$|\\sin(k\\pi+\\theta)|=|\\sin\\theta|$."
+   ]
+  },
+  {
+   "h": "$e^{ax}\\sin bx$ 적분",
+   "p": [
+    "$\\frac{e^{ax}(a\\sin bx-b\\cos bx)}{a^2+b^2}$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "분할",
+   "text": "$k=0,\\,1,\\,\\cdots,\\,n-1$ 에 대하여 구간 $\\left[\\frac{k}{n},\\,\\frac{k+1}{n}\\right]$ 에서 $x=\\frac{k}{n}+s$ 로 치환하면 $\\left|\\sin(n \\pi x)\\right|=\\left|\\sin(k \\pi+n \\pi s)\\right|=\\sin(n \\pi s)$ 이므로",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "등비",
+   "text": "$$a_{n}=\\sum_{k=0}^{n-1}e^{\\frac{2 k}{n}}I_{n},\\,\\,\\,I_{n}=\\int_{0}^{\\frac{1}{n}}e^{2 s}\\sin(n \\pi s)ds$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "한 구간",
+   "text": "이다. 부분적분법을 두 번 쓰면 $\\omega=n \\pi$ 일 때 $I_{n}=\\left[\\frac{e^{2 s}\\left(2 \\sin \\omega s-\\omega \\cos \\omega s \\right)}{4+\\omega^{2}}\\right]_{0}^{\\frac{1}{n}}=\\frac{n \\pi \\left(e^{\\frac{2}{n}}+1 \\right)}{4+n^{2}\\pi^{2}}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "합",
+   "text": "또 $\\sum_{k=0}^{n-1}e^{\\frac{2 k}{n}}=\\frac{e^{2}-1}{e^{\\frac{2}{n}}-1}$ 이므로",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$$a_{n}=\\left(e^{2}-1 \\right)\\times \\frac{n^{2}\\pi}{4+n^{2}\\pi^{2}}\\times \\left(e^{\\frac{2}{n}}+1 \\right)\\times \\frac{\\frac{1}{n}}{e^{\\frac{2}{n}}-1}$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "극한",
+   "text": "이다. $n \\to \\infty$ 일 때 $\\frac{n^{2}\\pi}{4+n^{2}\\pi^{2}}\\to \\frac{1}{\\pi}$ , $e^{\\frac{2}{n}}+1 \\to 2$ , $\\frac{\\frac{1}{n}}{e^{\\frac{2}{n}}-1}\\to \\frac{1}{2}$ 이므로 $\\lim_{n \\to \\infty}a_{n}=\\frac{e^{2}-1}{\\pi}$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$\\pi \\times \\lim_{n \\to \\infty}a_{n}=e^{2}-1$ 이므로 $p=1$ , $q=-1$ 이고 $100 p+q=99$ 이다.",
+   "uses": [
+    "C4",
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\frac{e^h-1}h\\to1$",
+   "cond": "C4",
+   "text": [
+    "$h=\\frac2n$ — 그래서 $\\frac12$."
+   ]
+  },
+  {
+   "h": "평균값 직관",
+   "cond": "C4",
+   "text": [
+    "$|\\sin|$의 평균 $\\frac2\\pi$ → $\\frac2\\pi\\int e^{2x}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $e^x$",
+   "body": [
+    "자연수 $n$에 대하여 $a_n=\\int_0^1e^x|\\sin(n\\pi x)|dx$라 하자. $\\pi\\times\\lim_{n\\to\\infty}a_n=pe+q$일 때, $100p+q$의 값을 구하시오. (단, $p$, $q$는 유리수)"
+   ],
+   "answer": 198,
+   "hint": "$\\frac2\\pi(e-1)$ → $2e-2$."
+  }
+ ],
+ "line": "빠르게 진동하는 $|\\sin|$ → 평균 $\\frac2\\pi$."
+}

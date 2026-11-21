@@ -1,0 +1,104 @@
+{
+ "wrong": "예상 오답 **8** — 정사영의 넓이를 답으로 쓴 경우",
+ "intro": [
+  "정사영 넓이 $\\frac12\\cdot4\\cdot4\\sin\\angle\\mathrm{P'OQ'}$ → 직각일 때 최대.",
+  "AP$=$AQ → 중점 M으로 높이. 검산: $\\cos\\theta=\\frac13$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "구와 원",
+   "why": "$x^2+y^2+z^2=25$, 평면 $z=3$ → 원 $C$, A$(0,0,-5)$.",
+   "uses": [
+    1,
+    4
+   ]
+  },
+  "C2": {
+   "label": "묻는 것",
+   "why": "정사영 넓이 최대일 때 삼각형 APQ의 넓이.",
+   "uses": [
+    2,
+    3,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "정사영",
+   "p": [
+    "A′=O, P′, Q′은 반지름 $4$인 원 위."
+   ]
+  },
+  {
+   "h": "이등변삼각형",
+   "p": [
+    "꼭짓점에서 밑변 중점이 높이의 발."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "정사영",
+   "text": "원 $C$ 는 평면 $z=3$ 위의 중심이 $(0,\\,0,\\,3)$ 이고 반지름의 길이가 $4$ 인 원이다. 점 ${\\mathrm{A}}$ 의 $x y$ 평면 위로의 정사영은 원점 ${\\mathrm{O}}$ 이고, ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ 의 정사영 ${\\mathrm{P'}}$ , ${\\mathrm{Q'}}$ 은 원점을 중심으로 하고 반지름의 길이가 $4$ 인 원 위에 있으므로 정사영의 넓이는",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "넓이",
+   "text": "$$\\frac{1}{2}\\times 4 \\times 4 \\times \\sin(\\angle{\\mathrm{P'OQ'}})\\le 8$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "최대",
+   "text": "이고, $\\angle{\\mathrm{P'OQ'}}=\\frac{\\pi}{2}$ 일 때 최대이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "높이",
+   "text": "이때 $\\overline{{\\mathrm{PQ}}}=4 \\sqrt{2}$ 이고, 선분 ${\\mathrm{PQ}}$ 의 중점 ${\\mathrm{M}}$ 은 $z$ 축으로부터 거리가 $2 \\sqrt{2}$ , 높이가 $3$ 인 점이다. $\\overline{{\\mathrm{AP}}}=\\overline{{\\mathrm{AQ}}}$ 이므로 $\\overline{{\\mathrm{AM}}}$ 과 $\\overline{{\\mathrm{PQ}}}$ 가 서로 수직이고 $\\overline{{\\mathrm{AM}}}=\\sqrt{(2 \\sqrt{2})^{2}+8^{2}}=6 \\sqrt{2}$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 삼각형 ${\\mathrm{APQ}}$ 의 넓이는 $\\frac{1}{2}\\times 4 \\sqrt{2}\\times 6 \\sqrt{2}=24$ 이다. (평면 ${\\mathrm{APQ}}$ 와 $x y$ 평면이 이루는 각 $\\theta$ 에 대하여 $\\cos \\theta=\\frac{2 \\sqrt{2}}{6 \\sqrt{2}}=\\frac{1}{3}$ 이고 $24 \\times \\frac{1}{3}=8$ 로 확인된다.)",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "구하는 것",
+   "cond": "C2",
+   "text": [
+    "정사영이 아니라 실제 넓이."
+   ]
+  },
+  {
+   "h": "AM",
+   "cond": "C1",
+   "text": [
+    "수평 $2\\sqrt2$, 수직 $8$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 평면 $z=-3$",
+   "body": [
+    "좌표공간에서 구 $x^2+y^2+z^2=25$가 평면 $z=-3$과 만나서 생기는 원을 $C$라 하고, 점 A$(0,0,-5)$가 있다. 원 $C$ 위의 서로 다른 두 점 P, Q에 대하여 삼각형 APQ의 $xy$평면 위로의 정사영의 넓이가 최대일 때, 삼각형 APQ의 넓이를 $T$라 하자. $T^2$의 값을 구하시오."
+   ],
+   "answer": 96,
+   "hint": "PQ$=4\\sqrt2$, AM$=\\sqrt{8+4}$ → $T=4\\sqrt6$."
+  }
+ ],
+ "line": "정사영 최대 위치 → 실제 도형으로 복원."
+}

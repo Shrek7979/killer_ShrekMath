@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2026학년도 9월 모의평가 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 내분점을 $1:2$로 잡아 D$(2,0)$으로 계산한 경우(→ $756$)",
  "answer": 432,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -37,9 +37,11 @@
     0
    ],
    "text": "한 변의 길이가 $6$ 인 정삼각형 ${\\mathrm{ABC}}$ 에 대하여",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "도형",
+   "why": "한 변 $6$인 정삼각형 ABC.",
+   "uses": [
+    3
+   ]
   },
   {
    "id": "C2",
@@ -48,9 +50,11 @@
     0
    ],
    "text": "$|\\vec{{\\mathrm{XA}}}+2 \\vec{{\\mathrm{XB}}}|=|\\vec{{\\mathrm{AB}}}|$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건",
+   "why": "$|\\vec{\\mathrm{XA}}+2\\vec{\\mathrm{XB}}|=6$.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C3",
@@ -59,44 +63,95 @@
     0
    ],
    "text": "를 만족시키는 점 ${\\mathrm{X}}$ 에 대하여 $\\vec{{\\mathrm{CX}}}\\cdot \\vec{{\\mathrm{CA}}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M \\times m$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\vec{\\mathrm{CX}}\\cdot\\vec{\\mathrm{CA}}$의 $M\\times m$.",
+   "uses": [
+    2,
+    3,
+    4
+   ]
   }
  ],
  "intro": [
-  "$|3 \\vec{{\\mathrm{XP}}}+\\vec{{\\mathrm{XR}}}|$ 꼴의 조건을 '내분점을 중심으로 하는 원'으로 읽는 핵심만 남기고, 원 위의 점에 대한 내적의 범위를 묻도록 단순화"
+  "$\\vec{\\mathrm{XA}}+2\\vec{\\mathrm{XB}}=3\\vec{\\mathrm{XD}}$ — D는 AB의 $2:1$ 내분점. X는 반지름 $2$인 원.",
+  "$\\vec{\\mathrm{CX}}=\\vec{\\mathrm{CD}}+\\vec{\\mathrm{DX}}$로 쪼개면 고정 부분 $24$ ± 움직이는 부분 $12$."
  ],
  "topic": "평면벡터",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "내분점 벡터",
+   "p": [
+    "$m\\vec{\\mathrm{XA}}+n\\vec{\\mathrm{XB}}=(m+n)\\vec{\\mathrm{XD}}$, D는 $n:m$ 내분."
+   ]
+  },
+  {
+   "h": "원 위의 내적",
+   "p": [
+    "$\\vec{\\mathrm{DX}}\\cdot\\vec v\\in[-r|\\vec v|,r|\\vec v|]$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "선분 ${\\mathrm{AB}}$ 를 $2:1$ 로 내분하는 점을 ${\\mathrm{D}}$ 라 하면 $\\vec{{\\mathrm{XA}}}+2 \\vec{{\\mathrm{XB}}}=3 \\vec{{\\mathrm{XD}}}$ 이므로 $3|\\vec{{\\mathrm{XD}}}|=6$ , 즉 점 ${\\mathrm{X}}$ 는 ${\\mathrm{D}}$ 를 중심으로 하고 반지름의 길이가 $2$ 인 원 위에 있다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "원"
   },
   {
    "n": 2,
    "text": "$\\vec{{\\mathrm{CX}}}\\cdot \\vec{{\\mathrm{CA}}}=\\vec{{\\mathrm{CD}}}\\cdot \\vec{{\\mathrm{CA}}}+\\vec{{\\mathrm{DX}}}\\cdot \\vec{{\\mathrm{CA}}}$ 이다. ${\\mathrm{A}}(0,\\,0)$ , ${\\mathrm{B}}(6,\\,0)$ , ${\\mathrm{C}}(3,\\,3 \\sqrt{3})$ 으로 놓으면 ${\\mathrm{D}}(4,\\,0)$ 이고",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "분해"
   },
   {
    "n": 3,
    "text": "$$\\vec{{\\mathrm{CD}}}\\cdot \\vec{{\\mathrm{CA}}}=(1,\\,-3 \\sqrt{3})\\cdot(-3,\\,-3 \\sqrt{3})=-3+27=24$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C3"
+   ],
+   "title": "고정 부분"
   },
   {
    "n": 4,
    "text": "이다. $\\vec{{\\mathrm{DX}}}\\cdot \\vec{{\\mathrm{CA}}}$ 는 $-2 \\times 6$ 이상 $2 \\times 6$ 이하의 모든 값을 가지므로 $M=36$ , $m=12$ 이고 $M \\times m=432$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "범위"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "내분 비",
+   "cond": "C2",
+   "text": [
+    "계수가 큰 쪽(B)에 가까움 → AD$=4$."
+   ]
+  },
+  {
+   "h": "$m>0$",
+   "cond": "C3",
+   "text": [
+    "최솟값도 양수 — 곱이 양."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $2\\vec{\\mathrm{XA}}+\\vec{\\mathrm{XB}}$",
+   "body": [
+    "한 변의 길이가 $6$인 정삼각형 ABC에 대하여 $|2\\vec{\\mathrm{XA}}+\\vec{\\mathrm{XB}}|=|\\vec{\\mathrm{AB}}|$를 만족시키는 점 X에 대하여 $\\vec{\\mathrm{CX}}\\cdot\\vec{\\mathrm{CA}}$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $M\\times m$의 값을 구하시오."
+   ],
+   "answer": 756,
+   "hint": "D$(2,0)$: $30\\pm12$."
+  }
+ ],
+ "line": "계수 합으로 묶어 내분점 중심의 원.",
  "note": ""
 }
