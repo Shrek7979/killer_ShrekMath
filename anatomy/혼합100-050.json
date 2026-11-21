@@ -1,0 +1,102 @@
+{
+ "wrong": "예상 오답 — $|\\vec{\\mathrm{PO}}|^2=160$으로 놓아 반지름을 $4\\sqrt{10}$으로 계산한 경우",
+ "intro": [
+  "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=|\\mathrm{PO}|^2-9$, $\\vec{\\mathrm{PC}}\\cdot\\vec{\\mathrm{PD}}=|\\mathrm{PN}|^2-9$ — 반길이가 같은 $3$.",
+  "같다 → 수직이등분선, $=160$ → 원. 현의 길이."
+ ],
+ "conds": {
+  "C1": {
+   "label": "점",
+   "why": "A$(-3,0)$, B$(3,0)$, C$(8,3)$, D$(8,9)$.",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "조건",
+   "why": "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=\\vec{\\mathrm{PC}}\\cdot\\vec{\\mathrm{PD}}=160$.",
+   "uses": [
+    2
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "삼각형 OP$_1$P$_2$의 넓이.",
+   "uses": [
+    3
+   ]
+  },
+  "C5": {
+   "label": "단서",
+   "why": "O는 원점 = AB의 중점.",
+   "uses": [
+    1
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "중점 내적",
+   "p": [
+    "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=|\\vec{\\mathrm{PM}}|^2-\\left(\\frac{\\overline{\\mathrm{AB}}}2\\right)^2$ (M은 AB의 중점)."
+   ]
+  },
+  {
+   "h": "현의 길이",
+   "p": [
+    "$2\\sqrt{r^2-d^2}$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "중점 변환",
+   "text": "$\\vec{{\\mathrm{PA}}}\\cdot \\vec{{\\mathrm{PB}}}=(\\vec{{\\mathrm{PO}}}+\\vec{{\\mathrm{OA}}})\\cdot(\\vec{{\\mathrm{PO}}}-\\vec{{\\mathrm{OA}}})=|\\vec{{\\mathrm{PO}}}|^{2}-9$ 이다. 선분 ${\\mathrm{CD}}$ 의 중점을 ${\\mathrm{N}}(8,\\,6)$ 이라 하면 $\\overline{{\\mathrm{NC}}}=3$ 이므로 같은 방법으로 $\\vec{{\\mathrm{PC}}}\\cdot \\vec{{\\mathrm{PD}}}=|\\vec{{\\mathrm{PN}}}|^{2}-9$ 이다.",
+   "uses": [
+    "C1",
+    "C5"
+   ]
+  },
+  {
+   "title": "직선과 원",
+   "text": "첫째 조건에서 $|\\vec{{\\mathrm{PO}}}|=|\\vec{{\\mathrm{PN}}}|$ 이므로 ${\\mathrm{P}}$ 는 선분 ${\\mathrm{ON}}$ 의 수직이등분선 $4 x+3 y=25$ 위에 있다. 둘째 조건에서 $|\\vec{{\\mathrm{PO}}}|^{2}=169$ , 즉 ${\\mathrm{P}}$ 는 원 $x^{2}+y^{2}=169$ 위에 있다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "넓이",
+   "text": "원점과 직선 $4 x+3 y=25$ 사이의 거리는 $5$ 이므로 $\\overline{{\\mathrm{P}}_{1}{\\mathrm{P}}_{2}}=2 \\sqrt{169-25}=24$ 이다. 따라서 삼각형 ${\\mathrm{OP}}_{1}{\\mathrm{P}}_{2}$ 의 넓이는 $\\frac{1}{2}\\times 24 \\times 5=60$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$-9$",
+   "cond": "C2",
+   "text": [
+    "$|\\mathrm{PO}|^2=169$."
+   ]
+  },
+  {
+   "h": "같은 반길이",
+   "cond": "C1",
+   "text": [
+    "AB$=$CD$=6$이라 수직이등분선."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $=25$",
+   "body": [
+    "(같은 네 점에 대하여) $\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=\\vec{\\mathrm{PC}}\\cdot\\vec{\\mathrm{PD}}$, $\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=25$를 모두 만족시키는 서로 다른 두 점을 P$_1$, P$_2$라 할 때, 삼각형 OP$_1$P$_2$의 넓이를 구하시오. (단, O는 원점)"
+   ],
+   "answer": 15,
+   "hint": "$r^2=34$, 현 $2\\sqrt{9}=6$."
+  }
+ ],
+ "line": "두 내적이 같다 → 중점까지 거리가 같다."
+}

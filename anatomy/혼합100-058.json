@@ -1,0 +1,110 @@
+{
+ "wrong": "예상 오답 — $|\\vec{\\mathrm{OP}}|$의 최솟값을 원과 평행사변형의 교점이 아닌 꼭짓점 O에서 $0$으로 잡은 경우",
+ "intro": [
+  "B$(4,6)$ — (나)는 AB를 지름으로 하는 원(중심 N$(4,3)$, 반지름 $3$)의 내부.",
+  "ON$=5$ → $|\\mathrm{OP}|\\in[2,8]$. 단위벡터를 빼면 $\\pm1$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "평행사변형",
+   "why": "$|\\mathrm{OA}|=4$, $|\\mathrm{OB}|=2\\sqrt{13}$, $\\vec{\\mathrm{OA}}\\cdot\\vec{\\mathrm{OB}}=16$.",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "(가)",
+   "why": "P는 평행사변형 OACB 위(내부).",
+   "uses": [
+    3
+   ]
+  },
+  "C3": {
+   "label": "(나)",
+   "why": "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}\\le0$.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$|\\mathrm{OX}|=1$, $|2\\vec{\\mathrm{OP}}-\\vec{\\mathrm{OX}}|$의 $M\\times m$.",
+   "uses": [
+    4
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "내적 $\\le0$",
+   "p": [
+    "AB를 지름으로 하는 원의 내부."
+   ]
+  },
+  {
+   "h": "벡터 차의 크기",
+   "p": [
+    "$\\big||\\vec a|-|\\vec b|\\big|\\le|\\vec a-\\vec b|\\le|\\vec a|+|\\vec b|$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "좌표",
+   "text": "${\\mathrm{O}}(0,\\,0)$ , ${\\mathrm{A}}(4,\\,0)$ 이라 하면 $\\vec{{\\mathrm{OB}}}\\cdot \\vec{{\\mathrm{OA}}}=16$ 에서 ${\\mathrm{B}}$ 의 $x$ 좌표는 $4$ 이고, $|\\vec{{\\mathrm{OB}}}|^{2}=52$ 에서 ${\\mathrm{B}}(4,\\,6)$ , ${\\mathrm{C}}(8,\\,6)$ 으로 놓을 수 있다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "원",
+   "text": "(나)에서 선분 ${\\mathrm{AB}}$ 의 중점 ${\\mathrm{N}}(4,\\,3)$ 에 대하여 $|\\vec{{\\mathrm{PN}}}|^{2}-9 \\le 0$ 이므로, ${\\mathrm{P}}$ 는 ${\\mathrm{N}}$ 을 중심으로 하고 반지름의 길이가 $3$ 인 원의 내부 또는 둘레와 평행사변형 ${\\mathrm{OACB}}$ 의 공통부분 위에 있다. ${\\mathrm{N}}$ 은 평행사변형의 두 대각선의 교점이고, 이 원은 두 변 ${\\mathrm{OA}}$ , ${\\mathrm{BC}}$ 에 각각 ${\\mathrm{A}}$ , ${\\mathrm{B}}$ 에서 접한다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$|\\mathrm{OP}|$",
+   "text": "$\\overline{{\\mathrm{ON}}}=5$ 이므로 $|\\vec{{\\mathrm{OP}}}|$ 은 직선 ${\\mathrm{ON}}$ 위의 두 점 $\\left(\\frac{8}{5},\\,\\frac{6}{5}\\right)$ , $\\left(\\frac{32}{5},\\,\\frac{24}{5}\\right)$ 에서 각각 최솟값 $2$ , 최댓값 $8$ 을 갖고, 두 점 모두 평행사변형 안에 있다.",
+   "uses": [
+    "C2",
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$|2 \\vec{{\\mathrm{OP}}}-\\vec{{\\mathrm{OX}}}|$ 은 길이가 $2|\\vec{{\\mathrm{OP}}}|$ 인 벡터와 단위벡터의 차의 크기이므로 $2|\\vec{{\\mathrm{OP}}}|-1$ 이상 $2|\\vec{{\\mathrm{OP}}}|+1$ 이하의 모든 값을 갖는다. 따라서 $M=2 \\times 8+1=17$ , $m=2 \\times 2-1=3$ 이고 $M \\times m=51$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "영역 안",
+   "cond": "C2",
+   "text": [
+    "$\\left(\\frac85,\\frac65\\right)$, $\\left(\\frac{32}5,\\frac{24}5\\right)$ 모두 평행사변형 안."
+   ]
+  },
+  {
+   "h": "$2|\\mathrm{OP}|-1$",
+   "cond": "C4",
+   "text": [
+    "$2\\cdot2-1=3$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $|3\\vec{\\mathrm{OP}}-\\vec{\\mathrm{OX}}|$",
+   "body": [
+    "(같은 조건의 점 P에 대하여) $|\\vec{\\mathrm{OX}}|=1$인 점 X에 대하여 $|3\\vec{\\mathrm{OP}}-\\vec{\\mathrm{OX}}|$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $M\\times m$의 값을 구하시오."
+   ],
+   "answer": 125,
+   "hint": "$25\\times5$."
+  }
+ ],
+ "line": "내적 $\\le0$ → 지름원. 거리 범위 ± 단위벡터."
+}

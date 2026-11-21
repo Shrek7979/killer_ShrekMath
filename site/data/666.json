@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2025학년도 6월 모의평가 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $\\frac{\\frac1n}{e^{2/n}-1}\\to\\frac12$ 대신 $1$로 계산해 $2(e^2-1)$을 얻은 경우",
  "answer": 99,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -50,9 +50,14 @@
     0
    ],
    "text": "$a_{n}=\\int_{0}^{1}e^{2 x}\\left|\\sin(n \\pi x)\\right|dx$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "수열",
+   "why": "$a_n=\\int_0^1e^{2x}|\\sin n\\pi x|dx$.",
+   "uses": [
+    1,
+    2,
+    3,
+    4
+   ]
   },
   {
    "id": "C3",
@@ -72,9 +77,13 @@
     1
    ],
    "text": "$\\pi \\times \\lim_{n \\to \\infty}a_{n}=p e^{2}+q$ 일 때, $100 p+q$ 의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "극한",
+   "why": "$\\pi\\lim a_n=pe^2+q$; $100p+q$.",
+   "uses": [
+    5,
+    6,
+    7
+   ]
   },
   {
    "id": "C5",
@@ -83,62 +92,117 @@
     2
    ],
    "text": "(단, $p$ , $q$ 는 유리수이다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "단서",
+   "why": "$p$, $q$ 유리수.",
+   "uses": [
+    7
+   ]
   }
  ],
  "intro": [
-  "적분 구간을 $n$ 등분하여 각 구간의 적분이 등비수열을 이룸을 보이고, 부분적분과 $\\lim_{h \\to 0}\\frac{e^{h}-1}{h}=1$ 로 극한을 구하게 함"
+  "$n$등분하면 각 구간의 적분이 공비 $e^{\\frac2n}$인 등비수열.",
+  "한 구간의 적분은 부분적분 두 번($e^{ax}\\sin bx$ 공식)."
  ],
  "topic": "수열의 극한",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "주기 분할",
+   "p": [
+    "$|\\sin(k\\pi+\\theta)|=|\\sin\\theta|$."
+   ]
+  },
+  {
+   "h": "$e^{ax}\\sin bx$ 적분",
+   "p": [
+    "$\\frac{e^{ax}(a\\sin bx-b\\cos bx)}{a^2+b^2}$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$k=0,\\,1,\\,\\cdots,\\,n-1$ 에 대하여 구간 $\\left[\\frac{k}{n},\\,\\frac{k+1}{n}\\right]$ 에서 $x=\\frac{k}{n}+s$ 로 치환하면 $\\left|\\sin(n \\pi x)\\right|=\\left|\\sin(k \\pi+n \\pi s)\\right|=\\sin(n \\pi s)$ 이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "분할"
   },
   {
    "n": 2,
    "text": "$$a_{n}=\\sum_{k=0}^{n-1}e^{\\frac{2 k}{n}}I_{n},\\,\\,\\,I_{n}=\\int_{0}^{\\frac{1}{n}}e^{2 s}\\sin(n \\pi s)ds$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "등비"
   },
   {
    "n": 3,
    "text": "이다. 부분적분법을 두 번 쓰면 $\\omega=n \\pi$ 일 때 $I_{n}=\\left[\\frac{e^{2 s}\\left(2 \\sin \\omega s-\\omega \\cos \\omega s \\right)}{4+\\omega^{2}}\\right]_{0}^{\\frac{1}{n}}=\\frac{n \\pi \\left(e^{\\frac{2}{n}}+1 \\right)}{4+n^{2}\\pi^{2}}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "한 구간"
   },
   {
    "n": 4,
    "text": "또 $\\sum_{k=0}^{n-1}e^{\\frac{2 k}{n}}=\\frac{e^{2}-1}{e^{\\frac{2}{n}}-1}$ 이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "합"
   },
   {
    "n": 5,
    "text": "$$a_{n}=\\left(e^{2}-1 \\right)\\times \\frac{n^{2}\\pi}{4+n^{2}\\pi^{2}}\\times \\left(e^{\\frac{2}{n}}+1 \\right)\\times \\frac{\\frac{1}{n}}{e^{\\frac{2}{n}}-1}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "식"
   },
   {
    "n": 6,
    "text": "이다. $n \\to \\infty$ 일 때 $\\frac{n^{2}\\pi}{4+n^{2}\\pi^{2}}\\to \\frac{1}{\\pi}$ , $e^{\\frac{2}{n}}+1 \\to 2$ , $\\frac{\\frac{1}{n}}{e^{\\frac{2}{n}}-1}\\to \\frac{1}{2}$ 이므로 $\\lim_{n \\to \\infty}a_{n}=\\frac{e^{2}-1}{\\pi}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "극한"
   },
   {
    "n": 7,
    "text": "$\\pi \\times \\lim_{n \\to \\infty}a_{n}=e^{2}-1$ 이므로 $p=1$ , $q=-1$ 이고 $100 p+q=99$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4",
+    "C5"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\frac{e^h-1}h\\to1$",
+   "cond": "C4",
+   "text": [
+    "$h=\\frac2n$ — 그래서 $\\frac12$."
+   ]
+  },
+  {
+   "h": "평균값 직관",
+   "cond": "C4",
+   "text": [
+    "$|\\sin|$의 평균 $\\frac2\\pi$ → $\\frac2\\pi\\int e^{2x}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $e^x$",
+   "body": [
+    "자연수 $n$에 대하여 $a_n=\\int_0^1e^x|\\sin(n\\pi x)|dx$라 하자. $\\pi\\times\\lim_{n\\to\\infty}a_n=pe+q$일 때, $100p+q$의 값을 구하시오. (단, $p$, $q$는 유리수)"
+   ],
+   "answer": 198,
+   "hint": "$\\frac2\\pi(e-1)$ → $2e-2$."
+  }
+ ],
+ "line": "빠르게 진동하는 $|\\sin|$ → 평균 $\\frac2\\pi$.",
  "note": ""
 }
