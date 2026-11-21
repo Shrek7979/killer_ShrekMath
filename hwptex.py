@@ -288,6 +288,11 @@ def _render(n):
 
 
 def hwp2tex(s):
+    # 수식 안의 한글 따옴표 문자열({rm "이" it}, "배수인 경우")은 \text{…}로 그대로 살린다 (글자 사이 띄움 방지)
+    texts = []
+    def _keep(m):
+        texts.append(m.group(1).strip()); return ' ' + chr(0xE000 + len(texts) - 1) + ' '
+    s = re.sub(r'(?:\{\s*rm\s*)?"([^"]*[가-힣][^"]*)"(?:\s*it\s*\})?', _keep, s)
     s = _pre(s)
     nodes, _ = _parse(_tokens(s))
     nodes = _rm_it(nodes)
@@ -300,6 +305,8 @@ def hwp2tex(s):
     out = re.sub(r'\\left\\lbrace\s*', r'\\left\\{', out).replace(r'\right\rbrace', r'\right\}')
     out = re.sub(r'[_^]\{\}', '', out).replace('{}', '')  # 한글 수식의 빈 그룹
     out = re.sub(r'([A-Za-z])_\{([a-z]) ?\1\}_\{', r'\1_{\2}\1_{', out)  # a_{na}_{n+1} 오타 → a_{n}a_{n+1}
+    for k, txt in enumerate(texts):
+        out = out.replace(chr(0xE000 + k), r'\text{ ' + txt + ' }')
     if top_break:
         out = r'\begin{aligned}' + out + r'\end{aligned}'
     return out
