@@ -1,0 +1,96 @@
+{
+ "wrong": "예상 오답 — 최솟값 조건에서 $\\overline{\\mathrm{PF'}}$ 대신 $\\overline{\\mathrm{PF}}$를 직접 써서 $r$을 틀린 경우",
+ "intro": [
+  "PF$=10-$PF′ → PQ+PF$=$PQ$-$PF′$+10$.",
+  "삼각부등식: $\\ge-$CF′$+10-r$, $\\le$CF′$+10+r$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "도형",
+   "why": "타원 $\\frac{x^2}{25}+\\frac{y^2}{16}=1$, 원 $(x-1)^2+y^2=r^2$.",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "조건",
+   "why": "PQ+PF 최솟값 $4$일 때 최댓값.",
+   "uses": [
+    2,
+    3,
+    4
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "타원의 정의",
+   "p": [
+    "$\\overline{\\mathrm{PF}}+\\overline{\\mathrm{PF'}}=2a$."
+   ]
+  },
+  {
+   "h": "삼각부등식",
+   "p": [
+    "$|\\mathrm{PC}-\\mathrm{PF'}|\\le\\mathrm{CF'}$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "범위",
+   "text": "원의 중심을 ${\\mathrm{C}}(1,\\,0)$ 이라 하자. $0<r<3$ 이면 원은 타원의 내부에 있으므로 타원 위의 점 ${\\mathrm{P}}$ 에 대하여 $\\overline{{\\mathrm{PC}}}-r \\le \\overline{{\\mathrm{PQ}}}\\le \\overline{{\\mathrm{PC}}}+r$ 이다. 또 타원의 정의에 의하여 $\\overline{{\\mathrm{PF}}}=10-\\overline{{\\mathrm{PF'}}}$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "최소",
+   "text": "(최솟값) $\\overline{{\\mathrm{PQ}}}+\\overline{{\\mathrm{PF}}}\\ge \\overline{{\\mathrm{PC}}}-\\overline{{\\mathrm{PF'}}}+10-r \\ge-\\overline{{\\mathrm{CF'}}}+10-r=6-r$ 이고, 등호는 점 ${\\mathrm{C}}$ 가 선분 ${\\mathrm{PF'}}$ 위에 있을 때, 즉 ${\\mathrm{P}}(5,\\,0)$ 일 때 성립한다. $6-r=4$ 에서 $r=2$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "최대",
+   "text": "(최댓값) $\\overline{{\\mathrm{PQ}}}+\\overline{{\\mathrm{PF}}}\\le \\overline{{\\mathrm{PC}}}-\\overline{{\\mathrm{PF'}}}+10+r \\le \\overline{{\\mathrm{CF'}}}+10+r=16$ 이고, 등호는 점 ${\\mathrm{F'}}$ 이 선분 ${\\mathrm{PC}}$ 위에 있을 때, 즉 ${\\mathrm{P}}(-5,\\,0)$ 일 때 성립한다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 최댓값은 $16$",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "등호",
+   "cond": "C2",
+   "text": [
+    "C가 선분 PF′ 위 — P$(5,0)$."
+   ]
+  },
+  {
+   "h": "CF′$=4$",
+   "cond": "C2",
+   "text": [
+    "$1-(-3)$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 최솟값 $5$",
+   "body": [
+    "(같은 타원과 원에서) $\\overline{\\mathrm{PQ}}+\\overline{\\mathrm{PF}}$의 최솟값이 $5$일 때, 최댓값을 구하시오."
+   ],
+   "answer": 15,
+   "hint": "$r=1$ → $14+1$."
+  }
+ ],
+ "line": "타원 위 합 → 다른 초점으로 바꾸어 삼각부등식."
+}

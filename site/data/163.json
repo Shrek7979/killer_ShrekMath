@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2023학년도 6월 모의평가 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — S가 AT의 중점임을 놓쳐 AFS 넓이를 직접 계산하다 틀린 경우",
  "answer": 20,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -28,9 +28,11 @@
     0
    ],
    "text": "초점이 ${\\mathrm{F}}$ 인 포물선 $y^{2}=4 p x$ $(p>0)$ 위의 점 중 제 $1$ 사분면에 있는 점 ${\\mathrm{A}}$ 에서의 접선이 $x$ 축, $y$ 축과 만나는 점을 각각 ${\\mathrm{T}}$ , ${\\mathrm{S}}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "설정",
+   "why": "제1사분면 A의 접선과 $x$축 T, $y$축 S.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C2",
@@ -39,44 +41,94 @@
     1
    ],
    "text": "$\\overline{{\\mathrm{AT}}}^{2}=320$ 이고 삼각형 ${\\mathrm{AFT}}$ 의 넓이가 $40$ 일 때, 삼각형 ${\\mathrm{AFS}}$ 의 넓이를 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건",
+   "why": "AT$^2=320$, [AFT]$=40$; [AFS].",
+   "uses": [
+    2,
+    3,
+    4
+   ]
   }
  ],
  "intro": [
-  "접선의 두 절편을 이용해 $\\overline{{\\mathrm{FT}}}=\\overline{{\\mathrm{FA}}}$ 와 '점 ${\\mathrm{S}}$ 는 선분 ${\\mathrm{AT}}$ 의 중점'을 함께 쓰게 함"
+  "접선 $x$절편 $-a$, $y$절편 $\\frac b2$ → S는 AT의 중점.",
+  "AT$^2=4a(a+p)$, [AFT]$=(a+p)\\sqrt{pa}$ → 비로 $p=\\frac a4$."
  ],
  "topic": "포물선의 접선",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "포물선의 정의",
+   "p": [
+    "초점까지 거리 = 준선까지 거리."
+   ]
+  },
+  {
+   "h": "중선과 넓이",
+   "p": [
+    "중선은 넓이를 이등분."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "${\\mathrm{A}}(a,\\,b)$ 라 하면 접선 $b y=2 p(x+a)$ 에서 ${\\mathrm{T}}(-a,\\,0)$ , ${\\mathrm{S}}\\left(0,\\,\\frac{b}{2}\\right)$ 이므로 ${\\mathrm{S}}$ 는 선분 ${\\mathrm{AT}}$ 의 중점이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "중점"
   },
   {
    "n": 2,
    "text": "$\\overline{{\\mathrm{AT}}}^{2}=4 a^{2}+b^{2}=4 a^{2}+4 p a=4 a(a+p)=320$ 에서 $a(a+p)=80$ 이다. $\\overline{{\\mathrm{FT}}}=a+p$ 이므로 삼각형 ${\\mathrm{AFT}}$ 의 넓이는 $\\frac{1}{2}(a+p)b=(a+p)\\sqrt{p a}=40$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "식"
   },
   {
    "n": 3,
    "text": "두 식을 나누면 $\\frac{\\sqrt{p a}}{a}=\\frac{1}{2}$ , $p=\\frac{a}{4}$ 이고 $a \\times \\frac{5 a}{4}=80$ 에서 $a=8$ , $p=2$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$a,p$"
   },
   {
    "n": 4,
    "text": "${\\mathrm{S}}$ 가 선분 ${\\mathrm{AT}}$ 의 중점이므로 삼각형 ${\\mathrm{AFS}}$ 의 넓이는 삼각형 ${\\mathrm{AFT}}$ 의 넓이의 $\\frac{1}{2}$ 인 $20$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "FT$=a+p$",
+   "cond": "C1",
+   "text": [
+    "$p-(-a)$."
+   ]
+  },
+  {
+   "h": "비",
+   "cond": "C2",
+   "text": [
+    "두 식을 나누어 $\\sqrt{p/a}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · AT$^2=80$, 넓이 $10$",
+   "body": [
+    "(같은 설정에서) $\\overline{\\mathrm{AT}}^2=80$이고 삼각형 AFT의 넓이가 $10$일 때, 삼각형 AFS의 넓이를 구하시오."
+   ],
+   "answer": 5,
+   "hint": "$a=4$, $p=1$ — 중선 이등분."
+  }
+ ],
+ "line": "접선 절편 → 중점 → 넓이 이등분.",
  "note": ""
 }
