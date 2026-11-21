@@ -1,0 +1,112 @@
+{
+ "wrong": "예상 오답 — 합의 순서를 바꾸지 않고 $\\int_0^1\\int_x^1x\\ln(1+y)$의 범위를 잘못 잡은 경우",
+ "intro": [
+  "$1\\le k\\le j\\le n$ — 바깥을 $j$로 바꾸면 안쪽 $\\sum_{k\\le j}k=\\frac{j(j+1)}2$.",
+  "$\\frac1{2n}\\sum\\left(\\frac jn\\right)^2\\ln\\left(1+\\frac jn\\right)$ + $0$으로 가는 항."
+ ],
+ "conds": {
+  "C1": {
+   "label": "극한",
+   "why": "$\\lim\\sum_{k=1}^n\\sum_{j=k}^n\\frac k{n^3}\\ln\\left(1+\\frac jn\\right)=p+q\\ln2$.",
+   "uses": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "C2": {
+   "label": "묻는 것",
+   "why": "$36(q-p)$.",
+   "uses": [
+    5
+   ]
+  },
+  "C3": {
+   "label": "단서",
+   "why": "유리수.",
+   "uses": [
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "정적분과 급수",
+   "p": [
+    "$\\lim\\frac1n\\sum_{k=1}^nf\\left(\\frac kn\\right)=\\int_0^1f(x)dx$."
+   ]
+  },
+  {
+   "h": "합의 순서 교환",
+   "p": [
+    "$\\sum_{k=1}^n\\sum_{j=k}^n=\\sum_{j=1}^n\\sum_{k=1}^j$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "교환",
+   "text": "$1 \\le k \\le j \\le n$ 인 모든 순서쌍에 대한 합이므로 합의 순서를 바꾸면",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "정리",
+   "text": "$$\\sum_{j=1}^{n}\\ln \\left(1+\\frac{j}{n}\\right)\\times \\frac{1}{n^{3}}\\sum_{k=1}^{j}k=\\frac{1}{2 n}\\sum_{j=1}^{n}\\left(\\frac{j}{n}\\right)^{2}\\ln \\left(1+\\frac{j}{n}\\right)+\\frac{1}{2 n^{2}}\\sum_{j=1}^{n}\\frac{j}{n}\\ln \\left(1+\\frac{j}{n}\\right)$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "극한",
+   "text": "둘째 항은 $0$ 과 $\\frac{\\ln 2}{2 n}$ 사이이므로 $0$ 으로 수렴하고, 첫째 항은 $\\frac{1}{2}\\int_{0}^{1}x^{2}\\ln(1+x)dx$ 로 수렴한다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "부분적분",
+   "text": "$$\\int_{0}^{1}x^{2}\\ln(1+x)dx=\\left[\\frac{x^{3}}{3}\\ln(1+x)\\right]_{0}^{1}-\\frac{1}{3}\\int_{0}^{1}\\left(x^{2}-x+1-\\frac{1}{1+x}\\right)dx=\\frac{2}{3}\\ln 2-\\frac{5}{18}$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "극한값은 $\\frac{1}{3}\\ln 2-\\frac{5}{36}$ 이므로 $36(q-p)=12+5=17$ 이다.",
+   "uses": [
+    "C2",
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "남는 항",
+   "cond": "C1",
+   "text": [
+    "$\\frac1{2n^2}\\sum\\le\\frac{\\ln2}{2n}$."
+   ]
+  },
+  {
+   "h": "$\\frac{x^3}{1+x}$",
+   "cond": "C1",
+   "text": [
+    "나눗셈 $x^2-x+1-\\frac1{1+x}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $j\\le k$",
+   "body": [
+    "$\\lim_{n\\to\\infty}\\sum_{k=1}^n\\sum_{j=1}^k\\frac k{n^3}\\ln\\left(1+\\frac jn\\right)=p+q\\ln2$일 때, $36(q-p)$의 값을 구하시오. (단, $p$, $q$는 유리수)"
+   ],
+   "answer": 37,
+   "hint": "$\\frac12\\int_0^1(1-t^2)\\ln(1+t)dt=\\frac23\\ln2-\\frac{13}{36}$."
+  }
+ ],
+ "line": "이중합 → 순서 교환 → 정적분."
+}

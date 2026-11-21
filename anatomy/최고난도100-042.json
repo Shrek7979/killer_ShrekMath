@@ -1,0 +1,112 @@
+{
+ "wrong": "예상 오답 — 치환에서 $dy=(1+\\cos t)dt$를 빠뜨려 $\\frac1\\pi\\int_0^\\pi t\\sin t=1$로 계산한 경우",
+ "intro": [
+  "$\\varphi=x+\\sin x$ 증가, $x_k=g\\left(\\frac{k\\pi}n\\right)$ — 역함수 값의 리만 합.",
+  "$y=\\varphi(t)$ 치환: $\\frac1\\pi\\int t\\sin t(1+\\cos t)dt$, 배각으로 정리."
+ ],
+ "conds": {
+  "C1": {
+   "label": "범위",
+   "why": "$1\\le k\\le n$.",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "방정식",
+   "why": "$x+\\sin x=\\frac{k\\pi}n$의 근 $x_k$.",
+   "uses": [
+    1
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$\\lim\\frac1n\\sum x_k\\sin x_k=L$, $100L$.",
+   "uses": [
+    2,
+    3,
+    4,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "정적분과 급수",
+   "p": [
+    "$\\lim\\frac1n\\sum_{k=1}^nf\\left(\\frac kn\\right)=\\int_0^1f(x)dx$."
+   ]
+  },
+  {
+   "h": "역함수 적분의 치환",
+   "p": [
+    "$\\int h(g(y))dy=\\int h(t)\\varphi'(t)dt$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "역함수",
+   "text": "$\\varphi(x)=x+\\sin x$ 라 하면 $\\varphi'(x)=1+\\cos x \\ge 0$ 이고 등호는 고립된 점에서만 성립하므로 $\\varphi(x)$ 는 증가한다. $\\varphi(0)=0$ , $\\varphi(\\pi)=\\pi$ 이므로 $\\varphi$ 의 역함수를 $g$ 라 하면 $x_{k}=g \\left(\\frac{k \\pi}{n}\\right)$ 이고",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "리만 합",
+   "text": "$$\\lim_{n \\to \\infty}\\frac{1}{n}\\sum_{k=1}^{n}x_{k}\\sin x_{k}=\\frac{1}{\\pi}\\int_{0}^{\\pi}g(y)\\sin g(y)dy$$",
+   "uses": [
+    "C1",
+    "C4"
+   ]
+  },
+  {
+   "title": "치환",
+   "text": "$y=\\varphi(t)$ 로 치환하면",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "계산",
+   "text": "$$\\frac{1}{\\pi}\\int_{0}^{\\pi}t \\sin t(1+\\cos t)dt=\\frac{1}{\\pi}\\left(\\int_{0}^{\\pi}t \\sin t dt+\\frac{1}{2}\\int_{0}^{\\pi}t \\sin 2 t dt \\right)=\\frac{1}{\\pi}\\left(\\pi-\\frac{\\pi}{4}\\right)=\\frac{3}{4}$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "( $\\int_{0}^{\\pi}t \\sin 2 t dt=\\left[-\\frac{t \\cos 2 t}{2}\\right]_{0}^{\\pi}+\\int_{0}^{\\pi}\\frac{\\cos 2 t}{2}dt=-\\frac{\\pi}{2}$ ) 따라서 $100 L=75$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "구간 길이",
+   "cond": "C4",
+   "text": [
+    "$\\frac{\\pi}{n}$ 간격 → $\\frac1\\pi$ 보정."
+   ]
+  },
+  {
+   "h": "배각",
+   "cond": "C4",
+   "text": [
+    "$\\sin t\\cos t=\\frac12\\sin2t$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\cos x_k$",
+   "body": [
+    "(같은 $x_k$에 대하여) $\\lim_{n\\to\\infty}\\frac1n\\sum_{k=1}^n\\cos x_k=L$일 때, $100L$의 값을 구하시오."
+   ],
+   "answer": 50,
+   "hint": "$\\frac1\\pi\\int_0^\\pi\\cos t(1+\\cos t)dt=\\frac12$."
+  }
+ ],
+ "line": "풀 수 없는 근의 합 → 역함수의 리만 합 → 치환."
+}
