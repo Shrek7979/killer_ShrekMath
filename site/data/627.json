@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2023학년도 9월 모의평가 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 범위의 끝점 $n=16$, $36$을 빼거나 $\\sigma$를 잘못 구한 경우",
  "answer": 546,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -47,9 +47,11 @@
     0
    ],
    "text": "정규분포 ${\\mathrm{N}}(m,\\,\\sigma^{2})$ 을 따르는 모집단의 확률변수를 $X$ 라 하고, 자연수 $n$ 에 대하여 이 모집단에서 크기가 $n$ 인 표본을 임의추출하여 구한 표본평균을 $\\overline{X}_{n}$ 이라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "설정",
+   "why": "모집단 $\\mathrm N(m,\\sigma^2)$, 표본평균 $\\bar X_n$.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C2",
@@ -69,9 +71,12 @@
     0
    ],
    "text": "(가) ${\\mathrm{P}}(X \\le 44)={\\mathrm{P}}(\\overline{X}_{4}\\ge 53)$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(가)",
+   "why": "$P(X\\le44)=P(\\bar X_4\\ge53)$.",
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C4",
@@ -80,9 +85,11 @@
     0
    ],
    "text": "(나) ${\\mathrm{P}}(\\overline{X}_{16}\\le 49)=0.159$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(나)",
+   "why": "$P(\\bar X_{16}\\le49)=0.159$.",
+   "uses": [
+    4
+   ]
   },
   {
    "id": "C5",
@@ -91,9 +98,13 @@
     0
    ],
    "text": "$0.067 \\le{\\mathrm{P}}(\\overline{X}_{n}\\ge 51)\\le 0.159$ 를 만족시키는 모든 자연수 $n$ 의 값의 합을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$0.067\\le P(\\bar X_n\\ge51)\\le0.159$인 $n$의 합.",
+   "uses": [
+    5,
+    6,
+    7
+   ]
   },
   {
    "id": "C6",
@@ -102,62 +113,117 @@
     1
    ],
    "text": "(단, $\\sigma>0$ 이고, $Z$ 가 표준정규분포를 따르는 확률변수일 때 ${\\mathrm{P}}(0 \\le Z \\le 1)=0.341$ , ${\\mathrm{P}}(0 \\le Z \\le 1.5)=0.433$ 으로 계산한다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "표",
+   "why": "$1$, $1.5$.",
+   "uses": [
+    6
+   ]
   }
  ],
  "intro": [
-  "모집단과 표본평균의 꼬리확률 비교로 모평균을, 표본평균의 확률로 모표준편차를 결정한 뒤, 표본의 크기 $n$ 에 따라 변하는 확률이 주어진 범위에 들어가는 $n$ 을 모두 찾게 하는 세 단계 구조"
+  "$\\bar X_n\\sim\\mathrm N\\left(m,\\frac{\\sigma^2}n\\right)$. (가) 두 꼬리 같음 → 표준화 값이 부호만 반대 → $m=50$.",
+  "(나) $0.159$ ↔ $Z=-1$ → $\\sigma=4$. 그다음 $P(Z\\ge\\frac{\\sqrt n}4)$가 범위 안인 $n$."
  ],
  "topic": "통계",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "표본평균의 분포",
+   "p": [
+    "표준편차 $\\frac\\sigma{\\sqrt n}$."
+   ]
+  },
+  {
+   "h": "꼬리 같음",
+   "p": [
+    "$P(Z\\le a)=P(Z\\ge b)$ ⟺ $a=-b$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$\\overline{X}_{n}$ 은 정규분포 ${\\mathrm{N}}\\left(m,\\,\\frac{\\sigma^{2}}{n}\\right)$ 을 따른다. (가)에서",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "분포"
   },
   {
    "n": 2,
    "text": "$${\\mathrm{P}}\\left(Z \\le \\frac{44-m}{\\sigma}\\right)={\\mathrm{P}}\\left(Z \\ge \\frac{53-m}{\\sigma/2}\\right)={\\mathrm{P}}\\left(Z \\le \\frac{2(m-53)}{\\sigma}\\right)$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "(가) 식"
   },
   {
    "n": 3,
    "text": "이므로 $44-m=2 m-106$ , $m=50$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "$m$"
   },
   {
    "n": 4,
    "text": "(나)에서 ${\\mathrm{P}}\\left(Z \\le \\frac{49-50}{\\sigma/4}\\right)=0.159=0.5-0.341$ 이므로 $-\\frac{4}{\\sigma}=-1$ , $\\sigma=4$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$\\sigma$"
   },
   {
    "n": 5,
    "text": "${\\mathrm{P}}(\\overline{X}_{n}\\ge 51)={\\mathrm{P}}\\left(Z \\ge \\frac{\\sqrt{n}}{4}\\right)$ 이고, 이 값은 $n$ 이 커질수록 작아진다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "단조"
   },
   {
    "n": 6,
    "text": "$0.067 \\le{\\mathrm{P}}\\left(Z \\ge \\frac{\\sqrt{n}}{4}\\right)\\le 0.159$ 에서 $1 \\le \\frac{\\sqrt{n}}{4}\\le 1.5$ , 즉 $16 \\le n \\le 36$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5",
+    "C6"
+   ],
+   "title": "범위"
   },
   {
    "n": 7,
    "text": "따라서 구하는 합은 $16+17+\\cdots+36=\\frac{21 \\times(16+36)}{2}=546$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "끝점 포함",
+   "cond": "C5",
+   "text": [
+    "등호 포함 → $16$, $36$ 모두."
+   ]
+  },
+  {
+   "h": "$\\bar X_4$의 표준편차",
+   "cond": "C3",
+   "text": [
+    "$\\frac\\sigma2$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\bar X_n\\ge52$",
+   "body": [
+    "(같은 조건에서) $0.067\\le P(\\bar X_n\\ge52)\\le0.159$를 만족시키는 모든 자연수 $n$의 값의 합을 구하시오."
+   ],
+   "answer": 39,
+   "hint": "$\\frac{2\\sqrt n}4\\in[1,1.5]$ → $4\\le n\\le9$."
+  }
+ ],
+ "line": "꼬리 비교로 평균, 확률값으로 표준편차, 단조성으로 $n$ 범위.",
  "note": ""
 }
