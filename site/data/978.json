@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 수능 공통 20번 유형(로그의 밑 변환) 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 밑 변환 후 $c=a^2$에서 $b$의 범위를 $a\\le b\\le a^2$로 잡은 경우",
  "answer": 106,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -27,38 +27,80 @@
     0
    ],
    "text": "$50$ 이하의 세 자연수 $a$ , $b$ , $c$ ( $2 \\le a<b<c$ )에 대하여 $\\log_{a}b \\times \\log_{b}c=2$ 를 만족시키는 순서쌍 $(a,\\,b,\\,c)$ 의 개수를 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "설정과 묻는 것",
+   "why": "구하는 값.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
   }
  ],
  "intro": [
-  "밑 변환 공식으로 $\\log_{a}c=2$ 를 얻어 $c=a^{2}$ 이고 $b$ 는 그 사이의 수임을 찾게 함"
+  "$\\log_ab\\cdot\\log_bc=\\log_ac=2$ → $c=a^2$.",
+  "$b$는 $a<b<a^2$ — $a^2-a-1$개."
  ],
  "topic": "로그의 곱이 자연수가 되는 세 수",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "밑 변환",
+   "p": [
+    "$\\log_ab\\log_bc=\\log_ac$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "밑 변환 공식에 의하여 $\\log_{a}b \\times \\log_{b}c=\\log_{a}c=2$ 이므로 $c=a^{2}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "변환"
   },
   {
    "n": 2,
    "text": "$a^{2}\\le 50$ 에서 $a=2,\\,3,\\,\\cdots,\\,7$ 이고, 각 $a$ 에 대하여 $b$ 는 $a<b<a^{2}$ 인 자연수 $a^{2}-a-1$ 개이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "세기"
   },
   {
    "n": 3,
    "text": "구하는 개수는 $\\sum_{a=2}^{7}(a^{2}-a-1)=106$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "합"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "엄격 부등호",
+   "cond": "C1",
+   "text": [
+    "$a<b<c$."
+   ]
+  },
+  {
+   "h": "$a^2\\le N$",
+   "cond": "C1",
+   "text": [
+    "$a$의 범위."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형",
+   "body": [
+    "$80$ 이하의 세 자연수 $a$, $b$, $c$ ($2\\le a<b<c$)에 대하여 $\\log_ab\\times\\log_bc=2$를 만족시키는 순서쌍 $(a,b,c)$의 개수를 구하시오."
+   ],
+   "answer": 161,
+   "hint": "$a=2\\sim8$."
+  }
+ ],
+ "line": "로그의 곱 → 밑 변환.",
  "note": ""
 }

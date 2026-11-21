@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 수능 공통 20번 유형(코사인법칙과 삼각형의 넓이) 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 내접원 반지름 공식을 $\\frac{S}{a+b+c}$로 써서 $2$배 차이가 난 경우",
  "answer": 9,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -27,32 +27,77 @@
     0
    ],
    "text": "$\\overline{{\\mathrm{AB}}}$ $=5$ , $\\overline{{\\mathrm{BC}}}$ $=7$ , $\\overline{{\\mathrm{CA}}}$ $=8$ 인 삼각형 ${\\mathrm{ABC}}$ 의 내접원의 반지름의 길이를 $r$ 이라 할 때, $3 r^{2}$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "설정과 묻는 것",
+   "why": "구하는 값.",
+   "uses": [
+    1,
+    2
+   ]
   }
  ],
  "intro": [
-  "넓이를 두 가지로 나타내어 내접원의 반지름을 구하게 함"
+  "코사인법칙으로 한 각, 넓이 $S$.",
+  "$S=\\frac12r(a+b+c)$."
  ],
  "topic": "내접원의 반지름",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "넓이",
+   "p": [
+    "$\\frac12bc\\sin A$ 또는 헤론."
+   ]
+  },
+  {
+   "h": "내접원",
+   "p": [
+    "$S=rs$ ($s$: 반둘레)."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$\\cos A=\\frac{25+64-49}{2 \\times 5 \\times 8}=\\frac{1}{2}$ 이므로 $A=\\frac{\\pi}{3}$ 이고 넓이는 $S=\\frac{40 \\sqrt{3}}{4}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "각과 넓이"
   },
   {
    "n": 2,
    "text": "$S=\\frac{1}{2}r(7+5+8)$ 이므로 $r=\\frac{40 \\sqrt{3}}{40}$ , $3 r^{2}=9$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "$r$"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "반둘레",
+   "cond": "C1",
+   "text": [
+    "$\\frac12(a+b+c)$."
+   ]
+  },
+  {
+   "h": "특수각",
+   "cond": "C1",
+   "text": [
+    "$\\cos A=\\frac12$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형",
+   "body": [
+    "$\\overline{\\mathrm{AB}}=9$, $\\overline{\\mathrm{BC}}=17$, $\\overline{\\mathrm{CA}}=10$인 삼각형 ABC의 내접원의 반지름을 $r$이라 할 때, $3r^2$의 값을 구하시오."
+   ],
+   "answer": 12,
+   "hint": "헤론: $S^2=1296$, $s=18$."
+  }
+ ],
+ "line": "넓이 = 반둘레 × 내접원 반지름.",
  "note": ""
 }
