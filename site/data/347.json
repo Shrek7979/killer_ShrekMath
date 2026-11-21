@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2024학년도 9월 모의평가 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **288** — R을 선분 BQ의 중점으로 보지 못하고 삼각형 PBQ 전체 넓이를 $S$로 쓴 경우",
  "answer": 72,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -40,9 +40,12 @@
     0
    ],
    "text": "길이가 $4$ 인 선분 ${\\mathrm{AB}}$ 를 지름으로 하는 원 위의 점 ${\\mathrm{P}}$ 를 $\\angle{\\mathrm{PAB}}=\\theta$ 가 되도록 잡는다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "원과 각",
+   "why": "지름 $4$, $\\angle\\mathrm{PAB}=\\theta$, 중심각 $2\\theta$.",
+   "uses": [
+    1,
+    2
+   ]
   },
   {
    "id": "C2",
@@ -51,9 +54,11 @@
     1
    ],
    "text": "직선 ${\\mathrm{AP}}$ 가 점 ${\\mathrm{B}}$ 에서 이 원에 접하는 직선과 만나는 점을 ${\\mathrm{Q}}$ , 점 ${\\mathrm{P}}$ 에서 이 원에 접하는 직선이 점 ${\\mathrm{B}}$ 에서 이 원에 접하는 직선과 만나는 점을 ${\\mathrm{R}}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "점 Q, R",
+   "why": "Q: 직선 AP와 B에서의 접선의 교점. R: P와 B에서의 두 접선의 교점.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C3",
@@ -62,9 +67,11 @@
     2
    ],
    "text": "삼각형 ${\\mathrm{PQR}}$ 의 넓이를 $S(\\theta)$ 라 할 때,",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "넓이",
+   "why": "$S=\\triangle\\mathrm{PQR}$.",
+   "uses": [
+    3
+   ]
   },
   {
    "id": "C4",
@@ -73,9 +80,12 @@
     0
    ],
    "text": "$S' \\left(\\frac{\\pi}{3}\\right)\\times \\lim_{\\theta \\to 0+}\\frac{S(\\theta)}{\\theta^{3}}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$S'\\left(\\frac\\pi3\\right)\\times\\lim\\frac S{\\theta^3}$.",
+   "uses": [
+    4,
+    5
+   ]
   },
   {
    "id": "C5",
@@ -101,44 +111,93 @@
   }
  ],
  "intro": [
-  "두 접선과 할선이 만드는 도형에서 점 ${\\mathrm{R}}$ 가 선분 ${\\mathrm{BQ}}$ 의 중점임을 발견하게 하여 넓이 함수를 간단히 나타내게 함"
+  "한 점에서 그은 두 접선의 길이는 같다 → $\\overline{\\mathrm{RB}}=\\overline{\\mathrm{RP}}$. 그리고 $\\overline{\\mathrm{BQ}}=4\\tan\\theta$, $\\overline{\\mathrm{RB}}=2\\tan\\theta$ — R은 BQ의 중점.",
+  "그러면 $S$는 삼각형 PBQ 넓이의 절반. 넓이 함수가 $4\\tan\\theta\\sin^2\\theta$로 간단해집니다."
  ],
  "topic": "여러 가지 미분법",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "접선의 길이",
+   "p": [
+    "원 밖의 한 점에서 그은 두 접선의 길이는 같다."
+   ]
+  },
+  {
+   "h": "중점과 넓이",
+   "p": [
+    "꼭짓점이 같고 밑변이 절반이면 넓이도 절반."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "원의 중심을 ${\\mathrm{O}}$ 라 하면 $\\angle{\\mathrm{POB}}=2 \\theta$ 이고, 점 ${\\mathrm{R}}$ 에서 그은 두 접선의 길이가 같으므로 $\\overline{{\\mathrm{RB}}}=\\overline{{\\mathrm{RP}}}=2 \\tan \\theta$ 이다. 한편 $\\overline{{\\mathrm{BQ}}}=\\overline{{\\mathrm{AB}}}\\tan \\theta=4 \\tan \\theta$ 이므로 ${\\mathrm{R}}$ 는 선분 ${\\mathrm{BQ}}$ 의 중점이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "R은 BQ의 중점"
   },
   {
    "n": 2,
    "text": "따라서 $S(\\theta)=\\frac{1}{2}\\times({삼 각 형 P B Q 의 넓 이})$ 이다. 점 ${\\mathrm{P}}$ 와 직선 ${\\mathrm{BQ}}$ 사이의 거리는 $2-2 \\cos 2 \\theta=4 \\sin^{2}\\theta$ 이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "높이"
   },
   {
    "n": 3,
    "text": "$$S(\\theta)=\\frac{1}{2}\\times \\frac{1}{2}\\times 4 \\tan \\theta \\times 4 \\sin^{2}\\theta=4 \\tan \\theta \\sin^{2}\\theta$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "넓이 함수"
   },
   {
    "n": 4,
    "text": "$S'(\\theta)=4 \\sec^{2}\\theta \\sin^{2}\\theta+8 \\tan \\theta \\sin \\theta \\cos \\theta=4 \\tan^{2}\\theta+8 \\sin^{2}\\theta$ 이므로 $S' \\left(\\frac{\\pi}{3}\\right)=12+6=18$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "미분계수"
   },
   {
    "n": 5,
    "text": "$\\lim_{\\theta \\to 0+}\\frac{S(\\theta)}{\\theta^{3}}=4$ 이므로 구하는 값은 $72$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "극한과 답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "중점 발견",
+   "cond": "C2",
+   "text": [
+    "$\\overline{\\mathrm{RB}}=2\\tan\\theta$는 $\\triangle\\mathrm{ORB}$에서 $\\angle\\mathrm{ROB}=\\theta$로."
+   ]
+  },
+  {
+   "h": "P의 높이",
+   "cond": "C3",
+   "text": [
+    "P와 직선 BQ의 거리 $=2-2\\cos2\\theta=4\\sin^2\\theta$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $S'\\left(\\frac\\pi4\\right)$",
+   "body": [
+    "길이가 $4$인 선분 AB를 지름으로 하는 원 위의 점 P를 $\\angle\\mathrm{PAB}=\\theta$가 되도록 잡는다. 직선 AP가 점 B에서 이 원에 접하는 직선과 만나는 점을 Q, 점 P에서 이 원에 접하는 직선이 점 B에서 이 원에 접하는 직선과 만나는 점을 R라 하자. 삼각형 PQR의 넓이를 $S(\\theta)$라 할 때, $S'\\left(\\frac\\pi4\\right)\\times\\lim_{\\theta\\to0+}\\frac{S(\\theta)}{\\theta^3}$의 값을 구하시오. (단, $0<\\theta<\\frac\\pi2$)"
+   ],
+   "answer": 32,
+   "hint": "$S'=4\\tan^2\\theta+8\\sin^2\\theta$ → $S'\\left(\\frac\\pi4\\right)=8$, 극한 $4$."
+  }
+ ],
+ "line": "두 접선의 길이가 같다 → 중점 발견 → 넓이 함수 단순화.",
  "note": ""
 }

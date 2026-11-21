@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2025학년도 6월 모의평가 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **24** — $b_{2n-1}\\approx2n\\pi$로 보아 $n\\delta_n\\to\\frac{12}\\pi$로 계산한 경우",
  "answer": 12,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -37,9 +37,12 @@
     0
    ],
    "text": "방정식 $x \\sin x=12$ 의 양의 실근을 작은 수부터 크기순으로 나열할 때, $n$ 번째 수를 $b_{n}$ 이라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "근의 수열",
+   "why": "$x\\sin x=12$의 양의 실근을 크기순으로 $b_n$.",
+   "uses": [
+    1,
+    2
+   ]
   },
   {
    "id": "C2",
@@ -48,9 +51,12 @@
     0
    ],
    "text": "$\\pi \\times \\lim_{n \\to \\infty}n \\left(\\pi+b_{2 n-1}-b_{2 n}\\right)$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\pi+b_{2n-1}-b_{2n}=\\delta_n+\\eta_n$, $n$을 곱한 극한.",
+   "uses": [
+    3,
+    4
+   ]
   },
   {
    "id": "C3",
@@ -65,38 +71,84 @@
   }
  ],
  "intro": [
-  "탄젠트 곡선 대신 사인 곡선과 $y=\\frac{12}{x}$ 의 교점으로 바꾸어, 한 주기 안에 두 근이 생기는 구간을 먼저 판정하고 근의 위치를 극한으로 추정하게 함"
+  "$\\sin x=\\frac{12}x$ — $\\sin x>0$인 반주기마다 근이 $0$개 또는 $2$개. 처음 두 반주기는 근이 없습니다.",
+  "근은 반주기의 양 끝에 붙어 $\\delta_n$, $\\eta_n\\to0$. $\\sin\\delta_n=\\frac{12}{b_{2n-1}}$로 크기를 추정합니다."
  ],
  "topic": "수열의 극한",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "$\\frac{\\sin x}x\\to1$",
+   "p": [
+    "$\\delta_n\\sim\\sin\\delta_n=\\frac{12}{b_{2n-1}}$."
+   ]
+  },
+  {
+   "h": "볼록성으로 근의 개수",
+   "p": [
+    "위로 볼록한 함수는 $0$이 되는 점이 많아야 $2$개."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$x \\sin x=12$ 는 $\\sin x=\\frac{12}{x}$ 이므로 $\\sin x>0$ 인 구간 $(2 k \\pi,\\,(2 k+1)\\pi)$ 에서만 근을 갖는다. $k=0,\\,1$ 이면 $x \\sin x<3 \\pi<12$ 이므로 근이 없다. $k \\ge 2$ 이면 $x=2 k \\pi+\\frac{\\pi}{2}$ 에서 $x \\sin x \\ge \\frac{9 \\pi}{2}>12$ 이고, 이 구간에서 $\\sin x$ 는 위로 볼록, $\\frac{12}{x}$ 는 아래로 볼록이므로 $\\sin x-\\frac{12}{x}$ 는 위로 볼록하여 근이 정확히 두 개이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "근이 있는 구간"
   },
   {
    "n": 2,
    "text": "따라서 $b_{2 n-1}=2(n+1)\\pi+\\delta_{n}$ , $b_{2 n}=(2 n+3)\\pi-e t a_{n}$ $\\left(0<\\delta_{n},\\,e t a_{n}<\\frac{\\pi}{2}\\right)$ 이고 $\\sin \\delta_{n}=\\frac{12}{b_{2 n-1}}$ , $\\sin e t a_{n}=\\frac{12}{b_{2 n}}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "근의 위치"
   },
   {
    "n": 3,
    "text": "$\\pi+b_{2 n-1}-b_{2 n}=\\delta_{n}+e t a_{n}$ 이고, $n \\delta_{n}=\\frac{12 n}{b_{2 n-1}}\\times \\frac{\\delta_{n}}{\\sin \\delta_{n}}\\to \\frac{12}{2 \\pi}$ , 같은 방법으로 $n e t a_{n}\\to \\frac{6}{\\pi}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "극한"
   },
   {
    "n": 4,
    "text": "따라서 구하는 값은 $\\pi \\times \\frac{12}{\\pi}=12$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$b_{2n}\\approx2n\\pi$",
+   "cond": "C2",
+   "text": [
+    "$\\frac{b_{2n-1}}n\\to2\\pi$입니다. $\\pi$로 쓰면 두 배가 됩니다."
+   ]
+  },
+  {
+   "h": "앞 구간 판정",
+   "cond": "C1",
+   "text": [
+    "$k=0,1$에서는 $x\\sin x<3\\pi<12$ — 근이 없음. 극한값에는 영향 없지만 첨자 정리에 필요."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $x\\sin x=20$",
+   "body": [
+    "방정식 $x\\sin x=20$의 양의 실근을 작은 수부터 크기순으로 나열할 때, $n$번째 수를 $b_n$이라 하자. $\\pi\\times\\lim_{n\\to\\infty}n(\\pi+b_{2n-1}-b_{2n})$의 값을 구하시오."
+   ],
+   "answer": 20,
+   "hint": "$n\\delta_n$, $n\\eta_n\\to\\frac{20}{2\\pi}$ → $\\pi\\times\\frac{20}\\pi=20$."
+  }
+ ],
+ "line": "근 = 주기 끝점 + 작은 오차. $\\frac{\\text{근}}n$의 극한을 정확히.",
  "note": ""
 }
