@@ -1,0 +1,124 @@
+{
+ "wrong": "예상 오답 — $g\\ne h$인 범위를 $\\alpha<t<\\beta$(극값 사이)로만 보아 $d=8$로 계산한 경우",
+ "intro": [
+  "$f-f(\\alpha)=(x-\\alpha)^2\\left(x-\\alpha-\\frac32d\\right)$ → $g\\ne f$는 $\\alpha<t<\\beta+\\frac d2$.",
+  "$h\\ne f$는 $\\alpha-\\frac d2<t<\\beta$ → 합집합 $\\left(\\alpha-\\frac d2,\\beta+\\frac d2\\right)$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "정의",
+   "why": "$g(t)=\\max_{x\\le t}f$, $h(t)=\\min_{x\\ge t}f$.",
+   "uses": [
+    2
+   ]
+  },
+  "C3": {
+   "label": "(가)",
+   "why": "$g\\ne h$ ⟺ $-3<t<5$.",
+   "uses": [
+    1,
+    3
+   ]
+  },
+  "C4": {
+   "label": "(나)",
+   "why": "$f(0)=2$.",
+   "uses": [
+    4
+   ]
+  },
+  "C5": {
+   "label": "묻는 것",
+   "why": "$g(6)+h(0)$.",
+   "uses": [
+    5,
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "삼차함수의 비율",
+   "p": [
+    "극값과 같은 값을 다시 갖는 점: $\\beta+\\frac d2$, $\\alpha-\\frac d2$."
+   ]
+  },
+  {
+   "h": "누적 최대·최소",
+   "p": [
+    "극값이 범위에 들어오면 고정."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "극값 존재",
+   "text": "$f(x)$가 극값을 갖지 않으면 $f(x)$는 실수 전체의 집합에서 증가하므로 $g(t)=h(t)=f(t)$가 되어 (가)에 모순이다. 따라서 $f(x)$는 $x=\\alpha$에서 극대, $x=\\beta$에서 극소 $(\\alpha<\\beta)$이다. $\\beta-\\alpha=d$라 하자.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "구간",
+   "text": "$f(x)-f(\\alpha)=(x-\\alpha)^{2}\\left(x-\\alpha-\\frac{3}{2}d \\right)$이므로 $\\alpha<t<\\beta+\\frac{d}{2}$일 때 $g(t)=f(\\alpha)>f(t)$이고, 그 밖의 $t$에서 $g(t)=f(t)$이다. 마찬가지로 $\\alpha-\\frac{d}{2}<t<\\beta$일 때 $h(t)=f(\\beta)<f(t)$이고, 그 밖의 $t$에서 $h(t)=f(t)$이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$d$",
+   "text": "따라서 $g(t)\\ne h(t)$인 $t$의 값의 범위는 $\\alpha-\\frac{d}{2}<t<\\beta+\\frac{d}{2}$이므로 $\\alpha-\\frac{d}{2}=-3$, $\\beta+\\frac{d}{2}=5$이다. 두 식을 변끼리 빼면 $2 d=8$에서 $d=4$이고 $\\alpha=-1$, $\\beta=3$이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$f$",
+   "text": "$f'(x)=3(x+1)(x-3)$과 (나)에서 $f(x)=x^{3}-3 x^{2}-9 x+2$이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "값",
+   "text": "$6>5$이므로 $g(6)=f(6)=56$이고, $-3<0<3$이므로 $h(0)=f(3)=-25$이다.",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $g(6)+h(0)=31$",
+   "uses": [
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\frac d2$",
+   "cond": "C3",
+   "text": [
+    "$\\alpha+\\frac32d=\\beta+\\frac d2$."
+   ]
+  },
+  {
+   "h": "$h(0)$",
+   "cond": "C5",
+   "text": [
+    "$0$이 $(\\alpha-\\frac d2,\\beta)$ 안 → $f(\\beta)$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $-4<t<8$",
+   "body": [
+    "(같은 정의에서) $g(t)\\ne h(t)$인 $t$의 범위가 $-4<t<8$이고 $f(0)=2$일 때, $g(9)+h(0)$의 값을 구하시오."
+   ],
+   "answer": 12,
+   "hint": "$d=6$, $\\alpha=-1$, $\\beta=5$, $f=x^3-6x^2-15x+2$ → $110-98$."
+  }
+ ],
+ "line": "삼차함수의 $\\frac d2$ 비율 → 누적 최대·최소의 경계."
+}
