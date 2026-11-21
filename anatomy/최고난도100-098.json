@@ -1,0 +1,114 @@
+{
+ "wrong": "예상 오답 — 구와 평면의 교원을 외접원으로 보거나 M′이 원 위에 있음을 놓친 경우",
+ "intro": [
+  "접선 길이 $t_\\mathrm A+t_\\mathrm B=12$ 등 → 모두 $6$ → 모서리 중점에서 접함.",
+  "교원 = BCD의 내접원. M′(AB 중점의 정사영)이 원 위 → $\\mathrm{QM'}\\in[0,4\\sqrt3]$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "구",
+   "why": "모서리 $12$인 정사면체의 여섯 모서리에 접하는 구 $S$.",
+   "uses": [
+    1,
+    2
+   ]
+  },
+  "C2": {
+   "label": "묻는 것",
+   "why": "$S\\cap$ 평면 BCD 위의 Q, $\\vec{\\mathrm{QA}}\\cdot\\vec{\\mathrm{QB}}$의 $M+m$.",
+   "uses": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "중점 내적",
+   "p": [
+    "$\\vec{\\mathrm{QA}}\\cdot\\vec{\\mathrm{QB}}=|\\mathrm{QM}|^2-|\\mathrm{MA}|^2$."
+   ]
+  },
+  {
+   "h": "접선 길이",
+   "p": [
+    "한 점에서 구에 그은 접선의 길이는 같음."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "접점",
+   "text": "구 $S$ 가 모서리에 접하는 점까지의 접선의 길이는 한 꼭짓점에서 모두 같다. 꼭짓점 ${\\mathrm{A}}$ , ${\\mathrm{B}}$ , ${\\mathrm{C}}$ , ${\\mathrm{D}}$ 에서의 접선의 길이를 $t_{{\\mathrm{A}}}$ , $t_{{\\mathrm{B}}}$ , $t_{{\\mathrm{C}}}$ , $t_{{\\mathrm{D}}}$ 라 하면, 접점이 모서리(선분) 위에 있으므로 두 꼭짓점의 접선의 길이의 합은 그 모서리의 길이와 같다. 즉 모든 두 꼭짓점에 대하여 합이 $12$ 이므로 네 값은 모두 $6$ 이고, 구 $S$ 는 각 모서리의 중점에서 접한다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "교원",
+   "text": "구 $S$ 와 평면 ${\\mathrm{BCD}}$ 가 만나서 생기는 원은 이 평면 위의 세 직선 ${\\mathrm{BC}}$ , ${\\mathrm{CD}}$ , ${\\mathrm{DB}}$ 에 각 변의 중점에서 접하므로 정삼각형 ${\\mathrm{BCD}}$ 의 내접원이다. 삼각형 ${\\mathrm{BCD}}$ 의 무게중심을 ${\\mathrm{G}}$ 라 하면 이 원은 중심이 ${\\mathrm{G}}$ , 반지름의 길이가 $\\frac{12}{2 \\sqrt{3}}=2 \\sqrt{3}$ 이고, $\\overline{{\\mathrm{GB}}}=\\frac{12}{\\sqrt{3}}=4 \\sqrt{3}$ 이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "높이",
+   "text": "점 ${\\mathrm{A}}$ 에서 평면 ${\\mathrm{BCD}}$ 에 내린 수선의 발은 ${\\mathrm{G}}$ 이고 $\\overline{{\\mathrm{AG}}}=\\sqrt{144-48}=4 \\sqrt{6}$ 이다. 선분 ${\\mathrm{AB}}$ 의 중점을 ${\\mathrm{M}}$ 이라 하면 $\\vec{{\\mathrm{QA}}}\\cdot \\vec{{\\mathrm{QB}}}=\\overline{{\\mathrm{QM}}}^{2}-\\overline{{\\mathrm{MA}}}^{2}=\\overline{{\\mathrm{QM}}}^{2}-36$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "정사영",
+   "text": "점 ${\\mathrm{M}}$ 에서 평면 ${\\mathrm{BCD}}$ 에 내린 수선의 발 ${\\mathrm{M'}}$ 은 선분 ${\\mathrm{GB}}$ 의 중점이고 $\\overline{{\\mathrm{MM'}}}=\\frac{1}{2}\\overline{{\\mathrm{AG}}}=2 \\sqrt{6}$ 이다. $\\overline{{\\mathrm{GM'}}}=2 \\sqrt{3}$ 이므로 점 ${\\mathrm{M'}}$ 은 내접원 위에 있다. 따라서 원 위의 점 ${\\mathrm{Q}}$ 에 대하여 $0 \\le \\overline{{\\mathrm{QM'}}}\\le 4 \\sqrt{3}$ 이고 양 끝값이 모두 실제로 생기므로",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$$\\overline{{\\mathrm{QM}}}^{2}=\\overline{{\\mathrm{QM'}}}^{2}+24,\\,\\,\\,24 \\le \\overline{{\\mathrm{QM}}}^{2}\\le 72$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이다. 따라서 $m=24-36=-12$ , $M=72-36=36$ 이고 $M+m=24$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\mathrm{GM'}=2\\sqrt3$",
+   "cond": "C2",
+   "text": [
+    "반지름과 같음 — 우연이 아닌 설계."
+   ]
+  },
+  {
+   "h": "피타고라스",
+   "cond": "C2",
+   "text": [
+    "$\\mathrm{QM}^2=\\mathrm{QM'}^2+\\mathrm{MM'}^2$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 모서리 $6$",
+   "body": [
+    "한 모서리의 길이가 $6$인 정사면체 ABCD의 여섯 모서리에 모두 접하는 구를 $S$라 하자. 구 $S$가 평면 BCD와 만나서 생기는 원 위의 점 Q에 대하여 $\\vec{\\mathrm{QA}}\\cdot\\vec{\\mathrm{QB}}$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $M+m$의 값을 구하시오."
+   ],
+   "answer": 6,
+   "hint": "$\\mathrm{QM}^2\\in[6,18]$, $-9$."
+  }
+ ],
+ "line": "공간 내적 → 중점 거리 → 정사영으로 평면화."
+}

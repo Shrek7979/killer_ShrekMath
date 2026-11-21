@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 3차 R3_기하B 21번( 2022학년도 대학수학능력시험 30번) 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 내적 조건을 무시하고 거리 최댓값 $3$을 써서 $50$으로 계산한 경우",
  "answer": 40,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -30,9 +30,11 @@
     0
    ],
    "text": "좌표공간에 구 $S:x^{2}+y^{2}+z^{2}=25$ 와 두 점 ${\\mathrm{A}}(6,\\,5,\\,8)$ , ${\\mathrm{B}}(6,\\,-5,\\,8)$ 이 있다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "구와 점",
+   "why": "$x^2+y^2+z^2=25$, A$(6,5,8)$, B$(6,-5,8)$.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C2",
@@ -41,9 +43,12 @@
     1
    ],
    "text": "구 $S$ 위의 점 ${\\mathrm{P}}$ 중에서 $\\vec{{\\mathrm{PA}}}\\cdot \\vec{{\\mathrm{PB}}}=20$ 을 만족시키는 모든 점 ${\\mathrm{P}}$ 의 집합을 $C$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "$C$",
+   "why": "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=20$인 구 위 점.",
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C3",
@@ -52,9 +57,15 @@
     2
    ],
    "text": "집합 $C$ 에 속하는 점 ${\\mathrm{Q}}$ 가 $\\vec{{\\mathrm{OQ}}}\\cdot \\vec{{\\mathrm{OA}}}\\ge 49$ 를 만족시킬 때, 사면체 ${\\mathrm{OABQ}}$ 의 부피의 최댓값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건",
+   "why": "$\\vec{\\mathrm{OQ}}\\cdot\\vec{\\mathrm{OA}}\\ge49$, 사면체 OABQ의 부피 최댓값.",
+   "uses": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
   },
   {
    "id": "C4",
@@ -63,68 +74,125 @@
     3
    ],
    "text": "(단, ${\\mathrm{O}}$ 는 원점이다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "단서",
+   "why": "O는 원점.",
+   "uses": [
+    8
+   ]
   }
  ],
  "intro": [
-  "원 위의 점과 직선 사이의 거리 대신 평면 ${\\mathrm{OAB}}$ 까지의 거리를 묻게 하여 원을 품은 평면과 평면 ${\\mathrm{OAB}}$ 가 수직임을 찾게 하고, 내적 조건 $\\vec{{\\mathrm{OQ}}}\\cdot \\vec{{\\mathrm{OA}}}\\ge 49$ 를 원 위에서의 각의 조건으로 바꾸어 가장 먼 점이 잘려 나가 최댓값이 호의 끝점에서 생기게 함"
+  "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=\\mathrm{PM}^2-25$ → $\\vec{\\mathrm{OP}}\\cdot\\vec{\\mathrm{OM}}=40$ → OM에 수직인 평면 위 원(반지름 $3$).",
+  "원의 평면 ⊥ 평면 OAB. $\\vec{\\mathrm{OQ}}\\cdot\\vec{\\mathrm{OA}}=40+15\\cos t\\ge49$ → $|\\sin t|\\le\\frac45$."
  ],
  "topic": "공간도형과 공간좌표",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "중점 내적",
+   "p": [
+    "$\\vec{\\mathrm{QA}}\\cdot\\vec{\\mathrm{QB}}=|\\mathrm{QM}|^2-|\\mathrm{MA}|^2$."
+   ]
+  },
+  {
+   "h": "수직인 두 평면",
+   "p": [
+    "한 평면 위 점에서 다른 평면까지 거리 = 교선까지 거리."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "선분 ${\\mathrm{AB}}$ 의 중점은 ${\\mathrm{M}}(6,\\,0,\\,8)$ 이고 $\\overline{{\\mathrm{OM}}}=10$ , $\\vec{{\\mathrm{MA}}}=(0,\\,5,\\,0)$ , $\\vec{{\\mathrm{OM}}}\\cdot \\vec{{\\mathrm{MA}}}=0$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "중점"
   },
   {
    "n": 2,
    "text": "$$\\vec{{\\mathrm{PA}}}\\cdot \\vec{{\\mathrm{PB}}}=\\overline{{\\mathrm{PM}}}^{2}-\\overline{{\\mathrm{MA}}}^{2}=\\overline{{\\mathrm{PM}}}^{2}-25=20$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "식"
   },
   {
    "n": 3,
    "text": "에서 $\\overline{{\\mathrm{PM}}}^{2}=45$ 이다. 점 ${\\mathrm{P}}$ 가 구 $S$ 위에 있으므로 $\\overline{{\\mathrm{PM}}}^{2}=25-2 \\vec{{\\mathrm{OP}}}\\cdot \\vec{{\\mathrm{OM}}}+100$ 에서 $\\vec{{\\mathrm{OP}}}\\cdot \\vec{{\\mathrm{OM}}}=40$ 이다. 즉 $\\vec{{\\mathrm{OP}}}$ 의 $\\vec{{\\mathrm{OM}}}$ 방향 성분이 $4$ 로 일정하므로 $C$ 는 직선 ${\\mathrm{OM}}$ 에 수직인 평면 $\\gamma$ 위의 원이고, 중심은 선분 ${\\mathrm{OM}}$ 위의 $\\overline{{\\mathrm{OK}}}=4$ 인 점 ${\\mathrm{K}}$ , 반지름의 길이는 $\\sqrt{25-16}=3$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "원"
   },
   {
    "n": 4,
    "text": "평면 ${\\mathrm{OAB}}$ 는 직선 ${\\mathrm{OM}}$ 을 포함하므로 평면 $\\gamma$ 와 수직이고, 두 평면의 교선 $m$ 은 점 ${\\mathrm{K}}$ 를 지나며 ${\\mathrm{OM}}$ 에 수직이므로 $\\vec{{\\mathrm{MA}}}$ 와 평행하다. 평면 $\\gamma$ 위에서 교선 $m$ 의 방향의 단위벡터를 $\\vec{e}=\\frac{1}{5}\\vec{{\\mathrm{MA}}}$ , 이에 수직인 단위벡터를 $\\vec{f}$ 라 하면 $\\vec{{\\mathrm{KQ}}}=3 \\cos t \\vec{e}+3 \\sin t \\vec{f}$ 로 놓을 수 있고, 점 ${\\mathrm{Q}}$ 와 평면 ${\\mathrm{OAB}}$ 사이의 거리는 ${\\mathrm{Q}}$ 와 교선 $m$ 사이의 거리 $3|\\sin t|$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "수직"
   },
   {
    "n": 5,
    "text": "$\\vec{{\\mathrm{OK}}}=\\frac{2}{5}\\vec{{\\mathrm{OM}}}$ 이고 $\\vec{{\\mathrm{KQ}}}$ 는 $\\vec{{\\mathrm{OM}}}$ 에 수직이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "성분"
   },
   {
    "n": 6,
    "text": "$$\\vec{{\\mathrm{OQ}}}\\cdot \\vec{{\\mathrm{OA}}}=\\vec{{\\mathrm{OK}}}\\cdot(\\vec{{\\mathrm{OM}}}+\\vec{{\\mathrm{MA}}})+\\vec{{\\mathrm{KQ}}}\\cdot(\\vec{{\\mathrm{OM}}}+\\vec{{\\mathrm{MA}}})=40+\\vec{{\\mathrm{KQ}}}\\cdot \\vec{{\\mathrm{MA}}}=40+15 \\cos t$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "내적"
   },
   {
    "n": 7,
    "text": "이다. 조건 $40+15 \\cos t \\ge 49$ 는 $\\cos t \\ge \\frac{3}{5}$ 이므로 $|\\sin t|\\le \\frac{4}{5}$ 이고, $\\cos t=\\frac{3}{5}$ 일 때 등호가 성립한다. 따라서 점 ${\\mathrm{Q}}$ 와 평면 ${\\mathrm{OAB}}$ 사이의 거리의 최댓값은 $\\frac{12}{5}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "범위"
   },
   {
    "n": 8,
    "text": "삼각형 ${\\mathrm{OAB}}$ 의 넓이는 $\\frac{1}{2}\\times \\overline{{\\mathrm{AB}}}\\times \\overline{{\\mathrm{OM}}}=\\frac{1}{2}\\times 10 \\times 10=50$ 이므로 부피의 최댓값은 $\\frac{1}{3}\\times 50 \\times \\frac{12}{5}=40$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3",
+    "C4"
+   ],
+   "title": "부피"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "끝점",
+   "cond": "C3",
+   "text": [
+    "가장 먼 점($\\sin t=\\pm1$)이 잘려 나감."
+   ]
+  },
+  {
+   "h": "OAB 넓이",
+   "cond": "C3",
+   "text": [
+    "$\\frac12\\cdot10\\cdot10$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\ge52$",
+   "body": [
+    "(같은 구 $S$, 점 A, B, 집합 $C$에 대하여) $C$에 속하는 점 Q가 $\\vec{\\mathrm{OQ}}\\cdot\\vec{\\mathrm{OA}}\\ge52$를 만족시킬 때, 사면체 OABQ의 부피의 최댓값을 구하시오. (단, O는 원점)"
+   ],
+   "answer": 30,
+   "hint": "$\\cos t\\ge\\frac45$ → 거리 $\\frac95$."
+  }
+ ],
+ "line": "구 위 내적 조건 → 평면으로 자른 원 → 각의 범위.",
  "note": ""
 }
