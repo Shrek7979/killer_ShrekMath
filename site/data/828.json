@@ -100,7 +100,7 @@
   },
   {
    "n": 3,
-   "text": "이다. 직선 $l$ 은 ${\\mathrm{OQ}}$ 에 수직이고 ${\\mathrm{O}}$ 에서 거리가 $5$ 이므로 $\\angle{\\mathrm{HOQ}}=v a r \\phi$ 라 하면 $\\overline{{\\mathrm{HK}}}=5-a \\cos v a r \\phi$ 이고, ${\\mathrm{Q}}$ 가 움직일 때 $\\overline{{\\mathrm{HK}}}$ 의 범위는 $5-a \\le \\overline{{\\mathrm{HK}}}\\le 5+a$ 이다.",
+   "text": "이다. 직선 $l$ 은 ${\\mathrm{OQ}}$ 에 수직이고 ${\\mathrm{O}}$ 에서 거리가 $5$ 이므로 $\\angle{\\mathrm{HOQ}}=\\varphi$ 라 하면 $\\overline{{\\mathrm{HK}}}=5-a \\cos \\varphi$ 이고, ${\\mathrm{Q}}$ 가 움직일 때 $\\overline{{\\mathrm{HK}}}$ 의 범위는 $5-a \\le \\overline{{\\mathrm{HK}}}\\le 5+a$ 이다.",
    "uses": [],
    "title": ""
   },

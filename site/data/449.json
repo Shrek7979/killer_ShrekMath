@@ -96,19 +96,19 @@
  "steps": [
   {
    "n": 1,
-   "text": "$f'(x)=t e^{x}-2 x=e^{x}\\left(t-2 x e^{-x}\\right)$ 이다. $v a r \\phi(x)=2 x e^{-x}$ 이라 하면 $v a r \\phi'(x)=2(1-x)e^{-x}$ 이므로 $v a r \\phi$ 는 $x=1$ 에서 최댓값 $\\frac{2}{e}$ 를 갖고, $x \\le 0$ 에서 $v a r \\phi(x)\\le 0$ , $x \\to \\infty$ 일 때 $v a r \\phi(x)\\to 0$ 이다.",
+   "text": "$f'(x)=t e^{x}-2 x=e^{x}\\left(t-2 x e^{-x}\\right)$ 이다. $\\varphi(x)=2 x e^{-x}$ 이라 하면 $\\varphi'(x)=2(1-x)e^{-x}$ 이므로 $\\varphi$ 는 $x=1$ 에서 최댓값 $\\frac{2}{e}$ 를 갖고, $x \\le 0$ 에서 $\\varphi(x)\\le 0$ , $x \\to \\infty$ 일 때 $\\varphi(x)\\to 0$ 이다.",
    "uses": [],
    "title": ""
   },
   {
    "n": 2,
-   "text": "$0<t<\\frac{2}{e}$ 이면 $v a r \\phi(x)=t$ 의 해는 $0<x_{1}<1<x_{2}$ 인 두 개이고, $f'(x)$ 의 부호는 $x<x_{1}$ 에서 양, $x_{1}<x<x_{2}$ 에서 음, $x>x_{2}$ 에서 양이다. 따라서 $g(t)=x_{1}\\in(0,\\,1)$ , $h(t)=x_{2}>1$ 이고 $t=v a r \\phi(g(t))=v a r \\phi(h(t))$ 이다.",
+   "text": "$0<t<\\frac{2}{e}$ 이면 $\\varphi(x)=t$ 의 해는 $0<x_{1}<1<x_{2}$ 인 두 개이고, $f'(x)$ 의 부호는 $x<x_{1}$ 에서 양, $x_{1}<x<x_{2}$ 에서 음, $x>x_{2}$ 에서 양이다. 따라서 $g(t)=x_{1}\\in(0,\\,1)$ , $h(t)=x_{2}>1$ 이고 $t=\\varphi(g(t))=\\varphi(h(t))$ 이다.",
    "uses": [],
    "title": ""
   },
   {
    "n": 3,
-   "text": "$t=v a r \\phi(g(t))$ 를 미분하면 $1=v a r \\phi'(g(t))g'(t)$ 이므로",
+   "text": "$t=\\varphi(g(t))$ 를 미분하면 $1=\\varphi'(g(t))g'(t)$ 이므로",
    "uses": [],
    "title": ""
   },

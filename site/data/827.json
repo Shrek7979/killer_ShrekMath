@@ -102,7 +102,7 @@
   },
   {
    "n": 4,
-   "text": "이므로 두 평면 ${\\mathrm{ABC}}$ , ${\\mathrm{ABD}}$ 가 이루는 각 $v a r \\phi$ 에 대하여 $\\cos v a r \\phi=\\frac{1}{7}$ 이다. 삼각형 ${\\mathrm{ABC}}$ 의 넓이는 $\\frac{1}{2}\\times 4 \\times \\sqrt{21}=2 \\sqrt{21}$ 이므로",
+   "text": "이므로 두 평면 ${\\mathrm{ABC}}$ , ${\\mathrm{ABD}}$ 가 이루는 각 $\\varphi$ 에 대하여 $\\cos \\varphi=\\frac{1}{7}$ 이다. 삼각형 ${\\mathrm{ABC}}$ 의 넓이는 $\\frac{1}{2}\\times 4 \\times \\sqrt{21}=2 \\sqrt{21}$ 이므로",
    "uses": [],
    "title": ""
   },

@@ -63,9 +63,9 @@
    "answer": [
     "$\\overline{\\mathrm{PK}}^{2}=\\left(1+e^{2 t}\\right)^{2}+\\left(e^{t}+e^{-t}\\right)^{2}$ 이고 $e^{t}+e^{-t}=e^{-t}\\left(1+e^{2 t}\\right)$ 이므로",
     "$\\overline{\\mathrm{PK}}^{2}=\\left(1+e^{2 t}\\right)^{2}\\left(1+e^{-2 t}\\right)=\\frac{\\left(1+e^{2 t}\\right)^{3}}{e^{2 t}}$",
-    "이다. $u=e^{2 t}$ 이라 하면 $u$ 는 모든 양수 값을 갖는다. $v a r \\phi(u)=\\frac{(1+u)^{3}}{u}$ 이라 하면",
-    "$v a r \\phi'(u)=\\frac{3 u(1+u)^{2}-(1+u)^{3}}{u^{2}}=\\frac{(1+u)^{2}(2 u-1)}{u^{2}}$",
-    "이므로 $v a r \\phi(u)$ 는 $0<u<\\frac{1}{2}$ 에서 감소하고 $u>\\frac{1}{2}$ 에서 증가한다. 따라서 $u=\\frac{1}{2}$ , 즉 $t=-\\frac{\\ln 2}{2}$ 일 때 최소이고 $v a r \\phi \\left(\\frac{1}{2}\\right)=\\frac{27}{4}$ 이므로 선분 $\\mathrm{PK}$ 의 길이의 최솟값은 $\\frac{3 \\sqrt{3}}{2}$ 이다.",
+    "이다. $u=e^{2 t}$ 이라 하면 $u$ 는 모든 양수 값을 갖는다. $\\varphi(u)=\\frac{(1+u)^{3}}{u}$ 이라 하면",
+    "$\\varphi'(u)=\\frac{3 u(1+u)^{2}-(1+u)^{3}}{u^{2}}=\\frac{(1+u)^{2}(2 u-1)}{u^{2}}$",
+    "이므로 $\\varphi(u)$ 는 $0<u<\\frac{1}{2}$ 에서 감소하고 $u>\\frac{1}{2}$ 에서 증가한다. 따라서 $u=\\frac{1}{2}$ , 즉 $t=-\\frac{\\ln 2}{2}$ 일 때 최소이고 $\\varphi \\left(\\frac{1}{2}\\right)=\\frac{27}{4}$ 이므로 선분 $\\mathrm{PK}$ 의 길이의 최솟값은 $\\frac{3 \\sqrt{3}}{2}$ 이다.",
     "다음으로 점 $\\mathrm{K}$ 의 좌표를 $(X(t),\\,Y(t))$ 라 하면",
     "$X'(t)=1-2 e^{2 t},\\,Y'(t)=2 e^{t}-e^{-t}=-e^{-t}\\left(1-2 e^{2 t}\\right)$",
     "이므로 $\\sqrt{\\left\\{X'(t)\\right\\}^{2}+\\left\\{Y'(t)\\right\\}^{2}}=\\left|1-2 e^{2 t}\\right|\\sqrt{1+e^{-2 t}}$ 이다. $0 \\le t \\le \\frac{\\ln 3}{2}$ 에서 $2 e^{2 t}-1>0$ 이므로 점 $\\mathrm{K}$ 가 움직인 거리는",

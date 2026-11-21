@@ -103,31 +103,31 @@
  "steps": [
   {
    "n": 1,
-   "text": "(가)에서 $\\vec{{\\mathrm{OQ}}}$ 는 $\\vec{{\\mathrm{OP}}}$ 를 원점을 중심으로 $\\frac{\\pi}{2}$ 또는 $-\\frac{\\pi}{2}$ 만큼 회전한 방향이고 크기가 $2$ 배이다. ${\\mathrm{P}}(2 \\cos v a r \\phi,\\,2 \\sin v a r \\phi)$ $\\left(0 \\le v a r \\phi \\le \\frac{\\pi}{2}\\right)$ 라 하자.",
+   "text": "(가)에서 $\\vec{{\\mathrm{OQ}}}$ 는 $\\vec{{\\mathrm{OP}}}$ 를 원점을 중심으로 $\\frac{\\pi}{2}$ 또는 $-\\frac{\\pi}{2}$ 만큼 회전한 방향이고 크기가 $2$ 배이다. ${\\mathrm{P}}(2 \\cos \\varphi,\\,2 \\sin \\varphi)$ $\\left(0 \\le \\varphi \\le \\frac{\\pi}{2}\\right)$ 라 하자.",
    "uses": [],
    "title": ""
   },
   {
    "n": 2,
-   "text": "(i) ${\\mathrm{Q}}(-4 \\sin v a r \\phi,\\,4 \\cos v a r \\phi)$ 인 경우: $y$ 좌표 $4 \\cos v a r \\phi \\ge 0$ 이 항상 성립한다. 이때",
+   "text": "(i) ${\\mathrm{Q}}(-4 \\sin \\varphi,\\,4 \\cos \\varphi)$ 인 경우: $y$ 좌표 $4 \\cos \\varphi \\ge 0$ 이 항상 성립한다. 이때",
    "uses": [],
    "title": ""
   },
   {
    "n": 3,
-   "text": "$$\\vec{{\\mathrm{OX}}}=(2 \\cos v a r \\phi-4 \\sin v a r \\phi,\\,2 \\sin v a r \\phi+4 \\cos v a r \\phi)$$",
+   "text": "$$\\vec{{\\mathrm{OX}}}=(2 \\cos \\varphi-4 \\sin \\varphi,\\,2 \\sin \\varphi+4 \\cos \\varphi)$$",
    "uses": [],
    "title": ""
   },
   {
    "n": 4,
-   "text": "이고 $|\\vec{{\\mathrm{OX}}}|^{2}=4+16=20$ 이다. $v a r \\phi=0$ 일 때 ${\\mathrm{X}}(2,\\,4)$ , $v a r \\phi=\\frac{\\pi}{2}$ 일 때 ${\\mathrm{X}}(-4,\\,2)$ 이고 $v a r \\phi$ 가 커지면 $\\vec{{\\mathrm{OX}}}$ 도 같은 각만큼 회전하므로, 점 ${\\mathrm{X}}$ 는 원 $x^{2}+y^{2}=20$ 위의 두 점 $(2,\\,4)$ , $(-4,\\,2)$ 를 잇는 짧은 호 위를 움직인다.",
+   "text": "이고 $|\\vec{{\\mathrm{OX}}}|^{2}=4+16=20$ 이다. $\\varphi=0$ 일 때 ${\\mathrm{X}}(2,\\,4)$ , $\\varphi=\\frac{\\pi}{2}$ 일 때 ${\\mathrm{X}}(-4,\\,2)$ 이고 $\\varphi$ 가 커지면 $\\vec{{\\mathrm{OX}}}$ 도 같은 각만큼 회전하므로, 점 ${\\mathrm{X}}$ 는 원 $x^{2}+y^{2}=20$ 위의 두 점 $(2,\\,4)$ , $(-4,\\,2)$ 를 잇는 짧은 호 위를 움직인다.",
    "uses": [],
    "title": ""
   },
   {
    "n": 5,
-   "text": "(ii) ${\\mathrm{Q}}(4 \\sin v a r \\phi,\\,-4 \\cos v a r \\phi)$ 인 경우: $y$ 좌표 $-4 \\cos v a r \\phi \\ge 0$ 이므로 $v a r \\phi=\\frac{\\pi}{2}$ 뿐이고, ${\\mathrm{P}}(0,\\,2)$ , ${\\mathrm{Q}}(4,\\,0)$ , ${\\mathrm{X}}(4,\\,2)$ 이다.",
+   "text": "(ii) ${\\mathrm{Q}}(4 \\sin \\varphi,\\,-4 \\cos \\varphi)$ 인 경우: $y$ 좌표 $-4 \\cos \\varphi \\ge 0$ 이므로 $\\varphi=\\frac{\\pi}{2}$ 뿐이고, ${\\mathrm{P}}(0,\\,2)$ , ${\\mathrm{Q}}(4,\\,0)$ , ${\\mathrm{X}}(4,\\,2)$ 이다.",
    "uses": [],
    "title": ""
   },

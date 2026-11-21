@@ -60,21 +60,21 @@
   },
   {
    "title": "대칭",
-   "text": "$v a r \\phi(x)=\\frac{x}{2}-\\pi+\\sin x$ 라 하면 $f'(x)=\\cos v a r \\phi(x)\\times \\left(\\frac{1}{2}+\\cos x \\right)$ 이고 $v a r \\phi(4 \\pi-x)=-v a r \\phi(x)$ 이므로 $f(4 \\pi-x)=-f(x)$ , 극값을 갖는 점들은 $x=2 \\pi$ 에 대하여 대칭이다. 따라서 $S=2 \\pi n$",
+   "text": "$\\phi(x)=\\frac{x}{2}-\\pi+\\sin x$ 라 하면 $f'(x)=\\cos \\phi(x)\\times \\left(\\frac{1}{2}+\\cos x \\right)$ 이고 $\\phi(4 \\pi-x)=-\\phi(x)$ 이므로 $f(4 \\pi-x)=-f(x)$ , 극값을 갖는 점들은 $x=2 \\pi$ 에 대하여 대칭이다. 따라서 $S=2 \\pi n$",
    "uses": [
     "C1"
    ]
   },
   {
    "title": "$\\varphi$의 극값점",
-   "text": "$v a r \\phi$ 의 극값점은 $\\frac{2 \\pi}{3},\\,\\frac{4 \\pi}{3},\\,\\frac{8 \\pi}{3},\\,\\frac{10 \\pi}{3}$ 이고",
+   "text": "$\\phi$ 의 극값점은 $\\frac{2 \\pi}{3},\\,\\frac{4 \\pi}{3},\\,\\frac{8 \\pi}{3},\\,\\frac{10 \\pi}{3}$ 이고",
    "uses": [
     "C1"
    ]
   },
   {
    "title": "극값들",
-   "text": "$v a r \\phi(0)=-\\pi$ , $v a r \\phi \\left(\\frac{2 \\pi}{3}\\right)=-\\frac{2 \\pi}{3}+\\frac{\\sqrt{3}}{2}$ , $v a r \\phi \\left(\\frac{4 \\pi}{3}\\right)=-\\frac{\\pi}{3}-\\frac{\\sqrt{3}}{2}$ , $v a r \\phi \\left(\\frac{8 \\pi}{3}\\right)=\\frac{\\pi}{3}+\\frac{\\sqrt{3}}{2}$ , $v a r \\phi \\left(\\frac{10 \\pi}{3}\\right)=\\frac{2 \\pi}{3}-\\frac{\\sqrt{3}}{2}$ , $v a r \\phi(4 \\pi)=\\pi$",
+   "text": "$\\phi(0)=-\\pi$ , $\\phi \\left(\\frac{2 \\pi}{3}\\right)=-\\frac{2 \\pi}{3}+\\frac{\\sqrt{3}}{2}$ , $\\phi \\left(\\frac{4 \\pi}{3}\\right)=-\\frac{\\pi}{3}-\\frac{\\sqrt{3}}{2}$ , $\\phi \\left(\\frac{8 \\pi}{3}\\right)=\\frac{\\pi}{3}+\\frac{\\sqrt{3}}{2}$ , $\\phi \\left(\\frac{10 \\pi}{3}\\right)=\\frac{2 \\pi}{3}-\\frac{\\sqrt{3}}{2}$ , $\\phi(4 \\pi)=\\pi$",
    "uses": [
     "C1"
    ]
@@ -88,7 +88,7 @@
   },
   {
    "title": "답",
-   "text": "$\\cos v a r \\phi=0$ , 즉 $v a r \\phi=\\pm \\frac{\\pi}{2}$ 가 되는 점은 다섯 단조 구간에서 차례로 $1,\\,1,\\,2,\\,1,\\,1$ 개로 $6$ 개이고, $v a r \\phi$ 의 극값점 $4$ 개에서는 $\\cos v a r \\phi \\ne 0$ 이고 $\\frac{1}{2}+\\cos x$ 의 부호가 바뀌므로 극값을 갖는다. 따라서 $n=10$ , $S=20 \\pi$ 이고 $n+\\frac{S}{\\pi}=30$",
+   "text": "$\\cos \\phi=0$ , 즉 $\\phi=\\pm \\frac{\\pi}{2}$ 가 되는 점은 다섯 단조 구간에서 차례로 $1,\\,1,\\,2,\\,1,\\,1$ 개로 $6$ 개이고, $\\phi$ 의 극값점 $4$ 개에서는 $\\cos \\phi \\ne 0$ 이고 $\\frac{1}{2}+\\cos x$ 의 부호가 바뀌므로 극값을 갖는다. 따라서 $n=10$ , $S=20 \\pi$ 이고 $n+\\frac{S}{\\pi}=30$",
    "uses": [
     "C4"
    ]

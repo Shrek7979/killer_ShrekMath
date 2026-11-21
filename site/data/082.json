@@ -78,7 +78,7 @@
   },
   {
    "n": 2,
-   "text": "$\\sum_{k=1}^{6}\\frac{1}{a_{k a}_{k+1}}=\\frac{1}{d}\\left(\\frac{1}{a_{1}}-\\frac{1}{a_{7}}\\right)=\\frac{1}{d}\\left(-\\frac{1}{7 d}+\\frac{1}{d}\\right)=\\frac{6}{7 d^{2}}=\\frac{2}{21}$ 에서 $d^{2}=9$ 이다.",
+   "text": "$\\sum_{k=1}^{6}\\frac{1}{a_{k}a_{k+1}}=\\frac{1}{d}\\left(\\frac{1}{a_{1}}-\\frac{1}{a_{7}}\\right)=\\frac{1}{d}\\left(-\\frac{1}{7 d}+\\frac{1}{d}\\right)=\\frac{6}{7 d^{2}}=\\frac{2}{21}$ 에서 $d^{2}=9$ 이다.",
    "uses": [],
    "title": ""
   },

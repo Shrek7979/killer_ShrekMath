@@ -114,25 +114,25 @@
   },
   {
    "n": 2,
-   "text": "$v a r \\phi(x)=f(x)-t(x-2)-2 e^{-2}$ 이라 하면 $v a r \\phi(2)=0$ , $v a r \\phi'(x)=f'(x)-t$ 이다.",
+   "text": "$\\varphi(x)=f(x)-t(x-2)-2 e^{-2}$ 이라 하면 $\\varphi(2)=0$ , $\\varphi'(x)=f'(x)-t$ 이다.",
    "uses": [],
    "title": ""
   },
   {
    "n": 3,
-   "text": "(i) $t \\le-e^{-2}$ 이면 $v a r \\phi'(x)\\ge 0$ 이므로 $v a r \\phi(x)$ 는 증가하고 $g(t)=1$ 이다.",
+   "text": "(i) $t \\le-e^{-2}$ 이면 $\\varphi'(x)\\ge 0$ 이므로 $\\varphi(x)$ 는 증가하고 $g(t)=1$ 이다.",
    "uses": [],
    "title": ""
   },
   {
    "n": 4,
-   "text": "(ii) $-e^{-2}<t<0$ 이면 $f'(x)=t$ 인 $x$ 가 $x_{1}<2<x_{2}$ 로 두 개이고, $v a r \\phi(x)$ 는 $x_{1}$ 에서 극대, $x_{2}$ 에서 극소이며 $v a r \\phi(x_{1})>v a r \\phi(2)=0>v a r \\phi(x_{2})$ 이다. $x \\to-\\infty$ 일 때 $v a r \\phi(x)\\to-\\infty$ , $x \\to \\infty$ 일 때 $v a r \\phi(x)\\to \\infty$ 이므로 $g(t)=3$ 이다.",
+   "text": "(ii) $-e^{-2}<t<0$ 이면 $f'(x)=t$ 인 $x$ 가 $x_{1}<2<x_{2}$ 로 두 개이고, $\\varphi(x)$ 는 $x_{1}$ 에서 극대, $x_{2}$ 에서 극소이며 $\\varphi(x_{1})>\\varphi(2)=0>\\varphi(x_{2})$ 이다. $x \\to-\\infty$ 일 때 $\\varphi(x)\\to-\\infty$ , $x \\to \\infty$ 일 때 $\\varphi(x)\\to \\infty$ 이므로 $g(t)=3$ 이다.",
    "uses": [],
    "title": ""
   },
   {
    "n": 5,
-   "text": "(iii) $t \\ge 0$ 이면 $f'(x)=t$ 인 $x$ 는 $x_{0}\\le 1$ 하나뿐이고 $v a r \\phi(x)$ 는 $x_{0}$ 에서 최대이다. $v a r \\phi(x_{0})>v a r \\phi(2)=0$ 이고 $x \\to \\pm \\infty$ 일 때 $v a r \\phi(x)$ 는 음수이므로 $g(t)=2$ 이다.",
+   "text": "(iii) $t \\ge 0$ 이면 $f'(x)=t$ 인 $x$ 는 $x_{0}\\le 1$ 하나뿐이고 $\\varphi(x)$ 는 $x_{0}$ 에서 최대이다. $\\varphi(x_{0})>\\varphi(2)=0$ 이고 $x \\to \\pm \\infty$ 일 때 $\\varphi(x)$ 는 음수이므로 $g(t)=2$ 이다.",
    "uses": [],
    "title": ""
   },

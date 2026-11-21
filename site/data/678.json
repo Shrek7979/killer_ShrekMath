@@ -114,13 +114,13 @@
   },
   {
    "n": 2,
-   "text": "점 ${\\mathrm{K}}$ 에서 이 원에 그은 두 접선 중 하나는 $x y$ 평면이고, 다른 하나가 $\\alpha$ 이다. 중심과 ${\\mathrm{K}}$ 를 잇는 선분이 $x y$ 평면과 이루는 각을 $v a r \\phi$ 라 하면 $\\tan v a r \\phi=\\frac{3}{3 \\sqrt{2}}=\\frac{1}{\\sqrt{2}}$ 이고, $\\alpha$ 와 $x y$ 평면이 이루는 각은 $2 v a r \\phi$ 이므로",
+   "text": "점 ${\\mathrm{K}}$ 에서 이 원에 그은 두 접선 중 하나는 $x y$ 평면이고, 다른 하나가 $\\alpha$ 이다. 중심과 ${\\mathrm{K}}$ 를 잇는 선분이 $x y$ 평면과 이루는 각을 $\\varphi$ 라 하면 $\\tan \\varphi=\\frac{3}{3 \\sqrt{2}}=\\frac{1}{\\sqrt{2}}$ 이고, $\\alpha$ 와 $x y$ 평면이 이루는 각은 $2 \\varphi$ 이므로",
    "uses": [],
    "title": ""
   },
   {
    "n": 3,
-   "text": "$$\\cos 2 v a r \\phi=\\frac{1-\\tan^{2}v a r \\phi}{1+\\tan^{2}v a r \\phi}=\\frac{1}{3},\\,\\,\\,\\tan 2 v a r \\phi=2 \\sqrt{2}$$",
+   "text": "$$\\cos 2 \\varphi=\\frac{1-\\tan^{2}\\varphi}{1+\\tan^{2}\\varphi}=\\frac{1}{3},\\,\\,\\,\\tan 2 \\varphi=2 \\sqrt{2}$$",
    "uses": [],
    "title": ""
   },

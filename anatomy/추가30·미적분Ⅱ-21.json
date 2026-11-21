@@ -39,21 +39,21 @@
  "steps": [
   {
    "title": "교점 위치",
-   "text": "$a_{n}=(n-1)\\pi+v a r \\varepsilon_{n}$ $\\left(0<v a r \\varepsilon_{n}<\\frac{\\pi}{2}\\right)$ , $\\tan v a r \\varepsilon_{n}=\\frac{6}{a_{n}^{2}}$ 이다. (각 구간 $\\left((n-1)\\pi,\\,(n-1)\\pi+\\frac{\\pi}{2}\\right)$ 에서 $\\tan x$ 는 증가, $\\frac{6}{x^{2}}$ 은 감소하므로 교점이 하나씩 있다.)",
+   "text": "$a_{n}=(n-1)\\pi+\\varepsilon_{n}$ $\\left(0<\\varepsilon_{n}<\\frac{\\pi}{2}\\right)$ , $\\tan \\varepsilon_{n}=\\frac{6}{a_{n}^{2}}$ 이다. (각 구간 $\\left((n-1)\\pi,\\,(n-1)\\pi+\\frac{\\pi}{2}\\right)$ 에서 $\\tan x$ 는 증가, $\\frac{6}{x^{2}}$ 은 감소하므로 교점이 하나씩 있다.)",
    "uses": [
     "C1"
    ]
   },
   {
    "title": "첫째 극한",
-   "text": "$n^{2}v a r \\varepsilon_{n}=\\frac{6 n^{2}}{a_{n}^{2}}\\times \\frac{v a r \\varepsilon_{n}}{\\tan v a r \\varepsilon_{n}}\\to \\frac{6}{\\pi^{2}}$ 이므로 첫째 항은 $6$ 이다.",
+   "text": "$n^{2}\\varepsilon_{n}=\\frac{6 n^{2}}{a_{n}^{2}}\\times \\frac{\\varepsilon_{n}}{\\tan \\varepsilon_{n}}\\to \\frac{6}{\\pi^{2}}$ 이므로 첫째 항은 $6$ 이다.",
    "uses": [
     "C2"
    ]
   },
   {
    "title": "덧셈정리",
-   "text": "$$\\tan(a_{n}-a_{n+1})=\\tan(v a r \\varepsilon_{n}-v a r \\varepsilon_{n+1})=\\frac{\\frac{6}{a_{n}^{2}}-\\frac{6}{a_{n+1}^{2}}}{1+\\frac{36}{a_{n}^{2}a_{n+1}^{2}}}=\\frac{6(a_{n+1}-a_{n})(a_{n+1}+a_{n})}{a_{n}^{2}a_{n+1}^{2}+36}$$",
+   "text": "$$\\tan(a_{n}-a_{n+1})=\\tan(\\varepsilon_{n}-\\varepsilon_{n+1})=\\frac{\\frac{6}{a_{n}^{2}}-\\frac{6}{a_{n+1}^{2}}}{1+\\frac{36}{a_{n}^{2}a_{n+1}^{2}}}=\\frac{6(a_{n+1}-a_{n})(a_{n+1}+a_{n})}{a_{n}^{2}a_{n+1}^{2}+36}$$",
    "uses": [
     "C2"
    ]

@@ -109,7 +109,7 @@
   },
   {
    "n": 2,
-   "text": "${\\mathrm{K}}(4 \\cos v a r \\phi,\\,4 \\sin v a r \\phi)$ 라 하면 두 점 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ 는 ${\\mathrm{K}}\\pm 3(-\\sin v a r \\phi,\\,\\cos v a r \\phi)$ 이므로 두 점의 $y$ 좌표는 $4 \\sin v a r \\phi \\pm 3 \\cos v a r \\phi$ 이다. (나)에서 $4 \\sin v a r \\phi \\ge 3|\\cos v a r \\phi|$ , 즉 $\\sin v a r \\phi>0$ 이고 $|\\tan v a r \\phi|\\ge \\frac{3}{4}$ 이므로, $\\cos v a r \\phi_{0}=\\frac{4}{5}$ , $\\sin v a r \\phi_{0}=\\frac{3}{5}$ 인 $v a r \\phi_{0}$ 에 대하여 $v a r \\phi_{0}\\le v a r \\phi \\le \\pi-v a r \\phi_{0}$ 이다.",
+   "text": "${\\mathrm{K}}(4 \\cos \\varphi,\\,4 \\sin \\varphi)$ 라 하면 두 점 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ 는 ${\\mathrm{K}}\\pm 3(-\\sin \\varphi,\\,\\cos \\varphi)$ 이므로 두 점의 $y$ 좌표는 $4 \\sin \\varphi \\pm 3 \\cos \\varphi$ 이다. (나)에서 $4 \\sin \\varphi \\ge 3|\\cos \\varphi|$ , 즉 $\\sin \\varphi>0$ 이고 $|\\tan \\varphi|\\ge \\frac{3}{4}$ 이므로, $\\cos \\varphi_{0}=\\frac{4}{5}$ , $\\sin \\varphi_{0}=\\frac{3}{5}$ 인 $\\varphi_{0}$ 에 대하여 $\\varphi_{0}\\le \\varphi \\le \\pi-\\varphi_{0}$ 이다.",
    "uses": [],
    "title": ""
   },

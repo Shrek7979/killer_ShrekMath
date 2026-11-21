@@ -134,13 +134,13 @@
   },
   {
    "n": 6,
-   "text": "$v a r \\phi_{m}=\\frac{\\pi}{2}-\\theta_{m}$ 이라 하면 $\\tan v a r \\phi_{m}=\\frac{1}{m}$ , $v a r \\phi_{m}\\to 0$ 이고",
+   "text": "$\\varphi_{m}=\\frac{\\pi}{2}-\\theta_{m}$ 이라 하면 $\\tan \\varphi_{m}=\\frac{1}{m}$ , $\\varphi_{m}\\to 0$ 이고",
    "uses": [],
    "title": ""
   },
   {
    "n": 7,
-   "text": "$$n \\left(\\frac{3 \\pi}{4}-\\sum_{j=1}^{n}\\alpha_{j}\\right)=n v a r \\phi_{n+1}+n v a r \\phi_{n}=\\frac{v a r \\phi_{n+1}}{\\tan v a r \\phi_{n+1}}\\times \\frac{n}{n+1}+\\frac{v a r \\phi_{n}}{\\tan v a r \\phi_{n}}\\to 2$$",
+   "text": "$$n \\left(\\frac{3 \\pi}{4}-\\sum_{j=1}^{n}\\alpha_{j}\\right)=n \\varphi_{n+1}+n \\varphi_{n}=\\frac{\\varphi_{n+1}}{\\tan \\varphi_{n+1}}\\times \\frac{n}{n+1}+\\frac{\\varphi_{n}}{\\tan \\varphi_{n}}\\to 2$$",
    "uses": [],
    "title": ""
   },

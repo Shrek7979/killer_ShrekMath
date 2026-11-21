@@ -138,7 +138,7 @@
   },
   {
    "n": 4,
-   "text": "${\\mathrm{R}}(2 \\cos v a r \\phi,\\,2 \\sin v a r \\phi)$ $\\left(\\frac{\\pi}{6}\\le v a r \\phi \\le \\frac{5 \\pi}{6}\\right)$ 이라 하면 $\\vec{{\\mathrm{OA}}}\\cdot \\vec{{\\mathrm{OR}}}=8 \\cos v a r \\phi+4 \\sin v a r \\phi$ 이다. 이 값은 $\\vec{{\\mathrm{OR}}}$ 가 $\\vec{{\\mathrm{OA}}}$ 와 같은 방향일 때 최대인데, $\\vec{{\\mathrm{OA}}}$ 의 방향 $\\left(\\tan v a r \\phi=\\frac{1}{2}\\right)$ 은 $v a r \\phi<\\frac{\\pi}{6}$ 이므로 호 위에서는 $\\vec{{\\mathrm{OR}}}$ 가 $\\vec{{\\mathrm{OA}}}$ 에서 멀어질수록 값이 작아진다. 따라서 $v a r \\phi=\\frac{\\pi}{6}$ 에서 최대, $v a r \\phi=\\frac{5 \\pi}{6}$ 에서 최소이다.",
+   "text": "${\\mathrm{R}}(2 \\cos \\varphi,\\,2 \\sin \\varphi)$ $\\left(\\frac{\\pi}{6}\\le \\varphi \\le \\frac{5 \\pi}{6}\\right)$ 이라 하면 $\\vec{{\\mathrm{OA}}}\\cdot \\vec{{\\mathrm{OR}}}=8 \\cos \\varphi+4 \\sin \\varphi$ 이다. 이 값은 $\\vec{{\\mathrm{OR}}}$ 가 $\\vec{{\\mathrm{OA}}}$ 와 같은 방향일 때 최대인데, $\\vec{{\\mathrm{OA}}}$ 의 방향 $\\left(\\tan \\varphi=\\frac{1}{2}\\right)$ 은 $\\varphi<\\frac{\\pi}{6}$ 이므로 호 위에서는 $\\vec{{\\mathrm{OR}}}$ 가 $\\vec{{\\mathrm{OA}}}$ 에서 멀어질수록 값이 작아진다. 따라서 $\\varphi=\\frac{\\pi}{6}$ 에서 최대, $\\varphi=\\frac{5 \\pi}{6}$ 에서 최소이다.",
    "uses": [],
    "title": ""
   },

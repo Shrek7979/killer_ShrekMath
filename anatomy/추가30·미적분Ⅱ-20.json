@@ -46,14 +46,14 @@
   },
   {
    "title": "근의 위치",
-   "text": "따라서 $b_{2 n-1}=2(n+1)\\pi+\\delta_{n}$ , $b_{2 n}=(2 n+3)\\pi-e t a_{n}$ $\\left(0<\\delta_{n},\\,e t a_{n}<\\frac{\\pi}{2}\\right)$ 이고 $\\sin \\delta_{n}=\\frac{12}{b_{2 n-1}}$ , $\\sin e t a_{n}=\\frac{12}{b_{2 n}}$ 이다.",
+   "text": "따라서 $b_{2 n-1}=2(n+1)\\pi+\\delta_{n}$ , $b_{2 n}=(2 n+3)\\pi-\\eta_{n}$ $\\left(0<\\delta_{n},\\,\\eta_{n}<\\frac{\\pi}{2}\\right)$ 이고 $\\sin \\delta_{n}=\\frac{12}{b_{2 n-1}}$ , $\\sin \\eta_{n}=\\frac{12}{b_{2 n}}$ 이다.",
    "uses": [
     "C1"
    ]
   },
   {
    "title": "극한",
-   "text": "$\\pi+b_{2 n-1}-b_{2 n}=\\delta_{n}+e t a_{n}$ 이고, $n \\delta_{n}=\\frac{12 n}{b_{2 n-1}}\\times \\frac{\\delta_{n}}{\\sin \\delta_{n}}\\to \\frac{12}{2 \\pi}$ , 같은 방법으로 $n e t a_{n}\\to \\frac{6}{\\pi}$ 이다.",
+   "text": "$\\pi+b_{2 n-1}-b_{2 n}=\\delta_{n}+\\eta_{n}$ 이고, $n \\delta_{n}=\\frac{12 n}{b_{2 n-1}}\\times \\frac{\\delta_{n}}{\\sin \\delta_{n}}\\to \\frac{12}{2 \\pi}$ , 같은 방법으로 $n \\eta_{n}\\to \\frac{6}{\\pi}$ 이다.",
    "uses": [
     "C2"
    ]

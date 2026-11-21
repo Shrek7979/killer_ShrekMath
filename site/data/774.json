@@ -84,7 +84,7 @@
  "steps": [
   {
    "n": 1,
-   "text": "$v a r \\phi(x)=x+\\sin x$ 라 하면 $v a r \\phi'(x)=1+\\cos x \\ge 0$ 이고 등호는 고립된 점에서만 성립하므로 $v a r \\phi(x)$ 는 증가한다. $v a r \\phi(0)=0$ , $v a r \\phi(\\pi)=\\pi$ 이므로 $v a r \\phi$ 의 역함수를 $g$ 라 하면 $x_{k}=g \\left(\\frac{k \\pi}{n}\\right)$ 이고",
+   "text": "$\\varphi(x)=x+\\sin x$ 라 하면 $\\varphi'(x)=1+\\cos x \\ge 0$ 이고 등호는 고립된 점에서만 성립하므로 $\\varphi(x)$ 는 증가한다. $\\varphi(0)=0$ , $\\varphi(\\pi)=\\pi$ 이므로 $\\varphi$ 의 역함수를 $g$ 라 하면 $x_{k}=g \\left(\\frac{k \\pi}{n}\\right)$ 이고",
    "uses": [],
    "title": ""
   },
@@ -96,7 +96,7 @@
   },
   {
    "n": 3,
-   "text": "$y=v a r \\phi(t)$ 로 치환하면",
+   "text": "$y=\\varphi(t)$ 로 치환하면",
    "uses": [],
    "title": ""
   },

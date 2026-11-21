@@ -84,25 +84,25 @@
  "steps": [
   {
    "n": 1,
-   "text": "${\\mathrm{P}}_{k}$ 는 $x_{k}+\\ln x_{k}=1+\\frac{e k}{n}$ , $y_{k}=\\ln x_{k}$ 를 만족시킨다. $v a r \\phi(x)=x+\\ln x$ 는 증가하고 $v a r \\phi(1)=1$ , $v a r \\phi(e)=1+e$ 이므로 $0 \\le s \\le 1$ 에서 $v a r \\phi(x)=1+e s$ 인 $x$ 를 $p s i(s)$ 라 하면 $x_{k}=p s i \\left(\\frac{k}{n}\\right)$ 이고",
+   "text": "${\\mathrm{P}}_{k}$ 는 $x_{k}+\\ln x_{k}=1+\\frac{e k}{n}$ , $y_{k}=\\ln x_{k}$ 를 만족시킨다. $\\varphi(x)=x+\\ln x$ 는 증가하고 $\\varphi(1)=1$ , $\\varphi(e)=1+e$ 이므로 $0 \\le s \\le 1$ 에서 $\\varphi(x)=1+e s$ 인 $x$ 를 $\\psi(s)$ 라 하면 $x_{k}=\\psi \\left(\\frac{k}{n}\\right)$ 이고",
    "uses": [],
    "title": ""
   },
   {
    "n": 2,
-   "text": "$$\\lim_{n \\to \\infty}\\frac{1}{n}\\sum_{k=1}^{n}x_{k}\\ln x_{k}=\\int_{0}^{1}p s i(s)\\ln p s i(s)ds$$",
+   "text": "$$\\lim_{n \\to \\infty}\\frac{1}{n}\\sum_{k=1}^{n}x_{k}\\ln x_{k}=\\int_{0}^{1}\\psi(s)\\ln \\psi(s)ds$$",
    "uses": [],
    "title": ""
   },
   {
    "n": 3,
-   "text": "$x=p s i(s)$ 로 치환하면 $1+e s=x+\\ln x$ 에서 $ds=\\frac{1}{e}\\left(1+\\frac{1}{x}\\right)dx$ 이므로",
+   "text": "$x=\\psi(s)$ 로 치환하면 $1+e s=x+\\ln x$ 에서 $ds=\\frac{1}{e}\\left(1+\\frac{1}{x}\\right)dx$ 이므로",
    "uses": [],
    "title": ""
   },
   {
    "n": 4,
-   "text": "$$\\int_{0}^{1}p s i(s)\\ln p s i(s)ds=\\frac{1}{e}\\int_{1}^{e}\\left(x \\ln x+\\ln x \\right)dx=\\frac{1}{e}\\left(\\frac{e^{2}+1}{4}+1 \\right)=\\frac{e}{4}+\\frac{5}{4 e}$$",
+   "text": "$$\\int_{0}^{1}\\psi(s)\\ln \\psi(s)ds=\\frac{1}{e}\\int_{1}^{e}\\left(x \\ln x+\\ln x \\right)dx=\\frac{1}{e}\\left(\\frac{e^{2}+1}{4}+1 \\right)=\\frac{e}{4}+\\frac{5}{4 e}$$",
    "uses": [],
    "title": ""
   },

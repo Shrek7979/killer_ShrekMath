@@ -55,7 +55,7 @@
     "$0<s<\\pi$ 라 하자. $0<x \\le s$ 이면 $\\frac{\\sin s}{s}x \\le \\sin x \\le x$ 이고 $e^{-2 s}\\le e^{-2 x}\\le 1$ 이므로 $e^{-2 s}\\left(\\frac{\\sin s}{s}\\right)^{2}x^{2}\\le \\left\\{f(x)\\right\\}^{2}\\le x^{2}$ 이다. 이것을 $0$ 에서 $s$ 까지 적분하면",
     "$\\frac{\\pi}{3}e^{-2 s}\\left(\\frac{\\sin s}{s}\\right)^{2}s^{3}\\le W(s)\\le \\frac{\\pi}{3}s^{3}$",
     "이다.",
-    "$W(t)$ 는 증가하고 $W(s_{n})=\\frac{V_{1}}{n}$ 이다. 임의의 양수 $v a r \\varepsilon$ ( $v a r \\varepsilon<\\pi$ )에 대하여 $W(v a r \\varepsilon)>0$ 이므로 $\\frac{V_{1}}{n}<W(v a r \\varepsilon)$ 인 모든 $n$ 에서 $s_{n}<v a r \\varepsilon$ 이다. 따라서 $\\lim_{n \\to \\infty}s_{n}=0$ 이다. 위 부등식에 $s=s_{n}$ 을 대입하면",
+    "$W(t)$ 는 증가하고 $W(s_{n})=\\frac{V_{1}}{n}$ 이다. 임의의 양수 $\\varepsilon$ ( $\\varepsilon<\\pi$ )에 대하여 $W(\\varepsilon)>0$ 이므로 $\\frac{V_{1}}{n}<W(\\varepsilon)$ 인 모든 $n$ 에서 $s_{n}<\\varepsilon$ 이다. 따라서 $\\lim_{n \\to \\infty}s_{n}=0$ 이다. 위 부등식에 $s=s_{n}$ 을 대입하면",
     "$\\frac{3 V_{1}}{\\pi}\\le n \\left(s_{n}\\right)^{3}\\le \\frac{3 V_{1}}{\\pi}e^{2 s_{n}}\\left(\\frac{s_{n}}{\\sin s_{n}}\\right)^{2}$",
     "이고 $n \\to \\infty$ 일 때 우변은 $\\frac{3 V_{1}}{\\pi}$ 로 수렴하므로",
     "$\\lim_{n \\to \\infty}n \\left(s_{n}\\right)^{3}=\\frac{3 V_{1}}{\\pi}=\\frac{3}{8}\\left(1-e^{-2 \\pi}\\right)$",

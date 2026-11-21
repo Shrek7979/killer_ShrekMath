@@ -97,19 +97,19 @@
   },
   {
    "n": 2,
-   "text": "이 원 위의 점 중 삼각형에 들어가는 부분은, ${\\mathrm{O}}$ 에서 직선 ${\\mathrm{AB}}$ 에 내린 수선의 발 ${\\mathrm{H}}_{1}$ 부터 ${\\mathrm{A}}$ 에서 직선 ${\\mathrm{OB}}$ 에 내린 수선의 발 ${\\mathrm{H}}_{2}$ 까지의 호이다. ( $\\angle{\\mathrm{OH}}_{1}{\\mathrm{A}}=\\angle{\\mathrm{OH}}_{2}{\\mathrm{A}}=\\frac{\\pi}{2}$ 이므로 두 점 모두 원 위에 있다.) $\\vec{{\\mathrm{MP}}}$ 가 $x$ 축의 양의 방향과 이루는 각을 $v a r \\phi$ 라 하면 ${\\mathrm{H}}_{2}$ 에서 $v a r \\phi=\\frac{2}{3}\\pi$ 이고, ${\\mathrm{H}}_{1}$ 에서 $\\cos v a r \\phi_{1}=-\\frac{1}{7}$ , $\\sin v a r \\phi_{1}=\\frac{4 \\sqrt{3}}{7}$ 이다.",
+   "text": "이 원 위의 점 중 삼각형에 들어가는 부분은, ${\\mathrm{O}}$ 에서 직선 ${\\mathrm{AB}}$ 에 내린 수선의 발 ${\\mathrm{H}}_{1}$ 부터 ${\\mathrm{A}}$ 에서 직선 ${\\mathrm{OB}}$ 에 내린 수선의 발 ${\\mathrm{H}}_{2}$ 까지의 호이다. ( $\\angle{\\mathrm{OH}}_{1}{\\mathrm{A}}=\\angle{\\mathrm{OH}}_{2}{\\mathrm{A}}=\\frac{\\pi}{2}$ 이므로 두 점 모두 원 위에 있다.) $\\vec{{\\mathrm{MP}}}$ 가 $x$ 축의 양의 방향과 이루는 각을 $\\varphi$ 라 하면 ${\\mathrm{H}}_{2}$ 에서 $\\varphi=\\frac{2}{3}\\pi$ 이고, ${\\mathrm{H}}_{1}$ 에서 $\\cos \\varphi_{1}=-\\frac{1}{7}$ , $\\sin \\varphi_{1}=\\frac{4 \\sqrt{3}}{7}$ 이다.",
    "uses": [],
    "title": ""
   },
   {
    "n": 3,
-   "text": "$$\\vec{{\\mathrm{OP}}}\\cdot \\vec{{\\mathrm{OB}}}=\\vec{{\\mathrm{OM}}}\\cdot \\vec{{\\mathrm{OB}}}+\\vec{{\\mathrm{MP}}}\\cdot \\vec{{\\mathrm{OB}}}=6+12 \\cos \\left(v a r \\phi-\\frac{\\pi}{3}\\right)$$",
+   "text": "$$\\vec{{\\mathrm{OP}}}\\cdot \\vec{{\\mathrm{OB}}}=\\vec{{\\mathrm{OM}}}\\cdot \\vec{{\\mathrm{OB}}}+\\vec{{\\mathrm{MP}}}\\cdot \\vec{{\\mathrm{OB}}}=6+12 \\cos \\left(\\varphi-\\frac{\\pi}{3}\\right)$$",
    "uses": [],
    "title": ""
   },
   {
    "n": 4,
-   "text": "이다. $v a r \\phi_{1}\\le v a r \\phi \\le \\frac{2}{3}\\pi$ 에서 $v a r \\phi-\\frac{\\pi}{3}$ 는 $0$ 과 $\\pi$ 사이의 값이므로 $\\cos \\left(v a r \\phi-\\frac{\\pi}{3}\\right)$ 는 $v a r \\phi$ 가 커질수록 감소한다. $\\cos \\left(v a r \\phi_{1}-\\frac{\\pi}{3}\\right)=-\\frac{1}{14}+\\frac{12}{14}=\\frac{11}{14}$ 이므로",
+   "text": "이다. $\\varphi_{1}\\le \\varphi \\le \\frac{2}{3}\\pi$ 에서 $\\varphi-\\frac{\\pi}{3}$ 는 $0$ 과 $\\pi$ 사이의 값이므로 $\\cos \\left(\\varphi-\\frac{\\pi}{3}\\right)$ 는 $\\varphi$ 가 커질수록 감소한다. $\\cos \\left(\\varphi_{1}-\\frac{\\pi}{3}\\right)=-\\frac{1}{14}+\\frac{12}{14}=\\frac{11}{14}$ 이므로",
    "uses": [],
    "title": ""
   },

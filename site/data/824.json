@@ -121,7 +121,7 @@
   },
   {
    "n": 4,
-   "text": "거꾸로 ${\\mathrm{X}}(u,\\,v)$ $(u^{2}+v^{2}=16)$ 가 주어지면 $\\vec{{\\mathrm{OQ}}}=\\frac{3}{4}v a r \\varepsilon(-v,\\,u)$ $(v a r \\varepsilon=1$ 또는 $-1)$ 이고 $\\vec{{\\mathrm{OP}}}=\\left(u+\\frac{3}{4}v a r \\varepsilon v,\\,v-\\frac{3}{4}v a r \\varepsilon u \\right)$ 이며, 이 두 점은 (가)를 만족시킨다. (나)는 $v a r \\varepsilon u \\ge 0$ 이고 $v \\ge \\frac{3}{4}v a r \\varepsilon u$ 인 것이다. $v a r \\varepsilon$ 을 $v a r \\varepsilon u \\ge 0$ 이 되도록 고를 수 있으므로, 이러한 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ 가 있을 필요충분조건은 $v \\ge \\frac{3}{4}|u|$ , 즉 $v \\ge \\frac{12}{5}$ 이다.",
+   "text": "거꾸로 ${\\mathrm{X}}(u,\\,v)$ $(u^{2}+v^{2}=16)$ 가 주어지면 $\\vec{{\\mathrm{OQ}}}=\\frac{3}{4}\\varepsilon(-v,\\,u)$ $(\\varepsilon=1$ 또는 $-1)$ 이고 $\\vec{{\\mathrm{OP}}}=\\left(u+\\frac{3}{4}\\varepsilon v,\\,v-\\frac{3}{4}\\varepsilon u \\right)$ 이며, 이 두 점은 (가)를 만족시킨다. (나)는 $\\varepsilon u \\ge 0$ 이고 $v \\ge \\frac{3}{4}\\varepsilon u$ 인 것이다. $\\varepsilon$ 을 $\\varepsilon u \\ge 0$ 이 되도록 고를 수 있으므로, 이러한 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ 가 있을 필요충분조건은 $v \\ge \\frac{3}{4}|u|$ , 즉 $v \\ge \\frac{12}{5}$ 이다.",
    "uses": [],
    "title": ""
   },
