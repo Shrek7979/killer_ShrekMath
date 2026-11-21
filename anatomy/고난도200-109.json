@@ -1,0 +1,110 @@
+{
+ "wrong": "예상 오답 — 수선의 발을 내심으로 가정해 세 거리를 같게 둔 경우",
+ "intro": [
+  "삼수선: $d_i=\\frac h{\\tan\\theta_i}$.",
+  "△ABC $=\\sum\\frac12\\times$변$\\times d_i$ → $h=8$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "삼각형",
+   "why": "AB$=$AC$=10$, BC$=12$.",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "점 P",
+   "why": "수선의 발 H는 내부.",
+   "uses": [
+    2
+   ]
+  },
+  "C4": {
+   "label": "조건",
+   "why": "$\\tan\\theta_1=2$, $\\tan\\theta_2=5$, $\\tan\\theta_3=\\frac{12}5$.",
+   "uses": [
+    1,
+    3
+   ]
+  },
+  "C6": {
+   "label": "묻는 것",
+   "why": "사면체 PABC의 부피.",
+   "uses": [
+    4
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "이면각",
+   "p": [
+    "$\\tan\\theta=\\frac{h}{d}$ (삼수선)."
+   ]
+  },
+  {
+   "h": "넓이 분할",
+   "p": [
+    "내부 점으로 세 조각."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "거리",
+   "text": "점 ${\\mathrm{P}}$ 에서 평면 $\\alpha$ 에 내린 수선의 발을 ${\\mathrm{H}}$ , $\\overline{{\\mathrm{PH}}}=h$ 라 하고, 점 ${\\mathrm{H}}$ 와 세 직선 ${\\mathrm{AB}}$ , ${\\mathrm{AC}}$ , ${\\mathrm{BC}}$ 사이의 거리를 각각 $d_{1}$ , $d_{2}$ , $d_{3}$ 이라 하자. 점 ${\\mathrm{H}}$ 에서 직선 ${\\mathrm{AB}}$ 에 내린 수선의 발을 ${\\mathrm{K}}$ 라 하면 삼수선 정리에 의하여 두 직선 ${\\mathrm{PK}}$ , ${\\mathrm{AB}}$ 는 서로 수직이므로 $\\angle{\\mathrm{PKH}}=\\theta_{1}$ 이고 $d_{1}=\\frac{h}{\\tan \\theta_{1}}=\\frac{h}{2}$ 이다. 같은 방법으로 $d_{2}=\\frac{h}{5}$ , $d_{3}=\\frac{5 h}{12}$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "넓이",
+   "text": "점 ${\\mathrm{H}}$ 가 삼각형 ${\\mathrm{ABC}}$ 의 내부에 있으므로 삼각형 ${\\mathrm{ABC}}$ 는 세 삼각형 ${\\mathrm{HAB}}$ , ${\\mathrm{HAC}}$ , ${\\mathrm{HBC}}$ 로 나누어진다. 삼각형 ${\\mathrm{ABC}}$ 의 높이는 $\\sqrt{100-36}=8$ 이므로 넓이는 $48$ 이고",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "$h$",
+   "text": "$$\\frac{1}{2}\\left(10 \\times \\frac{h}{2}+10 \\times \\frac{h}{5}+12 \\times \\frac{5 h}{12}\\right)=\\frac{1}{2}\\times 12 h=48$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "에서 $h=8$ 이다. 따라서 사면체 ${\\mathrm{PABC}}$ 의 부피는 $\\frac{1}{3}\\times 48 \\times 8=128$ 이다.",
+   "uses": [
+    "C6"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "내부",
+   "cond": "C2",
+   "text": [
+    "분할이 성립."
+   ]
+  },
+  {
+   "h": "높이 $8$",
+   "cond": "C1",
+   "text": [
+    "$\\sqrt{100-36}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $5$, $5$, $6$",
+   "body": [
+    "(같은 삼각형과 점 P에 대하여) $\\tan\\theta_1=5$, $\\tan\\theta_2=5$, $\\tan\\theta_3=6$일 때, 사면체 PABC의 부피를 구하시오."
+   ],
+   "answer": 256,
+   "hint": "$\\frac12(2h+2h+2h)=48$ → $h=16$."
+  }
+ ],
+ "line": "이면각 → 거리 = 높이/tan → 넓이 분할."
+}

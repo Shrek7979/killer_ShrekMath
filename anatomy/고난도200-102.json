@@ -1,0 +1,124 @@
+{
+ "wrong": "예상 오답 — (가)를 $\\vec{\\mathrm{PA}}\\perp\\vec{\\mathrm{PB}}$ 등으로 읽어 P의 자취를 원으로 잡은 경우",
+ "intro": [
+  "(가) $\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{CB}}=0$ → P는 $y$축 위.",
+  "(나) $2|\\vec{\\mathrm{PM}}|=|\\vec{\\mathrm{PA}}|$ → $y=3$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "점",
+   "why": "A$(0,13)$, B$(-5,0)$, C$(13,0)$, P는 내부.",
+   "uses": [
+    4
+   ]
+  },
+  "C2": {
+   "label": "(가)",
+   "why": "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PC}}$.",
+   "uses": [
+    1
+   ]
+  },
+  "C3": {
+   "label": "(나)",
+   "why": "$|\\vec{\\mathrm{PB}}+\\vec{\\mathrm{PC}}|=|\\vec{\\mathrm{PA}}|$.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$|\\vec{\\mathrm{PB}}|^2+|\\vec{\\mathrm{PC}}|^2$.",
+   "uses": [
+    5,
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "내적 분배",
+   "p": [
+    "$\\vec{\\mathrm{PA}}\\cdot(\\vec{\\mathrm{PB}}-\\vec{\\mathrm{PC}})$."
+   ]
+  },
+  {
+   "h": "중점 벡터",
+   "p": [
+    "$\\vec{\\mathrm{PB}}+\\vec{\\mathrm{PC}}=2\\vec{\\mathrm{PM}}$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "(가)",
+   "text": "(가)에서 $\\vec{{\\mathrm{PA}}}\\cdot(\\vec{{\\mathrm{PB}}}-\\vec{{\\mathrm{PC}}})=\\vec{{\\mathrm{PA}}}\\cdot \\vec{{\\mathrm{CB}}}=0$ 이므로 점 ${\\mathrm{P}}$ 는 점 ${\\mathrm{A}}$ 를 지나고 직선 ${\\mathrm{BC}}$ 에 수직인 직선, 즉 $y$ 축 위에 있다. ${\\mathrm{P}}(0,\\,y)$ 라 하자.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "(나)",
+   "text": "선분 ${\\mathrm{BC}}$ 의 중점을 ${\\mathrm{M}}(4,\\,0)$ 이라 하면 $\\vec{{\\mathrm{PB}}}+\\vec{{\\mathrm{PC}}}=2 \\vec{{\\mathrm{PM}}}$ 이므로 (나)에서 $2|\\vec{{\\mathrm{PM}}}|=|\\vec{{\\mathrm{PA}}}|$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "방정식",
+   "text": "$$4(16+y^{2})=(13-y)^{2},\\,\\,\\,3 y^{2}+26 y-105=0,\\,\\,\\,(y-3)(3 y+35)=0$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "내부",
+   "text": "점 ${\\mathrm{P}}$ 가 삼각형의 내부에 있으므로 $0<y<13$ , 즉 $y=3$ 이고 ${\\mathrm{P}}(0,\\,3)$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "계산",
+   "text": "$$|\\vec{{\\mathrm{PB}}}|^{2}+|\\vec{{\\mathrm{PC}}}|^{2}=(25+9)+(169+9)=212$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "중선",
+   "text": "(참고: $|\\vec{{\\mathrm{PB}}}|^{2}+|\\vec{{\\mathrm{PC}}}|^{2}=2|\\vec{{\\mathrm{PM}}}|^{2}+2|\\vec{{\\mathrm{MB}}}|^{2}=2 \\times 25+2 \\times 81$ 로도 구할 수 있다.)",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$y=-\\frac{35}3$",
+   "cond": "C1",
+   "text": [
+    "외부 — 제외."
+   ]
+  },
+  {
+   "h": "중선정리",
+   "cond": "C4",
+   "text": [
+    "$2\\mathrm{PM}^2+2\\mathrm{MB}^2$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $|\\vec{\\mathrm{PA}}|\\times|\\vec{\\mathrm{PM}}|$",
+   "body": [
+    "(같은 조건에서 선분 BC의 중점을 M이라 할 때) $|\\vec{\\mathrm{PA}}|\\times|\\vec{\\mathrm{PM}}|$의 값을 구하시오."
+   ],
+   "answer": 50,
+   "hint": "P$(0,3)$: $10\\times5$."
+  }
+ ],
+ "line": "내적 조건 → 수선, 합벡터 → 중점."
+}

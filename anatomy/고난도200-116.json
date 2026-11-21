@@ -1,0 +1,122 @@
+{
+ "wrong": "예상 오답 — 정사영 방향을 반대로 하여 넓이를 $36\\div\\frac23$으로 계산한 경우",
+ "intro": [
+  "접은 뒤 PA, PE, PF 서로 수직.",
+  "AEF의 PAE 위 정사영 = PAE → $\\cos\\theta=\\frac{36}{54}$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "종이",
+   "why": "정사각형(변 $12$), E, F는 BC, CD 중점.",
+   "uses": []
+  },
+  "C2": {
+   "label": "사면체",
+   "why": "B, C, D가 P에서 만남.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "△PAE의 평면 AEF 위 정사영의 넓이.",
+   "uses": [
+    4,
+    5,
+    6
+   ]
+  },
+  "C4": {
+   "label": "단서",
+   "why": "두께 무시.",
+   "uses": []
+  }
+ },
+ "concepts": [
+  {
+   "h": "직각 사면체",
+   "p": [
+    "세 모서리 서로 수직."
+   ]
+  },
+  {
+   "h": "정사영 대칭",
+   "p": [
+    "두 평면의 각은 양방향 같음."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "직각",
+   "text": "종이의 꼭짓점 ${\\mathrm{B}}$ , ${\\mathrm{C}}$ , ${\\mathrm{D}}$ 에서의 각이 모두 직각이므로 사면체 ${\\mathrm{PAEF}}$ 에서",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "길이",
+   "text": "세 직선 ${\\mathrm{PA}}$ , ${\\mathrm{PE}}$ , ${\\mathrm{PF}}$ 는 서로 수직이고 $\\overline{{\\mathrm{PA}}}=12$ , $\\overline{{\\mathrm{PE}}}=\\overline{{\\mathrm{PF}}}=6$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "수직",
+   "text": "직선 ${\\mathrm{PF}}$ 는 평면 ${\\mathrm{PAE}}$ 위의 두 직선 ${\\mathrm{PA}}$ , ${\\mathrm{PE}}$ 에 수직이므로 평면 ${\\mathrm{PAE}}$ 에 수직이다. 따라서 삼각형 ${\\mathrm{AEF}}$ 의 평면 ${\\mathrm{PAE}}$ 위로의 정사영은 삼각형 ${\\mathrm{PAE}}$ 이다. 두 평면 ${\\mathrm{AEF}}$ , ${\\mathrm{PAE}}$ 가 이루는 각을 $\\theta$ 라 하면",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "코사인",
+   "text": "$$\\cos \\theta=\\frac{({삼 각 형 P A E 의 넓 이})}{({삼 각 형 A E F 의 넓 이})}$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "넓이",
+   "text": "이다. 삼각형 ${\\mathrm{PAE}}$ 의 넓이는 $\\frac{1}{2}\\times 12 \\times 6=36$ 이고, 삼각형 ${\\mathrm{AEF}}$ 의 넓이는 정사각형에서 세 직각삼각형을 뺀 $144-36-36-18=54$ 이므로 $\\cos \\theta=\\frac{2}{3}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "구하는 넓이는 삼각형 ${\\mathrm{PAE}}$ 를 같은 각 $\\theta$ 만큼 기울어진 평면 ${\\mathrm{AEF}}$ 에 정사영한 것이므로 $36 \\times \\frac{2}{3}=24$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$54$",
+   "cond": "C3",
+   "text": [
+    "$144-36-36-18$."
+   ]
+  },
+  {
+   "h": "곱",
+   "cond": "C3",
+   "text": [
+    "$36\\times\\frac23$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · △PEF",
+   "body": [
+    "(같은 사면체에서) 삼각형 PEF의 평면 AEF 위로의 정사영의 넓이를 구하시오."
+   ],
+   "answer": 6,
+   "hint": "PA ⊥ 평면 PEF → $\\cos=\\frac{18}{54}$ → $18\\times\\frac13$."
+  }
+ ],
+ "line": "직각 사면체 → 정사영의 코사인 → 다시 정사영."
+}
