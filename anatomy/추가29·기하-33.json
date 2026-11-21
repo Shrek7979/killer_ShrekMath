@@ -1,0 +1,114 @@
+{
+ "wrong": "예상 오답 — 중선정리에서 $c^2$ 대신 $(2c)^2$을 넣어 OP$^2$을 틀린 경우",
+ "intro": [
+  "F′Q$=$PF′$-$PF$=6=$QF → Q는 FF′의 수직이등분선($y$축) 위.",
+  "$\\cos\\angle\\mathrm{PF'F}=\\frac c6$ → 코사인법칙 → $c^2$, 중선정리로 OP$^2$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "설정",
+   "why": "$\\frac{x^2}9-\\frac{y^2}{b^2}=1$, 제1사분면 P, PF′ 위 Q: PQ$=$PF, QF$=$QF′.",
+   "uses": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  "C2": {
+   "label": "조건",
+   "why": "PQF 둘레 $24$일 때 OP$^2$.",
+   "uses": [
+    1,
+    5
+   ]
+  },
+  "C3": {
+   "label": "단서",
+   "why": "O는 원점.",
+   "uses": [
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "쌍곡선의 정의",
+   "p": [
+    "$\\mathrm{PF'}-\\mathrm{PF}=2a$ (오른쪽 가지)."
+   ]
+  },
+  {
+   "h": "중선정리",
+   "p": [
+    "$\\mathrm{PF}^2+\\mathrm{PF'}^2=2(\\mathrm{OP}^2+c^2)$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "길이",
+   "text": "점 ${\\mathrm{Q}}$ 가 선분 ${\\mathrm{PF'}}$ 위에 있으므로 $\\overline{{\\mathrm{F'Q}}}=\\overline{{\\mathrm{PF'}}}-\\overline{{\\mathrm{PF}}}=6$ 이고 $\\overline{{\\mathrm{QF}}}=\\overline{{\\mathrm{QF'}}}=6$ 이다. 둘레에서 $2 \\overline{{\\mathrm{PF}}}+6=24$ , $\\overline{{\\mathrm{PF}}}=9$ , $\\overline{{\\mathrm{PF'}}}=15$ 이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "Q 위치",
+   "text": "$\\overline{{\\mathrm{QF}}}=\\overline{{\\mathrm{QF'}}}$ 이므로 ${\\mathrm{Q}}$ 는 $y$ 축 위에 있고 $\\cos(\\angle{\\mathrm{PF'F}})=\\frac{c}{6}$ 이다. 삼각형 ${\\mathrm{PF'F}}$ 에서 코사인법칙에 의하여",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "코사인법칙",
+   "text": "$$81=225+4 c^{2}-2 \\times 15 \\times 2 c \\times \\frac{c}{6}=225-6 c^{2}$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$c^2$",
+   "text": "이므로 $c^{2}=24$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "${\\mathrm{O}}$ 는 선분 ${\\mathrm{FF'}}$ 의 중점이므로 중선정리에 의하여 $\\overline{{\\mathrm{PF}}}^{2}+\\overline{{\\mathrm{PF'}}}^{2}=2(\\overline{{\\mathrm{OP}}}^{2}+c^{2})$ , $306=2 \\overline{{\\mathrm{OP}}}^{2}+48$ 이다. 따라서 $\\overline{{\\mathrm{OP}}}^{2}=129$",
+   "uses": [
+    "C2",
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "이등변 두 개",
+   "cond": "C1",
+   "text": [
+    "PQ$=$PF, QF$=$QF′."
+   ]
+  },
+  {
+   "h": "$\\cos$",
+   "cond": "C1",
+   "text": [
+    "$\\frac{c}{\\mathrm{F'Q}}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 둘레 $20$",
+   "body": [
+    "(같은 설정에서) 삼각형 PQF의 둘레의 길이가 $20$일 때, $7\\times\\overline{\\mathrm{OP}}^2$의 값을 구하시오."
+   ],
+   "answer": 583,
+   "hint": "PF$=7$, PF′$=13$: $c^2=\\frac{180}7$."
+  }
+ ],
+ "line": "이등변 조건 → 위치 결정 → 중선정리."
+}

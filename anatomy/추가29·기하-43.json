@@ -1,0 +1,126 @@
+{
+ "wrong": "예상 오답 — 쌍곡선의 중심을 원점으로 가정해 주축을 $2p$로 잡은 경우",
+ "intro": [
+  "A, H를 지나고 축이 $x$축 → 중심 $\\left(\\frac{a-p}2,0\\right)$, F는 꼭짓점 → 주축 $3p-a$.",
+  "HB$-$AB$=$주축, 거리식 → $p(p-3)(16p^2+64p-77)=0$ → 범위로 $p=3$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "포물선",
+   "why": "초점 F$(p,0)$, 제1사분면 A, 준선 수선 발 H.",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "쌍곡선",
+   "why": "초점이 $x$축 위, F, A, H를 지남, 오른쪽 초점 B.",
+   "uses": [
+    1,
+    2,
+    5
+   ]
+  },
+  "C3": {
+   "label": "조건",
+   "why": "AH$=7$, AB$=8$; AHB 넓이 $S$.",
+   "uses": [
+    3,
+    4
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$S^2$.",
+   "uses": [
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "쌍곡선의 정의",
+   "p": [
+    "$|\\overline{\\mathrm{PF'}}-\\overline{\\mathrm{PF}}|=2a$."
+   ]
+  },
+  {
+   "h": "대칭 중심",
+   "p": [
+    "A와 H는 중심에 대해 좌우 대칭."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "중심·주축",
+   "text": "${\\mathrm{A}}(a,\\,y_{0})$ , ${\\mathrm{H}}(-p,\\,y_{0})$ 이라 하면 $\\overline{{\\mathrm{AH}}}=a+p=7$ 이다. 쌍곡선은 두 점 ${\\mathrm{A}}$ , ${\\mathrm{H}}$ 를 지나고 $x$ 축에 대하여 대칭인 축을 가지므로 중심은 ${\\mathrm{M}}\\left(\\frac{a-p}{2},\\,0 \\right)$ 이고, $x$ 축 위의 점 ${\\mathrm{F}}$ 를 지나므로 ${\\mathrm{F}}$ 는 꼭짓점이다. 따라서 주축의 길이는 $2(p-\\frac{a-p}{2})=3 p-a=4 p-7$ 이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "HB",
+   "text": "다른 초점을 ${\\mathrm{B'}}$ 이라 하면 대칭성에 의하여 $\\overline{{\\mathrm{HB}}}=\\overline{{\\mathrm{AB'}}}$ 이고, 점 ${\\mathrm{A}}$ 는 쌍곡선의 오른쪽 부분 위에 있으므로 $\\overline{{\\mathrm{HB}}}-\\overline{{\\mathrm{AB}}}=4 p-7$ , $\\overline{{\\mathrm{HB}}}=4 p+1$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "방정식",
+   "text": "${\\mathrm{B}}(x_{{\\mathrm{B}}},\\,0)$ 이라 하면 $\\overline{{\\mathrm{HB}}}^{2}-\\overline{{\\mathrm{AB}}}^{2}=(x_{{\\mathrm{B}}}+p)^{2}-(x_{{\\mathrm{B}}}-a)^{2}=7(2 x_{{\\mathrm{B}}}+p-a)$ 이므로 $(4 p+1)^{2}-64=7(2 x_{{\\mathrm{B}}}+2 p-7)$ , $x_{{\\mathrm{B}}}=\\frac{8 p^{2}-3 p-7}{7}$ 이다. 이를 $\\overline{{\\mathrm{AB}}}^{2}=(x_{{\\mathrm{B}}}-a)^{2}+4 p a=64$ 에 대입하여 정리하면",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "인수분해",
+   "text": "$$4 p(p-3)(16 p^{2}+64 p-77)=0$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "범위",
+   "text": "이다. ${\\mathrm{A}}$ 가 오른쪽 부분 위에 있으려면 $a>p$ , 꼭짓점 ${\\mathrm{F}}$ 가 중심의 오른쪽에 있으려면 $a<3 p$ 이므로 $\\frac{7}{4}<p<\\frac{7}{2}$ 이고, 이 범위의 해는 $p=3$ 뿐이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$p=3$ , $a=4$ , $y_{0}=4 \\sqrt{3}$ 이고 ${\\mathrm{B}}(8,\\,0)$ , $\\overline{{\\mathrm{HB}}}=13$ 이다. $S=\\frac{1}{2}\\times 7 \\times 4 \\sqrt{3}=14 \\sqrt{3}$ 이므로 $S^{2}=588$",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "범위",
+   "cond": "C2",
+   "text": [
+    "$a>p$, $a<3p$."
+   ]
+  },
+  {
+   "h": "HB$=13$",
+   "cond": "C3",
+   "text": [
+    "$4p+1$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · HB$^2$+AB$^2$",
+   "body": [
+    "(같은 조건에서) $\\overline{\\mathrm{HB}}^2+\\overline{\\mathrm{AB}}^2$의 값을 구하시오."
+   ],
+   "answer": 233,
+   "hint": "$169+64$."
+  }
+ ],
+ "line": "세 점을 지나는 쌍곡선 → 대칭으로 중심과 주축."
+}

@@ -1,0 +1,118 @@
+{
+ "wrong": "예상 오답 — PQ$-$PF$\\ge$PC$-5-$PF로 두고 PF를 그대로 두어 최솟값을 구하지 못한 경우",
+ "intro": [
+  "PF$=2a-$PF′ → PQ$-$PF$\\ge$PC$+$PF′$-5-2a\\ge$CF′$-5-2a$.",
+  "최솟값 $10$ → $a=5$. P$_0$은 선분 F′C 위."
+ ],
+ "conds": {
+  "C1": {
+   "label": "도형",
+   "why": "초점 $(\\pm3,0)$ 타원, 원 중심 $(12,20)$ 반지름 $5$.",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "조건",
+   "why": "PQ$-$PF 최솟값 $10$.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "최소일 때 P$_0$, P$_0$F′F 넓이.",
+   "uses": [
+    4,
+    5,
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "타원의 정의",
+   "p": [
+    "$\\overline{\\mathrm{PF}}+\\overline{\\mathrm{PF'}}=2a$."
+   ]
+  },
+  {
+   "h": "삼각부등식",
+   "p": [
+    "$\\mathrm{PC}+\\mathrm{PF'}\\ge\\mathrm{CF'}$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "CF′",
+   "text": "원의 중심을 ${\\mathrm{C}}(12,\\,20)$ 이라 하면 $\\overline{{\\mathrm{CF'}}}=\\sqrt{15^{2}+20^{2}}=25$ 이다. 점 ${\\mathrm{C}}$ 는 타원의 외부에 있고, $\\overline{{\\mathrm{PF}}}=2 a-\\overline{{\\mathrm{PF'}}}$ 이므로",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "부등식",
+   "text": "$$\\overline{{\\mathrm{PQ}}}-\\overline{{\\mathrm{PF}}}\\ge(\\overline{{\\mathrm{PC}}}-5)+\\overline{{\\mathrm{PF'}}}-2 a \\ge \\overline{{\\mathrm{CF'}}}-5-2 a=20-2 a$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$a$",
+   "text": "이다. 등호는 점 ${\\mathrm{P}}$ 가 선분 ${\\mathrm{CF'}}$ 위에 있을 때 성립하므로 $20-2 a=10$ , $a=5$ , $b=4$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "매개",
+   "text": "${\\mathrm{P}}_{0}$ 은 선분 ${\\mathrm{F'C}}$ 위의 점이므로 $\\overline{{\\mathrm{P}}_{0}{\\mathrm{F'}}}=t$ 라 하면 ${\\mathrm{P}}_{0}\\left(-3+\\frac{3}{5}t,\\,\\frac{4}{5}t \\right)$ 이고 $\\overline{{\\mathrm{P}}_{0}{\\mathrm{F}}}=10-t$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$t$",
+   "text": "$\\left(-6+\\frac{3}{5}t \\right)^{2}+\\left(\\frac{4}{5}t \\right)^{2}=(10-t)^{2}$ 에서 $36-\\frac{36}{5}t=100-20 t$ , $t=5$ 이므로 ${\\mathrm{P}}_{0}(0,\\,4)$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 삼각형 ${\\mathrm{P}}_{0}{\\mathrm{F'F}}$ 의 넓이는 $\\frac{1}{2}\\times 6 \\times 4=12$",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$-$PF를 $+$PF′로",
+   "cond": "C2",
+   "text": [
+    "부호 바꿔 합의 최소."
+   ]
+  },
+  {
+   "h": "P$_0(0,4)$",
+   "cond": "C3",
+   "text": [
+    "단축 끝점."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 원 중심 $(21,18)$, 반지름 $10$",
+   "body": [
+    "두 초점이 F$(3,0)$, F′$(-3,0)$인 타원과 원 $(x-21)^2+(y-18)^2=100$에 대하여, 타원 위의 점 P와 원 위의 점 Q에 대하여 $\\overline{\\mathrm{PQ}}-\\overline{\\mathrm{PF}}$의 최솟값이 $10$이다. 최소가 되게 하는 P를 P$_0$이라 할 때, 삼각형 P$_0$F′F의 넓이를 $S$라 하자. $13S$의 값을 구하시오."
+   ],
+   "answer": 144,
+   "hint": "CF′$=30$ → $a=5$, P$_0\\left(\\frac{25}{13},\\frac{48}{13}\\right)$."
+  }
+ ],
+ "line": "차의 최소 → 다른 초점으로 합의 최소."
+}

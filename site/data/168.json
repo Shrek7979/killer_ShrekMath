@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2022학년도 6월 모의평가 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $p$의 두 값 중 하나만 써서 $20$ 또는 $80$으로 답한 경우",
  "answer": 100,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -29,9 +29,11 @@
     0
    ],
    "text": "양수 $p$ 에 대하여 포물선 $y^{2}=4 p x$ 의 초점 ${\\mathrm{F}}$ 를 지나는 직선이 포물선과 서로 다른 두 점 ${\\mathrm{A}}$ , ${\\mathrm{B}}$ 에서 만난다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "설정",
+   "why": "$y^2=4px$, 초점 지나는 직선과 교점 A, B.",
+   "uses": [
+    3
+   ]
   },
   {
    "id": "C2",
@@ -40,9 +42,15 @@
     1
    ],
    "text": "선분 ${\\mathrm{AB}}$ 를 지름으로 하는 원의 반지름의 길이가 $10$ 이고, 이 원이 포물선의 준선과 점 $(-p,\\,4)$ 에서 접한다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "원",
+   "why": "AB 지름, 반지름 $10$, 준선과 $(-p,4)$에서 접함.",
+   "uses": [
+    1,
+    2,
+    4,
+    5,
+    7
+   ]
   },
   {
    "id": "C3",
@@ -51,74 +59,134 @@
     2
    ],
    "text": "이를 만족시키는 모든 $p$ 에 대하여 $\\overline{{\\mathrm{AF}}}\\times \\overline{{\\mathrm{BF}}}$ 의 값의 합을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "가능한 $p$마다 AF·BF의 합.",
+   "uses": [
+    6,
+    8,
+    9
+   ]
   }
  ],
  "intro": [
-  "초점을 지나는 직선과 포물선의 두 교점을 지름의 양 끝으로 하는 원이 준선에 접함을 발견하게 하고, 조건을 만족시키는 $p$ 가 두 개인 경우를 모두 처리"
+  "초점현을 지름으로 하는 원은 준선에 접함(중점의 거리 $=\\frac{\\mathrm{AB}}2$).",
+  "HF ⊥ AB → 피타고라스로 $p$, AF·BF$=$HF$^2$(직각삼각형 닮음)."
  ],
  "topic": "포물선",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "포물선의 정의",
+   "p": [
+    "초점까지 거리 = 준선까지 거리."
+   ]
+  },
+  {
+   "h": "직각삼각형 닮음",
+   "p": [
+    "빗변에 내린 수선: $h^2=$ 두 조각의 곱."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "두 점 ${\\mathrm{A}}$ , ${\\mathrm{B}}$ 에서 준선에 내린 수선의 발을 각각 ${\\mathrm{A'}}$ , ${\\mathrm{B'}}$ , 선분 ${\\mathrm{AB}}$ 의 중점을 ${\\mathrm{M}}$ 이라 하자. 포물선의 정의에 의하여 $\\overline{{\\mathrm{AA'}}}=\\overline{{\\mathrm{AF}}}$ , $\\overline{{\\mathrm{BB'}}}=\\overline{{\\mathrm{BF}}}$ 이므로 점 ${\\mathrm{M}}$ 과 준선 사이의 거리는 $\\frac{\\overline{{\\mathrm{AA'}}}+\\overline{{\\mathrm{BB'}}}}{2}=\\frac{\\overline{{\\mathrm{AF}}}+\\overline{{\\mathrm{BF}}}}{2}=\\frac{\\overline{{\\mathrm{AB}}}}{2}$ 이다. 즉, 선분 ${\\mathrm{AB}}$ 를 지름으로 하는 원은 항상 준선에 접하고, 그 접점 ${\\mathrm{H}}$ 는 점 ${\\mathrm{M}}$ 에서 준선에 내린 수선의 발이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "접함"
   },
   {
    "n": 2,
    "text": "따라서 $\\overline{{\\mathrm{AB}}}=20$ , ${\\mathrm{H}}(-p,\\,4)$ 이고, 점 ${\\mathrm{M}}$ 은 점 ${\\mathrm{H}}$ 에서 오른쪽으로 $10$ 만큼 떨어진 점 ${\\mathrm{M}}(10-p,\\,4)$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "M"
   },
   {
    "n": 3,
    "text": "이제 두 직선 ${\\mathrm{HF}}$ , ${\\mathrm{AB}}$ 가 서로 수직임을 보이자. $\\overline{{\\mathrm{MH}}}=\\overline{{\\mathrm{MA}}}$ 이므로 $\\angle{\\mathrm{MHA}}=\\angle{\\mathrm{MAH}}$ 이고, 직선 ${\\mathrm{MH}}$ 와 직선 ${\\mathrm{AA'}}$ 은 모두 준선에 수직이므로 평행하여 $\\angle{\\mathrm{MHA}}=\\angle{\\mathrm{HAA'}}$ (엇각)이다. 즉, $\\angle{\\mathrm{HAF}}=\\angle{\\mathrm{HAA'}}$ 이다. 두 삼각형 ${\\mathrm{AA'H}}$ , ${\\mathrm{AFH}}$ 는 $\\overline{{\\mathrm{AA'}}}=\\overline{{\\mathrm{AF}}}$ , 변 ${\\mathrm{AH}}$ 공통, 끼인각이 같으므로 합동이고, $\\angle{\\mathrm{AFH}}=\\angle{\\mathrm{AA'H}}=\\frac{\\pi}{2}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "수직"
   },
   {
    "n": 4,
    "text": "그러면 삼각형 ${\\mathrm{HFM}}$ 은 $\\angle{\\mathrm{HFM}}=\\frac{\\pi}{2}$ 인 직각삼각형이므로 $\\overline{{\\mathrm{HF}}}^{2}+\\overline{{\\mathrm{FM}}}^{2}=\\overline{{\\mathrm{HM}}}^{2}$ 이다. ${\\mathrm{F}}(p,\\,0)$ 이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "피타고라스"
   },
   {
    "n": 5,
    "text": "$$\\left\\{(2 p)^{2}+4^{2}\\right\\}+\\left\\{(10-2 p)^{2}+4^{2}\\right\\}=10^{2}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "식"
   },
   {
    "n": 6,
    "text": "정리하면 $8 p^{2}-40 p+32=0$ , 즉 $p^{2}-5 p+4=0$ 이므로 $p=1$ 또는 $p=4$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "$p$"
   },
   {
    "n": 7,
    "text": "한편 점 ${\\mathrm{H}}$ 는 선분 ${\\mathrm{AB}}$ 를 지름으로 하는 원 위에 있으므로 $\\angle{\\mathrm{AHB}}=\\frac{\\pi}{2}$ 이고, $\\overline{{\\mathrm{HF}}}$ 는 직각삼각형 ${\\mathrm{AHB}}$ 의 빗변에 내린 수선이다. 두 삼각형 ${\\mathrm{AFH}}$ , ${\\mathrm{HFB}}$ 가 서로 닮음이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "직각"
   },
   {
    "n": 8,
    "text": "$$\\overline{{\\mathrm{AF}}}\\times \\overline{{\\mathrm{BF}}}=\\overline{{\\mathrm{HF}}}^{2}=4 p^{2}+16$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "곱"
   },
   {
    "n": 9,
    "text": "$p=1$ 일 때 $20$ , $p=4$ 일 때 $80$ 이므로 구하는 합은 $20+80=100$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "두 해",
+   "cond": "C3",
+   "text": [
+    "$p=1$, $4$ 모두 가능."
+   ]
+  },
+  {
+   "h": "합동",
+   "cond": "C1",
+   "text": [
+    "AA′H ≡ AFH."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 반지름 $5$, 접점 $(-p,2)$",
+   "body": [
+    "양수 $p$에 대하여 포물선 $y^2=4px$의 초점 F를 지나는 직선이 포물선과 두 점 A, B에서 만난다. AB를 지름으로 하는 원의 반지름이 $5$이고 이 원이 준선과 점 $(-p,2)$에서 접할 때, 가능한 모든 $p$에 대하여 $\\overline{\\mathrm{AF}}\\times\\overline{\\mathrm{BF}}$의 값의 합을 구하시오."
+   ],
+   "answer": 25,
+   "hint": "$2p^2-5p+2=0$: $p=2,\\frac12$ → $20+5$."
+  }
+ ],
+ "line": "초점현 지름원 → 준선 접함 → 직각.",
  "note": ""
 }

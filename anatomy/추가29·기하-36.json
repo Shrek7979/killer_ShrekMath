@@ -1,0 +1,112 @@
+{
+ "wrong": "예상 오답 — 접선의 $y$절편을 $-b$로 잡아 OS$=b$로 계산한 경우",
+ "intro": [
+  "Q가 F′P 중점 → PF ⊥ $x$축 → P$\\left(c,\\frac{b^2}a\\right)$.",
+  "P의 접선 $\\frac{cx}{a^2}-\\frac ya=1$ → $y$절편 $-a$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "설정",
+   "why": "제1사분면 P, F′P와 $y$축 교점 Q, F′Q$=$QP.",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "S",
+   "why": "P의 접선과 $y$축 교점.",
+   "uses": [
+    2
+   ]
+  },
+  "C3": {
+   "label": "조건",
+   "why": "OQ$=\\frac83$, OS$=3$; PF′S 넓이 $\\frac qp$.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$p+q$.",
+   "uses": [
+    3
+   ]
+  },
+  "C5": {
+   "label": "단서",
+   "why": "서로소.",
+   "uses": [
+    3
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "쌍곡선의 정의",
+   "p": [
+    "$\\mathrm{PF'}-\\mathrm{PF}=2a$ (오른쪽 가지)."
+   ]
+  },
+  {
+   "h": "쌍곡선 접선",
+   "p": [
+    "$\\frac{x_1x}{a^2}-\\frac{y_1y}{b^2}=1$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "P",
+   "text": "${\\mathrm{O}}$ 와 ${\\mathrm{Q}}$ 가 각각 선분 ${\\mathrm{F'F}}$ , ${\\mathrm{F'P}}$ 의 중점이므로 직선 ${\\mathrm{PF}}$ 는 $y$ 축과 평행하다. 따라서 ${\\mathrm{P}}\\left(c,\\,\\frac{b^{2}}{a}\\right)$ 이고 $\\overline{{\\mathrm{OQ}}}=\\frac{b^{2}}{2 a}=\\frac{8}{3}$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "S",
+   "text": "점 ${\\mathrm{P}}$ 에서의 접선은 $\\frac{c x}{a^{2}}-\\frac{y}{a}=1$ 이고 $x=0$ 이면 $y=-a$ 이므로 $\\overline{{\\mathrm{OS}}}=a=3$ 이다. 따라서 $b^{2}=16$ , $c=5$ , ${\\mathrm{P}}\\left(5,\\,\\frac{16}{3}\\right)$ , ${\\mathrm{S}}(0,\\,-3)$ 이다.",
+   "uses": [
+    "C2",
+    "C3"
+   ]
+  },
+  {
+   "title": "넓이",
+   "text": "$\\vec{{\\mathrm{F'P}}}=\\left(10,\\,\\frac{16}{3}\\right)$ , $\\vec{{\\mathrm{F'S}}}=(5,\\,-3)$ 이므로 넓이는 $\\frac{1}{2}\\left|10 \\times(-3)-\\frac{16}{3}\\times 5 \\right|=\\frac{85}{3}$ 이다. 따라서 $p+q=3+85=88$",
+   "uses": [
+    "C3",
+    "C4",
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "OQ",
+   "cond": "C1",
+   "text": [
+    "$\\frac12$PF$=\\frac{b^2}{2a}$."
+   ]
+  },
+  {
+   "h": "외적",
+   "cond": "C3",
+   "text": [
+    "$\\frac12|x_1y_2-x_2y_1|$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · OQ$=\\frac98$, OS$=4$",
+   "body": [
+    "(같은 설정에서) $\\overline{\\mathrm{OQ}}=\\frac98$, $\\overline{\\mathrm{OS}}=4$일 때, 삼각형 PF′S의 넓이는 $\\frac qp$이다. $p+q$의 값을 구하시오. (단, $p$와 $q$는 서로소인 자연수)"
+   ],
+   "answer": 213,
+   "hint": "$a=4$, $b^2=9$, $c=5$: $\\frac{205}8$."
+  }
+ ],
+ "line": "중점 → 통경 끝점 → 접선 절편."
+}

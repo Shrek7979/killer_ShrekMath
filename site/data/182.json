@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2024학년도 대학수학능력시험 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — (ⅱ)를 배제하지 않고 $c=1$을 써서 계산한 경우",
  "answer": 512,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -29,9 +29,11 @@
     0
    ],
    "text": "주축의 길이가 $6$ 이고 두 초점이 ${\\mathrm{F}}(c,\\,0)$ , ${\\mathrm{F'}}(-c,\\,0)$ $(c>0)$ 인 쌍곡선 위의 점 중 제 $1$ 사분면에 있는 점 ${\\mathrm{P}}$ 에 대하여 삼각형 ${\\mathrm{PF'F}}$ 가 이등변삼각형이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "설정",
+   "why": "주축 $6$, 제1사분면 P, PF′F 이등변.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C2",
@@ -40,9 +42,13 @@
     1
    ],
    "text": "점 ${\\mathrm{F}}$ 에서 직선 ${\\mathrm{PF'}}$ 에 내린 수선의 발을 ${\\mathrm{Q}}$ 라 할 때, 점 ${\\mathrm{Q}}$ 는 선분 ${\\mathrm{PF'}}$ 위에 있고 $\\overline{{\\mathrm{PQ}}}=4$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "Q",
+   "why": "F에서 PF′에 내린 수선 발, 선분 위, PQ$=4$.",
+   "uses": [
+    2,
+    3,
+    4
+   ]
   },
   {
    "id": "C3",
@@ -51,50 +57,100 @@
     2
    ],
    "text": "삼각형 ${\\mathrm{PQF}}$ 의 넓이를 $S$ 라 할 때, $S^{2}$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "PQF 넓이 $S$, $S^2$.",
+   "uses": [
+    5
+   ]
   }
  ],
  "intro": [
-  "이등변삼각형의 경우를 나누고 $c>a$ 와 삼각형의 존재 조건으로 한 경우를 배제하게 함"
+  "PF′$=$PF$+6$. 이등변: (ⅰ) PF′$=$FF′, (ⅱ) PF$=$FF′.",
+  "PQ$=$PF$\\cos\\angle\\mathrm{F'PF}$ → (ⅰ) $c=9$; (ⅱ) $c=1<3$ 모순."
  ],
  "topic": "쌍곡선",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "쌍곡선의 정의",
+   "p": [
+    "$|\\overline{\\mathrm{PF'}}-\\overline{\\mathrm{PF}}|=2a$."
+   ]
+  },
+  {
+   "h": "이등변의 코사인",
+   "p": [
+    "밑각 $\\cos=\\frac{\\text{밑변}/2}{\\text{빗변}}$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$a=3$ 이고 $c>3$ 이다. 점 ${\\mathrm{P}}$ 가 제 $1$ 사분면에 있으므로 $\\overline{{\\mathrm{PF'}}}=\\overline{{\\mathrm{PF}}}+6$ 이고, 이등변삼각형은 다음 두 경우이다. 이때 $\\overline{{\\mathrm{PQ}}}=\\overline{{\\mathrm{PF}}}\\cos(\\angle{\\mathrm{F'PF}})$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "경우"
   },
   {
    "n": 2,
    "text": "(i) $\\overline{{\\mathrm{PF'}}}=\\overline{{\\mathrm{FF'}}}=2 c$ , $\\overline{{\\mathrm{PF}}}=2 c-6$ : 꼭짓점 ${\\mathrm{F'}}$ 에서 밑변 ${\\mathrm{PF}}$ 에 내린 수선을 생각하면 $\\cos(\\angle{\\mathrm{F'PF}})=\\frac{c-3}{2 c}$ 이므로 $\\overline{{\\mathrm{PQ}}}=\\frac{(c-3)^{2}}{c}=4$ , $c^{2}-10 c+9=0$ , $c>3$ 에서 $c=9$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "(ⅰ)"
   },
   {
    "n": 3,
    "text": "(ii) $\\overline{{\\mathrm{PF}}}=\\overline{{\\mathrm{FF'}}}=2 c$ , $\\overline{{\\mathrm{PF'}}}=2 c+6$ : $\\cos(\\angle{\\mathrm{F'PF}})=\\frac{c+3}{2 c}$ 이므로 $\\overline{{\\mathrm{PQ}}}=c+3=4$ , $c=1$ 인데 $c>3$ 에 모순이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "(ⅱ)"
   },
   {
    "n": 4,
    "text": "따라서 $c=9$ , $\\overline{{\\mathrm{PF}}}=12$ , $\\cos(\\angle{\\mathrm{F'PF}})=\\frac{1}{3}$ 이고 $\\overline{{\\mathrm{QF}}}=12 \\times \\frac{2 \\sqrt{2}}{3}=8 \\sqrt{2}$ 이다. (이때 $\\overline{{\\mathrm{PQ}}}=4<\\overline{{\\mathrm{PF'}}}=18$ 이므로 ${\\mathrm{Q}}$ 는 선분 ${\\mathrm{PF'}}$ 위에 있다.)",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "값"
   },
   {
    "n": 5,
    "text": "$S=\\frac{1}{2}\\times 4 \\times 8 \\sqrt{2}=16 \\sqrt{2}$ 이므로 $S^{2}=512$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$c>a$",
+   "cond": "C1",
+   "text": [
+    "쌍곡선의 조건."
+   ]
+  },
+  {
+   "h": "선분 위",
+   "cond": "C2",
+   "text": [
+    "PQ$<$PF′ 확인."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 주축 $8$, PQ$=9$",
+   "body": [
+    "주축의 길이가 $8$인 쌍곡선 위의 제1사분면의 점 P에 대하여 삼각형 PF′F가 이등변삼각형이고, F에서 직선 PF′에 내린 수선의 발 Q가 선분 PF′ 위에 있으며 $\\overline{\\mathrm{PQ}}=9$일 때, $\\overline{\\mathrm{QF}}^2$의 값을 구하시오."
+   ],
+   "answer": 495,
+   "hint": "$(c-4)^2=9c$ → $c=16$, PF$=24$, $\\cos=\\frac38$."
+  }
+ ],
+ "line": "이등변 경우 분류 + 존재 조건.",
  "note": ""
 }
