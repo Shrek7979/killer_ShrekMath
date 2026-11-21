@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2022학년도 대학수학능력시험 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **8** — $dx=f'(t)dt$를 빠뜨려 $\\int_0^{2\\pi}t^2dt=\\frac{8\\pi^3}3$만 남긴 경우",
  "answer": 20,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -38,9 +38,12 @@
     0
    ],
    "text": "함수 $f(x)=x+\\sin x$ 의 역함수를 $g(x)$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "역함수",
+   "why": "$f'=1+\\cos x\\ge0$, 등호는 고립점 → 증가. $f(0)=0$, $f(2\\pi)=2\\pi$.",
+   "uses": [
+    1,
+    2
+   ]
   },
   {
    "id": "C2",
@@ -49,9 +52,12 @@
     0
    ],
    "text": "$\\int_{0}^{2 \\pi}\\left\\{g(x)\\right\\}^{2}dx=p \\pi^{3}+q \\pi$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "구하는 값",
+   "why": "$p\\pi^3+q\\pi$ ($p,q$ 유리수), $3(p+q)$.",
+   "uses": [
+    3,
+    4
+   ]
   },
   {
    "id": "C3",
@@ -77,38 +83,84 @@
   }
  ],
  "intro": [
-  "역함수를 직접 구할 수 없는 상황에서 $x=f(t)$ 로 치환하고 부분적분을 두 번 적용하게 함"
+  "$g$를 직접 구할 수 없으니 $x=f(t)=t+\\sin t$로 치환. $g(x)=t$, $dx=(1+\\cos t)dt$.",
+  "남는 $\\int t^2\\cos t\\,dt$는 부분적분 두 번 — 경계항 $t^2\\sin t$는 $0$, $2\\pi$에서 $0$."
  ],
  "topic": "여러 가지 적분법",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "역함수가 든 적분",
+   "p": [
+    "$x=f(t)$로 치환하면 $g(x)=t$."
+   ]
+  },
+  {
+   "h": "부분적분 두 번",
+   "p": [
+    "$\\int t^2\\cos t=t^2\\sin t-2\\int t\\sin t$, $\\int t\\sin t=-t\\cos t+\\sin t$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$f'(x)=1+\\cos x \\ge 0$ 이고 등호는 고립된 점에서만 성립하므로 $f(x)$ 는 증가하며 $f(0)=0$ , $f(2 \\pi)=2 \\pi$ 이다. $x=f(t)$ 로 치환하면",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "치환"
   },
   {
    "n": 2,
    "text": "$$\\int_{0}^{2 \\pi}\\{g(x)\\}^{2}dx=\\int_{0}^{2 \\pi}t^{2}(1+\\cos t)dt=\\frac{8 \\pi^{3}}{3}+\\int_{0}^{2 \\pi}t^{2}\\cos t dt$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "전개"
   },
   {
    "n": 3,
    "text": "부분적분법을 두 번 쓰면 $\\int_{0}^{2 \\pi}t^{2}\\cos t dt=\\left[t^{2}\\sin t \\right]_{0}^{2 \\pi}-2 \\int_{0}^{2 \\pi}t \\sin t dt=-2 \\left[-t \\cos t+\\sin t \\right]_{0}^{2 \\pi}=4 \\pi$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "부분적분"
   },
   {
    "n": 4,
    "text": "따라서 $p=\\frac{8}{3}$ , $q=4$ 이고 $3(p+q)=20$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$dx$ 변환",
+   "cond": "C1",
+   "text": [
+    "$(1+\\cos t)$가 붙어야 합니다."
+   ]
+  },
+  {
+   "h": "$-t\\cos t$의 값",
+   "cond": "C2",
+   "text": [
+    "$[-t\\cos t]_0^{2\\pi}=-2\\pi$ → $-2\\times(-2\\pi)=4\\pi$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 구간 $[0,\\pi]$",
+   "body": [
+    "함수 $f(x)=x+\\sin x$의 역함수를 $g(x)$라 하자. $\\int_0^{\\pi}\\{g(x)\\}^2dx=p\\pi^3+q\\pi$일 때, $3(p+q)$의 값을 구하시오. (단, $p$와 $q$는 유리수)"
+   ],
+   "answer": -5,
+   "hint": "$\\frac{\\pi^3}3+\\int_0^\\pi t^2\\cos t\\,dt=\\frac{\\pi^3}3-2\\pi$ → $3\\left(\\frac13-2\\right)=-5$."
+  }
+ ],
+ "line": "역함수 적분 → $x=f(t)$. 삼각함수 × 다항식은 부분적분 반복.",
  "note": ""
 }

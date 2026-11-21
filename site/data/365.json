@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2025학년도 6월 모의평가 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **$\\frac94$** — $a_{n+1}^{3/2}-a_n^{3/2}\\approx\\frac32\\sqrt{a_n}\\,\\pi$에서 $\\frac32$를 빠뜨린 경우",
  "answer": 9,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -37,9 +37,13 @@
     0
    ],
    "text": "$x>0$ 에서 두 곡선 $y=\\tan x$ 와 $y=\\frac{x \\sqrt{x}}{2}$ 가 만나는 모든 점의 $x$ 좌표를 작은 수부터 크기순으로 나열할 때, $n$ 번째 수를 $a_{n}$ 이라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "교점",
+   "why": "$\\tan x=\\frac{x\\sqrt x}2$, $x>0$.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
   },
   {
    "id": "C2",
@@ -48,9 +52,12 @@
     0
    ],
    "text": "$\\frac{1}{\\pi^{2}}\\times \\lim_{n \\to \\infty}a_{n}^{5}\\tan^{2}\\left(a_{n+1}-a_{n}\\right)$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\frac1{\\pi^2}\\lim a_n^5\\tan^2(a_{n+1}-a_n)$.",
+   "uses": [
+    4,
+    5
+   ]
   },
   {
    "id": "C3",
@@ -65,44 +72,92 @@
   }
  ],
  "intro": [
-  "곡선을 $y=\\frac{x \\sqrt{x}}{2}$ 로 바꾸어 첫 구간에 교점이 없음을 판정하게 하고, 극한의 차수(지수 $5$ )를 스스로 맞추어야 하도록 구성"
+  "첫 반주기 $(0,\\frac\\pi2)$엔 교점이 없고, 이후 각 $(n\\pi,n\\pi+\\frac\\pi2)$에 하나씩. 근은 점근선 쪽에 붙어 $a_n=n\\pi+\\frac\\pi2-u_n$.",
+  "$\\tan u_n=\\frac2{a_n^{3/2}}$. 차 $\\tan(u_n-u_{n+1})$은 $a_n^{-5/2}$ 속도로 줄어 — 제곱하면 $a_n^5$을 곱해야 유한합니다."
  ],
  "topic": "수열의 극한",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "$\\tan\\left(\\frac\\pi2-u\\right)=\\frac1{\\tan u}$",
+   "p": [
+    "점근선 근처의 근은 $u$로 바꾸면 작은 각의 방정식."
+   ]
+  },
+  {
+   "h": "거듭제곱의 차",
+   "p": [
+    "$b^{3/2}-a^{3/2}\\approx\\frac32\\sqrt a\\,(b-a)$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$0<x<\\frac{\\pi}{2}$ 이면 $x<4$ 이므로 $\\tan x>x>\\frac{x \\sqrt{x}}{2}$ 가 되어 교점이 없다. 구간 $\\left(n \\pi-\\frac{\\pi}{2},\\,n \\pi \\right]$ 에서는 $\\tan x \\le 0$ 이므로 교점이 없다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "첫 구간 배제"
   },
   {
    "n": 2,
    "text": "$\\left(n \\pi,\\,n \\pi+\\frac{\\pi}{2}\\right)$ 에서 $x=n \\pi+\\frac{\\pi}{2}-u$ $\\left(0<u<\\frac{\\pi}{2}\\right)$ 라 하면 방정식은 $\\tan u=\\frac{2}{x \\sqrt{x}}$ 이다. $u$ 에 대하여 좌변의 순간변화율은 $\\sec^{2}u \\ge 1$ 이고 우변의 순간변화율은 $\\frac{3}{x^{2}\\sqrt{x}}<1$ 이므로 근은 하나뿐이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "근의 유일성"
   },
   {
    "n": 3,
    "text": "따라서 $a_{n}=n \\pi+\\frac{\\pi}{2}-u_{n}$ , $t_{n}=\\tan u_{n}=\\frac{2}{a_{n}\\sqrt{a_{n}}}$ 이고 $\\tan(a_{n+1}-a_{n})=\\tan(u_{n}-u_{n+1})=\\frac{t_{n}-t_{n+1}}{1+t_{n t}_{n+1}}$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "덧셈정리"
   },
   {
    "n": 4,
    "text": "$t_{n}-t_{n+1}=\\frac{2 \\left(a_{n+1}^{3/2}-a_{n}^{3/2}\\right)}{(a_{n a}_{n+1})^{3/2}}$ 이고 $a_{n+1}^{3/2}-a_{n}^{3/2}=\\frac{a_{n+1}^{3}-a_{n}^{3}}{a_{n+1}^{3/2}+a_{n}^{3/2}}$ , $a_{n+1}-a_{n}\\to \\pi$ 이므로 $\\frac{a_{n+1}^{3/2}-a_{n}^{3/2}}{\\sqrt{a_{n}}}\\to \\frac{3 \\pi}{2}$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "차의 근사"
   },
   {
    "n": 5,
    "text": "따라서 $a_{n}^{5/2}\\tan(a_{n+1}-a_{n})\\to 2 \\times \\frac{3 \\pi}{2}=3 \\pi$ 이고 구하는 값은 $\\frac{(3 \\pi)^{2}}{\\pi^{2}}=9$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "근의 위치",
+   "cond": "C1",
+   "text": [
+    "곡선이 커지므로 근은 $n\\pi$ 쪽이 아니라 점근선 $n\\pi+\\frac\\pi2$ 쪽."
+   ]
+  },
+  {
+   "h": "곱할 차수",
+   "cond": "C2",
+   "text": [
+    "$t_n-t_{n+1}\\sim\\frac{3\\pi}{a_n^{5/2}}$ → 제곱이면 $a_n^5$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $y=\\frac{x\\sqrt x}4$",
+   "body": [
+    "$x>0$에서 두 곡선 $y=\\tan x$와 $y=\\frac{x\\sqrt x}4$가 만나는 모든 점의 $x$좌표를 작은 수부터 크기순으로 나열할 때, $n$번째 수를 $a_n$이라 하자. $\\frac1{\\pi^2}\\times\\lim_{n\\to\\infty}a_n^5\\tan^2(a_{n+1}-a_n)$의 값을 구하시오."
+   ],
+   "answer": 36,
+   "hint": "$t_n=\\frac4{a_n^{3/2}}$ → $a_n^{5/2}\\tan\\to4\\times\\frac{3\\pi}2=6\\pi$."
+  }
+ ],
+ "line": "근이 어디에 붙는지 먼저. 수렴 속도에 맞춰 곱할 차수를 정한다.",
  "note": ""
 }
