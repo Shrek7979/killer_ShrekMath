@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 3차 R3_미적A 14번( 2025학년도 대학수학능력시험 30번) 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 한 칸 차 분해만 시도해 망원 구조를 찾지 못한 경우",
  "answer": 95,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -47,9 +47,11 @@
     0
    ],
    "text": "$0<\\alpha_{n}<\\frac{\\pi}{2}$ 인 수열 $\\{\\alpha_{n}\\}$ 이 모든 자연수 $n$ 에 대하여",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "범위",
+   "why": "$0<\\alpha_n<\\frac\\pi2$.",
+   "uses": [
+    3
+   ]
   },
   {
    "id": "C2",
@@ -58,9 +60,12 @@
     0
    ],
    "text": "$\\tan \\alpha_{n}=\\frac{2}{n^{2}}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건",
+   "why": "$\\tan\\alpha_n=\\frac2{n^2}$.",
+   "uses": [
+    1,
+    2
+   ]
   },
   {
    "id": "C3",
@@ -80,9 +85,15 @@
     0
    ],
    "text": "$\\sum_{n=1}^{\\infty}\\alpha_{n}=k \\pi,\\,\\,\\,\\lim_{n \\to \\infty}n \\left(k \\pi-\\sum_{j=1}^{n}\\alpha_{j}\\right)=L$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\sum\\alpha_n=k\\pi$, $L=\\lim n(k\\pi-S_n)$; $100k+10L$.",
+   "uses": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
   },
   {
    "id": "C5",
@@ -97,62 +108,116 @@
   }
  ],
  "intro": [
-  "일반항을 한 칸이 아닌 두 칸 떨어진 두 각의 차로 분해하여 부분합에 두 항씩 남는 망원 구조를 찾게 하고, 부분합이 급수의 합에 다가가는 속도까지 삼각함수의 극한으로 구하게 함"
+  "$\\alpha_n=\\theta_{n+1}-\\theta_{n-1}$ ($\\tan\\theta_m=m$).",
+  "부분합 $\\theta_{n+1}+\\theta_n-\\frac\\pi4$; 나머지 $\\varphi\\sim\\frac1m$."
  ],
  "topic": "급수",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "두 칸 망원",
+   "p": [
+    "$\\frac{(n+1)-(n-1)}{1+(n^2-1)}$."
+   ]
+  },
+  {
+   "h": "$\\frac{\\tan x}x\\to1$",
+   "p": [
+    "여각의 극한."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$0<\\theta_{m}<\\frac{\\pi}{2}$ , $\\tan \\theta_{m}=m$ $(m \\ge 1)$ , $\\theta_{0}=0$ 이라 하자. 탄젠트의 덧셈정리에서",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "설정"
   },
   {
    "n": 2,
    "text": "$$\\tan \\left(\\theta_{n+1}-\\theta_{n-1}\\right)=\\frac{(n+1)-(n-1)}{1+(n+1)(n-1)}=\\frac{2}{n^{2}}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "분해"
   },
   {
    "n": 3,
    "text": "이고 $0<\\theta_{n+1}-\\theta_{n-1}<\\frac{\\pi}{2}$ 이므로 $\\alpha_{n}=\\theta_{n+1}-\\theta_{n-1}$ 이다. 따라서 부분합은 두 항씩 남아",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "범위"
   },
   {
    "n": 4,
    "text": "$$\\sum_{j=1}^{n}\\alpha_{j}=\\theta_{n+1}+\\theta_{n}-\\theta_{1}-\\theta_{0}=\\theta_{n+1}+\\theta_{n}-\\frac{\\pi}{4}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "부분합"
   },
   {
    "n": 5,
    "text": "이다. $\\theta_{m}\\to \\frac{\\pi}{2}$ 이므로 급수의 합은 $\\frac{3 \\pi}{4}$ , 즉 $k=\\frac{3}{4}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$k$"
   },
   {
    "n": 6,
    "text": "$\\varphi_{m}=\\frac{\\pi}{2}-\\theta_{m}$ 이라 하면 $\\tan \\varphi_{m}=\\frac{1}{m}$ , $\\varphi_{m}\\to 0$ 이고",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "여각"
   },
   {
    "n": 7,
    "text": "$$n \\left(\\frac{3 \\pi}{4}-\\sum_{j=1}^{n}\\alpha_{j}\\right)=n \\varphi_{n+1}+n \\varphi_{n}=\\frac{\\varphi_{n+1}}{\\tan \\varphi_{n+1}}\\times \\frac{n}{n+1}+\\frac{\\varphi_{n}}{\\tan \\varphi_{n}}\\to 2$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "극한"
   },
   {
    "n": 8,
    "text": "이므로 $L=2$ 이다. 구하는 값은 $75+20=95$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\theta_0=0$",
+   "cond": "C4",
+   "text": [
+    "$n=1$ 항."
+   ]
+  },
+  {
+   "h": "두 항",
+   "cond": "C4",
+   "text": [
+    "$n\\varphi_{n+1}+n\\varphi_n$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\frac1{n^2+n+1}$",
+   "body": [
+    "$0<\\alpha_n<\\frac\\pi2$이고 $\\tan\\alpha_n=\\frac1{n^2+n+1}$인 수열에 대하여 $\\sum\\alpha_n=k\\pi$, $\\lim_{n\\to\\infty}n\\left(k\\pi-\\sum_{j=1}^n\\alpha_j\\right)=L$일 때, $100k+10L$의 값을 구하시오."
+   ],
+   "answer": 35,
+   "hint": "$\\alpha_n=\\theta_{n+1}-\\theta_n$: $k=\\frac14$, $L=1$."
+  }
+ ],
+ "line": "각의 망원 → 수렴 속도.",
  "note": ""
 }

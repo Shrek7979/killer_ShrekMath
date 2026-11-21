@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 3차 R3_미적A 08번( 2022학년도 6월 모의평가 30번) 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 사이클로이드의 접선·법선이 $(t,2)$, $(t,0)$을 지남을 놓쳐 계산이 복잡해진 경우",
  "answer": 13,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -51,9 +51,11 @@
     0
    ],
    "text": "$x=t-\\sin t,\\,\\,\\,y=1-\\cos t$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "곡선",
+   "why": "$x=t-\\sin t$, $y=1-\\cos t$.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C3",
@@ -62,9 +64,12 @@
     0
    ],
    "text": "위의 $t$ 에 대응하는 점 ${\\mathrm{P}}$ 에서의 접선과 법선이 직선 $y=1$ 과 만나는 점을 각각 ${\\mathrm{Q}}$ , ${\\mathrm{R}}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "점",
+   "why": "P의 접선·법선이 $y=1$과 Q, R.",
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C4",
@@ -73,9 +78,12 @@
     1
    ],
    "text": "삼각형 ${\\mathrm{PQR}}$ 의 넓이를 $S(t)$ 라 할 때, $S' \\left(\\frac{\\pi}{3}\\right)=-\\frac{q}{p}$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "값",
+   "why": "$S'\\left(\\frac\\pi3\\right)=-\\frac qp$.",
+   "uses": [
+    4,
+    5
+   ]
   },
   {
    "id": "C5",
@@ -95,56 +103,108 @@
     3
    ],
    "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "단서",
+   "why": "서로소.",
+   "uses": [
+    6
+   ]
   }
  ],
  "intro": [
-  "곡선을 사이클로이드로 바꾸어 접선과 법선이 각각 점 $(t,\\,2)$ , $(t,\\,0)$ 을 지난다는 성질을 스스로 발견하게 하고, 두 직선을 $x$ 축이 아닌 직선 $y=1$ 로 잘라 삼각형의 밑변을 반각으로 정리하게 함"
+  "접선 기울기 $\\frac{1+\\cos t}{\\sin t}$ → $(t,2)$ 지남.",
+  "QR$=\\frac{2\\cos t}{\\sin t}$, 높이 $\\cos t$ → $S=\\frac{\\cos^2t}{\\sin t}$."
  ],
  "topic": "여러 가지 미분법",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "반각",
+   "p": [
+    "$\\frac{\\sin t}{1-\\cos t}=\\frac{1+\\cos t}{\\sin t}$."
+   ]
+  },
+  {
+   "h": "몫의 미분",
+   "p": [
+    "$\\left(\\frac uv\\right)'$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$\\frac{dx}{dt}=1-\\cos t$ , $\\frac{dy}{dt}=\\sin t$ 이므로 점 ${\\mathrm{P}}(t-\\sin t,\\,1-\\cos t)$ 에서의 접선의 기울기는 $\\frac{\\sin t}{1-\\cos t}=\\frac{1+\\cos t}{\\sin t}$ 이다. 점 ${\\mathrm{P}}$ 와 점 $(t,\\,2)$ 를 지나는 직선의 기울기는 $\\frac{2-(1-\\cos t)}{t-(t-\\sin t)}=\\frac{1+\\cos t}{\\sin t}$ 이므로 접선은 점 $(t,\\,2)$ 를 지난다. 또 점 ${\\mathrm{P}}$ 와 점 $(t,\\,0)$ 을 지나는 직선의 기울기는 $\\frac{-(1-\\cos t)}{\\sin t}$ 이고 접선의 기울기와의 곱이 $-1$ 이므로 법선은 점 $(t,\\,0)$ 을 지난다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "기울기"
   },
   {
    "n": 2,
    "text": "점 ${\\mathrm{P}}$ 의 $y$ 좌표는 $1-\\cos t<1$ 이다. 접선 위에서 $y$ 좌표가 $1-\\cos t$ 에서 $2$ 까지 $1+\\cos t$ 만큼 변할 때 $x$ 좌표는 $\\sin t$ 만큼 변하므로, $y=1$ 이 되는 점 ${\\mathrm{Q}}$ 의 $x$ 좌표는 $t-\\sin t+\\frac{\\sin t \\cos t}{1+\\cos t}=t-\\frac{\\sin t}{1+\\cos t}$ 이다. 같은 방법으로 법선 위의 점 ${\\mathrm{R}}$ 의 $x$ 좌표는 $t-\\frac{\\sin t}{1-\\cos t}$ 이다. 따라서",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "Q"
   },
   {
    "n": 3,
    "text": "$$\\overline{{\\mathrm{QR}}}=\\frac{\\sin t}{1-\\cos t}-\\frac{\\sin t}{1+\\cos t}=\\frac{2 \\cos t}{\\sin t}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "QR"
   },
   {
    "n": 4,
    "text": "이고 점 ${\\mathrm{P}}$ 와 직선 $y=1$ 사이의 거리는 $\\cos t$ 이므로 $S(t)=\\frac{\\cos^{2}t}{\\sin t}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$S$"
   },
   {
    "n": 5,
    "text": "$$S'(t)=\\frac{-2 \\cos t \\sin^{2}t-\\cos^{3}t}{\\sin^{2}t},\\,\\,\\,S' \\left(\\frac{\\pi}{3}\\right)=\\frac{-\\frac{3}{4}-\\frac{1}{8}}{\\frac{3}{4}}=-\\frac{7}{6}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "미분"
   },
   {
    "n": 6,
    "text": "이므로 $p+q=6+7=13$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C6"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "P 아래",
+   "cond": "C3",
+   "text": [
+    "$1-\\cos t<1$."
+   ]
+  },
+  {
+   "h": "법선 절편",
+   "cond": "C3",
+   "text": [
+    "$(t,0)$ 지남."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $t=\\frac\\pi4$",
+   "body": [
+    "(같은 $S(t)$에 대하여) $2\\left\\{S'\\left(\\frac\\pi4\\right)\\right\\}^2$의 값을 구하시오."
+   ],
+   "answer": 9,
+   "hint": "$S'\\left(\\frac\\pi4\\right)=-\\frac{3\\sqrt2}2$."
+  }
+ ],
+ "line": "사이클로이드 접선 성질 → 넓이 함수.",
  "note": ""
 }

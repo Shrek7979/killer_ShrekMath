@@ -1,0 +1,126 @@
+{
+ "wrong": "예상 오답 — $\\varphi'(s)$를 곱하지 않고 $\\int s^2ds$만 계산한 경우",
+ "intro": [
+  "$\\varphi=x+\\frac{\\ln x}x$ 증가 → $g=\\varphi^{-1}$.",
+  "$\\int g^2dt=\\int_1^es^2\\varphi'(s)ds$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "$g$",
+   "why": "$(t,0)$과 $y=\\ln x$의 최소 거리점 $x$좌표.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
+  },
+  "C2": {
+   "label": "적분",
+   "why": "$\\int_1^{e+1/e}g^2=pe^3+qe+r$.",
+   "uses": [
+    4,
+    5
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "$12(p+q-r)$.",
+   "uses": [
+    6
+   ]
+  },
+  "C4": {
+   "label": "단서",
+   "why": "유리수.",
+   "uses": [
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "역함수 치환",
+   "p": [
+    "$t=\\varphi(s)$, $dt=\\varphi'(s)ds$."
+   ]
+  },
+  {
+   "h": "증가 판정",
+   "p": [
+    "$\\ln x\\le x-1$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "미분",
+   "text": "$D(x)=(x-t)^{2}+(\\ln x)^{2}$ $(x>0)$ 이라 하면 $D'(x)=2 \\left(x+\\frac{\\ln x}{x}-t \\right)$ 이다. $\\varphi(x)=x+\\frac{\\ln x}{x}$ 라 하면",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$\\varphi'$",
+   "text": "$$\\varphi'(x)=1+\\frac{1-\\ln x}{x^{2}}=\\frac{x^{2}+1-\\ln x}{x^{2}}$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "단조",
+   "text": "이고 $\\ln x \\le x-1<x^{2}+1$ 이므로 $\\varphi'(x)>0$ 이다. 또 $\\lim_{x \\to 0+}\\varphi(x)=-\\infty$ , $\\lim_{x \\to \\infty}\\varphi(x)=\\infty$ 이므로 $\\varphi(s)=t$ 인 양수 $s$ 가 오직 하나 있고, $D'(x)$ 의 부호는 $x=s$ 에서 음에서 양으로 바뀐다. 따라서 $g(t)=s$ , 즉 $g$ 는 $\\varphi$ 의 역함수이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "치환",
+   "text": "$\\varphi(1)=1$ , $\\varphi(e)=e+\\frac{1}{e}$ 이므로 $t=\\varphi(s)$ 로 치환하면",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "계산",
+   "text": "$$\\int_{1}^{e+\\frac{1}{e}}\\{g(t)\\}^{2}dt=\\int_{1}^{e}s^{2}\\varphi'(s)ds=\\int_{1}^{e}\\left(s^{2}+1-\\ln s \\right)ds=\\frac{e^{3}-1}{3}+(e-1)-1$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "( $\\int_{1}^{e}\\ln s ds=\\left[s \\ln s-s \\right]_{1}^{e}=1$ ) 즉 $\\frac{1}{3}e^{3}+e-\\frac{7}{3}$ 이므로 $12 \\left(\\frac{1}{3}+1+\\frac{7}{3}\\right)=44$ 이다.",
+   "uses": [
+    "C3",
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$s^2\\varphi'$",
+   "cond": "C2",
+   "text": [
+    "$s^2+1-\\ln s$."
+   ]
+  },
+  {
+   "h": "구간",
+   "cond": "C2",
+   "text": [
+    "$1\\to e$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\{g(t)\\}^3$",
+   "body": [
+    "(같은 $g$에 대하여) $\\int_1^{e+\\frac1e}\\{g(t)\\}^3dt=pe^4+qe^2+r$일 때, $12(p+q-r)$의 값을 구하시오. (단, $p$, $q$, $r$는 유리수)"
+   ],
+   "answer": 18,
+   "hint": "$\\int_1^e(s^3+s-s\\ln s)ds=\\frac{e^4}4+\\frac{e^2}4-1$."
+  }
+ ],
+ "line": "거리 최소 → 역함수 → 치환적분."
+}
