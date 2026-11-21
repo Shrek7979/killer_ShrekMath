@@ -306,7 +306,9 @@ def hwp2tex(s):
     out = re.sub(r'[_^]\{\}', '', out).replace('{}', '')  # 한글 수식의 빈 그룹
     out = re.sub(r'([A-Za-z])_\{([a-z]) ?\1\}_\{', r'\1_{\2}\1_{', out)  # a_{na}_{n+1} 오타 → a_{n}a_{n+1}
     for k, txt in enumerate(texts):
-        out = out.replace(chr(0xE000 + k), r'\text{ ' + txt + ' }')
+        txt = re.sub(r'\(\s+', '(', re.sub(r'\s+\)', ')', re.sub(r'\s+', ' ', txt)))
+        pad = ' ' if re.match(r'[가-힣]', txt) else ''
+        out = out.replace(chr(0xE000 + k), r'\text{' + pad + txt + pad + '}')
     if top_break:
         out = r'\begin{aligned}' + out + r'\end{aligned}'
     return out
