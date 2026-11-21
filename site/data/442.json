@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2023학년도 대학수학능력시험 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $\\theta=\\alpha-\\beta$에서 $\\beta$도 $t$에 따라 움직임을 무시해 $\\theta'=\\alpha'$로 계산한 경우",
  "answer": 12,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -29,9 +29,12 @@
     0
    ],
    "text": "양수 $t$ 에 대하여 곡선 $y=e^{x}$ 위의 점 $(t,\\,e^{t})$ 에서의 접선과 곡선 $y=\\ln x$ 위의 점 $(e^{t},\\,t)$ 에서의 접선이 이루는 예각의 크기를 $\\theta(t)$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "두 접선",
+   "why": "$y=e^x$의 $(t,e^t)$, $y=\\ln x$의 $(e^t,t)$, 예각 $\\theta(t)$.",
+   "uses": [
+    1,
+    2
+   ]
   },
   {
    "id": "C2",
@@ -40,9 +43,13 @@
     1
    ],
    "text": "$\\theta'(\\ln 2)+\\theta'(\\ln 3)=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\theta'(\\ln2)+\\theta'(\\ln3)=\\frac qp$.",
+   "uses": [
+    3,
+    4,
+    5
+   ]
   },
   {
    "id": "C3",
@@ -51,50 +58,101 @@
     2
    ],
    "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "단서",
+   "why": "서로소.",
+   "uses": [
+    5
+   ]
   }
  ],
  "intro": [
-  "역함수 관계인 두 곡선의 대칭점에서 접선의 기울기가 서로 역수임을 이용해 두 경사각의 합이 $\\frac{\\pi}{2}$ 임을 찾고, $\\theta(t)$ 를 한 경사각으로 나타내어 미분하게 함"
+  "기울기 $e^t$, $e^{-t}$ — 곱 $1$ → $\\alpha+\\beta=\\frac\\pi2$.",
+  "$\\theta=2\\alpha-\\frac\\pi2$, $\\alpha'=\\frac{e^t}{1+e^{2t}}$."
  ],
  "topic": "여러 가지 미분법",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "역함수 대칭점",
+   "p": [
+    "기울기가 역수."
+   ]
+  },
+  {
+   "h": "경사각 미분",
+   "p": [
+    "$\\tan\\alpha=m$ → $\\alpha'=\\frac{m'}{1+m^2}$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "두 접선의 기울기는 $e^{t}$ , $\\frac{1}{e^{t}}$ 이다. 두 접선이 $x$ 축의 양의 방향과 이루는 각의 크기를 각각 $\\alpha$ , $\\beta$ $\\left(0<\\beta<\\frac{\\pi}{4}<\\alpha<\\frac{\\pi}{2}\\right)$ 라 하면 $\\tan \\alpha \\times \\tan \\beta=1$ 이므로 $\\beta=\\frac{\\pi}{2}-\\alpha$ 이고",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "경사각"
   },
   {
    "n": 2,
    "text": "$$\\theta(t)=\\alpha-\\beta=2 \\alpha-\\frac{\\pi}{2}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "$\\theta$"
   },
   {
    "n": 3,
    "text": "이다. $\\tan \\alpha=e^{t}$ 의 양변을 $t$ 에 대하여 미분하면 $\\left(1+\\tan^{2}\\alpha \\right)\\frac{d \\alpha}{dt}=e^{t}$ 이므로 $\\frac{d \\alpha}{dt}=\\frac{e^{t}}{1+e^{2 t}}$ 이고",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$\\alpha'$"
   },
   {
    "n": 4,
    "text": "$$\\theta'(t)=\\frac{2 e^{t}}{1+e^{2 t}}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$\\theta'$"
   },
   {
    "n": 5,
    "text": "이다. $\\theta'(\\ln 2)=\\frac{4}{5}$ , $\\theta'(\\ln 3)=\\frac{6}{10}=\\frac{3}{5}$ 이므로 합은 $\\frac{7}{5}$ 이고 $p+q=5+7=12$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2",
+    "C3"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\frac\\pi4$",
+   "cond": "C1",
+   "text": [
+    "$t>0$이면 $\\alpha>\\frac\\pi4$."
+   ]
+  },
+  {
+   "h": "$2$배",
+   "cond": "C2",
+   "text": [
+    "$\\theta'=2\\alpha'$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\ln2$, $\\ln4$",
+   "body": [
+    "(같은 $\\theta(t)$에 대하여) $\\theta'(\\ln2)+\\theta'(\\ln4)=\\frac qp$일 때, $p+q$의 값을 구하시오. (단, $p$와 $q$는 서로소인 자연수)"
+   ],
+   "answer": 193,
+   "hint": "$\\frac45+\\frac8{17}=\\frac{108}{85}$."
+  }
+ ],
+ "line": "역수 기울기 → 여각 → 한 경사각으로 미분.",
  "note": ""
 }

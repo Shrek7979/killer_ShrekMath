@@ -1,0 +1,110 @@
+{
+ "wrong": "예상 오답 — $\\alpha_n$을 $\\beta_{n+1}-\\beta_n$으로 분해하지 못하고 근사로 계산한 경우",
+ "intro": [
+  "$\\frac1{2n^2}=\\frac{(2n+1)-(2n-1)}{1+(2n+1)(2n-1)}$.",
+  "$\\tan\\beta_n=2n-1$ → 망원: $\\frac\\pi2-\\frac\\pi4$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "범위",
+   "why": "$0<\\alpha_n<\\frac\\pi2$.",
+   "uses": [
+    3
+   ]
+  },
+  "C2": {
+   "label": "조건",
+   "why": "$\\tan\\alpha_n=\\frac1{2n^2}$.",
+   "uses": [
+    1,
+    2
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$\\sum\\alpha_n=k\\pi$, $120k$.",
+   "uses": [
+    4,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "탄젠트 뺄셈",
+   "p": [
+    "$\\frac{a-b}{1+ab}$ 꼴 찾기."
+   ]
+  },
+  {
+   "h": "각의 망원",
+   "p": [
+    "$\\beta_{N+1}-\\beta_1$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "보조 수열",
+   "text": "$0<\\beta_{n}<\\frac{\\pi}{2}$ , $\\tan \\beta_{n}=2 n-1$ 인 수열 $\\{\\beta_{n}\\}$ 을 생각하면",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "분해",
+   "text": "$$\\tan \\left(\\beta_{n+1}-\\beta_{n}\\right)=\\frac{(2 n+1)-(2 n-1)}{1+(2 n+1)(2 n-1)}=\\frac{2}{4 n^{2}}=\\frac{1}{2 n^{2}}$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "범위",
+   "text": "이고 $0<\\beta_{n+1}-\\beta_{n}<\\frac{\\pi}{2}$ 이므로 $\\alpha_{n}=\\beta_{n+1}-\\beta_{n}$ 이다. 따라서",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "부분합",
+   "text": "$$\\sum_{n=1}^{N}\\alpha_{n}=\\beta_{N+1}-\\beta_{1}=\\beta_{N+1}-\\frac{\\pi}{4}$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이다. $\\tan \\beta_{N+1}=2 N+1 \\to \\infty$ 이고 $0<\\beta_{N+1}<\\frac{\\pi}{2}$ 이므로 $\\beta_{N+1}\\to \\frac{\\pi}{2}$ 이다. 급수의 합은 $\\frac{\\pi}{4}$ , $k=\\frac{1}{4}$ 이므로 $120 k=30$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "차의 범위",
+   "cond": "C1",
+   "text": [
+    "$0<\\beta_{n+1}-\\beta_n<\\frac\\pi2$."
+   ]
+  },
+  {
+   "h": "$\\beta_1=\\frac\\pi4$",
+   "cond": "C4",
+   "text": [
+    "$\\tan\\beta_1=1$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\tan\\alpha_n=\\frac2{n^2}$",
+   "body": [
+    "$0<\\alpha_n<\\frac\\pi2$인 수열 $\\{\\alpha_n\\}$이 $\\tan\\alpha_n=\\frac2{n^2}$을 만족시킨다. $\\sum_{n=1}^\\infty\\alpha_n=k\\pi$일 때, $120k$의 값을 구하시오."
+   ],
+   "answer": 90,
+   "hint": "$\\frac2{n^2}=\\frac{(n+1)-(n-1)}{1+(n+1)(n-1)}$ → 두 칸 망원: $\\frac\\pi2+\\frac\\pi2-\\frac\\pi4-0$."
+  }
+ ],
+ "line": "덧셈정리 역이용 → 각의 망원."
+}

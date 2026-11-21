@@ -1,0 +1,110 @@
+{
+ "wrong": "예상 오답 — 극한을 $0$으로 보거나 $\\ln x$로 계산해 제곱을 빠뜨린 경우",
+ "intro": [
+  "$x^{1/n}+x^{-1/n}-2=\\left(x^{\\frac1{2n}}-x^{-\\frac1{2n}}\\right)^2$.",
+  "$n(x^{1/(2n)}-1)\\to\\frac{\\ln x}2$ → $f=(\\ln x)^2$."
+ ],
+ "conds": {
+  "C2": {
+   "label": "함수",
+   "why": "$f(x)=\\lim n^2\\left(x^{\\frac1n}+x^{-\\frac1n}-2\\right)$.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
+  },
+  "C4": {
+   "label": "접선",
+   "why": "$(t,f(t))$, $t>1$에서의 접선이 원점을 지남, 기울기 $m$.",
+   "uses": [
+    4
+   ]
+  },
+  "C5": {
+   "label": "묻는 것",
+   "why": "$tm$.",
+   "uses": [
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "완전제곱",
+   "p": [
+    "$a+a^{-1}-2=(\\sqrt a-\\frac1{\\sqrt a})^2$."
+   ]
+  },
+  {
+   "h": "지수 극한",
+   "p": [
+    "$\\frac{e^h-1}h\\to1$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "변형",
+   "text": "$x^{\\frac{1}{n}}+x^{-\\frac{1}{n}}-2=\\left(x^{\\frac{1}{2 n}}-x^{-\\frac{1}{2 n}}\\right)^{2}$ 이므로",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "분리",
+   "text": "$$f(x)=\\lim_{n \\to \\infty}\\left\\{n \\left(x^{\\frac{1}{2 n}}-1 \\right)+n \\left(1-x^{-\\frac{1}{2 n}}\\right)\\right\\}^{2}$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$f$",
+   "text": "이다. $h=\\frac{\\ln x}{2 n}$ 이라 하면 $n \\left(x^{\\frac{1}{2 n}}-1 \\right)=\\frac{\\ln x}{2}\\times \\frac{e^{h}-1}{h}\\to \\frac{\\ln x}{2}$ 이고, 같은 방법으로 $n \\left(1-x^{-\\frac{1}{2 n}}\\right)\\to \\frac{\\ln x}{2}$ 이다. 따라서 $f(x)=(\\ln x)^{2}$ 이다. ( $x=1$ 일 때도 성립한다.)",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "접선",
+   "text": "$f'(x)=\\frac{2 \\ln x}{x}$ 이므로 점 $(t,\\,f(t))$ 에서의 접선이 원점을 지날 조건은 $f(t)=t f'(t)$ , 즉 $(\\ln t)^{2}=2 \\ln t$ 이다. $t>1$ 이므로 $\\ln t=2$ , $t=e^{2}$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$m=f' \\left(e^{2}\\right)=\\frac{4}{e^{2}}$ 이므로 $t \\times m=4$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$x=1$",
+   "cond": "C2",
+   "text": [
+    "$0=(\\ln1)^2$."
+   ]
+  },
+  {
+   "h": "$t>1$",
+   "cond": "C4",
+   "text": [
+    "$\\ln t=0$ 제외."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $x^{\\frac2n}$",
+   "body": [
+    "양수 $x$에 대하여 $f(x)=\\lim_{n\\to\\infty}n^2\\left(x^{\\frac2n}+x^{-\\frac2n}-2\\right)$라 하자. 곡선 $y=f(x)$ 위의 점 $(t,f(t))$ $(t>1)$에서의 접선이 원점을 지날 때, 이 접선의 기울기를 $m$이라 하자. $t\\times m$의 값을 구하시오."
+   ],
+   "answer": 16,
+   "hint": "$f=4(\\ln x)^2$, $t=e^2$, $m=\\frac{16}{e^2}$."
+  }
+ ],
+ "line": "완전제곱 → 지수 극한 → 원점 접선."
+}
