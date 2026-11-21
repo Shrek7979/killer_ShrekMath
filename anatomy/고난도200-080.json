@@ -1,0 +1,106 @@
+{
+ "wrong": "예상 오답 — 외접 조건을 $\\overline{\\mathrm{PF'}}=r-6$으로 써서 쌍곡선 가지를 틀린 경우",
+ "intro": [
+  "$\\mathrm{PF'}-\\mathrm{PF}=6$ → 쌍곡선, $y$축 접함 → $r=x$.",
+  "$\\mathrm{PF'}^2-\\mathrm{PF}^2=20x$ → $\\mathrm{PF}=\\frac{5x}3-3$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "원 $C$",
+   "why": "중심 F'$(-5,0)$, 반지름 $6$.",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "조건",
+   "why": "F를 지나고 $C$에 외접, $y$축에 접하는 원의 반지름 $r$; $4r^2$.",
+   "uses": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "쌍곡선 정의",
+   "p": [
+    "거리의 차 일정."
+   ]
+  },
+  {
+   "h": "합차 분해",
+   "p": [
+    "$a^2-b^2=(a-b)(a+b)$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "자취",
+   "text": "조건을 만족시키는 원의 중심을 ${\\mathrm{P}}(x,\\,y)$ 라 하면 원이 점 ${\\mathrm{F}}$ 를 지나므로 $\\overline{{\\mathrm{PF}}}=r$ 이고, 원 $C$ 에 외접하므로 $\\overline{{\\mathrm{PF'}}}=r+6$ 이다. 따라서 $\\overline{{\\mathrm{PF'}}}-\\overline{{\\mathrm{PF}}}=6$ 이고, 점 ${\\mathrm{P}}$ 는 두 점 ${\\mathrm{F}}$ , ${\\mathrm{F'}}$ 을 초점으로 하고 주축의 길이가 $6$ 인 쌍곡선 $\\frac{x^{2}}{9}-\\frac{y^{2}}{16}=1$ 의 오른쪽 부분 위에 있다. 특히 $x \\ge 3$ 이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "접함",
+   "text": "원이 $y$ 축에 접하므로 $r=x$ 이다. 한편",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "합차",
+   "text": "$$\\overline{{\\mathrm{PF'}}}^{2}-\\overline{{\\mathrm{PF}}}^{2}=(x+5)^{2}-(x-5)^{2}=20 x$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "거리",
+   "text": "이고 $\\overline{{\\mathrm{PF'}}}-\\overline{{\\mathrm{PF}}}=6$ 이므로 $\\overline{{\\mathrm{PF'}}}+\\overline{{\\mathrm{PF}}}=\\frac{10 x}{3}$ , $\\overline{{\\mathrm{PF}}}=\\frac{5 x}{3}-3$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$\\frac{5 x}{3}-3=x$ 에서 $x=\\frac{9}{2}$ 이고, 이때 $y^{2}=16 \\left(\\frac{81}{36}-1 \\right)=20$ 이므로 이러한 점 ${\\mathrm{P}}$ 가 존재한다. 따라서 $r=\\frac{9}{2}$ 이고 $4 r^{2}=81$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "존재 확인",
+   "cond": "C2",
+   "text": [
+    "$y^2=20>0$."
+   ]
+  },
+  {
+   "h": "$r=x$",
+   "cond": "C2",
+   "text": [
+    "중심의 $x$좌표."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 반지름 $8$",
+   "body": [
+    "(F$(5,0)$, F'$(-5,0)$에 대하여) F'을 중심으로 하고 반지름이 $8$인 원을 $C$라 하자. F를 지나고 $C$에 외접하는 원 중 $y$축에 접하는 원의 반지름을 $r$라 할 때, $4r^2$의 값을 구하시오."
+   ],
+   "answer": 1024,
+   "hint": "$\\mathrm{PF}=\\frac{5x}4-4=x$ → $x=16$, $y^2=135$."
+  }
+ ],
+ "line": "원의 접촉 → 쌍곡선 정의 → 합차."
+}

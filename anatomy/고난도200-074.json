@@ -1,0 +1,123 @@
+{
+ "wrong": "예상 오답 — 접점 B를 따로 구하지 못해 넓이 계산에서 높이를 잘못 잡은 경우",
+ "intro": [
+  "FB ⊥ $l$ → $\\overline{\\mathrm{AF}}=10$ → $x_1+p=10$.",
+  "F에서 $l$까지 거리 $\\sqrt{p\\cdot\\overline{\\mathrm{AF}}}=6$; 수선의 발 B는 $y$축 위."
+ ],
+ "conds": {
+  "C1": {
+   "label": "포물선",
+   "why": "$y^2=4px$, A(제1사분면)에서 접선 $l$.",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "원",
+   "why": "중심 F, $l$에 접함, 반지름 $6$, 접점 B, $\\overline{\\mathrm{AB}}=8$.",
+   "uses": [
+    1,
+    3,
+    4,
+    5
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "$25S$, $S$=△OAB.",
+   "uses": [
+    6
+   ]
+  },
+  "C4": {
+   "label": "단서",
+   "why": "O는 원점.",
+   "uses": []
+  }
+ },
+ "concepts": [
+  {
+   "h": "포물선 정의",
+   "p": [
+    "$\\overline{\\mathrm{AF}}=x_1+p$."
+   ]
+  },
+  {
+   "h": "접선의 방정식",
+   "p": [
+    "$y_1y=2p(x+x_1)$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "직각",
+   "text": "${\\mathrm{A}}(x_{1},\\,y_{1})$ 이라 하면 $y_{1}^{2}=4 p x_{1}$ 이다. 원의 반지름 ${\\mathrm{FB}}$ 는 접선 $l$ 에 수직이므로 삼각형 ${\\mathrm{ABF}}$ 는 $\\angle{\\mathrm{ABF}}=\\frac{\\pi}{2}$ 인 직각삼각형이고, $\\overline{{\\mathrm{AF}}}=\\sqrt{6^{2}+8^{2}}=10$ 이다. 포물선의 정의에 의하여 $x_{1}+p=10$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "접선",
+   "text": "직선 $l$ 의 방정식은 $y_{1}y=2 p(x+x_{1})$ , 즉 $2 p x-y_{1}y+2 p x_{1}=0$ 이므로 점 ${\\mathrm{F}}(p,\\,0)$ 과 직선 $l$ 사이의 거리는",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "거리",
+   "text": "$$\\frac{2 p(p+x_{1})}{\\sqrt{4 p^{2}+y_{1}^{2}}}=\\frac{2 p(p+x_{1})}{\\sqrt{4 p(p+x_{1})}}=\\sqrt{p(p+x_{1})}=\\sqrt{10 p}$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "값",
+   "text": "이다. 이 값이 원의 반지름의 길이 $6$ 이므로 $p=\\frac{18}{5}$ , $x_{1}=\\frac{32}{5}$ 이고, $y_{1}^{2}=4 \\times \\frac{18}{5}\\times \\frac{32}{5}=\\frac{2304}{25}$ 에서 $y_{1}=\\frac{48}{5}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "B",
+   "text": "직선 $l$ 에 $x=0$ 을 대입하면 $y=\\frac{2 p x_{1}}{y_{1}}=\\frac{y_{1}}{2}$ 이므로 $l$ 은 점 ${\\mathrm{B'}}\\left(0,\\,\\frac{y_{1}}{2}\\right)$ 을 지난다. 이때 $\\vec{{\\mathrm{FB'}}}=\\left(-p,\\,\\frac{y_{1}}{2}\\right)$ 과 직선 $l$ 의 방향벡터 $(y_{1},\\,2 p)$ 의 내적이 $-p y_{1}+p y_{1}=0$ 이므로 ${\\mathrm{B'}}$ 은 점 ${\\mathrm{F}}$ 에서 $l$ 에 내린 수선의 발, 즉 접점 ${\\mathrm{B}}$ 이다. 따라서 ${\\mathrm{B}}\\left(0,\\,\\frac{24}{5}\\right)$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "삼각형 ${\\mathrm{OAB}}$ 에서 밑변을 $\\overline{{\\mathrm{OB}}}=\\frac{24}{5}$ 로 보면 높이는 점 ${\\mathrm{A}}$ 의 $x$ 좌표 $\\frac{32}{5}$ 이므로 $S=\\frac{1}{2}\\times \\frac{24}{5}\\times \\frac{32}{5}=\\frac{384}{25}$ 이다. 따라서 $25 S=384$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$y$절편 $\\frac{y_1}2$",
+   "cond": "C2",
+   "text": [
+    "초점에서의 수선의 발."
+   ]
+  },
+  {
+   "h": "높이 $x_1$",
+   "cond": "C3",
+   "text": [
+    "밑변 OB가 $y$축."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 반지름 $3$, $\\overline{\\mathrm{AB}}=4$",
+   "body": [
+    "(같은 설정에서) 점 F를 중심으로 하고 직선 $l$에 접하는 원의 반지름이 $3$, 접점 B에 대하여 $\\overline{\\mathrm{AB}}=4$일 때, 삼각형 OAB의 넓이 $S$에 대하여 $25S$의 값을 구하시오."
+   ],
+   "answer": 96,
+   "hint": "$\\overline{\\mathrm{AF}}=5$, $p=\\frac95$, $x_1=\\frac{16}5$, $y_1=\\frac{24}5$."
+  }
+ ],
+ "line": "초점-접선 거리 $\\sqrt{p\\cdot\\mathrm{AF}}$, 수선의 발은 $y$축 위."
+}

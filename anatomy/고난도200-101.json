@@ -1,0 +1,134 @@
+{
+ "wrong": "예상 오답 — 정사영을 원래 삼각형 넓이 × $\\cos$로 구하려다 이면각을 잘못 잡은 경우",
+ "intro": [
+  "삼수선: $h^2+64t^2=32$, $h^2+36(1-t)^2=25$ → $t=\\frac12$, $h=4$.",
+  "평면 PBC ⊥ $\\alpha$ → A의 정사영은 A에서 BC에 내린 수선의 발."
+ ],
+ "conds": {
+  "C1": {
+   "label": "삼각형",
+   "why": "$\\angle$A$=\\frac\\pi2$, AB$=6$, AC$=8$.",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "점 P",
+   "why": "수선의 발 H는 BC 위, AB까지 $4\\sqrt2$, AC까지 $5$.",
+   "uses": [
+    2,
+    3,
+    4
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "PAB, PAC의 평면 PBC 위 정사영 $S_1$, $S_2$; $10(S_2-S_1)$.",
+   "uses": [
+    5,
+    6,
+    7,
+    8
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "삼수선 정리",
+   "p": [
+    "PH⊥$\\alpha$, HK⊥AB ⟹ PK⊥AB."
+   ]
+  },
+  {
+   "h": "수직 평면 정사영",
+   "p": [
+    "교선에 내린 수선."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "좌표",
+   "text": "평면 $\\alpha$ 에서 ${\\mathrm{A}}$ 를 원점, 직선 ${\\mathrm{AB}}$ 를 $x$ 축, 직선 ${\\mathrm{AC}}$ 를 $y$ 축으로 놓으면 ${\\mathrm{B}}(6,\\,0)$ , ${\\mathrm{C}}(0,\\,8)$ 이고, 선분 ${\\mathrm{BC}}$ 위의 점 ${\\mathrm{H}}$ 를 ${\\mathrm{H}}(6-6 t,\\,8 t)$ $(0 \\le t \\le 1)$ , $\\overline{{\\mathrm{PH}}}=h$ 라 하자.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "삼수선",
+   "text": "점 ${\\mathrm{H}}$ 에서 직선 ${\\mathrm{AB}}$ 에 내린 수선의 발을 ${\\mathrm{K}}$ 라 하면 직선 ${\\mathrm{PH}}$ 가 평면 $\\alpha$ 에 수직이고 두 직선 ${\\mathrm{HK}}$ , ${\\mathrm{AB}}$ 가 서로 수직이므로 삼수선 정리에 의하여 두 직선 ${\\mathrm{PK}}$ , ${\\mathrm{AB}}$ 는 서로 수직이다. 따라서 점 ${\\mathrm{P}}$ 와 직선 ${\\mathrm{AB}}$ 사이의 거리는 $\\sqrt{h^{2}+(8 t)^{2}}$ 이고, 같은 방법으로 점 ${\\mathrm{P}}$ 와 직선 ${\\mathrm{AC}}$ 사이의 거리는 $\\sqrt{h^{2}+(6-6 t)^{2}}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$$h^{2}+64 t^{2}=32,\\,\\,\\,h^{2}+36(1-t)^{2}=25$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$t$, $h$",
+   "text": "에서 빼면 $28 t^{2}+72 t-43=0$ , $(2 t-1)(14 t+43)=0$ 이고 $0 \\le t \\le 1$ 이므로 $t=\\frac{1}{2}$ , $h=4$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "수직",
+   "text": "평면 ${\\mathrm{PBC}}$ 는 평면 $\\alpha$ 에 수직인 직선 ${\\mathrm{PH}}$ 를 포함하므로 평면 $\\alpha$ 와 수직이다. 점 ${\\mathrm{A}}$ 에서 직선 ${\\mathrm{BC}}$ 에 내린 수선의 발을 ${\\mathrm{A'}}$ 이라 하면, 수직인 두 평면의 교선 ${\\mathrm{BC}}$ 에 수직인 직선 ${\\mathrm{AA'}}$ 은 평면 ${\\mathrm{PBC}}$ 에 수직이므로 점 ${\\mathrm{A}}$ 의 평면 ${\\mathrm{PBC}}$ 위로의 정사영은 ${\\mathrm{A'}}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "정사영",
+   "text": "따라서 삼각형 ${\\mathrm{PAB}}$ , ${\\mathrm{PAC}}$ 의 정사영은 각각 삼각형 ${\\mathrm{PA'B}}$ , ${\\mathrm{PA'C}}$ 이다. $\\overline{{\\mathrm{BA'}}}=\\frac{\\overline{{\\mathrm{AB}}}^{2}}{\\overline{{\\mathrm{BC}}}}=\\frac{18}{5}$ , $\\overline{{\\mathrm{CA'}}}=\\frac{\\overline{{\\mathrm{AC}}}^{2}}{\\overline{{\\mathrm{BC}}}}=\\frac{32}{5}$ 이고 점 ${\\mathrm{P}}$ 와 직선 ${\\mathrm{BC}}$ 사이의 거리는 $\\overline{{\\mathrm{PH}}}=4$ 이므로",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "넓이",
+   "text": "$$S_{1}=\\frac{1}{2}\\times \\frac{18}{5}\\times 4=\\frac{36}{5},\\,\\,\\,S_{2}=\\frac{1}{2}\\times \\frac{32}{5}\\times 4=\\frac{64}{5}$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이다. 따라서 $10(S_{2}-S_{1})=56$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\mathrm{BA'}=\\frac{36}{10}$",
+   "cond": "C3",
+   "text": [
+    "직각삼각형 사영."
+   ]
+  },
+  {
+   "h": "높이 $h=4$",
+   "cond": "C3",
+   "text": [
+    "P와 BC 거리."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $10(S_1+S_2)$",
+   "body": [
+    "(같은 설정에서) $10(S_1+S_2)$의 값을 구하시오."
+   ],
+   "answer": 200,
+   "hint": "$\\frac12\\times10\\times4=20$."
+  }
+ ],
+ "line": "삼수선 → 수직 평면 → 정사영은 수선의 발."
+}

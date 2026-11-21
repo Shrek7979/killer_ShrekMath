@@ -1,0 +1,117 @@
+{
+ "wrong": "예상 오답 — Q, R를 같은 쪽에 두어 $\\overline{\\mathrm{QR}}=5$로 계산한 경우",
+ "intro": [
+  "$\\overline{\\mathrm{OQ}}=\\frac{b^2}{y_1}$, $\\overline{\\mathrm{OR}}=\\frac{c^2y_1}{b^2}$ → 곱 $c^2=36$.",
+  "넓이 → $x_1=6=c$ → P는 초점 바로 위."
+ ],
+ "conds": {
+  "C1": {
+   "label": "타원",
+   "why": "초점 $(\\pm c,0)$, P에서의 접선·법선의 $y$절편 Q, R.",
+   "uses": [
+    1,
+    2
+   ]
+  },
+  "C2": {
+   "label": "조건",
+   "why": "$\\overline{\\mathrm{OQ}}=9$, $\\overline{\\mathrm{OR}}=4$, △PQR$=39$; $\\overline{\\mathrm{PF}}\\cdot\\overline{\\mathrm{PF'}}$.",
+   "uses": [
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  "C3": {
+   "label": "단서",
+   "why": "O는 원점.",
+   "uses": []
+  }
+ },
+ "concepts": [
+  {
+   "h": "접선·법선",
+   "p": [
+    "$y$절편 공식."
+   ]
+  },
+  {
+   "h": "타원 정의",
+   "p": [
+    "$\\overline{\\mathrm{PF}}+\\overline{\\mathrm{PF'}}=2a$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "Q",
+   "text": "${\\mathrm{P}}(x_{1},\\,y_{1})$ $(x_{1}>0,\\,y_{1}>0)$ 이라 하면 접선의 방정식은 $\\frac{x_{1}x}{a^{2}}+\\frac{y_{1}y}{b^{2}}=1$ 이므로 ${\\mathrm{Q}}\\left(0,\\,\\frac{b^{2}}{y_{1}}\\right)$ 이고 $\\overline{{\\mathrm{OQ}}}=\\frac{b^{2}}{y_{1}}$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "R",
+   "text": "접선의 기울기가 $-\\frac{b^{2}x_{1}}{a^{2}y_{1}}$ 이므로 접선에 수직인 직선은 $y-y_{1}=\\frac{a^{2}y_{1}}{b^{2}x_{1}}(x-x_{1})$ 이고, $x=0$ 을 대입하면 $y=y_{1}-\\frac{a^{2}y_{1}}{b^{2}}=-\\frac{c^{2}y_{1}}{b^{2}}$ 이다 $(a^{2}-b^{2}=c^{2})$ . 따라서 ${\\mathrm{R}}\\left(0,\\,-\\frac{c^{2}y_{1}}{b^{2}}\\right)$ 이고 $\\overline{{\\mathrm{OR}}}=\\frac{c^{2}y_{1}}{b^{2}}$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$c$",
+   "text": "그러므로 $\\overline{{\\mathrm{OQ}}}\\times \\overline{{\\mathrm{OR}}}=c^{2}=36$ , 즉 $c=6$ 이다. 또 두 점 ${\\mathrm{Q}}$ , ${\\mathrm{R}}$ 는 원점의 서로 반대쪽에 있으므로 $\\overline{{\\mathrm{QR}}}=13$ 이고, 삼각형 ${\\mathrm{PQR}}$ 의 넓이는 $\\frac{1}{2}\\times 13 \\times x_{1}=39$ 에서 $x_{1}=6$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$x_1$",
+   "text": "$\\overline{{\\mathrm{OQ}}}=9$ 에서 $y_{1}=\\frac{b^{2}}{9}$ 이고, $a^{2}=b^{2}+36$ 이므로 점 ${\\mathrm{P}}$ 가 타원 위에 있을 조건은",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "방정식",
+   "text": "$$\\frac{36}{b^{2}+36}+\\frac{b^{2}}{81}=1,\\,\\,\\,36 \\times 81+b^{2}(b^{2}+36)=81(b^{2}+36),\\,\\,\\,b^{2}(b^{2}-45)=0$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이므로 $b^{2}=45$ , $a^{2}=81$ 이고 ${\\mathrm{P}}(6,\\,5)$ 이다. 점 ${\\mathrm{P}}$ 의 $x$ 좌표가 $c$ 와 같으므로 $\\overline{{\\mathrm{PF}}}=5$ 이고, 타원의 정의에 의하여 $\\overline{{\\mathrm{PF'}}}=2 a-5=13$ 이다. 따라서 $\\overline{{\\mathrm{PF}}}\\times \\overline{{\\mathrm{PF'}}}=65$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "반대쪽",
+   "cond": "C2",
+   "text": [
+    "R의 $y$좌표는 음수."
+   ]
+  },
+  {
+   "h": "$\\overline{\\mathrm{PF}}=y_1$",
+   "cond": "C2",
+   "text": [
+    "$x_1=c$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $8$, $2$, 넓이 $20$",
+   "body": [
+    "(같은 설정에서) $\\overline{\\mathrm{OQ}}=8$, $\\overline{\\mathrm{OR}}=2$이고 삼각형 PQR의 넓이가 $20$일 때, $\\overline{\\mathrm{PF}}\\times\\overline{\\mathrm{PF'}}$의 값을 구하시오."
+   ],
+   "answer": 60,
+   "hint": "$c=4$, $x_1=4$, $b^2=48$, $a=8$: $6\\times10$."
+  }
+ ],
+ "line": "$\\mathrm{OQ}\\cdot\\mathrm{OR}=c^2$ → 넓이로 $x_1$."
+}
