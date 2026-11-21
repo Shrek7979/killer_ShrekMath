@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2022학년도 9월 모의평가 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **40** — 부분적분 후 $\\frac13$을 빠뜨려 $\\frac{e-1}3$으로 계산한 경우",
  "answer": 20,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "eq",
@@ -32,9 +32,12 @@
     0
    ],
    "text": "$\\lim_{n \\to \\infty}\\sum_{k=1}^{n}\\left(\\frac{k}{n^{2}}\\int_{\\frac{k}{n}}^{1}e^{t^{3}}dt \\right)=p e+q$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "극한",
+   "why": "$\\lim\\sum\\frac k{n^2}\\int_{k/n}^1e^{t^3}dt=pe+q$.",
+   "uses": [
+    1,
+    2
+   ]
   },
   {
    "id": "C2",
@@ -43,9 +46,11 @@
     0
    ],
    "text": "일 때, $60(p-q)$ 의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$60(p-q)$.",
+   "uses": [
+    3
+   ]
   },
   {
    "id": "C3",
@@ -60,32 +65,76 @@
   }
  ],
  "intro": [
-  "급수를 정적분으로 정의된 함수의 정적분으로 바꾼 뒤, 피적분함수의 부정적분을 구할 수 없으므로 부분적분으로 적분의 순서를 바꾸는 효과를 내게 함"
+  "$\\frac kn=x$, $\\frac1n=dx$ → 극한 $=\\int_0^1xF(x)dx$, $F(x)=\\int_x^1e^{t^3}dt$.",
+  "$e^{t^3}$은 원시함수가 없으니 부분적분으로 $F$를 미분 쪽으로: $\\int\\frac{x^2}2e^{x^3}dx$는 치환으로 됩니다."
  ],
  "topic": "정적분과 급수",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "정적분과 급수",
+   "p": [
+    "$\\lim\\frac1n\\sum g\\left(\\frac kn\\right)=\\int_0^1g$."
+   ]
+  },
+  {
+   "h": "부분적분으로 적분 순서 바꾸기",
+   "p": [
+    "$\\int xF=\\left[\\frac{x^2}2F\\right]-\\int\\frac{x^2}2F'$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$F(x)=\\int_{x}^{1}e^{t^{3}}dt$ 는 연속이므로 정적분과 급수의 관계에서 주어진 극한은 $\\int_{0}^{1}x F(x)dx$ 이다. $F'(x)=-e^{x^{3}}$ , $F(1)=0$ 이므로 부분적분하면",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "적분으로"
   },
   {
    "n": 2,
    "text": "$$\\int_{0}^{1}x F(x)dx=\\left[\\frac{x^{2}}{2}F(x)\\right]_{0}^{1}+\\int_{0}^{1}\\frac{x^{2}}{2}e^{x^{3}}dx=\\frac{1}{6}\\left[e^{x^{3}}\\right]_{0}^{1}=\\frac{e-1}{6}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "부분적분"
   },
   {
    "n": 3,
    "text": "$p=\\frac{1}{6}$ , $q=-\\frac{1}{6}$ 이므로 $60(p-q)=20$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$F(1)=0$",
+   "cond": "C1",
+   "text": [
+    "경계항이 사라짐."
+   ]
+  },
+  {
+   "h": "치환 계수",
+   "cond": "C1",
+   "text": [
+    "$\\int x^2e^{x^3}=\\frac13e^{x^3}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $k^2$, $e^{t^4}$",
+   "body": [
+    "$\\lim_{n\\to\\infty}\\sum_{k=1}^n\\left(\\frac{k^2}{n^3}\\int_{k/n}^1e^{t^4}dt\\right)=pe+q$일 때, $60(p-q)$의 값을 구하시오. (단, $p$, $q$는 유리수)"
+   ],
+   "answer": 10,
+   "hint": "$\\int_0^1x^2F=\\frac13\\int_0^1x^3e^{x^4}=\\frac{e-1}{12}$."
+  }
+ ],
+ "line": "원시함수가 없는 함수의 적분 → 부분적분으로 미분 쪽에 넘기기.",
  "note": ""
 }

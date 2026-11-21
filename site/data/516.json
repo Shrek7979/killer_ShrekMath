@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2026학년도 대학수학능력시험 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — T를 $(-4,0)$이 아닌 다른 점으로 잡거나 $\\vec{\\mathrm{TF}}$ 길이를 $4$로 본 경우",
  "answer": 40,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -38,9 +38,12 @@
     0
    ],
    "text": "초점이 ${\\mathrm{F}}$ 인 포물선 $y^{2}=4 p x$ $(p>0)$ 위의 점 중 제 $1$ 사분면에 있는 점 ${\\mathrm{P}}$ 에서 포물선의 준선에 내린 수선의 발을 ${\\mathrm{H}}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "포물선",
+   "why": "$y^2=4px$, P는 제1사분면, H는 준선에 내린 수선의 발.",
+   "uses": [
+    1,
+    4
+   ]
   },
   {
    "id": "C2",
@@ -49,9 +52,13 @@
     0
    ],
    "text": "$|\\vec{{\\mathrm{PF}}}+\\vec{{\\mathrm{PH}}}|=4 \\sqrt{5},\\,\\,\\,|\\vec{{\\mathrm{PF}}}-\\vec{{\\mathrm{PH}}}|=2 \\sqrt{5}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건",
+   "why": "$|\\vec{\\mathrm{PF}}+\\vec{\\mathrm{PH}}|=4\\sqrt5$, $|\\vec{\\mathrm{PF}}-\\vec{\\mathrm{PH}}|=2\\sqrt5$.",
+   "uses": [
+    2,
+    3,
+    5
+   ]
   },
   {
    "id": "C3",
@@ -60,9 +67,11 @@
     0
    ],
    "text": "일 때, 점 ${\\mathrm{P}}$ 에서의 포물선의 접선이 $x$ 축과 만나는 점을 ${\\mathrm{T}}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "T",
+   "why": "P에서의 접선과 $x$축의 교점.",
+   "uses": [
+    6
+   ]
   },
   {
    "id": "C4",
@@ -71,56 +80,109 @@
     1
    ],
    "text": "$\\vec{{\\mathrm{TP}}}\\cdot \\vec{{\\mathrm{TF}}}$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\vec{\\mathrm{TP}}\\cdot\\vec{\\mathrm{TF}}$.",
+   "uses": [
+    6
+   ]
   }
  ],
  "intro": [
-  "포물선 위의 점·준선의 수선의 발·초점의 관계를 벡터의 합과 차로 주어, $|\\vec{{\\mathrm{PF}}}|=|\\vec{{\\mathrm{PH}}}|$ 와 $\\vec{{\\mathrm{PF}}}-\\vec{{\\mathrm{PH}}}=\\vec{{\\mathrm{HF}}}$ 를 이용해 포물선을 결정하게 함"
+  "$|\\vec a+\\vec b|^2+|\\vec a-\\vec b|^2=2(|\\vec a|^2+|\\vec b|^2)$와 PF$=$PH로 $r=5$.",
+  "$\\vec{\\mathrm{PF}}-\\vec{\\mathrm{PH}}=\\vec{\\mathrm{HF}}$ → HF$^2=4p(p+x_1)=20p$ → $p=1$."
  ],
  "topic": "이차곡선과 평면벡터",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "평행사변형 법칙",
+   "p": [
+    "합·차의 크기 제곱의 합 = 두 변 제곱의 합의 $2$배."
+   ]
+  },
+  {
+   "h": "포물선 접선",
+   "p": [
+    "$y_1y=2p(x+x_1)$, $x$절편 $-x_1$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "포물선의 정의에 의하여 $|\\vec{{\\mathrm{PF}}}|=|\\vec{{\\mathrm{PH}}}|=r$ 라 하면",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "PF$=$PH"
   },
   {
    "n": 2,
    "text": "$$|\\vec{{\\mathrm{PF}}}+\\vec{{\\mathrm{PH}}}|^{2}+|\\vec{{\\mathrm{PF}}}-\\vec{{\\mathrm{PH}}}|^{2}=2 \\left(|\\vec{{\\mathrm{PF}}}|^{2}+|\\vec{{\\mathrm{PH}}}|^{2}\\right)=4 r^{2}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$r$"
   },
   {
    "n": 3,
    "text": "이므로 $80+20=4 r^{2}$ , $r=5$ 이다. 또 $\\vec{{\\mathrm{PF}}}-\\vec{{\\mathrm{PH}}}=\\vec{{\\mathrm{HF}}}$ 이므로 $\\overline{{\\mathrm{HF}}}=2 \\sqrt{5}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "HF"
   },
   {
    "n": 4,
    "text": "${\\mathrm{P}}(x_{1},\\,y_{1})$ 이라 하면 $x_{1}+p=5$ 이고 ${\\mathrm{H}}(-p,\\,y_{1})$ 이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "좌표"
   },
   {
    "n": 5,
    "text": "$$\\overline{{\\mathrm{HF}}}^{2}=4 p^{2}+y_{1}^{2}=4 p^{2}+4 p x_{1}=4 p(p+x_{1})=20 p=20$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$p$"
   },
   {
    "n": 6,
    "text": "에서 $p=1$ , $x_{1}=4$ , $y_{1}=4$ 이다. 접선 $4 y=2(x+4)$ 가 $x$ 축과 만나는 점은 ${\\mathrm{T}}(-4,\\,0)$ 이므로 $\\vec{{\\mathrm{TP}}}=(8,\\,4)$ , $\\vec{{\\mathrm{TF}}}=(5,\\,0)$ 이고 $\\vec{{\\mathrm{TP}}}\\cdot \\vec{{\\mathrm{TF}}}=40$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3",
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "접선의 $x$절편",
+   "cond": "C3",
+   "text": [
+    "$-x_1$ — 꼭짓점 대칭."
+   ]
+  },
+  {
+   "h": "차 벡터",
+   "cond": "C2",
+   "text": [
+    "$\\vec{\\mathrm{PF}}-\\vec{\\mathrm{PH}}=\\vec{\\mathrm{HF}}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $8\\sqrt5$, $4\\sqrt5$",
+   "body": [
+    "초점이 F인 포물선 $y^2=4px$ $(p>0)$ 위의 제1사분면의 점 P에서 준선에 내린 수선의 발을 H라 하자. $|\\vec{\\mathrm{PF}}+\\vec{\\mathrm{PH}}|=8\\sqrt5$, $|\\vec{\\mathrm{PF}}-\\vec{\\mathrm{PH}}|=4\\sqrt5$일 때, P에서의 접선이 $x$축과 만나는 점을 T라 하자. $\\vec{\\mathrm{TP}}\\cdot\\vec{\\mathrm{TF}}$의 값을 구하시오."
+   ],
+   "answer": 160,
+   "hint": "$r=10$, HF$^2=80=40p$ → $p=2$, P$(8,8)$, T$(-8,0)$."
+  }
+ ],
+ "line": "합·차의 크기 → 평행사변형 법칙. 차 벡터 = HF.",
  "note": ""
 }
