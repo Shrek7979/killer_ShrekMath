@@ -1,0 +1,109 @@
+{
+ "wrong": "예상 오답 — PF를 PF′$+4$로 써서 최솟값식을 $17-r$로 계산한 경우",
+ "intro": [
+  "오른쪽 가지: PF$=$PF′$-4$ → PQ+PF $\\ge$ CF′$-4-r=9-r$.",
+  "등호: P가 선분 CF′ 위 — 교점의 $y$좌표."
+ ],
+ "conds": {
+  "C1": {
+   "label": "도형",
+   "why": "쌍곡선 $\\frac{x^2}4-\\frac{y^2}5=1$, 원 중심 $(9,5)$, $0<r<3$.",
+   "uses": []
+  },
+  "C2": {
+   "label": "조건",
+   "why": "$x>0$인 P, 원 위 Q, PQ+PF 최솟값 $7$.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "최소일 때 P의 $y$좌표 $k$, $r+4k$.",
+   "uses": [
+    4,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "쌍곡선의 정의",
+   "p": [
+    "$\\mathrm{PF'}-\\mathrm{PF}=2a$ (오른쪽 가지)."
+   ]
+  },
+  {
+   "h": "삼각부등식",
+   "p": [
+    "$\\mathrm{PC}+\\mathrm{PF'}\\ge\\mathrm{CF'}$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "변환",
+   "text": "원의 중심을 ${\\mathrm{C}}(9,\\,5)$ 라 하자. 점 ${\\mathrm{P}}$ 는 쌍곡선의 오른쪽 부분 위에 있으므로 $\\overline{{\\mathrm{PF}}}=\\overline{{\\mathrm{PF'}}}-4$ 이다. $0<r<3$ 이면 원과 쌍곡선은 만나지 않으므로 $\\overline{{\\mathrm{PQ}}}\\ge \\overline{{\\mathrm{PC}}}-r$ 이고",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "부등식",
+   "text": "$$\\overline{{\\mathrm{PQ}}}+\\overline{{\\mathrm{PF}}}\\ge \\overline{{\\mathrm{PC}}}+\\overline{{\\mathrm{PF'}}}-4-r \\ge \\overline{{\\mathrm{CF'}}}-4-r=13-4-r=9-r$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$r$",
+   "text": "이다. 등호는 점 ${\\mathrm{P}}$ 가 선분 ${\\mathrm{CF'}}$ 위에 있을 때 성립하고, 선분 ${\\mathrm{CF'}}$ 은 쌍곡선의 오른쪽 부분과 만나므로 최솟값은 $9-r=7$ , $r=2$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "교점",
+   "text": "선분 ${\\mathrm{F'C}}$ 위의 점을 $(-3+12 s,\\,5 s)$ $(0 \\le s \\le 1)$ 라 하고 쌍곡선의 방정식에 대입하면 $\\frac{(12 s-3)^{2}}{4}-5 s^{2}=1$ , $124 s^{2}-72 s+5=0$ , $(2 s-1)(62 s-5)=0$ 이다. $x>0$ 인 점은 $s=\\frac{1}{2}$ 일 때 $\\left(3,\\,\\frac{5}{2}\\right)$ 이므로 $k=\\frac{5}{2}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $r+4 k=2+10=12$",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "CF′$=13$",
+   "cond": "C2",
+   "text": [
+    "$\\sqrt{144+25}$."
+   ]
+  },
+  {
+   "h": "두 교점",
+   "cond": "C3",
+   "text": [
+    "$s=\\frac5{62}$는 $x<0$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 최솟값 $8$",
+   "body": [
+    "(같은 쌍곡선과 원에서) $\\overline{\\mathrm{PQ}}+\\overline{\\mathrm{PF}}$의 최솟값이 $8$일 때, 최소가 되도록 하는 P의 $y$좌표를 $k$라 하자. $r+4k$의 값을 구하시오."
+   ],
+   "answer": 11,
+   "hint": "$r=1$, $k=\\frac52$."
+  }
+ ],
+ "line": "쌍곡선 위 합 → 다른 초점 + 삼각부등식."
+}

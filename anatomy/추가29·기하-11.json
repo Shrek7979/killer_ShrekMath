@@ -1,0 +1,109 @@
+{
+ "wrong": "예상 오답 — Q를 PF′의 연장선 위로 잡아 $\\overline{\\mathrm{F'Q}}=$ PF′$+$PF로 계산한 경우",
+ "intro": [
+  "Q는 선분 PF′ 위 → $\\mathrm{F'Q}=\\mathrm{PF'}-\\mathrm{PF}=2a=4$.",
+  "닮음비로 $\\mathrm{PF'}=9$, 코사인법칙 → 넓이 $10\\sqrt2$, 밑변 비 $5:9$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "쌍곡선",
+   "why": "$\\frac{x^2}4-\\frac{y^2}5=1$, 제1사분면 P, PF′ 위에 PQ$=$PF.",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "닮음",
+   "why": "$\\triangle\\mathrm{QF'F}\\sim\\triangle\\mathrm{FF'P}$; PQF 넓이 $\\frac qp\\sqrt2$.",
+   "uses": [
+    2,
+    3,
+    4
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "$p+q$.",
+   "uses": [
+    4
+   ]
+  },
+  "C4": {
+   "label": "단서",
+   "why": "서로소.",
+   "uses": []
+  }
+ },
+ "concepts": [
+  {
+   "h": "쌍곡선의 정의",
+   "p": [
+    "$|\\mathrm{PF'}-\\mathrm{PF}|=2a$."
+   ]
+  },
+  {
+   "h": "닮음비",
+   "p": [
+    "대응변의 비."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "F′Q",
+   "text": "$a=2$ , $c=3$ 이다. 점 ${\\mathrm{Q}}$ 가 선분 ${\\mathrm{PF'}}$ 위에 있으므로 $\\overline{{\\mathrm{F'Q}}}=\\overline{{\\mathrm{PF'}}}-\\overline{{\\mathrm{PQ}}}=\\overline{{\\mathrm{PF'}}}-\\overline{{\\mathrm{PF}}}=4$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "닮음",
+   "text": "닮음에서 $\\frac{\\overline{{\\mathrm{QF'}}}}{\\overline{{\\mathrm{FF'}}}}=\\frac{\\overline{{\\mathrm{F'F}}}}{\\overline{{\\mathrm{F'P}}}}$ , 즉 $\\frac{4}{6}=\\frac{6}{\\overline{{\\mathrm{PF'}}}}$ 이므로 $\\overline{{\\mathrm{PF'}}}=9$ , $\\overline{{\\mathrm{PF}}}=5$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "넓이",
+   "text": "삼각형 ${\\mathrm{PF'F}}$ 에서 $\\cos(\\angle{\\mathrm{PF'F}})=\\frac{81+36-25}{2 \\times 9 \\times 6}=\\frac{23}{27}$ , $\\sin(\\angle{\\mathrm{PF'F}})=\\frac{10 \\sqrt{2}}{27}$ 이므로 삼각형 ${\\mathrm{PF'F}}$ 의 넓이는 $\\frac{1}{2}\\times 9 \\times 6 \\times \\frac{10 \\sqrt{2}}{27}=10 \\sqrt{2}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "비",
+   "text": "삼각형 ${\\mathrm{PQF}}$ 와 삼각형 ${\\mathrm{PF'F}}$ 는 높이가 같고 밑변의 비가 $\\overline{{\\mathrm{PQ}}}:\\overline{{\\mathrm{PF'}}}=5:9$ 이므로 넓이는 $\\frac{5}{9}\\times 10 \\sqrt{2}=\\frac{50}{9}\\sqrt{2}$ 이다. 따라서 $p+q=9+50=59$",
+   "uses": [
+    "C2",
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "대응 순서",
+   "cond": "C2",
+   "text": [
+    "Q↔F, F′↔F′, F↔P."
+   ]
+  },
+  {
+   "h": "높이 공유",
+   "cond": "C2",
+   "text": [
+    "꼭짓점 F에서 같은 높이."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $x^2-\\frac{y^2}3=1$",
+   "body": [
+    "두 초점이 F$(2,0)$, F′$(-2,0)$인 쌍곡선 $x^2-\\frac{y^2}3=1$ 위의 제1사분면의 점 P에 대하여 선분 PF′ 위에 $\\overline{\\mathrm{PQ}}=\\overline{\\mathrm{PF}}$인 점 Q를 잡는다. 삼각형 QF′F와 FF′P가 이 순서대로 닮음일 때, 삼각형 PQF의 넓이는 $\\frac qp\\sqrt{15}$이다. $p+q$의 값을 구하시오. (단, $p$와 $q$는 서로소인 자연수)"
+   ],
+   "answer": 13,
+   "hint": "PF′$=8$, PF$=6$, 넓이 $3\\sqrt{15}\\times\\frac68$."
+  }
+ ],
+ "line": "쌍곡선 정의로 F′Q $=2a$ → 닮음."
+}

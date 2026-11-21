@@ -1,0 +1,129 @@
+{
+ "wrong": "예상 오답 — 삼각형 PQF의 둘레를 $\\overline{\\mathrm{PF'}}$로 착각해 $a$를 틀린 경우",
+ "intro": [
+  "Q는 PF′의 중점(중점 연결), 직각삼각형 빗변 중점 → QF$=$QF′.",
+  "둘레 $=\\mathrm{PF'}+\\mathrm{PF}=2a$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "타원",
+   "why": "초점 F, F′.",
+   "uses": []
+  },
+  "C2": {
+   "label": "점",
+   "why": "F 지나 $x$축 수직선과 타원의 교점 P, PF′와 $y$축의 교점 Q.",
+   "uses": [
+    1
+   ]
+  },
+  "C3": {
+   "label": "조건",
+   "why": "PQF 둘레 $4$, $\\overline{\\mathrm{PF}}=\\frac32$.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C4": {
+   "label": "T",
+   "why": "P의 접선과 $x$축 교점, PF′T 넓이 $\\frac qp$.",
+   "uses": [
+    4
+   ]
+  },
+  "C5": {
+   "label": "묻는 것",
+   "why": "$p+q$.",
+   "uses": [
+    5
+   ]
+  },
+  "C6": {
+   "label": "단서",
+   "why": "서로소.",
+   "uses": [
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "타원의 정의",
+   "p": [
+    "$\\overline{\\mathrm{PF}}+\\overline{\\mathrm{PF'}}=2a$, $c^2=a^2-b^2$."
+   ]
+  },
+  {
+   "h": "빗변의 중점",
+   "p": [
+    "직각삼각형 외심은 빗변 중점."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "중점",
+   "text": "${\\mathrm{O}}$ 는 선분 ${\\mathrm{FF'}}$ 의 중점이고 $y$ 축은 직선 ${\\mathrm{PF}}$ 와 평행하므로 ${\\mathrm{Q}}$ 는 선분 ${\\mathrm{PF'}}$ 의 중점이다. 직각삼각형 ${\\mathrm{PFF'}}$ 에서 $\\overline{{\\mathrm{QF}}}=\\overline{{\\mathrm{QP}}}=\\overline{{\\mathrm{QF'}}}$ 이므로",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "둘레",
+   "text": "$$\\overline{{\\mathrm{PQ}}}+\\overline{{\\mathrm{QF}}}+\\overline{{\\mathrm{PF}}}=\\overline{{\\mathrm{PQ}}}+\\overline{{\\mathrm{QF'}}}+\\overline{{\\mathrm{PF}}}=\\overline{{\\mathrm{PF'}}}+\\overline{{\\mathrm{PF}}}=2 a=4$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$a,c$",
+   "text": "이다. 따라서 $a=2$ , $\\overline{{\\mathrm{PF'}}}=\\frac{5}{2}$ 이고 $(2 c)^{2}=\\left(\\frac{5}{2}\\right)^{2}-\\left(\\frac{3}{2}\\right)^{2}=4$ 에서 $c=1$ , $b^{2}=3$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "T",
+   "text": "${\\mathrm{P}}\\left(1,\\,\\frac{3}{2}\\right)$ 에서의 접선 $\\frac{x}{4}+\\frac{y}{2}=1$ 의 $x$ 절편은 $4$ 이므로 ${\\mathrm{T}}(4,\\,0)$ , $\\overline{{\\mathrm{F'T}}}=5$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "삼각형 ${\\mathrm{PF'T}}$ 의 넓이는 $\\frac{1}{2}\\times 5 \\times \\frac{3}{2}=\\frac{15}{4}$ 이므로 $p+q=4+15=19$",
+   "uses": [
+    "C5",
+    "C6"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\mathrm{QF}=\\mathrm{QF'}$",
+   "cond": "C2",
+   "text": [
+    "∠PFF′$=90°$."
+   ]
+  },
+  {
+   "h": "$x$절편",
+   "cond": "C4",
+   "text": [
+    "$\\frac{a^2}c$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 둘레 $6$, $\\mathrm{PF}=\\frac53$",
+   "body": [
+    "(같은 설정에서) 삼각형 PQF의 둘레의 길이가 $6$이고 $\\overline{\\mathrm{PF}}=\\frac53$일 때, 삼각형 PF′T의 넓이는 $\\frac qp$이다. $p+q$의 값을 구하시오. (단, $p$와 $q$는 서로소인 자연수)"
+   ],
+   "answer": 77,
+   "hint": "$a=3$, $c=2$, T$\\left(\\frac92,0\\right)$: $\\frac12\\cdot\\frac{13}2\\cdot\\frac53$."
+  }
+ ],
+ "line": "중점 → 둘레가 장축."
+}
