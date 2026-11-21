@@ -1,0 +1,142 @@
+{
+ "wrong": "예상 오답 — $g(s)$의 최솟값을 $s=6\\sqrt2$에서 잡은 경우",
+ "intro": [
+  "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=(s-6)\\cos2\\omega$, $\\sin^2\\omega=\\frac6s$ → $g(s)=s+\\frac{72}s-18$.",
+  "P가 움직이는 원에서 $s\\in[9,36]$. $g$의 최소점 $6\\sqrt2<9$ — 범위에서 증가."
+ ],
+ "conds": {
+  "C1": {
+   "label": "원과 접선",
+   "why": "$C:x^2+y^2=6$, P에서 그은 두 접선의 접점 A, B.",
+   "uses": [
+    1,
+    2
+   ]
+  },
+  "C2": {
+   "label": "P의 자취",
+   "why": "$\\left(x-\\frac92\\right)^2+y^2=\\frac94$.",
+   "uses": [
+    4
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}$의 $M+m$.",
+   "uses": [
+    3,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "접선 길이와 각",
+   "p": [
+    "$|\\mathrm{PA}|^2=|\\mathrm{OP}|^2-r^2$, $\\sin\\omega=\\frac r{|\\mathrm{OP}|}$."
+   ]
+  },
+  {
+   "h": "$s+\\frac cs$의 증감",
+   "p": [
+    "$s=\\sqrt c$에서 최소."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "변수",
+   "text": "원의 중심을 ${\\mathrm{O}}$ , $|\\vec{{\\mathrm{OP}}}|^{2}=s$ $(s>6)$ , $\\angle{\\mathrm{APB}}=2 \\omega$ 라 하자. $|\\vec{{\\mathrm{PA}}}|^{2}=|\\vec{{\\mathrm{PB}}}|^{2}=s-6$ 이고 $\\sin \\omega=\\frac{\\sqrt{6}}{\\sqrt{s}}$ 이므로",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "내적",
+   "text": "$$\\vec{{\\mathrm{PA}}}\\cdot \\vec{{\\mathrm{PB}}}=(s-6)\\cos 2 \\omega=(s-6)\\left(1-\\frac{12}{s}\\right)=s+\\frac{72}{s}-18$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$g$",
+   "text": "이다. 이 값을 $g(s)$ 라 하자.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$s$의 범위",
+   "text": "점 ${\\mathrm{P}}$ 는 중심이 $\\left(\\frac{9}{2},\\,0 \\right)$ , 반지름의 길이가 $\\frac{3}{2}$ 인 원 위에 있으므로 $3 \\le|\\vec{{\\mathrm{OP}}}|\\le 6$ , 즉 $9 \\le s \\le 36$ 이고 이 범위의 모든 값을 갖는다(이때 점 ${\\mathrm{P}}$ 는 원 $C$ 밖에 있다).",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "단조성",
+   "text": "$9 \\le s_{1}<s_{2}\\le 36$ 이면",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$$g(s_{2})-g(s_{1})=(s_{2}-s_{1})\\left(1-\\frac{72}{s_{1}s_{2}}\\right)>0$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "증가",
+   "text": "이므로 ( $s_{1}s_{2}>81>72$ ) $g(s)$ 는 이 범위에서 증가한다. 따라서",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "값",
+   "text": "$$m=g(9)=9+8-18=-1,\\,\\,\\,M=g(36)=36+2-18=20$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이고 $M+m=19$ 이다. (참고: $g(s)$ 가 최소가 되는 $s=6 \\sqrt{2}$ 는 $9$ 보다 작아 범위 밖에 있다.)",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "최소점 위치",
+   "cond": "C3",
+   "text": [
+    "$6\\sqrt2\\approx8.49<9$ — 범위 밖."
+   ]
+  },
+  {
+   "h": "$s$의 범위",
+   "cond": "C2",
+   "text": [
+    "$|\\mathrm{OP}|\\in[3,6]$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $Mm$",
+   "body": [
+    "(같은 조건에서) $M\\times m$의 값을 구하시오."
+   ],
+   "answer": -20,
+   "hint": "$20\\times(-1)$."
+  }
+ ],
+ "line": "내적을 $|\\mathrm{OP}|$ 하나로 → 범위와 최소점 비교."
+}
