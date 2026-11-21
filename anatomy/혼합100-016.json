@@ -1,0 +1,125 @@
+{
+ "wrong": "예상 오답 — $S'$을 구할 때 근호 안의 미분에서 계수 $2$ 또는 $18$을 빠뜨린 경우",
+ "intro": [
+  "원점에서 직선까지 거리 $d=3\\sqrt2\\sin\\theta$, 현의 반 $\\sqrt{25-d^2}$ → $S=d\\sqrt{25-d^2}$.",
+  "최댓값은 $d^2(25-d^2)\\le\\left(\\frac{25}2\\right)^2$(산술·기하) — $d^2=\\frac{25}2$가 가능한지 확인."
+ ],
+ "conds": {
+  "C1": {
+   "label": "원과 점",
+   "why": "$x^2+y^2=25$, C$(3\\sqrt2,0)$.",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "넓이",
+   "why": "C를 지나 각 $\\theta$인 직선, 삼각형 OPQ의 넓이 $S(\\theta)$.",
+   "uses": [
+    1,
+    2
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "$2M+4S'\\left(\\frac\\pi4\\right)$.",
+   "uses": [
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  "C4": {
+   "label": "단서",
+   "why": "O는 원점.",
+   "uses": []
+  }
+ },
+ "concepts": [
+  {
+   "h": "현의 길이",
+   "p": [
+    "$2\\sqrt{r^2-d^2}$."
+   ]
+  },
+  {
+   "h": "곱의 최대",
+   "p": [
+    "합이 일정한 두 수의 곱은 같을 때 최대."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "거리",
+   "text": "원점에서 직선까지의 거리는 $d=3 \\sqrt{2}\\sin \\theta$ 이고, $d<5$ 이므로 직선은 항상 원과 두 점에서 만난다. $\\overline{{\\mathrm{PQ}}}=2 \\sqrt{25-d^{2}}$ 이므로",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "$S$",
+   "text": "$$S(\\theta)=d \\sqrt{25-d^{2}}=3 \\sqrt{2}\\sin \\theta \\sqrt{25-18 \\sin^{2}\\theta}$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "최댓값",
+   "text": "이다. $d^{2}\\left(25-d^{2}\\right)\\le \\left(\\frac{25}{2}\\right)^{2}$ 이고 등호는 $d^{2}=\\frac{25}{2}$ , 즉 $\\sin \\theta=\\frac{5}{6}$ 일 때 성립하므로 $M=\\frac{25}{2}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "치환",
+   "text": "$s=\\sin \\theta$ 라 하면",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "미분",
+   "text": "$$S'(\\theta)=3 \\sqrt{2}\\cos \\theta \\sqrt{25-18 s^{2}}-\\frac{3 \\sqrt{2}\\times 18 s^{2}\\cos \\theta}{\\sqrt{25-18 s^{2}}}=\\frac{3 \\sqrt{2}\\cos \\theta \\left(25-36 s^{2}\\right)}{\\sqrt{25-18 s^{2}}}$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이고, $\\theta=\\frac{\\pi}{4}$ 일 때 $s^{2}=\\frac{1}{2}$ 이므로 $S' \\left(\\frac{\\pi}{4}\\right)=\\frac{3 \\times 7}{4}=\\frac{21}{4}$ 이다. 따라서 $2 M+4 S' \\left(\\frac{\\pi}{4}\\right)=25+21=46$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "가능성 확인",
+   "cond": "C3",
+   "text": [
+    "$\\sin\\theta=\\frac56$ — 범위 안."
+   ]
+  },
+  {
+   "h": "항상 두 점",
+   "cond": "C2",
+   "text": [
+    "$d\\le3\\sqrt2<5$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $4M-8S'$",
+   "body": [
+    "(같은 설정에서) $4M-8S'\\left(\\frac\\pi4\\right)$의 값을 구하시오."
+   ],
+   "answer": 8,
+   "hint": "$50-42$."
+  }
+ ],
+ "line": "현으로 만든 삼각형 = 거리 × 반현. 곱의 최대는 산술·기하."
+}

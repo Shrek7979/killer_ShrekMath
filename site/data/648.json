@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2024학년도 9월 모의평가 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $S'$을 구할 때 근호 안의 미분에서 계수 $2$ 또는 $18$을 빠뜨린 경우",
  "answer": 46,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -30,9 +30,11 @@
     0
    ],
    "text": "원 $x^{2}+y^{2}=25$ 와 점 ${\\mathrm{C}}\\left(3 \\sqrt{2},\\,0 \\right)$ 이 있다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "원과 점",
+   "why": "$x^2+y^2=25$, C$(3\\sqrt2,0)$.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C2",
@@ -41,9 +43,12 @@
     1
    ],
    "text": "$0<\\theta<\\frac{\\pi}{2}$ 인 $\\theta$ 에 대하여 점 ${\\mathrm{C}}$ 를 지나고 $x$ 축의 양의 방향과 이루는 각의 크기가 $\\theta$ 인 직선이 원과 만나는 두 점을 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ 라 하고, 삼각형 ${\\mathrm{OPQ}}$ 의 넓이를 $S(\\theta)$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "넓이",
+   "why": "C를 지나 각 $\\theta$인 직선, 삼각형 OPQ의 넓이 $S(\\theta)$.",
+   "uses": [
+    1,
+    2
+   ]
   },
   {
    "id": "C3",
@@ -52,9 +57,14 @@
     2
    ],
    "text": "함수 $S(\\theta)$ 의 최댓값을 $M$ 이라 할 때, $2 M+4 S' \\left(\\frac{\\pi}{4}\\right)$ 의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$2M+4S'\\left(\\frac\\pi4\\right)$.",
+   "uses": [
+    3,
+    4,
+    5,
+    6
+   ]
   },
   {
    "id": "C4",
@@ -63,56 +73,107 @@
     3
    ],
    "text": "(단, ${\\mathrm{O}}$ 는 원점이다.) [4점]",
-   "label": "",
-   "why": "",
+   "label": "단서",
+   "why": "O는 원점.",
    "uses": []
   }
  ],
  "intro": [
-  "원 안의 고정점을 지나는 현으로 만든 삼각형의 넓이를 $\\theta$ 의 함수로 나타내어 미분계수와 최댓값을 함께 구하게 함"
+  "원점에서 직선까지 거리 $d=3\\sqrt2\\sin\\theta$, 현의 반 $\\sqrt{25-d^2}$ → $S=d\\sqrt{25-d^2}$.",
+  "최댓값은 $d^2(25-d^2)\\le\\left(\\frac{25}2\\right)^2$(산술·기하) — $d^2=\\frac{25}2$가 가능한지 확인."
  ],
  "topic": "여러 가지 미분법",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "현의 길이",
+   "p": [
+    "$2\\sqrt{r^2-d^2}$."
+   ]
+  },
+  {
+   "h": "곱의 최대",
+   "p": [
+    "합이 일정한 두 수의 곱은 같을 때 최대."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "원점에서 직선까지의 거리는 $d=3 \\sqrt{2}\\sin \\theta$ 이고, $d<5$ 이므로 직선은 항상 원과 두 점에서 만난다. $\\overline{{\\mathrm{PQ}}}=2 \\sqrt{25-d^{2}}$ 이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "거리"
   },
   {
    "n": 2,
    "text": "$$S(\\theta)=d \\sqrt{25-d^{2}}=3 \\sqrt{2}\\sin \\theta \\sqrt{25-18 \\sin^{2}\\theta}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$S$"
   },
   {
    "n": 3,
    "text": "이다. $d^{2}\\left(25-d^{2}\\right)\\le \\left(\\frac{25}{2}\\right)^{2}$ 이고 등호는 $d^{2}=\\frac{25}{2}$ , 즉 $\\sin \\theta=\\frac{5}{6}$ 일 때 성립하므로 $M=\\frac{25}{2}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "최댓값"
   },
   {
    "n": 4,
    "text": "$s=\\sin \\theta$ 라 하면",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "치환"
   },
   {
    "n": 5,
    "text": "$$S'(\\theta)=3 \\sqrt{2}\\cos \\theta \\sqrt{25-18 s^{2}}-\\frac{3 \\sqrt{2}\\times 18 s^{2}\\cos \\theta}{\\sqrt{25-18 s^{2}}}=\\frac{3 \\sqrt{2}\\cos \\theta \\left(25-36 s^{2}\\right)}{\\sqrt{25-18 s^{2}}}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "미분"
   },
   {
    "n": 6,
    "text": "이고, $\\theta=\\frac{\\pi}{4}$ 일 때 $s^{2}=\\frac{1}{2}$ 이므로 $S' \\left(\\frac{\\pi}{4}\\right)=\\frac{3 \\times 7}{4}=\\frac{21}{4}$ 이다. 따라서 $2 M+4 S' \\left(\\frac{\\pi}{4}\\right)=25+21=46$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "가능성 확인",
+   "cond": "C3",
+   "text": [
+    "$\\sin\\theta=\\frac56$ — 범위 안."
+   ]
+  },
+  {
+   "h": "항상 두 점",
+   "cond": "C2",
+   "text": [
+    "$d\\le3\\sqrt2<5$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $4M-8S'$",
+   "body": [
+    "(같은 설정에서) $4M-8S'\\left(\\frac\\pi4\\right)$의 값을 구하시오."
+   ],
+   "answer": 8,
+   "hint": "$50-42$."
+  }
+ ],
+ "line": "현으로 만든 삼각형 = 거리 × 반현. 곱의 최대는 산술·기하.",
  "note": ""
 }

@@ -1,0 +1,123 @@
+{
+ "wrong": "예상 오답 — 내접원 반지름 공식을 $\\frac{a+b+c}2$로 써서 $\\rho$를 틀린 경우",
+ "intro": [
+  "아스트로이드의 접선 기울기 $-\\tan t$ → 접선의 절편 $8\\cos t$, $8\\sin t$, 선분 AB$=8$ 일정.",
+  "넓이 $16\\sin2t$, 내접원 반지름 $\\frac{a+b-c}2=4(\\sin t+\\cos t-1)$."
+ ],
+ "conds": {
+  "C2": {
+   "label": "곡선",
+   "why": "$x=8\\cos^3t$, $y=8\\sin^3t$.",
+   "uses": [
+    1
+   ]
+  },
+  "C3": {
+   "label": "접선",
+   "why": "P에서의 접선이 축과 A, B에서 만남.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "넓이 최대 $M$, 내접원 반지름 최대 $\\rho$; $M+(\\rho+4)^2$.",
+   "uses": [
+    4,
+    5,
+    6
+   ]
+  },
+  "C5": {
+   "label": "단서",
+   "why": "O는 원점.",
+   "uses": []
+  }
+ },
+ "concepts": [
+  {
+   "h": "매개변수 미분",
+   "p": [
+    "$\\frac{dy}{dx}=\\frac{24\\sin^2t\\cos t}{-24\\cos^2t\\sin t}$."
+   ]
+  },
+  {
+   "h": "직각삼각형 내접원",
+   "p": [
+    "$r=\\frac{a+b-c}2$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "기울기",
+   "text": "$\\frac{dx}{dt}=-24 \\cos^{2}t \\sin t$ , $\\frac{dy}{dt}=24 \\sin^{2}t \\cos t$ 이므로 $\\frac{dy}{dx}=-\\tan t$ 이다. 점 ${\\mathrm{P}}\\left(8 \\cos^{3}t,\\,8 \\sin^{3}t \\right)$ 에서의 접선은",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "접선",
+   "text": "$$y-8 \\sin^{3}t=-\\tan t \\left(x-8 \\cos^{3}t \\right)$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "절편",
+   "text": "이고, $y=0$ 에서 $x=8 \\cos^{3}t+8 \\sin^{2}t \\cos t=8 \\cos t$ , $x=0$ 에서 $y=8 \\sin t$ 이다. 즉 $\\overline{{\\mathrm{OA}}}=8 \\cos t$ , $\\overline{{\\mathrm{OB}}}=8 \\sin t$ , $\\overline{{\\mathrm{AB}}}=8$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "넓이",
+   "text": "넓이는 $32 \\sin t \\cos t=16 \\sin 2 t$ 이므로 $M=16$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "내접원",
+   "text": "직각삼각형의 내접원의 반지름의 길이는 $\\frac{\\overline{{\\mathrm{OA}}}+\\overline{{\\mathrm{OB}}}-\\overline{{\\mathrm{AB}}}}{2}=4(\\sin t+\\cos t-1)=4 \\left\\{\\sqrt{2}\\sin \\left(t+\\frac{\\pi}{4}\\right)-1 \\right\\}$ 이므로 $\\rho=4 \\sqrt{2}-4$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $M+(\\rho+4)^{2}=16+32=48$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "일정한 길이",
+   "cond": "C3",
+   "text": [
+    "$\\overline{\\mathrm{AB}}=8$ — 사다리 모양."
+   ]
+  },
+  {
+   "h": "합성",
+   "cond": "C4",
+   "text": [
+    "$\\sin t+\\cos t\\le\\sqrt2$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 계수 4",
+   "body": [
+    "매개변수 $t$ $\\left(0<t<\\frac\\pi2\\right)$로 나타낸 곡선 $x=4\\cos^3t$, $y=4\\sin^3t$ 위의 점 P에서의 접선이 $x$축, $y$축과 만나는 점을 A, B라 하자. 삼각형 OAB의 넓이의 최댓값을 $M$, 내접원의 반지름의 최댓값을 $\\rho$라 할 때, $M+(\\rho+2)^2$의 값을 구하시오. (단, O는 원점)"
+   ],
+   "answer": 12,
+   "hint": "$M=4$, $\\rho+2=2\\sqrt2$."
+  }
+ ],
+ "line": "아스트로이드 접선 → 축 사이 길이 일정."
+}
