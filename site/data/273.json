@@ -12,9 +12,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $\\alpha=\\beta_1$로 착각해 $a_1=\\frac12$로 둔 경우",
  "answer": 6,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -46,9 +46,11 @@
     0
    ],
    "text": "첫째항과 공차가 모두 양수인 등차수열 $\\left\\{a_{n}\\right\\}$ 과 자연수 $n$ 에 대하여 좌표평면 위의 점 $\\mathrm{A}_{n}(1,\\,a_{n})$ 이 있다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "점",
+   "why": "$\\mathrm A_n(1,a_n)$, 등차, 첫째항·공차 양수.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C2",
@@ -57,9 +59,12 @@
     1
    ],
    "text": "$\\angle \\mathrm{A}_{n}\\mathrm{O}\\mathrm{A}_{n+1}=\\theta_{n}$ 이라 할 때, 다음 조건을 만족시킨다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "각",
+   "why": "$\\theta_n=\\angle\\mathrm A_n\\mathrm O\\mathrm A_{n+1}$.",
+   "uses": [
+    1,
+    4
+   ]
   },
   {
    "id": "C3",
@@ -68,9 +73,11 @@
     0
    ],
    "text": "(가) $\\tan \\theta_{1}=\\frac{1}{3}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(가)",
+   "why": "$\\tan\\theta_1=\\frac13$.",
+   "uses": [
+    5
+   ]
   },
   {
    "id": "C4",
@@ -79,9 +86,12 @@
     1
    ],
    "text": "(나) 급수 $\\sum_{n=1}^{\\infty}\\theta_{n}$ 의 합을 $\\alpha$ 라 할 때, $\\tan \\alpha=\\frac{1}{2}$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(나)",
+   "why": "$\\tan\\sum\\theta_n=\\frac12$.",
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C5",
@@ -90,9 +100,11 @@
     0
    ],
    "text": "$\\lim_{n \\to \\infty}n^{2}\\tan \\theta_{n}=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\lim n^2\\tan\\theta_n=\\frac qp$.",
+   "uses": [
+    6
+   ]
   },
   {
    "id": "C6",
@@ -101,56 +113,110 @@
     1
    ],
    "text": "(단, $\\mathrm{O}$ 는 원점이고, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "단서",
+   "why": "서로소.",
+   "uses": [
+    6
+   ]
   }
  ],
  "intro": [
-  "급수의 각 항이 각의 크기이고, 부분합이 도형에서 하나의 각으로 합쳐진다. 급수의 합 자체는 특수각이 아니지만 탄젠트 값은 정확히 결정된다."
+  "$\\theta_n=\\beta_{n+1}-\\beta_n$ → 망원급수, $\\alpha=\\frac\\pi2-\\beta_1$.",
+  "$\\tan\\alpha=\\frac1{a_1}$ → $a_1=2$; 덧셈정리로 $d=5$."
  ],
  "topic": "등차수열과 각의 급수",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "각의 망원",
+   "p": [
+    "각의 차를 더하면 양 끝만 남음."
+   ]
+  },
+  {
+   "h": "탄젠트 뺄셈",
+   "p": [
+    "$\\tan(\\beta-\\gamma)=\\frac{\\tan\\beta-\\tan\\gamma}{1+\\tan\\beta\\tan\\gamma}$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "직선 $\\mathrm{OA}_{n}$ 이 $x$ 축의 양의 방향과 이루는 각의 크기를 $\\beta_{n}$ 이라 하면 $\\tan \\beta_{n}=a_{n}$ , $\\theta_{n}=\\beta_{n+1}-\\beta_{n}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "각 설정"
   },
   {
    "n": 2,
    "text": "부분합은 $\\sum_{k=1}^{n}\\theta_{k}=\\beta_{n+1}-\\beta_{1}$ 이고, $n \\to \\infty$ 일 때 $\\beta_{n+1}\\to \\frac{\\pi}{2}$ 이므로 $\\alpha=\\frac{\\pi}{2}-\\beta_{1}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "망원"
   },
   {
    "n": 3,
    "text": "$\\tan \\alpha=\\frac{1}{\\tan \\beta_{1}}=\\frac{1}{a_{1}}=\\frac{1}{2}$ 에서 $a_{1}=2$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$a_1$"
   },
   {
    "n": 4,
    "text": "공차를 $d$ 라 하면 덧셈정리에서 $\\tan \\theta_{n}=\\frac{a_{n+1}-a_{n}}{1+a_{n}a_{n+1}}=\\frac{d}{1+a_{n}a_{n+1}}$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$\\tan\\theta_n$"
   },
   {
    "n": 5,
    "text": "(가)에서 $\\frac{d}{1+2(2+d)}=\\frac{1}{3}$ 이므로 $d=5$ , $a_{n}=5 n-3$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "$d$"
   },
   {
    "n": 6,
    "text": "$\\lim_{n \\to \\infty}n^{2}\\tan \\theta_{n}=\\lim_{n \\to \\infty}\\frac{5 n^{2}}{1+(5 n-3)(5 n+2)}=\\frac{1}{5}$ 이므로 $p+q=6$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5",
+    "C6"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\beta_n\\to\\frac\\pi2$",
+   "cond": "C4",
+   "text": [
+    "$a_n\\to\\infty$."
+   ]
+  },
+  {
+   "h": "여각",
+   "cond": "C4",
+   "text": [
+    "$\\tan(\\frac\\pi2-\\beta)=\\frac1{\\tan\\beta}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\tan\\theta_1=\\frac14$",
+   "body": [
+    "(같은 설정에서) (가) $\\tan\\theta_1=\\frac14$ (나) $\\tan\\alpha=\\frac12$일 때, $\\lim_{n\\to\\infty}n^2\\tan\\theta_n=\\frac qp$이다. $p+q$의 값을 구하시오. (단, $p$와 $q$는 서로소인 자연수)"
+   ],
+   "answer": 7,
+   "hint": "$a_1=2$, $\\frac d{5+2d}=\\frac14$ → $d=\\frac52$, 극한 $\\frac1d=\\frac25$."
+  }
+ ],
+ "line": "각의 급수 → 망원 → 여각의 탄젠트.",
  "note": ""
 }

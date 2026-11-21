@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2023학년도 9월 모의평가 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 표본평균의 표준편차를 $\\frac\\sigma n$으로 쓴 경우",
  "answer": 64,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -29,9 +29,13 @@
     0
    ],
    "text": "정규분포 ${\\mathrm{N}}(50,\\,\\sigma^{2})$ 을 따르는 모집단에서 크기가 $16$ 인 표본을 임의추출하여 구한 표본평균을 $\\overline{X}$ 라 하면 ${\\mathrm{P}}(\\overline{X}\\le 47)=0.067$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건",
+   "why": "$\\mathrm N(50,\\sigma^2)$, $n=16$, $P(\\bar X\\le47)=0.067$.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
   },
   {
    "id": "C2",
@@ -40,9 +44,12 @@
     1
    ],
    "text": "이 모집단에서 크기가 $n$ 인 표본을 임의추출하여 구한 표본평균을 $\\overline{Y}$ 라 할 때, ${\\mathrm{P}}(48 \\le \\overline{Y}\\le 52)\\ge 0.954$ 를 만족시키는 자연수 $n$ 의 최솟값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$P(48\\le\\bar Y\\le52)\\ge0.954$인 $n$의 최솟값.",
+   "uses": [
+    4,
+    5
+   ]
   },
   {
    "id": "C3",
@@ -51,50 +58,103 @@
     2
    ],
    "text": "(단, $\\sigma>0$ 이고, 표준정규분포를 따르는 확률변수 $Z$ 에 대하여 ${\\mathrm{P}}(0 \\le Z \\le 1.5)=0.433$ , ${\\mathrm{P}}(0 \\le Z \\le 2)=0.477$ 로 계산한다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "표",
+   "why": "$1.5$, $2$.",
+   "uses": [
+    3,
+    5
+   ]
   }
  ],
  "intro": [
-  "이산 모집단의 표본평균 확률을 정규 모집단의 표본평균 분포로 옮겨, 모표준편차를 역추적한 뒤 표본의 크기 조건을 부등식으로 풀게 함"
+  "$\\bar X\\sim\\mathrm N\\left(50,\\frac{\\sigma^2}{16}\\right)$ → $\\frac{12}\\sigma=1.5$ → $\\sigma=8$.",
+  "$P(|Z|\\le\\frac{\\sqrt n}4)\\ge0.954$ → $\\frac{\\sqrt n}4\\ge2$."
  ],
  "topic": "통계적 추정",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "표본평균의 분포",
+   "p": [
+    "$\\mathrm N\\left(m,\\frac{\\sigma^2}n\\right)$."
+   ]
+  },
+  {
+   "h": "단조",
+   "p": [
+    "$P(|Z|\\le z)$는 $z$에 대해 증가."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$\\overline{X}$ 는 ${\\mathrm{N}}\\left(50,\\,\\frac{\\sigma^{2}}{16}\\right)$ 을 따르므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "분포"
   },
   {
    "n": 2,
    "text": "$${\\mathrm{P}}(\\overline{X}\\le 47)={\\mathrm{P}}\\left(Z \\le-\\frac{12}{\\sigma}\\right)=0.5-{\\mathrm{P}}\\left(0 \\le Z \\le \\frac{12}{\\sigma}\\right)=0.067$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "식"
   },
   {
    "n": 3,
    "text": "에서 $\\frac{12}{\\sigma}=1.5$ , 즉 $\\sigma=8$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C3"
+   ],
+   "title": "$\\sigma$"
   },
   {
    "n": 4,
    "text": "$\\overline{Y}$ 는 ${\\mathrm{N}}\\left(50,\\,\\frac{64}{n}\\right)$ 을 따르므로 ${\\mathrm{P}}(48 \\le \\overline{Y}\\le 52)={\\mathrm{P}}\\left(|Z|\\le \\frac{2 \\sqrt{n}}{8}\\right)={\\mathrm{P}}\\left(|Z|\\le \\frac{\\sqrt{n}}{4}\\right)$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$\\bar Y$"
   },
   {
    "n": 5,
    "text": "${\\mathrm{P}}(|Z|\\le 2)=0.954$ 이고 ${\\mathrm{P}}(|Z|\\le z)$ 는 $z$ 가 커질수록 커지므로 조건은 $\\frac{\\sqrt{n}}{4}\\ge 2$ , 즉 $n \\ge 64$ 이다. 따라서 $n$ 의 최솟값은 $64$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2",
+    "C3"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$0.067$",
+   "cond": "C1",
+   "text": [
+    "$0.5-0.433$."
+   ]
+  },
+  {
+   "h": "등호",
+   "cond": "C2",
+   "text": [
+    "$n=64$ 포함."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $49\\sim51$, $0.866$",
+   "body": [
+    "(같은 모집단에서) 크기 $n$인 표본의 평균 $\\bar Y$에 대하여 $P(49\\le\\bar Y\\le51)\\ge0.866$을 만족시키는 자연수 $n$의 최솟값을 구하시오."
+   ],
+   "answer": 144,
+   "hint": "$\\frac{\\sqrt n}8\\ge1.5$."
+  }
+ ],
+ "line": "확률값으로 $\\sigma$ 역추적 → 부등식으로 $n$.",
  "note": ""
 }

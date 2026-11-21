@@ -1,0 +1,125 @@
+{
+ "wrong": "예상 오답 — $\\mathrm E(Y)$를 따로 구하지 않고 $\\mathrm E(Y^2)$를 $\\mathrm V(Y)$로 쓴 경우",
+ "intro": [
+  "대칭 → $\\mathrm E(X)=3$ → $\\mathrm V(X)=\\mathrm E((X-3)^2)=\\mathrm E(Y)$.",
+  "두 식으로 $a$, $b$ → $Y$의 분포 $0,1,4$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "값",
+   "why": "$1\\sim5$.",
+   "uses": []
+  },
+  "C2": {
+   "label": "확률",
+   "why": "$a,b,\\frac15,b,a$.",
+   "uses": [
+    1
+   ]
+  },
+  "C4": {
+   "label": "조건",
+   "why": "$\\mathrm V(X)=\\frac85$, $Y=(X-3)^2$; $25\\mathrm V(Y)$.",
+   "uses": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "대칭 분포",
+   "p": [
+    "평균 = 대칭 중심."
+   ]
+  },
+  {
+   "h": "분산",
+   "p": [
+    "$\\mathrm V=\\mathrm E(Y^2)-\\mathrm E(Y)^2$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "평균",
+   "text": "확률분포가 $x=3$ 에 대하여 대칭이므로 ${\\mathrm{E}}(X)=3$ 이다. 확률의 합에서 $2 a+2 b=\\frac{4}{5}$ 이고",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "분산 식",
+   "text": "$${\\mathrm{V}}(X)={\\mathrm{E}}\\left((X-3)^{2}\\right)=4 \\times 2 a+1 \\times 2 b=8 a+2 b=\\frac{8}{5}$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "$a,b$",
+   "text": "이다. 두 식을 빼면 $6 a=\\frac{4}{5}$ 이므로 $a=\\frac{2}{15}$ , $b=\\frac{4}{15}$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "$Y$ 분포",
+   "text": "$Y=(X-3)^{2}$ 이 가지는 값은 $0,\\,1,\\,4$ 이고 각각의 확률은 $\\frac{1}{5}$ , $2 b=\\frac{8}{15}$ , $2 a=\\frac{4}{15}$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "모멘트",
+   "text": "${\\mathrm{E}}(Y)={\\mathrm{V}}(X)=\\frac{8}{5}$ , ${\\mathrm{E}}(Y^{2})=1 \\times \\frac{8}{15}+16 \\times \\frac{4}{15}=\\frac{72}{15}=\\frac{24}{5}$ 이므로",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "분산",
+   "text": "$${\\mathrm{V}}(Y)=\\frac{24}{5}-\\frac{64}{25}=\\frac{56}{25}$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $25 \\times{\\mathrm{V}}(Y)=56$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$Y^2=(X-3)^4$",
+   "cond": "C4",
+   "text": [
+    "$16$, $1$, $0$."
+   ]
+  },
+  {
+   "h": "확률 합",
+   "cond": "C2",
+   "text": [
+    "$2a+2b=\\frac45$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\mathrm V(X)=2$",
+   "body": [
+    "(같은 꼴의 확률분포에서) $\\mathrm V(X)=2$이고 $Y=(X-3)^2$일 때, $25\\times\\mathrm V(Y)$의 값을 구하시오."
+   ],
+   "answer": 70,
+   "hint": "$a=b=\\frac15$: $\\mathrm E(Y)=2$, $\\mathrm E(Y^2)=\\frac{34}5$."
+  }
+ ],
+ "line": "대칭 → 평균 → $\\mathrm V(X)=\\mathrm E(Y)$."
+}

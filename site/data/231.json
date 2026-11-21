@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2025학년도 대학수학능력시험 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — (나)에서 $\\sigma_2=2\\sigma_1$로 뒤집은 경우",
  "answer": 624,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -47,8 +47,8 @@
     0
    ],
    "text": "정규분포 ${\\mathrm{N}}(m_{1},\\,\\sigma_{1}^{2})$ 을 따르는 확률변수 $X$ 와 정규분포 ${\\mathrm{N}}(m_{2},\\,\\sigma_{2}^{2})$ 을 따르는 확률변수 $Y$ 가 다음 조건을 만족시킨다.",
-   "label": "",
-   "why": "",
+   "label": "분포",
+   "why": "$X\\sim\\mathrm N(m_1,\\sigma_1^2)$, $Y\\sim\\mathrm N(m_2,\\sigma_2^2)$.",
    "uses": []
   },
   {
@@ -58,9 +58,11 @@
     0
    ],
    "text": "(가) 모든 실수 $x$ 에 대하여 ${\\mathrm{P}}(X \\le x)={\\mathrm{P}}(X \\ge 24-x)$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(가)",
+   "why": "$P(X\\le x)=P(X\\ge24-x)$.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C3",
@@ -69,9 +71,11 @@
     0
    ],
    "text": "(나) 모든 실수 $x$ 에 대하여 ${\\mathrm{P}}(Y \\le x)={\\mathrm{P}}(X \\le 2 x-6)$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(나)",
+   "why": "$P(Y\\le x)=P(X\\le2x-6)$.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C4",
@@ -80,9 +84,12 @@
     0
    ],
    "text": "${\\mathrm{P}}(Y \\ge 11)=0.159$ 일 때, ${\\mathrm{P}}(6 \\le X \\le 14)$ 의 값을 $k$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건",
+   "why": "$P(Y\\ge11)=0.159$; $k=P(6\\le X\\le14)$.",
+   "uses": [
+    3,
+    4
+   ]
   },
   {
    "id": "C5",
@@ -91,9 +98,11 @@
     1
    ],
    "text": "$1000 \\times k$ 의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$1000k$.",
+   "uses": [
+    5
+   ]
   },
   {
    "id": "C6",
@@ -102,50 +111,101 @@
     2
    ],
    "text": "(단, $\\sigma_{1}>0$ , $\\sigma_{2}>0$ 이고, 표준정규분포를 따르는 확률변수 $Z$ 에 대하여 ${\\mathrm{P}}(0 \\le Z \\le 0.5)=0.191$ , ${\\mathrm{P}}(0 \\le Z \\le 1)=0.341$ , ${\\mathrm{P}}(0 \\le Z \\le 1.5)=0.433$ 으로 계산한다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "표",
+   "why": "$0.5$, $1$, $1.5$.",
+   "uses": [
+    4
+   ]
   }
  ],
  "intro": [
-  "평행이동 관계를 '확대·평행이동' 관계로 바꾸어 $m_{2}$ 와 $\\sigma_{2}$ 가 모두 $X$ 에 의해 정해지게 하고, $Y$ 의 확률로 $X$ 의 표준편차를 역추적하게 함"
+  "(가) → $m_1=12$. (나) $\\frac{2x-18}{\\sigma_1}=\\frac{x-9}{\\sigma_1/2}$ → $m_2=9$, $\\sigma_2=\\frac{\\sigma_1}2$.",
+  "$P(Y\\ge11)=0.159$ → $\\sigma_2=2$."
  ],
  "topic": "정규분포",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "대칭축",
+   "p": [
+    "$P(X\\le x)=P(X\\ge a-x)$ → $m=\\frac a2$."
+   ]
+  },
+  {
+   "h": "표준화 비교",
+   "p": [
+    "모든 $x$에서 같으면 $Z$값 식이 같음."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "(가)에서 $X$ 의 정규분포 곡선은 직선 $x=12$ 에 대하여 대칭이므로 $m_{1}=12$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$m_1$"
   },
   {
    "n": 2,
    "text": "(나)의 우변은 ${\\mathrm{P}}\\left(Z \\le \\frac{2 x-6-12}{\\sigma_{1}}\\right)={\\mathrm{P}}\\left(Z \\le \\frac{x-9}{\\frac{\\sigma_{1}}{2}}\\right)$ 이고 좌변은 ${\\mathrm{P}}\\left(Z \\le \\frac{x-m_{2}}{\\sigma_{2}}\\right)$ 이다. 모든 실수 $x$ 에 대하여 같으므로 $m_{2}=9$ , $\\sigma_{2}=\\frac{\\sigma_{1}}{2}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "(나)"
   },
   {
    "n": 3,
    "text": "${\\mathrm{P}}(Y \\ge 11)=0.5-{\\mathrm{P}}\\left(0 \\le Z \\le \\frac{2}{\\sigma_{2}}\\right)=0.159$ 에서 $\\frac{2}{\\sigma_{2}}=1$ 이므로 $\\sigma_{2}=2$ , $\\sigma_{1}=4$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$\\sigma$"
   },
   {
    "n": 4,
    "text": "$${\\mathrm{P}}(6 \\le X \\le 14)={\\mathrm{P}}(-1.5 \\le Z \\le 0.5)=0.433+0.191=0.624$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4",
+    "C6"
+   ],
+   "title": "확률"
   },
   {
    "n": 5,
    "text": "따라서 $1000 \\times k=624$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\frac{\\sigma_1}2$",
+   "cond": "C3",
+   "text": [
+    "$\\frac{2(x-9)}{\\sigma_1}$."
+   ]
+  },
+  {
+   "h": "$0.159$",
+   "cond": "C4",
+   "text": [
+    "$0.5-0.341$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $P(8\\le X\\le18)$",
+   "body": [
+    "(같은 조건에서) $P(8\\le X\\le18)$의 값을 $k$라 할 때, $1000\\times k$의 값을 구하시오."
+   ],
+   "answer": 774,
+   "hint": "$P(-1\\le Z\\le1.5)$."
+  }
+ ],
+ "line": "확률 등식 → 표준화 식 비교로 모수 결정.",
  "note": ""
 }

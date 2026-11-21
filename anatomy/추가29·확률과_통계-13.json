@@ -1,0 +1,114 @@
+{
+ "wrong": "예상 오답 — 표본평균의 표준편차를 $\\frac\\sigma n$으로 쓴 경우",
+ "intro": [
+  "$\\bar X\\sim\\mathrm N\\left(50,\\frac{\\sigma^2}{16}\\right)$ → $\\frac{12}\\sigma=1.5$ → $\\sigma=8$.",
+  "$P(|Z|\\le\\frac{\\sqrt n}4)\\ge0.954$ → $\\frac{\\sqrt n}4\\ge2$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "조건",
+   "why": "$\\mathrm N(50,\\sigma^2)$, $n=16$, $P(\\bar X\\le47)=0.067$.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
+  },
+  "C2": {
+   "label": "묻는 것",
+   "why": "$P(48\\le\\bar Y\\le52)\\ge0.954$인 $n$의 최솟값.",
+   "uses": [
+    4,
+    5
+   ]
+  },
+  "C3": {
+   "label": "표",
+   "why": "$1.5$, $2$.",
+   "uses": [
+    3,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "표본평균의 분포",
+   "p": [
+    "$\\mathrm N\\left(m,\\frac{\\sigma^2}n\\right)$."
+   ]
+  },
+  {
+   "h": "단조",
+   "p": [
+    "$P(|Z|\\le z)$는 $z$에 대해 증가."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "분포",
+   "text": "$\\overline{X}$ 는 ${\\mathrm{N}}\\left(50,\\,\\frac{\\sigma^{2}}{16}\\right)$ 을 따르므로",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$${\\mathrm{P}}(\\overline{X}\\le 47)={\\mathrm{P}}\\left(Z \\le-\\frac{12}{\\sigma}\\right)=0.5-{\\mathrm{P}}\\left(0 \\le Z \\le \\frac{12}{\\sigma}\\right)=0.067$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$\\sigma$",
+   "text": "에서 $\\frac{12}{\\sigma}=1.5$ , 즉 $\\sigma=8$ 이다.",
+   "uses": [
+    "C1",
+    "C3"
+   ]
+  },
+  {
+   "title": "$\\bar Y$",
+   "text": "$\\overline{Y}$ 는 ${\\mathrm{N}}\\left(50,\\,\\frac{64}{n}\\right)$ 을 따르므로 ${\\mathrm{P}}(48 \\le \\overline{Y}\\le 52)={\\mathrm{P}}\\left(|Z|\\le \\frac{2 \\sqrt{n}}{8}\\right)={\\mathrm{P}}\\left(|Z|\\le \\frac{\\sqrt{n}}{4}\\right)$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "${\\mathrm{P}}(|Z|\\le 2)=0.954$ 이고 ${\\mathrm{P}}(|Z|\\le z)$ 는 $z$ 가 커질수록 커지므로 조건은 $\\frac{\\sqrt{n}}{4}\\ge 2$ , 즉 $n \\ge 64$ 이다. 따라서 $n$ 의 최솟값은 $64$ 이다.",
+   "uses": [
+    "C2",
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$0.067$",
+   "cond": "C1",
+   "text": [
+    "$0.5-0.433$."
+   ]
+  },
+  {
+   "h": "등호",
+   "cond": "C2",
+   "text": [
+    "$n=64$ 포함."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $49\\sim51$, $0.866$",
+   "body": [
+    "(같은 모집단에서) 크기 $n$인 표본의 평균 $\\bar Y$에 대하여 $P(49\\le\\bar Y\\le51)\\ge0.866$을 만족시키는 자연수 $n$의 최솟값을 구하시오."
+   ],
+   "answer": 144,
+   "hint": "$\\frac{\\sqrt n}8\\ge1.5$."
+  }
+ ],
+ "line": "확률값으로 $\\sigma$ 역추적 → 부등식으로 $n$."
+}
