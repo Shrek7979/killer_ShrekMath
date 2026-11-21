@@ -1,0 +1,102 @@
+{
+ "wrong": "예상 오답 — $\\angle\\mathrm{ADB}$의 사인을 $\\sin(\\pi-C)$가 아닌 $\\cos C$ 등으로 쓴 경우",
+ "intro": [
+  "BC$=7$, $\\cos C=\\frac17$; AD$=$AC → 이등변, DC$=2\\cdot5\\cos C$.",
+  "$\\sin\\angle\\mathrm{ADB}=\\sin C$ → $R=\\frac{\\mathrm{AB}}{2\\sin C}$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "삼각형",
+   "why": "AB$=8$, AC$=5$, $\\angle\\mathrm A=\\frac\\pi3$.",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "점 D",
+   "why": "BC 위, AD$=5$, D$\\ne$C.",
+   "uses": [
+    2
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "$7\\overline{\\mathrm{BD}}+3R^2$.",
+   "uses": [
+    3,
+    4
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "이등변삼각형",
+   "p": [
+    "밑변 $=2\\times$빗변$\\times\\cos$밑각."
+   ]
+  },
+  {
+   "h": "사인법칙",
+   "p": [
+    "$\\sin(\\pi-x)=\\sin x$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "BC",
+   "text": "$\\overline{{\\mathrm{BC}}}^{2}=64+25-40=49$ 에서 $\\overline{{\\mathrm{BC}}}=7$ 이고, $\\cos C=\\frac{25+49-64}{2 \\times 5 \\times 7}=\\frac{1}{7}$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "DC",
+   "text": "$\\overline{{\\mathrm{AD}}}=\\overline{{\\mathrm{AC}}}$ 이므로 $\\angle{\\mathrm{ADC}}=C$ 이고 $\\overline{{\\mathrm{DC}}}=2 \\times 5 \\times \\cos C=\\frac{10}{7}$ , $\\overline{{\\mathrm{BD}}}=\\frac{39}{7}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$R$",
+   "text": "$\\angle{\\mathrm{ADB}}=\\pi-C$ 이므로 $\\sin \\angle{\\mathrm{ADB}}=\\sin C=\\frac{4 \\sqrt{3}}{7}$ 이고, $R=\\frac{8}{2 \\times \\frac{4 \\sqrt{3}}{7}}=\\frac{7}{\\sqrt{3}}$ , $R^{2}=\\frac{49}{3}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $7 \\times \\overline{{\\mathrm{BD}}}+3 R^{2}=39+49=88$",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "보각",
+   "cond": "C3",
+   "text": [
+    "$\\angle\\mathrm{ADB}=\\pi-\\angle\\mathrm{ADC}$."
+   ]
+  },
+  {
+   "h": "$\\cos C>0$",
+   "cond": "C2",
+   "text": [
+    "D가 BC 안에 있음."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · AB$=15$, AC$=8$",
+   "body": [
+    "$\\overline{\\mathrm{AB}}=15$, $\\overline{\\mathrm{AC}}=8$, $\\angle\\mathrm{BAC}=\\frac\\pi3$인 삼각형 ABC의 선분 BC 위의 점 D (D$\\ne$C)에 대하여 $\\overline{\\mathrm{AD}}=8$이다. 삼각형 ABD의 외접원의 반지름을 $R$이라 할 때, $13\\times\\overline{\\mathrm{BD}}+3R^2$의 값을 구하시오."
+   ],
+   "answer": 330,
+   "hint": "BC$=13$, $\\cos C=\\frac1{26}$, BD$=\\frac{161}{13}$, $R^2=\\frac{169}3$."
+  }
+ ],
+ "line": "이등변 + 보각의 사인."
+}
