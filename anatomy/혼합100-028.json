@@ -1,0 +1,132 @@
+{
+ "wrong": "예상 오답 **370** — $\\beta$를 $2\\sqrt3$으로 계산한 경우 등",
+ "intro": [
+  "사인법칙으로 BC, CA를 $\\theta$의 식으로. 넓이 $\\frac12\\cdot1\\cdot\\mathrm{CA}\\sin2\\theta$.",
+  "$\\theta\\to0$: $r=\\frac{2S}l$. $\\theta\\to\\frac\\pi3$: $\\frac{\\pi-3\\theta}{\\sin3\\theta}\\to1$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "삼각형",
+   "why": "AB$=1$, $\\angle\\mathrm A=2\\theta$, $\\angle\\mathrm B=\\theta$.",
+   "uses": [
+    1,
+    2
+   ]
+  },
+  "C2": {
+   "label": "함수",
+   "why": "내접원 반지름 $r$, 둘레 $l$.",
+   "uses": [
+    3
+   ]
+  },
+  "C3": {
+   "label": "극한",
+   "why": "$\\alpha=\\lim\\frac r\\theta$, $\\beta=\\lim(\\pi-3\\theta)l$.",
+   "uses": [
+    4,
+    5,
+    6
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$30(\\alpha+\\beta^2)$.",
+   "uses": [
+    7
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "사인법칙",
+   "p": [
+    "$\\frac a{\\sin A}=\\frac b{\\sin B}$."
+   ]
+  },
+  {
+   "h": "내접원",
+   "p": [
+    "$r=\\frac{2S}{l}$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "각 C",
+   "text": "$\\angle{\\mathrm{ACB}}=\\pi-3 \\theta$ 이므로 사인법칙에 의하여",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "변",
+   "text": "$$\\overline{{\\mathrm{BC}}}=\\frac{\\sin 2 \\theta}{\\sin 3 \\theta},\\,\\,\\,\\overline{{\\mathrm{CA}}}=\\frac{\\sin \\theta}{\\sin 3 \\theta}$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "넓이",
+   "text": "이고, 넓이는 $\\frac{1}{2}\\times 1 \\times \\overline{{\\mathrm{CA}}}\\times \\sin 2 \\theta=\\frac{\\sin \\theta \\sin 2 \\theta}{2 \\sin 3 \\theta}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$\\alpha$",
+   "text": "$\\theta \\to 0+$ 일 때 $\\overline{{\\mathrm{BC}}}\\to \\frac{2}{3}$ , $\\overline{{\\mathrm{CA}}}\\to \\frac{1}{3}$ 이므로 $l(\\theta)\\to 2$ 이고, $\\frac{{넓 이}}{\\theta}\\to \\frac{1 \\times 2}{2 \\times 3}=\\frac{1}{3}$ 이다. $r(\\theta)=\\frac{2 \\times{넓 이}}{l(\\theta)}$ 이므로 $\\alpha=\\frac{2 \\times \\frac{1}{3}}{2}=\\frac{1}{3}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$\\sin3\\theta$",
+   "text": "$\\sin 3 \\theta=\\sin(\\pi-3 \\theta)$ 이므로 $\\theta \\to \\frac{\\pi}{3}-$ 일 때 $\\frac{\\pi-3 \\theta}{\\sin 3 \\theta}\\to 1$ 이고",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$\\beta$",
+   "text": "$$(\\pi-3 \\theta)l(\\theta)=\\pi-3 \\theta+\\frac{\\pi-3 \\theta}{\\sin 3 \\theta}\\left(\\sin 2 \\theta+\\sin \\theta \\right)\\to \\sin \\frac{2 \\pi}{3}+\\sin \\frac{\\pi}{3}=\\sqrt{3}$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이다. 따라서 $\\beta=\\sqrt{3}$ 이고 $30 \\left(\\frac{1}{3}+3 \\right)=100$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\sin3\\theta=\\sin(\\pi-3\\theta)$",
+   "cond": "C3",
+   "text": [
+    "$\\frac{\\pi-3\\theta}{\\sin(\\pi-3\\theta)}\\to1$."
+   ]
+  },
+  {
+   "h": "$l\\to2$",
+   "cond": "C3",
+   "text": [
+    "$1+\\frac23+\\frac13$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 각 $3\\theta$, $\\theta$",
+   "body": [
+    "$0<\\theta<\\frac\\pi4$인 $\\theta$에 대하여 AB$=1$, $\\angle\\mathrm{CAB}=3\\theta$, $\\angle\\mathrm{ABC}=\\theta$인 삼각형 ABC의 내접원의 반지름을 $r(\\theta)$, 둘레를 $l(\\theta)$라 하자. $\\lim_{\\theta\\to0+}\\frac{r(\\theta)}\\theta=\\alpha$, $\\lim_{\\theta\\to\\frac\\pi4-}(\\pi-4\\theta)l(\\theta)=\\beta$일 때, $8(\\alpha+\\beta^2)$의 값을 구하시오."
+   ],
+   "answer": 19,
+   "hint": "$\\alpha=\\frac38$, $\\beta=\\sqrt2$."
+  }
+ ],
+ "line": "사인법칙 → 두 방향의 극한."
+}

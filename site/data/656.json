@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2025학년도 대학수학능력시험 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 이동 거리에서 절댓값을 빼고 적분해 $L=\\frac{32}3$ 등으로 계산한 경우",
  "answer": 20,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -50,9 +50,13 @@
     0
    ],
    "text": "$x=2 \\cos t+\\cos 2 t,\\,\\,\\,y=2 \\sin t-\\sin 2 t$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "위치",
+   "why": "$x=2\\cos t+\\cos2t$, $y=2\\sin t-\\sin2t$.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
   },
   {
    "id": "C3",
@@ -72,9 +76,14 @@
     1
    ],
    "text": "시각 $t=0$ 에서 $t=2 \\pi$ 까지 점 ${\\mathrm{P}}$ 가 움직인 거리를 $L$ 이라 하고, $0<t<2 \\pi$ 에서 점 ${\\mathrm{P}}$ 의 속력이 최대일 때의 가속도의 크기를 $A$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$0\\to2\\pi$ 이동 거리 $L$, 속력 최대일 때 가속도 크기 $A$; $L+A^2$.",
+   "uses": [
+    4,
+    5,
+    6,
+    7
+   ]
   },
   {
    "id": "C5",
@@ -89,56 +98,108 @@
   }
  ],
  "intro": [
-  "삼각함수의 덧셈정리와 반각 공식으로 속력을 $4 \\left|\\sin \\frac{3 t}{2}\\right|$ 로 정리한 뒤 이동 거리와 가속도를 구하게 함"
+  "속도의 제곱이 $8(1-\\cos3t)=16\\sin^2\\frac{3t}2$ — 덧셈정리로 정리.",
+  "이동 거리는 $|\\sin|$의 적분, 가속도 크기의 제곱은 $20+16\\cos3t$."
  ],
  "topic": "정적분의 활용",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "속력",
+   "p": [
+    "$\\sqrt{x'^2+y'^2}$."
+   ]
+  },
+  {
+   "h": "반각 공식",
+   "p": [
+    "$1-\\cos\\theta=2\\sin^2\\frac\\theta2$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$\\frac{dx}{dt}=-2 \\sin t-2 \\sin 2 t$ , $\\frac{dy}{dt}=2 \\cos t-2 \\cos 2 t$ 이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "속도"
   },
   {
    "n": 2,
    "text": "$$\\left(\\frac{dx}{dt}\\right)^{2}+\\left(\\frac{dy}{dt}\\right)^{2}=4 \\left\\{2+2(\\sin t \\sin 2 t-\\cos t \\cos 2 t)\\right\\}=8(1-\\cos 3 t)=16 \\sin^{2}\\frac{3 t}{2}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "속력 제곱"
   },
   {
    "n": 3,
    "text": "이고, 속력은 $4 \\left|\\sin \\frac{3 t}{2}\\right|$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "속력"
   },
   {
    "n": 4,
    "text": "$$L=\\int_{0}^{2 \\pi}4 \\left|\\sin \\frac{3 t}{2}\\right|dt=\\frac{8}{3}\\int_{0}^{3 \\pi}\\left|\\sin u \\right|du=\\frac{8}{3}\\times 6=16$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$L$"
   },
   {
    "n": 5,
    "text": "속력의 최댓값은 $4$ 이고 $0<t<2 \\pi$ 에서 $\\frac{3 t}{2}=\\frac{\\pi}{2},\\,\\frac{3 \\pi}{2},\\,\\frac{5 \\pi}{2}$ , 즉 $t=\\frac{\\pi}{3},\\,\\pi,\\,\\frac{5 \\pi}{3}$ 일 때이다. 가속도는 $\\left(-2 \\cos t-4 \\cos 2 t,\\,-2 \\sin t+4 \\sin 2 t \\right)$ 이고, 그 크기의 제곱은",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "최대 시각"
   },
   {
    "n": 6,
    "text": "$$4+16+16(\\cos t \\cos 2 t-\\sin t \\sin 2 t)=20+16 \\cos 3 t$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "가속도"
   },
   {
    "n": 7,
    "text": "이다. 위의 세 시각에서 모두 $\\cos 3 t=-1$ 이므로 $A^{2}=4$ 이다. 따라서 $L+A^{2}=20$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "절댓값",
+   "cond": "C4",
+   "text": [
+    "$\\int|\\sin|$ — 반주기마다 $2$."
+   ]
+  },
+  {
+   "h": "$\\cos3t=-1$",
+   "cond": "C4",
+   "text": [
+    "세 시각 모두."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $L\\times A^2$",
+   "body": [
+    "(같은 운동에서) $L\\times A^2$의 값을 구하시오."
+   ],
+   "answer": 64,
+   "hint": "$16\\times4$."
+  }
+ ],
+ "line": "속력 제곱을 덧셈·반각으로 정리 → $|\\sin|$ 적분.",
  "note": ""
 }
