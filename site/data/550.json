@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2026학년도 대학수학능력시험 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 퇴화한 해 $\\beta=0$ (Q$=$B)를 제외하지 않은 경우",
  "answer": 72,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -46,9 +46,11 @@
     0
    ],
    "text": "길이가 $8 \\sqrt{3}$ 인 선분 ${\\mathrm{AB}}$ 를 지름으로 하는 원 위의 두 점 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ 가 다음 조건을 만족시킨다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "원",
+   "why": "지름 AB$=8\\sqrt3$, P, Q 위.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C2",
@@ -57,9 +59,14 @@
     0
    ],
    "text": "(가) $(\\vec{{\\mathrm{PA}}}+\\vec{{\\mathrm{PB}}})\\cdot(\\vec{{\\mathrm{PQ}}}+\\vec{{\\mathrm{PB}}})=2|\\vec{{\\mathrm{PQ}}}|^{2}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(가)",
+   "why": "$(\\vec{\\mathrm{PA}}+\\vec{\\mathrm{PB}})\\cdot(\\vec{\\mathrm{PQ}}+\\vec{\\mathrm{PB}})=2|\\vec{\\mathrm{PQ}}|^2$.",
+   "uses": [
+    2,
+    3,
+    5,
+    6
+   ]
   },
   {
    "id": "C3",
@@ -68,9 +75,12 @@
     0
    ],
    "text": "(나) $(\\vec{{\\mathrm{QA}}}+\\vec{{\\mathrm{QB}}})\\cdot(\\vec{{\\mathrm{QP}}}+\\vec{{\\mathrm{QA}}})=2|\\vec{{\\mathrm{QP}}}|^{2}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(나)",
+   "why": "대칭 조건.",
+   "uses": [
+    4,
+    6
+   ]
   },
   {
    "id": "C4",
@@ -79,9 +89,13 @@
     0
    ],
    "text": "$\\vec{{\\mathrm{AP}}}\\cdot \\vec{{\\mathrm{AQ}}}$ 의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\vec{\\mathrm{AP}}\\cdot\\vec{\\mathrm{AQ}}$.",
+   "uses": [
+    8,
+    9,
+    10
+   ]
   },
   {
    "id": "C5",
@@ -90,80 +104,141 @@
     1
    ],
    "text": "(단, 두 점 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ 는 두 점 ${\\mathrm{A}}$ , ${\\mathrm{B}}$ 와 다르다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "단서",
+   "why": "P, Q는 A, B와 다름.",
+   "uses": [
+    7
+   ]
   }
  ],
  "intro": [
-  "원 위의 두 점에 대한 내적 등식이 '반지름과 현의 수직'으로 정리되는 핵심을 두 번 겹쳐, 서로 얽힌 두 조건을 동시에 만족시키는 위치를 퇴화한 경우까지 따져 찾게 함"
+  "(가) → $\\vec p\\cdot\\vec q=\\vec p\\cdot\\vec b$, (나) → $\\vec q\\cdot\\vec p=-\\vec q\\cdot\\vec b$.",
+  "각으로: $\\beta=2\\alpha$, $\\cos\\alpha=\\frac12$."
  ],
  "topic": "평면벡터",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "중심 위치벡터",
+   "p": [
+    "$\\vec{\\mathrm{PA}}+\\vec{\\mathrm{PB}}=-2\\vec p$."
+   ]
+  },
+  {
+   "h": "코사인 방정식",
+   "p": [
+    "$\\cos(\\alpha-\\beta)=\\cos\\alpha$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "원의 중심을 ${\\mathrm{O}}$ , 반지름의 길이를 $r=4 \\sqrt{3}$ 이라 하고 점 ${\\mathrm{O}}$ 를 시점으로 하는 위치벡터를 각각 $\\vec{p}$ , $\\vec{q}$ , $\\vec{b}$ 라 하면 $\\vec{a}=-\\vec{b}$ 이고 $|\\vec{p}|=|\\vec{q}|=|\\vec{b}|=r$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "설정"
   },
   {
    "n": 2,
    "text": "(가)에서 $\\vec{{\\mathrm{PA}}}+\\vec{{\\mathrm{PB}}}=-2 \\vec{p}$ , $\\vec{{\\mathrm{PQ}}}+\\vec{{\\mathrm{PB}}}=\\vec{q}+\\vec{b}-2 \\vec{p}$ 이고 $|\\vec{{\\mathrm{PQ}}}|^{2}=2 r^{2}-2 \\vec{p}\\cdot \\vec{q}$ 이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "(가) 전개"
   },
   {
    "n": 3,
    "text": "$$-2 \\vec{p}\\cdot \\vec{q}-2 \\vec{p}\\cdot \\vec{b}+4 r^{2}=4 r^{2}-4 \\vec{p}\\cdot \\vec{q},\\,\\,\\,\\vec{p}\\cdot \\vec{q}=\\vec{p}\\cdot \\vec{b}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "정리"
   },
   {
    "n": 4,
    "text": "이다. 같은 방법으로 (나)에서 $\\vec{q}\\cdot \\vec{p}=\\vec{q}\\cdot \\vec{a}=-\\vec{q}\\cdot \\vec{b}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "(나)"
   },
   {
    "n": 5,
    "text": "$\\vec{{\\mathrm{OB}}}$ 에서 $\\vec{{\\mathrm{OP}}}$ , $\\vec{{\\mathrm{OQ}}}$ 까지 시계 반대 방향으로 잰 각을 각각 $\\alpha$ , $\\beta$ 라 하면",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "각"
   },
   {
    "n": 6,
    "text": "$$\\cos(\\alpha-\\beta)=\\cos \\alpha,\\,\\,\\,\\cos(\\alpha-\\beta)=-\\cos \\beta$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2",
+    "C3"
+   ],
+   "title": "식"
   },
   {
    "n": 7,
    "text": "이다. 첫째 식에서 $\\beta=0$ 또는 $\\beta=2 \\alpha$ (각은 $2 \\pi$ 를 법으로 생각한다)이다. $\\beta=0$ 이면 ${\\mathrm{Q}}={\\mathrm{B}}$ 이므로 조건에 맞지 않는다. $\\beta=2 \\alpha$ 이면 둘째 식에서 $\\cos \\alpha=-\\cos 2 \\alpha$ , $2 \\cos^{2}\\alpha+\\cos \\alpha-1=0$ 이므로 $\\cos \\alpha=\\frac{1}{2}$ 또는 $\\cos \\alpha=-1$ 이다. $\\cos \\alpha=-1$ 이면 ${\\mathrm{P}}={\\mathrm{A}}$ 이므로 조건에 맞지 않는다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "해"
   },
   {
    "n": 8,
    "text": "따라서 $\\alpha=\\pm \\frac{\\pi}{3}$ , $\\beta=\\pm \\frac{2 \\pi}{3}$ (복부호 동순)이고, 두 경우는 직선 ${\\mathrm{AB}}$ 에 대하여 대칭이므로 구하는 값은 같다. ${\\mathrm{B}}(4 \\sqrt{3},\\,0)$ , ${\\mathrm{A}}(-4 \\sqrt{3},\\,0)$ 으로 놓으면 ${\\mathrm{P}}(2 \\sqrt{3},\\,6)$ , ${\\mathrm{Q}}(-2 \\sqrt{3},\\,6)$ 이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "좌표"
   },
   {
    "n": 9,
    "text": "$$\\vec{{\\mathrm{AP}}}\\cdot \\vec{{\\mathrm{AQ}}}=(6 \\sqrt{3},\\,6)\\cdot(2 \\sqrt{3},\\,6)=36+36=72$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "계산"
   },
   {
    "n": 10,
    "text": "이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\cos\\alpha=-1$",
+   "cond": "C5",
+   "text": [
+    "P$=$A — 제외."
+   ]
+  },
+  {
+   "h": "대칭",
+   "cond": "C4",
+   "text": [
+    "부호 바꿔도 같은 값."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · AB$=4\\sqrt3$",
+   "body": [
+    "길이가 $4\\sqrt3$인 선분 AB를 지름으로 하는 원 위의 두 점 P, Q가 (같은 조건 (가), (나))를 만족시킬 때, $\\vec{\\mathrm{AP}}\\cdot\\vec{\\mathrm{AQ}}$의 값을 구하시오. (단, P, Q는 A, B와 다르다.)"
+   ],
+   "answer": 18,
+   "hint": "P$(\\sqrt3,3)$, Q$(-\\sqrt3,3)$: $(3\\sqrt3,3)\\cdot(\\sqrt3,3)$."
+  }
+ ],
+ "line": "중심 기준 벡터 → 각의 방정식 → 퇴화 제외.",
  "note": ""
 }

@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2022학년도 9월 모의평가 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 수선의 발을 내심으로 가정해 세 거리를 같게 둔 경우",
  "answer": 128,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -40,9 +40,11 @@
     0
    ],
    "text": "평면 $\\alpha$ 위에 $\\overline{{\\mathrm{AB}}}=\\overline{{\\mathrm{AC}}}=10$ , $\\overline{{\\mathrm{BC}}}=12$ 인 삼각형 ${\\mathrm{ABC}}$ 가 있다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "삼각형",
+   "why": "AB$=$AC$=10$, BC$=12$.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C2",
@@ -51,9 +53,11 @@
     1
    ],
    "text": "평면 $\\alpha$ 위에 있지 않은 점 ${\\mathrm{P}}$ 에서 평면 $\\alpha$ 에 내린 수선의 발은 삼각형 ${\\mathrm{ABC}}$ 의 내부에 있다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "점 P",
+   "why": "수선의 발 H는 내부.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C3",
@@ -73,9 +77,12 @@
     0
    ],
    "text": "$\\tan \\theta_{1}=2,\\,\\,\\,\\tan \\theta_{2}=5,\\,\\,\\,\\tan \\theta_{3}=\\frac{12}{5}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건",
+   "why": "$\\tan\\theta_1=2$, $\\tan\\theta_2=5$, $\\tan\\theta_3=\\frac{12}5$.",
+   "uses": [
+    1,
+    3
+   ]
   },
   {
    "id": "C5",
@@ -95,44 +102,93 @@
     1
    ],
    "text": "사면체 ${\\mathrm{PABC}}$ 의 부피를 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "사면체 PABC의 부피.",
+   "uses": [
+    4
+   ]
   }
  ],
  "intro": [
-  "세 이면각이 모두 다를 때 삼수선 정리로 수선의 발과 세 변 사이의 거리를 높이로 나타내고, 삼각형의 넓이를 세 조각으로 나누어 높이를 결정하게 함"
+  "삼수선: $d_i=\\frac h{\\tan\\theta_i}$.",
+  "△ABC $=\\sum\\frac12\\times$변$\\times d_i$ → $h=8$."
  ],
  "topic": "공간도형과 공간좌표",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "이면각",
+   "p": [
+    "$\\tan\\theta=\\frac{h}{d}$ (삼수선)."
+   ]
+  },
+  {
+   "h": "넓이 분할",
+   "p": [
+    "내부 점으로 세 조각."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "점 ${\\mathrm{P}}$ 에서 평면 $\\alpha$ 에 내린 수선의 발을 ${\\mathrm{H}}$ , $\\overline{{\\mathrm{PH}}}=h$ 라 하고, 점 ${\\mathrm{H}}$ 와 세 직선 ${\\mathrm{AB}}$ , ${\\mathrm{AC}}$ , ${\\mathrm{BC}}$ 사이의 거리를 각각 $d_{1}$ , $d_{2}$ , $d_{3}$ 이라 하자. 점 ${\\mathrm{H}}$ 에서 직선 ${\\mathrm{AB}}$ 에 내린 수선의 발을 ${\\mathrm{K}}$ 라 하면 삼수선 정리에 의하여 두 직선 ${\\mathrm{PK}}$ , ${\\mathrm{AB}}$ 는 서로 수직이므로 $\\angle{\\mathrm{PKH}}=\\theta_{1}$ 이고 $d_{1}=\\frac{h}{\\tan \\theta_{1}}=\\frac{h}{2}$ 이다. 같은 방법으로 $d_{2}=\\frac{h}{5}$ , $d_{3}=\\frac{5 h}{12}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "거리"
   },
   {
    "n": 2,
    "text": "점 ${\\mathrm{H}}$ 가 삼각형 ${\\mathrm{ABC}}$ 의 내부에 있으므로 삼각형 ${\\mathrm{ABC}}$ 는 세 삼각형 ${\\mathrm{HAB}}$ , ${\\mathrm{HAC}}$ , ${\\mathrm{HBC}}$ 로 나누어진다. 삼각형 ${\\mathrm{ABC}}$ 의 높이는 $\\sqrt{100-36}=8$ 이므로 넓이는 $48$ 이고",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "넓이"
   },
   {
    "n": 3,
    "text": "$$\\frac{1}{2}\\left(10 \\times \\frac{h}{2}+10 \\times \\frac{h}{5}+12 \\times \\frac{5 h}{12}\\right)=\\frac{1}{2}\\times 12 h=48$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$h$"
   },
   {
    "n": 4,
    "text": "에서 $h=8$ 이다. 따라서 사면체 ${\\mathrm{PABC}}$ 의 부피는 $\\frac{1}{3}\\times 48 \\times 8=128$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C6"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "내부",
+   "cond": "C2",
+   "text": [
+    "분할이 성립."
+   ]
+  },
+  {
+   "h": "높이 $8$",
+   "cond": "C1",
+   "text": [
+    "$\\sqrt{100-36}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $5$, $5$, $6$",
+   "body": [
+    "(같은 삼각형과 점 P에 대하여) $\\tan\\theta_1=5$, $\\tan\\theta_2=5$, $\\tan\\theta_3=6$일 때, 사면체 PABC의 부피를 구하시오."
+   ],
+   "answer": 256,
+   "hint": "$\\frac12(2h+2h+2h)=48$ → $h=16$."
+  }
+ ],
+ "line": "이면각 → 거리 = 높이/tan → 넓이 분할.",
  "note": ""
 }

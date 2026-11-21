@@ -1,0 +1,137 @@
+{
+ "wrong": "예상 오답 — 삼수선 정리 없이 P와 접선의 거리를 $\\sqrt{h^2+(5-d)^2}$로 고정한 경우",
+ "intro": [
+  "$f=\\sqrt{h^2+\\overline{\\mathrm{HK}}^2}$, $\\overline{\\mathrm{HK}}=5-d\\cos\\varphi$.",
+  "최대·최소 → $d=2$, $h=4$; $f=\\sqrt{41}$ → $\\cos\\varphi=0$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "원",
+   "why": "평면 $\\alpha$ 위, 중심 O, 반지름 $5$.",
+   "uses": []
+  },
+  "C2": {
+   "label": "점 P",
+   "why": "수선의 발 H는 원 내부, $\\ne$O.",
+   "uses": [
+    1
+   ]
+  },
+  "C3": {
+   "label": "$f$",
+   "why": "Q에서의 접선과 P의 거리, 최대 $\\sqrt{65}$, 최소 $5$.",
+   "uses": [
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  "C4": {
+   "label": "조건",
+   "why": "$f=\\sqrt{41}$인 Q$_1$, Q$_2$, △PQ$_1$Q$_2$의 넓이 $S$.",
+   "uses": [
+    6
+   ]
+  },
+  "C5": {
+   "label": "묻는 것",
+   "why": "$S^2$.",
+   "uses": [
+    7
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "삼수선 정리",
+   "p": [
+    "PH⊥$\\alpha$, HK⊥$l$ ⟹ PK⊥$l$."
+   ]
+  },
+  {
+   "h": "접선까지 거리",
+   "p": [
+    "$r-d\\cos\\varphi$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "설정",
+   "text": "$\\overline{{\\mathrm{OH}}}=d$ $(0<d<5)$ , $\\overline{{\\mathrm{PH}}}=h$ 라 하자. 점 ${\\mathrm{Q}}$ 에서의 접선을 $l$ , 점 ${\\mathrm{H}}$ 에서 $l$ 에 내린 수선의 발을 ${\\mathrm{K}}$ 라 하면 삼수선 정리에 의하여 두 직선 ${\\mathrm{PK}}$ , $l$ 은 서로 수직이므로",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "거리",
+   "text": "$$f({\\mathrm{Q}})=\\sqrt{h^{2}+\\overline{{\\mathrm{HK}}}^{2}}$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$\\overline{\\mathrm{HK}}$",
+   "text": "이다. 접선 $l$ 은 반지름 ${\\mathrm{OQ}}$ 에 수직이므로, $\\angle{\\mathrm{HOQ}}=\\varphi$ 라 하면 $\\overline{{\\mathrm{HK}}}=5-d \\cos \\varphi$ 이고 그 범위는 $5-d \\le \\overline{{\\mathrm{HK}}}\\le 5+d$ 이다. 따라서",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "연립",
+   "text": "$$h^{2}+(5+d)^{2}=65,\\,\\,\\,h^{2}+(5-d)^{2}=25$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "값",
+   "text": "에서 $20 d=40$ , $d=2$ , $h=4$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "Q",
+   "text": "$f({\\mathrm{Q}})=\\sqrt{41}$ 이면 $\\overline{{\\mathrm{HK}}}^{2}=25$ , $5-2 \\cos \\varphi=5$ , $\\cos \\varphi=0$ 이므로 ${\\mathrm{Q}}_{1}$ , ${\\mathrm{Q}}_{2}$ 는 점 ${\\mathrm{O}}$ 를 지나고 직선 ${\\mathrm{OH}}$ 에 수직인 지름의 양 끝점이다. $\\overline{{\\mathrm{Q}}_{1}{\\mathrm{Q}}_{2}}=10$ 이고, 직선 ${\\mathrm{Q}}_{1}{\\mathrm{Q}}_{2}$ 와 점 ${\\mathrm{H}}$ 사이의 거리가 $2$ 이므로 삼수선 정리에 의하여 점 ${\\mathrm{P}}$ 와 직선 ${\\mathrm{Q}}_{1}{\\mathrm{Q}}_{2}$ 사이의 거리는 $\\sqrt{16+4}=2 \\sqrt{5}$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$$S=\\frac{1}{2}\\times 10 \\times 2 \\sqrt{5}=10 \\sqrt{5},\\,\\,\\,S^{2}=500$$",
+   "uses": [
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\cos\\varphi=0$",
+   "cond": "C4",
+   "text": [
+    "OH에 수직인 지름."
+   ]
+  },
+  {
+   "h": "P와 Q$_1$Q$_2$",
+   "cond": "C4",
+   "text": [
+    "$\\sqrt{h^2+d^2}=2\\sqrt5$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 최대 $\\sqrt{80}$, 최소 $\\sqrt{20}$",
+   "body": [
+    "(같은 설정에서) $f(\\mathrm Q)$의 최댓값이 $\\sqrt{80}$, 최솟값이 $\\sqrt{20}$이다. $f(\\mathrm Q)=\\sqrt{41}$을 만족시키는 두 점 Q$_1$, Q$_2$에 대하여 삼각형 PQ$_1$Q$_2$의 넓이 $S$의 제곱을 구하시오."
+   ],
+   "answer": 625,
+   "hint": "$d=3$, $h=4$: P와 지름의 거리 $5$ → $S=25$."
+  }
+ ],
+ "line": "삼수선 → 평면 거리로 환원 → 최대·최소로 역산."
+}

@@ -1,0 +1,141 @@
+{
+ "wrong": "예상 오답 — 교선을 AB나 AD로 잡아 각을 틀린 경우",
+ "intro": [
+  "P$(6,3,\\sqrt3)$, Q$(5,2,\\sqrt3)$ — 높이 같음 → 교선 ∥ PQ.",
+  "교선은 AC → P의 발에서 AC까지 거리로 $\\tan\\theta$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "종이",
+   "why": "정사각형(변 $8$) + AB, BC 위 반원.",
+   "uses": [
+    1
+   ]
+  },
+  "C3": {
+   "label": "점",
+   "why": "$\\angle$PBA$=\\frac\\pi3$, $\\angle$QCB$=\\frac\\pi6$.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C4": {
+   "label": "접기",
+   "why": "수선의 발 내부, 높이 모두 $\\sqrt3$.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C5": {
+   "label": "묻는 것",
+   "why": "평면 APQ와 ABCD의 각 $\\theta$, $100\\cos^2\\theta$.",
+   "uses": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "C6": {
+   "label": "단서",
+   "why": "두께 무시.",
+   "uses": []
+  }
+ },
+ "concepts": [
+  {
+   "h": "원주각",
+   "p": [
+    "지름 위 각 $\\frac\\pi2$."
+   ]
+  },
+  {
+   "h": "이면각",
+   "p": [
+    "교선까지 거리와 높이."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "좌표",
+   "text": "${\\mathrm{A}}(0,\\,0,\\,0)$ , ${\\mathrm{B}}(8,\\,0,\\,0)$ , ${\\mathrm{C}}(8,\\,8,\\,0)$ , ${\\mathrm{D}}(0,\\,8,\\,0)$ 으로 놓자.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "P",
+   "text": "$\\angle{\\mathrm{APB}}=\\frac{\\pi}{2}$ , $\\angle{\\mathrm{PBA}}=\\frac{\\pi}{3}$ 이므로 $\\overline{{\\mathrm{BP}}}=4$ 이고, 점 ${\\mathrm{P}}$ 에서 직선 ${\\mathrm{AB}}$ 에 내린 수선의 발 ${\\mathrm{K}}$ 는 $\\overline{{\\mathrm{BK}}}=2$ , $\\overline{{\\mathrm{PK}}}=2 \\sqrt{3}$ 이다. 접은 뒤에도 두 직선 ${\\mathrm{PK}}$ , ${\\mathrm{AB}}$ 는 서로 수직이고, 점 ${\\mathrm{P}}$ 에서 평면에 내린 수선의 발을 ${\\mathrm{G}}$ 라 하면 $\\overline{{\\mathrm{KG}}}=\\sqrt{12-3}=3$ 이므로 ${\\mathrm{P}}(6,\\,3,\\,\\sqrt{3})$ 이다.",
+   "uses": [
+    "C3",
+    "C4"
+   ]
+  },
+  {
+   "title": "Q",
+   "text": "$\\angle{\\mathrm{BQC}}=\\frac{\\pi}{2}$ , $\\angle{\\mathrm{QCB}}=\\frac{\\pi}{6}$ 이므로 $\\overline{{\\mathrm{CQ}}}=4 \\sqrt{3}$ 이고, 점 ${\\mathrm{Q}}$ 에서 직선 ${\\mathrm{BC}}$ 에 내린 수선의 발 ${\\mathrm{L}}$ 은 $\\overline{{\\mathrm{CL}}}=6$ , $\\overline{{\\mathrm{QL}}}=2 \\sqrt{3}$ 이다. 같은 방법으로 ${\\mathrm{Q}}(5,\\,2,\\,\\sqrt{3})$ 이다.",
+   "uses": [
+    "C3",
+    "C4"
+   ]
+  },
+  {
+   "title": "교선",
+   "text": "두 점 ${\\mathrm{P}}$ , ${\\mathrm{Q}}$ 의 높이가 같으므로 직선 ${\\mathrm{PQ}}$ 는 평면 ${\\mathrm{ABCD}}$ 에 평행하고, 두 평면 ${\\mathrm{APQ}}$ , ${\\mathrm{ABCD}}$ 의 교선은 점 ${\\mathrm{A}}$ 를 지나고 ${\\mathrm{PQ}}$ 에 평행한 직선이다. $\\vec{{\\mathrm{QP}}}=(1,\\,1,\\,0)$ 이므로 교선은 직선 ${\\mathrm{AC}}$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "거리",
+   "text": "점 ${\\mathrm{G}}(6,\\,3,\\,0)$ 과 직선 ${\\mathrm{AC}}:y=x$ 사이의 거리는 $\\frac{3}{\\sqrt{2}}$ 이므로, 삼수선 정리에 의하여",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "$\\tan$",
+   "text": "$$\\tan \\theta=\\frac{\\sqrt{3}}{\\frac{3}{\\sqrt{2}}}=\\frac{\\sqrt{6}}{3},\\,\\,\\,\\cos^{2}\\theta=\\frac{1}{1+\\frac{2}{3}}=\\frac{3}{5}$$",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이다. 따라서 $100 \\cos^{2}\\theta=60$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\vec{\\mathrm{QP}}=(1,1,0)$",
+   "cond": "C5",
+   "text": [
+    "AC 방향."
+   ]
+  },
+  {
+   "h": "PK$=2\\sqrt3$",
+   "cond": "C3",
+   "text": [
+    "높이 $\\sqrt3$ → 안쪽 $3$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 각 바꾸기",
+   "body": [
+    "(같은 종이에서) $\\angle\\mathrm{PBA}=\\frac\\pi6$, $\\angle\\mathrm{QCB}=\\frac\\pi3$이고, 같은 방식으로 접어 P, Q의 높이가 모두 $\\sqrt3$일 때, 두 평면 APQ와 ABCD가 이루는 각 $\\theta$에 대하여 $\\tan^2\\theta$의 값을 구하시오."
+   ],
+   "answer": 6,
+   "hint": "P$(2,3,\\sqrt3)$, Q$(5,6,\\sqrt3)$: 교선 AC, 거리 $\\frac1{\\sqrt2}$."
+  }
+ ],
+ "line": "같은 높이 → 교선 ∥ PQ → 이면각."
+}

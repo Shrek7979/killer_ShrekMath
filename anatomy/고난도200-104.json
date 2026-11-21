@@ -1,0 +1,134 @@
+{
+ "wrong": "예상 오답 — 수심 조건을 $\\vec{\\mathrm{AH}}\\cdot\\vec{\\mathrm{AB}}=\\frac12|\\vec{\\mathrm{AB}}|^2$로 외심과 혼동한 경우",
+ "intro": [
+  "외심: $\\vec{\\mathrm{AO}}\\cdot\\vec{\\mathrm{AB}}=\\frac12|\\mathrm{AB}|^2$.",
+  "수심: $\\vec{\\mathrm{AH}}\\cdot\\vec{\\mathrm{AB}}=\\vec{\\mathrm{AH}}\\cdot\\vec{\\mathrm{AC}}=\\vec{\\mathrm{AB}}\\cdot\\vec{\\mathrm{AC}}$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "삼각형",
+   "why": "AB$=6$, AC$=8$, $\\angle$A$=\\frac\\pi3$, 외심 O, 수심 H.",
+   "uses": [
+    1,
+    2,
+    5
+   ]
+  },
+  "C3": {
+   "label": "분해",
+   "why": "$\\vec{\\mathrm{AO}}=s\\vec{\\mathrm{AB}}+t\\vec{\\mathrm{AC}}$, $\\vec{\\mathrm{AH}}=p\\vec{\\mathrm{AB}}+q\\vec{\\mathrm{AC}}$.",
+   "uses": [
+    3,
+    4,
+    6,
+    7
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$36(s+t+p+q)$.",
+   "uses": [
+    8
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "외심 내적",
+   "p": [
+    "중점으로의 사영."
+   ]
+  },
+  {
+   "h": "수심 내적",
+   "p": [
+    "$\\vec{\\mathrm{AH}}\\perp\\vec{\\mathrm{BC}}$, $\\vec{\\mathrm{BH}}\\perp\\vec{\\mathrm{AC}}$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "내적",
+   "text": "$|\\vec{{\\mathrm{AB}}}|^{2}=36$ , $|\\vec{{\\mathrm{AC}}}|^{2}=64$ , $\\vec{{\\mathrm{AB}}}\\cdot \\vec{{\\mathrm{AC}}}=6 \\times 8 \\times \\frac{1}{2}=24$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "외심",
+   "text": "외심 ${\\mathrm{O}}$ 에서 변 ${\\mathrm{AB}}$ , ${\\mathrm{AC}}$ 에 내린 수선의 발은 각 변의 중점이므로 $\\vec{{\\mathrm{AO}}}\\cdot \\vec{{\\mathrm{AB}}}=\\frac{1}{2}|\\vec{{\\mathrm{AB}}}|^{2}=18$ , $\\vec{{\\mathrm{AO}}}\\cdot \\vec{{\\mathrm{AC}}}=\\frac{1}{2}|\\vec{{\\mathrm{AC}}}|^{2}=32$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "연립",
+   "text": "$$36 s+24 t=18,\\,\\,\\,24 s+64 t=32$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$s$, $t$",
+   "text": "를 풀면 $t=\\frac{5}{12}$ , $s=\\frac{2}{9}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "수심",
+   "text": "수심 ${\\mathrm{H}}$ 에 대하여 $\\vec{{\\mathrm{AH}}}\\cdot \\vec{{\\mathrm{BC}}}=0$ 에서 $\\vec{{\\mathrm{AH}}}\\cdot \\vec{{\\mathrm{AB}}}=\\vec{{\\mathrm{AH}}}\\cdot \\vec{{\\mathrm{AC}}}$ 이고, $\\vec{{\\mathrm{BH}}}\\cdot \\vec{{\\mathrm{AC}}}=0$ 에서 $\\vec{{\\mathrm{AH}}}\\cdot \\vec{{\\mathrm{AC}}}=\\vec{{\\mathrm{AB}}}\\cdot \\vec{{\\mathrm{AC}}}=24$ 이다. 따라서",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "연립",
+   "text": "$$36 p+24 q=24,\\,\\,\\,24 p+64 q=24$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$p$, $q$",
+   "text": "를 풀면 $q=\\frac{1}{6}$ , $p=\\frac{5}{9}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$$36(s+t+p+q)=36 \\left(\\frac{2}{9}+\\frac{5}{12}+\\frac{5}{9}+\\frac{1}{6}\\right)=8+15+20+6=49$$",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "오일러",
+   "cond": "C3",
+   "text": [
+    "$\\vec{\\mathrm{AH}}=\\vec{\\mathrm{AB}}+\\vec{\\mathrm{AC}}-2\\vec{\\mathrm{AO}}$ 검산."
+   ]
+  },
+  {
+   "h": "$24$",
+   "cond": "C1",
+   "text": [
+    "$6\\cdot8\\cdot\\frac12$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · AB$=4$, AC$=6$",
+   "body": [
+    "$\\overline{\\mathrm{AB}}=4$, $\\overline{\\mathrm{AC}}=6$, $\\angle\\mathrm{BAC}=\\frac\\pi3$인 삼각형 ABC의 외심을 O, 수심을 H라 하고 $\\vec{\\mathrm{AO}}=s\\vec{\\mathrm{AB}}+t\\vec{\\mathrm{AC}}$, $\\vec{\\mathrm{AH}}=p\\vec{\\mathrm{AB}}+q\\vec{\\mathrm{AC}}$일 때, $36(s+t+p+q)$의 값을 구하시오."
+   ],
+   "answer": 50,
+   "hint": "$s=\\frac16$, $t=\\frac49$, $p=\\frac23$, $q=\\frac19$."
+  }
+ ],
+ "line": "외심·수심 → 내적 연립."
+}

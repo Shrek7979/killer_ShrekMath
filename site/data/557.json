@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2023학년도 대학수학능력시험 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 높이를 구하려 좌표를 잡다 계산이 막히거나 MN을 $4$로 둔 경우",
  "answer": 192,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -27,50 +27,104 @@
     0
    ],
    "text": "$\\overline{{\\mathrm{AB}}}=4$ , $\\overline{{\\mathrm{CD}}}=6$ , $\\overline{{\\mathrm{AC}}}=\\overline{{\\mathrm{AD}}}=\\overline{{\\mathrm{BC}}}=\\overline{{\\mathrm{BD}}}=5$ 인 사면체 ${\\mathrm{ABCD}}$ 의 부피를 $V$ 라 할 때, $V^{2}$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "사면체",
+   "why": "AB$=4$, CD$=6$, 나머지 $5$; $V^2$.",
+   "uses": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
   }
  ],
  "intro": [
-  "사면체를 좌표 없이 다루되, 모서리 CD의 중점을 지나는 평면이 CD에 수직임(직선과 평면의 수직)을 찾아 부피를 '단면 × 모서리'로 구하게 함"
+  "AN ⊥ CD, BN ⊥ CD → CD ⊥ 평면 ABN.",
+  "$V=\\frac13\\times\\triangle\\mathrm{ABN}\\times\\overline{\\mathrm{CD}}$."
  ],
  "topic": "공간도형과 공간좌표",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "직선과 평면의 수직",
+   "p": [
+    "평면 위 두 직선에 수직."
+   ]
+  },
+  {
+   "h": "이등변",
+   "p": [
+    "중점과 꼭짓점."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "선분 ${\\mathrm{CD}}$ 의 중점을 ${\\mathrm{N}}$ , 선분 ${\\mathrm{AB}}$ 의 중점을 ${\\mathrm{M}}$ 이라 하자. $\\overline{{\\mathrm{AC}}}=\\overline{{\\mathrm{AD}}}$ 이므로 두 직선 ${\\mathrm{AN}}$ , ${\\mathrm{CD}}$ 는 서로 수직이고, $\\overline{{\\mathrm{BC}}}=\\overline{{\\mathrm{BD}}}$ 이므로 두 직선 ${\\mathrm{BN}}$ , ${\\mathrm{CD}}$ 도 서로 수직이다. 따라서 직선 ${\\mathrm{CD}}$ 는 평면 ${\\mathrm{ABN}}$ 에 수직이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "수직"
   },
   {
    "n": 2,
    "text": "$\\overline{{\\mathrm{AN}}}=\\overline{{\\mathrm{BN}}}=\\sqrt{25-9}=4$ 이므로 삼각형 ${\\mathrm{ABN}}$ 은 이등변삼각형이고 $\\overline{{\\mathrm{MN}}}=\\sqrt{16-4}=2 \\sqrt{3}$ 이다. 삼각형 ${\\mathrm{ABN}}$ 의 넓이는 $\\frac{1}{2}\\times 4 \\times 2 \\sqrt{3}=4 \\sqrt{3}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "단면"
   },
   {
    "n": 3,
    "text": "사면체는 평면 ${\\mathrm{ABN}}$ 에 의하여 두 사면체 ${\\mathrm{C}}{-}{\\mathrm{ABN}}$ , ${\\mathrm{D}}{-}{\\mathrm{ABN}}$ 으로 나누어지고, 각각의 높이는 $\\overline{{\\mathrm{CN}}}=\\overline{{\\mathrm{DN}}}=3$ 이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "넓이"
   },
   {
    "n": 4,
    "text": "$$V=2 \\times \\frac{1}{3}\\times 4 \\sqrt{3}\\times 3=8 \\sqrt{3},\\,\\,\\,V^{2}=192$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "분할"
   },
   {
    "n": 5,
    "text": "이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\overline{\\mathrm{AN}}=4$",
+   "cond": "C1",
+   "text": [
+    "$\\sqrt{25-9}$."
+   ]
+  },
+  {
+   "h": "MN",
+   "cond": "C1",
+   "text": [
+    "$\\sqrt{16-4}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · AB$=$CD$=6$",
+   "body": [
+    "$\\overline{\\mathrm{AB}}=\\overline{\\mathrm{CD}}=6$, $\\overline{\\mathrm{AC}}=\\overline{\\mathrm{AD}}=\\overline{\\mathrm{BC}}=\\overline{\\mathrm{BD}}=5$인 사면체 ABCD의 부피를 $V$라 할 때, $V^2$의 값을 구하시오."
+   ],
+   "answer": 252,
+   "hint": "AN$=4$, MN$=\\sqrt7$, △ABN$=3\\sqrt7$ → $V=6\\sqrt7$."
+  }
+ ],
+ "line": "등거리 → 수직 단면 → 단면 × 모서리.",
  "note": ""
 }
