@@ -1,0 +1,118 @@
+{
+ "wrong": "예상 오답 — $1-h(\\beta)<0$의 부호를 놓쳐 $\\frac13-\\frac43=-1$로 계산한 경우",
+ "intro": [
+  "$f'(x)=e^x(t-2xe^{-x})$ — 극값 위치는 $t=\\varphi(x)=2xe^{-x}$의 해. 작은 해가 극대 $g(t)$, 큰 해가 극소 $h(t)$.",
+  "$t=\\varphi(g(t))$를 미분 → $tg'(t)=\\frac{g}{1-g}$. 같은 식이 $h$에도 성립."
+ ],
+ "conds": {
+  "C1": {
+   "label": "함수",
+   "why": "$f=te^x-x^2$, $0<t<\\frac2e$.",
+   "uses": [
+    1,
+    2
+   ]
+  },
+  "C2": {
+   "label": "값",
+   "why": "$g(\\alpha)=\\frac14$, $h(\\beta)=4$.",
+   "uses": [
+    3,
+    4,
+    5
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "$\\alpha g'(\\alpha)-\\beta h'(\\beta)$.",
+   "uses": [
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "극값 위치의 함수",
+   "p": [
+    "$f'(x)=0$을 $t=\\varphi(x)$로 쓰면 극값 위치는 $\\varphi$의 역함수."
+   ]
+  },
+  {
+   "h": "역함수 미분",
+   "p": [
+    "$1=\\varphi'(g(t))g'(t)$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "$\\varphi$",
+   "text": "$f'(x)=t e^{x}-2 x=e^{x}\\left(t-2 x e^{-x}\\right)$ 이다. $\\varphi(x)=2 x e^{-x}$ 이라 하면 $\\varphi'(x)=2(1-x)e^{-x}$ 이므로 $\\varphi$ 는 $x=1$ 에서 최댓값 $\\frac{2}{e}$ 를 갖고, $x \\le 0$ 에서 $\\varphi(x)\\le 0$ , $x \\to \\infty$ 일 때 $\\varphi(x)\\to 0$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "극대·극소 구분",
+   "text": "$0<t<\\frac{2}{e}$ 이면 $\\varphi(x)=t$ 의 해는 $0<x_{1}<1<x_{2}$ 인 두 개이고, $f'(x)$ 의 부호는 $x<x_{1}$ 에서 양, $x_{1}<x<x_{2}$ 에서 음, $x>x_{2}$ 에서 양이다. 따라서 $g(t)=x_{1}\\in(0,\\,1)$ , $h(t)=x_{2}>1$ 이고 $t=\\varphi(g(t))=\\varphi(h(t))$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "미분",
+   "text": "$t=\\varphi(g(t))$ 를 미분하면 $1=\\varphi'(g(t))g'(t)$ 이므로",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$$t g'(t)=\\frac{2 g(t)e^{-g(t)}}{2 \\left(1-g(t)\\right)e^{-g(t)}}=\\frac{g(t)}{1-g(t)}$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$h$도",
+   "text": "이고, 같은 방법으로 $t h'(t)=\\frac{h(t)}{1-h(t)}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$\\alpha g'(\\alpha)=\\frac{\\frac{1}{4}}{\\frac{3}{4}}=\\frac{1}{3}$ , $\\beta h'(\\beta)=\\frac{4}{-3}=-\\frac{4}{3}$ 이므로 구하는 값은 $\\frac{5}{3}$ 이고 $p+q=3+5=8$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$1-h<0$",
+   "cond": "C3",
+   "text": [
+    "$h=4$ → $\\frac4{-3}$, 빼면 $+\\frac43$."
+   ]
+  },
+  {
+   "h": "$t$를 구하지 않기",
+   "cond": "C2",
+   "text": [
+    "$\\alpha$, $\\beta$ 값 없이 $tg'$만으로."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $g(\\alpha)=\\frac12$, $h(\\beta)=3$",
+   "body": [
+    "$0<t<\\frac2e$인 실수 $t$에 대하여 함수 $f(x)=te^x-x^2$은 $x=g(t)$에서 극대, $x=h(t)$에서 극소이다. 두 실수 $\\alpha$, $\\beta$가 $g(\\alpha)=\\frac12$, $h(\\beta)=3$을 만족시킬 때, $\\alpha g'(\\alpha)-\\beta h'(\\beta)=\\frac qp$이다. $p+q$의 값을 구하시오. (단, $p$와 $q$는 서로소인 자연수)"
+   ],
+   "answer": 7,
+   "hint": "$1-\\left(-\\frac32\\right)=\\frac52$."
+  }
+ ],
+ "line": "극값 위치를 매개변수의 함수로 → 역함수 미분."
+}
