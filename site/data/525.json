@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2024학년도 9월 모의평가 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 방접원의 접선 길이 관계를 쓰지 못하고 $a$를 결정하지 못한 경우",
  "answer": 36,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -30,9 +30,12 @@
     0
    ],
    "text": "두 초점이 ${\\mathrm{F}}(3,\\,0)$ , ${\\mathrm{F'}}(-3,\\,0)$ 인 타원 $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ $(a>b>0)$ 위의 점 중 제 $1$ 사분면에 있는 점 ${\\mathrm{P}}$ 가 있다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "타원",
+   "why": "초점 $(\\pm3,0)$, P 제1사분면.",
+   "uses": [
+    7,
+    8
+   ]
   },
   {
    "id": "C2",
@@ -41,9 +44,12 @@
     1
    ],
    "text": "삼각형 ${\\mathrm{PF'F}}$ 의 외부에 있고 선분 ${\\mathrm{PF}}$ , 직선 ${\\mathrm{F'F}}$ , 직선 ${\\mathrm{F'P}}$ 에 모두 접하는 원을 $C$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "원 $C$",
+   "why": "△ 외부, PF·직선 F'F·직선 F'P에 접함.",
+   "uses": [
+    1,
+    2
+   ]
   },
   {
    "id": "C3",
@@ -52,9 +58,15 @@
     2
    ],
    "text": "원 $C$ 가 $x$ 축과 점 $(5,\\,0)$ 에서 접하고 원 $C$ 의 반지름의 길이가 $\\frac{4}{3}$ 일 때, 삼각형 ${\\mathrm{PF'F}}$ 의 넓이를 $S$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건",
+   "why": "$C$가 $(5,0)$에서 $x$축에 접함, 반지름 $\\frac43$; $5S$.",
+   "uses": [
+    3,
+    4,
+    5,
+    6,
+    9
+   ]
   },
   {
    "id": "C4",
@@ -69,68 +81,124 @@
   }
  ],
  "intro": [
-  "타원과 원의 결합을 초점삼각형의 한 변에 접하는 원으로 바꾸어, 접선의 길이가 같음과 타원의 정의로 원이 장축의 끝점에서 $x$ 축에 접함을 찾고, 점과 직선 사이의 거리로 직선 ${\\mathrm{F'P}}$ 를 결정하게 함"
+  "방접원: $2\\overline{\\mathrm{F'G}}=$ 둘레 $=2a+6$ → $a=5$.",
+  "중심 $(5,\\frac43)$에서 직선 F'P까지 거리 → 기울기 $\\frac{12}{35}$."
  ],
  "topic": "이차곡선",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "방접원",
+   "p": [
+    "꼭짓점에서 접점까지 거리 = 반둘레."
+   ]
+  },
+  {
+   "h": "점과 직선의 거리",
+   "p": [
+    "$\\frac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "원 $C$ 가 선분 ${\\mathrm{PF}}$ , 직선 ${\\mathrm{F'P}}$ , 직선 ${\\mathrm{F'F}}$ 에 접하는 점을 각각 ${\\mathrm{D}}$ , ${\\mathrm{E}}$ , ${\\mathrm{G}}$ 라 하자. 원 $C$ 는 삼각형의 외부에서 변 ${\\mathrm{PF}}$ 에 접하므로 ${\\mathrm{E}}$ 는 반직선 ${\\mathrm{F'P}}$ 위의 점 ${\\mathrm{P}}$ 너머에, ${\\mathrm{G}}$ 는 반직선 ${\\mathrm{F'F}}$ 위의 점 ${\\mathrm{F}}$ 너머에 있다. 한 점에서 원에 그은 두 접선의 길이는 같으므로 $\\overline{{\\mathrm{PE}}}=\\overline{{\\mathrm{PD}}}$ , $\\overline{{\\mathrm{FG}}}=\\overline{{\\mathrm{FD}}}$ , $\\overline{{\\mathrm{F'E}}}=\\overline{{\\mathrm{F'G}}}$ 이고",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "접점"
   },
   {
    "n": 2,
    "text": "$$2 \\overline{{\\mathrm{F'G}}}=\\overline{{\\mathrm{F'E}}}+\\overline{{\\mathrm{F'G}}}=(\\overline{{\\mathrm{F'P}}}+\\overline{{\\mathrm{PD}}})+(\\overline{{\\mathrm{F'F}}}+\\overline{{\\mathrm{FD}}})=\\overline{{\\mathrm{F'P}}}+\\overline{{\\mathrm{PF}}}+\\overline{{\\mathrm{F'F}}}=2 a+6$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "반둘레"
   },
   {
    "n": 3,
    "text": "이다. ${\\mathrm{G}}(5,\\,0)$ 이므로 $\\overline{{\\mathrm{F'G}}}=8$ 이고 $a=5$ 이다. 즉 타원의 정의에 의하여 $\\overline{{\\mathrm{PF}}}+\\overline{{\\mathrm{PF'}}}=10$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "$a$"
   },
   {
    "n": 4,
    "text": "원 $C$ 의 중심은 ${\\mathrm{I}}\\left(5,\\,\\frac{4}{3}\\right)$ 이다. 직선 ${\\mathrm{F'P}}$ 를 $y=k(x+3)$ $(k>0)$ 이라 하면 이 직선은 원 $C$ 에 접하므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "중심"
   },
   {
    "n": 5,
    "text": "$$\\frac{\\left|8 k-\\frac{4}{3}\\right|}{\\sqrt{1+k^{2}}}=\\frac{4}{3},\\,\\,\\,\\left(8 k-\\frac{4}{3}\\right)^{2}=\\frac{16}{9}(1+k^{2}),\\,\\,\\,k \\left(\\frac{560}{9}k-\\frac{64}{3}\\right)=0$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "기울기"
   },
   {
    "n": 6,
    "text": "에서 $k=\\frac{12}{35}$ 이다. 이 직선의 방향의 단위벡터는 $\\left(\\frac{35}{37},\\,\\frac{12}{37}\\right)$ 이므로 $\\overline{{\\mathrm{PF'}}}=d$ 라 하면 ${\\mathrm{P}}\\left(-3+\\frac{35}{37}d,\\,\\frac{12}{37}d \\right)$ 이고 $\\overline{{\\mathrm{PF}}}=10-d$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "P 매개"
   },
   {
    "n": 7,
    "text": "$$\\overline{{\\mathrm{PF}}}^{2}=\\left(\\frac{35}{37}d-6 \\right)^{2}+\\left(\\frac{12}{37}d \\right)^{2}=d^{2}-\\frac{420}{37}d+36=(10-d)^{2}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "정의"
   },
   {
    "n": 8,
    "text": "에서 $\\left(20-\\frac{420}{37}\\right)d=64$ , $d=\\frac{37}{5}$ 이다. 따라서 ${\\mathrm{P}}\\left(4,\\,\\frac{12}{5}\\right)$ 이다. (실제로 $\\frac{16}{25}+\\frac{144}{25 \\times 16}=1$ 이므로 점 ${\\mathrm{P}}$ 는 타원 $\\frac{x^{2}}{25}+\\frac{y^{2}}{16}=1$ 위에 있다.)",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "P"
   },
   {
    "n": 9,
    "text": "$S=\\frac{1}{2}\\times 6 \\times \\frac{12}{5}=\\frac{36}{5}$ 이므로 $5 S=36$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$k\\ne0$",
+   "cond": "C3",
+   "text": [
+    "직선 F'F 자체 제외."
+   ]
+  },
+  {
+   "h": "검산",
+   "cond": "C1",
+   "text": [
+    "$\\frac{16}{25}+\\frac{9}{25}=1$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\overline{\\mathrm{PF}}\\times\\overline{\\mathrm{PF'}}$",
+   "body": [
+    "(같은 조건에서) $25\\times\\overline{\\mathrm{PF}}\\times\\overline{\\mathrm{PF'}}$의 값을 구하시오."
+   ],
+   "answer": 481,
+   "hint": "$\\overline{\\mathrm{PF'}}=\\frac{37}5$, $\\overline{\\mathrm{PF}}=\\frac{13}5$."
+  }
+ ],
+ "line": "방접원 → 반둘레 = $a+c$.",
  "note": ""
 }

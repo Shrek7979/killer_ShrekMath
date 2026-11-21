@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2026학년도 대학수학능력시험 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 위치 조건을 쓰지 않고 $p=4$, $t=1$을 택한 경우",
  "answer": 80,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -29,9 +29,11 @@
     0
    ],
    "text": "초점이 ${\\mathrm{F}}$ 인 포물선 $y^{2}=4 p x$ $(p>0)$ 에 $x$ 축 위의 점 ${\\mathrm{T}}$ 에서 그은 두 접선의 접점을 각각 ${\\mathrm{A}}$ , ${\\mathrm{B}}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "설정",
+   "why": "$y^2=4px$, $x$축 위 T에서의 두 접선, 접점 A, B.",
+   "uses": [
+    1
+   ]
   },
   {
    "id": "C2",
@@ -40,9 +42,12 @@
     1
    ],
    "text": "삼각형 ${\\mathrm{TAB}}$ 의 외접원의 반지름의 길이가 $5$ 이고 $\\overline{{\\mathrm{AB}}}=8$ 이며, 점 ${\\mathrm{F}}$ 는 삼각형 ${\\mathrm{TAB}}$ 의 내부에 있다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건",
+   "why": "외접원 반지름 $5$, $\\overline{\\mathrm{AB}}=8$, F는 내부.",
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C3",
@@ -51,44 +56,92 @@
     2
    ],
    "text": "$\\overline{{\\mathrm{TA}}}^{2}$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\overline{\\mathrm{TA}}^2$.",
+   "uses": [
+    4
+   ]
   }
  ],
  "intro": [
-  "세 점을 지나는 곡선(원)의 조건을 다루되, 포물선의 정의로 $\\overline{{\\mathrm{FT}}}=\\overline{{\\mathrm{FA}}}=\\overline{{\\mathrm{FB}}}$ , 즉 초점이 외심임을 발견하게 하고 두 경우 중 하나를 위치 조건으로 배제하게 함"
+  "접점의 $x$좌표 $=t$, 정의로 $\\mathrm{FA}=\\mathrm{FB}=\\mathrm{FT}=p+t$ → F가 외심.",
+  "$p+t=5$, $pt=4$ → F가 내부 → $p<t$."
  ],
  "topic": "이차곡선",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "극선",
+   "p": [
+    "T$(-t,0)$ → 접점 $x=t$."
+   ]
+  },
+  {
+   "h": "외심",
+   "p": [
+    "세 꼭짓점에서 같은 거리."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$x$ 축 위의 점 중 원점의 오른쪽에 있는 점은 포물선의 내부에 있고, 원점에서는 접선이 하나뿐이므로 ${\\mathrm{T}}(-t,\\,0)$ $(t>0)$ 이다. 접점 $(x_{1},\\,y_{1})$ 에서의 접선 $y_{1}y=2 p(x+x_{1})$ 이 점 ${\\mathrm{T}}$ 를 지나므로 $x_{1}=t$ 이고, ${\\mathrm{A}}(t,\\,2 \\sqrt{p t})$ , ${\\mathrm{B}}(t,\\,-2 \\sqrt{p t})$ 로 놓을 수 있다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "T 위치"
   },
   {
    "n": 2,
    "text": "포물선의 정의에 의하여 $\\overline{{\\mathrm{FA}}}=\\overline{{\\mathrm{FB}}}=t+p$ 이고, $\\overline{{\\mathrm{FT}}}=p+t$ 이다. 즉 점 ${\\mathrm{F}}$ 는 세 점 ${\\mathrm{T}}$ , ${\\mathrm{A}}$ , ${\\mathrm{B}}$ 에서 같은 거리에 있으므로 삼각형 ${\\mathrm{TAB}}$ 의 외심이고, 외접원의 반지름의 길이는 $p+t=5$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "외심"
   },
   {
    "n": 3,
    "text": "$\\overline{{\\mathrm{AB}}}=4 \\sqrt{p t}=8$ 에서 $p t=4$ 이므로 $\\{p,\\,t \\}=\\{1,\\,4 \\}$ 이다. 점 ${\\mathrm{F}}(p,\\,0)$ 이 삼각형 ${\\mathrm{TAB}}$ 의 내부에 있으려면 $-t<p<t$ 이어야 하므로 $p=1$ , $t=4$ 이다. ( $p=4$ , $t=1$ 이면 점 ${\\mathrm{F}}(4,\\,0)$ 은 직선 $x=1$ 의 오른쪽에 있어 삼각형의 외부에 있다.)",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$p$, $t$"
   },
   {
    "n": 4,
    "text": "따라서 ${\\mathrm{T}}(-4,\\,0)$ , ${\\mathrm{A}}(4,\\,4)$ 이고 $\\overline{{\\mathrm{TA}}}^{2}=64+16=80$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\mathrm{FT}=p+t$",
+   "cond": "C2",
+   "text": [
+    "$p-(-t)$."
+   ]
+  },
+  {
+   "h": "내부",
+   "cond": "C2",
+   "text": [
+    "$p<t$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 반지름 $13$, $\\overline{\\mathrm{AB}}=24$",
+   "body": [
+    "(같은 설정에서) 삼각형 TAB의 외접원의 반지름이 $13$, $\\overline{\\mathrm{AB}}=24$이고 F가 삼각형 TAB의 내부에 있을 때, $\\overline{\\mathrm{TA}}^2$의 값을 구하시오."
+   ],
+   "answer": 468,
+   "hint": "$p+t=13$, $pt=36$ → $p=4$, $t=9$: A$(9,12)$, T$(-9,0)$."
+  }
+ ],
+ "line": "포물선 정의 → 초점이 외심.",
  "note": ""
 }

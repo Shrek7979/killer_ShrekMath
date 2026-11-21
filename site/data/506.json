@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2026학년도 대학수학능력시험 29번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 접점 B를 따로 구하지 못해 넓이 계산에서 높이를 잘못 잡은 경우",
  "answer": 384,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -30,9 +30,11 @@
     0
    ],
    "text": "초점이 ${\\mathrm{F}}$ 인 포물선 $y^{2}=4 p x$ $(p>0)$ 위의 점 중 제 $1$ 사분면에 있는 점 ${\\mathrm{A}}$ 에서의 접선을 $l$ 이라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "포물선",
+   "why": "$y^2=4px$, A(제1사분면)에서 접선 $l$.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C2",
@@ -41,9 +43,14 @@
     1
    ],
    "text": "점 ${\\mathrm{F}}$ 를 중심으로 하고 직선 $l$ 에 접하는 원의 반지름의 길이가 $6$ 이고, 이 원과 직선 $l$ 의 접점을 ${\\mathrm{B}}$ 라 할 때 $\\overline{{\\mathrm{AB}}}=8$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "원",
+   "why": "중심 F, $l$에 접함, 반지름 $6$, 접점 B, $\\overline{\\mathrm{AB}}=8$.",
+   "uses": [
+    1,
+    3,
+    4,
+    5
+   ]
   },
   {
    "id": "C3",
@@ -52,9 +59,11 @@
     2
    ],
    "text": "삼각형 ${\\mathrm{OAB}}$ 의 넓이를 $S$ 라 할 때, $25 S$ 의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$25S$, $S$=△OAB.",
+   "uses": [
+    6
+   ]
   },
   {
    "id": "C4",
@@ -63,56 +72,106 @@
     3
    ],
    "text": "(단, ${\\mathrm{O}}$ 는 원점이다.) [4점]",
-   "label": "",
-   "why": "",
+   "label": "단서",
+   "why": "O는 원점.",
    "uses": []
   }
  ],
  "intro": [
-  "포물선의 정의와 접선의 방정식을 원의 접선 조건과 결합하여, 초점에서 접선까지의 거리가 $\\sqrt{p \\times \\overline{{\\mathrm{AF}}}}$ 이고 그 수선의 발이 $y$ 축 위에 있음을 스스로 찾게 함"
+  "FB ⊥ $l$ → $\\overline{\\mathrm{AF}}=10$ → $x_1+p=10$.",
+  "F에서 $l$까지 거리 $\\sqrt{p\\cdot\\overline{\\mathrm{AF}}}=6$; 수선의 발 B는 $y$축 위."
  ],
  "topic": "이차곡선",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "포물선 정의",
+   "p": [
+    "$\\overline{\\mathrm{AF}}=x_1+p$."
+   ]
+  },
+  {
+   "h": "접선의 방정식",
+   "p": [
+    "$y_1y=2p(x+x_1)$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "${\\mathrm{A}}(x_{1},\\,y_{1})$ 이라 하면 $y_{1}^{2}=4 p x_{1}$ 이다. 원의 반지름 ${\\mathrm{FB}}$ 는 접선 $l$ 에 수직이므로 삼각형 ${\\mathrm{ABF}}$ 는 $\\angle{\\mathrm{ABF}}=\\frac{\\pi}{2}$ 인 직각삼각형이고, $\\overline{{\\mathrm{AF}}}=\\sqrt{6^{2}+8^{2}}=10$ 이다. 포물선의 정의에 의하여 $x_{1}+p=10$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "직각"
   },
   {
    "n": 2,
    "text": "직선 $l$ 의 방정식은 $y_{1}y=2 p(x+x_{1})$ , 즉 $2 p x-y_{1}y+2 p x_{1}=0$ 이므로 점 ${\\mathrm{F}}(p,\\,0)$ 과 직선 $l$ 사이의 거리는",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "접선"
   },
   {
    "n": 3,
    "text": "$$\\frac{2 p(p+x_{1})}{\\sqrt{4 p^{2}+y_{1}^{2}}}=\\frac{2 p(p+x_{1})}{\\sqrt{4 p(p+x_{1})}}=\\sqrt{p(p+x_{1})}=\\sqrt{10 p}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "거리"
   },
   {
    "n": 4,
    "text": "이다. 이 값이 원의 반지름의 길이 $6$ 이므로 $p=\\frac{18}{5}$ , $x_{1}=\\frac{32}{5}$ 이고, $y_{1}^{2}=4 \\times \\frac{18}{5}\\times \\frac{32}{5}=\\frac{2304}{25}$ 에서 $y_{1}=\\frac{48}{5}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "값"
   },
   {
    "n": 5,
    "text": "직선 $l$ 에 $x=0$ 을 대입하면 $y=\\frac{2 p x_{1}}{y_{1}}=\\frac{y_{1}}{2}$ 이므로 $l$ 은 점 ${\\mathrm{B'}}\\left(0,\\,\\frac{y_{1}}{2}\\right)$ 을 지난다. 이때 $\\vec{{\\mathrm{FB'}}}=\\left(-p,\\,\\frac{y_{1}}{2}\\right)$ 과 직선 $l$ 의 방향벡터 $(y_{1},\\,2 p)$ 의 내적이 $-p y_{1}+p y_{1}=0$ 이므로 ${\\mathrm{B'}}$ 은 점 ${\\mathrm{F}}$ 에서 $l$ 에 내린 수선의 발, 즉 접점 ${\\mathrm{B}}$ 이다. 따라서 ${\\mathrm{B}}\\left(0,\\,\\frac{24}{5}\\right)$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "B"
   },
   {
    "n": 6,
    "text": "삼각형 ${\\mathrm{OAB}}$ 에서 밑변을 $\\overline{{\\mathrm{OB}}}=\\frac{24}{5}$ 로 보면 높이는 점 ${\\mathrm{A}}$ 의 $x$ 좌표 $\\frac{32}{5}$ 이므로 $S=\\frac{1}{2}\\times \\frac{24}{5}\\times \\frac{32}{5}=\\frac{384}{25}$ 이다. 따라서 $25 S=384$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$y$절편 $\\frac{y_1}2$",
+   "cond": "C2",
+   "text": [
+    "초점에서의 수선의 발."
+   ]
+  },
+  {
+   "h": "높이 $x_1$",
+   "cond": "C3",
+   "text": [
+    "밑변 OB가 $y$축."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 반지름 $3$, $\\overline{\\mathrm{AB}}=4$",
+   "body": [
+    "(같은 설정에서) 점 F를 중심으로 하고 직선 $l$에 접하는 원의 반지름이 $3$, 접점 B에 대하여 $\\overline{\\mathrm{AB}}=4$일 때, 삼각형 OAB의 넓이 $S$에 대하여 $25S$의 값을 구하시오."
+   ],
+   "answer": 96,
+   "hint": "$\\overline{\\mathrm{AF}}=5$, $p=\\frac95$, $x_1=\\frac{16}5$, $y_1=\\frac{24}5$."
+  }
+ ],
+ "line": "초점-접선 거리 $\\sqrt{p\\cdot\\mathrm{AF}}$, 수선의 발은 $y$축 위.",
  "note": ""
 }

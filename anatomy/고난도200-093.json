@@ -1,0 +1,142 @@
+{
+ "wrong": "예상 오답 — 방접원의 접선 길이 관계를 쓰지 못하고 $a$를 결정하지 못한 경우",
+ "intro": [
+  "방접원: $2\\overline{\\mathrm{F'G}}=$ 둘레 $=2a+6$ → $a=5$.",
+  "중심 $(5,\\frac43)$에서 직선 F'P까지 거리 → 기울기 $\\frac{12}{35}$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "타원",
+   "why": "초점 $(\\pm3,0)$, P 제1사분면.",
+   "uses": [
+    7,
+    8
+   ]
+  },
+  "C2": {
+   "label": "원 $C$",
+   "why": "△ 외부, PF·직선 F'F·직선 F'P에 접함.",
+   "uses": [
+    1,
+    2
+   ]
+  },
+  "C3": {
+   "label": "조건",
+   "why": "$C$가 $(5,0)$에서 $x$축에 접함, 반지름 $\\frac43$; $5S$.",
+   "uses": [
+    3,
+    4,
+    5,
+    6,
+    9
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "방접원",
+   "p": [
+    "꼭짓점에서 접점까지 거리 = 반둘레."
+   ]
+  },
+  {
+   "h": "점과 직선의 거리",
+   "p": [
+    "$\\frac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "접점",
+   "text": "원 $C$ 가 선분 ${\\mathrm{PF}}$ , 직선 ${\\mathrm{F'P}}$ , 직선 ${\\mathrm{F'F}}$ 에 접하는 점을 각각 ${\\mathrm{D}}$ , ${\\mathrm{E}}$ , ${\\mathrm{G}}$ 라 하자. 원 $C$ 는 삼각형의 외부에서 변 ${\\mathrm{PF}}$ 에 접하므로 ${\\mathrm{E}}$ 는 반직선 ${\\mathrm{F'P}}$ 위의 점 ${\\mathrm{P}}$ 너머에, ${\\mathrm{G}}$ 는 반직선 ${\\mathrm{F'F}}$ 위의 점 ${\\mathrm{F}}$ 너머에 있다. 한 점에서 원에 그은 두 접선의 길이는 같으므로 $\\overline{{\\mathrm{PE}}}=\\overline{{\\mathrm{PD}}}$ , $\\overline{{\\mathrm{FG}}}=\\overline{{\\mathrm{FD}}}$ , $\\overline{{\\mathrm{F'E}}}=\\overline{{\\mathrm{F'G}}}$ 이고",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "반둘레",
+   "text": "$$2 \\overline{{\\mathrm{F'G}}}=\\overline{{\\mathrm{F'E}}}+\\overline{{\\mathrm{F'G}}}=(\\overline{{\\mathrm{F'P}}}+\\overline{{\\mathrm{PD}}})+(\\overline{{\\mathrm{F'F}}}+\\overline{{\\mathrm{FD}}})=\\overline{{\\mathrm{F'P}}}+\\overline{{\\mathrm{PF}}}+\\overline{{\\mathrm{F'F}}}=2 a+6$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$a$",
+   "text": "이다. ${\\mathrm{G}}(5,\\,0)$ 이므로 $\\overline{{\\mathrm{F'G}}}=8$ 이고 $a=5$ 이다. 즉 타원의 정의에 의하여 $\\overline{{\\mathrm{PF}}}+\\overline{{\\mathrm{PF'}}}=10$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "중심",
+   "text": "원 $C$ 의 중심은 ${\\mathrm{I}}\\left(5,\\,\\frac{4}{3}\\right)$ 이다. 직선 ${\\mathrm{F'P}}$ 를 $y=k(x+3)$ $(k>0)$ 이라 하면 이 직선은 원 $C$ 에 접하므로",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "기울기",
+   "text": "$$\\frac{\\left|8 k-\\frac{4}{3}\\right|}{\\sqrt{1+k^{2}}}=\\frac{4}{3},\\,\\,\\,\\left(8 k-\\frac{4}{3}\\right)^{2}=\\frac{16}{9}(1+k^{2}),\\,\\,\\,k \\left(\\frac{560}{9}k-\\frac{64}{3}\\right)=0$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "P 매개",
+   "text": "에서 $k=\\frac{12}{35}$ 이다. 이 직선의 방향의 단위벡터는 $\\left(\\frac{35}{37},\\,\\frac{12}{37}\\right)$ 이므로 $\\overline{{\\mathrm{PF'}}}=d$ 라 하면 ${\\mathrm{P}}\\left(-3+\\frac{35}{37}d,\\,\\frac{12}{37}d \\right)$ 이고 $\\overline{{\\mathrm{PF}}}=10-d$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "정의",
+   "text": "$$\\overline{{\\mathrm{PF}}}^{2}=\\left(\\frac{35}{37}d-6 \\right)^{2}+\\left(\\frac{12}{37}d \\right)^{2}=d^{2}-\\frac{420}{37}d+36=(10-d)^{2}$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "P",
+   "text": "에서 $\\left(20-\\frac{420}{37}\\right)d=64$ , $d=\\frac{37}{5}$ 이다. 따라서 ${\\mathrm{P}}\\left(4,\\,\\frac{12}{5}\\right)$ 이다. (실제로 $\\frac{16}{25}+\\frac{144}{25 \\times 16}=1$ 이므로 점 ${\\mathrm{P}}$ 는 타원 $\\frac{x^{2}}{25}+\\frac{y^{2}}{16}=1$ 위에 있다.)",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$S=\\frac{1}{2}\\times 6 \\times \\frac{12}{5}=\\frac{36}{5}$ 이므로 $5 S=36$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$k\\ne0$",
+   "cond": "C3",
+   "text": [
+    "직선 F'F 자체 제외."
+   ]
+  },
+  {
+   "h": "검산",
+   "cond": "C1",
+   "text": [
+    "$\\frac{16}{25}+\\frac{9}{25}=1$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\overline{\\mathrm{PF}}\\times\\overline{\\mathrm{PF'}}$",
+   "body": [
+    "(같은 조건에서) $25\\times\\overline{\\mathrm{PF}}\\times\\overline{\\mathrm{PF'}}$의 값을 구하시오."
+   ],
+   "answer": 481,
+   "hint": "$\\overline{\\mathrm{PF'}}=\\frac{37}5$, $\\overline{\\mathrm{PF}}=\\frac{13}5$."
+  }
+ ],
+ "line": "방접원 → 반둘레 = $a+c$."
+}

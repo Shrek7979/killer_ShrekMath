@@ -1,0 +1,120 @@
+{
+ "wrong": "예상 오답 — $n(1-4^{-1/n})$의 극한을 $1$로 둔 경우",
+ "intro": [
+  "$4^{k/n}(1-4^{-1/n})$로 묶기 → $\\ln4\\cdot\\int_0^1x4^xdx$.",
+  "부분적분 → $4-\\frac3{2\\ln2}$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "극한",
+   "why": "$\\lim\\sum\\frac kn\\left(4^{\\frac kn}-4^{\\frac{k-1}n}\\right)=p+\\frac q{\\ln2}$.",
+   "uses": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  "C2": {
+   "label": "묻는 것",
+   "why": "$10(p-q)$.",
+   "uses": [
+    6
+   ]
+  },
+  "C3": {
+   "label": "단서",
+   "why": "유리수.",
+   "uses": [
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "정적분과 급수",
+   "p": [
+    "$\\frac1n\\sum f\\left(\\frac kn\\right)\\to\\int_0^1f$."
+   ]
+  },
+  {
+   "h": "지수 극한",
+   "p": [
+    "$\\frac{a^h-1}h\\to\\ln a$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "묶기",
+   "text": "$4^{\\frac{k}{n}}-4^{\\frac{k-1}{n}}=4^{\\frac{k}{n}}\\left(1-4^{-\\frac{1}{n}}\\right)$ 이므로 주어진 합은",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "분리",
+   "text": "$$n \\left(1-4^{-\\frac{1}{n}}\\right)\\times \\frac{1}{n}\\sum_{k=1}^{n}\\frac{k}{n}4^{\\frac{k}{n}}$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "지수 극한",
+   "text": "이다. $h=\\frac{1}{n}$ 이라 하면 $\\lim_{h \\to 0+}\\frac{1-4^{-h}}{h}=\\lim_{h \\to 0+}\\frac{4^{-h}-1}{-h}=\\ln 4$ 이고, 정적분과 급수의 관계에서",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "적분",
+   "text": "$$\\lim_{n \\to \\infty}\\frac{1}{n}\\sum_{k=1}^{n}\\frac{k}{n}4^{\\frac{k}{n}}=\\int_{0}^{1}x 4^{x}dx=\\left[\\frac{x 4^{x}}{\\ln 4}\\right]_{0}^{1}-\\int_{0}^{1}\\frac{4^{x}}{\\ln 4}dx=\\frac{4}{\\ln 4}-\\frac{3}{(\\ln 4)^{2}}$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "정리",
+   "text": "이다. 따라서 극한값은 $\\ln 4 \\left\\{\\frac{4}{\\ln 4}-\\frac{3}{(\\ln 4)^{2}}\\right\\}=4-\\frac{3}{2 \\ln 2}$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$p=4$ , $q=-\\frac{3}{2}$ 이므로 $10(p-q)=55$ 이다.",
+   "uses": [
+    "C2",
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\ln4=2\\ln2$",
+   "cond": "C1",
+   "text": [
+    "분모 정리."
+   ]
+  },
+  {
+   "h": "부분적분",
+   "cond": "C1",
+   "text": [
+    "$\\int x4^x=\\frac{x4^x}{\\ln4}-\\frac{4^x}{(\\ln4)^2}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $9^{\\frac kn}$",
+   "body": [
+    "$\\lim_{n\\to\\infty}\\sum_{k=1}^n\\frac kn\\left(9^{\\frac kn}-9^{\\frac{k-1}n}\\right)=p+\\frac q{\\ln3}$일 때, $10(p-q)$의 값을 구하시오. (단, $p$, $q$는 유리수)"
+   ],
+   "answer": 130,
+   "hint": "$\\ln9\\left(\\frac9{\\ln9}-\\frac8{(\\ln9)^2}\\right)=9-\\frac4{\\ln3}$."
+  }
+ ],
+ "line": "차분을 묶어 지수 극한 × 정적분."
+}

@@ -1,0 +1,96 @@
+{
+ "wrong": "예상 오답 — 길이의 비 $\\frac{\\mathrm{PN}}{\\mathrm{PT}}$를 법선의 기울기로 잡은 경우",
+ "intro": [
+  "T$(-x_1,0)$, N$(x_1+2p,0)$ → F가 TN의 중점, $\\mathrm{FT}=\\mathrm{FP}=\\mathrm{FN}$.",
+  "$\\tan\\angle\\mathrm{PTN}=\\frac12=\\frac{2p}{y_1}$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "설정",
+   "why": "$y^2=4px$, P에서의 접선·법선의 $x$절편 T, N.",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "조건",
+   "why": "$\\overline{\\mathrm{TN}}=10$, $\\overline{\\mathrm{PT}}=2\\overline{\\mathrm{PN}}$; △PTN 넓이.",
+   "uses": [
+    2,
+    3,
+    4
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "접선·법선 절편",
+   "p": [
+    "T$(-x_1,0)$, N$(x_1+2p,0)$."
+   ]
+  },
+  {
+   "h": "직각삼각형",
+   "p": [
+    "$\\angle$TPN$=\\frac\\pi2$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "절편",
+   "text": "${\\mathrm{P}}(x_{1},\\,y_{1})$ 이라 하면 접선은 $y_{1}y=2 p(x+x_{1})$ 이므로 ${\\mathrm{T}}(-x_{1},\\,0)$ 이고, 접선의 기울기는 $\\frac{2 p}{y_{1}}$ 이다. 접선에 수직인 직선 $y-y_{1}=-\\frac{y_{1}}{2 p}(x-x_{1})$ 에 $y=0$ 을 대입하면 $x=x_{1}+2 p$ 이므로 ${\\mathrm{N}}(x_{1}+2 p,\\,0)$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "중점",
+   "text": "따라서 $\\overline{{\\mathrm{FT}}}=\\overline{{\\mathrm{FN}}}=x_{1}+p$ 이고, 포물선의 정의에 의하여 $\\overline{{\\mathrm{FP}}}=x_{1}+p$ 이다. 즉 점 ${\\mathrm{F}}$ 는 선분 ${\\mathrm{TN}}$ 의 중점이며 $\\overline{{\\mathrm{TN}}}=2(x_{1}+p)=10$ 에서 $x_{1}+p=5$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "비",
+   "text": "$\\angle{\\mathrm{TPN}}=\\frac{\\pi}{2}$ 이므로 $\\tan(\\angle{\\mathrm{PTN}})=\\frac{\\overline{{\\mathrm{PN}}}}{\\overline{{\\mathrm{PT}}}}=\\frac{1}{2}$ 이고, 이 값은 접선의 기울기 $\\frac{2 p}{y_{1}}$ 와 같다. 따라서 $y_{1}=4 p$ 이고 $x_{1}=\\frac{y_{1}^{2}}{4 p}=4 p$ 이므로 $5 p=5$ , $p=1$ , ${\\mathrm{P}}(4,\\,4)$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "삼각형 ${\\mathrm{PTN}}$ 의 넓이는 $\\frac{1}{2}\\times 10 \\times 4=20$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$x_1+p=5$",
+   "cond": "C2",
+   "text": [
+    "TN$=2(x_1+p)$."
+   ]
+  },
+  {
+   "h": "$x_1=4p$",
+   "cond": "C2",
+   "text": [
+    "$y_1=4p$ 대입."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\overline{\\mathrm{PT}}=3\\overline{\\mathrm{PN}}$",
+   "body": [
+    "(같은 설정에서) $\\overline{\\mathrm{TN}}=10$, $\\overline{\\mathrm{PT}}=3\\overline{\\mathrm{PN}}$일 때, 삼각형 PTN의 넓이를 구하시오."
+   ],
+   "answer": 15,
+   "hint": "$y_1=6p$, $x_1=9p$ → $p=\\frac12$, P$\\left(\\frac92,3\\right)$."
+  }
+ ],
+ "line": "포물선 접선·법선 → 초점이 빗변 중점."
+}

@@ -1,0 +1,120 @@
+{
+ "wrong": "예상 오답 — $\\cos x=u$ 치환에서 부호를 놓쳐 $J$를 음수로 계산한 경우",
+ "intro": [
+  "$x\\to\\pi-x$: $I=\\frac\\pi2J$.",
+  "$\\cos x=u$ → $\\int_{-1}^1\\frac{du}{4-u^2}$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "적분",
+   "why": "$\\int_0^\\pi\\frac{x\\sin x}{3+\\sin^2x}dx=p\\pi\\ln3$.",
+   "uses": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  "C2": {
+   "label": "묻는 것",
+   "why": "$100p$.",
+   "uses": [
+    6
+   ]
+  },
+  "C3": {
+   "label": "단서",
+   "why": "유리수.",
+   "uses": [
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "$x\\to\\pi-x$",
+   "p": [
+    "$\\int_0^\\pi xF(\\sin x)=\\frac\\pi2\\int_0^\\pi F(\\sin x)$."
+   ]
+  },
+  {
+   "h": "부분분수",
+   "p": [
+    "$\\frac1{4-u^2}=\\frac14\\left(\\frac1{2-u}+\\frac1{2+u}\\right)$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "치환",
+   "text": "$I=\\int_{0}^{\\pi}\\frac{x \\sin x}{3+\\sin^{2}x}dx$ 라 하자. $x=\\pi-u$ 로 치환하면 $\\sin x=\\sin u$ 이므로",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$$I=\\int_{0}^{\\pi}\\frac{(\\pi-u)\\sin u}{3+\\sin^{2}u}du=\\pi J-I,\\,\\,\\,J=\\int_{0}^{\\pi}\\frac{\\sin x}{3+\\sin^{2}x}dx$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$I$",
+   "text": "이고 $I=\\frac{\\pi}{2}J$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$J$ 치환",
+   "text": "$3+\\sin^{2}x=4-\\cos^{2}x$ 이므로 $\\cos x=u$ 로 치환하면 $J=\\int_{-1}^{1}\\frac{du}{4-u^{2}}$ 이다. $\\frac{1}{4-u^{2}}=\\frac{1}{4}\\left(\\frac{1}{2-u}+\\frac{1}{2+u}\\right)$ 이므로",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$J$",
+   "text": "$$J=\\frac{1}{4}\\left[\\ln \\frac{2+u}{2-u}\\right]_{-1}^{1}=\\frac{1}{4}\\left(\\ln 3-\\ln \\frac{1}{3}\\right)=\\frac{1}{2}\\ln 3$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $I=\\frac{\\pi}{4}\\ln 3$ , $p=\\frac{1}{4}$ 이고 $100 p=25$ 이다.",
+   "uses": [
+    "C2",
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$3+\\sin^2=4-\\cos^2$",
+   "cond": "C1",
+   "text": [
+    "$\\cos$로 바꾸기."
+   ]
+  },
+  {
+   "h": "구간 뒤집힘",
+   "cond": "C1",
+   "text": [
+    "$-\\sin x\\,dx=du$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $8+\\sin^2x$",
+   "body": [
+    "$\\int_0^\\pi\\frac{x\\sin x}{8+\\sin^2x}dx=p\\pi\\ln2$일 때, $600p$의 값을 구하시오. (단, $p$는 유리수)"
+   ],
+   "answer": 100,
+   "hint": "$J=\\frac16\\ln\\frac{4}{1}\\cdot\\frac12=\\frac13\\ln2$ → $I=\\frac\\pi6\\ln2$."
+  }
+ ],
+ "line": "$x\\to\\pi-x$ 대칭 → $\\cos$ 치환 → 부분분수."
+}
