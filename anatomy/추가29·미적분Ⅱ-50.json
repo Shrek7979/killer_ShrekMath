@@ -1,0 +1,120 @@
+{
+ "wrong": "예상 오답 — 끝 구간 $t\\le0$, $t\\ge3$의 값과 비교하지 않거나 대칭 계수 $2$를 빠뜨린 경우",
+ "intro": [
+  "$\\sin\\alpha=\\frac t3$로 매개화 → $G(\\alpha)$.",
+  "$G'=3\\cos\\alpha(4\\alpha-\\pi)$ → $\\alpha=\\frac\\pi4$."
+ ],
+ "conds": {
+  "C2": {
+   "label": "함수",
+   "why": "$g(t)=\\int_0^\\pi|3\\sin x-t|dx$.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
+  },
+  "C4": {
+   "label": "최솟값",
+   "why": "$a\\sqrt2+b$; $a^2+b^2$.",
+   "uses": [
+    4,
+    5,
+    6
+   ]
+  },
+  "C5": {
+   "label": "단서",
+   "why": "유리수.",
+   "uses": [
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "절댓값 적분",
+   "p": [
+    "부호가 바뀌는 점에서 나누기."
+   ]
+  },
+  {
+   "h": "매개화",
+   "p": [
+    "$t\\leftrightarrow\\alpha$ 단조 대응."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "끝 구간",
+   "text": "$t \\le 0$ 이면 $g(t)=\\int_{0}^{\\pi}(3 \\sin x-t)dx=6-\\pi t \\ge 6$ 이고, $t \\ge 3$ 이면 $g(t)=\\pi t-6 \\ge 3 \\pi-6$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$\\alpha$",
+   "text": "$0<t<3$ 이면 $\\sin \\alpha=\\frac{t}{3}$ $\\left(0<\\alpha<\\frac{\\pi}{2}\\right)$ 인 $\\alpha$ 를 잡을 수 있고, $3 \\sin x-t$ 는 $\\alpha<x<\\pi-\\alpha$ 에서만 양수이다. 대칭성을 이용하면",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$G$",
+   "text": "$$g(t)=2 \\int_{0}^{\\alpha}(t-3 \\sin x)dx+\\int_{\\alpha}^{\\pi-\\alpha}(3 \\sin x-t)dx=12 \\alpha \\sin \\alpha+12 \\cos \\alpha-6-3 \\pi \\sin \\alpha$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "미분",
+   "text": "이다. 이를 $G(\\alpha)$ 라 하면 $G'(\\alpha)=3 \\cos \\alpha(4 \\alpha-\\pi)$ 이므로 $G(\\alpha)$ 는 $\\alpha=\\frac{\\pi}{4}$ 에서 최소이고, $t=3 \\sin \\alpha$ 는 $\\alpha$ 에 대하여 증가하므로 $g(t)$ 는 $t=\\frac{3 \\sqrt{2}}{2}$ 에서 최소이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "최솟값",
+   "text": "최솟값은 $G \\left(\\frac{\\pi}{4}\\right)=\\frac{3 \\sqrt{2}}{2}\\pi+6 \\sqrt{2}-6-\\frac{3 \\sqrt{2}}{2}\\pi=6 \\sqrt{2}-6$ 이고, 이는 $6$ 과 $3 \\pi-6$ 보다 작다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $a=6$ , $b=-6$ 이고 $a^{2}+b^{2}=72$ 이다.",
+   "uses": [
+    "C4",
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\pi$ 상쇄",
+   "cond": "C4",
+   "text": [
+    "$12\\alpha\\sin\\alpha$와 $3\\pi\\sin\\alpha$."
+   ]
+  },
+  {
+   "h": "비교",
+   "cond": "C4",
+   "text": [
+    "$6\\sqrt2-6<3\\pi-6$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $4\\sin x$",
+   "body": [
+    "실수 $t$에 대하여 $g(t)=\\int_0^\\pi|4\\sin x-t|dx$라 하자. $g(t)$의 최솟값이 $a\\sqrt2+b$일 때, $a^2+b^2$의 값을 구하시오. (단, $a$, $b$는 유리수)"
+   ],
+   "answer": 128,
+   "hint": "진폭에 비례: $8\\sqrt2-8$."
+  }
+ ],
+ "line": "절댓값 적분 → 각도 매개화 → 미분."
+}
