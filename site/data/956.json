@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 수능 공통 20번 유형(사인법칙과 코사인법칙) 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $\\cos\\frac23\\pi$의 부호를 틀려 BC를 잘못 구하거나 $R$을 $\\frac{\\mathrm{BC}}{\\sin A}$로 둔 경우",
  "answer": 49,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -27,32 +27,77 @@
     0
    ],
    "text": "$\\overline{{\\mathrm{AB}}}$ $=5$ , $\\overline{{\\mathrm{AC}}}$ $=8$ , $\\angle{\\mathrm{BAC}}=\\frac{\\pi}{3}$ 인 삼각형 ${\\mathrm{ABC}}$ 의 외접원의 반지름의 길이를 $R$ 이라 할 때, $3 R^{2}$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "설정과 묻는 것",
+   "why": "구하는 값.",
+   "uses": [
+    1,
+    2
+   ]
   }
  ],
  "intro": [
-  "코사인법칙으로 대변의 길이를 구한 뒤 사인법칙으로 외접원의 반지름을 구하게 함"
+  "코사인법칙으로 BC.",
+  "사인법칙 $2R=\\frac{\\mathrm{BC}}{\\sin A}$ — $\\sin^2A=\\frac34$라 $3R^2=\\mathrm{BC}^2$."
  ],
  "topic": "코사인법칙과 외접원의 반지름",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "코사인법칙",
+   "p": [
+    "$a^2=b^2+c^2-2bc\\cos A$."
+   ]
+  },
+  {
+   "h": "사인법칙",
+   "p": [
+    "$\\frac a{\\sin A}=2R$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "코사인법칙에 의하여 $\\overline{{\\mathrm{BC}}}^{2}=25+64-2 \\times 5 \\times 8 \\times \\cos \\frac{\\pi}{3}=49$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "BC"
   },
   {
    "n": 2,
    "text": "사인법칙에 의하여 $2 R=\\frac{\\overline{{\\mathrm{BC}}}}{\\sin \\frac{\\pi}{3}}$ , $\\sin \\frac{\\pi}{3}=\\frac{\\sqrt{3}}{2}$ 이므로 $R^{2}=\\frac{49}{3}$ , $3 R^{2}=49$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "$R$"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "부호",
+   "cond": "C1",
+   "text": [
+    "$\\cos\\frac23\\pi=-\\frac12$."
+   ]
+  },
+  {
+   "h": "$2R$",
+   "cond": "C1",
+   "text": [
+    "지름이 $\\frac a{\\sin A}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형",
+   "body": [
+    "$\\overline{\\mathrm{AB}}=7$, $\\overline{\\mathrm{AC}}=8$, $\\angle\\mathrm{BAC}=\\frac\\pi3$인 삼각형 ABC의 외접원의 반지름을 $R$이라 할 때, $3R^2$의 값을 구하시오."
+   ],
+   "answer": 57,
+   "hint": "$3R^2=\\mathrm{BC}^2$."
+  }
+ ],
+ "line": "두 변과 끼인각 → 대변 → 외접원.",
  "note": ""
 }
