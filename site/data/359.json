@@ -8,9 +8,9 @@
  "standards": [],
  "source": "ShrekMath 창작 · 2022학년도 6월 모의평가 30번 변형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 **2** — $\\rho+\\frac1\\rho$를 미분할 때 $e^{3t}$의 미분 계수 $3$을 빠뜨린 경우",
  "answer": 6,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -28,9 +28,13 @@
     0
    ],
    "text": "$t>\\frac{1}{3}\\ln 4$ 인 실수 $t$ 에 대하여 곡선 $y=\\ln \\left(e^{2 x}+e^{-t}\\right)$ 과 직선 $y=x+t$ 가 만나는 서로 다른 두 점 사이의 거리를 $f(t)$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "곡선과 직선",
+   "why": "$\\ln(e^{2x}+e^{-t})=x+t$ → $u^2-e^tu+e^{-t}=0$. $t>\\frac13\\ln4$이면 판별식 양수.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
   },
   {
    "id": "C2",
@@ -39,44 +43,92 @@
     1
    ],
    "text": "$f'(\\ln 2)$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$f'(\\ln2)$.",
+   "uses": [
+    4
+   ]
   }
  ],
  "intro": [
-  "두 근의 곱이 $t$ 에 따라 변하도록 바꾸어, 두 근의 비 $\\rho$ 에 대한 관계식 $\\rho+\\frac{1}{\\rho}=e^{3 t}-2$ 를 미분하게 함"
+  "$e^x=u$로 두면 교점 조건이 $u^2-e^tu+e^{-t}=0$. 이번엔 두 근의 곱이 $e^{-t}$로 변해서 대칭이 깨집니다.",
+  "두 근의 **비** $\\rho=\\frac{u_2}{u_1}$로 거리를 쓰고, $\\rho+\\frac1\\rho=e^{3t}-2$를 음함수처럼 미분합니다."
  ],
  "topic": "여러 가지 미분법",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "근과 계수의 관계",
+   "p": [
+    "$\\frac{(u_1+u_2)^2}{u_1u_2}=\\rho+\\frac1\\rho+2$."
+   ]
+  },
+  {
+   "h": "관계식 미분",
+   "p": [
+    "$\\left(1-\\frac1{\\rho^2}\\right)\\rho'=3e^{3t}$ → $\\frac{\\rho'}\\rho=\\frac{3e^{3t}}{\\rho-\\frac1\\rho}$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "$e^{x}=u$ 라 하면 $u^{2}-e^{t}u+e^{-t}=0$ 이고, $e^{2 t}>4 e^{-t}$ 이므로 서로 다른 두 양수 근 $u_{1}<u_{2}$ 를 갖는다. $\\rho=\\frac{u_{2}}{u_{1}}$ 라 하면 $f(t)=\\sqrt{2}\\ln \\rho$ 이고",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "치환과 거리"
   },
   {
    "n": 2,
    "text": "$$\\rho+\\frac{1}{\\rho}+2=\\frac{(u_{1}+u_{2})^{2}}{u_{1}u_{2}}=e^{3 t},\\,{즉}\\,\\rho+\\frac{1}{\\rho}=e^{3 t}-2$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "비의 관계식"
   },
   {
    "n": 3,
    "text": "양변을 $t$ 에 대하여 미분하면 $\\left(1-\\frac{1}{\\rho^{2}}\\right)\\rho'=3 e^{3 t}$ , $\\frac{\\rho'}{\\rho}=\\frac{3 e^{3 t}}{\\rho-\\frac{1}{\\rho}}$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "미분"
   },
   {
    "n": 4,
    "text": "$t=\\ln 2$ 일 때 $\\rho+\\frac{1}{\\rho}=6$ , $\\rho-\\frac{1}{\\rho}=\\sqrt{36-4}=4 \\sqrt{2}$ 이므로 $f'(\\ln 2)=\\sqrt{2}\\times \\frac{24}{4 \\sqrt{2}}=6$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "대입"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$3e^{3t}$",
+   "cond": "C2",
+   "text": [
+    "$(e^{3t})'=3e^{3t}$."
+   ]
+  },
+  {
+   "h": "거리",
+   "cond": "C1",
+   "text": [
+    "$x$좌표 차 $\\ln\\rho$, 기울기 $1$ 직선 위 → $\\sqrt2\\ln\\rho$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $t=\\frac13\\ln\\frac{16}3$",
+   "body": [
+    "$t>\\frac13\\ln4$인 실수 $t$에 대하여 곡선 $y=\\ln(e^{2x}+e^{-t})$과 직선 $y=x+t$가 만나는 서로 다른 두 점 사이의 거리를 $f(t)$라 하자. $\\left\\{f'\\left(\\frac13\\ln\\frac{16}3\\right)\\right\\}^2$의 값을 구하시오."
+   ],
+   "answer": 72,
+   "hint": "$\\rho+\\frac1\\rho=\\frac{10}3$, $\\rho-\\frac1\\rho=\\frac83$ → $f'=\\sqrt2\\times\\frac{16}{8/3}=6\\sqrt2$."
+  }
+ ],
+ "line": "두 근의 곱이 변하면 비 $\\rho$로. $\\rho+\\frac1\\rho$ 관계식을 미분.",
  "note": ""
 }
