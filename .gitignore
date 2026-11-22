@@ -8,3 +8,6 @@ android/app/build/
 *.jks
 *.keystore
 node_modules/
+
+# 빌드 산출물(단일 파일, 66MB+) — python3 build.py 로 다시 생성
+killer-math.html

@@ -74,7 +74,7 @@ killer-math/
 ├─ src/japan/          일본 대학 입시 문제·해설 이미지(img/)·index.json
 ├─ src/past/           평가원 기출 킬러 이미지(img/)·index.json·answers.json·render_past.py
 ├─ site/               정적 호스팅용 결과물 (index.html + list.json + data/NNN.json)
-└─ killer-math.html    단일 파일 결과물 (데이터 포함, 그냥 열면 됨 · 아티팩트용)
+└─ killer-math.html    단일 파일 결과물 (데이터 포함, 그냥 열면 됨 · 아티팩트용 · git 미추적, build.py로 생성)
 
 `site/`에는 `elist.json`, `edata/NNN.json`(논술), `jlist.json`+`jp/`(일본)+`past/`(기출)도 생긴다. `--key`로 빌드하면 대신 `enc.json` 하나만 생긴다.
 ```
