@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $\\overline{\\mathrm{OB}}$를 $2\\sin\\theta$로 잡은 경우",
  "answer": 29,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -34,9 +34,11 @@
     0
    ],
    "text": "좌표평면에서 원 $(x-1)^{2}+y^{2}=1$ 과 직선 $x=2$ 가 있다.",
-   "label": "",
+   "label": "원과 직선",
    "why": "",
-   "uses": []
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C2",
@@ -45,9 +47,11 @@
     1
    ],
    "text": "$0<\\theta<\\frac{\\pi}{2}$ 인 $\\theta$ 에 대하여 원점 $\\mathrm{O}$ 를 지나고 $x$ 축의 양의 방향과 이루는 각의 크기가 $\\theta$ 인 직선이 원과 만나는 점 중 $\\mathrm{O}$ 가 아닌 점을 $\\mathrm{B}$ , 직선 $x=2$ 와 만나는 점을 $\\mathrm{C}$ 라 하자.",
-   "label": "",
+   "label": "두 점",
    "why": "",
-   "uses": []
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C3",
@@ -56,9 +60,14 @@
     2
    ],
    "text": "선분 $\\mathrm{OC}$ 위에 $\\overline{\\mathrm{OP}}=\\overline{\\mathrm{BC}}$ 인 점 $\\mathrm{P}$ 를 잡을 때, $\\theta$ 가 변하면서 점 $\\mathrm{P}$ 가 그리는 곡선 위의 점 중 접선의 기울기가 $7$ 인 점의 좌표를 $(a,\\,b)$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "점 $\\mathrm{P}$",
+   "why": "기울기 $7$.",
+   "uses": [
+    3,
+    4,
+    5,
+    6
+   ]
   },
   {
    "id": "C4",
@@ -67,9 +76,11 @@
     3
    ],
    "text": "$a+b=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오.",
-   "label": "",
+   "label": "묻는 것",
    "why": "",
-   "uses": []
+   "uses": [
+    7
+   ]
   },
   {
    "id": "C5",
@@ -78,60 +89,118 @@
     4
    ],
    "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
-   "label": "",
+   "label": "단서",
    "why": "",
-   "uses": []
+   "uses": [
+    7
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "$\\overline{\\mathrm{OP}}=\\frac2{\\cos\\theta}-2\\cos\\theta=\\frac{2\\sin^2\\theta}{\\cos\\theta}$.",
+  "기울기 $=\\frac{u(3+u^2)}2$, $u=\\tan\\theta$."
+ ],
  "topic": "매개변수로 나타낸 함수의 미분 — 원과 접선으로 작도한 시소이드",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "원주각",
+   "p": [
+    "지름 위 직각."
+   ]
+  },
+  {
+   "h": "매개변수 미분",
+   "p": [
+    "$\\tan\\theta$로 정리."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 작도 조건을 매개변수로 옮긴 뒤 접선의 기울기를 tan θ의 삼차식으로 정리하는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "원의 지름이 $2$ 이므로 $\\overline{\\mathrm{OB}}=2 \\cos \\theta$ , $\\overline{\\mathrm{OC}}=\\frac{2}{\\cos \\theta}$ 이고 $\\overline{\\mathrm{OP}}=\\overline{\\mathrm{BC}}=\\frac{2}{\\cos \\theta}-2 \\cos \\theta=\\frac{2 \\sin^{2}\\theta}{\\cos \\theta}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "작도"
   },
   {
    "n": 3,
    "text": "따라서 $\\mathrm{P}\\left(2 \\sin^{2}\\theta,\\,\\frac{2 \\sin^{3}\\theta}{\\cos \\theta}\\right)$ 이다. $\\frac{dx}{d \\theta}=4 \\sin \\theta \\cos \\theta$ , $\\frac{dy}{d \\theta}=\\frac{2 \\sin^{2}\\theta \\left(3 \\cos^{2}\\theta+\\sin^{2}\\theta \\right)}{\\cos^{2}\\theta}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "매개변수"
   },
   {
    "n": 4,
    "text": "핵심 관문: $u=\\tan \\theta$ 로 정리하면 $\\frac{dy}{dx}=\\frac{\\sin \\theta \\left(3 \\cos^{2}\\theta+\\sin^{2}\\theta \\right)}{2 \\cos^{3}\\theta}=\\frac{u \\left(3+u^{2}\\right)}{2}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "기울기"
   },
   {
    "n": 5,
    "text": "$\\frac{u \\left(3+u^{2}\\right)}{2}=7$ 에서 $u^{3}+3 u-14=(u-2)\\left(u^{2}+2 u+7 \\right)=0$ 이므로 $u=2$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "$u$"
   },
   {
    "n": 6,
    "text": "$\\tan \\theta=2$ 이면 $\\sin^{2}\\theta=\\frac{4}{5}$ , $\\cos \\theta=\\frac{1}{\\sqrt{5}}$ 이므로 $a=\\frac{8}{5}$ , $b=2 \\times \\frac{4}{5}\\times \\frac{2}{\\sqrt{5}}\\times \\sqrt{5}=\\frac{16}{5}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "좌표"
   },
   {
    "n": 7,
    "text": "$a+b=\\frac{24}{5}$ 이므로 $p+q=29$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4",
+    "C5"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\cos^3$",
+   "cond": "C3",
+   "text": [
+    "분모를 $\\cos^3\\theta$로 나눈다."
+   ]
+  },
+  {
+   "h": "유일한 실근",
+   "cond": "C3",
+   "text": [
+    "$u^2+2u+7>0$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 기울기 $18$",
+   "body": [
+    "원 $(x-1)^2+y^2=1$과 직선 $x=2$가 있다. $0<\\theta<\\frac\\pi2$에 대하여 원점을 지나고 $x$축과 각 $\\theta$를 이루는 직선이 원과 만나는 $\\mathrm{O}$가 아닌 점을 $\\mathrm{B}$, 직선 $x=2$와 만나는 점을 $\\mathrm{C}$라 하고, 선분 $\\mathrm{OC}$ 위에 $\\overline{\\mathrm{OP}}=\\overline{\\mathrm{BC}}$인 점 $\\mathrm{P}$를 잡는다. $\\mathrm{P}$가 그리는 곡선 위에서 접선의 기울기가 $18$인 점을 $(a,b)$라 할 때, $a+b=\\frac qp$이다. $p+q$의 값을 구하시오. (단, $p$, $q$는 서로소)"
+   ],
+   "answer": 41,
+   "hint": "$u=3$: $a=\\frac95$, $b=2\\sin^2\\theta\\tan\\theta=\\frac{27}5$."
+  }
+ ],
+ "line": "시소이드의 기울기는 $\\tan\\theta$의 삼차식.",
  "note": ""
 }

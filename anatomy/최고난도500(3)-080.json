@@ -1,0 +1,141 @@
+{
+ "wrong": "예상 오답 — 세 $\\sec^2$ 값을 각각 근사 계산한 경우",
+ "intro": [
+  "$\\tan\\left(x+\\frac{2\\pi}3\\right)=\\tan\\left(x-\\frac\\pi3\\right)$.",
+  "세 항의 합 $=3\\tan3x$ → $f'=9\\sec^23x$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "함수",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "정의",
+   "why": "",
+   "uses": [
+    3,
+    4,
+    5
+   ]
+  },
+  "C3": {
+   "label": "미분계수",
+   "why": "",
+   "uses": [
+    6,
+    7
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "",
+   "uses": [
+    7
+   ]
+  },
+  "C5": {
+   "label": "단서",
+   "why": "",
+   "uses": [
+    7
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "덧셈정리",
+   "p": [
+    "$\\tan(\\alpha\\pm\\beta)$."
+   ]
+  },
+  {
+   "h": "삼배각",
+   "p": [
+    "$\\tan3x=\\frac{3t-t^3}{1-3t^2}$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 세 탄젠트의 합을 덧셈정리로 3tan 3x로 묶어 직접 계산하기 어려운 미분계수를 간단히 구하는 것",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "방향",
+   "text": "직접 미분하면 $\\sec^{2}\\frac{\\pi}{36}+\\sec^{2}\\frac{13 \\pi}{36}+\\sec^{2}\\frac{25 \\pi}{36}$ 을 계산해야 하므로, 먼저 $f(x)$ 를 간단히 한다. 핵심 관문은 덧셈정리로 세 항을 하나로 묶는 것이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "주기",
+   "text": "$t=\\tan x$ 라 하자. $\\tan \\left(x+\\frac{2 \\pi}{3}\\right)=\\tan \\left(x-\\frac{\\pi}{3}\\right)$ 이고 덧셈정리에 의하여",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "합",
+   "text": "$$\\tan \\left(x+\\frac{\\pi}{3}\\right)+\\tan \\left(x-\\frac{\\pi}{3}\\right)=\\frac{t+\\sqrt{3}}{1-\\sqrt{3}t}+\\frac{t-\\sqrt{3}}{1+\\sqrt{3}t}=\\frac{8 t}{1-3 t^{2}}$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "삼배각",
+   "text": "따라서 $f(x)=t+\\frac{8 t}{1-3 t^{2}}=\\frac{3 \\left(3 t-t^{3}\\right)}{1-3 t^{2}}=3 \\tan 3 x$ 이다. (정의되는 모든 $x$ 에서 성립한다.)",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "미분",
+   "text": "$f'(x)=9 \\sec^{2}3 x$ 이므로 $f' \\left(\\frac{\\pi}{36}\\right)=\\frac{9}{\\cos^{2}\\frac{\\pi}{12}}$ 이고 $\\cos^{2}\\frac{\\pi}{12}=\\frac{1+\\cos \\frac{\\pi}{6}}{2}=\\frac{2+\\sqrt{3}}{4}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$f' \\left(\\frac{\\pi}{36}\\right)=\\frac{36}{2+\\sqrt{3}}=72-36 \\sqrt{3}$ 이므로 $a=72$ , $b=-36$ 이고 $a-b=108$ 이다.",
+   "uses": [
+    "C3",
+    "C4",
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "반각",
+   "cond": "C3",
+   "text": [
+    "$\\cos^2\\frac\\pi{12}=\\frac{2+\\sqrt3}4$."
+   ]
+  },
+  {
+   "h": "유리화",
+   "cond": "C4",
+   "text": [
+    "$\\frac{36}{2+\\sqrt3}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\frac\\pi{24}$",
+   "body": [
+    "$f(x)=\\tan x+\\tan\\left(x+\\frac\\pi3\\right)+\\tan\\left(x+\\frac{2\\pi}3\\right)$에 대하여 $f'\\left(\\frac\\pi{24}\\right)=a+b\\sqrt2$일 때, $a-b$의 값을 구하시오. (단, $a$, $b$는 유리수)"
+   ],
+   "answer": 54,
+   "hint": "$\\frac9{\\cos^2\\frac\\pi8}=\\frac{36}{2+\\sqrt2}=36-18\\sqrt2$."
+  }
+ ],
+ "line": "세 탄젠트의 합은 $3\\tan3x$."
+}

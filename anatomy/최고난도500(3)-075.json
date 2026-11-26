@@ -1,0 +1,139 @@
+{
+ "wrong": "예상 오답 — $\\sqrt{1-u^2}=1-2x^2$로 두어 $h'\\left(\\frac{\\sqrt3}2\\right)$의 부호를 틀린 경우",
+ "intro": [
+  "$\\sqrt{1-u^2}=|1-2x^2|$ — 숨은 절댓값.",
+  "$x<\\frac1{\\sqrt2}$이면 $\\frac2{\\sqrt{1-x^2}}$, 크면 음."
+ ],
+ "conds": {
+  "C1": {
+   "label": "역함수",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "$h(x)$",
+   "why": "",
+   "uses": [
+    3,
+    4,
+    5
+   ]
+  },
+  "C3": {
+   "label": "연결",
+   "why": "",
+   "uses": [
+    3
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "",
+   "uses": [
+    6
+   ]
+  },
+  "C5": {
+   "label": "단서",
+   "why": "",
+   "uses": [
+    7
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "역사인의 도함수",
+   "p": [
+    "$\\frac1{\\sqrt{1-x^2}}$."
+   ]
+  },
+  {
+   "h": "배각",
+   "p": [
+    "$2\\sin\\theta\\cos\\theta=\\sin2\\theta$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 합성함수를 미분할 때 √(1−u²)=|1−2x²|로 절댓값이 숨어 있어 x=1/√2 양쪽에서 도함수의 부호가 바뀐다는 것을 찾는 것",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$g'$",
+   "text": "$-1<x<1$ 에서 $g'(x)=\\frac{1}{\\cos g(x)}=\\frac{1}{\\sqrt{1-x^{2}}}$ 이다. ( $-\\frac{\\pi}{2}<g(x)<\\frac{\\pi}{2}$ 이므로 $\\cos g(x)>0$ 이다.)",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$u'$",
+   "text": "$u=2 x \\sqrt{1-x^{2}}$ 라 하면 $u'=2 \\sqrt{1-x^{2}}-\\frac{2 x^{2}}{\\sqrt{1-x^{2}}}=\\frac{2 \\left(1-2 x^{2}\\right)}{\\sqrt{1-x^{2}}}$ 이고 $1-u^{2}=1-4 x^{2}+4 x^{4}=\\left(1-2 x^{2}\\right)^{2}$ 이다.",
+   "uses": [
+    "C2",
+    "C3"
+   ]
+  },
+  {
+   "title": "절댓값",
+   "text": "핵심 관문: $\\sqrt{1-u^{2}}=\\left|1-2 x^{2}\\right|$ 이므로 절댓값이 숨어 있다. $x \\ne \\frac{1}{\\sqrt{2}}$ 일 때 $$h'(x)=\\frac{1}{\\left|1-2 x^{2}\\right|}\\times \\frac{2 \\left(1-2 x^{2}\\right)}{\\sqrt{1-x^{2}}}$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "경우",
+   "text": "이므로 $0<x<\\frac{1}{\\sqrt{2}}$ 이면 $h'(x)=\\frac{2}{\\sqrt{1-x^{2}}}$ , $\\frac{1}{\\sqrt{2}}<x<1$ 이면 $h'(x)=-\\frac{2}{\\sqrt{1-x^{2}}}$ 이다. ( $x=\\sin \\theta$ 로 놓으면 $h(x)$ 는 $2 \\theta$ 또는 $\\pi-2 \\theta$ 이다.)",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "대입",
+   "text": "$h' \\left(\\frac{1}{2}\\right)=\\frac{2}{\\sqrt \\frac{3}{2}}=\\frac{4}{\\sqrt{3}}$ , $h' \\left(\\frac{\\sqrt{3}}{2}\\right)=-\\frac{2}{\\frac{1}{2}}=-4$ 이므로 그 곱은 $-\\frac{16}{\\sqrt{3}}$ 이고 제곱하면 $\\frac{256}{3}$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $p+q=3+256=259$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$x=\\frac1{\\sqrt2}$",
+   "cond": "C2",
+   "text": [
+    "경계."
+   ]
+  },
+  {
+   "h": "제곱",
+   "cond": "C4",
+   "text": [
+    "부호는 사라지지만 크기는 다르다."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\frac13$, $\\frac{2\\sqrt2}3$",
+   "body": [
+    "$f(x)=\\sin x$ $\\left(-\\frac\\pi2\\le x\\le\\frac\\pi2\\right)$의 역함수를 $g(x)$, $0<x<1$에서 $h(x)=g\\left(2x\\sqrt{1-x^2}\\right)$라 할 때, $\\left\\{h'\\left(\\frac13\\right)\\times h'\\left(\\frac{2\\sqrt2}3\\right)\\right\\}^2$의 값을 구하시오."
+   ],
+   "answer": 162,
+   "hint": "$h'\\left(\\frac13\\right)=\\frac3{\\sqrt2}$, $h'\\left(\\frac{2\\sqrt2}3\\right)=-6$."
+  }
+ ],
+ "line": "$\\sqrt{(1-2x^2)^2}$은 절댓값."
+}
