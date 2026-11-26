@@ -1,0 +1,164 @@
+{
+ "wrong": "예상 오답 — 넓이의 공비를 $c^2$으로 잡아 $S$를 잘못 구한 경우",
+ "intro": [
+  "지그재그 선분의 길이: 첫째항 $s$, 공비 $c$ → $L=\\frac s{1-c}=\\cot\\frac\\theta2$.",
+  "넓이 $T_n=\\frac12s^3c^{4n-3}$ — 공비 $c^4$, $1-c^4=s^2(1+c^2)$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "두 반직선",
+   "why": "끼인각 $\\theta$.",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "수선의 발",
+   "why": "$\\mathrm{A}_n\\to\\mathrm{B}_n\\to\\mathrm{A}_{n+1}$.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C3": {
+   "label": "$T_n$",
+   "why": "",
+   "uses": [
+    5
+   ]
+  },
+  "C4": {
+   "label": "두 급수",
+   "why": "$L$, $S$.",
+   "uses": [
+    3,
+    5,
+    6
+   ]
+  },
+  "C5": {
+   "label": "연결",
+   "why": "",
+   "uses": [
+    3
+   ]
+  },
+  "C6": {
+   "label": "조건",
+   "why": "$L(\\alpha)=3$.",
+   "uses": [
+    4
+   ]
+  },
+  "C7": {
+   "label": "묻는 것",
+   "why": "$p+q$.",
+   "uses": [
+    7
+   ]
+  },
+  "C8": {
+   "label": "단서",
+   "why": "",
+   "uses": [
+    7
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "반각 공식",
+   "p": [
+    "$\\frac{\\sin\\theta}{1-\\cos\\theta}=\\cot\\frac\\theta2$."
+   ]
+  },
+  {
+   "h": "등비급수",
+   "p": [
+    "공비 $c^4$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 지그재그 길이의 합이 cot(θ/2)가 됨을 반각 공식으로 알아내고, 넓이의 공비가 cos^4θ임을 찾아 1-c^4=s^2(1+c^2)로 정리하는 것",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "거리",
+   "text": "$s=\\sin \\theta$ , $c=\\cos \\theta$ 라 하자. $\\overline{\\mathrm{OB}_{n}}=c \\times \\overline{\\mathrm{OA}_{n}}$ , $\\overline{\\mathrm{OA}_{n+1}}=c \\times \\overline{\\mathrm{OB}_{n}}$ 이므로 $\\overline{\\mathrm{OA}_{n}}=c^{2 n-2}$ , $\\overline{\\mathrm{OB}_{n}}=c^{2 n-1}$ 이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "$L$",
+   "text": "$\\overline{\\mathrm{A}_{n}\\mathrm{B}_{n}}=c^{2 n-2}s$ , $\\overline{\\mathrm{B}_{n}\\mathrm{A}_{n+1}}=c^{2 n-1}s$ 이므로 선분의 길이는 첫째항이 $s$ , 공비가 $c$ 인 등비수열을 이룬다. 따라서 $L(\\theta)=\\frac{s}{1-c}=\\frac{\\sin \\theta}{1-\\cos \\theta}$ 이다.",
+   "uses": [
+    "C4",
+    "C5"
+   ]
+  },
+  {
+   "title": "반각",
+   "text": "핵심 관문 1: 반각 공식에서 $\\frac{\\sin \\theta}{1-\\cos \\theta}=\\frac{2 \\sin \\frac{\\theta}{2}\\cos \\frac{\\theta}{2}}{2 \\sin^{2}\\frac{\\theta}{2}}=\\frac{1}{\\tan \\frac{\\theta}{2}}$ 이다. $L(\\alpha)=3$ 이면 $\\tan \\frac{\\alpha}{2}=\\frac{1}{3}$ 이므로 $\\sin \\alpha=\\frac{3}{5}$ , $\\cos \\alpha=\\frac{4}{5}$ 이다.",
+   "uses": [
+    "C6"
+   ]
+  },
+  {
+   "title": "$T_n$",
+   "text": "삼각형 $\\mathrm{A}_{n}\\mathrm{B}_{n}\\mathrm{A}_{n+1}$ 은 $\\angle \\mathrm{A}_{n+1}=\\frac{\\pi}{2}$ 인 직각삼각형이고 $\\overline{\\mathrm{A}_{n}\\mathrm{A}_{n+1}}=c^{2 n-2}-c^{2 n}=c^{2 n-2}s^{2}$ 이므로 $T_{n}=$ $\\frac{1}{2}\\times c^{2 n-2}s^{2}\\times c^{2 n-1}s=\\frac{1}{2}s^{3}c^{4 n-3}$ 이다.",
+   "uses": [
+    "C3",
+    "C4"
+   ]
+  },
+  {
+   "title": "$S$",
+   "text": "핵심 관문 2: $T_{n}$ 은 공비가 $c^{4}$ 인 등비수열이므로 $S(\\theta)=\\frac{s^{3}c}{2(1-c^{4})}=\\frac{s^{3}c}{2 s^{2}(1+c^{2})}=\\frac{s c}{2(1+c^{2})}$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $S(\\alpha)=\\frac{\\frac{12}{25}}{2 \\times \\frac{41}{25}}=\\frac{6}{41}$ 이고 $p+q=47$ 이다.",
+   "uses": [
+    "C7",
+    "C8"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "두 종류의 선분",
+   "cond": "C4",
+   "text": [
+    "$c^{2n-2}s$, $c^{2n-1}s$ — 합쳐서 공비 $c$."
+   ]
+  },
+  {
+   "h": "넓이의 공비",
+   "cond": "C4",
+   "text": [
+    "$c^4$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $L(\\alpha)=2$",
+   "body": [
+    "$0<\\theta<\\frac\\pi2$에 대하여 점 $\\mathrm{O}$에서 시작하는 두 반직선 $l$, $m$의 끼인각이 $\\theta$이다. $l$ 위에 $\\overline{\\mathrm{OA}_1}=1$인 $\\mathrm{A}_1$을 잡고, $\\mathrm{A}_n$에서 $m$에 내린 수선의 발을 $\\mathrm{B}_n$, $\\mathrm{B}_n$에서 $l$에 내린 수선의 발을 $\\mathrm{A}_{n+1}$이라 하자. $T_n=\\triangle\\mathrm{A}_n\\mathrm{B}_n\\mathrm{A}_{n+1}$, $L(\\theta)=\\sum(\\overline{\\mathrm{A}_n\\mathrm{B}_n}+\\overline{\\mathrm{B}_n\\mathrm{A}_{n+1}})$, $S(\\theta)=\\sum T_n$이라 할 때, $L(\\alpha)=2$이면 $S(\\alpha)=\\frac qp$이다. $p+q$의 값을 구하시오. (단, $p$, $q$는 서로소)"
+   ],
+   "answer": 20,
+   "hint": "$\\tan\\frac\\alpha2=\\frac12$ → $s=\\frac45$, $c=\\frac35$. $S=\\frac{sc}{2(1+c^2)}=\\frac3{17}$."
+  }
+ ],
+ "line": "지그재그 길이 = $\\cot\\frac\\theta2$."
+}

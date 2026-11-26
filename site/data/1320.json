@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — (나)를 쓰지 않아 $a_1$을 정하지 못한 경우",
  "answer": 197,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -45,9 +45,11 @@
     0
    ],
    "text": "곡선 $y=x^{2}$ 위의 점 $\\mathrm{P}_{n}\\left(a_{n},\\,a_{n}^{2}\\right)$ $(n=1,\\,2,\\,3,\\,\\cdots)$ 이 다음 조건을 만족시킨다.",
-   "label": "",
+   "label": "포물선 위 점",
    "why": "",
-   "uses": []
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C2",
@@ -56,9 +58,12 @@
     0
    ],
    "text": "(가) 모든 자연수 $n$ 에 대하여 직선 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}$ 의 기울기는 $\\left(\\frac{1}{2}\\right)^{n-1}$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(가)",
+   "why": "기울기 $\\left(\\frac12\\right)^{n-1}$.",
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C3",
@@ -67,9 +72,11 @@
     1
    ],
    "text": "(나) 수열 $\\left\\{a_{n}\\right\\}$ 은 수렴한다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(나)",
+   "why": "수렴.",
+   "uses": [
+    4
+   ]
   },
   {
    "id": "C4",
@@ -78,9 +85,12 @@
     0
    ],
    "text": "원점 $\\mathrm{O}$ 에 대하여 삼각형 $\\mathrm{OP}_{n}\\mathrm{P}_{n+1}$ 의 넓이를 $T_{n}$ 이라 하자.",
-   "label": "",
+   "label": "$T_n$",
    "why": "",
-   "uses": []
+   "uses": [
+    5,
+    6
+   ]
   },
   {
    "id": "C5",
@@ -89,9 +99,11 @@
     1
    ],
    "text": "$\\sum_{n=1}^{\\infty}T_{n}=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$p+q$.",
+   "uses": [
+    7
+   ]
   },
   {
    "id": "C6",
@@ -100,60 +112,118 @@
     2
    ],
    "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "단서",
+   "why": "서로소.",
+   "uses": [
+    7
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "할선 기울기 $=a_n+a_{n+1}$ → 점화식.",
+  "진동 성분 $(-1)^{n-1}b_1$ — 수렴하려면 $b_1=0$."
+ ],
  "topic": "급수 — 포물선 위 점들의 할선 기울기 조건과 수렴이라는 숨은 조건",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "할선 기울기",
+   "p": [
+    "$\\frac{a^2-b^2}{a-b}=a+b$."
+   ]
+  },
+  {
+   "h": "삼각형 넓이",
+   "p": [
+    "$\\frac12|x_1y_2-x_2y_1|$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 할선 기울기가 두 x좌표의 합이라는 사실로 점화식을 얻고, '수렴'이라는 조건이 진동 성분을 없애 첫째항을 결정하는 숨은 조건임을 찾는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "직선 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}$ 의 기울기는 $\\frac{a_{n+1}^{2}-a_{n}^{2}}{a_{n+1}-a_{n}}=a_{n}+a_{n+1}$ 이므로 (가)는 $a_{n}+a_{n+1}=\\left(\\frac{1}{2}\\right)^{n-1}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "점화식"
   },
   {
    "n": 3,
    "text": "$b_{n}=a_{n}-\\frac{4}{3}\\left(\\frac{1}{2}\\right)^{n}$ 이라 하면 $\\frac{4}{3}\\left(\\frac{1}{2}\\right)^{n}+\\frac{4}{3}\\left(\\frac{1}{2}\\right)^{n+1}=\\left(\\frac{1}{2}\\right)^{n-1}$ 이므로 $b_{n}+b_{n+1}=0$ , 즉 $b_{n}=(-1)^{n-1}b_{1}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "특수해"
   },
   {
    "n": 4,
    "text": "핵심 관문: $a_{n}=\\frac{4}{3}\\left(\\frac{1}{2}\\right)^{n}+(-1)^{n-1}b_{1}$ 이 수렴하려면 $b_{1}=0$ 이어야 한다. 따라서 $a_{n}=\\frac{4}{3}\\left(\\frac{1}{2}\\right)^{n}$ , $a_{1}=\\frac{2}{3}$ 으로 결정된다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "수렴 조건"
   },
   {
    "n": 5,
    "text": "$\\triangle \\mathrm{OP}_{n}\\mathrm{P}_{n+1}$ 의 넓이 $T_{n}$ 은 $\\frac{1}{2}\\left|a_{n}a_{n+1}^{2}-a_{n+1}a_{n}^{2}\\right|=\\frac{1}{2}a_{n}a_{n+1}(a_{n}-a_{n+1})$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "넓이"
   },
   {
    "n": 6,
    "text": "$a_{n}a_{n+1}=\\frac{16}{9}\\left(\\frac{1}{2}\\right)^{2 n+1}$ , $a_{n}-a_{n+1}=\\frac{4}{3}\\left(\\frac{1}{2}\\right)^{n+1}$ 이므로 $T_{n}=\\frac{1}{2}\\times \\frac{16}{9}\\times \\frac{4}{3}\\left(\\frac{1}{2}\\right)^{3 n+2}=\\frac{8}{27}\\left(\\frac{1}{8}\\right)^{n}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "등비"
   },
   {
    "n": 7,
    "text": "따라서 $\\sum_{n=1}^{\\infty}T_{n}=\\frac{8}{27}\\times \\frac{\\frac{1}{8}}{1-\\frac{1}{8}}=\\frac{8}{189}$ 이고 $p+q=197$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5",
+    "C6"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "숨은 조건",
+   "cond": "C3",
+   "text": [
+    "수렴이 첫째항을 정한다."
+   ]
+  },
+  {
+   "h": "공비",
+   "cond": "C4",
+   "text": [
+    "$\\frac18$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 기울기 $2\\left(\\frac12\\right)^{n-1}$",
+   "body": [
+    "곡선 $y=x^2$ 위의 점 $\\mathrm{P}_n(a_n,a_n^2)$이 모든 $n$에 대하여 직선 $\\mathrm{P}_n\\mathrm{P}_{n+1}$의 기울기가 $2\\left(\\frac12\\right)^{n-1}$이고 $\\{a_n\\}$이 수렴한다. 삼각형 $\\mathrm{OP}_n\\mathrm{P}_{n+1}$의 넓이를 $T_n$이라 할 때 $\\sum T_n=\\frac qp$이다. $p+q$의 값을 구하시오. (단, $\\mathrm{O}$는 원점, $p$, $q$는 서로소)"
+   ],
+   "answer": 253,
+   "hint": "$a_n$이 $2$배 → 넓이 $8$배: $\\frac{64}{189}$."
+  }
+ ],
+ "line": "수렴 조건은 진동 성분을 지운다.",
  "note": ""
 }
