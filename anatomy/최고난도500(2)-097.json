@@ -1,0 +1,104 @@
+{
+ "wrong": "예상 오답 — 점 $\\mathrm{B}$의 정사영을 $\\mathrm{C}$로 보거나 이면각을 따로 구하려 한 경우",
+ "intro": [
+  "삼수선: $\\mathrm{AC}\\perp\\mathrm{CD}$ → $\\mathrm{CD}\\perp$ 평면 $\\mathrm{ABC}$.",
+  "$\\mathrm{B}$의 그림자는 $\\mathrm{AC}$ 위의 수선의 발 $\\mathrm{H}$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "사면체",
+   "why": "$\\mathrm{AB}\\perp$ 평면, 직각, $4,3,12$.",
+   "uses": [
+    2,
+    3,
+    4
+   ]
+  },
+  "C2": {
+   "label": "묻는 것",
+   "why": "$5S$.",
+   "uses": [
+    4,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "삼수선의 정리",
+   "p": [
+    "$\\mathrm{AB}\\perp\\alpha$, $\\mathrm{BC}\\perp\\mathrm{CD}$ → $\\mathrm{AC}\\perp\\mathrm{CD}$."
+   ]
+  },
+  {
+   "h": "직각삼각형의 닮음",
+   "p": [
+    "$\\overline{\\mathrm{AH}}=\\frac{\\mathrm{AB}^2}{\\mathrm{AC}}$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 삼수선의 정리로 두 평면의 수직을 끌어내 꼭짓점의 정사영을 교선 위에서 찾기",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "수직 평면",
+   "text": "$\\mathrm{AB}$ 가 평면 $\\mathrm{BCD}$ 에 수직이고 $\\mathrm{BC}$ 와 $\\mathrm{CD}$ 가 수직이므로 삼수선의 정리에 의하여 $\\mathrm{AC}$ 와 $\\mathrm{CD}$ 는 수직이다. 따라서 직선 $\\mathrm{CD}$ 는 두 직선 $\\mathrm{BC}$ , $\\mathrm{AC}$ 에 수직이므로 평면 $\\mathrm{ABC}$ 에 수직이고, 평면 $\\mathrm{ACD}$ 는 평면 $\\mathrm{ABC}$ 에 수직이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$\\mathrm{B}$의 그림자",
+   "text": "점 $\\mathrm{B}$ 에서 직선 $\\mathrm{AC}$ 에 내린 수선의 발을 $\\mathrm{H}$ 라 하자. $\\mathrm{BH}$ 는 $\\mathrm{AC}$ 에 수직이고, 평면 $\\mathrm{ABC}$ 위의 직선이므로 $\\mathrm{CD}$ 에도 수직이다. 따라서 $\\mathrm{BH}$ 는 평면 $\\mathrm{ACD}$ 에 수직이고, 점 $\\mathrm{B}$ 의 정사영은 $\\mathrm{H}$ 이다. 이것이 핵심 관문이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "비율",
+   "text": "직각삼각형 $\\mathrm{ABC}$ 에서 $\\overline{\\mathrm{AC}}=5$ , $\\overline{\\mathrm{AH}}=\\frac{\\overline{\\mathrm{AB}}^{2}}{\\overline{\\mathrm{AC}}}=\\frac{16}{5}$ 이다. 삼각형 $\\mathrm{ABD}$ 의 정사영은 삼각형 $\\mathrm{AHD}$ 이고, 이는 삼각형 $\\mathrm{ACD}$ 에서 밑변 $\\mathrm{AC}$ 를 $\\frac{16}{25}$ 로 줄인 것이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "삼각형 $\\mathrm{ACD}$ 의 넓이는 $\\frac{1}{2}\\times 5 \\times 12=30$ 이므로 $S=30 \\times \\frac{16}{25}=\\frac{96}{5}$ , $5 S=96$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "그림자 위치",
+   "cond": "C1",
+   "text": [
+    "교선 $\\mathrm{AC}$ 위의 수선의 발."
+   ]
+  },
+  {
+   "h": "넓이 비",
+   "cond": "C2",
+   "text": [
+    "$\\frac{\\overline{\\mathrm{AH}}}{\\overline{\\mathrm{AC}}}=\\frac{16}{25}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $6,8,15$",
+   "body": [
+    "사면체 $\\mathrm{ABCD}$에서 직선 $\\mathrm{AB}$는 평면 $\\mathrm{BCD}$에 수직이고 $\\angle\\mathrm{BCD}=\\frac\\pi2$이며, $\\overline{\\mathrm{AB}}=6$, $\\overline{\\mathrm{BC}}=8$, $\\overline{\\mathrm{CD}}=15$이다. 삼각형 $\\mathrm{ABD}$의 평면 $\\mathrm{ACD}$ 위로의 정사영의 넓이를 구하시오."
+   ],
+   "answer": 27,
+   "hint": "$\\overline{\\mathrm{AC}}=10$, $\\overline{\\mathrm{AH}}=\\frac{36}{10}$. $75\\times\\frac9{25}$."
+  }
+ ],
+ "line": "삼수선 → 수직 평면 → 그림자는 교선 위."
+}

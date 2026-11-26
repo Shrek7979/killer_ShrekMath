@@ -1,0 +1,127 @@
+{
+ "wrong": "예상 오답 — 현의 기울기를 중심선의 기울기와 무관하게 두어 최솟값을 너무 작게 잡은 경우",
+ "intro": [
+  "현의 중점까지 $\\overline{\\mathrm{OK}}=4$ 일정, 정사영 길이 $6\\cos\\beta$.",
+  "$\\sin\\beta\\le\\sin\\alpha$와 (가)를 합쳐 $v=\\sin\\beta\\le\\frac7{25}$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "구 위 두 점",
+   "why": "반지름 $5$.",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "(가)",
+   "why": "$z\\ge3$.",
+   "uses": [
+    3,
+    5
+   ]
+  },
+  "C3": {
+   "label": "(나)",
+   "why": "$\\overline{\\mathrm{PQ}}=6$.",
+   "uses": [
+    2
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$25(M+m)$.",
+   "uses": [
+    4,
+    5,
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "현의 중점",
+   "p": [
+    "$\\mathrm{OK}\\perp\\mathrm{PQ}$, $\\overline{\\mathrm{OK}}=\\sqrt{25-9}$."
+   ]
+  },
+  {
+   "h": "직선과 평면의 각",
+   "p": [
+    "$\\mathrm{PQ}\\perp\\mathrm{OK}$이면 $\\beta\\le\\alpha$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 현의 중점까지의 거리가 일정함과 '현이 기울 수 있는 최대각 ≤ 중심선의 기울기'를 결합해 부등식으로 최적화",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "중점 거리",
+   "text": "구의 중심 $\\mathrm{O}$ 와 선분 $\\mathrm{PQ}$ 의 중점 $\\mathrm{K}$ 에 대하여 $\\mathrm{OK}$ 는 $\\mathrm{PQ}$ 에 수직이고 $\\overline{\\mathrm{OK}}=\\sqrt{25-9}=4$ 이다. 직선 $\\mathrm{OK}$ 와 $z$ 축이 이루는 각을 $\\alpha$ , 직선 $\\mathrm{PQ}$ 와 $x y$ 평면이 이루는 각을 $\\beta$ 라 하면 정사영의 길이는 $6 \\cos \\beta$ 이다.",
+   "uses": [
+    "C1",
+    "C3"
+   ]
+  },
+  {
+   "title": "두 각의 관계",
+   "text": "점 $\\mathrm{K}$ 의 $z$ 좌표는 $4 \\cos \\alpha$ 이고 두 끝점의 $z$ 좌표는 $4 \\cos \\alpha \\pm 3 \\sin \\beta$ 이다. 직선 $\\mathrm{PQ}$ 는 직선 $\\mathrm{OK}$ 에 수직이므로 $x y$ 평면과 이루는 각은 $\\mathrm{OK}$ 와 $z$ 축이 이루는 각 이하이다. 즉 $\\sin \\beta \\le \\sin \\alpha$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "최댓값",
+   "text": "$\\beta=0$ 이고 $\\cos \\alpha \\ge \\frac{3}{4}$ 이면 조건을 만족시키므로 (예: 평면 $z=3$ 위의 길이 $6$ 인 현) $M=6$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "최솟값",
+   "text": "최솟값: 조건 (가)는 $4 \\cos \\alpha-3 \\sin \\beta \\ge 3$ 이다. $v=\\sin \\beta$ 라 하면 $3+3 v \\le 4 \\cos \\alpha \\le 4 \\sqrt{1-v^{2}}$ 이므로 $9(1+v)^{2}\\le 16(1-v^{2})$ , 즉 $(25 v-7)(v+1)\\le 0$ 이고 $v \\le \\frac{7}{25}$ 이다. 등호는 $\\cos \\alpha=\\frac{24}{25}$ , $\\sin \\beta=\\sin \\alpha=\\frac{7}{25}$ 일 때 성립한다(점 $\\mathrm{P}$ 가 원 $z=3$ 위에 있을 때).",
+   "uses": [
+    "C2",
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $m=6 \\times \\frac{24}{25}=\\frac{144}{25}$ 이고 $25(M+m)=150+144=294$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "각의 제한",
+   "cond": "C2",
+   "text": [
+    "현은 중심선보다 더 기울 수 없다."
+   ]
+  },
+  {
+   "h": "등호",
+   "cond": "C4",
+   "text": [
+    "$\\mathrm{P}$가 원 $z=3$ 위."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $z\\ge0$",
+   "body": [
+    "구 $x^2+y^2+z^2=25$ 위의 두 점 $\\mathrm{P}$, $\\mathrm{Q}$의 $z$좌표가 모두 $0$ 이상이고 $\\overline{\\mathrm{PQ}}=6$이다. 선분 $\\mathrm{PQ}$의 $xy$평면 위로의 정사영의 길이의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $25(M+m)$의 값을 구하시오."
+   ],
+   "answer": 240,
+   "hint": "$3v\\le4\\cos\\alpha\\le4\\sqrt{1-v^2}$ → $v\\le\\frac45$, $m=\\frac{18}5$, $M=6$."
+  }
+ ],
+ "line": "현은 중심선보다 더 눕지 못한다."
+}
