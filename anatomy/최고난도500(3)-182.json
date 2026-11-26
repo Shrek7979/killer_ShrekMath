@@ -1,0 +1,143 @@
+{
+ "wrong": "예상 오답 — $a_n$을 각각 계산해 더하려 한 경우",
+ "intro": [
+  "부분합 = $\\int\\frac{r(1-r^N)}{1-r}$, $r=x(1-x)\\le\\frac14$.",
+  "$\\int_0^1\\frac{dx}{x^2-x+1}=\\frac{2\\sqrt3}9\\pi$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "자연수",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "$a_n$",
+   "why": "",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C3": {
+   "label": "",
+   "why": "",
+   "uses": [
+    3
+   ]
+  },
+  "C4": {
+   "label": "급수",
+   "why": "",
+   "uses": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "C5": {
+   "label": "단서",
+   "why": "",
+   "uses": [
+    7
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "등비급수",
+   "p": [
+    "합과 적분 교환."
+   ]
+  },
+  {
+   "h": "탄젠트 치환",
+   "p": [
+    "완전제곱."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 적분들의 급수를 피적분함수의 등비급수로 바꾸고 나머지항을 평가한 뒤 탄젠트 치환으로 마무리하는 것",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "범위",
+   "text": "$r(x)=x(1-x)$ 라 하면 $0 \\le r(x)\\le \\frac{1}{4}$ 이다. 핵심 관문은 합과 적분의 순서를 바꾸기 위해 부분합을 등비수열의 합으로 쓰는 것이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "부분합",
+   "text": "$$\\sum_{n=1}^{N}a_{n}=\\int_{0}^{1}\\frac{r(x)\\left\\{1-\\left\\{r(x)\\right\\}^{N}\\right\\}}{1-r(x)}dx$$",
+   "uses": [
+    "C2",
+    "C3"
+   ]
+  },
+  {
+   "title": "수렴",
+   "text": "$1-r(x)\\ge \\frac{3}{4}$ 이므로 $0 \\le \\frac{r(x)^{N+1}}{1-r(x)}\\le \\frac{4}{3}\\left(\\frac{1}{4}\\right)^{N+1}$ 이고 이 항의 적분은 $0$ 으로 수렴한다. 따라서",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "극한",
+   "text": "$$\\sum_{n=1}^{\\infty}a_{n}=\\int_{0}^{1}\\frac{x(1-x)}{1-x+x^{2}}dx=\\int_{0}^{1}\\left(\\frac{1}{x^{2}-x+1}-1 \\right)dx$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "치환",
+   "text": "이다. $x-\\frac{1}{2}=\\frac{\\sqrt{3}}{2}\\tan \\theta$ $\\left(-\\frac{\\pi}{6}\\le \\theta \\le \\frac{\\pi}{6}\\right)$ 로 치환하면 $x^{2}-x+1=\\frac{3}{4 \\cos^{2}\\theta}$ , $dx=\\frac{\\sqrt{3}}{2 \\cos^{2}\\theta}d \\theta$ 이므로 $$\\int_{0}^{1}\\frac{1}{x^{2}-x+1}dx=\\int_{-\\frac{\\pi}{6}}^{\\frac{\\pi}{6}}\\frac{2}{\\sqrt{3}}d \\theta=\\frac{2 \\pi}{3 \\sqrt{3}}=\\frac{2 \\sqrt{3}}{9}\\pi$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 합은 $\\frac{2 \\sqrt{3}}{9}\\pi-1$ 이고 $p=\\frac{2}{9}$ , $q=-1$ 이므로 $81 \\left(p^{2}+q^{2}\\right)=4+81=85$ 이다.",
+   "uses": [
+    "C4",
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "나머지 평가",
+   "cond": "C4",
+   "text": [
+    "$1-r\\ge\\frac34$."
+   ]
+  },
+  {
+   "h": "구간",
+   "cond": "C4",
+   "text": [
+    "$\\pm\\frac\\pi6$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\sum2^na_n$",
+   "body": [
+    "$a_n=\\int_0^1x^n(1-x)^ndx$에 대하여 $\\sum_{n=1}^\\infty2^na_n=p\\pi+q$일 때, $100(p^2+q^2)$의 값을 구하시오. (단, $p$, $q$는 유리수)"
+   ],
+   "answer": 125,
+   "hint": "$\\int_0^1\\frac{2r}{1-2r}dx=\\int_0^1\\frac{dx}{1-2x+2x^2}-1=\\frac\\pi2-1$."
+  }
+ ],
+ "line": "적분의 급수 = 등비급수의 적분."
+}
