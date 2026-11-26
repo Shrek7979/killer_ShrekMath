@@ -10,9 +10,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 아래쪽 호의 원주각을 위쪽과 같다고 본 경우",
  "answer": 225,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -31,9 +31,11 @@
     0
    ],
    "text": "두 초점이 $\\mathrm{F}(4,\\,0)$ , $\\mathrm{F'}(-4,\\,0)$ 인 쌍곡선 $\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1$ $(a>0,\\,b>0)$ 과 중심이 $(0,\\,3)$ 이고 두 점 $\\mathrm{F}$ , $\\mathrm{F'}$ 을 지나는 원 $C$ 가 있다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "쌍곡선과 원",
+   "why": "초점 $(\\pm4,0)$, 중심 $(0,3)$, 반지름 $5$.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C2",
@@ -42,9 +44,11 @@
     1
    ],
    "text": "원 $C$ 와 쌍곡선이 만나는 점 중 제 $1$ 사분면 위의 점을 $\\mathrm{P}$ , 제 $4$ 사분면 위의 점을 $\\mathrm{Q}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "$\\mathrm{P}$, $\\mathrm{Q}$",
+   "why": "제$1$·제$4$사분면의 교점.",
+   "uses": [
+    3
+   ]
   },
   {
    "id": "C3",
@@ -53,66 +57,118 @@
     2
    ],
    "text": "두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 의 $y$ 좌표의 차가 $\\frac{15}{4}$ 일 때, $\\overline{\\mathrm{PF}}\\times \\overline{\\mathrm{PF'}}\\times \\overline{\\mathrm{QF}}\\times \\overline{\\mathrm{QF'}}$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "수치와 묻는 것",
+   "why": "$y$좌표의 차 $\\frac{15}4$; 네 거리의 곱.",
+   "uses": [
+    4,
+    5,
+    6
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "원주각: 위쪽 호의 $\\mathrm{P}$는 $\\angle\\mathrm{OKF}$, 아래쪽 호의 $\\mathrm{Q}$는 그 보각.",
+  "쌍곡선: $d_1d_2=\\frac{2b^2}{1-\\cos\\theta}$, 넓이 $=b^2\\cot\\frac\\theta2$ 꼴."
+ ],
  "topic": "쌍곡선 — 두 초점을 지나는 원 위의 점에서 본 초점각(원주각)과 초점거리의 곱",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "원주각",
+   "p": [
+    "같은 호 위는 같고, 반대 호는 보각."
+   ]
+  },
+  {
+   "h": "초점삼각형",
+   "p": [
+    "$(d_1-d_2)^2=4a^2$ + 코사인법칙."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 원주각으로 위·아래 호에서의 초점각이 서로 보각임을 찾고, 쌍곡선의 정의와 코사인법칙으로 초점거리의 곱과 y좌표를 각의 함수로 나타내어야 함",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "원 $C$ 의 중심을 $\\mathrm{K}(0,\\,3)$ 이라 하면 반지름의 길이는 $\\overline{\\mathrm{KF}}=5$ 이고 $\\cos(\\angle \\mathrm{OKF})=\\frac{3}{5}$ , $\\sin(\\angle \\mathrm{OKF})=\\frac{4}{5}$ 이다. 현 $\\mathrm{F'F}$ 에 대한 중심각 중 $x$ 축 아래쪽 호에 대한 것은 $\\angle \\mathrm{F'KF}=2 \\angle \\mathrm{OKF}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "중심각"
   },
   {
    "n": 3,
    "text": "핵심 관문: 원주각의 성질에서 $x$ 축 위쪽의 호 위에 있는 점 $\\mathrm{P}$ 에서는 $\\angle \\mathrm{F'PF}=\\angle \\mathrm{OKF}$ 이고, 아래쪽의 호 위에 있는 점 $\\mathrm{Q}$ 에서는 $\\angle \\mathrm{F'QF}=\\pi-\\angle \\mathrm{OKF}$ 이다. 따라서 $\\cos(\\angle \\mathrm{F'PF})=\\frac{3}{5}$ , $\\cos(\\angle \\mathrm{F'QF})=-\\frac{3}{5}$ 이고 두 각의 사인은 모두 $\\frac{4}{5}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "원주각"
   },
   {
    "n": 4,
-   "text": "쌍곡선 위의 점 $\\mathrm{X}$ 에 대하여 $\\overline{\\mathrm{XF}}=d_{1}$ , $\\overline{\\mathrm{XF'}}=d_{2}$ , $\\angle \\mathrm{F'XF}=\\theta$ 라 하면 쌍곡선의 정의에서 $(d_{1}-d_{2})^{2}=4 a^{2}$ 이고 코사인법칙에서 $64=d_{1}^{2}+d_{2}^{2}-2 d_{1}d_{2}\\cos \\theta$ 이다. 두 식을 빼면 $64-4 a^{2}=2 d_{1}d_{2}(1-\\cos \\theta)$ 이고 $a^{2}+b^{2}=16$ 이므로 $d_{1}d_{2}=\\frac{2 b^{2}}{1-\\cos \\theta}$ 이다.",
-   "uses": [],
-   "title": ""
+   "text": "쌍곡선 위의 점 $\\mathrm{X}$ 에 대하여 $\\overline{\\mathrm{XF}}=d_{1}$ , $\\overline{\\mathrm{XF'}}=d_{2}$ , $\\angle \\mathrm{F'XF}=\\theta$ 라 하면 쌍곡선의 정의에서 $(d_{1}-d_{2})^{2}=4 a^{2}$ 이고 코사인법칙에서 $64=d_{1}^{2}+d_{2}^{2}-2 d_{1}d_{2}\\cos \\theta$ 이다. 두 식을 빼면 $64-4 a^{2}=2 d_{1}d_{2}(1-\\cos \\theta)$ 이고 $a^{2}+b^{2}=16$ 이므로 $d_{1}d_{2}=\\frac{2 b^{2}}{1-\\cos \\theta}$ 이다. 따라서 $\\overline{\\mathrm{PF}}\\times \\overline{\\mathrm{PF'}}=\\frac{2 b^{2}}{1-\\frac{3}{5}}=5 b^{2}$ , $\\overline{\\mathrm{QF}}\\times \\overline{\\mathrm{QF'}}=\\frac{2 b^{2}}{1+\\frac{3}{5}}=\\frac{5}{4}b^{2}$ 이다.",
+   "uses": [
+    "C3"
+   ],
+   "title": "곱의 공식"
   },
   {
    "n": 5,
-   "text": "따라서 $\\overline{\\mathrm{PF}}\\times \\overline{\\mathrm{PF'}}=\\frac{2 b^{2}}{1-\\frac{3}{5}}=5 b^{2}$ , $\\overline{\\mathrm{QF}}\\times \\overline{\\mathrm{QF'}}=\\frac{2 b^{2}}{1+\\frac{3}{5}}=\\frac{5}{4}b^{2}$ 이다.",
-   "uses": [],
-   "title": ""
+   "text": "삼각형 $\\mathrm{PF'F}$ 의 넓이는 $\\frac{1}{2}\\times 5 b^{2}\\times \\frac{4}{5}=2 b^{2}$ 이고, 점 $\\mathrm{P}$ 의 $y$ 좌표를 $y_{\\mathrm{P}}$ 라 하면 이 넓이는 $\\frac{1}{2}\\times 8 \\times y_{\\mathrm{P}}$ 이므로 $y_{\\mathrm{P}}=\\frac{b^{2}}{2}$ 이다. 같은 방법으로 삼각형 $\\mathrm{QF'F}$ 의 넓이는 $\\frac{b^{2}}{2}$ 이므로 점 $\\mathrm{Q}$ 의 $y$ 좌표는 $-\\frac{b^{2}}{8}$ 이다. (이로부터 원 $C$ 와 쌍곡선은 제 $1$ 사분면, 제 $4$ 사분면에서 각각 한 점에서만 만난다.)",
+   "uses": [
+    "C3"
+   ],
+   "title": "$y$좌표"
   },
   {
    "n": 6,
-   "text": "삼각형 $\\mathrm{PF'F}$ 의 넓이는 $\\frac{1}{2}\\times 5 b^{2}\\times \\frac{4}{5}=2 b^{2}$ 이고, 점 $\\mathrm{P}$ 의 $y$ 좌표를 $y_{\\mathrm{P}}$ 라 하면 이 넓이는 $\\frac{1}{2}\\times 8 \\times y_{\\mathrm{P}}$ 이므로 $y_{\\mathrm{P}}=\\frac{b^{2}}{2}$ 이다. 같은 방법으로 삼각형 $\\mathrm{QF'F}$ 의 넓이는 $\\frac{b^{2}}{2}$ 이므로 점 $\\mathrm{Q}$ 의 $y$ 좌표는 $-\\frac{b^{2}}{8}$ 이다. (이로부터 원 $C$ 와 쌍곡선은 제 $1$ 사분면, 제 $4$ 사분면에서 각각 한 점에서만 만난다.)",
-   "uses": [],
-   "title": ""
+   "text": "두 점의 $y$ 좌표의 차는 $\\frac{b^{2}}{2}+\\frac{b^{2}}{8}=\\frac{5 b^{2}}{8}=\\frac{15}{4}$ 이므로 $b^{2}=6$ , $a^{2}=10$ 이다. (실제로 $\\mathrm{P}(5,\\,3)$ 은 원 $C$ 와 쌍곡선 위의 점이다.)",
+   "uses": [
+    "C3"
+   ],
+   "title": "$b^2$"
   },
   {
    "n": 7,
-   "text": "두 점의 $y$ 좌표의 차는 $\\frac{b^{2}}{2}+\\frac{b^{2}}{8}=\\frac{5 b^{2}}{8}=\\frac{15}{4}$ 이므로 $b^{2}=6$ , $a^{2}=10$ 이다. (실제로 $\\mathrm{P}(5,\\,3)$ 은 원 $C$ 와 쌍곡선 위의 점이다.)",
-   "uses": [],
-   "title": ""
-  },
-  {
-   "n": 8,
    "text": "따라서 구하는 값은 $5 b^{2}\\times \\frac{5}{4}b^{2}=30 \\times \\frac{15}{2}=225$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "보각",
+   "cond": "C2",
+   "text": [
+    "$\\cos$의 부호만 바뀌고 $\\sin$은 같다."
+   ]
+  },
+  {
+   "h": "넓이로 $y$좌표",
+   "cond": "C3",
+   "text": [
+    "$\\frac12\\cdot8\\cdot|y|$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 초점 $(\\pm3,0)$",
+   "body": [
+    "두 초점이 $\\mathrm{F}(3,0)$, $\\mathrm{F'}(-3,0)$인 쌍곡선 $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$과 중심이 $(0,4)$이고 $\\mathrm{F}$, $\\mathrm{F'}$을 지나는 원 $C$가 있다. $C$와 쌍곡선의 교점 중 제$1$사분면 위의 점을 $\\mathrm{P}$, 제$4$사분면 위의 점을 $\\mathrm{Q}$라 하자. 두 점의 $y$좌표의 차가 $\\frac{20}9$일 때, $9\\times\\overline{\\mathrm{PF}}\\times\\overline{\\mathrm{PF'}}\\times\\overline{\\mathrm{QF}}\\times\\overline{\\mathrm{QF'}}$의 값을 구하시오."
+   ],
+   "answer": 400,
+   "hint": "$\\cos=\\frac45$. 곱 $10b^2$, $\\frac{10}9b^2$; $y$좌표 $b^2$, $-\\frac{b^2}9$ → $b^2=2$."
+  }
+ ],
+ "line": "두 초점을 지나는 원 — 원주각이 초점각.",
  "note": ""
 }

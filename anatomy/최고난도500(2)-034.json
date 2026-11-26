@@ -1,0 +1,126 @@
+{
+ "wrong": "예상 오답 — 세 접점과 초점이 직사각형을 이룸을 못 보고 $\\mathrm{U},\\mathrm{V},\\mathrm{W}$를 따로 구하다 막힌 경우",
+ "intro": [
+  "$\\mathrm{AF}$ 지름의 원은 $y$축에, $\\mathrm{AB}$ 지름의 원은 준선에 접한다.",
+  "$\\vec{\\mathrm{FU}}\\perp\\vec{\\mathrm{FV}}$, $\\vec{\\mathrm{FU}}+\\vec{\\mathrm{FV}}=\\vec{\\mathrm{FW}}$ — 직사각형."
+ ],
+ "conds": {
+  "C1": {
+   "label": "초점현",
+   "why": "$\\mathrm{A}$, $\\mathrm{B}$, $y_1y_2=-4p^2$.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C2": {
+   "label": "세 원의 접점",
+   "why": "$\\mathrm{U},\\mathrm{V}$ ($y$축), $\\mathrm{W}$ (준선).",
+   "uses": [
+    2,
+    4
+   ]
+  },
+  "C3": {
+   "label": "수치와 묻는 것",
+   "why": "$\\overline{\\mathrm{FW}}=10$, 넓이 $15$; $3\\overline{\\mathrm{AB}}$.",
+   "uses": [
+    4,
+    5,
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "포물선의 정의",
+   "p": [
+    "$\\overline{\\mathrm{AF}}=x_1+p$."
+   ]
+  },
+  {
+   "h": "초점현",
+   "p": [
+    "$y_1y_2=-4p^2$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 세 원이 각각 y축·y축·준선에 접해 교점이 하나씩임을 찾고, 세 접점과 초점이 직사각형을 이룸(FU⊥FV, FU+FV=FW)을 발견해 넓이 조건을 초점거리의 곱으로 바꿔야 함",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$\\mathrm{U},\\mathrm{V}$",
+   "text": "$\\mathrm{A}(x_{1},\\,y_{1})$ , $\\mathrm{B}(x_{2},\\,y_{2})$ 라 하면 포물선의 정의에서 $\\overline{\\mathrm{AF}}=x_{1}+p$ 이다. 선분 $\\mathrm{AF}$ 를 지름으로 하는 원의 중심은 $\\left(\\frac{x_{1}+p}{2},\\,\\frac{y_{1}}{2}\\right)$ , 반지름의 길이는 $\\frac{x_{1}+p}{2}$ 이므로 이 원은 $y$ 축에 접하고 $\\mathrm{U}\\left(0,\\,\\frac{y_{1}}{2}\\right)$ 이다. 같은 방법으로 $\\mathrm{V}\\left(0,\\,\\frac{y_{2}}{2}\\right)$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$\\mathrm{W}$",
+   "text": "선분 $\\mathrm{AB}$ 의 중점과 준선 $x=-p$ 사이의 거리는 $\\frac{(x_{1}+p)+(x_{2}+p)}{2}=\\frac{\\overline{\\mathrm{AF}}+\\overline{\\mathrm{BF}}}{2}=\\frac{\\overline{\\mathrm{AB}}}{2}$ 이므로 선분 $\\mathrm{AB}$ 를 지름으로 하는 원은 준선에 접하고 $\\mathrm{W}\\left(-p,\\,\\frac{y_{1}+y_{2}}{2}\\right)$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "초점현",
+   "text": "포물선 위의 점을 $(p t^{2},\\,2 p t)$ 로 나타내고 $\\mathrm{A}$ , $\\mathrm{B}$ 의 매개변수를 $t$ , $s$ 라 하면 직선 $\\mathrm{AB}$ 의 기울기 $\\frac{2}{t+s}$ 와 직선 $\\mathrm{AF}$ 의 기울기 $\\frac{2 t}{t^{2}-1}$ 이 같으므로 $t s=-1$ , 즉 $y_{1}y_{2}=-4 p^{2}$ 이다. ( $t^{2}=1$ 인 경우도 $t s=-1$ 이다.)",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "직사각형",
+   "text": "핵심 관문: $\\vec{\\mathrm{FU}}=\\left(-p,\\,\\frac{y_{1}}{2}\\right)$ , $\\vec{\\mathrm{FV}}=\\left(-p,\\,\\frac{y_{2}}{2}\\right)$ 이므로 $\\vec{\\mathrm{FU}}\\cdot \\vec{\\mathrm{FV}}=p^{2}+\\frac{y_{1}y_{2}}{4}=0$ 이고 $\\vec{\\mathrm{FU}}+\\vec{\\mathrm{FV}}=\\left(-2 p,\\,\\frac{y_{1}+y_{2}}{2}\\right)=\\vec{\\mathrm{FW}}$ 이다. 즉 사각형 $\\mathrm{FUWV}$ 는 직사각형이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$p$",
+   "text": "따라서 $\\overline{\\mathrm{FU}}^{2}+\\overline{\\mathrm{FV}}^{2}=\\overline{\\mathrm{FW}}^{2}=100$ 이고, 삼각형 $\\mathrm{FUW}$ 의 넓이는 $\\frac{1}{2}\\times \\overline{\\mathrm{FU}}\\times \\overline{\\mathrm{UW}}=\\frac{1}{2}\\times \\overline{\\mathrm{FU}}\\times \\overline{\\mathrm{FV}}=15$ 이므로 $\\overline{\\mathrm{FU}}\\times \\overline{\\mathrm{FV}}=30$ 이다. $\\frac{y_{1}^{2}}{4}\\times \\frac{y_{2}^{2}}{4}=p^{4}$ 이므로 $\\overline{\\mathrm{FU}}^{2}\\times \\overline{\\mathrm{FV}}^{2}=\\left(p^{2}+\\frac{y_{1}^{2}}{4}\\right)\\left(p^{2}+\\frac{y_{2}^{2}}{4}\\right)=p^{2}\\left(2 p^{2}+\\frac{y_{1}^{2}+y_{2}^{2}}{4}\\right)=p^{2}(\\overline{\\mathrm{FU}}^{2}+\\overline{\\mathrm{FV}}^{2})$ 이다. 따라서 $900=100 p^{2}$ , $p=3$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이때 $\\frac{y_{1}^{2}+y_{2}^{2}}{4}=100-2 \\times 9=82$ 이므로 $\\overline{\\mathrm{AB}}=x_{1}+x_{2}+2 p=\\frac{y_{1}^{2}+y_{2}^{2}}{4 p}+6=\\frac{82}{3}+6=\\frac{100}{3}$ 이다. 따라서 $3 \\times \\overline{\\mathrm{AB}}=100$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "교점이 하나",
+   "cond": "C2",
+   "text": [
+    "세 원 모두 접한다 — 접점이 곧 교점."
+   ]
+  },
+  {
+   "h": "넓이",
+   "cond": "C3",
+   "text": [
+    "$\\frac12\\overline{\\mathrm{FU}}\\cdot\\overline{\\mathrm{FV}}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 넓이 $20$",
+   "body": [
+    "양수 $p$에 대하여 포물선 $y^2=4px$의 초점 $\\mathrm{F}$를 지나는 직선이 포물선과 만나는 두 점을 $\\mathrm{A}$, $\\mathrm{B}$라 하자. 선분 $\\mathrm{AF}$, $\\mathrm{BF}$를 지름으로 하는 원이 $y$축과 만나는 점을 각각 $\\mathrm{U}$, $\\mathrm{V}$, 선분 $\\mathrm{AB}$를 지름으로 하는 원이 준선과 만나는 점을 $\\mathrm{W}$라 하자. $\\overline{\\mathrm{FW}}=10$이고 삼각형 $\\mathrm{FUW}$의 넓이가 $20$일 때, $\\overline{\\mathrm{AB}}$의 값을 구하시오."
+   ],
+   "answer": 25,
+   "hint": "$\\overline{\\mathrm{FU}}\\cdot\\overline{\\mathrm{FV}}=40=10p$ → $p=4$. $\\frac{y_1^2+y_2^2}4=100-32=68$, $\\overline{\\mathrm{AB}}=\\frac{68}4+8$."
+  }
+ ],
+ "line": "세 접점과 초점 — 숨은 직사각형."
+}

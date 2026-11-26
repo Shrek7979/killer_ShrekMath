@@ -10,9 +10,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $\\angle\\mathrm{PFQ}$를 $120^\\circ$로 착각하거나 길이의 비를 초점 거리의 비로 바꾸지 못한 경우",
  "answer": 112,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -31,9 +31,12 @@
     0
    ],
    "text": "초점이 $\\mathrm{F}$ 인 포물선 $y^{2}=4 p x$ $(p>0)$ 의 준선이 $x$ 축과 만나는 점을 $\\mathrm{K}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "점 $\\mathrm{K}$",
+   "why": "준선과 $x$축의 교점.",
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C2",
@@ -42,9 +45,13 @@
     1
    ],
    "text": "점 $\\mathrm{K}$ 를 지나는 직선이 이 포물선과 서로 다른 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 에서 만나고 $\\overline{\\mathrm{KP}}:\\overline{\\mathrm{KQ}}=1:3$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "할선",
+   "why": "$\\overline{\\mathrm{KP}}:\\overline{\\mathrm{KQ}}=1:3$.",
+   "uses": [
+    2,
+    3,
+    4
+   ]
   },
   {
    "id": "C3",
@@ -53,60 +60,118 @@
     2
    ],
    "text": "삼각형 $\\mathrm{PFQ}$ 의 넓이가 $12 \\sqrt{3}$ 일 때, $\\overline{\\mathrm{PQ}}^{2}$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "수치와 묻는 것",
+   "why": "넓이 $12\\sqrt3$; $\\overline{\\mathrm{PQ}}^2$.",
+   "uses": [
+    5,
+    6
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "$\\mathrm{K}$에서 그은 할선: 닮음으로 $\\overline{\\mathrm{PF}}:\\overline{\\mathrm{QF}}=\\overline{\\mathrm{KP}}:\\overline{\\mathrm{KQ}}$.",
+  "$\\mathrm{K}$를 지나면 $t_1t_2=1$."
+ ],
  "topic": "포물선 — 준선과 축의 교점을 지나는 직선과 초점거리의 비",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "닮음",
+   "p": [
+    "준선에 내린 수선이 평행."
+   ]
+  },
+  {
+   "h": "매개변수",
+   "p": [
+    "$\\mathrm{K}$를 지나는 현: $t_1t_2=1$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 준선 위의 점에서 그은 할선에서 길이의 비가 초점거리의 비와 같아짐(준선까지의 거리의 비)을 찾고, 두 매개변수의 곱이 1임을 이용",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 에서 준선에 내린 수선의 발을 각각 $\\mathrm{P'}$ , $\\mathrm{Q'}$ 라 하면 두 직각삼각형 $\\mathrm{KP'P}$ , $\\mathrm{KQ'Q}$ 는 닮음이다. 핵심 관문: 따라서 $\\overline{\\mathrm{PF}}:\\overline{\\mathrm{QF}}=\\overline{\\mathrm{PP'}}:\\overline{\\mathrm{QQ'}}=\\overline{\\mathrm{KP}}:\\overline{\\mathrm{KQ}}=1:3$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "비 바꾸기"
   },
   {
    "n": 3,
    "text": "$\\mathrm{P}(p t_{1}^{2},\\,2 p t_{1})$ , $\\mathrm{Q}(p t_{2}^{2},\\,2 p t_{2})$ 라 하면 세 점 $\\mathrm{K}(-p,\\,0)$ , $\\mathrm{P}$ , $\\mathrm{Q}$ 가 한 직선 위에 있으므로 $\\frac{2 t_{1}}{t_{1}^{2}+1}=\\frac{2 t_{2}}{t_{2}^{2}+1}$ , 즉 $(t_{1}-t_{2})(1-t_{1}t_{2})=0$ 에서 $t_{1}t_{2}=1$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "$t_1t_2=1$"
   },
   {
    "n": 4,
    "text": "$\\overline{\\mathrm{PF}}:\\overline{\\mathrm{QF}}=(t_{1}^{2}+1):\\left(\\frac{1}{t_{1}^{2}}+1 \\right)=t_{1}^{2}:1=1:3$ 이므로 $t_{1}^{2}=\\frac{1}{3}$ 이다. 대칭성에 의해 $t_{1}=\\frac{1}{\\sqrt{3}}$ , $t_{2}=\\sqrt{3}$ 이라 하면 $\\mathrm{P}\\left(\\frac{p}{3},\\,\\frac{2 p}{\\sqrt{3}}\\right)$ , $\\mathrm{Q}(3 p,\\,2 \\sqrt{3}p)$ , $\\overline{\\mathrm{PF}}=\\frac{4 p}{3}$ , $\\overline{\\mathrm{QF}}=4 p$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "두 점"
   },
   {
    "n": 5,
    "text": "$\\vec{\\mathrm{FP}}$ 와 $x$ 축의 양의 방향이 이루는 각의 코사인은 $\\frac{\\frac{p}{3}-p}{\\frac{4 p}{3}}=-\\frac{1}{2}$ , $\\vec{\\mathrm{FQ}}$ 의 경우는 $\\frac{3 p-p}{4 p}=\\frac{1}{2}$ 이므로 $\\angle \\mathrm{PFQ}=120^{\\circ}-60^{\\circ}=60^{\\circ}$ 이다. (두 직선 $\\mathrm{FP}$ , $\\mathrm{FQ}$ 는 $x$ 축과 같은 크기의 각을 이룬다.)",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "끼인각"
   },
   {
    "n": 6,
    "text": "삼각형 $\\mathrm{PFQ}$ 의 넓이는 $\\frac{1}{2}\\times \\frac{4 p}{3}\\times 4 p \\times \\sin 60^{\\circ}=\\frac{4 \\sqrt{3}}{3}p^{2}=12 \\sqrt{3}$ 이므로 $p^{2}=9$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "$p$"
   },
   {
    "n": 7,
    "text": "$\\overline{\\mathrm{PQ}}^{2}=\\left(\\frac{8 p}{3}\\right)^{2}+\\left(\\frac{4 p}{\\sqrt{3}}\\right)^{2}=\\frac{64}{9}p^{2}+\\frac{16}{3}p^{2}=\\frac{112}{9}p^{2}=112$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "끼인각",
+   "cond": "C3",
+   "text": [
+    "$120^\\circ-60^\\circ$ — 두 직선은 $x$축과 같은 각."
+   ]
+  },
+  {
+   "h": "대칭",
+   "cond": "C2",
+   "text": [
+    "$t_1=\\pm\\frac1{\\sqrt3}$ 중 하나만 — 넓이는 같다."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $1:2$",
+   "body": [
+    "초점이 $\\mathrm{F}$인 포물선 $y^2=4px$ $(p>0)$의 준선이 $x$축과 만나는 점을 $\\mathrm{K}$라 하자. $\\mathrm{K}$를 지나는 직선이 포물선과 서로 다른 두 점 $\\mathrm{P}$, $\\mathrm{Q}$에서 만나고 $\\overline{\\mathrm{KP}}:\\overline{\\mathrm{KQ}}=1:2$이다. 삼각형 $\\mathrm{PFQ}$의 넓이가 $4\\sqrt2$일 때, $\\overline{\\mathrm{PQ}}^2$의 값을 구하시오."
+   ],
+   "answer": 17,
+   "hint": "$t_1^2=\\frac12$, $\\overline{\\mathrm{PF}}=\\frac{3p}2$, $\\overline{\\mathrm{QF}}=3p$, $\\sin\\angle\\mathrm{PFQ}=\\frac{4\\sqrt2}9$ → 넓이 $\\sqrt2p^2$, $p=2$. $\\frac{17}4p^2$."
+  }
+ ],
+ "line": "준선 위 점의 할선 — 길이의 비 = 초점 거리의 비.",
  "note": ""
 }

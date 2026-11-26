@@ -1,0 +1,133 @@
+{
+ "wrong": "예상 오답 — 원 $C$가 반지름 $a$인 원에 항상 내접함을 못 보고 $a$를 구하지 못한 경우",
+ "intro": [
+  "$\\mathrm{M}$은 $\\mathrm{PF}$의 중점: $\\overline{\\mathrm{OM}}=\\frac12\\overline{\\mathrm{PF'}}$, $\\mathrm{OM}\\parallel\\mathrm{F'P}$.",
+  "$\\overline{\\mathrm{OM}}+\\frac12\\overline{\\mathrm{PF}}=a$ — 항상 반지름 $a$인 원에 내접."
+ ],
+ "conds": {
+  "C1": {
+   "label": "원 $C$",
+   "why": "지름 $\\mathrm{PF}$.",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "내접",
+   "why": "원 $x^2+y^2=49$에 한 점 $\\mathrm{Q}$에서.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C3": {
+   "label": "$\\overline{\\mathrm{PF}}=4$",
+   "why": "$\\mathrm{Q}$의 $x$좌표 $\\frac qp$.",
+   "uses": [
+    4,
+    5
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$p+q$.",
+   "uses": [
+    5
+   ]
+  },
+  "C5": {
+   "label": "단서",
+   "why": "서로소.",
+   "uses": [
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "중점연결정리",
+   "p": [
+    "$\\overline{\\mathrm{OM}}=\\frac12\\overline{\\mathrm{PF'}}$."
+   ]
+  },
+  {
+   "h": "내접 조건",
+   "p": [
+    "중심 거리 $=$ 반지름의 차."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 중점연결정리로 원 C가 항상 반지름 a인 원에 내접함을 발견해 a를 결정하고, 접점의 방향이 F'P의 방향과 같음을 이용",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "중점연결",
+   "text": "원 $C$ 의 중심 $\\mathrm{M}$ 은 선분 $\\mathrm{PF}$ 의 중점이고 반지름의 길이는 $\\frac{1}{2}\\overline{\\mathrm{PF}}$ 이다. 원점 $\\mathrm{O}$ 는 선분 $\\mathrm{FF'}$ 의 중점이므로 삼각형 $\\mathrm{PF'F}$ 에서 $\\overline{\\mathrm{OM}}=\\frac{1}{2}\\overline{\\mathrm{PF'}}$ 이고 $\\mathrm{OM}$ 은 $\\mathrm{F'P}$ 와 평행하다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$a=7$",
+   "text": "핵심 관문: $\\overline{\\mathrm{OM}}+\\frac{1}{2}\\overline{\\mathrm{PF}}=\\frac{1}{2}(\\overline{\\mathrm{PF'}}+\\overline{\\mathrm{PF}})=a$ 이므로, 원 $C$ 는 점 $\\mathrm{P}$ 의 위치에 관계없이 원 $x^{2}+y^{2}=a^{2}$ 에 내접한다. 원 $C$ 가 원 $x^{2}+y^{2}=49$ 에 내접하려면 $\\overline{\\mathrm{OM}}=7-\\frac{1}{2}\\overline{\\mathrm{PF}}$ 이어야 하므로 $a=7$ , $b^{2}=24$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "접점의 방향",
+   "text": "접점 $\\mathrm{Q}$ 는 반직선 $\\mathrm{OM}$ 위에 있고 $\\overline{\\mathrm{OQ}}=7$ 이므로, $\\vec{\\mathrm{OQ}}$ 는 $\\vec{\\mathrm{F'P}}$ 와 방향이 같고 크기가 $7$ 인 벡터이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "점 $\\mathrm{P}$",
+   "text": "타원 위의 점 $(x,\\,y)$ 에서 초점 $\\mathrm{F}$ 까지의 거리는 $(x-5)^{2}+24-\\frac{24}{49}x^{2}=\\left(7-\\frac{5}{7}x \\right)^{2}$ 에서 $7-\\frac{5}{7}x$ 이다. $\\overline{\\mathrm{PF}}=4$ 이므로 점 $\\mathrm{P}$ 의 $x$ 좌표는 $\\frac{21}{5}$ 이고 $\\overline{\\mathrm{PF'}}=10$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 점 $\\mathrm{Q}$ 의 $x$ 좌표는 $7 \\times \\frac{\\frac{21}{5}+5}{10}=\\frac{161}{25}$ 이고 $p+q=25+161=186$ 이다.",
+   "uses": [
+    "C3",
+    "C4",
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "접점의 방향",
+   "cond": "C2",
+   "text": [
+    "$\\vec{\\mathrm{OQ}}\\parallel\\vec{\\mathrm{F'P}}$, 크기 $7$."
+   ]
+  },
+  {
+   "h": "$x$좌표",
+   "cond": "C3",
+   "text": [
+    "$7\\times\\frac{x_P+5}{10}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 반지름 $5$",
+   "body": [
+    "두 초점이 $\\mathrm{F}(4,0)$, $\\mathrm{F'}(-4,0)$인 타원 $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ 위의 제$1$사분면 위의 점 $\\mathrm{P}$에 대하여 선분 $\\mathrm{PF}$를 지름으로 하는 원 $C$가 원 $x^2+y^2=25$의 내부에 있으면서 이 원과 한 점 $\\mathrm{Q}$에서만 만난다. $\\overline{\\mathrm{PF}}=3$일 때, $\\mathrm{Q}$의 $x$좌표는 $\\frac qp$이다. $p+q$의 값을 구하시오. (단, $p$, $q$는 서로소인 자연수)"
+   ],
+   "answer": 79,
+   "hint": "$a=5$, $\\overline{\\mathrm{PF}}=5-\\frac45x=3$ → $x=\\frac52$, $\\overline{\\mathrm{PF'}}=7$. $5\\times\\frac{13/2}7=\\frac{65}{14}$."
+  }
+ ],
+ "line": "초점반지름을 지름으로 한 원은 반지름 $a$의 원에 내접."
+}

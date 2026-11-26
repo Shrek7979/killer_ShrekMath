@@ -1,0 +1,130 @@
+{
+ "wrong": "예상 오답 — 두 초점반지름의 역수의 합이 일정함을 못 쓰고 미지수 $a,c,\\theta$를 연립하다 막힌 경우",
+ "intro": [
+  "같은 방향 $\\theta$의 두 초점반지름: $r=\\frac{b^2}{a+c\\cos\\theta}$, $r'=\\frac{b^2}{a-c\\cos\\theta}$.",
+  "$\\frac1r+\\frac1{r'}=\\frac{2a}{b^2}$ — 방향과 무관."
+ ],
+ "conds": {
+  "C1": {
+   "label": "타원과 두 점",
+   "why": "$\\mathrm{P}$, $\\mathrm{Q}$는 타원 위.",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "(가)",
+   "why": "$\\vec{\\mathrm{FP}}\\parallel\\vec{\\mathrm{F'Q}}$ 같은 방향, 기울기 $1$.",
+   "uses": [
+    2,
+    4
+   ]
+  },
+  "C3": {
+   "label": "(나)",
+   "why": "$2$와 $6$.",
+   "uses": [
+    3
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$a^2+b^2+S$.",
+   "uses": [
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "초점 거리",
+   "p": [
+    "$a\\mp\\frac cax$."
+   ]
+  },
+  {
+   "h": "사다리꼴",
+   "p": [
+    "평행한 두 변과 그 사이 거리."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 초점까지의 거리가 x좌표의 일차식임을 이용해 같은 방향의 두 초점반지름의 역수의 합이 2a/b²로 일정함을 끌어내게 함",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "초점 거리",
+   "text": "타원 위의 점 $(x,\\,y)$ 에 대하여 $(x-c)^{2}+y^{2}=(x-c)^{2}+b^{2}-\\frac{b^{2}}{a^{2}}x^{2}=\\left(a-\\frac{c}{a}x \\right)^{2}$ 이므로 초점 $\\mathrm{F}$ 까지의 거리는 $a-\\frac{c}{a}x$ , 같은 방법으로 $\\mathrm{F'}$ 까지의 거리는 $a+\\frac{c}{a}x$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "극형식",
+   "text": "두 벡터의 방향을 $(\\cos \\theta,\\,\\sin \\theta)$ 라 하고 $\\overline{\\mathrm{PF}}=r$ 이라 하면 점 $\\mathrm{P}$ 의 $x$ 좌표는 $c+r \\cos \\theta$ 이므로 $r=a-\\frac{c}{a}(c+r \\cos \\theta)$ , 즉 $r=\\frac{b^{2}}{a+c \\cos \\theta}$ 이다. 마찬가지로 $\\overline{\\mathrm{QF'}}=r'$ 이면 점 $\\mathrm{Q}$ 의 $x$ 좌표는 $-c+r' \\cos \\theta$ 이고 $r'=\\frac{b^{2}}{a-c \\cos \\theta}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "역수의 합",
+   "text": "핵심 관문: $\\frac{1}{r}+\\frac{1}{r'}=\\frac{2 a}{b^{2}}$ 로 방향에 관계없이 일정하므로 $\\frac{1}{2}+\\frac{1}{6}=\\frac{2 a}{b^{2}}$ , 즉 $b^{2}=3 a$ 이다. 또 $2(a+c \\cos \\theta)=6(a-c \\cos \\theta)=3 a$ 에서 $c \\cos \\theta=\\frac{a}{2}>0$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$a,b,c$",
+   "text": "직선 $\\mathrm{FP}$ 의 기울기가 $1$ 이고 $\\cos \\theta>0$ 이므로 $\\theta=45^{\\circ}$ , $c=\\frac{a}{\\sqrt{2}}$ 이다. $a^{2}-c^{2}=\\frac{a^{2}}{2}=3 a$ 에서 $a=6$ , $b^{2}=18$ , $c=3 \\sqrt{2}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "넓이",
+   "text": "사각형 $\\mathrm{FPQF'}$ 는 두 변 $\\mathrm{FP}$ , $\\mathrm{F'Q}$ 가 평행한 사다리꼴이고, 두 평행선 사이의 거리는 점 $\\mathrm{F'}$ 와 직선 $\\mathrm{FP}$ 사이의 거리 $\\overline{\\mathrm{FF'}}\\times \\sin 45^{\\circ}=6$ 이다. 따라서 $S=\\frac{1}{2}\\times(2+6)\\times 6=24$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$a^{2}+b^{2}+S=36+18+24=78$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\cos\\theta>0$",
+   "cond": "C2",
+   "text": [
+    "$c\\cos\\theta=\\frac a2>0$ — 기울기 $1$이면 $45^\\circ$."
+   ]
+  },
+  {
+   "h": "높이",
+   "cond": "C4",
+   "text": [
+    "$\\overline{\\mathrm{FF'}}\\sin45^\\circ$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 기울기 $\\frac{\\sqrt3}3$",
+   "body": [
+    "두 초점이 $\\mathrm{F}(c,0)$, $\\mathrm{F'}(-c,0)$인 타원 $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ $(a>b>0)$ 위의 두 점 $\\mathrm{P}$, $\\mathrm{Q}$에 대하여 $\\vec{\\mathrm{FP}}$, $\\vec{\\mathrm{F'Q}}$의 방향이 같고 직선 $\\mathrm{FP}$의 기울기는 $\\frac{\\sqrt3}3$이며, $\\overline{\\mathrm{PF}}=2$, $\\overline{\\mathrm{QF'}}=6$이다. 사각형 $\\mathrm{FPQF'}$의 넓이를 $S$라 할 때, $4(a^2+b^2)+S^2$의 값을 구하시오."
+   ],
+   "answer": 243,
+   "hint": "$b^2=3a$, $c\\cos30^\\circ=\\frac a2$ → $c^2=\\frac{a^2}3$, $a=\\frac92$, $b^2=\\frac{27}2$. 높이 $c=\\frac{3\\sqrt3}2$, $S=6\\sqrt3$."
+  }
+ ],
+ "line": "같은 방향의 두 초점반지름 — 역수의 합 $\\frac{2a}{b^2}$."
+}
