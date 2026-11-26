@@ -37,6 +37,12 @@ for it in spec:
         steps.append({'title':t,'text':' '.join(S[k] for k in ns),'uses':u})
     if seen!=list(range(1,len(S)+1)): errs.append(f'#{n} 단계 번호 {seen} ≠ 1..{len(S)}')
     nst=len(steps)
+    if it.get('raw'):   # 조건 uses 를 원래 풀이 단계 번호로 적은 경우 → 합친 단계 번호로 바꿈
+        rmap={}
+        for si,(t,ns,u) in enumerate(it['steps']):
+            for k in ([ns] if isinstance(ns,int) else ns): rmap[k]=si+1
+        for k,v in conds.items():
+            v['uses']=sorted(set(rmap[x] for x in v['uses'] if x in rmap))
     for k,v in conds.items():
         for x in v['uses']:
             if not (1<=x<=nst): errs.append(f'#{n} {k} uses {x} 범위밖(1..{nst})')

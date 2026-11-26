@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 30번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 극한점을 하나로 보거나 $L$을 세 점 사이 거리의 합으로 계산한 경우",
  "answer": 34,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -52,9 +52,11 @@
     0
    ],
    "text": "좌표평면 위의 세 점 $\\mathrm{A}(0,\\,0)$ , $\\mathrm{B}(14,\\,0)$ , $\\mathrm{C}(0,\\,14)$ 에 대하여 점 $\\mathrm{P}_{1}$ 은 점 $\\mathrm{A}$ 이고, 자연수 $n$ 에 대하여 점 $\\mathrm{P}_{n+1}$ 을 다음과 같이 정한다.",
-   "label": "",
+   "label": "세 점과 시작",
    "why": "",
-   "uses": []
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C2",
@@ -63,9 +65,12 @@
     0
    ],
    "text": "$n$ 을 $3$ 으로 나눈 나머지가 $1$ , $2$ , $0$ 일 때, 점 $\\mathrm{P}_{n+1}$ 은 각각 선분 $\\mathrm{P}_{n}\\mathrm{B}$ , 선분 $\\mathrm{P}_{n}\\mathrm{C}$ , 선분 $\\mathrm{P}_{n}\\mathrm{A}$ 의 중점이다.",
-   "label": "",
+   "label": "규칙",
    "why": "",
-   "uses": []
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C3",
@@ -74,9 +79,11 @@
     0
    ],
    "text": "삼각형 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}$ 의 넓이를 $S_{n}$ 이라 하고,",
-   "label": "",
+   "label": "$S_n$",
    "why": "",
-   "uses": []
+   "uses": [
+    4
+   ]
   },
   {
    "id": "C4",
@@ -85,9 +92,12 @@
     0
    ],
    "text": "$S=\\lim_{n \\to \\infty}S_{n},\\,\\,\\,\\,L=\\sum_{m=0}^{\\infty}\\overline{\\mathrm{P}_{3 m+1}\\mathrm{P}_{3 m+4}}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "두 값",
+   "why": "$S$, $L$.",
+   "uses": [
+    4,
+    5
+   ]
   },
   {
    "id": "C5",
@@ -96,54 +106,110 @@
     0
    ],
    "text": "라 할 때, $S+L^{2}$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$S+L^2$.",
+   "uses": [
+    6
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "세 번 이동 = 축소 $\\frac18$ → 세 부분수열의 극한점 $\\mathrm{X},\\mathrm{Y},\\mathrm{Z}$.",
+  "$\\mathrm{P}_{3m+1}$은 선분 $\\mathrm{AX}$ 위에 일렬 — $L=\\overline{\\mathrm{AX}}$."
+ ],
  "topic": "수열의 극한 — 세 꼭짓점을 차례로 향해 반씩 이동하는 점의 극한 삼각형",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "축소 변환",
+   "p": [
+    "고정점으로의 수렴."
+   ]
+  },
+  {
+   "h": "넓이의 비",
+   "p": [
+    "극한 삼각형은 $\\frac17$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 세 번의 중점 이동을 한 묶음의 축소 변환으로 보아 세 부분수열의 극한점을 따로 구하고, 극한 삼각형이 원래 넓이의 1/7임과 한 부분수열이 일직선 위에 놓여 길이의 합이 한 선분이 됨을 보는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "세 번의 이동을 한 묶음으로 보면 $\\mathrm{P}_{3 m+2}=\\frac{\\mathrm{P}_{3 m+1}+\\mathrm{B}}{2}$ , $\\mathrm{P}_{3 m+3}=\\frac{\\mathrm{P}_{3 m+2}+\\mathrm{C}}{2}$ , $\\mathrm{P}_{3 m+4}=\\frac{\\mathrm{P}_{3 m+3}+\\mathrm{A}}{2}$ 이므로 $\\mathrm{P}_{3 m+4}=\\frac{1}{8}\\mathrm{P}_{3 m+1}+\\frac{\\mathrm{B}+2 \\mathrm{C}+4 \\mathrm{A}}{8}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "세 번 묶기"
   },
   {
    "n": 3,
    "text": "핵심 관문 1: $\\mathrm{X}=\\frac{4 \\mathrm{A}+\\mathrm{B}+2 \\mathrm{C}}{7}$ 이라 하면 $\\mathrm{P}_{3 m+4}-\\mathrm{X}=\\frac{1}{8}\\left(\\mathrm{P}_{3 m+1}-\\mathrm{X}\\right)$ 이므로 $\\mathrm{P}_{3 m+1}\\to \\mathrm{X}(2,\\,4)$ 이다. 이어서 $\\mathrm{P}_{3 m+2}\\to \\mathrm{Y}=\\frac{\\mathrm{X}+\\mathrm{B}}{2}=(8,\\,2)$ , $\\mathrm{P}_{3 m+3}\\to \\mathrm{Z}=\\frac{\\mathrm{Y}+\\mathrm{C}}{2}=(4,\\,8)$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "극한점"
   },
   {
    "n": 4,
    "text": "$\\mathrm{P}_{n}$ , $\\mathrm{P}_{n+1}$ , $\\mathrm{P}_{n+2}$ 는 순서만 바뀐 채 $\\mathrm{X}$ , $\\mathrm{Y}$ , $\\mathrm{Z}$ 에 가까워지므로 $S$ 는 삼각형 $\\mathrm{XYZ}$ 의 넓이 $\\frac{1}{2}\\left|6 \\times 4-(-2)\\times 2 \\right|=14$ 이다. (삼각형 $\\mathrm{ABC}$ 의 넓이 $98$ 의 $\\frac{1}{7}$ 이다.)",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3",
+    "C4"
+   ],
+   "title": "$S$"
   },
   {
    "n": 5,
    "text": "핵심 관문 2: $\\mathrm{P}_{3 m+1}=\\mathrm{X}+\\left(\\frac{1}{8}\\right)^{m}\\left(\\mathrm{A}-\\mathrm{X}\\right)$ 이므로 점 $\\mathrm{P}_{3 m+1}$ 은 모두 선분 $\\mathrm{AX}$ 위에서 $\\mathrm{X}$ 쪽으로 차례로 놓인다. 따라서 $L=\\sum_{m=0}^{\\infty}\\frac{7}{8}\\left(\\frac{1}{8}\\right)^{m}\\overline{\\mathrm{AX}}=\\overline{\\mathrm{AX}}=\\sqrt{20}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$L$"
   },
   {
    "n": 6,
    "text": "따라서 $S+L^{2}=14+20=34$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "순서",
+   "cond": "C3",
+   "text": [
+    "세 점의 순서만 바뀐다 — 넓이는 같다."
+   ]
+  },
+  {
+   "h": "일직선",
+   "cond": "C4",
+   "text": [
+    "합이 한 선분 $\\overline{\\mathrm{AX}}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\mathrm{B}(28,0)$, $\\mathrm{C}(0,28)$",
+   "body": [
+    "세 점 $\\mathrm{A}(0,0)$, $\\mathrm{B}(28,0)$, $\\mathrm{C}(0,28)$에 대하여 $\\mathrm{P}_1=\\mathrm{A}$이고, $n$을 $3$으로 나눈 나머지가 $1,2,0$일 때 $\\mathrm{P}_{n+1}$은 각각 선분 $\\mathrm{P}_n\\mathrm{B}$, $\\mathrm{P}_n\\mathrm{C}$, $\\mathrm{P}_n\\mathrm{A}$의 중점이다. 삼각형 $\\mathrm{P}_n\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}$의 넓이를 $S_n$, $S=\\lim S_n$, $L=\\sum_{m=0}^\\infty\\overline{\\mathrm{P}_{3m+1}\\mathrm{P}_{3m+4}}$이라 할 때, $S+L^2$의 값을 구하시오."
+   ],
+   "answer": 136,
+   "hint": "$2$배 닮음: $S=56$, $L^2=80$."
+  }
+ ],
+ "line": "주기 이동은 묶어서 축소 변환으로.",
  "note": ""
 }
