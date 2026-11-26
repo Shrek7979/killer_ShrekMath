@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $\\mathrm{A}$의 $y$좌표를 $2\\sin\\theta$로 잘못 잡은 경우",
  "answer": 12,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -33,9 +33,11 @@
     0
    ],
    "text": "좌표평면에서 원 $x^{2}+(y-1)^{2}=1$ 과 직선 $y=2$ 가 있다.",
-   "label": "",
+   "label": "원과 직선",
    "why": "",
-   "uses": []
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C2",
@@ -44,9 +46,11 @@
     1
    ],
    "text": "$0<\\theta<\\pi$ 인 $\\theta$ 에 대하여 원점 $\\mathrm{O}$ 를 지나고 $x$ 축의 양의 방향과 이루는 각의 크기가 $\\theta$ 인 직선이 원과 만나는 점 중 $\\mathrm{O}$ 가 아닌 점을 $\\mathrm{A}$ , 직선 $y=2$ 와 만나는 점을 $\\mathrm{B}$ 라 하자.",
-   "label": "",
+   "label": "두 점",
    "why": "",
-   "uses": []
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C3",
@@ -55,9 +59,13 @@
     2
    ],
    "text": "점 $\\mathrm{B}$ 의 $x$ 좌표와 점 $\\mathrm{A}$ 의 $y$ 좌표를 각각 $x$ 좌표, $y$ 좌표로 하는 점을 $\\mathrm{P}$ 라 할 때, $\\theta$ 가 변하면서 점 $\\mathrm{P}$ 가 그리는 곡선을 $C$ 라 하자.",
-   "label": "",
+   "label": "곡선 $C$",
    "why": "",
-   "uses": []
+   "uses": [
+    2,
+    3,
+    4
+   ]
   },
   {
    "id": "C4",
@@ -66,60 +74,120 @@
     3
    ],
    "text": "곡선 $C$ 의 변곡점 중 $x$ 좌표가 양수인 점에서의 접선이 $x$ 축과 만나는 점을 $\\mathrm{Q}$ 라 할 때, $\\overline{\\mathrm{OQ}}^{2}$ 의 값을 구하시오. [4점]",
-   "label": "",
+   "label": "묻는 것",
    "why": "",
-   "uses": []
+   "uses": [
+    5,
+    6,
+    7
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "$\\overline{\\mathrm{OA}}=2\\sin\\theta$ (지름 $2$) → $y=2\\sin^2\\theta$, $x=2\\cot\\theta$.",
+  "$\\frac{d^2y}{dx^2}=\\sin^4\\theta(3\\cos^2\\theta-\\sin^2\\theta)$."
+ ],
  "topic": "매개변수로 나타낸 함수의 미분 — 원과 직선으로 작도한 곡선(아녜시의 곡선)의 변곡점",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "원주각",
+   "p": [
+    "지름 위 원주각 $90^\\circ$."
+   ]
+  },
+  {
+   "h": "매개변수 이계도함수",
+   "p": [
+    "나누기 $\\frac{dx}{d\\theta}$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 작도 조건을 매개변수로 옮기고 매개변수 이계도함수의 부호로 변곡점을 찾는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "점 $\\mathrm{B}$ 는 $y=2$ 위에 있으므로 $\\mathrm{B}(2 \\cot \\theta,\\,2)$ 이다. 원의 지름이 $2$ 이므로 $\\overline{\\mathrm{OA}}=2 \\sin \\theta$ 이고 $\\mathrm{A}$ 의 $y$ 좌표는 $2 \\sin \\theta \\times \\sin \\theta=2 \\sin^{2}\\theta$ 이다. 따라서 $C$ 는 $x=2 \\cot \\theta$ , $y=2 \\sin^{2}\\theta$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2",
+    "C3"
+   ],
+   "title": "매개변수"
   },
   {
    "n": 3,
    "text": "$\\frac{dx}{d \\theta}=-\\frac{2}{\\sin^{2}\\theta}$ , $\\frac{dy}{d \\theta}=4 \\sin \\theta \\cos \\theta$ 이므로 $\\frac{dy}{dx}=-2 \\sin^{3}\\theta \\cos \\theta$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "일계"
   },
   {
    "n": 4,
    "text": "$\\frac{d}{d \\theta}\\left(-2 \\sin^{3}\\theta \\cos \\theta \\right)=-2 \\sin^{2}\\theta \\left(3 \\cos^{2}\\theta-\\sin^{2}\\theta \\right)$ 이므로 $\\frac{d^{2}y}{dx^{2}}=\\sin^{4}\\theta \\left(3 \\cos^{2}\\theta-\\sin^{2}\\theta \\right)$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "이계"
   },
   {
    "n": 5,
    "text": "핵심 관문: 부호가 바뀌는 점은 $\\tan^{2}\\theta=3$ , 즉 $\\theta=\\frac{\\pi}{3}$ , $\\frac{2 \\pi}{3}$ 이다. $x$ 좌표가 양수인 변곡점은 $\\theta=\\frac{\\pi}{3}$ 일 때의 점 $\\left(\\frac{2}{\\sqrt{3}},\\,\\frac{3}{2}\\right)$ 이고, 이 점에서의 접선의 기울기는 $-2 \\times \\frac{3 \\sqrt{3}}{8}\\times \\frac{1}{2}=-\\frac{3 \\sqrt{3}}{8}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "변곡점"
   },
   {
    "n": 6,
    "text": "접선 $y-\\frac{3}{2}=-\\frac{3 \\sqrt{3}}{8}\\left(x-\\frac{2}{\\sqrt{3}}\\right)$ 에 $y=0$ 을 대입하면 $x=\\frac{2}{\\sqrt{3}}+\\frac{4}{\\sqrt{3}}=2 \\sqrt{3}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$\\mathrm{Q}$"
   },
   {
    "n": 7,
    "text": "따라서 $\\overline{\\mathrm{OQ}}^{2}=12$ 이다. (곡선 $C$ 는 $y=\\frac{8}{x^{2}+4}$ 의 그래프이다.)",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\frac{dx}{d\\theta}<0$",
+   "cond": "C3",
+   "text": [
+    "부호는 $3\\cos^2-\\sin^2$이 결정."
+   ]
+  },
+  {
+   "h": "$x>0$",
+   "cond": "C4",
+   "text": [
+    "$\\theta=\\frac\\pi3$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 원 $x^2+(y-2)^2=4$",
+   "body": [
+    "좌표평면에서 원 $x^2+(y-2)^2=4$와 직선 $y=4$가 있다. $0<\\theta<\\pi$에 대하여 원점을 지나고 $x$축의 양의 방향과 이루는 각이 $\\theta$인 직선이 원과 만나는 $\\mathrm{O}$가 아닌 점을 $\\mathrm{A}$, 직선 $y=4$와 만나는 점을 $\\mathrm{B}$라 하자. $\\mathrm{B}$의 $x$좌표와 $\\mathrm{A}$의 $y$좌표로 정한 점 $\\mathrm{P}$가 그리는 곡선의 변곡점 중 $x$좌표가 양수인 점에서의 접선이 $x$축과 만나는 점을 $\\mathrm{Q}$라 할 때, $\\overline{\\mathrm{OQ}}^2$의 값을 구하시오."
+   ],
+   "answer": 48,
+   "hint": "모두 $2$배: $\\mathrm{Q}(4\\sqrt3,0)$."
+  }
+ ],
+ "line": "아녜시의 곡선 — 변곡점은 $\\theta=\\frac\\pi3$.",
  "note": ""
 }
