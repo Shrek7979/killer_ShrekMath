@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 30번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $x_n$을 차례로 근사 계산해 정확한 합을 구하지 못한 경우",
  "answer": 246,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -41,9 +41,12 @@
     0
    ],
    "text": "곡선 $C:\\,y=\\frac{x}{x^{2}+1}$ 위의 점 $\\mathrm{P}_{0}$ 의 $x$ 좌표는 $\\tan \\frac{\\pi}{9}$ 이다.",
-   "label": "",
+   "label": "곡선과 $\\mathrm{P}_0$",
    "why": "",
-   "uses": []
+   "uses": [
+    2,
+    5
+   ]
   },
   {
    "id": "C2",
@@ -52,9 +55,14 @@
     1
    ],
    "text": "자연수 $n$ 에 대하여 점 $\\mathrm{P}_{n-1}$ 에서의 곡선 $C$ 의 접선이 곡선 $C$ 와 만나는 점 중 $\\mathrm{P}_{n-1}$ 이 아닌 점을 $\\mathrm{P}_{n}$ 이라 하고, 점 $\\mathrm{P}_{n}$ 의 $x$ 좌표를 $x_{n}$ 이라 하자.",
-   "label": "",
+   "label": "반복",
    "why": "",
-   "uses": []
+   "uses": [
+    2,
+    3,
+    4,
+    5
+   ]
   },
   {
    "id": "C3",
@@ -63,9 +71,13 @@
     0
    ],
    "text": "$\\left(\\sum_{n=1}^{9}x_{n}\\right)^{2}+\\left(x_{1}x_{2}x_{3}\\right)^{2}$",
-   "label": "",
+   "label": "묻는 것",
    "why": "",
-   "uses": []
+   "uses": [
+    6,
+    7,
+    8
+   ]
   },
   {
    "id": "C4",
@@ -76,64 +88,125 @@
    "text": "의 값을 구하시오. [4점]",
    "label": "",
    "why": "",
-   "uses": []
+   "uses": [
+    8
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "나머지 교점 $r=\\frac{2s}{s^2-1}$.",
+  "$s=\\tan\\theta$ → $r=\\tan(-2\\theta)$."
+ ],
  "topic": "접선이 곡선과 다시 만나는 점의 반복 — 탄젠트의 배각으로 드러나는 주기",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "근과 계수",
+   "p": [
+    "삼차방정식의 중근."
+   ]
+  },
+  {
+   "h": "탄젠트 배각",
+   "p": [
+    "$\\frac{2t}{1-t^2}$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 접선과 곡선의 나머지 교점이 s → 2s/(s²−1)로 주어지고, 탄젠트 치환으로 이것이 각을 −2배 하는 규칙임을 알아보는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "곡선 $C$ 위의 점 $\\left(s,\\,\\frac{s}{s^{2}+1}\\right)$ $(s \\ne \\pm 1)$ 에서의 접선을 $y=a x+b$ 라 하면 $a=\\frac{1-s^{2}}{(s^{2}+1)^{2}}\\ne 0$ 이다. 교점의 $x$ 좌표는 $\\frac{x}{x^{2}+1}=a x+b$ , 즉 $a x^{3}+b x^{2}+(a-1)x+b=0$ 의 실근이고, $x=s$ 는 이 삼차방정식의 중근이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "접선"
   },
   {
    "n": 3,
    "text": "나머지 근을 $r$ 이라 하면 근과 계수의 관계에서 $2 s+r=-\\frac{b}{a}$ , $s^{2}r=-\\frac{b}{a}$ 이므로 $s^{2}r=2 s+r$ , 즉 $r=\\frac{2 s}{s^{2}-1}$ 이다. ( $r=s$ 가 되는 것은 $s=0,\\,\\pm \\sqrt{3}$ 인 변곡점뿐이다.)",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "나머지 근"
   },
   {
    "n": 4,
    "text": "핵심 관문: $s=\\tan \\theta$ 로 놓으면 탄젠트함수의 덧셈정리에 의하여 $r=\\frac{2 \\tan \\theta}{\\tan^{2}\\theta-1}=-\\tan 2 \\theta=\\tan(-2 \\theta)$ 이다. 즉 접선을 한 번 그을 때마다 각이 $-2$ 배가 된다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "배각"
   },
   {
    "n": 5,
    "text": "$x_{0}=\\tan \\frac{\\pi}{9}$ 이므로 $x_{1}=\\tan \\left(-\\frac{2 \\pi}{9}\\right)$ , $x_{2}=\\tan \\frac{4 \\pi}{9}$ , $x_{3}=\\tan \\left(-\\frac{8 \\pi}{9}\\right)=\\tan \\frac{\\pi}{9}=x_{0}$ 이다. 이 값들은 $0,\\,\\pm 1,\\,\\pm \\sqrt{3}$ 이 아니므로 매 단계 $\\mathrm{P}_{n}$ 이 하나로 정해지고, $x_{n+3}=x_{n}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "주기"
   },
   {
    "n": 6,
    "text": "$\\theta=\\frac{\\pi}{9},\\,\\frac{4 \\pi}{9},\\,\\frac{7 \\pi}{9}$ 는 모두 $\\tan 3 \\theta=\\sqrt{3}$ 을 만족시키고 $\\tan \\frac{7 \\pi}{9}=-\\tan \\frac{2 \\pi}{9}$ 이다. $T=\\tan \\theta$ 라 하면 덧셈정리로 $\\tan 3 \\theta=\\frac{3 T-T^{3}}{1-3 T^{2}}$ 이므로 세 값 $x_{1}$ , $x_{2}$ , $x_{3}$ 은 삼차방정식 $T^{3}-3 \\sqrt{3}T^{2}-3 T+\\sqrt{3}=0$ 의 서로 다른 세 실근이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "삼배각"
   },
   {
    "n": 7,
    "text": "따라서 $x_{1}+x_{2}+x_{3}=3 \\sqrt{3}$ , $x_{1}x_{2}x_{3}=-\\sqrt{3}$ 이고, $\\sum_{n=1}^{9}x_{n}=3 \\times 3 \\sqrt{3}=9 \\sqrt{3}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "합과 곱"
   },
   {
    "n": 8,
    "text": "구하는 값은 $243+3=246$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3",
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\tan\\left(-\\frac{8\\pi}9\\right)$",
+   "cond": "C2",
+   "text": [
+    "$=\\tan\\frac\\pi9$."
+   ]
+  },
+  {
+   "h": "$\\tan3\\theta=\\sqrt3$",
+   "cond": "C3",
+   "text": [
+    "세 근."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\tan\\frac\\pi7$",
+   "body": [
+    "곡선 $y=\\frac x{x^2+1}$ 위의 점 $\\mathrm{P}_0$의 $x$좌표가 $\\tan\\frac\\pi7$이고, $\\mathrm{P}_{n-1}$에서의 접선이 곡선과 만나는 다른 점을 $\\mathrm{P}_n$, 그 $x$좌표를 $x_n$이라 하자. $\\left(\\sum_{n=1}^{12}x_n\\right)^2+(x_1x_2x_3)^2$의 값을 구하시오."
+   ],
+   "answer": 7,
+   "hint": "각 $\\frac\\pi7\\to-\\frac{2\\pi}7\\to\\frac{4\\pi}7\\to-\\frac\\pi7\\to\\cdots$ 주기 $6$, 합 $0$. $\\tan\\frac\\pi7\\tan\\frac{2\\pi}7\\tan\\frac{3\\pi}7=\\sqrt7$."
+  }
+ ],
+ "line": "접선 반복 = 각의 $-2$배.",
  "note": ""
 }

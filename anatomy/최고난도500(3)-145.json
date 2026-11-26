@@ -1,0 +1,119 @@
+{
+ "wrong": "예상 오답 — $\\beta\\approx-\\ln t$로만 보고 $q=0$이라 한 경우",
+ "intro": [
+  "$\\beta=L+\\ln\\beta$, $L=-\\ln t$ — 되먹임.",
+  "$\\frac\\beta L\\to1$ → $\\frac{\\ln\\beta}{\\ln L}\\to1$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "두 근",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "극한",
+   "why": "",
+   "uses": [
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "",
+   "uses": [
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "로그의 성장",
+   "p": [
+    "$\\frac{\\ln x}x\\to0$."
+   ]
+  },
+  {
+   "h": "되먹임",
+   "p": [
+    "자기 자신으로 표현."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 큰 근을 β=L+ln β로 되먹여 β/L→1을 얻고, 다시 로그를 취해 이차 근사를 처리하는 것",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "근의 위치",
+   "text": "$h(x)=x e^{-x}$ 는 $x=1$ 에서 최댓값 $\\frac{1}{e}$ 를 갖고, $x \\le 0$ 에서 $h(x)\\le 0$ 이므로 두 근은 $0<\\alpha(t)<1<\\beta(t)$ 이다. $t \\to 0+$ 일 때 $\\alpha(t)\\to 0$ , $\\beta(t)\\to \\infty$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$p$",
+   "text": "$\\alpha e^{-\\alpha}=t$ 에서 $\\frac{\\alpha(t)}{t}=e^{\\alpha(t)}\\to 1$ 이므로 $p=1$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "되먹임",
+   "text": "핵심 관문: $\\beta$ 쪽은 로그를 취해 자기 자신으로 되먹인다. $\\ln \\beta-\\beta=\\ln t$ 이므로 $L=-\\ln t$ 라 하면 $\\beta=L+\\ln \\beta$ 이다. $\\lim_{\\beta \\to \\infty}\\frac{\\ln \\beta}{\\beta}=0$ 이므로 $\\frac{\\beta}{L}=\\frac{1}{1-\\frac{\\ln \\beta}{\\beta}}\\to 1$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$q$",
+   "text": "따라서 $\\frac{\\beta+\\ln t}{\\ln(-\\ln t)}=\\frac{\\ln \\beta}{\\ln L}=\\frac{\\ln L+\\ln \\frac{\\beta}{L}}{\\ln L}\\to 1$ 이고 $q=1$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "구하는 값은 $200+10=210$ 이다.",
+   "uses": [
+    "C2",
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\alpha$",
+   "cond": "C2",
+   "text": [
+    "$e^\\alpha\\to1$."
+   ]
+  },
+  {
+   "h": "$\\ln\\frac\\beta L\\to0$",
+   "cond": "C2",
+   "text": [
+    "분자에서 사라진다."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $xe^{-2x}$",
+   "body": [
+    "$0<t<\\frac1{2e}$에 대하여 방정식 $xe^{-2x}=t$의 두 실근을 $\\alpha(t)<\\beta(t)$라 할 때, $p=\\lim_{t\\to0+}\\frac{\\alpha}t$, $r=\\lim_{t\\to0+}\\frac{\\beta}{-\\ln t}$, $q=\\lim_{t\\to0+}\\frac{2\\beta+\\ln t}{\\ln(-\\ln t)}$에 대하여 $200p+100r+10q$의 값을 구하시오."
+   ],
+   "answer": 260,
+   "hint": "$2\\beta=L+\\ln\\beta$: $r=\\frac12$, $q=1$, $p=1$."
+  }
+ ],
+ "line": "큰 근은 로그로 되먹인다."
+}
