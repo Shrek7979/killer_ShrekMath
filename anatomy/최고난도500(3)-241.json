@@ -1,0 +1,142 @@
+{
+ "wrong": "예상 오답 — $x$축 수직 단면으로 자르다 min의 경계 처리에서 막힌 경우",
+ "intro": [
+  "$z=s$ 수평 단면 = 정사각형.",
+  "$s=\\sin^2\\alpha$, 변의 길이 $\\pi-2\\alpha$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "입체",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "",
+   "why": "",
+   "uses": [
+    2,
+    3,
+    4
+   ]
+  },
+  "C3": {
+   "label": "부피",
+   "why": "",
+   "uses": [
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  "C4": {
+   "label": "단서",
+   "why": "",
+   "uses": [
+    8
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "수평 단면",
+   "p": [
+    "min → 동시 성립."
+   ]
+  },
+  {
+   "h": "치환과 부분적분",
+   "p": [
+    "$\\int w^2\\sin w$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 수직 단면 대신 수평 단면을 택하면 min 이 '두 조건의 동시 성립'으로 바뀌어 정사각형 단면이 되고, sin²α=s 로 치환해 역함수 꼴을 피하는 것",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "수직 단면",
+   "text": "$x$ 축에 수직인 평면으로 자르면 단면의 위쪽 경계가 $y$ 에 따라 $\\sin^{2}x$ 와 $\\sin^{2}y$ 사이에서 바뀌어 계산이 복잡하다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "수평 단면",
+   "text": "핵심 관문: $z$ 축에 수직인 평면 $z=s$ $(0 \\le s \\le 1)$ 로 자르면 단면은 $\\sin^{2}x \\ge s$ 이고 $\\sin^{2}y \\ge s$ 인 점 $(x,\\,y)$ 전체, 즉 두 구간의 곱으로 된 정사각형이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "변의 길이",
+   "text": "$0 \\le x \\le \\pi$ 에서 $\\sin x \\ge 0$ 이므로 $\\sin^{2}x \\ge s$ 는 $\\sin x \\ge \\sqrt{s}$ 와 같다. $\\sin \\alpha=\\sqrt{s}$ $\\left(0 \\le \\alpha \\le \\frac{\\pi}{2}\\right)$ 라 하면 이 범위는 $\\alpha \\le x \\le \\pi-\\alpha$ 이므로 단면은 한 변의 길이가 $\\pi-2 \\alpha$ 인 정사각형이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "치환",
+   "text": "$V=\\int_{0}^{1}(\\pi-2 \\alpha)^{2}ds$ 에서 $s=\\sin^{2}\\alpha$ 로 치환하면 $ds=2 \\sin \\alpha \\cos \\alpha d \\alpha=\\sin 2 \\alpha d \\alpha$ 이다. $$V=\\int_{0}^{\\frac{\\pi}{2}}(\\pi-2 \\alpha)^{2}\\sin 2 \\alpha d \\alpha$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "재치환",
+   "text": "다시 $w=\\pi-2 \\alpha$ 로 치환하면 $\\sin 2 \\alpha=\\sin(\\pi-w)=\\sin w$ , $d \\alpha=-\\frac{1}{2}d w$ 이므로 $V=\\frac{1}{2}\\int_{0}^{\\pi}w^{2}\\sin w d w$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "부분적분",
+   "text": "$$\\int_{0}^{\\pi}w^{2}\\sin w d w=\\left[-w^{2}\\cos w \\right]_{0}^{\\pi}+2 \\int_{0}^{\\pi}w \\cos w d w=\\pi^{2}+2 \\left[w \\sin w+\\cos w \\right]_{0}^{\\pi}=\\pi^{2}-4$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$V=\\frac{\\pi^{2}}{2}-2$ 이므로 $a=\\frac{1}{2}$ , $b=-2$ 이고 $20(a-b)=10+40=50$ 이다.",
+   "uses": [
+    "C3",
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$ds$",
+   "cond": "C3",
+   "text": [
+    "$\\sin2\\alpha\\,d\\alpha$."
+   ]
+  },
+  {
+   "h": "$w=\\pi-2\\alpha$",
+   "cond": "C3",
+   "text": [
+    "$\\frac12$ 계수."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\min(\\sin x,\\sin y)$",
+   "body": [
+    "$0\\le x\\le\\pi$, $0\\le y\\le\\pi$, $0\\le z\\le\\min(\\sin x,\\sin y)$를 만족시키는 입체의 부피가 $a\\pi+b$일 때, $20(a-b)$의 값을 구하시오. (단, $a$, $b$는 유리수)"
+   ],
+   "answer": 240,
+   "hint": "$s=\\sin\\alpha$: $\\int_0^{\\pi/2}(\\pi-2\\alpha)^2\\cos\\alpha\\,d\\alpha=4\\pi-8$."
+  }
+ ],
+ "line": "min 지붕은 수평으로 자른다."
+}
