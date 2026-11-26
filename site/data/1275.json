@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 최솟값을 꼭짓점에서 찾거나 $\\mathrm{K}$의 위치를 중심으로 본 경우",
  "answer": 33,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -30,48 +30,103 @@
     0
    ],
    "text": "한 변의 길이가 $2$ 인 정육각형 $\\mathrm{ABCDEF}$ 의 둘레 위를 움직이는 점 $\\mathrm{P}$ 에 대하여 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PC}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $4(M-m)$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "정육각형",
+   "why": "한 변 $2$; $4(M-m)$.",
+   "uses": [
+    2,
+    3,
+    4,
+    5
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PC}}=\\overline{\\mathrm{PK}}^2-3$, $\\mathrm{K}$는 $\\mathrm{OB}$의 중점.",
+  "최소는 가까운 변까지의 수선, 최대는 가장 먼 꼭짓점 $\\mathrm{E}$."
+ ],
  "topic": "내적 — 정육각형 둘레 위의 점과 대각선의 중점",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "중선 내적",
+   "p": [
+    "$\\overline{\\mathrm{PK}}^2-\\frac{\\overline{\\mathrm{AC}}^2}4$."
+   ]
+  },
+  {
+   "h": "볼록성",
+   "p": [
+    "변 위 거리 제곱의 최대는 꼭짓점."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 대각선의 중점이 반지름의 중점임을 보고 다각형 둘레 위의 최근접·최원점을 판정",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "정육각형의 중심을 $\\mathrm{O}$ , 선분 $\\mathrm{AC}$ 의 중점을 $\\mathrm{K}$ 라 하면 $\\overline{\\mathrm{AC}}=2 \\sqrt{3}$ 이므로 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PC}}=\\overline{\\mathrm{PK}}^{2}-3$ 이다. 점 $\\mathrm{K}$ 는 선분 $\\mathrm{OB}$ 의 중점이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "중점 $\\mathrm{K}$"
   },
   {
    "n": 3,
    "text": "최솟값: 정육각형의 각 변과 $\\mathrm{O}$ 사이의 거리는 $\\sqrt{3}$ 이다. 점 $\\mathrm{K}$ 는 $\\mathrm{O}$ 에서 $\\mathrm{B}$ 쪽으로 $1$ 만큼 떨어져 있으므로 두 변 $\\mathrm{AB}$ , $\\mathrm{BC}$ 까지의 거리는 $\\sqrt{3}-1 \\times \\cos \\frac{\\pi}{6}=\\frac{\\sqrt{3}}{2}$ 이고, 수선의 발은 각 변 위에 있다. 다른 변까지는 더 멀다. 따라서 $m=\\frac{3}{4}-3=-\\frac{9}{4}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "최솟값"
   },
   {
    "n": 4,
    "text": "최댓값: $\\overline{\\mathrm{PK}}^{2}$ 은 각 변 위에서 아래로 볼록하므로 꼭짓점에서 최대이다. $\\mathrm{K}$ 에서 각 꼭짓점까지의 거리의 제곱은 $\\mathrm{B}$ : $1$ , $\\mathrm{A}$ , $\\mathrm{C}$ : $3$ , $\\mathrm{D}$ , $\\mathrm{F}$ : $7$ , $\\mathrm{E}$ : $9$ 이므로 $M=9-3=6$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "최댓값"
   },
   {
    "n": 5,
    "text": "$4(M-m)=4 \\left(6+\\frac{9}{4}\\right)=33$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "수선의 발",
+   "cond": "C1",
+   "text": [
+    "변 $\\mathrm{AB}$, $\\mathrm{BC}$ 위에 떨어진다."
+   ]
+  },
+  {
+   "h": "$\\mathrm{K}$는 중심이 아니다",
+   "cond": "C1",
+   "text": [
+    "$\\mathrm{OB}$의 중점."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 한 변 $4$",
+   "body": [
+    "한 변의 길이가 $4$인 정육각형 $\\mathrm{ABCDEF}$의 둘레 위를 움직이는 점 $\\mathrm{P}$에 대하여 $\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PC}}$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $4(M-m)$의 값을 구하시오."
+   ],
+   "answer": 132,
+   "hint": "$2$배 닮음 → $M-m$이 $4$배: $4\\times\\frac{33}4\\times4$."
+  }
+ ],
+ "line": "대각선의 중점은 반지름의 중점.",
  "note": ""
 }

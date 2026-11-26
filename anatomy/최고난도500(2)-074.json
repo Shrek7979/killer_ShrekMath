@@ -1,0 +1,119 @@
+{
+ "wrong": "예상 오답 — 세 단위벡터가 $120^\\circ$씩 벌어짐을 못 보고 $\\mathrm{X}$의 좌표를 구하려 한 경우",
+ "intro": [
+  "세 단위벡터의 합 $\\vec0$ → 서로 $120^\\circ$ (페르마 점).",
+  "내적의 합 $=-\\frac12(xy+yz+zx)$, 넓이 $=\\frac{\\sqrt3}4(xy+yz+zx)$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "삼각형",
+   "why": "$5,5,6$, 넓이 $12$.",
+   "uses": [
+    4,
+    5
+   ]
+  },
+  "C2": {
+   "label": "단위벡터의 합",
+   "why": "$\\vec0$.",
+   "uses": [
+    2
+   ]
+  },
+  "C3": {
+   "label": "정의 연결",
+   "why": "조건식.",
+   "uses": [
+    2
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$k^2$.",
+   "uses": [
+    3,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "단위벡터의 합",
+   "p": [
+    "$|\\vec e_1+\\vec e_2|=1$ → 끼인각 $120^\\circ$."
+   ]
+  },
+  {
+   "h": "넓이 분할",
+   "p": [
+    "세 삼각형의 합."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 단위벡터 합이 영벡터 ⇒ 세 방향이 120°를 이룸을 찾아 내적의 합을 넓이와 연결",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$120^\\circ$",
+   "text": "세 단위벡터 $\\vec{e_{1}}$ , $\\vec{e_{2}}$ , $\\vec{e_{3}}$ 의 합이 $\\vec{0}$ 이면 $\\vec{e_{1}}+\\vec{e_{2}}=-\\vec{e_{3}}$ 에서 $2+2 \\vec{e_{1}}\\cdot \\vec{e_{2}}=1$ , 즉 $\\vec{e_{1}}\\cdot \\vec{e_{2}}=-\\frac{1}{2}$ 이다. 따라서 세 벡터 $\\vec{\\mathrm{XA}}$ , $\\vec{\\mathrm{XB}}$ , $\\vec{\\mathrm{XC}}$ 는 서로 $\\frac{2 \\pi}{3}$ 의 각을 이룬다. 이것이 숨은 관문이다.",
+   "uses": [
+    "C2",
+    "C3"
+   ]
+  },
+  {
+   "title": "내적의 합",
+   "text": "$\\overline{\\mathrm{XA}}=x$ , $\\overline{\\mathrm{XB}}=y$ , $\\overline{\\mathrm{XC}}=z$ 라 하면 $k=-\\frac{1}{2}(x y+y z+z x)$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "넓이",
+   "text": "한편 삼각형 $\\mathrm{ABC}$ 는 세 삼각형 $\\mathrm{XAB}$ , $\\mathrm{XBC}$ , $\\mathrm{XCA}$ 로 나뉘고 각각의 넓이는 $\\frac{1}{2}x y \\sin \\frac{2 \\pi}{3}$ 등이므로 삼각형 $\\mathrm{ABC}$ 의 넓이는 $\\frac{\\sqrt{3}}{4}(x y+y z+z x)$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "삼각형 $\\mathrm{ABC}$ 의 넓이는 $\\frac{1}{2}\\times 6 \\times 4=12$ 이므로 $x y+y z+z x=\\frac{48}{\\sqrt{3}}=16 \\sqrt{3}$ , $k=-8 \\sqrt{3}$ 이고 $k^{2}=192$ 이다. (삼각형의 모든 내각이 $\\frac{2 \\pi}{3}$ 보다 작으므로 이런 점 $\\mathrm{X}$ 는 내부에 존재한다.)",
+   "uses": [
+    "C1",
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "존재",
+   "cond": "C1",
+   "text": [
+    "모든 내각이 $120^\\circ$ 미만."
+   ]
+  },
+  {
+   "h": "부호",
+   "cond": "C4",
+   "text": [
+    "$k<0$ — 제곱하면 $192$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $3,4,5$",
+   "body": [
+    "세 변의 길이가 $3$, $4$, $5$인 삼각형 $\\mathrm{ABC}$의 내부의 점 $\\mathrm{X}$가 $\\frac{\\vec{\\mathrm{XA}}}{|\\vec{\\mathrm{XA}}|}+\\frac{\\vec{\\mathrm{XB}}}{|\\vec{\\mathrm{XB}}|}+\\frac{\\vec{\\mathrm{XC}}}{|\\vec{\\mathrm{XC}}|}=\\vec0$을 만족시킨다. $k=\\vec{\\mathrm{XA}}\\cdot\\vec{\\mathrm{XB}}+\\vec{\\mathrm{XB}}\\cdot\\vec{\\mathrm{XC}}+\\vec{\\mathrm{XC}}\\cdot\\vec{\\mathrm{XA}}$일 때, $k^2$의 값을 구하시오."
+   ],
+   "answer": 48,
+   "hint": "넓이 $6$ → $xy+yz+zx=\\frac{24}{\\sqrt3}=8\\sqrt3$, $k=-4\\sqrt3$."
+  }
+ ],
+ "line": "단위벡터 합 $\\vec0$ — $120^\\circ$의 페르마 점."
+}

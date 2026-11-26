@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 최솟값을 $\\mathrm{X}(3,0)$에서 구해 (나)를 무시한 경우",
  "answer": 51,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -44,9 +44,12 @@
     0
    ],
    "text": "좌표평면 위의 네 점 $\\mathrm{A}(0,\\,0)$ , $\\mathrm{B}(6,\\,0)$ , $\\mathrm{C}(0,\\,-4)$ , $\\mathrm{D}(6,\\,-4)$ 와 다음 조건을 만족시키는 점 $\\mathrm{X}$ 가 있다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "네 점",
+   "why": "직사각형 꼭짓점.",
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C2",
@@ -55,9 +58,11 @@
     0
    ],
    "text": "(가) $\\vec{\\mathrm{XA}}\\cdot \\vec{\\mathrm{XB}}\\le 0$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(가)",
+   "why": "원판 $\\overline{\\mathrm{XK}}\\le3$.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C3",
@@ -66,9 +71,12 @@
     1
    ],
    "text": "(나) $\\left|\\vec{\\mathrm{XA}}+\\vec{\\mathrm{XB}}\\right|\\ge 4$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(나)",
+   "why": "$\\overline{\\mathrm{XK}}\\ge2$.",
+   "uses": [
+    2,
+    4
+   ]
   },
   {
    "id": "C4",
@@ -77,9 +85,12 @@
     2
    ],
    "text": "(다) 점 $\\mathrm{X}$ 의 $y$ 좌표는 $0$ 이상이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(다)",
+   "why": "$y\\ge0$.",
+   "uses": [
+    2,
+    5
+   ]
   },
   {
    "id": "C5",
@@ -88,54 +99,117 @@
     0
    ],
    "text": "$\\vec{\\mathrm{XC}}\\cdot \\vec{\\mathrm{XD}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M+m$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$M+m$.",
+   "uses": [
+    4,
+    5,
+    6
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "(가) $\\overline{\\mathrm{XK}}\\le3$, (나) $\\overline{\\mathrm{XK}}\\ge2$, (다) $y\\ge0$ — 반원환.",
+  "$\\overline{\\mathrm{XN}}^2=\\overline{\\mathrm{XK}}^2+8y+16$ — 두 항을 따로 최대·최소."
+ ],
  "topic": "내적 — 세 조건으로 정해지는 반원환 영역과 내적의 범위",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "중선 내적",
+   "p": [
+    "$\\vec{\\mathrm{XA}}\\cdot\\vec{\\mathrm{XB}}=\\mathrm{XK}^2-9$."
+   ]
+  },
+  {
+   "h": "벡터의 합",
+   "p": [
+    "$\\vec{\\mathrm{XA}}+\\vec{\\mathrm{XB}}=2\\vec{\\mathrm{XK}}$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 세 벡터 조건을 반원환으로 바꾸고, 거리 제곱을 K까지의 거리와 y좌표로 분해해 최적점 판정",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2",
+    "C3",
+    "C4"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "선분 $\\mathrm{AB}$ 의 중점을 $\\mathrm{K}(3,\\,0)$ 이라 하면 (가)는 $\\overline{\\mathrm{XK}}\\le 3$ , (나)는 $2 \\overline{\\mathrm{XK}}\\ge 4$ , 즉 $\\overline{\\mathrm{XK}}\\ge 2$ 이다. 따라서 점 $\\mathrm{X}$ 는 $2 \\le \\overline{\\mathrm{XK}}\\le 3$ , $y \\ge 0$ 인 반원환 위에 있다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+   ],
+   "title": "반원환"
   },
   {
    "n": 3,
    "text": "선분 $\\mathrm{CD}$ 의 중점을 $\\mathrm{N}(3,\\,-4)$ 라 하면 $\\vec{\\mathrm{XC}}\\cdot \\vec{\\mathrm{XD}}=\\overline{\\mathrm{XN}}^{2}-9$ 이고, $\\mathrm{X}(x,\\,y)$ 에 대하여 $\\overline{\\mathrm{XN}}^{2}=(x-3)^{2}+y^{2}+8 y+16=\\overline{\\mathrm{XK}}^{2}+8 y+16$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "거리 분해"
   },
   {
    "n": 4,
    "text": "최솟값: $\\overline{\\mathrm{XK}}^{2}\\ge 4$ , $y \\ge 0$ 이므로 $\\overline{\\mathrm{XN}}^{2}\\ge 20$ 이고 등호는 $\\mathrm{X}(1,\\,0)$ , $(5,\\,0)$ 에서 성립한다. 가장 가까워 보이는 점 $(3,\\,0)$ 은 (나)에 의해 제외된다는 것이 함정이다. 따라서 $m=11$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3",
+    "C5"
+   ],
+   "title": "최솟값"
   },
   {
    "n": 5,
    "text": "최댓값: $\\overline{\\mathrm{XK}}^{2}\\le 9$ , $y \\le \\overline{\\mathrm{XK}}\\le 3$ 이므로 $\\overline{\\mathrm{XN}}^{2}\\le 9+24+16=49$ 이고 등호는 $\\mathrm{X}(3,\\,3)$ 에서 성립한다. 따라서 $M=40$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4",
+    "C5"
+   ],
+   "title": "최댓값"
   },
   {
    "n": 6,
    "text": "$M+m=51$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "가까워 보이는 점",
+   "cond": "C3",
+   "text": [
+    "$(3,0)$은 (나)로 제외."
+   ]
+  },
+  {
+   "h": "$y\\le\\overline{\\mathrm{XK}}$",
+   "cond": "C4",
+   "text": [
+    "최대는 꼭대기 $(3,3)$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\mathrm{B}(8,0)$, $\\mathrm{C}(0,-6)$",
+   "body": [
+    "네 점 $\\mathrm{A}(0,0)$, $\\mathrm{B}(8,0)$, $\\mathrm{C}(0,-6)$, $\\mathrm{D}(8,-6)$과 $\\vec{\\mathrm{XA}}\\cdot\\vec{\\mathrm{XB}}\\le0$, $|\\vec{\\mathrm{XA}}+\\vec{\\mathrm{XB}}|\\ge4$, $y$좌표가 $0$ 이상인 점 $\\mathrm{X}$가 있다. $\\vec{\\mathrm{XC}}\\cdot\\vec{\\mathrm{XD}}$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $M+m$의 값을 구하시오."
+   ],
+   "answer": 108,
+   "hint": "$2\\le\\overline{\\mathrm{XK}}\\le4$, $\\overline{\\mathrm{XN}}^2=\\overline{\\mathrm{XK}}^2+12y+36$. $m=40-16$, $M=100-16$."
+  }
+ ],
+ "line": "반원환 — 반지름과 높이를 따로.",
  "note": ""
 }
