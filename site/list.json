@@ -37290,9 +37290,9 @@
   "topic": "넓이 함수의 최솟값 — 사인곡선과 코사인곡선의 상수배",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 2,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -37313,9 +37313,9 @@
   "topic": "직선의 계수를 좌표로 하는 영역의 넓이",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 2,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -37336,9 +37336,9 @@
   "topic": "반복 축소되는 그래프 — 넓이의 급수가 수렴하는 기준선",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 7,
-  "nsteps": 6,
+  "nsteps": 5,
   "art": "",
   "snip": [
    {
@@ -37366,7 +37366,7 @@
   "topic": "곡선 위가 아닌 점에서 그은 두 접선 — 닮음 불변성",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 3,
   "nsteps": 6,
   "art": "",
@@ -37389,7 +37389,7 @@
   "topic": "넓이를 삼등분하는 두 곡선",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 2,
   "nsteps": 7,
   "art": "",
@@ -37412,7 +37412,7 @@
   "topic": "매개변수 곡선(심장형)의 y축 오른쪽 넓이",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 4,
   "nsteps": 6,
   "art": "",
@@ -37439,9 +37439,9 @@
   "topic": "역함수가 식으로 표현되지 않는 밑면의 입체",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 3,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -37462,9 +37462,9 @@
   "topic": "같은 밑면",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -37485,7 +37485,7 @@
   "topic": "매개변수 곡선으로 둘러싸인 밑면의 입체",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 2,
   "nsteps": 6,
   "art": "",
@@ -37508,9 +37508,9 @@
   "topic": "입체도형들의 부피의 급수",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 3,
-  "nsteps": 8,
+  "nsteps": 7,
   "art": "",
   "snip": [
    {

@@ -1,0 +1,119 @@
+{
+ "wrong": "예상 오답 — 두 곡선 사이 넓이를 직접 계산하려다 교점을 구하지 못한 경우",
+ "intro": [
+  "$F(k)=1+k-\\sqrt{1+k^2}$.",
+  "$F(a)=\\frac13$, $F(b)=\\frac23$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "영역 $R$",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "삼등분",
+   "why": "",
+   "uses": [
+    3,
+    4,
+    5,
+    6,
+    7
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "넓이 함수",
+   "p": [
+    "증가."
+   ]
+  },
+  {
+   "h": "무리방정식",
+   "p": [
+    "제곱."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 곡선 y=k cos x 아랫부분의 넓이를 1+k-√(1+k²) 로 정리해 두 개의 무리방정식으로 삼등분 조건을 푸는 것",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$R$",
+   "text": "$R$ 의 넓이는 $\\int_{0}^{\\frac{\\pi}{2}}\\sin x dx=1$ 이다. 양수 $k$ 에 대하여 $R$ 중 곡선 $y=k \\cos x$ 의 아랫부분의 넓이를 $F(k)$ 라 하자.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "교점",
+   "text": "두 곡선은 $\\tan x=k$ 인 점 $x=\\theta$ 에서 만나고 $\\cos \\theta=\\frac{1}{\\sqrt{1+k^{2}}}$ , $\\sin \\theta=\\frac{k}{\\sqrt{1+k^{2}}}$ 이다. $0<x<\\theta$ 에서는 $\\sin x<k \\cos x$ , $\\theta<x<\\frac{\\pi}{2}$ 에서는 $k \\cos x<\\sin x$ 이므로",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$F(k)$",
+   "text": "$$F(k)=\\int_{0}^{\\theta}\\sin x dx+\\int_{\\theta}^{\\frac{\\pi}{2}}k \\cos x dx=1-\\cos \\theta+k(1-\\sin \\theta)=1+k-\\sqrt{1+k^{2}}$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "조건",
+   "text": "핵심 관문: $F(k)$ 는 증가함수이므로 아래 곡선이 $y=a \\cos x$ , 위 곡선이 $y=b \\cos x$ 이고 $F(a)=\\frac{1}{3}$ , $F(b)=\\frac{2}{3}$ 이어야 한다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "풀이",
+   "text": "$F(a)=\\frac{1}{3}$ 에서 $a+\\frac{2}{3}=\\sqrt{1+a^{2}}$ , 양변을 제곱하면 $\\frac{4}{3}a+\\frac{4}{9}=1$ , $a=\\frac{5}{12}$ 이다. $F(b)=\\frac{2}{3}$ 에서 $b+\\frac{1}{3}=\\sqrt{1+b^{2}}$ , $\\frac{2}{3}b+\\frac{1}{9}=1$ , $b=\\frac{4}{3}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $36(a+b)=15+48=63$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "증가",
+   "cond": "C2",
+   "text": [
+    "아래 곡선이 $a$."
+   ]
+  },
+  {
+   "h": "제곱",
+   "cond": "C2",
+   "text": [
+    "$a+\\frac23>0$ 확인."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 사등분",
+   "body": [
+    "곡선 $y=\\sin x$와 $x$축, 직선 $x=\\frac\\pi2$로 둘러싸인 부분 $R$를 세 양수 $a<b<c$에 대한 곡선 $y=a\\cos x$, $y=b\\cos x$, $y=c\\cos x$ $\\left(0\\le x\\le\\frac\\pi2\\right)$가 넓이가 같은 네 부분으로 나눌 때, $12(a+b+c)$의 값을 구하시오."
+   ],
+   "answer": 35,
+   "hint": "$F=\\frac14,\\frac12,\\frac34$: $a=\\frac7{24}$, $b=\\frac34$, $c=\\frac{15}8$."
+  }
+ ],
+ "line": "넓이 함수 $1+k-\\sqrt{1+k^2}$."
+}
