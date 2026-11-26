@@ -1,0 +1,118 @@
+{
+ "wrong": "예상 오답 — 내적 조건을 현의 길이와 중점의 자취로 바꾸지 못한 경우",
+ "intro": [
+  "$\\vec{\\mathrm{OA}}\\cdot\\vec{\\mathrm{OB}}=7$ → $\\overline{\\mathrm{AB}}=6$, 중점 $\\mathrm{M}$은 반지름 $4$인 원 위.",
+  "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=\\overline{\\mathrm{PM}}^2-9$ — 두 원 사이의 거리."
+ ],
+ "conds": {
+  "C1": {
+   "label": "세 점",
+   "why": "$\\mathrm{A},\\mathrm{B}$는 반지름 $5$인 원 위, $\\mathrm{P}$는 다른 원 위.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C2": {
+   "label": "묻는 것",
+   "why": "최댓값과 최솟값의 합.",
+   "uses": [
+    4,
+    5
+   ]
+  },
+  "C3": {
+   "label": "단서",
+   "why": "$\\mathrm{O}$는 원점.",
+   "uses": [
+    3
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "중선 내적",
+   "p": [
+    "$\\mathrm{PM}^2-\\frac{\\mathrm{AB}^2}4$."
+   ]
+  },
+  {
+   "h": "두 원 위 점 사이 거리",
+   "p": [
+    "중심 거리 $\\pm$ 반지름의 합."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 내적 조건을 현의 길이로 해석하고 중점의 자취를 원으로 바꾸어 두 원 사이 거리 문제로 환원",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "중점으로",
+   "text": "선분 $\\mathrm{AB}$ 의 중점을 $\\mathrm{M}$ 이라 하면 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}=\\overline{\\mathrm{PM}}^{2}-\\frac{1}{4}\\overline{\\mathrm{AB}}^{2}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "현의 길이",
+   "text": "$\\overline{\\mathrm{AB}}^{2}=\\left|\\vec{\\mathrm{OB}}-\\vec{\\mathrm{OA}}\\right|^{2}=25+25-14=36$ 이고 $\\left|\\vec{\\mathrm{OM}}\\right|^{2}=\\frac{1}{4}\\left|\\vec{\\mathrm{OA}}+\\vec{\\mathrm{OB}}\\right|^{2}=\\frac{25+25+14}{4}=16$ 이다. 즉 내적 조건은 '길이가 $6$ 인 현'이고, 중점 $\\mathrm{M}$ 은 원 $x^{2}+y^{2}=16$ 위의 모든 점이 될 수 있다.",
+   "uses": [
+    "C1",
+    "C3"
+   ]
+  },
+  {
+   "title": "두 원",
+   "text": "따라서 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}=\\overline{\\mathrm{PM}}^{2}-9$ 이고, $\\mathrm{M}$ 은 원점 중심 반지름 $4$ 인 원 위, $\\mathrm{P}$ 는 중심 $(12,\\,5)$ 반지름 $2$ 인 원 위를 움직인다. 두 중심 사이의 거리는 $13$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "최대·최소",
+   "text": "$\\overline{\\mathrm{PM}}$ 의 최댓값은 $13+4+2=19$ , 최솟값은 $13-4-2=7$ 이므로 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}$ 의 최댓값은 $361-9=352$ , 최솟값은 $49-9=40$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "구하는 합은 $352+40=392$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$|\\vec{\\mathrm{OM}}|$",
+   "cond": "C1",
+   "text": [
+    "$\\frac14|\\vec{\\mathrm{OA}}+\\vec{\\mathrm{OB}}|^2=16$."
+   ]
+  },
+  {
+   "h": "두 원은 떨어져 있다",
+   "cond": "C2",
+   "text": [
+    "$13>4+2$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 내적 $-7$",
+   "body": [
+    "원 $x^2+y^2=25$ 위의 두 점 $\\mathrm{A}$, $\\mathrm{B}$가 $\\vec{\\mathrm{OA}}\\cdot\\vec{\\mathrm{OB}}=-7$을 만족시키고, 점 $\\mathrm{P}$는 원 $(x-8)^2+(y-6)^2=1$ 위의 점이다. 세 점이 움직일 때 $\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}$의 최댓값과 최솟값의 합을 구하시오. (단, $\\mathrm{O}$는 원점)"
+   ],
+   "answer": 200,
+   "hint": "$\\overline{\\mathrm{AB}}^2=64$, $|\\vec{\\mathrm{OM}}|=3$. $\\overline{\\mathrm{PM}}\\in[6,14]$ → $180+20$."
+  }
+ ],
+ "line": "내적 조건은 현의 길이 — 중점은 원을 그린다."
+}

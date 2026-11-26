@@ -1,0 +1,126 @@
+{
+ "wrong": "예상 오답 — 계수비를 변의 비로 바로 쓰지 못하거나 내심임을 놓친 경우",
+ "intro": [
+  "$4\\vec{\\mathrm{PA}}+5\\vec{\\mathrm{PB}}+6\\vec{\\mathrm{PC}}=\\vec0$ → 넓이의 비 $4:5:6$.",
+  "세 변까지 거리가 같으면 넓이의 비 = 변의 비 → 내심, $4:5:6$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "삼각형",
+   "why": "$\\overline{\\mathrm{AB}}=12$.",
+   "uses": [
+    3
+   ]
+  },
+  "C2": {
+   "label": "(가)",
+   "why": "위치벡터의 계수.",
+   "uses": [
+    2
+   ]
+  },
+  "C3": {
+   "label": "(나)",
+   "why": "세 변까지 같은 거리.",
+   "uses": [
+    3
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "세 거리의 제곱의 합.",
+   "uses": [
+    4,
+    5,
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "넓이 좌표",
+   "p": [
+    "$\\alpha\\vec{\\mathrm{PA}}+\\beta\\vec{\\mathrm{PB}}+\\gamma\\vec{\\mathrm{PC}}=\\vec0$ → 넓이 $\\alpha:\\beta:\\gamma$."
+   ]
+  },
+  {
+   "h": "내심까지 거리",
+   "p": [
+    "$\\mathrm{PA}^2=r^2+(s-a)^2$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 위치벡터의 계수에서 넓이의 비를, 같은 거리 조건에서 변의 길이의 비를 끌어내 내심을 확정",
+   "uses": [
+    "C2",
+    "C3"
+   ]
+  },
+  {
+   "title": "넓이의 비",
+   "text": "(가)에서 $\\vec{\\mathrm{AP}}=\\frac{5 \\vec{\\mathrm{AB}}+6 \\vec{\\mathrm{AC}}}{15}=\\frac{11}{15}\\times \\frac{5 \\vec{\\mathrm{AB}}+6 \\vec{\\mathrm{AC}}}{11}$ 이므로 직선 $\\mathrm{AP}$ 와 변 $\\mathrm{BC}$ 의 교점 $\\mathrm{D}$ 는 $\\mathrm{BC}$ 를 $6:5$ 로 내분하고 $\\overline{\\mathrm{AP}}:\\overline{\\mathrm{PD}}=11:4$ 이다. 따라서 삼각형 $\\mathrm{PBC}$ 의 넓이는 삼각형 $\\mathrm{ABC}$ 의 넓이의 $\\frac{4}{15}$ 이고, 같은 방법으로 삼각형 $\\mathrm{PCA}$ , $\\mathrm{PAB}$ 의 넓이는 각각 $\\frac{5}{15}$ , $\\frac{6}{15}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "변의 비",
+   "text": "(나)에서 세 삼각형의 높이가 같으므로 넓이의 비는 밑변의 비와 같다. 즉 $\\overline{\\mathrm{BC}}:\\overline{\\mathrm{CA}}:\\overline{\\mathrm{AB}}=4:5:6$ 이고 $\\overline{\\mathrm{BC}}=8$ , $\\overline{\\mathrm{CA}}=10$ 이다. 점 $\\mathrm{P}$ 는 내심이다.",
+   "uses": [
+    "C1",
+    "C3"
+   ]
+  },
+  {
+   "title": "$\\mathrm{PA}^2$",
+   "text": "$s=15$ 라 하면 내심에서 꼭짓점까지의 거리에 대하여 $\\overline{\\mathrm{PA}}\\cos \\frac{A}{2}=s-\\overline{\\mathrm{BC}}=7$ 이고 $\\cos A=\\frac{100+144-64}{240}=\\frac{3}{4}$ , $\\cos^{2}\\frac{A}{2}=\\frac{7}{8}$ 이므로 $\\overline{\\mathrm{PA}}^{2}=56$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "$\\mathrm{PB}^2$, $\\mathrm{PC}^2$",
+   "text": "같은 방법으로 $\\cos B=\\frac{64+144-100}{192}=\\frac{9}{16}$ , $\\cos^{2}\\frac{B}{2}=\\frac{25}{32}$ , $s-\\overline{\\mathrm{CA}}=5$ 이므로 $\\overline{\\mathrm{PB}}^{2}=32$ 이고, $\\cos C=\\frac{64+100-144}{160}=\\frac{1}{8}$ , $\\cos^{2}\\frac{C}{2}=\\frac{9}{16}$ , $s-\\overline{\\mathrm{AB}}=3$ 이므로 $\\overline{\\mathrm{PC}}^{2}=16$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 구하는 값은 $56+32+16=104$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "대응",
+   "cond": "C2",
+   "text": [
+    "$\\triangle\\mathrm{PBC}$가 계수 $4$ — $\\mathrm{A}$의 맞은편."
+   ]
+  },
+  {
+   "h": "반각",
+   "cond": "C4",
+   "text": [
+    "$\\cos^2\\frac A2=\\frac{1+\\cos A}2$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $3:4:5$",
+   "body": [
+    "$\\overline{\\mathrm{AB}}=10$인 삼각형 $\\mathrm{ABC}$의 내부의 점 $\\mathrm{P}$가 $3\\vec{\\mathrm{PA}}+4\\vec{\\mathrm{PB}}+5\\vec{\\mathrm{PC}}=\\vec0$을 만족시키고, $\\mathrm{P}$에서 세 직선 $\\mathrm{AB}$, $\\mathrm{BC}$, $\\mathrm{CA}$에 이르는 거리가 모두 같다. $|\\vec{\\mathrm{PA}}|^2+|\\vec{\\mathrm{PB}}|^2+|\\vec{\\mathrm{PC}}|^2$의 값을 구하시오."
+   ],
+   "answer": 68,
+   "hint": "$\\overline{\\mathrm{BC}}=6$, $\\overline{\\mathrm{CA}}=8$ (직각), $r=2$, $s=12$. $(4+36)+(4+16)+(4+4)$."
+  }
+ ],
+ "line": "계수는 넓이, 같은 거리는 내심."
+}

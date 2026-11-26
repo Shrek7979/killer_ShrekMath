@@ -1,0 +1,113 @@
+{
+ "wrong": "예상 오답 — 두 점을 동시에 움직여 최댓값과 최솟값을 같은 위치에서 찾으려 한 경우",
+ "intro": [
+  "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PQ}}=|\\vec{\\mathrm{PN}}|^2-\\frac14|\\vec{\\mathrm{AQ}}|^2$ ($\\mathrm{N}$은 $\\mathrm{AQ}$의 중점).",
+  "$\\mathrm{Q}$ 고정 → $\\mathrm{P}$로 최대·최소, 남은 식은 선분 위에서 볼록 → 끝점."
+ ],
+ "conds": {
+  "C1": {
+   "label": "두 동점",
+   "why": "원 위의 $\\mathrm{P}$, 선분 $\\mathrm{BC}$ 위의 $\\mathrm{Q}$.",
+   "uses": [
+    2,
+    5
+   ]
+  },
+  "C2": {
+   "label": "묻는 것",
+   "why": "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PQ}}$의 $M-m$.",
+   "uses": [
+    3,
+    4,
+    5,
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "중선 내적",
+   "p": [
+    "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PQ}}=\\mathrm{PN}^2-\\frac{\\mathrm{AQ}^2}4$."
+   ]
+  },
+  {
+   "h": "볼록함수",
+   "p": [
+    "선분 위 최대는 끝점."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 내적을 중점까지의 거리로 바꾸고, 남은 식이 선분 위에서 볼록함을 이용해 끝점만 조사하는 두 단계 최적화",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "중점으로",
+   "text": "선분 $\\mathrm{AQ}$ 의 중점을 $\\mathrm{N}$ 이라 하면 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PQ}}=\\left|\\vec{\\mathrm{PN}}\\right|^{2}-\\frac{1}{4}\\left|\\vec{\\mathrm{AQ}}\\right|^{2}$ 이다. 점 $\\mathrm{Q}$ 를 고정하면 원 위의 점 $\\mathrm{P}$ 에 대하여 $\\left|\\vec{\\mathrm{PN}}\\right|$ 의 최댓값은 $\\left|\\vec{\\mathrm{ON}}\\right|+2$ , 최솟값은 $\\left|\\left|\\vec{\\mathrm{ON}}\\right|-2 \\right|$ 이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "정리",
+   "text": "한편 $\\left|\\vec{\\mathrm{ON}}\\right|^{2}-\\frac{1}{4}\\left|\\vec{\\mathrm{AQ}}\\right|^{2}=\\left|\\frac{\\vec{\\mathrm{OA}}+\\vec{\\mathrm{OQ}}}{2}\\right|^{2}-\\left|\\frac{\\vec{\\mathrm{OQ}}-\\vec{\\mathrm{OA}}}{2}\\right|^{2}=\\vec{\\mathrm{OA}}\\cdot \\vec{\\mathrm{OQ}}$ 이므로, 점 $\\mathrm{Q}$ 를 고정할 때 $$f_{1}=\\vec{\\mathrm{OA}}\\cdot \\vec{\\mathrm{OQ}}+4 \\left|\\vec{\\mathrm{ON}}\\right|+4,\\,\\,\\,f_{2}=\\vec{\\mathrm{OA}}\\cdot \\vec{\\mathrm{OQ}}-4 \\left|\\vec{\\mathrm{ON}}\\right|+4$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "끝점",
+   "text": "이다. 점 $\\mathrm{Q}$ 가 선분 위를 움직일 때 $\\vec{\\mathrm{OA}}\\cdot \\vec{\\mathrm{OQ}}$ 는 일차식이고 $\\left|\\vec{\\mathrm{ON}}\\right|$ (점 $\\mathrm{N}$ 은 선분 위를 움직임)은 아래로 볼록하므로 $f_{1}$ 의 최댓값과 $f_{2}$ 의 최솟값은 모두 선분의 양 끝점에서 생긴다. 이것이 핵심 관문이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "계산",
+   "text": "$\\mathrm{Q}=\\mathrm{B}$ 일 때 $\\mathrm{N}(4,\\,3)$ , $\\left|\\vec{\\mathrm{ON}}\\right|=5$ , $\\vec{\\mathrm{OA}}\\cdot \\vec{\\mathrm{OB}}=16$ 이므로 $f_{1}=40$ , $f_{2}=0$ 이다. $\\mathrm{Q}=\\mathrm{C}$ 일 때 $\\mathrm{N}(1,\\,0)$ , $\\left|\\vec{\\mathrm{ON}}\\right|=1$ , $\\vec{\\mathrm{OA}}\\cdot \\vec{\\mathrm{OC}}=-8$ 이므로 $f_{1}=0$ , $f_{2}=-8$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $M=40$ , $m=-8$ 이고 $M-m=48$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$|\\vec{\\mathrm{PN}}|$ 최소",
+   "cond": "C2",
+   "text": [
+    "$||\\vec{\\mathrm{ON}}|-2|$ — 제곱하면 부호 무관."
+   ]
+  },
+  {
+   "h": "볼록성",
+   "cond": "C1",
+   "text": [
+    "$|\\vec{\\mathrm{ON}}|$은 아래로 볼록."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\mathrm{B}(-4,6)$, $\\mathrm{C}(2,8)$",
+   "body": [
+    "원 $x^2+y^2=4$ 위를 움직이는 점 $\\mathrm{P}$와 두 점 $\\mathrm{B}(-4,6)$, $\\mathrm{C}(2,8)$을 잇는 선분 위를 움직이는 점 $\\mathrm{Q}$가 있다. 점 $\\mathrm{A}(4,0)$에 대하여 $\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PQ}}$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $M-m$의 값을 구하시오."
+   ],
+   "answer": 56,
+   "hint": "$\\mathrm{Q}=\\mathrm{B}$: $\\mathrm{N}(0,3)$, $f_1=0$, $f_2=-24$. $\\mathrm{Q}=\\mathrm{C}$: $\\mathrm{N}(3,4)$, $f_1=32$, $f_2=-8$."
+  }
+ ],
+ "line": "내적은 중점까지의 거리로, 선분은 끝점으로."
+}

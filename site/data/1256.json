@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 30번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $\\mathrm{Q}$의 자취를 직선으로 보거나 활꼴을 빼먹은 경우",
  "answer": 592,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -43,9 +43,11 @@
     0
    ],
    "text": "좌표평면에서 두 점 $\\mathrm{A}(8,\\,0)$ , $\\mathrm{B}(0,\\,8)$ 을 잇는 선분 $\\mathrm{AB}$ 위를 움직이는 점 $\\mathrm{P}$ 에 대하여 점 $\\mathrm{Q}$ 가",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "점 $\\mathrm{P}$",
+   "why": "선분 $\\mathrm{AB}$ 위.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C2",
@@ -54,9 +56,12 @@
     0
    ],
    "text": "$\\vec{\\mathrm{OQ}}=\\frac{32}{\\left|\\vec{\\mathrm{OP}}\\right|^{2}}\\vec{\\mathrm{OP}}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "점 $\\mathrm{Q}$",
+   "why": "크기의 역수배.",
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C3",
@@ -65,9 +70,11 @@
     0
    ],
    "text": "를 만족시킨다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "정의 연결",
+   "why": "$\\vec{\\mathrm{OQ}}$의 정의.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C4",
@@ -76,9 +83,13 @@
     1
    ],
    "text": "점 $\\mathrm{P}$ 가 점 $\\mathrm{A}$ 에서 점 $\\mathrm{B}$ 까지 움직일 때, 선분 $\\mathrm{PQ}$ 가 지나간 부분의 넓이는 $a+b \\pi$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "넓이",
+   "why": "$a+b\\pi$.",
+   "uses": [
+    4,
+    5,
+    6
+   ]
   },
   {
    "id": "C5",
@@ -87,9 +98,11 @@
     2
    ],
    "text": "$a^{2}+b^{2}$ 의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$a^2+b^2$.",
+   "uses": [
+    6
+   ]
   },
   {
    "id": "C6",
@@ -98,60 +111,111 @@
     3
    ],
    "text": "(단, $\\mathrm{O}$ 는 원점이고, $a$ , $b$ 는 유리수이다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "단서",
+   "why": "$a,b$ 유리수.",
+   "uses": [
+    6
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "$|\\vec{\\mathrm{OQ}}||\\vec{\\mathrm{OP}}|=32$, 같은 방향 — 직선 $x+y=8$이 원으로.",
+  "선분 $\\mathrm{PQ}$는 반원과 선분 $\\mathrm{AB}$ 사이를 쓸고 지나간다."
+ ],
  "topic": "위치벡터 — 크기의 역수배로 정의된 점의 자취와 선분이 지나간 영역",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "반전",
+   "p": [
+    "$|\\vec{\\mathrm{OP}}||\\vec{\\mathrm{OQ}}|=k$ — 직선 ↔ 원."
+   ]
+  },
+  {
+   "h": "활꼴",
+   "p": [
+    "$\\frac12r^2(\\theta-\\sin\\theta)$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 크기의 곱이 일정한 위치벡터 관계에서 직선이 원으로 바뀜을 찾고, 선분의 위치 관계로 영역을 확정",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "$\\vec{\\mathrm{OQ}}$ 는 $\\vec{\\mathrm{OP}}$ 와 방향이 같고 $\\left|\\vec{\\mathrm{OQ}}\\right|\\left|\\vec{\\mathrm{OP}}\\right|=32$ 이다. 따라서 $\\vec{\\mathrm{OP}}=\\frac{32}{\\left|\\vec{\\mathrm{OQ}}\\right|^{2}}\\vec{\\mathrm{OQ}}$ 도 성립한다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2",
+    "C3"
+   ],
+   "title": "대칭 관계"
   },
   {
    "n": 3,
    "text": "점 $\\mathrm{P}(x_{1},\\,y_{1})$ 은 $x_{1}+y_{1}=8$ 을 만족시키므로 점 $\\mathrm{Q}(x,\\,y)$ 에 대하여 $\\frac{32(x+y)}{x^{2}+y^{2}}=8$ , 즉 $(x-2)^{2}+(y-2)^{2}=8$ 이다. 점 $\\mathrm{Q}$ 는 중심이 $(2,\\,2)$ , 반지름의 길이가 $2 \\sqrt{2}$ 인 원 위에 있고, $\\mathrm{P}=\\mathrm{A}$ , $\\mathrm{B}$ 일 때 $\\mathrm{Q}$ 는 $(4,\\,0)$ , $(0,\\,4)$ , $\\mathrm{P}(4,\\,4)$ 일 때 $\\mathrm{Q}(4,\\,4)$ 이므로 점 $\\mathrm{Q}$ 는 이 원에서 원점을 포함하지 않는 반원 위를 움직인다. 이것이 숨은 자취이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "원"
   },
   {
    "n": 4,
    "text": "$\\left|\\vec{\\mathrm{OP}}\\right|\\ge 4 \\sqrt{2}$ 이므로 $\\left|\\vec{\\mathrm{OQ}}\\right|=\\frac{32}{\\left|\\vec{\\mathrm{OP}}\\right|}\\le \\left|\\vec{\\mathrm{OP}}\\right|$ 이고, 선분 $\\mathrm{PQ}$ 는 반직선 $\\mathrm{OP}$ 위에서 반원과 선분 $\\mathrm{AB}$ 사이에 놓인다. 따라서 선분 $\\mathrm{PQ}$ 가 지나간 부분은 삼각형 $\\mathrm{OAB}$ 에서 원점, 점 $(4,\\,0)$ , 반원, 점 $(0,\\,4)$ 로 둘러싸인 부분을 뺀 것이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "영역"
   },
   {
    "n": 5,
-   "text": "원점, $(4,\\,0)$ , 반원, $(0,\\,4)$ 로 둘러싸인 부분은 한 변의 길이가 $4$ 인 정사각형과, 길이가 $4$ 인 현과 호로 둘러싸인 활꼴(중심각 $\\frac{\\pi}{2}$ ) 두 개로 이루어지므로 넓이는",
-   "uses": [],
-   "title": ""
+   "text": "원점, $(4,\\,0)$ , 반원, $(0,\\,4)$ 로 둘러싸인 부분은 한 변의 길이가 $4$ 인 정사각형과, 길이가 $4$ 인 현과 호로 둘러싸인 활꼴(중심각 $\\frac{\\pi}{2}$ ) 두 개로 이루어지므로 넓이는 $$16+2 \\times \\frac{1}{2}\\times 8 \\times \\left(\\frac{\\pi}{2}-1 \\right)=8+4 \\pi$$",
+   "uses": [
+    "C4"
+   ],
+   "title": "뺄 부분"
   },
   {
    "n": 6,
-   "text": "$$16+2 \\times \\frac{1}{2}\\times 8 \\times \\left(\\frac{\\pi}{2}-1 \\right)=8+4 \\pi$$",
-   "uses": [],
-   "title": ""
-  },
-  {
-   "n": 7,
    "text": "이다. 구하는 넓이는 $32-(8+4 \\pi)=24-4 \\pi$ 이므로 $a=24$ , $b=-4$ 이고 $a^{2}+b^{2}=592$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5",
+    "C6"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "반원만",
+   "cond": "C2",
+   "text": [
+    "원점 쪽 반원은 아니다."
+   ]
+  },
+  {
+   "h": "$b<0$",
+   "cond": "C6",
+   "text": [
+    "$-4\\pi$ — $b=-4$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 선분 $(6,0)$–$(0,6)$",
+   "body": [
+    "두 점 $\\mathrm{A}(6,0)$, $\\mathrm{B}(0,6)$을 잇는 선분 위를 움직이는 점 $\\mathrm{P}$에 대하여 점 $\\mathrm{Q}$가 $\\vec{\\mathrm{OQ}}=\\frac{18}{|\\vec{\\mathrm{OP}}|^2}\\vec{\\mathrm{OP}}$를 만족시킨다. $\\mathrm{P}$가 $\\mathrm{A}$에서 $\\mathrm{B}$까지 움직일 때 선분 $\\mathrm{PQ}$가 지나간 부분의 넓이가 $a+b\\pi$일 때, $4(a+b)$의 값을 구하시오. (단, $\\mathrm{O}$는 원점, $a,b$는 유리수)"
+   ],
+   "answer": 45,
+   "hint": "원 $x^2+y^2=3(x+y)$. 뺄 부분 $9+2\\cdot\\frac12\\cdot\\frac92\\left(\\frac\\pi2-1\\right)$. 넓이 $\\frac{27}2-\\frac{9}4\\pi$."
+  }
+ ],
+ "line": "크기의 역수배 — 직선이 원이 된다.",
  "note": ""
 }
