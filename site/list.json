@@ -29335,9 +29335,9 @@
   "topic": "포물선 — 반사 경로의 길이가 일정함을 찾아 초점 결정",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 8,
-  "nsteps": 8,
+  "nsteps": 5,
   "art": "",
   "snip": [
    {
@@ -29365,9 +29365,9 @@
   "topic": "쌍곡선 — 점근선에 접하는 원들과 쌍곡선의 교점의 개수를 세는 함수의 불연속",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 4,
-  "nsteps": 8,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -29388,9 +29388,9 @@
   "topic": "쌍곡선 — 초점을 지나는 현의 길이가 주어진 직선의 개수",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 6,
-  "nsteps": 8,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -29418,7 +29418,7 @@
   "topic": "포물선 — 초점과 축 위의 점으로 만든 이등변삼각형의 개수 함수",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 3,
   "nsteps": 7,
   "art": "",
