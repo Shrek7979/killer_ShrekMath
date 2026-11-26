@@ -32898,9 +32898,9 @@
   "topic": "급수 — 분수 점화식의 역수 치환과 가중치가 붙은 망원급수",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 6,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -32925,9 +32925,9 @@
   "topic": "급수로 정의된 함수 — 변수가 들어간 망원급수와 미분·적분",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 4,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -32952,9 +32952,9 @@
   "topic": "급수 — 볼록다각형의 대각선의 교점과 영역의 개수",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
-  "nsteps": 8,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -32979,9 +32979,9 @@
   "topic": "급수 — 2/3^n 꼴 급수의 유일성(칸토어 집합)과 다른 밑으로의 이전",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
-  "nsteps": 8,
+  "nsteps": 7,
   "art": "",
   "snip": [
    {
@@ -33002,9 +33002,9 @@
   "topic": "급수 — 원 위의 세 수를 이웃과 평균하는 시행과 텔레스코핑 연립",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 6,
-  "nsteps": 8,
+  "nsteps": 7,
   "art": "",
   "snip": [
    {
@@ -33029,7 +33029,7 @@
   "topic": "급수 — 튀어 오르는 공의 이동 거리와 걸린 시간(실생활)",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 3,
   "nsteps": 6,
   "art": "",
@@ -33052,7 +33052,7 @@
   "topic": "급수 — 2년마다 인상되는 영구 장학금의 현재 가치(실생활)",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 6,
   "nsteps": 6,
   "art": "",
@@ -33075,7 +33075,7 @@
   "topic": "급수 — 포물선의 활꼴을 채우는 삼각형들(아르키메데스)과 홀수 단계",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
   "nsteps": 6,
   "art": "",
@@ -33098,7 +33098,7 @@
   "topic": "함수의 극한과 급수 — 문턱값 이상인 항만 더한 등비합의 r→1 극한",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 3,
   "nsteps": 6,
   "art": "",
@@ -33125,9 +33125,9 @@
   "topic": "급수 — 겹친 유리판 사이의 무한 반사와 투과율의 역수(실생활)",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
-  "nsteps": 8,
+  "nsteps": 7,
   "art": "",
   "snip": [
    {
