@@ -29814,9 +29814,9 @@
   "topic": "포물선 — 원 위의 점과 포물선 위의 점에 대한 거리의 합의 최솟값(최댓값의 최솟값)",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 3,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -29837,9 +29837,9 @@
   "topic": "포물선 — 한 점을 지나는 법선의 개수를 세는 함수와 격자점",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 3,
-  "nsteps": 8,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -29860,7 +29860,7 @@
   "topic": "타원 — 초점삼각형의 방접원과 장축의 끝점에서의 접선",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 3,
   "nsteps": 7,
   "art": "",
@@ -29883,9 +29883,9 @@
   "topic": "타원 — 내접하는 직사각형의 넓이의 최댓값과 둘레의 길이의 최댓값",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 2,
-  "nsteps": 8,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -29906,9 +29906,9 @@
   "topic": "타원 — 기울기와 y절편이 모두 정수인 접선의 개수",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 2,
-  "nsteps": 8,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -29929,9 +29929,9 @@
   "topic": "쌍곡선 — 접선이 두 점근선과 만나는 두 점까지의 거리의 곱",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 3,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -29952,7 +29952,7 @@
   "topic": "타원 — 평행한 현의 중점이 놓이는 직선과 초점거리의 합",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 3,
   "nsteps": 6,
   "art": "",
@@ -29975,9 +29975,9 @@
   "topic": "포물선 — 세 접선이 만드는 삼각형의 외접원이 초점을 지남",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 3,
-  "nsteps": 8,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -29998,9 +29998,9 @@
   "topic": "포물선 — 무게중심이 초점인 세 점의 초점거리의 곱의 범위",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 3,
-  "nsteps": 7,
+  "nsteps": 5,
   "art": "",
   "snip": [
    {
@@ -30021,7 +30021,7 @@
   "topic": "쌍곡선 — 두 점근선에 내린 수선의 발과 지름이 OP인 원",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
   "nsteps": 6,
   "art": "",

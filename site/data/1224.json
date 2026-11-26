@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 방접원의 중심이 $\\mathrm{P}$의 접선 위에 있음을 못 보고 $\\mathrm{P}$를 정하지 못한 경우",
  "answer": 481,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -32,9 +32,12 @@
     0
    ],
    "text": "두 초점이 $\\mathrm{F}(4,\\,0)$ , $\\mathrm{F'}(-4,\\,0)$ 인 타원 $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ $(a>b>0)$ 위의 점 중 제 $1$ 사분면에 있는 점 $\\mathrm{P}$ 가 있다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "타원과 $\\mathrm{P}$",
+   "why": "$c=4$, 제$1$사분면.",
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C2",
@@ -43,9 +46,12 @@
     1
    ],
    "text": "선분 $\\mathrm{PF}$ 와 두 반직선 $\\mathrm{F'P}$ , $\\mathrm{F'F}$ 에 모두 접하는 원 중 삼각형 $\\mathrm{PF'F}$ 의 외부에 있는 원을 $C$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "방접원 $C$",
+   "why": "선분 $\\mathrm{PF}$와 두 반직선에 접함.",
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C3",
@@ -54,60 +60,120 @@
     2
    ],
    "text": "원 $C$ 가 $x$ 축과 점 $(5,\\,0)$ 에서 접하고 원 $C$ 의 반지름의 길이가 $\\frac{3}{2}$ 일 때, $25 \\times \\overline{\\mathrm{PF}}\\times \\overline{\\mathrm{PF'}}$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "수치와 묻는 것",
+   "why": "접점 $(5,0)$, 반지름 $\\frac32$; $25\\,\\overline{\\mathrm{PF}}\\cdot\\overline{\\mathrm{PF'}}$.",
+   "uses": [
+    3,
+    4,
+    5,
+    6
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "방접원은 $x$축과 $(a,0)$에서 접한다 — 접선 길이 $\\frac{2a+2c}2$.",
+  "중심은 $\\angle\\mathrm{F'PF}$의 외각 이등분선 = $\\mathrm{P}$에서의 타원의 접선 위."
+ ],
  "topic": "타원 — 초점삼각형의 방접원과 장축의 끝점에서의 접선",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "접선의 길이",
+   "p": [
+    "외부 점에서 그은 두 접선의 길이는 같다."
+   ]
+  },
+  {
+   "h": "반사 성질",
+   "p": [
+    "접선은 $\\mathrm{PF}$, $\\mathrm{PF'}$와 같은 각."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 초점삼각형의 방접원이 장축의 끝점에서 x축에 접하고, 그 중심이 점 P에서의 접선(외각의 이등분선) 위에 있음을 동시에 발견하게 함",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "원 $C$ 가 반직선 $\\mathrm{F'P}$ 의 점 $\\mathrm{P}$ 쪽 연장 부분, 선분 $\\mathrm{PF}$ , 반직선 $\\mathrm{F'F}$ 와 접하는 점을 각각 $\\mathrm{D}$ , $\\mathrm{E}$ , $\\mathrm{T}$ 라 하면 $\\overline{\\mathrm{F'D}}=\\overline{\\mathrm{F'T}}$ , $\\overline{\\mathrm{PD}}=\\overline{\\mathrm{PE}}$ , $\\overline{\\mathrm{FE}}=\\overline{\\mathrm{FT}}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "접선 길이"
   },
   {
    "n": 3,
    "text": "따라서 $\\overline{\\mathrm{F'D}}+\\overline{\\mathrm{F'T}}=\\overline{\\mathrm{F'P}}+\\overline{\\mathrm{PF}}+\\overline{\\mathrm{F'F}}=2 a+8$ 이고 $\\overline{\\mathrm{F'T}}=a+4$ , 즉 원 $C$ 는 $x$ 축과 점 $(a,\\,0)$ 에서 접한다. 핵심 관문: 접점이 $(5,\\,0)$ 이므로 $a=5$ , $b^{2}=25-16=9$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C3"
+   ],
+   "title": "$a=5$"
   },
   {
    "n": 4,
    "text": "원 $C$ 의 중심 $\\mathrm{J}(5,\\,\\frac{3}{2})$ 는 직선 $\\mathrm{PF}$ 와 반직선 $\\mathrm{F'P}$ 의 연장선이 이루는 각, 즉 $\\angle \\mathrm{F'PF}$ 의 외각의 이등분선 위에 있다. 타원의 점 $\\mathrm{P}$ 에서의 접선은 두 선분 $\\mathrm{PF}$ , $\\mathrm{PF'}$ 와 같은 각을 이루므로 이 외각의 이등분선이고, 따라서 점 $\\mathrm{J}$ 는 점 $\\mathrm{P}$ 에서의 접선 위에 있다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "중심은 접선 위"
   },
   {
    "n": 5,
    "text": "점 $\\mathrm{J}$ 를 지나는 기울기 $m$ 인 직선 $y=m(x-5)+\\frac{3}{2}$ 가 타원에 접할 조건 $\\left(\\frac{3}{2}-5 m \\right)^{2}=25 m^{2}+9$ 에서 $25 m^{2}$ 이 소거되어 $m=-\\frac{9}{20}$ 이고, $y$ 절편은 $n=\\frac{15}{4}$ 이다. (다른 접선은 $x=5$ 이다.)",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "접선의 기울기"
   },
   {
    "n": 6,
    "text": "점 $\\mathrm{P}(x_{1},\\,y_{1})$ 에서의 접선 $\\frac{x_{1}x}{25}+\\frac{y_{1}y}{9}=1$ 과 비교하면 $y_{1}=\\frac{9}{n}=\\frac{12}{5}$ , $x_{1}=-\\frac{25 m}{n}=3$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "점 $\\mathrm{P}$"
   },
   {
    "n": 7,
    "text": "$\\overline{\\mathrm{PF}}=\\sqrt{(3-4)^{2}+\\left(\\frac{12}{5}\\right)^{2}}=\\frac{13}{5}$ , $\\overline{\\mathrm{PF'}}=10-\\frac{13}{5}=\\frac{37}{5}$ 이므로 $25 \\times \\overline{\\mathrm{PF}}\\times \\overline{\\mathrm{PF'}}=13 \\times 37=481$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$x=5$",
+   "cond": "C3",
+   "text": [
+    "$\\mathrm{J}$를 지나는 다른 접선 $x=5$는 장축 끝의 접선."
+   ]
+  },
+  {
+   "h": "두 거리",
+   "cond": "C3",
+   "text": [
+    "$\\overline{\\mathrm{PF'}}=2a-\\overline{\\mathrm{PF}}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 초점 $(\\pm3,0)$",
+   "body": [
+    "두 초점이 $\\mathrm{F}(3,0)$, $\\mathrm{F'}(-3,0)$인 타원 $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ 위의 제$1$사분면 위의 점 $\\mathrm{P}$가 있다. 선분 $\\mathrm{PF}$와 두 반직선 $\\mathrm{F'P}$, $\\mathrm{F'F}$에 모두 접하는 원 중 삼각형 $\\mathrm{PF'F}$의 외부에 있는 원이 $x$축과 점 $(5,0)$에서 접하고 반지름의 길이가 $2$일 때, $25\\times\\overline{\\mathrm{PF}}\\times\\overline{\\mathrm{PF'}}$의 값을 구하시오."
+   ],
+   "answer": 544,
+   "hint": "$a=5$, $b^2=16$. 중심 $(5,2)$를 지나는 접선의 접점 $\\mathrm{P}\\left(3,\\frac{16}5\\right)$. $\\overline{\\mathrm{PF}}=\\frac{16}5$, $\\overline{\\mathrm{PF'}}=\\frac{34}5$."
+  }
+ ],
+ "line": "방접원은 장축의 끝에서 닿고, 중심은 접선 위.",
  "note": ""
 }

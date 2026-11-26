@@ -10,9 +10,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 두 조건을 나누어 $b$를 먼저 얻는 연결을 못 하고 연립에서 막힌 경우",
  "answer": 68,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -43,9 +43,12 @@
     0
    ],
    "text": "쌍곡선 $\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1$ $(a>0,\\,b>0)$ 위의 점 $\\mathrm{P}$ 에서 이 쌍곡선의 두 점근선에 내린 수선의 발을 각각 $\\mathrm{H}_{1}$ , $\\mathrm{H}_{2}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "수선의 발",
+   "why": "두 점근선에 내린 수선.",
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C2",
@@ -54,9 +57,11 @@
     1
    ],
    "text": "이 쌍곡선이 다음 조건을 만족시킨다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "연결",
+   "why": "다음 두 조건.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C3",
@@ -65,9 +70,11 @@
     0
    ],
    "text": "(가) 점 $\\mathrm{P}$ 의 위치에 관계없이 $\\overline{\\mathrm{PH}_{1}}\\times \\overline{\\mathrm{PH}_{2}}=\\frac{36}{13}$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(가)",
+   "why": "곱 $\\frac{36}{13}$.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C4",
@@ -76,9 +83,11 @@
     1
    ],
    "text": "(나) 선분 $\\mathrm{H}_{1}\\mathrm{H}_{2}$ 의 길이의 최솟값은 $\\frac{36}{13}$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(나)",
+   "why": "$\\overline{\\mathrm{H_1H_2}}$ 최솟값 $\\frac{36}{13}$.",
+   "uses": [
+    4
+   ]
   },
   {
    "id": "C5",
@@ -87,54 +96,109 @@
     0
    ],
    "text": "점 $\\mathrm{P}$ 의 $x$ 좌표가 $5$ 일 때, $13 \\times \\overline{\\mathrm{H}_{1}\\mathrm{H}_{2}}$ 의 값을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$x=5$일 때 $13\\overline{\\mathrm{H_1H_2}}$.",
+   "uses": [
+    6
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "두 점근선까지 거리의 곱 $\\frac{a^2b^2}{c^2}$ 일정.",
+  "$\\mathrm{O},\\mathrm{H_1},\\mathrm{P},\\mathrm{H_2}$는 지름 $\\mathrm{OP}$의 원 위 → $\\overline{\\mathrm{H_1H_2}}=\\overline{\\mathrm{OP}}\\sin\\angle\\mathrm{H_1OH_2}$."
+ ],
  "topic": "쌍곡선 — 두 점근선에 내린 수선의 발과 지름이 OP인 원",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "점과 직선 사이의 거리",
+   "p": [
+    "$\\frac{|bx_1\\mp ay_1|}{c}$."
+   ]
+  },
+  {
+   "h": "사인법칙",
+   "p": [
+    "현 $=$ 지름 $\\times\\sin$(원주각)."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 점근선까지의 거리의 곱이 일정함과, 두 수선의 발이 지름이 OP인 원 위에 있어 H₁H₂가 OP에 비례함을 함께 써서 a, b를 결정",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "$c=\\sqrt{a^{2}+b^{2}}$ , $\\mathrm{P}(x_{1},\\,y_{1})$ 이라 하면 두 점근선 $b x-a y=0$ , $b x+a y=0$ 까지의 거리의 곱은 $\\frac{\\left|b^{2}x_{1}^{2}-a^{2}y_{1}^{2}\\right|}{c^{2}}=\\frac{a^{2}b^{2}}{c^{2}}$ 이다. 따라서 (가)에서 $\\frac{a^{2}b^{2}}{a^{2}+b^{2}}=\\frac{36}{13}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "거리의 곱"
   },
   {
    "n": 3,
    "text": "핵심 관문: $\\angle \\mathrm{OH}_{1}\\mathrm{P}=\\angle \\mathrm{OH}_{2}\\mathrm{P}=90^{\\circ}$ 이므로 네 점 $\\mathrm{O}$ , $\\mathrm{H}_{1}$ , $\\mathrm{P}$ , $\\mathrm{H}_{2}$ 는 지름이 $\\mathrm{OP}$ 인 원 위에 있고, 사인법칙에서 $\\overline{\\mathrm{H}_{1}\\mathrm{H}_{2}}=\\overline{\\mathrm{OP}}\\times \\sin(\\angle \\mathrm{H}_{1}\\mathrm{OH}_{2})$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "지름이 $\\mathrm{OP}$인 원"
   },
   {
    "n": 4,
    "text": "두 점근선의 방향벡터 $(a,\\,b)$ , $(a,\\,-b)$ 가 이루는 각의 코사인은 $\\frac{a^{2}-b^{2}}{c^{2}}$ 이므로 $\\angle \\mathrm{H}_{1}\\mathrm{OH}_{2}$ 의 사인은 $\\frac{2 a b}{c^{2}}$ 이다. $\\overline{\\mathrm{OP}}$ 의 최솟값은 꼭짓점에서의 $a$ 이므로 (나)에서 $\\frac{2 a^{2}b}{a^{2}+b^{2}}=\\frac{36}{13}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "최솟값"
   },
   {
    "n": 5,
    "text": "두 식을 나누면 $\\frac{b}{2}=1$ , $b=2$ 이고 $\\frac{4 a^{2}}{a^{2}+4}=\\frac{36}{13}$ 에서 $a^{2}=9$ 이다. 따라서 $c^{2}=13$ , $\\sin(\\angle \\mathrm{H}_{1}\\mathrm{OH}_{2})=\\frac{12}{13}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3",
+    "C4"
+   ],
+   "title": "$a,b$"
   },
   {
    "n": 6,
    "text": "$x_{1}=5$ 이면 $y_{1}^{2}=4 \\left(\\frac{25}{9}-1 \\right)=\\frac{64}{9}$ , $\\overline{\\mathrm{OP}}=\\sqrt{25+\\frac{64}{9}}=\\frac{17}{3}$ 이므로 $\\overline{\\mathrm{H}_{1}\\mathrm{H}_{2}}=\\frac{17}{3}\\times \\frac{12}{13}=\\frac{68}{13}$ 이고, 구하는 값은 $68$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "최솟값의 위치",
+   "cond": "C4",
+   "text": [
+    "$\\overline{\\mathrm{OP}}$가 최소인 꼭짓점."
+   ]
+  },
+  {
+   "h": "비로 풀기",
+   "cond": "C4",
+   "text": [
+    "(가)÷(나) $=\\frac b2$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\frac{144}{25}$과 $\\frac{96}{25}$",
+   "body": [
+    "쌍곡선 $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$ 위의 점 $\\mathrm{P}$에서 두 점근선에 내린 수선의 발을 $\\mathrm{H_1}$, $\\mathrm{H_2}$라 하자. $\\mathrm{P}$의 위치에 관계없이 $\\overline{\\mathrm{PH_1}}\\times\\overline{\\mathrm{PH_2}}=\\frac{144}{25}$이고, $\\overline{\\mathrm{H_1H_2}}$의 최솟값은 $\\frac{96}{25}$이다. $\\mathrm{P}$의 $x$좌표가 $\\frac{37}5$일 때, $5\\times\\overline{\\mathrm{H_1H_2}}$의 값을 구하시오."
+   ],
+   "answer": 42,
+   "hint": "$\\frac b2=\\frac32$ → $b=3$, $a=4$, $\\sin=\\frac{24}{25}$. $\\overline{\\mathrm{OP}}^2=\\frac{25}{16}x^2-9=\\frac{1225}{16}$."
+  }
+ ],
+ "line": "수선의 발은 지름 $\\mathrm{OP}$의 원 위.",
  "note": ""
 }

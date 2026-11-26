@@ -68,7 +68,7 @@
   },
   {
    "title": "접점",
-   "text": "이때 $m^{2}=\\frac{1}{4}$ , $n^{2}=13$ 이다. 직선 $y=m x+n$ 과 타원의 접점은 $\\left(-\\frac{16 m}{n},\\,\\frac{9}{n}\\right)$ , 원의 접점은 $\\left(-\\frac{n},\\,\\frac{R}{n}\\right)$ 이다.",
+   "text": "이때 $m^{2}=\\frac{1}{4}$ , $n^{2}=13$ 이다. 직선 $y=m x+n$ 과 타원의 접점은 $\\left(-\\frac{16 m}{n},\\,\\frac{9}{n}\\right)$ , 원의 접점은 $\\left(-\\frac{R m}{n},\\,\\frac{R}{n}\\right)$ 이다.",
    "uses": [
     "C2"
    ]
