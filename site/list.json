@@ -37025,9 +37025,9 @@
   "topic": "정적분과 급수 — 격자점의 개수와 넓이",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
-  "nsteps": 8,
+  "nsteps": 7,
   "art": "",
   "snip": [
    {
@@ -37055,9 +37055,9 @@
   "topic": "정적분과 급수 — 사분원을 자르는 직선과 활꼴의 넓이",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 7,
-  "nsteps": 8,
+  "nsteps": 5,
   "art": "",
   "snip": [
    {
@@ -37082,9 +37082,9 @@
   "topic": "정적분과 급수 — 함숫값의 변화량의 합과 평균값 정리",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
-  "nsteps": 9,
+  "nsteps": 7,
   "art": "",
   "snip": [
    {
@@ -37109,9 +37109,9 @@
   "topic": "정적분과 급수 — 넓이를 등분하는 직선들의 평균",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -37136,7 +37136,7 @@
   "topic": "정적분과 급수 — 접선의 y절편이 만드는 삼각형",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 6,
   "nsteps": 7,
   "art": "",
@@ -37163,9 +37163,9 @@
   "topic": "정적분과 급수 — 최댓값으로 정의된 함수의 구분구적",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 4,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -37190,9 +37190,9 @@
   "topic": "정적분과 급수 — 수평선 위쪽 넓이들의 가중 평균",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
-  "nsteps": 8,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -37217,9 +37217,9 @@
   "topic": "매개변수 곡선으로 둘러싸인 부분과 원의 바깥쪽 넓이",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -37244,9 +37244,9 @@
   "topic": "역함수의 그래프와 두 접선으로 둘러싸인 넓이",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 4,
-  "nsteps": 8,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -37267,9 +37267,9 @@
   "topic": "넓이의 비를 정하는 곡선 — 교점의 위치에 따른 경우",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 4,
-  "nsteps": 9,
+  "nsteps": 8,
   "art": "",
   "snip": [
    {

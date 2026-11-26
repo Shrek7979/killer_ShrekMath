@@ -1,0 +1,133 @@
+{
+ "wrong": "예상 오답 — $\\alpha=\\arcsin s$를 그대로 적분하려다 막힌 경우",
+ "intro": [
+  "$A(s)=2\\cos\\alpha-s(\\pi-2\\alpha)$, $s=\\sin\\alpha$.",
+  "치환 후 부분적분 — $\\pi$ 소거."
+ ],
+ "conds": {
+  "C1": {
+   "label": "넓이",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C3": {
+   "label": "극한",
+   "why": "",
+   "uses": [
+    3,
+    4,
+    5
+   ]
+  },
+  "C4": {
+   "label": "",
+   "why": "",
+   "uses": [
+    6
+   ]
+  },
+  "C5": {
+   "label": "단서",
+   "why": "",
+   "uses": [
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "구분구적",
+   "p": [
+    "$\\int sA(s)ds$."
+   ]
+  },
+  {
+   "h": "치환과 부분적분",
+   "p": [
+    "교점 각."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 넓이 A(s)를 교점 α로 나타내고 s=sinα 치환과 부분적분을 연결하여 π가 소거되는 구분구적의 극한을 구하는 것",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$A(s)$",
+   "text": "$0 \\le s \\le 1$ 에 대하여 곡선 $y=\\sin x$ 와 직선 $y=s$ 의 교점의 $x$ 좌표를 $\\alpha$ , $\\pi-\\alpha \\,\\left(0 \\le \\alpha \\le \\frac{\\pi}{2}\\right)$ 라 하면 둘러싸인 부분의 넓이는 $$A(s)=\\int_{\\alpha}^{\\pi-\\alpha}(\\sin x-s)dx=2 \\cos \\alpha-s(\\pi-2 \\alpha)$$",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "극한",
+   "text": "이고 $A_{k}=A \\left(\\frac{k}{n}\\right)$ 이므로 구하는 극한값은 $L=\\int_{0}^{1}s A(s)ds$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "치환",
+   "text": "핵심 관문: $\\alpha$ 를 $s$ 의 식으로 쓸 수 없으므로 $s=\\sin \\alpha$ 로 치환한다. $ds=\\cos \\alpha d \\alpha$ 이고 $s$ 가 $0$ 에서 $1$ 까지 변할 때 $\\alpha$ 는 $0$ 에서 $\\frac{\\pi}{2}$ 까지 변한다. $$L=\\int_{0}^{\\frac{\\pi}{2}}2 \\sin \\alpha \\cos^{2}\\alpha d \\alpha-\\int_{0}^{\\frac{\\pi}{2}}(\\pi-2 \\alpha)\\sin^{2}\\alpha \\cos \\alpha d \\alpha$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "계산",
+   "text": "첫째 적분은 $\\left[-\\frac{2}{3}\\cos^{3}\\alpha \\right]_{0}^{\\frac{\\pi}{2}}=\\frac{2}{3}$ 이다. 둘째 적분은 $\\frac{\\sin^{3}\\alpha}{3}$ 를 이용하여 부분적분하면 $\\left[(\\pi-2 \\alpha)\\frac{\\sin^{3}\\alpha}{3}\\right]_{0}^{\\frac{\\pi}{2}}+\\frac{2}{3}\\int_{0}^{\\frac{\\pi}{2}}\\sin^{3}\\alpha d \\alpha=0+\\frac{2}{3}\\times \\frac{2}{3}=\\frac{4}{9}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $L=\\frac{2}{3}-\\frac{4}{9}=\\frac{2}{9}$ 이고 (원주율이 모두 소거된다) $p+q=9+2=11$ 이다.",
+   "uses": [
+    "C4",
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$ds=\\cos\\alpha\\,d\\alpha$",
+   "cond": "C3",
+   "text": [
+    "가중치."
+   ]
+  },
+  {
+   "h": "경계항",
+   "cond": "C3",
+   "text": [
+    "$\\pi-2\\alpha=0$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 가중치 없음",
+   "body": [
+    "곡선 $y=\\sin x$ $(0\\le x\\le\\pi)$와 직선 $y=\\frac kn$으로 둘러싸인 부분의 넓이를 $A_k$라 할 때, $\\lim_{n\\to\\infty}\\frac1n\\sum_{k=1}^nA_k=k\\pi$이다. $100k$의 값을 구하시오."
+   ],
+   "answer": 25,
+   "hint": "$\\int_0^{\\pi/2}\\{2\\cos\\alpha-\\sin\\alpha(\\pi-2\\alpha)\\}\\cos\\alpha\\,d\\alpha=\\frac\\pi4$."
+  }
+ ],
+ "line": "교점의 각을 적분변수로."
+}

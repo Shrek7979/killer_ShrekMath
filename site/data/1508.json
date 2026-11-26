@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 꼭짓점이 구간 밖으로 나가는 경우를 놓쳐 $g(t)=\\frac1{4t}$로만 계산한 경우",
  "answer": 70,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -41,9 +41,12 @@
     0
    ],
    "text": "$0$ 이상의 실수 $t$ 에 대하여 닫힌구간 $[0,\\,1]$ 에서 함수 $x-t x^{2}$ 의 최댓값을 $g(t)$ 라 하자.",
-   "label": "",
+   "label": "$g(t)$",
    "why": "",
-   "uses": []
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C2",
@@ -52,9 +55,13 @@
     0
    ],
    "text": "$\\lim_{n \\to \\infty}\\frac{1}{n}\\sum_{k=1}^{n}g \\left(\\frac{2 k}{n}\\right)=p+q \\ln 2$",
-   "label": "",
+   "label": "극한",
    "why": "",
-   "uses": []
+   "uses": [
+    4,
+    5,
+    6
+   ]
   },
   {
    "id": "C3",
@@ -63,9 +70,11 @@
     0
    ],
    "text": "일 때, $160(p+q)$ 의 값을 구하시오.",
-   "label": "",
+   "label": "묻는 것",
    "why": "",
-   "uses": []
+   "uses": [
+    6
+   ]
   },
   {
    "id": "C4",
@@ -74,60 +83,110 @@
     1
    ],
    "text": "(단, $p$ , $q$ 는 유리수이다.) [4점]",
-   "label": "",
+   "label": "단서",
    "why": "",
-   "uses": []
+   "uses": [
+    6
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "$t\\le\\frac12$: $g=1-t$ / $t>\\frac12$: $g=\\frac1{4t}$.",
+  "폭 $\\frac2n$ → $\\frac12\\int_0^2g$."
+ ],
  "topic": "정적분과 급수 — 최댓값으로 정의된 함수의 구분구적",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "이차함수 최대",
+   "p": [
+    "꼭짓점 위치."
+   ]
+  },
+  {
+   "h": "구분구적",
+   "p": [
+    "구간 $[0,2]$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 꼭짓점이 구간 밖으로 나가는 경계 t=1/2 를 찾아 최댓값 함수를 구간별로 정한 뒤 폭이 2/n 인 구분구적으로 바꾸는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "$t=0$ 이면 $g(0)=1$ 이다. $t>0$ 이면 $x-t x^{2}$ 은 $x=\\frac{1}{2 t}$ 에서 최댓값 $\\frac{1}{4 t}$ 을 갖는 위로 볼록인 포물선이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "꼭짓점"
   },
   {
    "n": 3,
    "text": "핵심 관문: 꼭짓점이 구간 $[0,\\,1]$ 안에 있는지에 따라 경우를 나눈다. $0<t \\le \\frac{1}{2}$ 이면 $\\frac{1}{2 t}\\ge 1$ 이므로 구간에서 증가하여 $g(t)=1-t$ , $t>\\frac{1}{2}$ 이면 $g(t)=\\frac{1}{4 t}$ 이다. $g$ 는 $t=\\frac{1}{2}$ 에서도 연속이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "경우"
   },
   {
    "n": 4,
-   "text": "구간 $[0,\\,2]$ 를 $n$ 등분하면 폭이 $\\frac{2}{n}$ 이므로",
-   "uses": [],
-   "title": ""
+   "text": "구간 $[0,\\,2]$ 를 $n$ 등분하면 폭이 $\\frac{2}{n}$ 이므로 $$\\lim_{n \\to \\infty}\\frac{1}{n}\\sum_{k=1}^{n}g \\left(\\frac{2 k}{n}\\right)=\\frac{1}{2}\\lim_{n \\to \\infty}\\sum_{k=1}^{n}\\frac{2}{n}g \\left(\\frac{2 k}{n}\\right)=\\frac{1}{2}\\int_{0}^{2}g(t)dt$$",
+   "uses": [
+    "C2"
+   ],
+   "title": "폭"
   },
   {
    "n": 5,
-   "text": "$$\\lim_{n \\to \\infty}\\frac{1}{n}\\sum_{k=1}^{n}g \\left(\\frac{2 k}{n}\\right)=\\frac{1}{2}\\lim_{n \\to \\infty}\\sum_{k=1}^{n}\\frac{2}{n}g \\left(\\frac{2 k}{n}\\right)=\\frac{1}{2}\\int_{0}^{2}g(t)dt$$",
-   "uses": [],
-   "title": ""
+   "text": "$$\\int_{0}^{2}g(t)dt=\\int_{0}^{\\frac{1}{2}}(1-t)dt+\\int_{\\frac{1}{2}}^{2}\\frac{1}{4 t}dt=\\frac{3}{8}+\\frac{1}{4}\\ln 4=\\frac{3}{8}+\\frac{1}{2}\\ln 2$$",
+   "uses": [
+    "C2"
+   ],
+   "title": "적분"
   },
   {
    "n": 6,
-   "text": "$$\\int_{0}^{2}g(t)dt=\\int_{0}^{\\frac{1}{2}}(1-t)dt+\\int_{\\frac{1}{2}}^{2}\\frac{1}{4 t}dt=\\frac{3}{8}+\\frac{1}{4}\\ln 4=\\frac{3}{8}+\\frac{1}{2}\\ln 2$$",
-   "uses": [],
-   "title": ""
-  },
-  {
-   "n": 7,
    "text": "따라서 극한값은 $\\frac{3}{16}+\\frac{1}{4}\\ln 2$ 이고 $160(p+q)=160 \\times \\frac{7}{16}=70$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2",
+    "C3",
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\frac1n$ vs $\\frac2n$",
+   "cond": "C2",
+   "text": [
+    "$\\frac12$배."
+   ]
+  },
+  {
+   "h": "경계",
+   "cond": "C1",
+   "text": [
+    "$t=\\frac12$에서 연속."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $g\\left(\\frac{4k}n\\right)$",
+   "body": [
+    "$t\\ge0$에 대하여 $[0,1]$에서 $x-tx^2$의 최댓값을 $g(t)$라 할 때, $\\lim_{n\\to\\infty}\\frac1n\\sum_{k=1}^ng\\left(\\frac{4k}n\\right)=p+q\\ln2$이다. $160(p+q)$의 값을 구하시오. (단, $p$, $q$는 유리수)"
+   ],
+   "answer": 45,
+   "hint": "$\\frac14\\left(\\frac38+\\frac14\\ln8\\right)=\\frac3{32}+\\frac3{16}\\ln2$."
+  }
+ ],
+ "line": "최댓값 함수는 꼭짓점 위치로 나눈다.",
  "note": ""
 }

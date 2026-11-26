@@ -1,0 +1,141 @@
+{
+ "wrong": "예상 오답 — 절댓값 없이 $\\int x^2f'(x)dx$로 계산한 경우",
+ "intro": [
+  "평균값 정리: 차 $=\\frac1nf'(c_k)$.",
+  "$\\int x^2|f'|$ — $\\frac14$, $\\frac34$에서 나눈다."
+ ],
+ "conds": {
+  "C1": {
+   "label": "함수",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "$a_n$",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C3": {
+   "label": "",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C4": {
+   "label": "극한",
+   "why": "",
+   "uses": [
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  "C5": {
+   "label": "단서",
+   "why": "",
+   "uses": [
+    7
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "평균값 정리",
+   "p": [
+    "차를 도함수로."
+   ]
+  },
+  {
+   "h": "부분적분",
+   "p": [
+    "두 번."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 구간 폭이 드러나지 않는 함숫값 차의 합을 평균값 정리로 |f'|의 정적분으로 바꾸고, 부호가 바뀌는 점에서 구간을 나누는 것",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "평균값 정리",
+   "text": "평균값 정리에 의하여 각 $k$ 에 대하여 $f \\left(\\frac{k}{n}\\right)-f \\left(\\frac{k-1}{n}\\right)=\\frac{1}{n}f'(c_{k})$ 인 $c_{k}$ 가 구간 $\\left(\\frac{k-1}{n},\\,\\frac{k}{n}\\right)$ 에 존재한다. 따라서 $a_{n}=\\sum_{k=1}^{n}\\frac{1}{n}\\left(\\frac{k}{n}\\right)^{2}\\left|f'(c_{k})\\right|$ 이고, $c_{k}$ 와 $\\frac{k}{n}$ 의 차가 $\\frac{1}{n}$ 보다 작으므로 $$\\lim_{n \\to \\infty}a_{n}=\\int_{0}^{1}x^{2}\\left|f'(x)\\right|dx=\\int_{0}^{1}2 \\pi x^{2}\\left|\\cos 2 \\pi x \\right|dx$$",
+   "uses": [
+    "C1",
+    "C2",
+    "C3"
+   ]
+  },
+  {
+   "title": "부호",
+   "text": "핵심 관문: 합 안의 절댓값은 '변화량의 크기'이므로, 도함수의 부호가 바뀌는 $x=\\frac{1}{4}$ , $x=\\frac{3}{4}$ 에서 구간을 나누어야 한다. $\\cos 2 \\pi x$ 는 $\\left(0,\\,\\frac{1}{4}\\right)$ , $\\left(\\frac{3}{4},\\,1 \\right)$ 에서 양수, $\\left(\\frac{1}{4},\\,\\frac{3}{4}\\right)$ 에서 음수이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "부정적분",
+   "text": "부분적분을 두 번 하면 $2 \\pi x^{2}\\cos 2 \\pi x$ 의 한 부정적분은 $$F(x)=x^{2}\\sin 2 \\pi x+\\frac{x \\cos 2 \\pi x}{\\pi}-\\frac{\\sin 2 \\pi x}{2 \\pi^{2}}$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "값",
+   "text": "이고 $F(0)=0$ , $F \\left(\\frac{1}{4}\\right)=\\frac{1}{16}-\\frac{1}{2 \\pi^{2}}$ , $F \\left(\\frac{3}{4}\\right)=-\\frac{9}{16}+\\frac{1}{2 \\pi^{2}}$ , $F(1)=\\frac{1}{\\pi}$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "극한",
+   "text": "$$\\lim_{n \\to \\infty}a_{n}=2 F \\left(\\frac{1}{4}\\right)-2 F \\left(\\frac{3}{4}\\right)+F(1)-F(0)=\\frac{5}{4}+\\frac{1}{\\pi}-\\frac{2}{\\pi^{2}}$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$p=\\frac{5}{4}$ , $q=1$ , $r=-2$ 이므로 $4(p+q-r)=4 \\times \\frac{17}{4}=17$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "절댓값",
+   "cond": "C4",
+   "text": [
+    "도함수 부호 변화점."
+   ]
+  },
+  {
+   "h": "$F(1)$",
+   "cond": "C4",
+   "text": [
+    "$\\frac1\\pi$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 가중치 $\\frac kn$",
+   "body": [
+    "$f(x)=\\sin2\\pi x$에 대하여 $a_n=\\sum_{k=1}^n\\frac kn\\left|f\\left(\\frac kn\\right)-f\\left(\\frac{k-1}n\\right)\\right|$일 때, $\\lim_{n\\to\\infty}a_n$의 값을 구하시오."
+   ],
+   "answer": 2,
+   "hint": "$\\int_0^12\\pi x|\\cos2\\pi x|dx$, $F=x\\sin2\\pi x+\\frac{\\cos2\\pi x}{2\\pi}$: $\\frac12+\\frac32$."
+  }
+ ],
+ "line": "함숫값 차의 합 = $|f'|$의 적분."
+}
