@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 겉보기 속력을 실제 속력 $\\frac45$로 답한 경우",
  "answer": 33,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -34,9 +34,11 @@
     0
    ],
    "text": "빛의 속력을 $1$ 로 하는 단위를 쓰자.",
-   "label": "",
+   "label": "단위",
    "why": "",
-   "uses": []
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C2",
@@ -45,9 +47,11 @@
     1
    ],
    "text": "좌표평면의 원점 $\\mathrm{O}$ 에 관측자가 있고, 천체 $\\mathrm{S}$ 가 직선 $y=1$ 위를 일정한 속력 $\\frac{4}{5}$ 로 움직여 시각 $\\tau$ 에서의 위치가 $\\left(\\frac{4}{5}\\tau,\\,1 \\right)$ 이다.",
-   "label": "",
+   "label": "천체",
    "why": "",
-   "uses": []
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C3",
@@ -56,9 +60,12 @@
     2
    ],
    "text": "시각 $\\tau$ 에 $\\mathrm{S}$ 에서 나온 빛은 시각 $t=\\tau+\\sqrt{\\left(\\frac{4}{5}\\tau \\right)^{2}+1}$ 에 관측자에게 도착하고, 관측자는 이 시각 $t$ 에 천체가 점 $\\left(X(t),\\,1 \\right)$ $\\left(X(t)=\\frac{4}{5}\\tau \\right)$ 에 있다고 본다.",
-   "label": "",
+   "label": "관측",
    "why": "",
-   "uses": []
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C4",
@@ -67,9 +74,12 @@
     3
    ],
    "text": "관측자가 천체를 점 $\\left(-\\frac{3}{4},\\,1 \\right)$ 에서 보는 순간의 겉보기 속력 $X'(t)$ 의 값이 $\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$X=-\\frac34$.",
+   "uses": [
+    4,
+    5
+   ]
   },
   {
    "id": "C5",
@@ -78,54 +88,110 @@
     4
    ],
    "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
-   "label": "",
+   "label": "단서",
    "why": "",
-   "uses": []
+   "uses": [
+    6
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "$X'(t)=\\frac{4/5}{dt/d\\tau}$ — 역함수의 미분.",
+  "다가올 때 $\\frac{dt}{d\\tau}<1$ → 빛보다 빨라 보인다."
+ ],
  "topic": "역함수의 미분 — 빛이 도착하는 시각으로 본 겉보기 속력(초광속처럼 보이는 운동)",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "역함수 미분",
+   "p": [
+    "$\\frac{d\\tau}{dt}=\\frac1{dt/d\\tau}$."
+   ]
+  },
+  {
+   "h": "합성함수 미분",
+   "p": [
+    "$\\sqrt{\\ }$의 미분."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 관측 시각과 방출 시각의 관계를 역함수로 보고 겉보기 속력을 dτ/dt로 계산하는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "$t=\\tau+\\sqrt{\\frac{16}{25}\\tau^{2}+1}$ 이라 하면 $\\frac{dt}{d \\tau}=1+\\frac{\\frac{16}{25}\\tau}{\\sqrt{\\frac{16}{25}\\tau^{2}+1}}$ 이다. $\\left|\\frac{\\frac{16}{25}\\tau}{\\sqrt{\\frac{16}{25}\\tau^{2}+1}}\\right|<\\frac{4}{5}$ 이므로 $\\frac{dt}{d \\tau}>\\frac{1}{5}>0$ 이고, $t$ 는 $\\tau$ 에 대하여 증가하므로 $\\tau$ 는 $t$ 의 함수(역함수)로 정해진다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2",
+    "C3"
+   ],
+   "title": "증가"
   },
   {
    "n": 3,
    "text": "핵심 관문: $X(t)=\\frac{4}{5}\\tau(t)$ 이므로 역함수의 미분법에 의하여 $X'(t)=\\frac{4}{5}\\times \\frac{d \\tau}{dt}=\\frac{\\frac{4}{5}}{\\frac{dt}{d \\tau}}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "겉보기 속력"
   },
   {
    "n": 4,
    "text": "$X=-\\frac{3}{4}$ 이면 $\\frac{4}{5}\\tau=-\\frac{3}{4}$ 이고 $\\sqrt{\\frac{9}{16}+1}=\\frac{5}{4}$ 이므로 $\\frac{dt}{d \\tau}=1+\\frac{\\frac{4}{5}\\times \\left(-\\frac{3}{4}\\right)}{\\frac{5}{4}}=1-\\frac{12}{25}=\\frac{13}{25}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "대입"
   },
   {
    "n": 5,
    "text": "$X'(t)=\\frac{4}{5}\\times \\frac{25}{13}=\\frac{20}{13}$ 으로 빛의 속력 $1$ 보다 크다. (다가오는 천체가 빛보다 빠르게 움직이는 것처럼 보이는 현상이다.)",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "해석"
   },
   {
    "n": 6,
    "text": "따라서 $p+q=13+20=33$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "부호",
+   "cond": "C4",
+   "text": [
+    "$\\tau<0$ — 다가오는 중."
+   ]
+  },
+  {
+   "h": "역수",
+   "cond": "C3",
+   "text": [
+    "$\\frac{dt}{d\\tau}$로 나눈다."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 속력 $\\frac35$",
+   "body": [
+    "빛의 속력을 $1$로 하는 단위에서 원점에 관측자가 있고, 천체가 시각 $\\tau$에 $\\left(\\frac35\\tau,1\\right)$에 있다. 시각 $\\tau$에 나온 빛은 $t=\\tau+\\sqrt{\\left(\\frac35\\tau\\right)^2+1}$에 도착하고 관측자는 이때 천체가 $(X(t),1)$ $\\left(X(t)=\\frac35\\tau\\right)$에 있다고 본다. 천체를 점 $\\left(-\\frac43,1\\right)$에서 보는 순간 $X'(t)=\\frac qp$일 때, $p+q$의 값을 구하시오. (단, $p$, $q$는 서로소)"
+   ],
+   "answer": 28,
+   "hint": "$\\frac{dt}{d\\tau}=1+\\frac{-4/5}{5/3}=\\frac{13}{25}$, $X'=\\frac35\\cdot\\frac{25}{13}$."
+  }
+ ],
+ "line": "관측 시각의 역함수로 겉보기 속력.",
  "note": ""
 }

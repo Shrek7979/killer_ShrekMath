@@ -1,0 +1,117 @@
+{
+ "wrong": "예상 오답 — $1^\\infty$를 $1$로 본 경우",
+ "intro": [
+  "$(1+u)^{1/u}\\to e$ 꼴로 바꾼다.",
+  "$v\\tan^2x=-\\frac{\\sin^2x}{1+\\sin x}\\to-\\frac12$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "두 극한",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "정의",
+   "why": "",
+   "uses": [
+    3,
+    4,
+    5
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "",
+   "uses": [
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "$e$의 정의",
+   "p": [
+    "$(1+u)^{1/u}$."
+   ]
+  },
+  {
+   "h": "코사인 극한",
+   "p": [
+    "$\\frac{\\cos ax-1}{x^2}\\to-\\frac{a^2}2$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 1^∞ 꼴 극한을 (1+u)^(1/u)로 바꾸고, sin x→1일 때 tan²x를 (1−sin x)로 약분하는 것",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "방향",
+   "text": "$\\lim_{u \\to 0}(1+u)^{\\frac{1}{u}}=e$ 를 쓰도록 변형한다. 핵심 관문은 지수를 $\\frac{1}{u}$ 과 나머지로 쪼개는 것이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$A$",
+   "text": "$u=\\cos 7 x-1$ 이라 하면 $(\\cos 7 x)^{\\frac{1}{x^{2}}}=\\left\\{(1+u)^{\\frac{1}{u}}\\right\\}^{\\frac{u}{x^{2}}}$ 이고 $\\frac{u}{x^{2}}=\\frac{\\cos 7 x-1}{x^{2}}\\to-\\frac{49}{2}$ 이므로 $A=e^{-\\frac{49}{2}}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$B$ 변형",
+   "text": "$v=\\sin x-1$ 이라 하면 $(\\sin x)^{\\tan^{2}x}=\\left\\{(1+v)^{\\frac{1}{v}}\\right\\}^{v \\tan^{2}x}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$B$",
+   "text": "$v \\tan^{2}x=(\\sin x-1)\\frac{\\sin^{2}x}{1-\\sin^{2}x}=-\\frac{\\sin^{2}x}{1+\\sin x}\\to-\\frac{1}{2}$ $\\left(x \\to \\frac{\\pi}{2}\\right)$ 이므로 $B=e^{-\\frac{1}{2}}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$A B=e^{-\\frac{49}{2}-\\frac{1}{2}}=e^{-25}$ 이므로 $k=25$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "약분",
+   "cond": "C2",
+   "text": [
+    "$1-\\sin^2x=(1-\\sin x)(1+\\sin x)$."
+   ]
+  },
+  {
+   "h": "지수",
+   "cond": "C2",
+   "text": [
+    "$-\\frac{49}2$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\cos5x$",
+   "body": [
+    "$A=\\lim_{x\\to0}(\\cos5x)^{\\frac1{x^2}}$, $B=\\lim_{x\\to\\frac\\pi2}(\\sin x)^{\\tan^2x}$에 대하여 $AB=e^{-k}$일 때, 상수 $k$의 값을 구하시오."
+   ],
+   "answer": 13,
+   "hint": "$-\\frac{25}2-\\frac12$."
+  }
+ ],
+ "line": "$1^\\infty$는 $e$의 정의로."
+}
