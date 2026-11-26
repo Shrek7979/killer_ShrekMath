@@ -12,9 +12,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $\\max$가 바뀌는 경계를 놓쳐 $\\int2|x|c\\,dx$로만 계산한 경우",
  "answer": 32,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -42,9 +42,11 @@
     0
    ],
    "text": "좌표공간에서 두 조건",
-   "label": "",
+   "label": "입체",
    "why": "",
-   "uses": []
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C2",
@@ -55,7 +57,11 @@
    "text": "$x^{2}+y^{2}\\le 1,\\,\\,\\,0 \\le z \\le \\max \\left(\\left|x \\right|,\\,\\left|y \\right|\\right)$",
    "label": "",
    "why": "",
-   "uses": []
+   "uses": [
+    2,
+    3,
+    4
+   ]
   },
   {
    "id": "C3",
@@ -64,9 +70,13 @@
     0
    ],
    "text": "를 만족시키는 점 $(x,\\,y,\\,z)$ 전체의 집합으로 이루어진 입체도형의 부피를 $V$ 라 할 때, $(3 V)^{2}$ 의 값을 구하시오.",
-   "label": "",
+   "label": "묻는 것",
    "why": "",
-   "uses": []
+   "uses": [
+    5,
+    6,
+    7
+   ]
   },
   {
    "id": "C4",
@@ -75,60 +85,118 @@
     1
    ],
    "text": "(단, $\\max(a,\\,b)$ 는 $a$ , $b$ 중 작지 않은 값이다.) [4점]",
-   "label": "",
+   "label": "단서",
    "why": "",
-   "uses": []
+   "uses": [
+    2
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "$|x|<\\frac{\\sqrt2}2$: 단면 넓이 $x^2+c^2=1$.",
+  "$|x|\\ge\\frac{\\sqrt2}2$: $2|x|c$."
+ ],
  "topic": "원기둥 위의 지붕 z = max(|x|",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "단면적",
+   "p": [
+    "max 경계."
+   ]
+  },
+  {
+   "h": "치환",
+   "p": [
+    "$1-x^2$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: max가 바뀌는 경계 |y|=|x|와 원의 경계가 만나는 x=√2/2에서 나누고, 안쪽에서는 단면 넓이가 x²+c²=1로 일정해지는 것을 발견하는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "$x$ 축에 수직인 평면으로 자른 단면은 $\\left|y \\right|\\le c$ $\\left(c=\\sqrt{1-x^{2}}\\right)$ 에서 $0 \\le z \\le \\max(\\left|x \\right|,\\,\\left|y \\right|)$ 인 도형이고, 넓이는 $A(x)=\\int_{-c}^{c}\\max(\\left|x \\right|,\\,\\left|y \\right|)dy$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2",
+    "C4"
+   ],
+   "title": "단면"
   },
   {
    "n": 3,
    "text": "경우 나누기: $c \\le \\left|x \\right|$ , 즉 $\\left|x \\right|\\ge \\frac{\\sqrt{2}}{2}$ 이면 $A(x)=2 c \\left|x \\right|=2 \\left|x \\right|\\sqrt{1-x^{2}}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "바깥"
   },
   {
    "n": 4,
    "text": "$\\left|x \\right|<\\frac{\\sqrt{2}}{2}$ 이면 $A(x)=2 \\left\\{x^{2}+\\int_{\\left|x \\right|}^{c}y dy \\right\\}=2 x^{2}+\\left(c^{2}-x^{2}\\right)=x^{2}+c^{2}=1$ 이다. 핵심 관문: 이 구간에서 단면의 넓이는 $x$ 에 관계없이 $1$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "안쪽"
   },
   {
    "n": 5,
    "text": "$$V=2 \\left\\{\\int_{0}^{\\frac{\\sqrt{2}}{2}}1 dx+\\int_{\\frac{\\sqrt{2}}{2}}^{1}2 x \\sqrt{1-x^{2}}dx \\right\\}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "부피식"
   },
   {
    "n": 6,
    "text": "$\\int_{\\frac{\\sqrt{2}}{2}}^{1}2 x \\sqrt{1-x^{2}}dx=\\left[-\\frac{2}{3}\\left(1-x^{2}\\right)^{\\frac{3}{2}}\\right]_{\\frac{\\sqrt{2}}{2}}^{1}=\\frac{2}{3}\\times \\frac{1}{2 \\sqrt{2}}=\\frac{\\sqrt{2}}{6}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "적분"
   },
   {
    "n": 7,
    "text": "$V=2 \\left(\\frac{\\sqrt{2}}{2}+\\frac{\\sqrt{2}}{6}\\right)=\\frac{4 \\sqrt{2}}{3}$ 이므로 $(3 V)^{2}=32$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "상수 단면",
+   "cond": "C2",
+   "text": [
+    "$x$와 무관."
+   ]
+  },
+  {
+   "h": "대칭",
+   "cond": "C3",
+   "text": [
+    "$\\times2$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\min$",
+   "body": [
+    "$x^2+y^2\\le1$, $0\\le z\\le\\min(|x|,|y|)$를 만족시키는 입체의 부피를 $V$라 할 때, $3V=p+q\\sqrt2$이다. $p^2+q^2$의 값을 구하시오. (단, $p$, $q$는 유리수)"
+   ],
+   "answer": 96,
+   "hint": "$V=2\\left\\{\\int_0^{\\frac{\\sqrt2}2}(2x\\sqrt{1-x^2}-x^2)dx+\\int_{\\frac{\\sqrt2}2}^1(1-x^2)dx\\right\\}=\\frac83-\\frac{4\\sqrt2}3$."
+  }
+ ],
+ "line": "max/min이 바뀌는 곳에서 나눈다.",
  "note": ""
 }

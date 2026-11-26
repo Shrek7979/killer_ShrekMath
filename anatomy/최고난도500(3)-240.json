@@ -1,0 +1,153 @@
+{
+ "wrong": "예상 오답 — 속력을 정리하지 못하거나 $x$의 단조성을 확인하지 않은 경우",
+ "intro": [
+  "속력 $2|\\sin t|$ — 숨은 사이클로이드.",
+  "$y>\\frac12$: $\\frac\\pi4<t<\\frac{3\\pi}4$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "점 $\\mathrm{P}$",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "위치",
+   "why": "",
+   "uses": [
+    2,
+    3,
+    4
+   ]
+  },
+  "C3": {
+   "label": "",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C4": {
+   "label": "넓이와 거리",
+   "why": "",
+   "uses": [
+    3,
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  "C5": {
+   "label": "단서",
+   "why": "",
+   "uses": [
+    8
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "배각",
+   "p": [
+    "$1-\\cos2t=2\\sin^2t$."
+   ]
+  },
+  {
+   "h": "매개변수 넓이",
+   "p": [
+    "$\\int(y-k)x'dt$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 배각 공식으로 속력을 2|sin t|로 정리하고(숨은 사이클로이드), x의 단조성을 확인해 직선 위쪽 부분의 넓이를 매개변수 적분으로 구하는 것",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "속력",
+   "text": "$\\frac{dx}{dt}=1-\\cos 2 t=2 \\sin^{2}t$ , $\\frac{dy}{dt}=2 \\sin t \\cos t$ 이므로 속력은 $\\sqrt{4 \\sin^{4}t+4 \\sin^{2}t \\cos^{2}t}=2 \\left|\\sin t \\right|$ 이다. ( $u=2 t$ 로 놓으면 $x=\\frac{u-\\sin u}{2}$ , $y=\\frac{1-\\cos u}{2}$ 인 사이클로이드이다.)",
+   "uses": [
+    "C1",
+    "C2",
+    "C3"
+   ]
+  },
+  {
+   "title": "$L$",
+   "text": "$y>\\frac{1}{2}$ 은 $\\sin^{2}t>\\frac{1}{2}$ , 즉 $\\frac{\\pi}{4}<t<\\frac{3 \\pi}{4}$ 일 때이다. 이 동안 움직인 거리는 $L=\\int_{\\frac{\\pi}{4}}^{\\frac{3 \\pi}{4}}2 \\sin t dt=2 \\sqrt{2}$ 이다.",
+   "uses": [
+    "C2",
+    "C4"
+   ]
+  },
+  {
+   "title": "단조",
+   "text": "핵심 관문: $\\frac{dx}{dt}\\ge 0$ 이므로 $x$ 는 증가하고 곡선은 함수의 그래프이다. 따라서 넓이는 $\\int \\left(y-\\frac{1}{2}\\right)dx$ 를 $t$ 로 치환하여 구한다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "넓이식",
+   "text": "$$S=\\int_{\\frac{\\pi}{4}}^{\\frac{3 \\pi}{4}}\\left(\\sin^{2}t-\\frac{1}{2}\\right)2 \\sin^{2}t dt=\\int_{\\frac{\\pi}{4}}^{\\frac{3 \\pi}{4}}\\left(2 \\sin^{4}t-\\sin^{2}t \\right)dt$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "거듭제곱",
+   "text": "$\\sin^{2}t=\\frac{1-\\cos 2 t}{2}$ , $\\sin^{4}t=\\frac{3-4 \\cos 2 t+\\cos 4 t}{8}$ 이고 이 구간에서 $\\int \\cos 2 t dt=-1$ , $\\int \\cos 4 t dt=0$ 이므로 $\\int \\sin^{2}t dt=\\frac{\\pi}{4}+\\frac{1}{2}$ , $\\int \\sin^{4}t dt=\\frac{3 \\pi}{16}+\\frac{1}{2}$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "$S$",
+   "text": "$S=\\frac{3 \\pi}{8}+1-\\frac{\\pi}{4}-\\frac{1}{2}=\\frac{1}{2}+\\frac{\\pi}{8}$ 이므로 $a=\\frac{1}{2}$ , $b=\\frac{1}{8}$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$L^{2}+8(a+b)=8+4+1=13$ 이다.",
+   "uses": [
+    "C4",
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\sin^4$",
+   "cond": "C4",
+   "text": [
+    "$\\frac{3-4\\cos2t+\\cos4t}8$."
+   ]
+  },
+  {
+   "h": "구간",
+   "cond": "C4",
+   "text": [
+    "$\\frac\\pi4$~$\\frac{3\\pi}4$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $y=\\frac34$",
+   "body": [
+    "점 $\\mathrm{P}$의 위치가 $x=t-\\sin t\\cos t$, $y=\\sin^2t$ $(0\\le t\\le\\pi)$일 때, 곡선과 직선 $y=\\frac34$로 둘러싸인 넓이를 $S$, $\\mathrm{P}$가 직선 위쪽에 있는 동안 움직인 거리를 $L$이라 하자. $L^2+(16S)^2$의 값을 구하시오."
+   ],
+   "answer": 31,
+   "hint": "$\\frac\\pi3<t<\\frac{2\\pi}3$: $L=2$, $S=\\frac{3\\sqrt3}{16}$."
+  }
+ ],
+ "line": "배각으로 숨은 사이클로이드."
+}
