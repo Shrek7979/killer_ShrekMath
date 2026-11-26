@@ -1,0 +1,89 @@
+{
+ "num": 1283,
+ "id": "최고난도500(2)-081",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12기하02-05]",
+  "[12기하02-04]"
+ ],
+ "source": "ShrekMath 창작 · 수능 30번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 17,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "좌표공간에서 구 $x^{2}+y^{2}+(z-1)^{2}=18$ 위의 점 $\\mathrm{P}$ 에서 $x y$ 평면에 내린 수선의 발을 $\\mathrm{H}$ 라 하자.",
+    "점 $\\mathrm{A}(8,\\,6,\\,0)$ 에 대하여 $\\overline{\\mathrm{PH}}+\\overline{\\mathrm{HA}}$ 의 최댓값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "좌표공간에서 구 $x^{2}+y^{2}+(z-1)^{2}=18$ 위의 점 $\\mathrm{P}$ 에서 $x y$ 평면에 내린 수선의 발을 $\\mathrm{H}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "점 $\\mathrm{A}(8,\\,6,\\,0)$ 에 대하여 $\\overline{\\mathrm{PH}}+\\overline{\\mathrm{HA}}$ 의 최댓값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "구 위의 점과 정사영 — 수선의 길이와 거리의 합의 최댓값",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 구 위의 점을 수평거리 ρ로 매개화해 두 거리를 분리 최대화하고, ρ에 대한 삼각치환으로 마무리",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$\\mathrm{H}(x,\\,y,\\,0)$ 이고 $\\rho=\\sqrt{x^{2}+y^{2}}$ 이라 하면 $\\rho \\le \\sqrt{18}$ 이고 점 $\\mathrm{P}$ 의 $z$ 좌표는 $1 \\pm \\sqrt{18-\\rho^{2}}$ 이다. $\\overline{\\mathrm{PH}}$ 는 $z$ 좌표의 절댓값이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$\\rho$ 를 고정하면 $\\overline{\\mathrm{HA}}$ 는 $\\mathrm{H}$ 가 원점에 대하여 $\\mathrm{A}$ 와 반대쪽에 있을 때 최대 $\\rho+10$ 이다. $\\overline{\\mathrm{PH}}$ 는 위쪽 점을 택할 때 $1+\\sqrt{18-\\rho^{2}}$ 으로 최대이다. (아래쪽 점은 $\\left|1-\\sqrt{18-\\rho^{2}}\\right|\\le 1+\\sqrt{18-\\rho^{2}}$ )",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "따라서 $f(\\rho)=11+\\rho+\\sqrt{18-\\rho^{2}}$ $(0 \\le \\rho \\le 3 \\sqrt{2})$ 의 최댓값을 구하면 된다. $\\rho=3 \\sqrt{2}\\cos t$ , $\\sqrt{18-\\rho^{2}}=3 \\sqrt{2}\\sin t$ $\\left(0 \\le t \\le \\frac{\\pi}{2}\\right)$ 로 놓으면 $\\rho+\\sqrt{18-\\rho^{2}}=6 \\sin \\left(t+\\frac{\\pi}{4}\\right)\\le 6$ 이고 등호는 $\\rho=3$ 일 때 성립한다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "따라서 최댓값은 $11+6=17$ 이고, 이때 $\\mathrm{H}\\left(-\\frac{12}{5},\\,-\\frac{9}{5},\\,0 \\right)$ , $\\mathrm{P}\\left(-\\frac{12}{5},\\,-\\frac{9}{5},\\,4 \\right)$ 이다. 수직 거리와 수평 거리를 따로 최대화하되 둘이 $\\rho$ 로 묶여 있다는 것이 핵심이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

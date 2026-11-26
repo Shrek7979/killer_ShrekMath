@@ -1,0 +1,118 @@
+{
+ "num": 1243,
+ "id": "최고난도500(2)-041",
+ "subject": "기하",
+ "type": "29번형",
+ "typeDesc": "기하 · 수능 29번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12기하01-03]"
+ ],
+ "source": "ShrekMath 창작 · 수능 29번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 225,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "두 초점이 $\\mathrm{F}(4,\\,0)$ , $\\mathrm{F'}(-4,\\,0)$ 인 쌍곡선 $\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1$ $(a>0,\\,b>0)$ 과 중심이 $(0,\\,3)$ 이고 두 점 $\\mathrm{F}$ , $\\mathrm{F'}$ 을 지나는 원 $C$ 가 있다.",
+    "원 $C$ 와 쌍곡선이 만나는 점 중 제 $1$ 사분면 위의 점을 $\\mathrm{P}$ , 제 $4$ 사분면 위의 점을 $\\mathrm{Q}$ 라 하자.",
+    "두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 의 $y$ 좌표의 차가 $\\frac{15}{4}$ 일 때, $\\overline{\\mathrm{PF}}\\times \\overline{\\mathrm{PF'}}\\times \\overline{\\mathrm{QF}}\\times \\overline{\\mathrm{QF'}}$ 의 값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "두 초점이 $\\mathrm{F}(4,\\,0)$ , $\\mathrm{F'}(-4,\\,0)$ 인 쌍곡선 $\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1$ $(a>0,\\,b>0)$ 과 중심이 $(0,\\,3)$ 이고 두 점 $\\mathrm{F}$ , $\\mathrm{F'}$ 을 지나는 원 $C$ 가 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "원 $C$ 와 쌍곡선이 만나는 점 중 제 $1$ 사분면 위의 점을 $\\mathrm{P}$ , 제 $4$ 사분면 위의 점을 $\\mathrm{Q}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 의 $y$ 좌표의 차가 $\\frac{15}{4}$ 일 때, $\\overline{\\mathrm{PF}}\\times \\overline{\\mathrm{PF'}}\\times \\overline{\\mathrm{QF}}\\times \\overline{\\mathrm{QF'}}$ 의 값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "쌍곡선 — 두 초점을 지나는 원 위의 점에서 본 초점각(원주각)과 초점거리의 곱",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 원주각으로 위·아래 호에서의 초점각이 서로 보각임을 찾고, 쌍곡선의 정의와 코사인법칙으로 초점거리의 곱과 y좌표를 각의 함수로 나타내어야 함",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "원 $C$ 의 중심을 $\\mathrm{K}(0,\\,3)$ 이라 하면 반지름의 길이는 $\\overline{\\mathrm{KF}}=5$ 이고 $\\cos(\\angle \\mathrm{OKF})=\\frac{3}{5}$ , $\\sin(\\angle \\mathrm{OKF})=\\frac{4}{5}$ 이다. 현 $\\mathrm{F'F}$ 에 대한 중심각 중 $x$ 축 아래쪽 호에 대한 것은 $\\angle \\mathrm{F'KF}=2 \\angle \\mathrm{OKF}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "핵심 관문: 원주각의 성질에서 $x$ 축 위쪽의 호 위에 있는 점 $\\mathrm{P}$ 에서는 $\\angle \\mathrm{F'PF}=\\angle \\mathrm{OKF}$ 이고, 아래쪽의 호 위에 있는 점 $\\mathrm{Q}$ 에서는 $\\angle \\mathrm{F'QF}=\\pi-\\angle \\mathrm{OKF}$ 이다. 따라서 $\\cos(\\angle \\mathrm{F'PF})=\\frac{3}{5}$ , $\\cos(\\angle \\mathrm{F'QF})=-\\frac{3}{5}$ 이고 두 각의 사인은 모두 $\\frac{4}{5}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "쌍곡선 위의 점 $\\mathrm{X}$ 에 대하여 $\\overline{\\mathrm{XF}}=d_{1}$ , $\\overline{\\mathrm{XF'}}=d_{2}$ , $\\angle \\mathrm{F'XF}=\\theta$ 라 하면 쌍곡선의 정의에서 $(d_{1}-d_{2})^{2}=4 a^{2}$ 이고 코사인법칙에서 $64=d_{1}^{2}+d_{2}^{2}-2 d_{1}d_{2}\\cos \\theta$ 이다. 두 식을 빼면 $64-4 a^{2}=2 d_{1}d_{2}(1-\\cos \\theta)$ 이고 $a^{2}+b^{2}=16$ 이므로 $d_{1}d_{2}=\\frac{2 b^{2}}{1-\\cos \\theta}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "따라서 $\\overline{\\mathrm{PF}}\\times \\overline{\\mathrm{PF'}}=\\frac{2 b^{2}}{1-\\frac{3}{5}}=5 b^{2}$ , $\\overline{\\mathrm{QF}}\\times \\overline{\\mathrm{QF'}}=\\frac{2 b^{2}}{1+\\frac{3}{5}}=\\frac{5}{4}b^{2}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "삼각형 $\\mathrm{PF'F}$ 의 넓이는 $\\frac{1}{2}\\times 5 b^{2}\\times \\frac{4}{5}=2 b^{2}$ 이고, 점 $\\mathrm{P}$ 의 $y$ 좌표를 $y_{\\mathrm{P}}$ 라 하면 이 넓이는 $\\frac{1}{2}\\times 8 \\times y_{\\mathrm{P}}$ 이므로 $y_{\\mathrm{P}}=\\frac{b^{2}}{2}$ 이다. 같은 방법으로 삼각형 $\\mathrm{QF'F}$ 의 넓이는 $\\frac{b^{2}}{2}$ 이므로 점 $\\mathrm{Q}$ 의 $y$ 좌표는 $-\\frac{b^{2}}{8}$ 이다. (이로부터 원 $C$ 와 쌍곡선은 제 $1$ 사분면, 제 $4$ 사분면에서 각각 한 점에서만 만난다.)",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "두 점의 $y$ 좌표의 차는 $\\frac{b^{2}}{2}+\\frac{b^{2}}{8}=\\frac{5 b^{2}}{8}=\\frac{15}{4}$ 이므로 $b^{2}=6$ , $a^{2}=10$ 이다. (실제로 $\\mathrm{P}(5,\\,3)$ 은 원 $C$ 와 쌍곡선 위의 점이다.)",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 8,
+   "text": "따라서 구하는 값은 $5 b^{2}\\times \\frac{5}{4}b^{2}=30 \\times \\frac{15}{2}=225$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

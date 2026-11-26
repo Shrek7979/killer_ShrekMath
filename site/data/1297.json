@@ -1,0 +1,129 @@
+{
+ "num": 1297,
+ "id": "최고난도500(2)-095",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12기하02-05]",
+  "[12기하02-03]"
+ ],
+ "source": "ShrekMath 창작 · 수능 30번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 294,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "좌표공간에서 구 $x^{2}+y^{2}+z^{2}=25$ 위의 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 가 다음 조건을 만족시킨다."
+   ]
+  },
+  {
+   "t": "box",
+   "items": [
+    "(가) 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 의 $z$ 좌표는 모두 $3$ 이상이다.",
+    "(나) $\\overline{\\mathrm{PQ}}=6$"
+   ]
+  },
+  {
+   "t": "p",
+   "sents": [
+    "선분 $\\mathrm{PQ}$ 의 $x y$ 평면 위로의 정사영의 길이의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $25(M+m)$ 의 값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "좌표공간에서 구 $x^{2}+y^{2}+z^{2}=25$ 위의 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 가 다음 조건을 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    1,
+    0
+   ],
+   "text": "(가) 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 의 $z$ 좌표는 모두 $3$ 이상이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    1,
+    1
+   ],
+   "text": "(나) $\\overline{\\mathrm{PQ}}=6$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    0
+   ],
+   "text": "선분 $\\mathrm{PQ}$ 의 $x y$ 평면 위로의 정사영의 길이의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $25(M+m)$ 의 값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "구 — 구면의 일부 위에 있는 길이가 일정한 현의 정사영 길이",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 현의 중점까지의 거리가 일정함과 '현이 기울 수 있는 최대각 ≤ 중심선의 기울기'를 결합해 부등식으로 최적화",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "구의 중심 $\\mathrm{O}$ 와 선분 $\\mathrm{PQ}$ 의 중점 $\\mathrm{K}$ 에 대하여 $\\mathrm{OK}$ 는 $\\mathrm{PQ}$ 에 수직이고 $\\overline{\\mathrm{OK}}=\\sqrt{25-9}=4$ 이다. 직선 $\\mathrm{OK}$ 와 $z$ 축이 이루는 각을 $\\alpha$ , 직선 $\\mathrm{PQ}$ 와 $x y$ 평면이 이루는 각을 $\\beta$ 라 하면 정사영의 길이는 $6 \\cos \\beta$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "점 $\\mathrm{K}$ 의 $z$ 좌표는 $4 \\cos \\alpha$ 이고 두 끝점의 $z$ 좌표는 $4 \\cos \\alpha \\pm 3 \\sin \\beta$ 이다. 직선 $\\mathrm{PQ}$ 는 직선 $\\mathrm{OK}$ 에 수직이므로 $x y$ 평면과 이루는 각은 $\\mathrm{OK}$ 와 $z$ 축이 이루는 각 이하이다. 즉 $\\sin \\beta \\le \\sin \\alpha$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$\\beta=0$ 이고 $\\cos \\alpha \\ge \\frac{3}{4}$ 이면 조건을 만족시키므로 (예: 평면 $z=3$ 위의 길이 $6$ 인 현) $M=6$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "최솟값: 조건 (가)는 $4 \\cos \\alpha-3 \\sin \\beta \\ge 3$ 이다. $v=\\sin \\beta$ 라 하면 $3+3 v \\le 4 \\cos \\alpha \\le 4 \\sqrt{1-v^{2}}$ 이므로 $9(1+v)^{2}\\le 16(1-v^{2})$ , 즉 $(25 v-7)(v+1)\\le 0$ 이고 $v \\le \\frac{7}{25}$ 이다. 등호는 $\\cos \\alpha=\\frac{24}{25}$ , $\\sin \\beta=\\sin \\alpha=\\frac{7}{25}$ 일 때 성립한다(점 $\\mathrm{P}$ 가 원 $z=3$ 위에 있을 때).",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "따라서 $m=6 \\times \\frac{24}{25}=\\frac{144}{25}$ 이고 $25(M+m)=150+144=294$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

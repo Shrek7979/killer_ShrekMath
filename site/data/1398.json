@@ -1,0 +1,101 @@
+{
+ "num": 1398,
+ "id": "최고난도500(3)-096",
+ "subject": "미적분Ⅱ",
+ "type": "29번형",
+ "typeDesc": "미적분Ⅱ · 수능 29번형 자리의 고난도",
+ "stars": 4,
+ "standards": [
+  "[12미적Ⅱ-02-01]",
+  "[12미적Ⅱ-02-07]"
+ ],
+ "source": "ShrekMath 창작 · 수능 29번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 7,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "매개변수 $t$ $(t>0)$ 로 나타낸 곡선 $x=t \\cos t$ , $y=t \\sin t$ 위의 점 $\\mathrm{P}$ 에서의 접선과 직선 $\\mathrm{OP}$ 가 이루는 예각의 크기를 $\\psi(t)$ 라 하자.",
+    "$\\psi'(1)+\\tan \\psi(2)=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오.",
+    "(단, $\\mathrm{O}$ 는 원점이고, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "매개변수 $t$ $(t>0)$ 로 나타낸 곡선 $x=t \\cos t$ , $y=t \\sin t$ 위의 점 $\\mathrm{P}$ 에서의 접선과 직선 $\\mathrm{OP}$ 가 이루는 예각의 크기를 $\\psi(t)$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "$\\psi'(1)+\\tan \\psi(2)=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "(단, $\\mathrm{O}$ 는 원점이고, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "매개변수 미분과 덧셈정리 — 아르키메데스 나선의 접선과 동경이 이루는 각",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 나선의 접선 방향을 동경 방향과 그 수직 방향으로 분해하여 tan ψ=t를 찾는 것",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$\\frac{dx}{dt}=\\cos t-t \\sin t$ , $\\frac{dy}{dt}=\\sin t+t \\cos t$ 이다. 접선의 방향벡터 $(\\cos t-t \\sin t,\\,\\sin t+t \\cos t)$ 를 회전으로 보면 $(\\cos t,\\,\\sin t)$ 방향 성분이 $1$ , 이에 수직인 $(-\\sin t,\\,\\cos t)$ 방향 성분이 $t$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "핵심 관문: 직선 $\\mathrm{OP}$ 의 방향은 $(\\cos t,\\,\\sin t)$ 이므로 접선과 $\\mathrm{OP}$ 가 이루는 각 $\\psi$ 는 $\\tan \\psi(t)=t$ 를 만족시킨다. (덧셈정리로 기울기 $\\tan(t+\\psi)$ 를 정리해도 같은 결과이다.)",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$\\tan \\psi(t)=t$ 의 양변을 미분하면 $\\sec^{2}\\psi \\times \\psi'=1$ 이므로 $\\psi'(t)=\\frac{1}{1+t^{2}}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$\\psi'(1)=\\frac{1}{2}$ , $\\tan \\psi(2)=2$ 이므로 합은 $\\frac{5}{2}$ 이고 $p+q=7$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

@@ -1,0 +1,113 @@
+{
+ "num": 1215,
+ "id": "최고난도500(2)-013",
+ "subject": "기하",
+ "type": "29번형",
+ "typeDesc": "기하 · 수능 29번형 자리의 고난도",
+ "stars": 4,
+ "standards": [
+  "[12기하01-02]",
+  "[12기하01-04]"
+ ],
+ "source": "ShrekMath 창작 · 수능 29번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 544,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "두 초점이 $\\mathrm{F}(c,\\,0)$ , $\\mathrm{F'}(-c,\\,0)$ $(c>0)$ 인 타원 $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ $(a>b>0)$ 과 두 점 $\\mathrm{A}(a,\\,0)$ , $\\mathrm{A'}(-a,\\,0)$ 이 있다.",
+    "타원 위의 점 중 제 $1$ 사분면에 있는 점 $\\mathrm{P}$ 에서의 접선이 두 직선 $x=a$ , $x=-a$ 와 만나는 점을 각각 $\\mathrm{M}$ , $\\mathrm{N}$ 이라 하자.",
+    "$\\overline{\\mathrm{AM}}=2$ , $\\overline{\\mathrm{A'N}}=8$ , $\\overline{\\mathrm{MN}}=2 \\sqrt{34}$ 일 때, 삼각형 $\\mathrm{MFN}$ 의 넓이와 삼각형 $\\mathrm{MF'N}$ 의 넓이의 곱을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "두 초점이 $\\mathrm{F}(c,\\,0)$ , $\\mathrm{F'}(-c,\\,0)$ $(c>0)$ 인 타원 $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ $(a>b>0)$ 과 두 점 $\\mathrm{A}(a,\\,0)$ , $\\mathrm{A'}(-a,\\,0)$ 이 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "타원 위의 점 중 제 $1$ 사분면에 있는 점 $\\mathrm{P}$ 에서의 접선이 두 직선 $x=a$ , $x=-a$ 와 만나는 점을 각각 $\\mathrm{M}$ , $\\mathrm{N}$ 이라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "$\\overline{\\mathrm{AM}}=2$ , $\\overline{\\mathrm{A'N}}=8$ , $\\overline{\\mathrm{MN}}=2 \\sqrt{34}$ 일 때, 삼각형 $\\mathrm{MFN}$ 의 넓이와 삼각형 $\\mathrm{MF'N}$ 의 넓이의 곱을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "타원 — 장축 끝점의 접선과 만나는 두 점이 두 초점에서 직각을 이룸",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 장축 양 끝의 접선이 잘라내는 두 길이의 곱이 b²으로 일정하다는 관계와, 두 초점이 선분 MN을 지름으로 하는 원 위에 있다는 사실을 연결",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$\\mathrm{P}(x_{0},\\,y_{0})$ 에서의 접선 $\\frac{x_{0}x}{a^{2}}+\\frac{y_{0}y}{b^{2}}=1$ 에 $x=\\pm a$ 를 대입하면 $\\overline{\\mathrm{AM}}=\\frac{b^{2}}{y_{0}}\\left(1-\\frac{x_{0}}{a}\\right)$ , $\\overline{\\mathrm{A'N}}=\\frac{b^{2}}{y_{0}}\\left(1+\\frac{x_{0}}{a}\\right)$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "핵심 관문: $\\overline{\\mathrm{AM}}\\times \\overline{\\mathrm{A'N}}=\\frac{b^{4}}{y_{0}^{2}}\\left(1-\\frac{x_{0}^{2}}{a^{2}}\\right)=\\frac{b^{4}}{y_{0}^{2}}\\times \\frac{y_{0}^{2}}{b^{2}}=b^{2}$ 이므로 $b^{2}=16$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$\\overline{\\mathrm{MN}}^{2}=(2 a)^{2}+(8-2)^{2}=136$ 에서 $a=5$ 이고 $c=3$ 이다. $\\mathrm{M}(5,\\,2)$ , $\\mathrm{N}(-5,\\,8)$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$\\vec{\\mathrm{FM}}=(2,\\,2)$ , $\\vec{\\mathrm{FN}}=(-8,\\,8)$ 이므로 $\\vec{\\mathrm{FM}}\\cdot \\vec{\\mathrm{FN}}=0$ 이고 삼각형 $\\mathrm{MFN}$ 의 넓이는 $\\frac{1}{2}\\times 2 \\sqrt{2}\\times 8 \\sqrt{2}=16$ 이다. (일반적으로 $\\vec{\\mathrm{FM}}\\cdot \\vec{\\mathrm{FN}}=c^{2}-a^{2}+\\overline{\\mathrm{AM}}\\times \\overline{\\mathrm{A'N}}=0$ 이므로 두 초점은 선분 $\\mathrm{MN}$ 을 지름으로 하는 원 위에 있다.)",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "$\\vec{\\mathrm{F'M}}=(8,\\,2)$ , $\\vec{\\mathrm{F'N}}=(-2,\\,8)$ 이므로 삼각형 $\\mathrm{MF'N}$ 의 넓이는 $\\frac{1}{2}\\times \\sqrt{68}\\times \\sqrt{68}=34$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "따라서 구하는 값은 $16 \\times 34=544$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

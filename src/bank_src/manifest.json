@@ -160,6 +160,20 @@
    "items": 150,
    "dups": 0,
    "status": "new"
+  },
+  "수능형 창작문항_최고난도 500제_기하 100제.hwpx": {
+   "sha1": "37d7687cccbeeed9f87475ff5269e92f72083386",
+   "slug": "최고난도_500제_기하_100제",
+   "items": 100,
+   "dups": 0,
+   "status": "new"
+  },
+  "수능형 창작문항_최고난도 500제_미적분Ⅱ 250제.hwpx": {
+   "sha1": "3589fb73dc19e494d866447dc816bea8f8efbb8d",
+   "slug": "최고난도_500제_미적분Ⅱ_250제",
+   "items": 250,
+   "dups": 0,
+   "status": "new"
   }
  },
  "ignore": [

@@ -1,0 +1,152 @@
+{
+ "num": 1509,
+ "id": "최고난도500(3)-207",
+ "subject": "미적분Ⅱ",
+ "type": "30번형",
+ "typeDesc": "미적분Ⅱ · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12미적Ⅱ-03-04]",
+  "[12미적Ⅱ-03-05]",
+  "[12미적Ⅱ-02-07]"
+ ],
+ "source": "ShrekMath 창작 · 수능 30번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 11,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "자연수 $n$ 과 $n$ 이하의 자연수 $k$ 에 대하여 곡선 $y=\\sin x \\,(0 \\le x \\le \\pi)$ 와 직선 $y=\\frac{k}{n}$ 으로 둘러싸인 부분의 넓이를 $A_{k}$ 라 하자.",
+    "(단, $A_{n}=0$ 이다.)"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "\\lim_{n \\to \\infty}\\frac{1}{n}\\sum_{k=1}^{n}\\frac{k}{n}A_{k}=\\frac{q}{p}"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "일 때, $p+q$ 의 값을 구하시오.",
+    "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "자연수 $n$ 과 $n$ 이하의 자연수 $k$ 에 대하여 곡선 $y=\\sin x \\,(0 \\le x \\le \\pi)$ 와 직선 $y=\\frac{k}{n}$ 으로 둘러싸인 부분의 넓이를 $A_{k}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "(단, $A_{n}=0$ 이다.)",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$\\lim_{n \\to \\infty}\\frac{1}{n}\\sum_{k=1}^{n}\\frac{k}{n}A_{k}=\\frac{q}{p}$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    0
+   ],
+   "text": "일 때, $p+q$ 의 값을 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    2,
+    1
+   ],
+   "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "정적분과 급수 — 수평선 위쪽 넓이들의 가중 평균",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 넓이 A(s)를 교점 α로 나타내고 s=sinα 치환과 부분적분을 연결하여 π가 소거되는 구분구적의 극한을 구하는 것",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$0 \\le s \\le 1$ 에 대하여 곡선 $y=\\sin x$ 와 직선 $y=s$ 의 교점의 $x$ 좌표를 $\\alpha$ , $\\pi-\\alpha \\,\\left(0 \\le \\alpha \\le \\frac{\\pi}{2}\\right)$ 라 하면 둘러싸인 부분의 넓이는",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$$A(s)=\\int_{\\alpha}^{\\pi-\\alpha}(\\sin x-s)dx=2 \\cos \\alpha-s(\\pi-2 \\alpha)$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "이고 $A_{k}=A \\left(\\frac{k}{n}\\right)$ 이므로 구하는 극한값은 $L=\\int_{0}^{1}s A(s)ds$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "핵심 관문: $\\alpha$ 를 $s$ 의 식으로 쓸 수 없으므로 $s=\\sin \\alpha$ 로 치환한다. $ds=\\cos \\alpha d \\alpha$ 이고 $s$ 가 $0$ 에서 $1$ 까지 변할 때 $\\alpha$ 는 $0$ 에서 $\\frac{\\pi}{2}$ 까지 변한다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "$$L=\\int_{0}^{\\frac{\\pi}{2}}2 \\sin \\alpha \\cos^{2}\\alpha d \\alpha-\\int_{0}^{\\frac{\\pi}{2}}(\\pi-2 \\alpha)\\sin^{2}\\alpha \\cos \\alpha d \\alpha$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "첫째 적분은 $\\left[-\\frac{2}{3}\\cos^{3}\\alpha \\right]_{0}^{\\frac{\\pi}{2}}=\\frac{2}{3}$ 이다. 둘째 적분은 $\\frac{\\sin^{3}\\alpha}{3}$ 를 이용하여 부분적분하면 $\\left[(\\pi-2 \\alpha)\\frac{\\sin^{3}\\alpha}{3}\\right]_{0}^{\\frac{\\pi}{2}}+\\frac{2}{3}\\int_{0}^{\\frac{\\pi}{2}}\\sin^{3}\\alpha d \\alpha=0+\\frac{2}{3}\\times \\frac{2}{3}=\\frac{4}{9}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 8,
+   "text": "따라서 $L=\\frac{2}{3}-\\frac{4}{9}=\\frac{2}{9}$ 이고 (원주율이 모두 소거된다) $p+q=9+2=11$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

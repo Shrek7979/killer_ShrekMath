@@ -1,0 +1,146 @@
+{
+ "num": 1356,
+ "id": "최고난도500(3)-054",
+ "subject": "미적분Ⅱ",
+ "type": "29번형",
+ "typeDesc": "미적분Ⅱ · 수능 29번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12미적Ⅱ-02-04]",
+  "[12미적Ⅱ-02-05]",
+  "[12미적Ⅱ-02-06]"
+ ],
+ "source": "ShrekMath 창작 · 수능 29번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 127,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "함수"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "f(x)=\\cos x \\times \\cos 2 x \\times \\cos 4 x \\times \\cos 8 x \\times \\cos 16 x \\times \\cos 32 x"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "에 대하여 $f' \\left(\\frac{\\pi}{7}\\right)\\times \\tan \\frac{\\pi}{7}=-\\frac{q}{p}$ 이다.",
+    "$p+q$ 의 값을 구하시오.",
+    "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "함수",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$f(x)=\\cos x \\times \\cos 2 x \\times \\cos 4 x \\times \\cos 8 x \\times \\cos 16 x \\times \\cos 32 x$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    2,
+    0
+   ],
+   "text": "에 대하여 $f' \\left(\\frac{\\pi}{7}\\right)\\times \\tan \\frac{\\pi}{7}=-\\frac{q}{p}$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    1
+   ],
+   "text": "$p+q$ 의 값을 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    2,
+    2
+   ],
+   "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "곱의 미분과 로그미분 — 코사인의 거듭곱과 배각 망원",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 코사인의 거듭곱을 배각 공식으로 망원시켜 몫으로 바꾸고, 64π/7이 π/7과 같은 탄젠트 값을 갖는다는 주기성을 쓰는 것",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$\\sin 2 \\alpha=2 \\sin \\alpha \\cos \\alpha$ 를 반복하면 $\\sin x \\ne 0$ 일 때 $64 \\sin x \\times f(x)=\\sin 64 x$ , 즉 $f(x)=\\frac{\\sin 64 x}{64 \\sin x}$ 이다. 여섯 개의 곱을 하나의 몫으로 바꾸는 것이 핵심 관문이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$f(x)\\ne 0$ 인 점에서 $\\ln \\left|f(x)\\right|=\\ln \\left|\\sin 64 x \\right|-\\ln \\left|\\sin x \\right|-\\ln 64$ 이므로 양변을 미분하면",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$$\\frac{f'(x)}{f(x)}=\\frac{64 \\cos 64 x}{\\sin 64 x}-\\frac{\\cos x}{\\sin x}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$\\frac{64 \\pi}{7}=9 \\pi+\\frac{\\pi}{7}$ 이므로 $\\sin \\frac{64 \\pi}{7}=-\\sin \\frac{\\pi}{7}$ , $\\cos \\frac{64 \\pi}{7}=-\\cos \\frac{\\pi}{7}$ 이고, 따라서 $f \\left(\\frac{\\pi}{7}\\right)=-\\frac{1}{64}$ , $\\frac{64 \\cos 64 x}{\\sin 64 x}$ 의 값은 $x=\\frac{\\pi}{7}$ 에서 $64 \\times \\frac{\\cos \\frac{\\pi}{7}}{\\sin \\frac{\\pi}{7}}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "그러므로 $\\frac{f' \\left(\\frac{\\pi}{7}\\right)}{f \\left(\\frac{\\pi}{7}\\right)}=63 \\times \\frac{\\cos \\frac{\\pi}{7}}{\\sin \\frac{\\pi}{7}}$ , 즉 $f' \\left(\\frac{\\pi}{7}\\right)\\tan \\frac{\\pi}{7}=63 \\times \\left(-\\frac{1}{64}\\right)=-\\frac{63}{64}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "따라서 $p+q=64+63=127$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

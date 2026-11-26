@@ -1,0 +1,101 @@
+{
+ "num": 1291,
+ "id": "최고난도500(2)-089",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12기하02-05]",
+  "[12기하02-01]"
+ ],
+ "source": "ShrekMath 창작 · 수능 30번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 48,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "한 모서리의 길이가 $6$ 인 정사면체 $\\mathrm{ABCD}$ 가 있다.",
+    "평면 $\\mathrm{BCD}$ 위의 점 $\\mathrm{P}$ 중에서 $\\angle \\mathrm{APB}=\\frac{\\pi}{2}$ 를 만족시키는 점은 모두 한 원 위에 있다.",
+    "이 원 위의 점 $\\mathrm{P}$ 에 대하여 $\\overline{\\mathrm{CP}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M^{2}+m^{2}$ 의 값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "한 모서리의 길이가 $6$ 인 정사면체 $\\mathrm{ABCD}$ 가 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "평면 $\\mathrm{BCD}$ 위의 점 $\\mathrm{P}$ 중에서 $\\angle \\mathrm{APB}=\\frac{\\pi}{2}$ 를 만족시키는 점은 모두 한 원 위에 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "이 원 위의 점 $\\mathrm{P}$ 에 대하여 $\\overline{\\mathrm{CP}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M^{2}+m^{2}$ 의 값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "구 — 정사면체에서 직각을 보는 점의 자취와 거리의 최대·최소",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 직각을 보는 점의 자취를 지름 구로 바꾸고, 구와 면의 교선 원의 중심·반지름을 수선의 발로 결정",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$\\angle \\mathrm{APB}=\\frac{\\pi}{2}$ 인 점 $\\mathrm{P}$ 는 선분 $\\mathrm{AB}$ 를 지름으로 하는 구 위의 점이다. 따라서 이 점들은 중심이 선분 $\\mathrm{AB}$ 의 중점 $\\mathrm{N}$ , 반지름이 $3$ 인 구와 평면 $\\mathrm{BCD}$ 의 교선(원) 위에 있다. 이 원은 점 $\\mathrm{B}$ 를 지나지만 $\\mathrm{B}$ 에서는 각이 정의되지 않으므로, 점 $\\mathrm{B}$ 를 제외한 원 위의 점이 조건을 만족시킨다. 아래의 최대·최소는 점 $\\mathrm{B}$ 에서 생기지 않는다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "삼각형 $\\mathrm{BCD}$ 의 무게중심을 $\\mathrm{G}$ 라 하면 점 $\\mathrm{A}$ 에서 평면 $\\mathrm{BCD}$ 에 내린 수선의 발은 $\\mathrm{G}$ 이고 높이는 $\\sqrt{36-12}=2 \\sqrt{6}$ 이다. 점 $\\mathrm{N}$ 에서 평면에 내린 수선의 발 $\\mathrm{K}$ 는 선분 $\\mathrm{BG}$ 의 중점이고 $\\overline{\\mathrm{NK}}=\\sqrt{6}$ 이므로, 원의 중심은 $\\mathrm{K}$ , 반지름은 $\\sqrt{9-6}=\\sqrt{3}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "평면 $\\mathrm{BCD}$ 에서 $\\mathrm{G}$ 를 원점으로 하면 $\\mathrm{B}(2 \\sqrt{3},\\,0)$ , $\\mathrm{C}(-\\sqrt{3},\\,3)$ , $\\mathrm{K}(\\sqrt{3},\\,0)$ 이므로 $\\overline{\\mathrm{KC}}^{2}=12+9=21$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "점 $\\mathrm{C}$ 는 원과 같은 평면 위에 있으므로 $M=\\sqrt{21}+\\sqrt{3}$ , $m=\\sqrt{21}-\\sqrt{3}$ 이고 $M^{2}+m^{2}=2(21+3)=48$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

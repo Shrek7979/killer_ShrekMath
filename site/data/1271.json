@@ -1,0 +1,135 @@
+{
+ "num": 1271,
+ "id": "최고난도500(2)-069",
+ "subject": "기하",
+ "type": "29번형",
+ "typeDesc": "기하 · 수능 29번형 자리의 고난도",
+ "stars": 4,
+ "standards": [
+  "[12기하03-04]",
+  "[12기하03-05]"
+ ],
+ "source": "ShrekMath 창작 · 수능 29번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 90,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "좌표평면에서 원 $C_{1}:x^{2}+y^{2}=4$ 위의 점 $\\mathrm{P}$ 와 원 $C_{2}:(x-8)^{2}+y^{2}=16$ 위의 점 $\\mathrm{Q}$ 가 다음 조건을 만족시킨다."
+   ]
+  },
+  {
+   "t": "box",
+   "items": [
+    "(가) $\\vec{\\mathrm{OP}}\\cdot \\vec{\\mathrm{AQ}}=\\left|\\vec{\\mathrm{OP}}\\right|\\left|\\vec{\\mathrm{AQ}}\\right|$",
+    "(나) $\\left|\\vec{\\mathrm{PQ}}\\right|\\le 8$"
+   ]
+  },
+  {
+   "t": "p",
+   "sents": [
+    "$\\vec{\\mathrm{PQ}}\\cdot \\vec{\\mathrm{OQ}}$ 의 최댓값과 최솟값의 합을 구하시오.",
+    "(단, $\\mathrm{O}$ 는 원점이고, $\\mathrm{A}(8,\\,0)$ 이다.) [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "좌표평면에서 원 $C_{1}:x^{2}+y^{2}=4$ 위의 점 $\\mathrm{P}$ 와 원 $C_{2}:(x-8)^{2}+y^{2}=16$ 위의 점 $\\mathrm{Q}$ 가 다음 조건을 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    1,
+    0
+   ],
+   "text": "(가) $\\vec{\\mathrm{OP}}\\cdot \\vec{\\mathrm{AQ}}=\\left|\\vec{\\mathrm{OP}}\\right|\\left|\\vec{\\mathrm{AQ}}\\right|$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    1,
+    1
+   ],
+   "text": "(나) $\\left|\\vec{\\mathrm{PQ}}\\right|\\le 8$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    0
+   ],
+   "text": "$\\vec{\\mathrm{PQ}}\\cdot \\vec{\\mathrm{OQ}}$ 의 최댓값과 최솟값의 합을 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    2,
+    1
+   ],
+   "text": "(단, $\\mathrm{O}$ 는 원점이고, $\\mathrm{A}(8,\\,0)$ 이다.) [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "내적 — 방향이 같은 두 반지름과 닮음의 중심",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 내적이 크기의 곱과 같다는 조건을 같은 방향으로 해석하여 두 점을 한 각으로 매개화",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "(가)는 두 벡터 $\\vec{\\mathrm{OP}}$ , $\\vec{\\mathrm{AQ}}$ 가 이루는 각의 크기가 $0$ , 즉 방향이 같다는 뜻이다. 단위벡터 $\\vec{e}=(\\cos \\theta,\\,\\sin \\theta)$ 에 대하여 $\\vec{\\mathrm{OP}}=2 \\vec{e}$ , $\\vec{\\mathrm{OQ}}=\\vec{\\mathrm{OA}}+4 \\vec{e}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$\\vec{\\mathrm{PQ}}=\\vec{\\mathrm{OA}}+2 \\vec{e}$ 이므로 $\\left|\\vec{\\mathrm{PQ}}\\right|^{2}=64+32 \\cos \\theta+4$ 이고, (나)에서 $\\cos \\theta \\le-\\frac{1}{8}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$\\vec{\\mathrm{PQ}}\\cdot \\vec{\\mathrm{OQ}}=(\\vec{\\mathrm{OA}}+2 \\vec{e})\\cdot(\\vec{\\mathrm{OA}}+4 \\vec{e})=64+48 \\cos \\theta+8=72+48 \\cos \\theta$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$-1 \\le \\cos \\theta \\le-\\frac{1}{8}$ 이므로 최솟값은 $24$ , 최댓값은 $66$ 이고 합은 $90$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

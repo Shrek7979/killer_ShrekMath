@@ -1,0 +1,89 @@
+{
+ "num": 1402,
+ "id": "최고난도500(3)-100",
+ "subject": "미적분Ⅱ",
+ "type": "29번형",
+ "typeDesc": "미적분Ⅱ · 수능 29번형 자리의 고난도",
+ "stars": 4,
+ "standards": [
+  "[12미적Ⅱ-02-02]",
+  "[12미적Ⅱ-02-05]"
+ ],
+ "source": "ShrekMath 창작 · 수능 29번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 15,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "$x>0$ 에서 두 곡선 $y=\\frac{\\sin x}{x}$ , $y=\\frac{1}{x}$ 가 만나는 점을 $x$ 좌표가 작은 것부터 차례로 $\\mathrm{P}_{1}$ , $\\mathrm{P}_{2}$ , $\\mathrm{P}_{3}$ , $\\cdots$ 이라 하자.",
+    "세 점 $\\mathrm{P}_{1}$ , $\\mathrm{P}_{2}$ , $\\mathrm{P}_{3}$ 에서 곡선 $y=\\frac{\\sin x}{x}$ 에 그은 접선이 $x$ 축과 만나는 점의 $x$ 좌표의 합이 $k \\pi$ 일 때, $k$ 의 값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "$x>0$ 에서 두 곡선 $y=\\frac{\\sin x}{x}$ , $y=\\frac{1}{x}$ 가 만나는 점을 $x$ 좌표가 작은 것부터 차례로 $\\mathrm{P}_{1}$ , $\\mathrm{P}_{2}$ , $\\mathrm{P}_{3}$ , $\\cdots$ 이라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "세 점 $\\mathrm{P}_{1}$ , $\\mathrm{P}_{2}$ , $\\mathrm{P}_{3}$ 에서 곡선 $y=\\frac{\\sin x}{x}$ 에 그은 접선이 $x$ 축과 만나는 점의 $x$ 좌표의 합이 $k \\pi$ 일 때, $k$ 의 값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "삼각함수의 미분 — 곡선 y=(sin x)/x와 y=1/x가 만나는 점은 모두 접점",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 교점에서 두 곡선의 미분계수가 같아 접한다는 것을 찾고 y=1/x의 접선의 성질로 x절편을 구하는 것",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "두 곡선이 만나는 점에서 $\\sin x=1$ 이므로 $x=\\frac{\\pi}{2}+2(n-1)\\pi$ 이다. 즉 $\\mathrm{P}_{1}$ , $\\mathrm{P}_{2}$ , $\\mathrm{P}_{3}$ 의 $x$ 좌표는 $\\frac{\\pi}{2}$ , $\\frac{5 \\pi}{2}$ , $\\frac{9 \\pi}{2}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$f(x)=\\frac{\\sin x}{x}$ 라 하면 몫의 미분법으로 $f'(x)=\\frac{x \\cos x-\\sin x}{x^{2}}$ 이고, $\\sin a=1$ , $\\cos a=0$ 인 점 $a$ 에서 $f'(a)=-\\frac{1}{a^{2}}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "핵심 관문: 이 값은 $\\left(\\frac{1}{x}\\right)'$ 의 값 $-\\frac{1}{a^{2}}$ 과 같으므로 두 곡선은 각 교점에서 접한다. 따라서 접선은 곡선 $y=\\frac{1}{x}$ 의 접선 $y=-\\frac{1}{a^{2}}(x-a)+\\frac{1}{a}$ 이고, $x$ 절편은 $2 a$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$x$ 절편의 합은 $2 \\left(\\frac{\\pi}{2}+\\frac{5 \\pi}{2}+\\frac{9 \\pi}{2}\\right)=15 \\pi$ 이므로 $k=15$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

@@ -1,0 +1,101 @@
+{
+ "num": 1294,
+ "id": "최고난도500(2)-092",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12기하02-03]",
+  "[12기하02-01]"
+ ],
+ "source": "ShrekMath 창작 · 수능 30번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 648,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "한 모서리의 길이가 $6$ 인 정육면체 $\\mathrm{ABCD}-\\mathrm{EFGH}$ 에서 네 점 $\\mathrm{E}$ , $\\mathrm{F}$ , $\\mathrm{G}$ , $\\mathrm{H}$ 는 각각 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ , $\\mathrm{D}$ 의 바로 위에 있다.",
+    "모서리 $\\mathrm{BF}$ 위의 점 $\\mathrm{P}$ 와 모서리 $\\mathrm{DH}$ 위의 점 $\\mathrm{Q}$ 가 $\\overline{\\mathrm{BP}}=2$ , $\\overline{\\mathrm{DQ}}=4$ 를 만족시킨다.",
+    "세 점 $\\mathrm{A}$ , $\\mathrm{P}$ , $\\mathrm{Q}$ 를 지나는 평면으로 정육면체를 자른 단면의 평면 $\\mathrm{BFHD}$ 위로의 정사영의 넓이를 $S$ 라 할 때, $S^{2}$ 의 값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "한 모서리의 길이가 $6$ 인 정육면체 $\\mathrm{ABCD}-\\mathrm{EFGH}$ 에서 네 점 $\\mathrm{E}$ , $\\mathrm{F}$ , $\\mathrm{G}$ , $\\mathrm{H}$ 는 각각 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ , $\\mathrm{D}$ 의 바로 위에 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "모서리 $\\mathrm{BF}$ 위의 점 $\\mathrm{P}$ 와 모서리 $\\mathrm{DH}$ 위의 점 $\\mathrm{Q}$ 가 $\\overline{\\mathrm{BP}}=2$ , $\\overline{\\mathrm{DQ}}=4$ 를 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "세 점 $\\mathrm{A}$ , $\\mathrm{P}$ , $\\mathrm{Q}$ 를 지나는 평면으로 정육면체를 자른 단면의 평면 $\\mathrm{BFHD}$ 위로의 정사영의 넓이를 $S$ 라 할 때, $S^{2}$ 의 값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "정사영 — 정육면체의 평행사변형 단면을 대각면 위로",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 평행한 면의 교선으로 단면을 완성(R=G)하고, 꼭짓점의 정사영을 직접 찾아 넓이 계산",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "정육면체의 마주 보는 두 면은 평행하므로 단면이 면 $\\mathrm{BCGF}$ 와 만나는 선분은 $\\mathrm{AQ}$ 와 평행하고, 면 $\\mathrm{DCGH}$ 와 만나는 선분은 $\\mathrm{AP}$ 와 평행하다. 점 $\\mathrm{P}$ 에서 $\\mathrm{AQ}$ 와 평행하게 면 $\\mathrm{BCGF}$ 위를 따라가면 높이가 $4$ 만큼 올라가므로 모서리 $\\mathrm{CG}$ 위의 높이 $2+4=6$ 인 점, 즉 $\\mathrm{G}$ 에 도달한다. 따라서 단면은 평행사변형 $\\mathrm{APGQ}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "평면 $\\mathrm{BFHD}$ 는 직선 $\\mathrm{BD}$ 를 포함하는 연직 평면이다. 점 $\\mathrm{A}$ 의 정사영은 선분 $\\mathrm{BD}$ 의 중점 $\\mathrm{O}$ , 점 $\\mathrm{G}$ 의 정사영은 선분 $\\mathrm{FH}$ 의 중점 $\\mathrm{O}'$ 이고, $\\mathrm{P}$ , $\\mathrm{Q}$ 는 평면 위에 있다. 따라서 정사영은 사각형 $\\mathrm{POQO}'$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "이 사각형의 대각선 $\\mathrm{OO}'$ 은 길이가 $6$ 인 연직선분이고, 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 는 그 양쪽에서 각각 $\\overline{\\mathrm{OB}}=\\overline{\\mathrm{OD}}=3 \\sqrt{2}$ 만큼 떨어져 있다. 따라서 넓이는 $\\frac{1}{2}\\times 6 \\times(3 \\sqrt{2}+3 \\sqrt{2})=18 \\sqrt{2}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$S^{2}=648$ 이다. 단면을 구한 뒤 이면각을 구하지 않고 꼭짓점의 정사영을 직접 찾는 것이 핵심이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

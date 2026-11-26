@@ -1,0 +1,139 @@
+{
+ "num": 1357,
+ "id": "최고난도500(3)-055",
+ "subject": "미적분Ⅱ",
+ "type": "30번형",
+ "typeDesc": "미적분Ⅱ · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12미적Ⅱ-02-01]",
+  "[12미적Ⅱ-02-07]"
+ ],
+ "source": "ShrekMath 창작 · 수능 30번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 8,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "매개변수 $t$ $(0 \\le t<2 \\pi)$ 로 나타낸 곡선"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "x=2 \\cos t+\\cos 2 t,\\,\\,\\,y=2 \\sin t-\\sin 2 t"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "위의 $t=\\frac{\\pi}{3}$ 에 대응하는 점 $\\mathrm{P}$ 에서의 접선이 이 곡선과 만나는 점 중 $\\mathrm{P}$ 가 아닌 두 점을 $\\mathrm{A}$ , $\\mathrm{B}$ 라 하자.",
+    "이 곡선 위의 두 점 $\\mathrm{A}$ , $\\mathrm{B}$ 에서의 접선의 교점을 $\\mathrm{R}$ 라 할 때, 삼각형 $\\mathrm{ABR}$ 의 넓이와 $\\overline{\\mathrm{PR}}^{2}$ 의 합을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "매개변수 $t$ $(0 \\le t<2 \\pi)$ 로 나타낸 곡선",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$x=2 \\cos t+\\cos 2 t,\\,\\,\\,y=2 \\sin t-\\sin 2 t$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    2,
+    0
+   ],
+   "text": "위의 $t=\\frac{\\pi}{3}$ 에 대응하는 점 $\\mathrm{P}$ 에서의 접선이 이 곡선과 만나는 점 중 $\\mathrm{P}$ 가 아닌 두 점을 $\\mathrm{A}$ , $\\mathrm{B}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    1
+   ],
+   "text": "이 곡선 위의 두 점 $\\mathrm{A}$ , $\\mathrm{B}$ 에서의 접선의 교점을 $\\mathrm{R}$ 라 할 때, 삼각형 $\\mathrm{ABR}$ 의 넓이와 $\\overline{\\mathrm{PR}}^{2}$ 의 합을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "매개변수 미분과 덧셈정리 — 델토이드의 접선이 곡선과 다시 만나는 두 점",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 매개변수 미분과 덧셈정리로 접선과 곡선의 교점 방정식을 sin(s+π/6)의 이차방정식으로 바꾸어 다른 두 교점을 찾는 것",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$\\frac{dx}{dt}=-2(\\sin t+\\sin 2 t)=-4 \\sin \\frac{3 t}{2}\\cos \\frac{t}{2}$ , $\\frac{dy}{dt}=2(\\cos t-\\cos 2 t)=4 \\sin \\frac{3 t}{2}\\sin \\frac{t}{2}$ 이므로 $\\frac{dy}{dx}=-\\tan \\frac{t}{2}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$\\mathrm{P}\\left(\\frac{1}{2},\\,\\frac{\\sqrt{3}}{2}\\right)$ 에서의 기울기는 $-\\frac{1}{\\sqrt{3}}$ 이므로 접선은 $x+\\sqrt{3}y=2$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "핵심 관문: 곡선 위의 점 $(x(s),\\,y(s))$ 를 대입하고 덧셈정리로 묶는다. $2 \\cos s+2 \\sqrt{3}\\sin s=4 \\sin \\left(s+\\frac{\\pi}{6}\\right)$ , $\\cos 2 s-\\sqrt{3}\\sin 2 s=2 \\cos \\left(2 s+\\frac{\\pi}{3}\\right)=2-4 \\sin^{2}\\left(s+\\frac{\\pi}{6}\\right)$ 이므로 $u=\\sin \\left(s+\\frac{\\pi}{6}\\right)$ 라 하면 $4 u+2-4 u^{2}=2$ , 즉 $u(1-u)=0$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$u=1$ 은 $s=\\frac{\\pi}{3}$ (점 $\\mathrm{P}$ , 접점)이고, $u=0$ 에서 $s=\\frac{5 \\pi}{6}$ , $\\frac{11 \\pi}{6}$ 이다. 따라서 $\\mathrm{A}\\left(\\frac{1}{2}+\\sqrt{3},\\,\\frac{\\sqrt{3}}{2}-1 \\right)$ , $\\mathrm{B}\\left(\\frac{1}{2}-\\sqrt{3},\\,\\frac{\\sqrt{3}}{2}+1 \\right)$ 이고 $\\overline{\\mathrm{AB}}=4$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "두 점에서의 접선의 기울기는 $-\\tan \\frac{11 \\pi}{12}=\\tan \\frac{\\pi}{12}=2-\\sqrt{3}$ , $-\\tan \\frac{5 \\pi}{12}=-(2+\\sqrt{3})$ 이고 그 곱이 $-1$ 이므로 두 접선은 수직이다. 두 접선 $y-\\left(\\frac{\\sqrt{3}}{2}-1 \\right)=(2-\\sqrt{3})\\left(x-\\frac{1}{2}-\\sqrt{3}\\right)$ , $y-\\left(\\frac{\\sqrt{3}}{2}+1 \\right)=-(2+\\sqrt{3})\\left(x-\\frac{1}{2}+\\sqrt{3}\\right)$ 를 연립하면 $\\mathrm{R}\\left(-\\frac{1}{2},\\,-\\frac{\\sqrt{3}}{2}\\right)$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "$\\overline{\\mathrm{RA}}=\\overline{\\mathrm{RB}}=2 \\sqrt{2}$ 이므로 삼각형 $\\mathrm{ABR}$ 의 넓이는 $\\frac{1}{2}\\times 2 \\sqrt{2}\\times 2 \\sqrt{2}=4$ 이고, $\\overline{\\mathrm{PR}}^{2}=1+3=4$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 8,
+   "text": "따라서 구하는 값은 $4+4=8$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

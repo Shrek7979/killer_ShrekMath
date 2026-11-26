@@ -1,0 +1,83 @@
+{
+ "num": 1263,
+ "id": "최고난도500(2)-061",
+ "subject": "기하",
+ "type": "29번형",
+ "typeDesc": "기하 · 수능 29번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12기하03-04]",
+  "[12기하03-05]"
+ ],
+ "source": "ShrekMath 창작 · 수능 29번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 61,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "좌표평면 위의 두 점 $\\mathrm{A}(2,\\,7)$ , $\\mathrm{B}(6,\\,-1)$ 과 반원 $x^{2}+y^{2}=9 \\,(y \\ge 0)$ 위의 점 $\\mathrm{P}$ 에 대하여 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}$ 의 값이 정수가 되도록 하는 점 $\\mathrm{P}$ 의 개수를 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "좌표평면 위의 두 점 $\\mathrm{A}(2,\\,7)$ , $\\mathrm{B}(6,\\,-1)$ 과 반원 $x^{2}+y^{2}=9 \\,(y \\ge 0)$ 위의 점 $\\mathrm{P}$ 에 대하여 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}$ 의 값이 정수가 되도록 하는 점 $\\mathrm{P}$ 의 개수를 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "내적 — 반원 위에서 내적이 정수가 되는 점의 개수",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 내적을 거리로 바꾼 뒤 반원 위 거리 함수의 증감을 따져 각 정숫값을 몇 번 취하는지 셈",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "선분 $\\mathrm{AB}$ 의 중점 $\\mathrm{N}(4,\\,3)$ 에 대하여 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}=\\overline{\\mathrm{PN}}^{2}-\\frac{1}{4}\\overline{\\mathrm{AB}}^{2}=\\overline{\\mathrm{PN}}^{2}-20$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$\\mathrm{P}(3 \\cos t,\\,3 \\sin t)\\,(0 \\le t \\le \\pi)$ 라 하면 $\\overline{\\mathrm{PN}}^{2}=34-6(4 \\cos t+3 \\sin t)=34-30 \\cos(t-\\alpha)$ 이다. 여기서 $\\cos \\alpha=\\frac{4}{5}$ , $\\sin \\alpha=\\frac{3}{5}$ 이고 $0<\\alpha<\\frac{\\pi}{2}$ 이므로 $t=\\alpha$ 는 반원 위의 점이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "따라서 $f(t)=\\overline{\\mathrm{PN}}^{2}-20$ 은 $t=0$ 에서 $-10$ , $t=\\alpha$ 에서 최솟값 $-16$ , $t=\\pi$ 에서 최댓값 $38$ 이고, $0 \\le t \\le \\alpha$ 에서 감소, $\\alpha \\le t \\le \\pi$ 에서 증가한다. 반원이므로 대칭이 깨져 한 번만 취하는 값과 두 번 취하는 값이 갈린다는 것이 핵심이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "정수 $k$ 에 대하여 $f(t)=k$ 인 점의 개수는 $k=-16$ 일 때 $1$ , $-15 \\le k \\le-10$ 일 때 $2$ (감소 구간의 끝점 $t=0$ 도 포함), $-9 \\le k \\le 38$ 일 때 $1$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "따라서 구하는 개수는 $1+6 \\times 2+48=61$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

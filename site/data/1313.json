@@ -1,0 +1,186 @@
+{
+ "num": 1313,
+ "id": "최고난도500(3)-011",
+ "subject": "미적분Ⅱ",
+ "type": "29번형",
+ "typeDesc": "미적분Ⅱ · 수능 29번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12미적Ⅱ-01-04]",
+  "[12미적Ⅱ-02-03]"
+ ],
+ "source": "ShrekMath 창작 · 수능 29번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 47,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "$0<\\theta<\\frac{\\pi}{2}$ 인 $\\theta$ 에 대하여 점 $\\mathrm{O}$ 에서 시작하는 두 반직선 $l$ , $m$ 이 이루는 각의 크기가 $\\theta$ 이다.",
+    "반직선 $l$ 위에 $\\overline{\\mathrm{OA}_{1}}=1$ 인 점 $\\mathrm{A}_{1}$ 을 잡고, 모든 자연수 $n$ 에 대하여 점 $\\mathrm{A}_{n}$ 에서 반직선 $m$ 에 내린 수선의 발을 $\\mathrm{B}_{n}$ , 점 $\\mathrm{B}_{n}$ 에서 반직선 $l$ 에 내린 수선의 발을 $\\mathrm{A}_{n+1}$ 이라 하자."
+   ]
+  },
+  {
+   "t": "p",
+   "sents": [
+    "삼각형 $\\mathrm{A}_{n}\\mathrm{B}_{n}\\mathrm{A}_{n+1}$ 의 넓이를 $T_{n}$ 이라 할 때,"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "L(\\theta)=\\sum_{n=1}^{\\infty}\\left(\\overline{\\mathrm{A}_{n}\\mathrm{B}_{n}}+\\overline{\\mathrm{B}_{n}\\mathrm{A}_{n+1}}\\right),\\,\\,\\,S(\\theta)=\\sum_{n=1}^{\\infty}T_{n}"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "라 하자.",
+    "$L(\\alpha)=3$ 일 때, $S(\\alpha)=\\frac{q}{p}$ 이다.",
+    "$p+q$ 의 값을 구하시오.",
+    "(단, $0<\\alpha<\\frac{\\pi}{2}$ 이고, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "$0<\\theta<\\frac{\\pi}{2}$ 인 $\\theta$ 에 대하여 점 $\\mathrm{O}$ 에서 시작하는 두 반직선 $l$ , $m$ 이 이루는 각의 크기가 $\\theta$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "반직선 $l$ 위에 $\\overline{\\mathrm{OA}_{1}}=1$ 인 점 $\\mathrm{A}_{1}$ 을 잡고, 모든 자연수 $n$ 에 대하여 점 $\\mathrm{A}_{n}$ 에서 반직선 $m$ 에 내린 수선의 발을 $\\mathrm{B}_{n}$ , 점 $\\mathrm{B}_{n}$ 에서 반직선 $l$ 에 내린 수선의 발을 $\\mathrm{A}_{n+1}$ 이라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    1,
+    0
+   ],
+   "text": "삼각형 $\\mathrm{A}_{n}\\mathrm{B}_{n}\\mathrm{A}_{n+1}$ 의 넓이를 $T_{n}$ 이라 할 때,",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    0
+   ],
+   "text": "$L(\\theta)=\\sum_{n=1}^{\\infty}\\left(\\overline{\\mathrm{A}_{n}\\mathrm{B}_{n}}+\\overline{\\mathrm{B}_{n}\\mathrm{A}_{n+1}}\\right),\\,\\,\\,S(\\theta)=\\sum_{n=1}^{\\infty}T_{n}$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    3,
+    0
+   ],
+   "text": "라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C6",
+   "at": [
+    3,
+    1
+   ],
+   "text": "$L(\\alpha)=3$ 일 때, $S(\\alpha)=\\frac{q}{p}$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C7",
+   "at": [
+    3,
+    2
+   ],
+   "text": "$p+q$ 의 값을 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C8",
+   "at": [
+    3,
+    3
+   ],
+   "text": "(단, $0<\\alpha<\\frac{\\pi}{2}$ 이고, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "급수 — 두 반직선 사이를 오가는 수선의 발과 반각 공식",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 지그재그 길이의 합이 cot(θ/2)가 됨을 반각 공식으로 알아내고, 넓이의 공비가 cos^4θ임을 찾아 1-c^4=s^2(1+c^2)로 정리하는 것",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$s=\\sin \\theta$ , $c=\\cos \\theta$ 라 하자. $\\overline{\\mathrm{OB}_{n}}=c \\times \\overline{\\mathrm{OA}_{n}}$ , $\\overline{\\mathrm{OA}_{n+1}}=c \\times \\overline{\\mathrm{OB}_{n}}$ 이므로 $\\overline{\\mathrm{OA}_{n}}=c^{2 n-2}$ , $\\overline{\\mathrm{OB}_{n}}=c^{2 n-1}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$\\overline{\\mathrm{A}_{n}\\mathrm{B}_{n}}=c^{2 n-2}s$ , $\\overline{\\mathrm{B}_{n}\\mathrm{A}_{n+1}}=c^{2 n-1}s$ 이므로 선분의 길이는 첫째항이 $s$ , 공비가 $c$ 인 등비수열을 이룬다. 따라서 $L(\\theta)=\\frac{s}{1-c}=\\frac{\\sin \\theta}{1-\\cos \\theta}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "핵심 관문 1: 반각 공식에서 $\\frac{\\sin \\theta}{1-\\cos \\theta}=\\frac{2 \\sin \\frac{\\theta}{2}\\cos \\frac{\\theta}{2}}{2 \\sin^{2}\\frac{\\theta}{2}}=\\frac{1}{\\tan \\frac{\\theta}{2}}$ 이다. $L(\\alpha)=3$ 이면 $\\tan \\frac{\\alpha}{2}=\\frac{1}{3}$ 이므로 $\\sin \\alpha=\\frac{3}{5}$ , $\\cos \\alpha=\\frac{4}{5}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "삼각형 $\\mathrm{A}_{n}\\mathrm{B}_{n}\\mathrm{A}_{n+1}$ 은 $\\angle \\mathrm{A}_{n+1}=\\frac{\\pi}{2}$ 인 직각삼각형이고 $\\overline{\\mathrm{A}_{n}\\mathrm{A}_{n+1}}=c^{2 n-2}-c^{2 n}=c^{2 n-2}s^{2}$ 이므로 $T_{n}=$ $\\frac{1}{2}\\times c^{2 n-2}s^{2}\\times c^{2 n-1}s=\\frac{1}{2}s^{3}c^{4 n-3}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "핵심 관문 2: $T_{n}$ 은 공비가 $c^{4}$ 인 등비수열이므로 $S(\\theta)=\\frac{s^{3}c}{2(1-c^{4})}=\\frac{s^{3}c}{2 s^{2}(1+c^{2})}=\\frac{s c}{2(1+c^{2})}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "따라서 $S(\\alpha)=\\frac{\\frac{12}{25}}{2 \\times \\frac{41}{25}}=\\frac{6}{41}$ 이고 $p+q=47$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

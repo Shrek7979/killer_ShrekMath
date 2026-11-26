@@ -1,0 +1,119 @@
+{
+ "num": 1411,
+ "id": "최고난도500(3)-109",
+ "subject": "미적분Ⅱ",
+ "type": "29번형",
+ "typeDesc": "미적분Ⅱ · 수능 29번형 자리의 고난도",
+ "stars": 4,
+ "standards": [
+  "[12미적Ⅱ-02-11]",
+  "[12미적Ⅱ-02-07]"
+ ],
+ "source": "ShrekMath 창작 · 수능 29번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 250,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "좌표평면 위를 움직이는 점 $\\mathrm{P}$ 의 시각 $t$ 에서의 위치는 $(\\cos t,\\,\\sin t)$ 이다.",
+    "점 $\\mathrm{Q}$ 는 $x$ 축 위를 움직이고, 모든 시각 $t$ 에서 점 $\\mathrm{Q}$ 의 $x$ 좌표는 $\\cos t$ 보다 크며 $\\overline{\\mathrm{PQ}}=2$ 이다.",
+    "시각 $t=\\frac{\\pi}{2}$ 에서 점 $\\mathrm{Q}$ 의 속도와 가속도를 각각 $v$ , $\\alpha$ 라 하고, $t>0$ 에서 점 $\\mathrm{Q}$ 의 속도가 처음으로 $0$ 이 되는 시각에서의 점 $\\mathrm{Q}$ 의 가속도를 $\\beta$ 라 하자.",
+    "$100 \\left(v^{2}+3 \\alpha^{2}+\\beta \\right)$ 의 값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "좌표평면 위를 움직이는 점 $\\mathrm{P}$ 의 시각 $t$ 에서의 위치는 $(\\cos t,\\,\\sin t)$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "점 $\\mathrm{Q}$ 는 $x$ 축 위를 움직이고, 모든 시각 $t$ 에서 점 $\\mathrm{Q}$ 의 $x$ 좌표는 $\\cos t$ 보다 크며 $\\overline{\\mathrm{PQ}}=2$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "시각 $t=\\frac{\\pi}{2}$ 에서 점 $\\mathrm{Q}$ 의 속도와 가속도를 각각 $v$ , $\\alpha$ 라 하고, $t>0$ 에서 점 $\\mathrm{Q}$ 의 속도가 처음으로 $0$ 이 되는 시각에서의 점 $\\mathrm{Q}$ 의 가속도를 $\\beta$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    0,
+    3
+   ],
+   "text": "$100 \\left(v^{2}+3 \\alpha^{2}+\\beta \\right)$ 의 값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "평면 운동 — 크랭크와 피스톤의 속도와 가속도",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 연결막대 조건으로 위치를 식으로 세운 뒤, 속도가 0이 되는 순간을 인수의 부호로 판정하고 곱의 미분으로 가속도를 간단히 구하는 것",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "점 $\\mathrm{Q}$ 의 $x$ 좌표를 $x(t)$ 라 하면 $(x-\\cos t)^{2}+\\sin^{2}t=4$ 이고 $x>\\cos t$ 이므로 $x(t)=\\cos t+\\sqrt{4-\\sin^{2}t}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$x'(t)=-\\sin t-\\frac{\\sin t \\cos t}{\\sqrt{4-\\sin^{2}t}}=-\\sin t \\left(1+\\frac{\\cos t}{\\sqrt{4-\\sin^{2}t}}\\right)$ 이다. $\\sqrt{4-\\sin^{2}t}\\ge \\sqrt{3}>1 \\ge \\left|\\cos t \\right|$ 이므로 괄호 안은 항상 양수이다. 핵심 관문: 속도가 $0$ 이 되는 것은 $\\sin t=0$ 일 때뿐이므로 처음 시각은 $t=\\pi$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$t=\\frac{\\pi}{2}$ 에서 $v=-1$ 이다. $x'(t)=-\\sin t-\\frac{\\sin 2 t}{2 \\sqrt{4-\\sin^{2}t}}$ 를 한 번 더 미분하면 $t=\\frac{\\pi}{2}$ 에서 $\\cos t=0$ , $\\sin 2 t=0$ , $\\cos 2 t=-1$ 이므로 $\\alpha=-\\frac{\\cos 2 t}{\\sqrt{4-\\sin^{2}t}}=\\frac{1}{\\sqrt{3}}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$x'(t)=-\\sin t \\times u(t)$ , $u(t)=1+\\frac{\\cos t}{\\sqrt{4-\\sin^{2}t}}$ 라 하면 $x''(t)=-\\cos t \\times u(t)-\\sin t \\times u'(t)$ 이고 $t=\\pi$ 에서 $\\sin \\pi=0$ 이므로 $\\beta=-\\cos \\pi \\times u(\\pi)=1-\\frac{1}{2}=\\frac{1}{2}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "따라서 $100 \\left(1+1+\\frac{1}{2}\\right)=250$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

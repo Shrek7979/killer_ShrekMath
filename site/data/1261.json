@@ -1,0 +1,106 @@
+{
+ "num": 1261,
+ "id": "최고난도500(2)-059",
+ "subject": "기하",
+ "type": "29번형",
+ "typeDesc": "기하 · 수능 29번형 자리의 고난도",
+ "stars": 4,
+ "standards": [
+  "[12기하03-04]"
+ ],
+ "source": "ShrekMath 창작 · 수능 29번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 392,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "좌표평면에서 원 $x^{2}+y^{2}=25$ 위의 두 점 $\\mathrm{A}$ , $\\mathrm{B}$ 가 $\\vec{\\mathrm{OA}}\\cdot \\vec{\\mathrm{OB}}=7$ 을 만족시키고, 점 $\\mathrm{P}$ 는 원 $(x-12)^{2}+(y-5)^{2}=4$ 위의 점이다.",
+    "세 점 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{P}$ 가 이 조건을 만족시키면서 움직일 때, $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}$ 의 최댓값과 최솟값의 합을 구하시오.",
+    "(단, $\\mathrm{O}$ 는 원점이다.) [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "좌표평면에서 원 $x^{2}+y^{2}=25$ 위의 두 점 $\\mathrm{A}$ , $\\mathrm{B}$ 가 $\\vec{\\mathrm{OA}}\\cdot \\vec{\\mathrm{OB}}=7$ 을 만족시키고, 점 $\\mathrm{P}$ 는 원 $(x-12)^{2}+(y-5)^{2}=4$ 위의 점이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "세 점 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{P}$ 가 이 조건을 만족시키면서 움직일 때, $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}$ 의 최댓값과 최솟값의 합을 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "(단, $\\mathrm{O}$ 는 원점이다.) [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "내적 — 한 원 위의 두 점의 중점과 다른 원 위의 점",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 내적 조건을 현의 길이로 해석하고 중점의 자취를 원으로 바꾸어 두 원 사이 거리 문제로 환원",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "선분 $\\mathrm{AB}$ 의 중점을 $\\mathrm{M}$ 이라 하면 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}=\\overline{\\pm}^{2}-\\frac{1}{4}\\overline{\\mathrm{AB}}^{2}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$\\overline{\\mathrm{AB}}^{2}=\\left|\\vec{\\mathrm{OB}}-\\vec{\\mathrm{OA}}\\right|^{2}=25+25-14=36$ 이고 $\\left|\\vec{\\mathrm{OM}}\\right|^{2}=\\frac{1}{4}\\left|\\vec{\\mathrm{OA}}+\\vec{\\mathrm{OB}}\\right|^{2}=\\frac{25+25+14}{4}=16$ 이다. 즉 내적 조건은 '길이가 $6$ 인 현'이고, 중점 $\\mathrm{M}$ 은 원 $x^{2}+y^{2}=16$ 위의 모든 점이 될 수 있다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "따라서 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}=\\overline{\\pm}^{2}-9$ 이고, $\\mathrm{M}$ 은 원점 중심 반지름 $4$ 인 원 위, $\\mathrm{P}$ 는 중심 $(12,\\,5)$ 반지름 $2$ 인 원 위를 움직인다. 두 중심 사이의 거리는 $13$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$\\overline{\\pm}$ 의 최댓값은 $13+4+2=19$ , 최솟값은 $13-4-2=7$ 이므로 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}$ 의 최댓값은 $361-9=352$ , 최솟값은 $49-9=40$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "구하는 합은 $352+40=392$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

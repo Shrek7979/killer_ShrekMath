@@ -29326,5 +29326,8979 @@
     "s": "$\\mathrm{V}(X_{t})$ 의 값이 최대가 되도록 하는 모든 자연수 $t$ 에 대하여 $\\mathrm{E}(X_{t})$ 의 값의 합을 구하시오. [4점]"
    }
   ]
+ },
+ {
+  "num": 1203,
+  "id": "최고난도500(2)-001",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "포물선 — 반사 경로의 길이가 일정함을 찾아 초점 결정",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 8,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 의 $x$ 좌표는 모두 $10$ 보다 작고, 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 빛이 점 $\\mathrm{A}$ 에서 점 $\\mathrm{B}$ 까지 이동한 경로의 길이는 $24$ 이다.",
+     "(나) $\\overline{\\mathrm{AB}}=10$ 이고, 점 $\\mathrm{P}$ 의 $x$ 좌표는 점 $\\mathrm{Q}$ 의 $x$ 좌표보다 크다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "포물선 위의 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 에서의 접선이 만나는 점을 $\\mathrm{T}$ 라 할 때, 삼각형 $\\mathrm{TPQ}$ 의 넓이를 $S$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1204,
+  "id": "최고난도500(2)-002",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "쌍곡선 — 점근선에 접하는 원들과 쌍곡선의 교점의 개수를 세는 함수의 불연속",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 초점이 $\\mathrm{F}(5,\\,0)$ , $\\mathrm{F'}(-5,\\,0)$ 인 쌍곡선 $\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1$ $(a>0,\\,b>0)$ 이 있다."
+   },
+   {
+    "t": "p",
+    "s": "$0$ 이 아닌 실수 $h$ 에 대하여 중심이 $(h,\\,0)$ 이고 이 쌍곡선의 두 점근선에 모두 접하는 원을 $C_{h}$ 라 하고, 원 $C_{h}$ 와 쌍곡선이 만나는 점의 개수를 $f(h)$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1205,
+  "id": "최고난도500(2)-003",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "쌍곡선 — 초점을 지나는 현의 길이가 주어진 직선의 개수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $N(L)=1$ 을 만족시키는 $L$ 의 값은 $4$ 뿐이고, $N(L)=3$ 을 만족시키는 $L$ 의 값은 $9$ 뿐이다.",
+     "(나) 점 $\\mathrm{F}$ 를 지나고 기울기가 $1$ 인 직선은 쌍곡선의 두 부분과 각각 만난다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{F}$ 를 지나고 기울기가 $1$ 인 직선을 $l_{1}$ 이라 할 때, $5 d(l_{1})$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1206,
+  "id": "최고난도500(2)-004",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "포물선 — 초점과 축 위의 점으로 만든 이등변삼각형의 개수 함수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "포물선 $y^{2}=4 x$ 의 초점을 $\\mathrm{F}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$t \\ne 1$ 인 실수 $t$ 에 대하여 점 $\\mathrm{A}(t,\\,0)$ 이 있을 때, 포물선 위의 점 $\\mathrm{P}$ 중 세 점 $\\mathrm{P}$ , $\\mathrm{F}$ , $\\mathrm{A}$ 를 꼭짓점으로 하는 삼각형이 이등변삼각형이 되도록 하는 점 $\\mathrm{P}$ 의 개수를 $f(t)$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1207,
+  "id": "최고난도500(2)-005",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "타원 — 접선과 그에 수직인 직선의 x절편의 곱",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 초점이 $\\mathrm{F}(c,\\,0)$ , $\\mathrm{F'}(-c,\\,0)$ $(c>0)$ 인 타원 $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ $(a>b>0)$ 위의 점 중 제 $1$ 사분면에 있는 점 $\\mathrm{P}$ 가 있다."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{P}$ 에서의 타원의 접선이 $x$ 축과 만나는 점을 $\\mathrm{T}$ , 점 $\\mathrm{P}$ 를 지나고 이 접선에 수직인 직선이 $x$ 축과 만나는 점을 $\\mathrm{N}$ 이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1208,
+  "id": "최고난도500(2)-006",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "초점을 공유하는 타원과 쌍곡선 — 교점에서의 두 접선의 y절편",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 점 $\\mathrm{F}(6,\\,0)$ , $\\mathrm{F'}(-6,\\,0)$ 을 초점으로 하는 타원 $E$ 와 쌍곡선 $H$ 가 제 $1$ 사분면 위의 점 $\\mathrm{P}$ 에서 만난다."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{P}$ 에서의 타원 $E$ 의 접선과 쌍곡선 $H$ 의 접선이 $y$ 축과 만나는 점을 각각 $\\mathrm{Q}$ , $\\mathrm{R}$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1209,
+  "id": "최고난도500(2)-007",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "쌍곡선 — 점근선에 평행한 직선이 만드는 평행사변형의 넓이가 일정",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 점 $\\mathrm{P}$ 가 쌍곡선 위를 움직일 때, 사각형 $\\mathrm{OAPB}$ 의 넓이는 항상 $6$ 이다.",
+     "(나) 점 $\\mathrm{P}$ 가 점 $(a,\\,0)$ 일 때, 사각형 $\\mathrm{OAPB}$ 의 둘레의 길이는 $10$ 이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{P}$ 가 제 $1$ 사분면 위에 있고 $\\overline{\\mathrm{OA}}=2 \\overline{\\mathrm{OB}}$ 일 때, $8 \\times \\overline{\\mathrm{PF}}\\times \\overline{\\mathrm{PF'}}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1210,
+  "id": "최고난도500(2)-008",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "포물선 — 외부의 점에서 그은 접선의 접점과 원점이 만드는 직각",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양수 $k$ 에 대하여 직선 $x=-k$ 위의 점 중 $x$ 축 위에 있지 않은 점 $\\mathrm{T}$ 에서 포물선 $y^{2}=4 x$ 에 그은 두 접선의 접점을 각각 $\\mathrm{A}$ , $\\mathrm{B}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{T}$ 가 직선 $x=-k$ 위의 어느 점이든 $\\angle \\mathrm{AOB}=\\frac{\\pi}{2}$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1211,
+  "id": "최고난도500(2)-009",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "포물선 — 두 접선이 이루는 각이 일정한 점의 자취가 쌍곡선",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "포물선 $y^{2}=4 x$ 의 초점을 $\\mathrm{F}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "좌표평면 위의 점 $\\mathrm{T}$ 에서 이 포물선에 서로 다른 두 접선을 그을 수 있고 두 접선이 이루는 예각의 크기가 $\\frac{\\pi}{4}$ 일 때, 이러한 점 $\\mathrm{T}$ 전체의 집합을 $S$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1212,
+  "id": "최고난도500(2)-010",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "타원 — 초점까지의 거리와 중심까지의 거리가 모두 자연수인 점",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 초점이 $\\mathrm{F}(16,\\,0)$ , $\\mathrm{F'}(-16,\\,0)$ 이고 장축의 길이가 $40$ 인 타원 위의 점 $\\mathrm{P}$ 중 $\\overline{\\mathrm{PF}}$ 와 $\\overline{\\mathrm{OP}}$ 가 모두 자연수인 점의 개수를 $n$ , 이러한 모든 점 $\\mathrm{P}$ 에 대한 $\\overline{\\mathrm{OP}}$ 의 값의 합을 $s$ 라 할 때, $n+s$ 의 값을 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "(단, $\\mathrm{O}$ 는 원점이다.) [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1213,
+  "id": "최고난도500(2)-011",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "타원 — 원 위의 점에서 그은 두 접선의 접점을 잇는 직선과 원점 사이의 거리",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "타원 $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ $(0<b<a<6)$ 과 원 $x^{2}+y^{2}=36$ 이 있다."
+   },
+   {
+    "t": "p",
+    "s": "원 위의 점 $\\mathrm{T}$ 에서 타원에 그은 두 접선의 접점을 각각 $\\mathrm{P}$ , $\\mathrm{Q}$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1214,
+  "id": "최고난도500(2)-012",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "타원 — 원점에서 수직인 두 반지름의 역수 제곱의 합이 일정",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 삼각형 $\\mathrm{OPQ}$ 의 넓이의 최댓값은 $6$ 이다.",
+     "(나) 점 $\\mathrm{P}$ 가 점 $(a,\\,0)$ 일 때, $\\overline{\\mathrm{PQ}}=5$ 이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "삼각형 $\\mathrm{OPQ}$ 의 넓이의 최솟값을 $m$ 이라 할 때, $25 m$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1215,
+  "id": "최고난도500(2)-013",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "타원 — 장축 끝점의 접선과 만나는 두 점이 두 초점에서 직각을 이룸",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 초점이 $\\mathrm{F}(c,\\,0)$ , $\\mathrm{F'}(-c,\\,0)$ $(c>0)$ 인 타원 $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ $(a>b>0)$ 과 두 점 $\\mathrm{A}(a,\\,0)$ , $\\mathrm{A'}(-a,\\,0)$ 이 있다."
+   },
+   {
+    "t": "p",
+    "s": "타원 위의 점 중 제 $1$ 사분면에 있는 점 $\\mathrm{P}$ 에서의 접선이 두 직선 $x=a$ , $x=-a$ 와 만나는 점을 각각 $\\mathrm{M}$ , $\\mathrm{N}$ 이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1216,
+  "id": "최고난도500(2)-014",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "포물선 — 초점을 지나는 서로 수직인 두 현의 길이의 역수의 합",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양수 $p$ 에 대하여 포물선 $y^{2}=4 p x$ 의 초점 $\\mathrm{F}$ 를 지나는 서로 수직인 두 직선이 이 포물선과 만나는 점을 각각 $\\mathrm{A}$ , $\\mathrm{B}$ 와 $\\mathrm{C}$ , $\\mathrm{D}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$\\overline{\\mathrm{AB}}+\\overline{\\mathrm{CD}}=49$ , $\\overline{\\mathrm{AB}}\\times \\overline{\\mathrm{CD}}=588$ 일 때, 네 점 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ , $\\mathrm{D}$ 의 $x$ 좌표의 합을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1217,
+  "id": "최고난도500(2)-015",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "포물선 — 길이가 일정한 현의 중점과 준선 사이의 거리의 최솟값(경우 나누기)",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양수 $p$ 에 대하여 포물선 $y^{2}=4 p x$ 위의 두 점 $\\mathrm{A}$ , $\\mathrm{B}$ 가 $\\overline{\\mathrm{AB}}=12$ 를 만족시키며 움직인다."
+   },
+   {
+    "t": "p",
+    "s": "선분 $\\mathrm{AB}$ 의 중점의 $x$ 좌표의 최솟값이 $4$ 일 때, 중점의 $x$ 좌표가 최소가 되도록 하는 두 점 $\\mathrm{A}$ , $\\mathrm{B}$ 에 대하여 삼각형 $\\mathrm{OAB}$ 의 넓이를 $S$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1218,
+  "id": "최고난도500(2)-016",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "타원과 포물선의 교점의 개수 — 이중 접촉이 생기는 위치",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양수 $k$ 와 실수 $t$ 에 대하여 타원 $\\frac{x^{2}}{9}+\\frac{y^{2}}{4}=1$ 과 포물선 $y^{2}=k(x-t)$ 가 만나는 점의 개수를 $N(t)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$N(t)=4$ 를 만족시키는 실수 $t$ 의 값의 집합이 길이가 $\\frac{1}{8}$ 인 열린구간일 때, 함수 $N(t)$ 가 불연속인 모든 실수 $t$ 의 값의 절댓값의 합을 $S$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1219,
+  "id": "최고난도500(2)-017",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "타원과 원의 공통접선이 만드는 마름모",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$3<r<4$ 인 실수 $r$ 에 대하여 타원 $\\frac{x^{2}}{16}+\\frac{y^{2}}{9}=1$ 과 원 $x^{2}+y^{2}=r^{2}$ 에 동시에 접하는 네 직선으로 둘러싸인 사각형의 넓이가 $52$ 이고, 이 네 직선의 기울기의 절댓값은 $1$ 보다 작다."
+   },
+   {
+    "t": "p",
+    "s": "네 직선 중 하나가 타원과 접하는 점을 $\\mathrm{A}$ , 원과 접하는 점을 $\\mathrm{B}$ 라 할 때, $65 \\times \\overline{\\mathrm{AB}}^{2}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1220,
+  "id": "최고난도500(2)-018",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "직각쌍곡선 — 두 초점까지의 거리의 곱이 중심까지의 거리의 제곱",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 점근선이 서로 수직이고 두 초점이 $\\mathrm{F}$ , $\\mathrm{F'}$ 인 쌍곡선 $\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1$ $(a>0,\\,b>0)$ 위의 점 중 제 $1$ 사분면에 있는 점 $\\mathrm{P}$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $\\overline{\\mathrm{OP}}=4$ 이고 삼각형 $\\mathrm{PF'F}$ 의 넓이는 $4 \\sqrt{3}$ 이다.",
+     "(나) $\\angle \\mathrm{F'PF}<\\frac{\\pi}{2}$"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$(\\overline{\\mathrm{PF}}+\\overline{\\mathrm{PF'}})^{2}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1221,
+  "id": "최고난도500(2)-019",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "타원 — 접선에 평행한 반지름과 초점거리의 곱",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 삼각형 $\\mathrm{OPQ}$ 의 넓이는 $6$ 이다.",
+     "(나) $\\overline{\\mathrm{OP}}^{2}=12$ , $\\overline{\\mathrm{PF}}\\times \\overline{\\mathrm{PF'}}=13$"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$\\overline{\\mathrm{PF}}^{2}+\\overline{\\mathrm{PF'}}^{2}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1222,
+  "id": "최고난도500(2)-020",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "포물선 — 원 위의 점과 포물선 위의 점에 대한 거리의 합의 최솟값(최댓값의 최솟값)",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "포물선 $y^{2}=4 x$ 의 초점을 $\\mathrm{F}$ 라 하고, 원 $C:(x+4)^{2}+(y-2)^{2}=100$ 이 있다."
+   },
+   {
+    "t": "p",
+    "s": "포물선 위의 점 $\\mathrm{P}$ 와 원 $C$ 위의 점 $\\mathrm{Q}$ 에 대하여 $\\overline{\\mathrm{PQ}}+\\overline{\\mathrm{PF}}$ 의 최솟값을 $m$ 이라 하고, 최솟값을 갖게 하는 점 $\\mathrm{Q}$ 의 좌표를 $(\\alpha,\\,\\beta)$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1223,
+  "id": "최고난도500(2)-021",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "포물선 — 한 점을 지나는 법선의 개수를 세는 함수와 격자점",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "포물선 $y^{2}=4 x$ 위의 점 $\\mathrm{P}$ 를 지나고 점 $\\mathrm{P}$ 에서의 접선에 수직인 직선을 점 $\\mathrm{P}$ 에서의 법선이라 하자."
+   },
+   {
+    "t": "p",
+    "s": "좌표평면 위의 점 $\\mathrm{A}$ 에 대하여, 포물선 위의 점 중 그 점에서의 법선이 점 $\\mathrm{A}$ 를 지나는 점의 개수를 $f(\\mathrm{A})$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1224,
+  "id": "최고난도500(2)-022",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "타원 — 초점삼각형의 방접원과 장축의 끝점에서의 접선",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 초점이 $\\mathrm{F}(4,\\,0)$ , $\\mathrm{F'}(-4,\\,0)$ 인 타원 $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ $(a>b>0)$ 위의 점 중 제 $1$ 사분면에 있는 점 $\\mathrm{P}$ 가 있다."
+   },
+   {
+    "t": "p",
+    "s": "선분 $\\mathrm{PF}$ 와 두 반직선 $\\mathrm{F'P}$ , $\\mathrm{F'F}$ 에 모두 접하는 원 중 삼각형 $\\mathrm{PF'F}$ 의 외부에 있는 원을 $C$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1225,
+  "id": "최고난도500(2)-023",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "타원 — 내접하는 직사각형의 넓이의 최댓값과 둘레의 길이의 최댓값",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "타원 $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ $(a>b>0)$ 위에 네 꼭짓점이 모두 있고 네 변이 각각 좌표축에 평행한 직사각형 중 넓이가 최대인 것의 넓이는 $24$ 이고, 둘레의 길이가 최대인 것의 둘레의 길이는 $20$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "둘레의 길이가 최대인 직사각형의 넓이를 $S$ 라 할 때, $25 S$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1226,
+  "id": "최고난도500(2)-024",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "타원 — 기울기와 y절편이 모두 정수인 접선의 개수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$12$ 가 아닌 자연수 $a$ 에 대하여 타원 $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{144}=1$ 의 접선 중 기울기와 $y$ 절편이 모두 정수인 것의 개수를 $f(a)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$f(a)=6$ 을 만족시키는 모든 자연수 $a$ 의 값의 합을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1227,
+  "id": "최고난도500(2)-025",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "쌍곡선 — 접선이 두 점근선과 만나는 두 점까지의 거리의 곱",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 초점이 $\\mathrm{F}$ , $\\mathrm{F'}$ 인 쌍곡선 $\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1$ $(a>0,\\,b>0)$ 위의 점 $\\mathrm{P}$ 에서의 접선이 이 쌍곡선의 두 점근선과 만나는 점을 각각 $\\mathrm{A}$ , $\\mathrm{B}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$\\overline{\\mathrm{OA}}=9$ , $\\overline{\\mathrm{OB}}=4$ , $\\overline{\\mathrm{AB}}=10$ 일 때, $\\overline{\\mathrm{PF}}\\times \\overline{\\mathrm{PF'}}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1228,
+  "id": "최고난도500(2)-026",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "타원 — 평행한 현의 중점이 놓이는 직선과 초점거리의 합",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 초점이 $\\mathrm{F}(3,\\,0)$ , $\\mathrm{F'}(-3,\\,0)$ 인 타원 $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ $(a>b>0)$ 위의 서로 다른 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 에 대하여 직선 $\\mathrm{PQ}$ 의 기울기는 $\\frac{1}{2}$ 이고, 선분 $\\mathrm{PQ}$ 의 중점 $\\mathrm{M}$ 은 원점이 아니며 직선 $3 x+2 y=0$ 위에 있다."
+   },
+   {
+    "t": "p",
+    "s": "$\\overline{\\mathrm{PF}}+\\overline{\\mathrm{QF}}=10$ 일 때, $a^{2}+b^{2}+\\overline{\\mathrm{OM}}^{2}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1229,
+  "id": "최고난도500(2)-027",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "포물선 — 세 접선이 만드는 삼각형의 외접원이 초점을 지남",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "포물선 $y^{2}=4 x$ 위의 점 $\\mathrm{A}(4,\\,4)$ 와 서로 다른 두 점 $\\mathrm{B}$ , $\\mathrm{C}$ 가 있다."
+   },
+   {
+    "t": "p",
+    "s": "세 점 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ 에서의 이 포물선의 접선으로 둘러싸인 삼각형의 외접원이 $x$ 축에 접하고, 이 외접원의 반지름의 길이가 $5$ 일 때, $\\overline{\\mathrm{BC}}^{2}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1230,
+  "id": "최고난도500(2)-028",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "포물선 — 무게중심이 초점인 세 점의 초점거리의 곱의 범위",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "포물선 $y^{2}=16 x$ 의 초점을 $\\mathrm{F}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "이 포물선 위의 서로 다른 세 점 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ 에 대하여 삼각형 $\\mathrm{ABC}$ 의 무게중심이 점 $\\mathrm{F}$ 일 때, $\\overline{\\mathrm{AF}}\\times \\overline{\\mathrm{BF}}\\times \\overline{\\mathrm{CF}}$ 의 값의 범위는 $m \\le \\overline{\\mathrm{AF}}\\times \\overline{\\mathrm{BF}}\\times \\overline{\\mathrm{CF}}<M$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1231,
+  "id": "최고난도500(2)-029",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "쌍곡선 — 두 점근선에 내린 수선의 발과 지름이 OP인 원",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "이 쌍곡선이 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 점 $\\mathrm{P}$ 의 위치에 관계없이 $\\overline{\\mathrm{PH}_{1}}\\times \\overline{\\mathrm{PH}_{2}}=\\frac{36}{13}$ 이다.",
+     "(나) 선분 $\\mathrm{H}_{1}\\mathrm{H}_{2}$ 의 길이의 최솟값은 $\\frac{36}{13}$ 이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{P}$ 의 $x$ 좌표가 $5$ 일 때, $13 \\times \\overline{\\mathrm{H}_{1}\\mathrm{H}_{2}}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1232,
+  "id": "최고난도500(2)-030",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "포물선 — 직선 위를 움직이는 점에서 그은 두 접선의 접점을 잇는 직선이 지나는 정점",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{T}$ 에서 포물선 $y^{2}=4 x$ 에 그은 두 접선의 접점을 각각 $\\mathrm{A}$ , $\\mathrm{B}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{T}$ 가 직선 $y=x+4$ 위를 움직일 때, 직선 $\\mathrm{AB}$ 는 점 $\\mathrm{T}$ 의 위치에 관계없이 항상 점 $\\mathrm{Q}$ 를 지난다."
+   }
+  ]
+ },
+ {
+  "num": 1233,
+  "id": "최고난도500(2)-031",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "타원 — 두 초점에서 같은 방향으로 그은 두 초점반지름의 역수의 합",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 초점이 $\\mathrm{F}(c,\\,0)$ , $\\mathrm{F'}(-c,\\,0)$ $(c>0)$ 인 타원 $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ $(a>b>0)$ 위의 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 두 벡터 $\\vec{\\mathrm{FP}}$ , $\\vec{\\mathrm{F'Q}}$ 의 방향이 같고, 직선 $\\mathrm{FP}$ 의 기울기는 $1$ 이다.",
+     "(나) $\\overline{\\mathrm{PF}}=2$ , $\\overline{\\mathrm{QF'}}=6$"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "사각형 $\\mathrm{FPQF'}$ 의 넓이를 $S$ 라 할 때, $a^{2}+b^{2}+S$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1234,
+  "id": "최고난도500(2)-032",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "원의 정사영인 타원 — 무게중심이 중심인 내접삼각형의 넓이",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "평면 $\\alpha$ 위에 반지름의 길이가 $4$ 인 원 $K$ 가 있다."
+   },
+   {
+    "t": "p",
+    "s": "원 $K$ 의 평면 $\\beta$ 위로의 정사영은 타원 $E$ 이고, 두 평면 $\\alpha$ , $\\beta$ 가 이루는 각의 크기를 $\\theta$ 라 할 때 $\\cos \\theta=\\frac{1}{2}$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1235,
+  "id": "최고난도500(2)-033",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "타원 — 초점반지름을 지름으로 하는 원이 중심이 원점인 원에 내접",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 초점이 $\\mathrm{F}(5,\\,0)$ , $\\mathrm{F'}(-5,\\,0)$ 인 타원 $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ $(a>b>0)$ 위의 점 중 제 $1$ 사분면에 있는 점 $\\mathrm{P}$ 에 대하여 선분 $\\mathrm{PF}$ 를 지름으로 하는 원을 $C$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "원 $C$ 가 원 $x^{2}+y^{2}=49$ 의 내부에 있으면서 이 원과 한 점 $\\mathrm{Q}$ 에서만 만난다."
+   }
+  ]
+ },
+ {
+  "num": 1236,
+  "id": "최고난도500(2)-034",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "포물선 — 초점반지름을 지름으로 하는 원과 y축의 접점이 만드는 숨은 직사각형",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양수 $p$ 에 대하여 포물선 $y^{2}=4 p x$ 의 초점 $\\mathrm{F}$ 를 지나는 직선이 이 포물선과 만나는 두 점을 $\\mathrm{A}$ , $\\mathrm{B}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "선분 $\\mathrm{AF}$ 를 지름으로 하는 원과 $y$ 축이 만나는 점을 $\\mathrm{U}$ , 선분 $\\mathrm{BF}$ 를 지름으로 하는 원과 $y$ 축이 만나는 점을 $\\mathrm{V}$ , 선분 $\\mathrm{AB}$ 를 지름으로 하는 원과 이 포물선의 준선이 만나는 점을 $\\mathrm{W}$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1237,
+  "id": "최고난도500(2)-035",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "포물선 — 초점에서 그은 두 벡터의 합이 다시 포물선 위의 점을 가리킬 조건",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "이 포물선 위의 서로 다른 세 점 $\\mathrm{P}$ , $\\mathrm{Q}$ , $\\mathrm{R}$ 가"
+   },
+   {
+    "t": "eq",
+    "tex": "\\vec{\\mathrm{FP}}+\\vec{\\mathrm{FQ}}=\\vec{\\mathrm{FR}},\\,\\,\\,\\left|\\vec{\\mathrm{FP}}\\right|\\times \\left|\\vec{\\mathrm{FQ}}\\right|=\\frac{25}{4}"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시킬 때, $\\overline{\\mathrm{PQ}}^{2}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1238,
+  "id": "최고난도500(2)-036",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "두 조건을 만족시키는 원의 중심 — 타원과 포물선의 교점",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{F}(2,\\,0)$ 과 원 $C:(x+2)^{2}+y^{2}=64$ 가 있다."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{F}$ 를 지나고 원 $C$ 에 내접하며 직선 $x=-2$ 에 접하는 원은 두 개이다."
+   }
+  ]
+ },
+ {
+  "num": 1239,
+  "id": "최고난도500(2)-037",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "포물선 — 초점을 지나는 현의 끝점과 꼭짓점을 잇는 직선이 준선과 만나는 점",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "초점이 $\\mathrm{F}$ 인 포물선 $y^{2}=4 p x$ $(p>0)$ 위의 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 에 대하여 세 점 $\\mathrm{P}$ , $\\mathrm{F}$ , $\\mathrm{Q}$ 는 이 순서로 한 직선 위에 있고, 점 $\\mathrm{P}$ 는 제 $1$ 사분면에 있다."
+   },
+   {
+    "t": "p",
+    "s": "두 직선 $\\mathrm{OP}$ , $\\mathrm{OQ}$ 가 이 포물선의 준선과 만나는 점을 각각 $\\mathrm{R}$ , $\\mathrm{S}$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1240,
+  "id": "최고난도500(2)-038",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "타원 — 초점삼각형의 외접원과 접선의 y절편",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 초점이 $\\mathrm{F}(4,\\,0)$ , $\\mathrm{F'}(-4,\\,0)$ 인 타원 $\\frac{x^{2}}{25}+\\frac{y^{2}}{9}=1$ 위의 점 중 제 $1$ 사분면에 있는 점 $\\mathrm{P}$ 에 대하여 세 점 $\\mathrm{P}$ , $\\mathrm{F}$ , $\\mathrm{F'}$ 을 지나는 원을 $C$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{P}$ 에서의 타원의 접선이 원 $C$ 와 만나는 점 중 $\\mathrm{P}$ 가 아닌 점을 $\\mathrm{K}$ 라 할 때, 삼각형 $\\mathrm{KF'F}$ 의 넓이가 $20$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1241,
+  "id": "최고난도500(2)-039",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "포물선 — 준선과 축의 교점을 지나는 직선과 초점거리의 비",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "초점이 $\\mathrm{F}$ 인 포물선 $y^{2}=4 p x$ $(p>0)$ 의 준선이 $x$ 축과 만나는 점을 $\\mathrm{K}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{K}$ 를 지나는 직선이 이 포물선과 서로 다른 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 에서 만나고 $\\overline{\\mathrm{KP}}:\\overline{\\mathrm{KQ}}=1:3$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1242,
+  "id": "최고난도500(2)-040",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "포물선과 원 — 네 교점의 y좌표의 합이 0",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "포물선 $y^{2}=4 x$ 위의 원점이 아닌 서로 다른 두 점 $\\mathrm{A}$ , $\\mathrm{B}$ 에 대하여 원점 $\\mathrm{O}$ 와 두 점 $\\mathrm{A}$ , $\\mathrm{B}$ 를 지나는 원 $C$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 원 $C$ 와 포물선은 점 $\\mathrm{A}$ 에서 공통인 접선을 갖는다.",
+     "(나) 삼각형 $\\mathrm{OAB}$ 의 무게중심의 $y$ 좌표는 $2$ 이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "원 $C$ 의 반지름의 길이를 $r$ 라 할 때, $2 r^{2}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1243,
+  "id": "최고난도500(2)-041",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "쌍곡선 — 두 초점을 지나는 원 위의 점에서 본 초점각(원주각)과 초점거리의 곱",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 초점이 $\\mathrm{F}(4,\\,0)$ , $\\mathrm{F'}(-4,\\,0)$ 인 쌍곡선 $\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1$ $(a>0,\\,b>0)$ 과 중심이 $(0,\\,3)$ 이고 두 점 $\\mathrm{F}$ , $\\mathrm{F'}$ 을 지나는 원 $C$ 가 있다."
+   },
+   {
+    "t": "p",
+    "s": "원 $C$ 와 쌍곡선이 만나는 점 중 제 $1$ 사분면 위의 점을 $\\mathrm{P}$ , 제 $4$ 사분면 위의 점을 $\\mathrm{Q}$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1244,
+  "id": "최고난도500(2)-042",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "쌍곡선 — 격자점에서 그을 수 있는 접선의 개수와 점근선의 함정",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위의 점 $\\mathrm{A}$ 에 대하여 점 $\\mathrm{A}$ 를 지나고 쌍곡선 $\\frac{x^{2}}{4}-y^{2}=1$ 에 접하는 직선의 개수를 $N(\\mathrm{A})$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "두 정수 $h$ , $k$ 가 $\\left|h \\right|\\le 6$ , $\\left|k \\right|\\le 6$ 을 만족시킬 때, 이러한 모든 점 $\\mathrm{A}(h,\\,k)$ 에 대하여 $N(\\mathrm{A})$ 의 값의 합을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1245,
+  "id": "최고난도500(2)-043",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "타원 — 접선에 대한 초점의 대칭점이 다른 초점으로부터 장축의 길이만큼 떨어짐",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 초점이 $\\mathrm{F}(3,\\,0)$ , $\\mathrm{F'}(-3,\\,0)$ 인 타원 $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ $(a>b>0)$ 위의 점 $\\mathrm{P}$ 에서의 접선에 대하여 점 $\\mathrm{F}$ 와 대칭인 점 $\\mathrm{G}$ 가 직선 $x=-3$ 위에 있다."
+   },
+   {
+    "t": "p",
+    "s": "$\\overline{\\mathrm{PG}}=\\frac{34}{5}$ 일 때, 삼각형 $\\mathrm{PFG}$ 의 넓이를 $S$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1246,
+  "id": "최고난도500(2)-044",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "포물선 — 법선이 다시 만나는 점까지의 현의 길이의 최솟값",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "포물선 $y^{2}=4 x$ 위의 점 $\\mathrm{P}$ 를 지나고 점 $\\mathrm{P}$ 에서의 접선에 수직인 직선이 이 포물선과 만나는 점 중 $\\mathrm{P}$ 가 아닌 점을 $\\mathrm{Q}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{P}$ 가 제 $1$ 사분면 위를 움직일 때, 선분 $\\mathrm{PQ}$ 의 길이의 최솟값을 $m$ 이라 하고 이때의 점 $\\mathrm{P}$ 의 $x$ 좌표를 $k$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1247,
+  "id": "최고난도500(2)-045",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "포물선 — 축 위에 중심이 있는 원이 포물선과 직선으로 둘러싸인 영역에 들어갈 최대 반지름",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "포물선 $y^{2}=8 x$ 와 직선 $x=10$ 으로 둘러싸인 영역(경계 포함)을 $R$ 이라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$0<h<10$ 인 실수 $h$ 에 대하여 중심이 $(h,\\,0)$ 이고 영역 $R$ 에 포함되는 원의 반지름의 길이의 최댓값을 $f(h)$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1248,
+  "id": "최고난도500(2)-046",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "타원 — 네 변이 모두 타원에 접하는 직사각형의 넓이가 자연수인 경우의 수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "네 변이 모두 타원 $\\frac{x^{2}}{25}+\\frac{y^{2}}{4}=1$ 에 접하는 직사각형 중 넓이가 자연수인 서로 다른 직사각형의 개수를 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "(단, 서로 합동인 두 직사각형도 놓인 위치가 다르면 서로 다른 것으로 본다.) [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1249,
+  "id": "최고난도500(2)-047",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "초점을 공유하는 쌍곡선과 포물선 — 초점거리의 두 표현을 같게 놓기",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 초점이 $\\mathrm{F}(5,\\,0)$ , $\\mathrm{F'}(-5,\\,0)$ 인 쌍곡선 $\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1$ $(a>0,\\,b>0)$ 과 초점이 $\\mathrm{F}$ 이고 준선이 $y$ 축인 포물선이 서로 다른 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 에서 만난다."
+   },
+   {
+    "t": "p",
+    "s": "$\\overline{\\mathrm{PQ}}=4 \\sqrt{5}$ 일 때, $4 \\times \\overline{\\mathrm{PF}}\\times \\overline{\\mathrm{PF'}}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1250,
+  "id": "최고난도500(2)-048",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "포물선 — 두 초점현의 끝점을 엇갈려 이은 직선의 교점이 준선 위에 있음",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "포물선 $y^{2}=4 x$ 의 초점 $\\mathrm{F}$ 를 지나는 서로 다른 두 직선 $l_{1}$ , $l_{2}$ 가 있다."
+   },
+   {
+    "t": "p",
+    "s": "직선 $l_{1}$ 이 이 포물선과 만나는 두 점을 $\\mathrm{A}$ , $\\mathrm{B}$ , 직선 $l_{2}$ 가 이 포물선과 만나는 두 점을 $\\mathrm{C}$ , $\\mathrm{D}$ 라 할 때, 두 점 $\\mathrm{A}$ , $\\mathrm{C}$ 의 $y$ 좌표는 양수이다."
+   }
+  ]
+ },
+ {
+  "num": 1251,
+  "id": "최고난도500(2)-049",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "두 초점까지의 거리의 합 — 직선 위의 점에서의 최솟값과 접하는 타원",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 점 $\\mathrm{F}(4,\\,0)$ , $\\mathrm{F'}(-4,\\,0)$ 과 점 $\\mathrm{A}(0,\\,3)$ 이 있다."
+   },
+   {
+    "t": "p",
+    "s": "실수 $m$ 에 대하여 점 $\\mathrm{A}$ 를 지나고 기울기가 $m$ 인 직선 위의 점 $\\mathrm{P}$ 에 대하여 $\\overline{\\mathrm{PF}}+\\overline{\\mathrm{PF'}}$ 의 최솟값을 $g(m)$ 이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1252,
+  "id": "최고난도500(2)-050",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "쌍곡선 — 초점을 향하는 두 단위벡터의 합과 접선",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 초점이 $\\mathrm{F}(5,\\,0)$ , $\\mathrm{F'}(-5,\\,0)$ 인 쌍곡선 $\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1$ $(a>0,\\,b>0)$ 위의 점 $\\mathrm{P}$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "\\vec{u}=\\frac{\\vec{\\mathrm{PF}}}{\\left|\\vec{\\mathrm{PF}}\\right|}+\\frac{\\vec{\\mathrm{PF'}}}{\\left|\\vec{\\mathrm{PF'}}\\right|}"
+   },
+   {
+    "t": "p",
+    "s": "라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1253,
+  "id": "최고난도500(2)-051",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "내적 — 원 위의 점과 선분 위의 점",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면에서 원 $x^{2}+y^{2}=4$ 위를 움직이는 점 $\\mathrm{P}$ 와 두 점 $\\mathrm{B}(4,\\,6)$ , $\\mathrm{C}(-2,\\,0)$ 을 잇는 선분 $\\mathrm{BC}$ 위를 움직이는 점 $\\mathrm{Q}$ 가 있다."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{A}(4,\\,0)$ 에 대하여 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PQ}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M-m$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1254,
+  "id": "최고난도500(2)-052",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "내적 — 평행사변형에서 일정한 내적의 차",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$\\overline{\\mathrm{AB}}=2 \\sqrt{3}$ 인 평행사변형 $\\mathrm{ABCD}$ 와 점 $\\mathrm{P}$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PC}}=-7$ , $\\vec{\\mathrm{PB}}\\cdot \\vec{\\mathrm{PD}}=-9$",
+     "(나) $\\left|\\vec{\\mathrm{PA}}+\\vec{\\mathrm{PB}}+\\vec{\\mathrm{PC}}+\\vec{\\mathrm{PD}}\\right|=8$"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "평행사변형 $\\mathrm{ABCD}$ 의 넓이를 $S$ 라 할 때, $S^{2}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1255,
+  "id": "최고난도500(2)-053",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "내적 — 삼각형의 둘레 위의 점의 개수를 세는 함수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면에서 $\\overline{\\mathrm{AB}}=6$ , $\\overline{\\mathrm{CA}}=\\overline{\\mathrm{CB}}$ 인 이등변삼각형 $\\mathrm{ABC}$ 가 있다."
+   },
+   {
+    "t": "p",
+    "s": "실수 $k$ 에 대하여 삼각형 $\\mathrm{ABC}$ 의 세 변 위의 점 $\\mathrm{P}$ 중에서 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}=k$ 를 만족시키는 점 $\\mathrm{P}$ 의 개수를 $f(k)$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1256,
+  "id": "최고난도500(2)-054",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "위치벡터 — 크기의 역수배로 정의된 점의 자취와 선분이 지나간 영역",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면에서 두 점 $\\mathrm{A}(8,\\,0)$ , $\\mathrm{B}(0,\\,8)$ 을 잇는 선분 $\\mathrm{AB}$ 위를 움직이는 점 $\\mathrm{P}$ 에 대하여 점 $\\mathrm{Q}$ 가"
+   },
+   {
+    "t": "eq",
+    "tex": "\\vec{\\mathrm{OQ}}=\\frac{32}{\\left|\\vec{\\mathrm{OP}}\\right|^{2}}\\vec{\\mathrm{OP}}"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1257,
+  "id": "최고난도500(2)-055",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "내적 — '모든' 점에 대한 부등식과 격자점의 개수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{X}$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "선분 $\\mathrm{OA}$ 위의 모든 점 $\\mathrm{P}$ 와 선분 $\\mathrm{BC}$ 위의 모든 점 $\\mathrm{Q}$ 에 대하여 $\\vec{\\mathrm{XP}}\\cdot \\vec{\\mathrm{XQ}}\\le 0$ 이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "이러한 점 $\\mathrm{X}$ 중에서 $x$ 좌표와 $y$ 좌표가 모두 정수인 점의 개수를 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1258,
+  "id": "최고난도500(2)-056",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "내적 — 원에서 수직인 두 현과 일정한 내적",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "원 $C$ 위의 서로 다른 네 점 $\\mathrm{P}$ , $\\mathrm{Q}$ , $\\mathrm{R}$ , $\\mathrm{S}$ 에 대하여 두 선분 $\\mathrm{PQ}$ , $\\mathrm{RS}$ 는 원 $C$ 의 내부의 점 $\\mathrm{A}$ 에서 서로 수직으로 만나고, 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $\\vec{\\mathrm{PR}}\\cdot \\vec{\\mathrm{QS}}=-32$",
+     "(나) $\\left|\\vec{\\mathrm{PS}}\\right|^{2}+\\left|\\vec{\\mathrm{QR}}\\right|^{2}=100$"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "원 $C$ 와 점 $\\mathrm{A}$ 는 고정되어 있고 두 현이 이 조건을 만족시키면서 움직일 때, 사각형 $\\mathrm{PRQS}$ 의 넓이의 최댓값을 $M$ , 최솟값을 $m$ 이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1259,
+  "id": "최고난도500(2)-057",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "위치벡터 — 계수비와 내심",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$\\overline{\\mathrm{AB}}=12$ 인 삼각형 $\\mathrm{ABC}$ 의 내부의 점 $\\mathrm{P}$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $4 \\vec{\\mathrm{PA}}+5 \\vec{\\mathrm{PB}}+6 \\vec{\\mathrm{PC}}=\\vec{0}$",
+     "(나) 점 $\\mathrm{P}$ 에서 세 직선 $\\mathrm{AB}$ , $\\mathrm{BC}$ , $\\mathrm{CA}$ 에 이르는 거리가 모두 같다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$\\left|\\vec{\\mathrm{PA}}\\right|^{2}+\\left|\\vec{\\mathrm{PB}}\\right|^{2}+\\left|\\vec{\\mathrm{PC}}\\right|^{2}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1260,
+  "id": "최고난도500(2)-058",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "내적 — 이차식처럼 보이는 조건이 반평면이 되는 영역",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위의 세 점 $\\mathrm{A}(-4,\\,0)$ , $\\mathrm{B}(4,\\,0)$ , $\\mathrm{C}(0,\\,2)$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "\\left|\\vec{\\mathrm{XC}}\\right|^{2}\\le \\vec{\\mathrm{XA}}\\cdot \\vec{\\mathrm{XB}}\\le 34"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시키는 점 $\\mathrm{X}$ 가 나타내는 도형을 $R$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1261,
+  "id": "최고난도500(2)-059",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "내적 — 한 원 위의 두 점의 중점과 다른 원 위의 점",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면에서 원 $x^{2}+y^{2}=25$ 위의 두 점 $\\mathrm{A}$ , $\\mathrm{B}$ 가 $\\vec{\\mathrm{OA}}\\cdot \\vec{\\mathrm{OB}}=7$ 을 만족시키고, 점 $\\mathrm{P}$ 는 원 $(x-12)^{2}+(y-5)^{2}=4$ 위의 점이다."
+   },
+   {
+    "t": "p",
+    "s": "세 점 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{P}$ 가 이 조건을 만족시키면서 움직일 때, $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}$ 의 최댓값과 최솟값의 합을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1262,
+  "id": "최고난도500(2)-060",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "위치벡터 — 벡터 등식으로 정해지는 점과 수직 조건",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$\\overline{\\mathrm{AB}}=6$ , $\\overline{\\mathrm{AC}}=4$ 인 삼각형 $\\mathrm{ABC}$ 와 점 $\\mathrm{P}$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $\\vec{\\mathrm{PA}}+2 \\vec{\\mathrm{PB}}+3 \\vec{\\mathrm{PC}}=\\vec{\\mathrm{AB}}$",
+     "(나) $\\vec{\\mathrm{AP}}\\cdot \\vec{\\mathrm{BC}}=0$"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "삼각형 $\\mathrm{PBC}$ 의 넓이를 $S$ 라 할 때, $\\left|\\vec{\\mathrm{AP}}\\right|^{2}+S^{2}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1263,
+  "id": "최고난도500(2)-061",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "내적 — 반원 위에서 내적이 정수가 되는 점의 개수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 1,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위의 두 점 $\\mathrm{A}(2,\\,7)$ , $\\mathrm{B}(6,\\,-1)$ 과 반원 $x^{2}+y^{2}=9 \\,(y \\ge 0)$ 위의 점 $\\mathrm{P}$ 에 대하여 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}$ 의 값이 정수가 되도록 하는 점 $\\mathrm{P}$ 의 개수를 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1264,
+  "id": "최고난도500(2)-062",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "내적 — 단위벡터 위로의 정사영 길이의 합과 삼각형의 폭",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "크기가 $1$ 인 벡터 $\\vec{u}$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "f(\\vec{u})=\\left|\\vec{\\mathrm{AB}}\\cdot \\vec{u}\\right|+\\left|\\vec{\\mathrm{BC}}\\cdot \\vec{u}\\right|+\\left|\\vec{\\mathrm{CA}}\\cdot \\vec{u}\\right|"
+   },
+   {
+    "t": "p",
+    "s": "라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1265,
+  "id": "최고난도500(2)-063",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "벡터의 크기 — '모든 실수 t'에 대한 부등식과 수선의 발",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위의 서로 다른 네 점 $\\mathrm{O}$ , $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 모든 실수 $t$ 에 대하여 $\\left|\\vec{\\mathrm{OB}}-t \\vec{\\mathrm{OA}}\\right|\\ge \\left|\\vec{\\mathrm{AB}}\\right|$ 이다.",
+     "(나) 모든 실수 $t$ 에 대하여 $\\left|\\vec{\\mathrm{OC}}-t \\vec{\\mathrm{OB}}\\right|\\ge \\left|\\vec{\\mathrm{BC}}\\right|$ 이다.",
+     "(다) $\\left|\\vec{\\mathrm{OA}}\\right|=4$ , $\\left|\\vec{\\mathrm{AB}}\\right|=3$ , $\\vec{\\mathrm{OA}}\\cdot \\vec{\\mathrm{OC}}=0$"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$9 \\left|\\vec{\\mathrm{AC}}\\right|^{2}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1266,
+  "id": "최고난도500(2)-064",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "위치벡터 — 삼각함수 계수로 나타낸 점과 크기의 최대·최소",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0 \\le \\theta \\le \\frac{\\pi}{2}$ 인 실수 $\\theta$ 에 대하여 점 $\\mathrm{P}$ 를"
+   },
+   {
+    "t": "eq",
+    "tex": "\\vec{\\mathrm{OP}}=\\cos \\theta \\,\\vec{\\mathrm{OA}}+\\sin \\theta \\,\\vec{\\mathrm{OB}}"
+   },
+   {
+    "t": "p",
+    "s": "로 정할 때, $\\left|\\vec{\\mathrm{OP}}\\right|$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1267,
+  "id": "최고난도500(2)-065",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "내적 — 직사각형 둘레 위의 점과 원 위의 점",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위의 네 점 $\\mathrm{O}(0,\\,0)$ , $\\mathrm{A}(4,\\,0)$ , $\\mathrm{B}(4,\\,3)$ , $\\mathrm{C}(0,\\,3)$ 을 꼭짓점으로 하는 직사각형 $\\mathrm{OABC}$ 의 둘레 위를 움직이는 점 $\\mathrm{P}$ 와 원 $(x-7)^{2}+(y-1)^{2}=1$ 위를 움직이는 점 $\\mathrm{Q}$ 가 있다."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{D}(5,\\,4)$ 에 대하여 $\\vec{\\mathrm{OP}}\\cdot \\vec{\\mathrm{DQ}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M-m$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1268,
+  "id": "최고난도500(2)-066",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "벡터의 크기 — 가중치가 있는 거리 제곱의 합과 원 위의 점",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위의 세 점 $\\mathrm{A}(10,\\,0)$ , $\\mathrm{B}(1,\\,3)$ , $\\mathrm{C}(4,\\,-2)$ 와 원 $x^{2}+y^{2}=9$ 위를 움직이는 점 $\\mathrm{P}$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "\\left|\\vec{\\mathrm{PA}}\\right|^{2}+2 \\left|\\vec{\\mathrm{PB}}\\right|^{2}+3 \\left|\\vec{\\mathrm{PC}}\\right|^{2}"
+   },
+   {
+    "t": "p",
+    "s": "의 최댓값과 최솟값의 합을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1269,
+  "id": "최고난도500(2)-067",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "위치벡터 — 원에 내접하는 숨은 직사각형과 두 내적의 곱",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "원 $x^{2}+y^{2}=25$ 위의 서로 다른 네 점 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ , $\\mathrm{D}$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $\\vec{\\mathrm{OA}}+\\vec{\\mathrm{OC}}=\\vec{\\mathrm{OB}}+\\vec{\\mathrm{OD}}$",
+     "(나) $\\vec{\\mathrm{AB}}\\cdot \\vec{\\mathrm{AC}}=64$"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "원 위를 움직이는 점 $\\mathrm{P}$ 에 대하여 $\\left(\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}\\right)\\times \\left(\\vec{\\mathrm{PC}}\\cdot \\vec{\\mathrm{PD}}\\right)$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M-m$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1270,
+  "id": "최고난도500(2)-068",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "내적 — 세 내적의 합과 무게중심",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$\\angle \\mathrm{ACB}=\\frac{\\pi}{2}$ , $\\overline{\\mathrm{CA}}=6$ , $\\overline{\\mathrm{CB}}=8$ 인 직각삼각형 $\\mathrm{ABC}$ 의 외접원 위를 움직이는 점 $\\mathrm{P}$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}+\\vec{\\mathrm{PB}}\\cdot \\vec{\\mathrm{PC}}+\\vec{\\mathrm{PC}}\\cdot \\vec{\\mathrm{PA}}"
+   },
+   {
+    "t": "p",
+    "s": "의 최댓값과 최솟값의 합을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1271,
+  "id": "최고난도500(2)-069",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "내적 — 방향이 같은 두 반지름과 닮음의 중심",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면에서 원 $C_{1}:x^{2}+y^{2}=4$ 위의 점 $\\mathrm{P}$ 와 원 $C_{2}:(x-8)^{2}+y^{2}=16$ 위의 점 $\\mathrm{Q}$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $\\vec{\\mathrm{OP}}\\cdot \\vec{\\mathrm{AQ}}=\\left|\\vec{\\mathrm{OP}}\\right|\\left|\\vec{\\mathrm{AQ}}\\right|$",
+     "(나) $\\left|\\vec{\\mathrm{PQ}}\\right|\\le 8$"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$\\vec{\\mathrm{PQ}}\\cdot \\vec{\\mathrm{OQ}}$ 의 최댓값과 최솟값의 합을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1272,
+  "id": "최고난도500(2)-070",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "내적 — 세 조건으로 정해지는 반원환 영역과 내적의 범위",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위의 네 점 $\\mathrm{A}(0,\\,0)$ , $\\mathrm{B}(6,\\,0)$ , $\\mathrm{C}(0,\\,-4)$ , $\\mathrm{D}(6,\\,-4)$ 와 다음 조건을 만족시키는 점 $\\mathrm{X}$ 가 있다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $\\vec{\\mathrm{XA}}\\cdot \\vec{\\mathrm{XB}}\\le 0$",
+     "(나) $\\left|\\vec{\\mathrm{XA}}+\\vec{\\mathrm{XB}}\\right|\\ge 4$",
+     "(다) 점 $\\mathrm{X}$ 의 $y$ 좌표는 $0$ 이상이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$\\vec{\\mathrm{XC}}\\cdot \\vec{\\mathrm{XD}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M+m$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1273,
+  "id": "최고난도500(2)-071",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "위치벡터 — 정삼각형에서 세 수선의 발로 향하는 벡터의 합",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(점 $\\mathrm{P}$ 가 직선 위에 있으면 수선의 발은 $\\mathrm{P}$ 자신이다.)"
+   },
+   {
+    "t": "eq",
+    "tex": "\\left|\\vec{\\mathrm{PD}}+\\vec{\\mathrm{PE}}+\\vec{\\mathrm{PF}}\\right|=3"
+   },
+   {
+    "t": "p",
+    "s": "을 만족시키는 점 $\\mathrm{P}$ 에 대하여 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}$ 의 최댓값과 최솟값의 합은 $a \\sqrt{3}+b$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1274,
+  "id": "최고난도500(2)-072",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "위치벡터 — 평행사변형에서 두 직선의 교점과 수직 조건",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$\\overline{\\mathrm{AB}}=4$ , $\\overline{\\mathrm{AD}}=3$ 인 평행사변형 $\\mathrm{ABCD}$ 에서 선분 $\\mathrm{BC}$ 를 $1:2$ 로 내분하는 점을 $\\mathrm{E}$ , 선분 $\\mathrm{CD}$ 의 중점을 $\\mathrm{F}$ 라 하고, 두 선분 $\\mathrm{AE}$ , $\\mathrm{BF}$ 의 교점을 $\\mathrm{P}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$\\vec{\\mathrm{AP}}\\cdot \\vec{\\mathrm{BF}}=0$ 이고 평행사변형 $\\mathrm{ABCD}$ 의 넓이를 $S$ 라 할 때, $49 \\left|\\vec{\\mathrm{AP}}\\right|^{2}+S^{2}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1275,
+  "id": "최고난도500(2)-073",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "내적 — 정육각형 둘레 위의 점과 대각선의 중점",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 1,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "한 변의 길이가 $2$ 인 정육각형 $\\mathrm{ABCDEF}$ 의 둘레 위를 움직이는 점 $\\mathrm{P}$ 에 대하여 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PC}}$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $4(M-m)$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1276,
+  "id": "최고난도500(2)-074",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "단위벡터의 합이 영벡터인 점(페르마 점)과 내적의 합",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AC}}=5$ , $\\overline{\\mathrm{BC}}=6$ 인 삼각형 $\\mathrm{ABC}$ 의 내부의 점 $\\mathrm{X}$ 가"
+   },
+   {
+    "t": "eq",
+    "tex": "\\frac{\\vec{\\mathrm{XA}}}{\\left|\\vec{\\mathrm{XA}}\\right|}+\\frac{\\vec{\\mathrm{XB}}}{\\left|\\vec{\\mathrm{XB}}\\right|}+\\frac{\\vec{\\mathrm{XC}}}{\\left|\\vec{\\mathrm{XC}}\\right|}=\\vec{0}"
+   },
+   {
+    "t": "p",
+    "s": "을 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1277,
+  "id": "최고난도500(2)-075",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "내적 — 정육각형에서 한 꼭짓점을 보는 직각과 거리의 범위",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "한 변의 길이가 $2$ 인 정육각형 $\\mathrm{ABCDEF}$ 의 둘레 위의 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 는 모두 점 $\\mathrm{A}$ 가 아니다.",
+     "(나) $\\vec{\\mathrm{AP}}\\cdot \\vec{\\mathrm{AQ}}=0$"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$\\left|\\vec{\\mathrm{PQ}}\\right|$ 의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $M^{2}+m^{2}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1278,
+  "id": "최고난도500(2)-076",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "정사영 — 정육면체의 단면을 대각면 위로 정사영",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "한 모서리의 길이가 $4$ 인 정육면체 $\\mathrm{ABCD}-\\mathrm{EFGH}$ 에서 네 점 $\\mathrm{E}$ , $\\mathrm{F}$ , $\\mathrm{G}$ , $\\mathrm{H}$ 는 각각 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ , $\\mathrm{D}$ 의 바로 위에 있다."
+   },
+   {
+    "t": "p",
+    "s": "선분 $\\mathrm{GH}$ 의 중점을 $\\mathrm{M}$ 이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1279,
+  "id": "최고난도500(2)-077",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "정사영 — 한 모서리를 포함하는 평면 위로의 정사면체의 정사영",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "한 모서리의 길이가 $6$ 인 정사면체 $\\mathrm{ABCD}$ 가 있다."
+   },
+   {
+    "t": "p",
+    "s": "모서리 $\\mathrm{CD}$ 를 포함하는 평면 $\\alpha$ 에 대하여 정사면체 $\\mathrm{ABCD}$ 의 평면 $\\alpha$ 위로의 정사영의 넓이를 $f(\\alpha)$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1280,
+  "id": "최고난도500(2)-078",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "공간좌표 — 평행광선에 의한 정육면체와 내접 정사면체의 그림자",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표공간에서 한 모서리의 길이가 $4$ 인 정육면체 $\\mathrm{ABCD}-\\mathrm{EFGH}$ 의 꼭짓점이"
+   },
+   {
+    "t": "eq",
+    "tex": "\\mathrm{A}(0,\\,0,\\,0),\\,\\mathrm{B}(4,\\,0,\\,0),\\,\\mathrm{C}(4,\\,4,\\,0),\\,\\mathrm{D}(0,\\,4,\\,0),\\,\\mathrm{E}(0,\\,0,\\,4),\\,\\mathrm{F}(4,\\,0,\\,4),\\,\\mathrm{G}(4,\\,4,\\,4),\\,\\mathrm{H}(0,\\,4,\\,4)"
+   },
+   {
+    "t": "p",
+    "s": "이다."
+   }
+  ]
+ },
+ {
+  "num": 1281,
+  "id": "최고난도500(2)-079",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "정사영 — 태양광선에 의한 구의 그림자",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "평평한 지면에 수직으로 세운 길이가 $3$ 인 막대의 그림자의 길이가 $4$ 인 시각에, 반지름의 길이가 $3$ 인 구가 지면 위에 놓여 있다."
+   },
+   {
+    "t": "p",
+    "s": "이 구의 지면 위의 그림자의 넓이를 $S$ , 구가 지면에 접하는 점과 그림자 위의 점 사이의 거리의 최댓값을 $d$ 라 할 때, $\\frac{S}{\\pi}+d$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1282,
+  "id": "최고난도500(2)-080",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "삼수선의 정리 — 세 평면 위로의 정사영 넓이의 합",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "평면 $\\alpha$ 위에 $\\angle \\mathrm{ACB}=\\frac{\\pi}{2}$ , $\\overline{\\mathrm{CA}}=8$ , $\\overline{\\mathrm{CB}}=6$ 인 직각삼각형 $\\mathrm{ABC}$ 가 있다."
+   },
+   {
+    "t": "p",
+    "s": "평면 $\\alpha$ 위에 있지 않은 점 $\\mathrm{P}$ 에 대하여 직선 $\\mathrm{PC}$ 는 평면 $\\alpha$ 에 수직이고, 점 $\\mathrm{P}$ 와 직선 $\\mathrm{AB}$ 사이의 거리는 $5$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1283,
+  "id": "최고난도500(2)-081",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "구 위의 점과 정사영 — 수선의 길이와 거리의 합의 최댓값",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표공간에서 구 $x^{2}+y^{2}+(z-1)^{2}=18$ 위의 점 $\\mathrm{P}$ 에서 $x y$ 평면에 내린 수선의 발을 $\\mathrm{H}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{A}(8,\\,6,\\,0)$ 에 대하여 $\\overline{\\mathrm{PH}}+\\overline{\\mathrm{HA}}$ 의 최댓값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1284,
+  "id": "최고난도500(2)-082",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "구의 방정식 — z축과 xy평면에 동시에 접하는 구의 반지름의 최솟값",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표공간에서 점 $\\mathrm{A}(6,\\,8,\\,5)$ 를 지나고 $z$ 축과 $x y$ 평면에 모두 접하는 구 중에서 반지름의 길이가 최소인 구를 $S$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "구 $S$ 가 $x y$ 평면과 접하는 점을 $\\mathrm{T}$ , $z$ 축과 접하는 점을 $\\mathrm{U}$ 라 할 때, 삼각형 $\\mathrm{ATU}$ 의 넓이의 제곱을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1285,
+  "id": "최고난도500(2)-083",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "구의 방정식 — 두 구의 교선인 원의 두 좌표평면 위로의 정사영",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표공간에서 두 구"
+   },
+   {
+    "t": "eq",
+    "tex": "S_{1}:x^{2}+y^{2}+z^{2}=25,\\,\\,\\,S_{2}:(x-3)^{2}+y^{2}+(z-4)^{2}=40"
+   },
+   {
+    "t": "p",
+    "s": "이 만나서 생기는 원을 $C$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1286,
+  "id": "최고난도500(2)-084",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "이면각 — 정육각형 종이를 대각선으로 접을 때의 정사영",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "한 변의 길이가 $4$ 인 정육각형 모양의 종이 $\\mathrm{ABCDEF}$ 를 대각선 $\\mathrm{AD}$ 를 접는 선으로 하여 사각형 $\\mathrm{ABCD}$ 부분을 접어 올렸더니 $\\overline{\\mathrm{BF}}=6$ 이 되었다."
+   },
+   {
+    "t": "p",
+    "s": "삼각형 $\\mathrm{BCF}$ 의 평면 $\\mathrm{ADEF}$ 위로의 정사영의 넓이를 $S$ 라 할 때, $S^{2}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1287,
+  "id": "최고난도500(2)-085",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "이면각 — 모든 모서리가 같은 정사각뿔의 단면",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "모든 모서리의 길이가 $4$ 인 정사각뿔 $\\mathrm{V}-\\mathrm{ABCD}$ 에서 두 모서리 $\\mathrm{VC}$ , $\\mathrm{VD}$ 의 중점을 각각 $\\mathrm{P}$ , $\\mathrm{Q}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "사각형 $\\mathrm{ABPQ}$ 의 넓이를 $S$ 라 할 때, $S^{2}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1288,
+  "id": "최고난도500(2)-086",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "공간좌표 — 세 좌표축까지의 거리로 정해지는 점과 구의 단면",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표공간에서 좌표가 모두 양수인 점 $\\mathrm{P}$ 와 $x$ 축, $y$ 축, $z$ 축 사이의 거리가 각각 $5$ , $2 \\sqrt{5}$ , $\\sqrt{13}$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{P}$ 를 중심으로 하고 $x$ 축에 접하는 구가 $x y$ 평면, $y z$ 평면, $z x$ 평면과 만나서 생기는 세 원의 넓이의 합을 $k \\pi$ 라 할 때, $k$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1289,
+  "id": "최고난도500(2)-087",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "이면각 — 정삼각형 종이를 중점연결선으로 접을 때의 직각 조건",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "한 변의 길이가 $12$ 인 정삼각형 모양의 종이 $\\mathrm{ABC}$ 에서 두 변 $\\mathrm{AB}$ , $\\mathrm{AC}$ 의 중점을 각각 $\\mathrm{D}$ , $\\mathrm{E}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "선분 $\\mathrm{DE}$ 를 접는 선으로 하여 삼각형 $\\mathrm{ADE}$ 를 접어 꼭짓점 $\\mathrm{A}$ 가 옮겨진 점을 $\\mathrm{A}'$ 이라 하면 $\\angle \\mathrm{B}\\mathrm{A}' \\mathrm{C}=\\frac{\\pi}{2}$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1290,
+  "id": "최고난도500(2)-088",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "정사영 — 정육면체를 대각선에 수직인 평면으로 자른 단면",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "한 모서리의 길이가 $6$ 인 정육면체 $\\mathrm{ABCD}-\\mathrm{EFGH}$ 에서 네 점 $\\mathrm{E}$ , $\\mathrm{F}$ , $\\mathrm{G}$ , $\\mathrm{H}$ 는 각각 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ , $\\mathrm{D}$ 의 바로 위에 있다."
+   },
+   {
+    "t": "p",
+    "s": "대각선 $\\mathrm{AG}$ 위의 점 $\\mathrm{P}$ 가 $\\overline{\\mathrm{AP}}=\\frac{8 \\sqrt{3}}{3}$ 을 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1291,
+  "id": "최고난도500(2)-089",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "구 — 정사면체에서 직각을 보는 점의 자취와 거리의 최대·최소",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "한 모서리의 길이가 $6$ 인 정사면체 $\\mathrm{ABCD}$ 가 있다."
+   },
+   {
+    "t": "p",
+    "s": "평면 $\\mathrm{BCD}$ 위의 점 $\\mathrm{P}$ 중에서 $\\angle \\mathrm{APB}=\\frac{\\pi}{2}$ 를 만족시키는 점은 모두 한 원 위에 있다."
+   }
+  ]
+ },
+ {
+  "num": 1292,
+  "id": "최고난도500(2)-090",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "구 — 점광원에 의한 구의 그림자와 빛의 경계원",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표공간에서 구 $x^{2}+y^{2}+(z-3)^{2}=9$ 와 점광원 $\\mathrm{L}(0,\\,0,\\,8)$ 이 있다."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{L}$ 에서 나온 빛에 의해 $x y$ 평면 위에 생기는 구의 그림자의 넓이를 $S_{1}$ , 구의 표면에서 빛을 받는 부분과 받지 않는 부분의 경계인 원의 $x y$ 평면 위로의 정사영의 넓이를 $S_{2}$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1293,
+  "id": "최고난도500(2)-091",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "정사영 — 정사면체에서 모서리 위의 점을 꼭짓점으로 하는 삼각형의 정사영",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "한 모서리의 길이가 $6$ 인 정사면체 $\\mathrm{ABCD}$ 에서 모서리 $\\mathrm{AB}$ 를 $1:2$ 로 내분하는 점을 $\\mathrm{P}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "삼각형 $\\mathrm{PCD}$ 의 평면 $\\mathrm{ACD}$ 위로의 정사영의 넓이를 $S$ 라 할 때, $S^{2}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1294,
+  "id": "최고난도500(2)-092",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "정사영 — 정육면체의 평행사변형 단면을 대각면 위로",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "한 모서리의 길이가 $6$ 인 정육면체 $\\mathrm{ABCD}-\\mathrm{EFGH}$ 에서 네 점 $\\mathrm{E}$ , $\\mathrm{F}$ , $\\mathrm{G}$ , $\\mathrm{H}$ 는 각각 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ , $\\mathrm{D}$ 의 바로 위에 있다."
+   },
+   {
+    "t": "p",
+    "s": "모서리 $\\mathrm{BF}$ 위의 점 $\\mathrm{P}$ 와 모서리 $\\mathrm{DH}$ 위의 점 $\\mathrm{Q}$ 가 $\\overline{\\mathrm{BP}}=2$ , $\\overline{\\mathrm{DQ}}=4$ 를 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1295,
+  "id": "최고난도500(2)-093",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "구의 방정식 — 세 좌표축에 모두 접하는 구",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표공간에서 점 $\\mathrm{A}(2,\\,2,\\,1)$ 을 지나고 $x$ 축, $y$ 축, $z$ 축에 모두 접하는 구를 모두 생각하자."
+   },
+   {
+    "t": "p",
+    "s": "이 구들이 $x y$ 평면과 만나서 생기는 원의 넓이의 합을 $k \\pi$ 라 할 때, $k$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1296,
+  "id": "최고난도500(2)-094",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "구 — 큰 구와 평면에 동시에 접하는 작은 구들의 최대 개수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표공간에서 구 $S$ 는 중심이 $(0,\\,0,\\,4)$ 이고 반지름의 길이가 $4$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "반지름의 길이가 $1$ 이고 $x y$ 평면에 접하고 구 $S$ 에 외접하며 $z$ 좌표가 양수인 영역에 있는 구 여러 개를, 어느 두 구도 내부가 겹치지 않도록 놓으려고 한다."
+   }
+  ]
+ },
+ {
+  "num": 1297,
+  "id": "최고난도500(2)-095",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "구 — 구면의 일부 위에 있는 길이가 일정한 현의 정사영 길이",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표공간에서 구 $x^{2}+y^{2}+z^{2}=25$ 위의 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 의 $z$ 좌표는 모두 $3$ 이상이다.",
+     "(나) $\\overline{\\mathrm{PQ}}=6$"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "선분 $\\mathrm{PQ}$ 의 $x y$ 평면 위로의 정사영의 길이의 최댓값을 $M$ , 최솟값을 $m$ 이라 할 때, $25(M+m)$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1298,
+  "id": "최고난도500(2)-096",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "정사영 — 정육면체의 대각선에 수직인 평면 위로의 정사영",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "한 모서리의 길이가 $3$ 인 정육면체 $\\mathrm{ABCD}-\\mathrm{EFGH}$ 에서 네 점 $\\mathrm{E}$ , $\\mathrm{F}$ , $\\mathrm{G}$ , $\\mathrm{H}$ 는 각각 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ , $\\mathrm{D}$ 의 바로 위에 있다."
+   },
+   {
+    "t": "p",
+    "s": "정육면체의 평면 $\\mathrm{BDE}$ 위로의 정사영의 넓이를 $S$ 라 할 때, $S^{2}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1299,
+  "id": "최고난도500(2)-097",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "삼수선의 정리 — 네 면이 모두 직각삼각형인 사면체의 정사영",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "사면체 $\\mathrm{ABCD}$ 에서 직선 $\\mathrm{AB}$ 는 평면 $\\mathrm{BCD}$ 에 수직이고 $\\angle \\mathrm{BCD}=\\frac{\\pi}{2}$ 이며, $\\overline{\\mathrm{AB}}=4$ , $\\overline{\\mathrm{BC}}=3$ , $\\overline{\\mathrm{CD}}=12$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "삼각형 $\\mathrm{ABD}$ 의 평면 $\\mathrm{ACD}$ 위로의 정사영의 넓이를 $S$ 라 할 때, $5 S$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1300,
+  "id": "최고난도500(2)-098",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "구의 방정식 — 정육면체의 꼭짓점을 중심으로 하는 구와 면의 교선의 길이",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표공간에서 여섯 개의 평면 $x=0$ , $x=6$ , $y=0$ , $y=6$ , $z=0$ , $z=6$ 으로 둘러싸인 정육면체와 구 $x^{2}+y^{2}+z^{2}=48$ 이 있다."
+   },
+   {
+    "t": "p",
+    "s": "정육면체의 겉면과 구가 만나서 생기는 곡선의 길이의 합을 $l$ 이라 할 때, $\\left(\\frac{l}{\\pi}\\right)^{2}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1301,
+  "id": "최고난도500(2)-099",
+  "subject": "기하",
+  "type": "29번형",
+  "topic": "직선의 위치 관계 — 정육면체의 꼭짓점을 잇는 선분들 중 꼬인 위치의 쌍",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "정육면체의 서로 다른 두 꼭짓점을 이은 선분은 모두 $28$ 개이다."
+   },
+   {
+    "t": "p",
+    "s": "이 $28$ 개의 선분 중에서 서로 다른 두 선분을 택할 때, 두 선분을 각각 포함하는 두 직선이 꼬인 위치에 있도록 택하는 경우의 수를 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1302,
+  "id": "최고난도500(2)-100",
+  "subject": "기하",
+  "type": "30번형",
+  "topic": "정사영 — 꼬인 두 모서리 위의 점을 잇는 선분의 중점의 자취",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "한 모서리의 길이가 $6$ 인 정사면체 $\\mathrm{ABCD}$ 에서 모서리 $\\mathrm{AB}$ 위의 점 $\\mathrm{P}$ 와 모서리 $\\mathrm{CD}$ 위의 점 $\\mathrm{Q}$ 에 대하여 선분 $\\mathrm{PQ}$ 의 중점을 $\\mathrm{X}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 가 각각 두 모서리 위를 움직일 때 점 $\\mathrm{X}$ 가 나타내는 도형의 평면 $\\mathrm{BCD}$ 위로의 정사영의 넓이를 $S$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1303,
+  "id": "최고난도500(3)-001",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "수열의 극한 — 무리식의 소수 부분과 경우 나누기",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 자연수 $k$ , $m$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "f(k,\\,m)=\\lim_{n \\to \\infty}\\left(\\sqrt{n^{2}+k n+m}-\\left[\\sqrt{n^{2}+k n+m}\\right]\\right)"
+   },
+   {
+    "t": "p",
+    "s": "이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1304,
+  "id": "최고난도500(3)-002",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 켤레 무리수의 거듭제곱과 소수 부분",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "자연수 $k$ 에 대하여 $\\alpha=k+\\sqrt{k^{2}+1}$ 이라 하고, 수열 $\\left\\{b_{n}\\right\\}$ 을"
+   },
+   {
+    "t": "eq",
+    "tex": "b_{n}=\\alpha^{n}-\\left[\\alpha^{n}\\right]"
+   },
+   {
+    "t": "p",
+    "s": "이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1305,
+  "id": "최고난도500(3)-003",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "급수 — 점화식 a(n+1)=a(n)^2-2와 곱의 망원",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 7,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "수열 $\\left\\{a_{n}\\right\\}$ 이 $a_{1}=\\frac{10}{3}$ 이고, 모든 자연수 $n$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "a_{n+1}=a_{n}^{2}-2"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1306,
+  "id": "최고난도500(3)-004",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "급수 — 회전하며 줄어드는 이동과 극한점",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 7,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0<r<1$ 인 실수 $r$ 에 대하여 좌표평면 위의 점 $\\mathrm{P}$ 가 원점 $\\mathrm{O}$ 에서 출발하여 다음 규칙에 따라 이동한다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 첫 번째 이동은 $x$ 축의 양의 방향으로 $1$ 만큼 이동한다.",
+     "(나) 두 번째 이후의 이동은 직전 이동의 방향을 시계 반대 방향으로 $\\frac{2 \\pi}{3}$ 만큼 회전한 방향으로, 직전 이동 거리의 $r$ 배만큼 이동한다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$n$ 번 이동한 후 점 $\\mathrm{P}$ 의 위치를 $\\mathrm{P}_{n}$ 이라 하면 점 $\\mathrm{P}_{n}$ 은 한 점 $\\mathrm{Q}$ 에 한없이 가까워진다."
+   }
+  ]
+ },
+ {
+  "num": 1307,
+  "id": "최고난도500(3)-005",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "수열의 극한 — 거듭제곱근의 극한으로 정의된 함수와 미분가능성",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양수 $b$ 에 대하여 실수 전체의 집합에서 정의된 함수 $g(x)$ 를"
+   },
+   {
+    "t": "eq",
+    "tex": "g(x)=\\lim_{n \\to \\infty}\\left(\\left|x^{2}-4 \\right|^{n}+\\left|3 x \\right|^{n}+b^{n}\\right)^{\\frac{1}{n}}"
+   },
+   {
+    "t": "p",
+    "s": "이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1308,
+  "id": "최고난도500(3)-006",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 로그부등식의 해의 개수와 망원급수",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "자연수 $n$ 에 대하여 부등식"
+   },
+   {
+    "t": "eq",
+    "tex": "\\log_{2}x+\\log_{2}\\left(2^{n+1}-x \\right)\\ge 2 n+\\log_{2}\\frac{15}{16}"
+   },
+   {
+    "t": "p",
+    "s": "을 만족시키는 자연수 $x$ 의 개수를 $a_{n}$ 이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1309,
+  "id": "최고난도500(3)-007",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 등비수열 항의 소수 부분의 합과 이진법",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "첫째항이 $64$ 이하의 자연수이고 공비의 절댓값이 $\\frac{1}{2}$ 인 등비수열 $\\left\\{a_{n}\\right\\}$ 이"
+   },
+   {
+    "t": "eq",
+    "tex": "\\sum_{n=1}^{\\infty}\\left(a_{n}-\\left[a_{n}\\right]\\right)=3"
+   },
+   {
+    "t": "p",
+    "s": "을 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1310,
+  "id": "최고난도500(3)-008",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 두 등비수열의 최솟값·최댓값 수열",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 7,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 양수 $A$ , $B$ 에 대하여 두 수열 $\\left\\{a_{n}\\right\\}$ , $\\left\\{b_{n}\\right\\}$ 이"
+   },
+   {
+    "t": "eq",
+    "tex": "a_{n}=\\frac{A}{2^{n}},\\,\\,\\,b_{n}=\\frac{B}{4^{n}}"
+   },
+   {
+    "t": "p",
+    "s": "이다."
+   }
+  ]
+ },
+ {
+  "num": 1311,
+  "id": "최고난도500(3)-009",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "수열의 극한 — 방정식의 근이 이루는 수열의 1차·2차 근사",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 7,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$2$ 이상의 자연수 $n$ 에 대하여 $x$ 에 대한 방정식"
+   },
+   {
+    "t": "eq",
+    "tex": "x^{n}+x^{n-1}+\\cdots+x^{2}+x=2"
+   },
+   {
+    "t": "p",
+    "s": "의 양의 실근을 $x_{n}$ 이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1312,
+  "id": "최고난도500(3)-010",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "수열의 극한 — 기하평균 점화식과 로그의 불변량",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 7,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "모든 항이 양수인 수열 $\\left\\{a_{n}\\right\\}$ 이 모든 자연수 $n$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "\\left(a_{n+2}\\right)^{3}=\\left(a_{n+1}\\right)^{2}a_{n}"
+   },
+   {
+    "t": "p",
+    "s": "을 만족시키고, 다음 조건을 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1313,
+  "id": "최고난도500(3)-011",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 두 반직선 사이를 오가는 수선의 발과 반각 공식",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 8,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "삼각형 $\\mathrm{A}_{n}\\mathrm{B}_{n}\\mathrm{A}_{n+1}$ 의 넓이를 $T_{n}$ 이라 할 때,"
+   },
+   {
+    "t": "eq",
+    "tex": "L(\\theta)=\\sum_{n=1}^{\\infty}\\left(\\overline{\\mathrm{A}_{n}\\mathrm{B}_{n}}+\\overline{\\mathrm{B}_{n}\\mathrm{A}_{n+1}}\\right),\\,\\,\\,S(\\theta)=\\sum_{n=1}^{\\infty}T_{n}"
+   },
+   {
+    "t": "p",
+    "s": "라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1314,
+  "id": "최고난도500(3)-012",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "급수 — (2+√3)^n의 계수 수열과 망원급수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "자연수 $n$ 에 대하여 두 자연수 $a_{n}$ , $b_{n}$ 을"
+   },
+   {
+    "t": "eq",
+    "tex": "\\left(2+\\sqrt{3}\\right)^{n}=a_{n}+b_{n}\\sqrt{3}"
+   },
+   {
+    "t": "p",
+    "s": "을 만족시키도록 정하자."
+   }
+  ]
+ },
+ {
+  "num": 1315,
+  "id": "최고난도500(3)-013",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 이웃하지 않는 원소의 부분집합 개수와 망원급수",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(단, 공집합도 개수에 포함한다.)"
+   },
+   {
+    "t": "eq",
+    "tex": "\\sum_{n=1}^{\\infty}\\frac{2 a_{n+1}+3}{a_{n}a_{n+2}}=\\frac{q}{p}"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $p+q$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1316,
+  "id": "최고난도500(3)-014",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "수열의 극한 — 세제곱근의 정수 부분으로 나누어떨어지는 수의 개수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "자연수 $n$ 에 대하여 $n$ 이하의 자연수 $k$ 중에서 $k$ 가 $\\left[\\sqrt[3]{k}\\right]$ 의 배수인 것의 개수를 $a_{n}$ 이라 하자."
+   },
+   {
+    "t": "eq",
+    "tex": "\\alpha=\\lim_{n \\to \\infty}\\frac{a_{n}}{\\sqrt[3]{n^{2}}},\\,\\,\\,\\beta=\\lim_{n \\to \\infty}\\frac{a_{8 n^{3}}-4 \\alpha n^{2}}{n}"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $4 \\alpha \\beta$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1317,
+  "id": "최고난도500(3)-015",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 한 항이 빠진 부분분수 망원급수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "자연수 $k$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "T(k)=\\sum_{n=1,\\,n \\ne k}^{\\infty}\\frac{1}{n^{2}-k^{2}}"
+   },
+   {
+    "t": "p",
+    "s": "라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1318,
+  "id": "최고난도500(3)-016",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 두 사람 사이를 오가는 개의 이동 거리(실생활)",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "직선 도로 위의 두 지점 $\\mathrm{A}$ , $\\mathrm{B}$ 사이의 거리는 $12 \\mathrm{km}$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "갑은 $\\mathrm{A}$ 에서 $\\mathrm{B}$ 를 향해 시속 $1 \\mathrm{km}$ 로, 을은 $\\mathrm{B}$ 에서 $\\mathrm{A}$ 를 향해 시속 $3 \\mathrm{km}$ 로 동시에 출발한다."
+   }
+  ]
+ },
+ {
+  "num": 1319,
+  "id": "최고난도500(3)-017",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 부분합이 정수가 되는 항의 개수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "수열 $\\left\\{a_{n}\\right\\}$ 이 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $S_{1},\\,S_{2},\\,S_{3},\\,\\cdots$ 중 정수인 것의 개수는 $4$ 이다.",
+     "(나) $\\sum_{n=1}^{\\infty}a_{n}$ 의 값은 자연수이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "가능한 모든 $a_{1}$ 의 값의 합을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1320,
+  "id": "최고난도500(3)-018",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 포물선 위 점들의 할선 기울기 조건과 수렴이라는 숨은 조건",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "곡선 $y=x^{2}$ 위의 점 $\\mathrm{P}_{n}\\left(a_{n},\\,a_{n}^{2}\\right)$ $(n=1,\\,2,\\,3,\\,\\cdots)$ 이 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 모든 자연수 $n$ 에 대하여 직선 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}$ 의 기울기는 $\\left(\\frac{1}{2}\\right)^{n-1}$ 이다.",
+     "(나) 수열 $\\left\\{a_{n}\\right\\}$ 은 수렴한다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "원점 $\\mathrm{O}$ 에 대하여 삼각형 $\\mathrm{OP}_{n}\\mathrm{P}_{n+1}$ 의 넓이를 $T_{n}$ 이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1321,
+  "id": "최고난도500(3)-019",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "급수 — 정사각형을 나선형으로 잘라 내는 직사각형 열의 극한점",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면에서 네 점 $(0,\\,0)$ , $(1+\\sqrt{2},\\,0)$ , $(1+\\sqrt{2},\\,1)$ , $(0,\\,1)$ 을 꼭짓점으로 하는 직사각형을 $R_{1}$ 이라 하자."
+   },
+   {
+    "t": "p",
+    "s": "자연수 $n$ 에 대하여 직사각형 $R_{n}$ 에서 짧은 변의 길이를 한 변의 길이로 하는 정사각형 $2$ 개를 긴 변을 따라 나란히 잘라 내고 남은 직사각형을 $R_{n+1}$ 이라 한다."
+   }
+  ]
+ },
+ {
+  "num": 1322,
+  "id": "최고난도500(3)-020",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 등비수열로 나눈 구간의 직사각형 넓이 합과 극한",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "각 자연수 $k$ 에 대하여 구간 $\\left[r^{k},\\,r^{k-1}\\right]$ 를 밑변으로 하고 높이가 $\\sqrt{r^{k-1}}$ 인 직사각형의 넓이를 $u_{k}$ , 높이가 $\\sqrt{r^{k}}$ 인 직사각형의 넓이를 $l_{k}$ 라 하고,"
+   },
+   {
+    "t": "eq",
+    "tex": "U(r)=\\sum_{k=1}^{\\infty}u_{k},\\,\\,\\,L(r)=\\sum_{k=1}^{\\infty}l_{k}"
+   },
+   {
+    "t": "p",
+    "s": "라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1323,
+  "id": "최고난도500(3)-021",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "급수 — 중점을 두 번 잡는 세 항 점화식의 불변량과 넓이의 비",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 7,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위의 세 점 $\\mathrm{P}_{1}(0,\\,0)$ , $\\mathrm{P}_{2}(6,\\,0)$ , $\\mathrm{P}_{3}(p,\\,q)$ $(q>0)$ 에서 시작하여 점 $\\mathrm{P}_{n+3}$ $(n=1,\\,2,\\,3,\\,\\cdots)$ 을 다음과 같이 차례로 정한다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "선분 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}$ 의 중점을 $\\mathrm{M}_{n}$ 이라 할 때, 점 $\\mathrm{P}_{n+3}$ 은 선분 $\\mathrm{M}_{n}\\mathrm{P}_{n+2}$ 의 중점이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "이때 점 $\\mathrm{P}_{n}$ 은 한 점 $\\mathrm{L}$ 에 한없이 가까워진다."
+   }
+  ]
+ },
+ {
+  "num": 1324,
+  "id": "최고난도500(3)-022",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "급수 — 제곱수의 개수로 묶은 항과 두 칸 건너뛰는 망원 구조",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 급수"
+   },
+   {
+    "t": "eq",
+    "tex": "S=\\sum_{n=1}^{\\infty}\\frac{2^{c_{n}}+2^{-c_{n}-1}}{2^{n}},\\,\\,\\,\\,T=\\sum_{n=1}^{\\infty}\\frac{3^{c_{n}}+3^{-c_{n}-1}}{3^{n}}"
+   },
+   {
+    "t": "p",
+    "s": "에 대하여 $30(S+T)$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1325,
+  "id": "최고난도500(3)-023",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 로그 급수의 부분합을 곱의 로그로 바꾸어 세제곱 인수분해로 망원",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$2$ 이상의 자연수 $k$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "f(k)=\\sum_{n=k}^{\\infty}\\ln \\frac{n^{3}+1}{n^{3}-1}"
+   },
+   {
+    "t": "p",
+    "s": "이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1326,
+  "id": "최고난도500(3)-024",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 근호 점화식의 유리화로 드러나는 세 가지 망원 구조",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "수열 $\\left\\{a_{n}\\right\\}$ 이 $a_{1}=0$ 이고, 모든 자연수 $n$ 에 대하여 $a_{n+1}=\\sqrt{a_{n}+12}$ 를 만족시킨다."
+   },
+   {
+    "t": "eq",
+    "tex": "A=\\sum_{n=1}^{\\infty}\\left(4-a_{n}\\right)\\left(a_{n}+3 \\right),\\,\\,\\,B=\\sum_{n=1}^{\\infty}\\frac{a_{n+1}-a_{n}}{a_{n+1}+a_{n+2}},\\,\\,\\,C=\\lim_{n \\to \\infty}\\frac{a_{n+2}-a_{n+1}}{a_{n+1}-a_{n}}"
+   },
+   {
+    "t": "p",
+    "s": "이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1327,
+  "id": "최고난도500(3)-025",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 회전하며 줄어드는 정사각형의 꼭짓점이 그리는 꺾은선",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "한 변의 길이가 $1$ 인 정사각형 $\\mathrm{A}_{1}\\mathrm{B}_{1}\\mathrm{C}_{1}\\mathrm{D}_{1}$ 이 있다."
+   },
+   {
+    "t": "p",
+    "s": "$0<t<\\frac{1}{2}$ 인 실수 $t$ 에 대하여, 자연수 $n$ 마다 정사각형 $\\mathrm{A}_{n}\\mathrm{B}_{n}\\mathrm{C}_{n}\\mathrm{D}_{n}$ 의 네 변 $\\mathrm{A}_{n}\\mathrm{B}_{n}$ , $\\mathrm{B}_{n}\\mathrm{C}_{n}$ , $\\mathrm{C}_{n}\\mathrm{D}_{n}$ , $\\mathrm{D}_{n}\\mathrm{A}_{n}$ 을 각각 $t:(1-t)$ 로 내분하는 점을 차례로 $\\mathrm{A}_{n+1}$ , $\\mathrm{B}_{n+1}$ , $\\mathrm{C}_{n+1}$ , $\\mathrm{D}_{n+1}$ 이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1328,
+  "id": "최고난도500(3)-026",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "급수 — 직각삼각형을 채우는 정사각형들과 단계별 넓이의 공비",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "직각삼각형에 대한 다음 시행을 생각하자."
+   },
+   {
+    "t": "box",
+    "items": [
+     "직각삼각형의 직각인 꼭짓점을 한 꼭짓점으로 하고, 이 꼭짓점과 마주 보는 꼭짓점이 빗변 위에 있는 정사각형을 직각삼각형의 내부에 그린다. 이때 직각삼각형의 내부에서 정사각형의 외부인 부분은 두 개의 직각삼각형이 된다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$1$ 단계에서는 삼각형 $\\mathrm{ABC}$ 에 시행을 하고, $(k+1)$ 단계에서는 $k$ 단계의 시행으로 새로 생긴 모든 직각삼각형에 각각 시행을 한다 $(k=1,\\,2,\\,3,\\,\\cdots)$ . 이 과정을 한없이 반복할 때, 홀수 단계에서 그린 모든 정사각형의 넓이의 합은 $\\frac{q}{p}$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1329,
+  "id": "최고난도500(3)-027",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "급수 — x축에 접하는 원들의 사슬과 반지름의 제곱근의 역수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면에서 중심이 $(0,\\,9)$ 이고 반지름의 길이가 $9$ 인 원을 $C$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "원 $C_{1}$ 은 반지름의 길이가 $4$ 이고, $x$ 축에 접하면서 원 $C$ 에 외접하며 중심이 제 $1$ 사분면 위에 있는 원이다."
+   }
+  ]
+ },
+ {
+  "num": 1330,
+  "id": "최고난도500(3)-028",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "수열의 극한 — 복용량 규칙이 만드는 주기 3의 패턴(실생활)",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 8,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "매일의 복용량은 다음 규칙에 따라 정한다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "복용 직전 체내에 있는 약의 양이 $2.5$ mg 미만이면 $3$ mg을 복용하고, $2.5$ mg 이상이면 $1$ mg을 복용한다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "첫 번째 복용 직전 체내에 있는 약의 양은 $0$ mg이다."
+   }
+  ]
+ },
+ {
+  "num": 1331,
+  "id": "최고난도500(3)-029",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 두 등비수열의 합으로 된 수열의 네 항에서 공비 결정",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "첫째항과 공비가 모두 $0$ 이 아니고 공비가 서로 다른 두 등비수열 $\\left\\{a_{n}\\right\\}$ , $\\left\\{b_{n}\\right\\}$ 에 대하여 수열 $\\left\\{c_{n}\\right\\}$ 을 $c_{n}=a_{n}+b_{n}$ 이라 하자."
+   },
+   {
+    "t": "eq",
+    "tex": "c_{1}=5,\\,\\,\\,c_{2}=0,\\,\\,\\,c_{3}=\\frac{5}{6},\\,\\,\\,c_{4}=\\frac{5}{36}"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $\\sum_{n=1}^{\\infty}c_{n}c_{n+1}=\\frac{q}{p}$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1332,
+  "id": "최고난도500(3)-030",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "수열의 극한 — 이차 점화식의 짝수 번째·홀수 번째 항이 다른 값으로 가는 경우",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 극한 $\\lim_{n \\to \\infty}a_{2 n}$ , $\\lim_{n \\to \\infty}a_{2 n-1}$ 은 모두 존재하며,"
+   },
+   {
+    "t": "eq",
+    "tex": "f(t)=\\lim_{n \\to \\infty}a_{2 n}+2 \\lim_{n \\to \\infty}a_{2 n-1}"
+   },
+   {
+    "t": "p",
+    "s": "이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1333,
+  "id": "최고난도500(3)-031",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 곱의 점화식이 숨긴 주기 5와 자연수 조건",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "모든 항이 자연수인 수열 $\\left\\{a_{n}\\right\\}$ 이 $a_{1}=2$ , $a_{2}>a_{1}$ 이고, 모든 자연수 $n$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "a_{n}a_{n+2}=a_{n+1}+1"
+   },
+   {
+    "t": "p",
+    "s": "을 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1334,
+  "id": "최고난도500(3)-032",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 코사인의 곱의 극한이 만드는 거듭제곱의 합과 망원급수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "자연수 $n$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "b_{n}=\\lim_{x \\to 0}\\frac{1-\\cos x \\cos 2 x \\cos 3 x \\cdots \\cos n x}{x^{2}},\\,\\,\\,\\,c_{n}=\\lim_{x \\to 0}\\frac{1-\\cos x \\cos^{2}2 x \\cos^{3}3 x \\cdots \\cos^{n}n x}{x^{2}}"
+   },
+   {
+    "t": "p",
+    "s": "이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1335,
+  "id": "최고난도500(3)-033",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 두 등비수열의 항을 크기순으로 섞은 수열의 묶음 구조",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 9,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "예를 들어 $c_{1}=\\frac{3}{4}$ , $c_{2}=\\frac{1}{2}$ 이다."
+   },
+   {
+    "t": "eq",
+    "tex": "\\sum_{n=1}^{\\infty}c_{n}c_{n+1}+\\sum_{n=1}^{\\infty}(-1)^{n+1}c_{n}=\\frac{q}{p}"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $p+q$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1336,
+  "id": "최고난도500(3)-034",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "수열의 극한 — 6^N의 약수의 역수 합과 지수 조건",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 7,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$6^{N}$ 의 양의 약수 $d=2^{i}\\times 3^{j}$ 에 대하여 두 수 $x(d)$ , $y(d)$ 를 다음과 같이 정하자."
+   },
+   {
+    "t": "box",
+    "items": [
+     "$i \\ge 2 j$ 이면 $x(d)=\\frac{1}{d}$ , $i<2 j$ 이면 $x(d)=0$",
+     "$i+j$ 가 홀수이면 $y(d)=\\frac{1}{d}$ , $i+j$ 가 짝수이면 $y(d)=0$"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$6^{N}$ 의 모든 양의 약수 $d$ 에 대한 $x(d)+y(d)$ 의 값의 합을 $S_{N}$ 이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1337,
+  "id": "최고난도500(3)-035",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 쌍곡선 위의 점열과 수렴 조건이 정하는 첫 점",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "곡선 $y=\\frac{1}{x}$ $(x>0)$ 위의 점 $\\mathrm{P}_{n}\\left(x_{n},\\,\\frac{1}{x_{n}}\\right)$ $(n=1,\\,2,\\,3,\\,\\cdots)$ 이 모든 자연수 $n$ 에 대하여 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "직선 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}$ 의 기울기는 $-\\frac{1}{n(n+1)}$ 이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "삼각형 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}$ 의 넓이를 $T_{n}$ 이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1338,
+  "id": "최고난도500(3)-036",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 내접원의 접점으로 만든 삼각형을 반복할 때 각의 크기",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "세 내각의 크기가 각각 90°, 75°, 15°인 삼각형 $\\mathrm{A}_{1}\\mathrm{B}_{1}\\mathrm{C}_{1}$ 이 있다."
+   },
+   {
+    "t": "p",
+    "s": "( $\\mathrm{A}_{1}$ , $\\mathrm{B}_{1}$ , $\\mathrm{C}_{1}$ 에서의 내각의 크기가 차례로 90°, 75°, 15°이다.) 자연수 $n$ 에 대하여 삼각형 $\\mathrm{A}_{n}\\mathrm{B}_{n}\\mathrm{C}_{n}$ 의 내접원이 세 변 $\\mathrm{B}_{n}\\mathrm{C}_{n}$ , $\\mathrm{C}_{n}\\mathrm{A}_{n}$ , $\\mathrm{A}_{n}\\mathrm{B}_{n}$ 과 접하는 점을 각각 $\\mathrm{A}_{n+1}$ , $\\mathrm{B}_{n+1}$ , $\\mathrm{C}_{n+1}$ 이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1339,
+  "id": "최고난도500(3)-037",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "수열의 극한 — 세 꼭짓점을 차례로 향해 반씩 이동하는 점의 극한 삼각형",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위의 세 점 $\\mathrm{A}(0,\\,0)$ , $\\mathrm{B}(14,\\,0)$ , $\\mathrm{C}(0,\\,14)$ 에 대하여 점 $\\mathrm{P}_{1}$ 은 점 $\\mathrm{A}$ 이고, 자연수 $n$ 에 대하여 점 $\\mathrm{P}_{n+1}$ 을 다음과 같이 정한다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "$n$ 을 $3$ 으로 나눈 나머지가 $1$ , $2$ , $0$ 일 때, 점 $\\mathrm{P}_{n+1}$ 은 각각 선분 $\\mathrm{P}_{n}\\mathrm{B}$ , 선분 $\\mathrm{P}_{n}\\mathrm{C}$ , 선분 $\\mathrm{P}_{n}\\mathrm{A}$ 의 중점이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "삼각형 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}$ 의 넓이를 $S_{n}$ 이라 하고,"
+   }
+  ]
+ },
+ {
+  "num": 1340,
+  "id": "최고난도500(3)-038",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "수열의 극한 — 접선의 x절편을 반복할 때 중근과 단근으로 다가가는 속도",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $f(x)=x^{3}-3 x+2$ 에 대하여 두 수열 $\\left\\{x_{n}\\right\\}$ , $\\left\\{y_{n}\\right\\}$ 을 $x_{1}=3$ , $y_{1}=-3$ 이고, 모든 자연수 $n$ 에 대하여 곡선 $y=f(x)$ 위의 점 $(x_{n},\\,f(x_{n}))$ 에서의 접선의 $x$ 절편을 $x_{n+1}$ , 점 $(y_{n},\\,f(y_{n}))$ 에서의 접선의 $x$ 절편을 $y_{n+1}$ 이 되도록 정하자."
+   },
+   {
+    "t": "eq",
+    "tex": "L_{1}=\\lim_{n \\to \\infty}\\frac{x_{n+1}-1}{x_{n}-1},\\,\\,\\,\\,L_{2}=\\lim_{n \\to \\infty}\\frac{y_{n+1}+2}{\\left(y_{n}+2 \\right)^{2}}"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $60 \\left(L_{1}-L_{2}\\right)$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1341,
+  "id": "최고난도500(3)-039",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "수열의 극한으로 정의된 함수 — 사인의 거듭제곱 극한과 근의 개수 함수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0 \\le x<2 \\pi$ 에서 정의된 함수"
+   },
+   {
+    "t": "eq",
+    "tex": "f(x)=\\lim_{n \\to \\infty}\\frac{(2 \\sin x)^{2 n+1}+2 \\cos x}{(2 \\sin x)^{2 n}+1}"
+   },
+   {
+    "t": "p",
+    "s": "에 대하여, 실수 $t$ 에 대하여 방정식 $f(x)=t$ 의 서로 다른 실근의 개수를 $h(t)$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1342,
+  "id": "최고난도500(3)-040",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "수열의 극한 — 근호 점화식을 코사인의 반각으로 바꾸어 구하는 수렴 속도",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "수열 $\\left\\{a_{n}\\right\\}$ 이 $a_{1}=1$ 이고, 모든 자연수 $n$ 에 대하여 $a_{n+1}=\\sqrt{2+a_{n}}$ 을 만족시킨다."
+   },
+   {
+    "t": "eq",
+    "tex": "\\lim_{n \\to \\infty}4^{n}\\left(2-a_{n}\\right)=p \\pi^{2},\\,\\,\\,\\,\\lim_{n \\to \\infty}2^{n}\\sqrt{4-a_{n}^{2}}=q \\pi"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $36(p+q)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1343,
+  "id": "최고난도500(3)-041",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 분수 점화식의 역수 치환과 가중치가 붙은 망원급수",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "수열 $\\left\\{a_{n}\\right\\}$ 이 모든 자연수 $n$ 에 대하여 $a_{n}\\ne 0$ , $a_{n}\\ne 2$ 이고"
+   },
+   {
+    "t": "eq",
+    "tex": "a_{n+1}=\\frac{a_{n}}{2-a_{n}}"
+   },
+   {
+    "t": "p",
+    "s": "을 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1344,
+  "id": "최고난도500(3)-042",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수로 정의된 함수 — 변수가 들어간 망원급수와 미분·적분",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "G(x)=\\sum_{n=0}^{\\infty}\\frac{2}{(x+n)(x+n+2)}"
+   },
+   {
+    "t": "p",
+    "s": "라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1345,
+  "id": "최고난도500(3)-043",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 볼록다각형의 대각선의 교점과 영역의 개수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "다각형의 내부에서 대각선끼리 만나는 점의 개수를 $a_{n}$ , 대각선들에 의해 다각형의 내부가 나누어진 영역의 개수를 $r_{n}$ 이라 하자."
+   },
+   {
+    "t": "eq",
+    "tex": "\\sum_{n=4}^{\\infty}\\left(\\frac{1}{a_{n}}+\\frac{1}{r_{n}-a_{n}}\\right)=\\frac{q}{p}"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $p+q$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1346,
+  "id": "최고난도500(3)-044",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "급수 — 2/3^n 꼴 급수의 유일성(칸토어 집합)과 다른 밑으로의 이전",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "자연수 전체의 집합의 부분집합 $X$ 에 대하여 $X$ 의 원소 $n$ 에 대한 $\\frac{2}{3^{n}}$ 을 모두 더한 값을 $f(X)$ , $\\frac{1}{2^{n}}$ 을 모두 더한 값을 $g(X)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "(단, $X$ 가 무한집합이면 급수의 합이다.)"
+   }
+  ]
+ },
+ {
+  "num": 1347,
+  "id": "최고난도500(3)-045",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "급수 — 원 위의 세 수를 이웃과 평균하는 시행과 텔레스코핑 연립",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "세 수열 $\\left\\{x_{n}\\right\\}$ , $\\left\\{y_{n}\\right\\}$ , $\\left\\{z_{n}\\right\\}$ 이 $x_{1}=9$ , $y_{1}=3$ , $z_{1}=0$ 이고, 모든 자연수 $n$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "x_{n+1}=\\frac{x_{n}+y_{n}}{2},\\,\\,\\,y_{n+1}=\\frac{y_{n}+z_{n}}{2},\\,\\,\\,z_{n+1}=\\frac{z_{n}+x_{n}}{2}"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1348,
+  "id": "최고난도500(3)-046",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 튀어 오르는 공의 이동 거리와 걸린 시간(실생활)",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "높이가 $h$ (m)인 곳에서 공을 가만히 떨어뜨렸다."
+   },
+   {
+    "t": "p",
+    "s": "공은 바닥에 닿을 때마다 직전에 떨어지기 시작한 높이의 $r$ 배 $(0<r<1)$ 의 높이까지 튀어 오르고, 높이가 $H$ (m)인 곳에서 떨어지거나 높이 $H$ 까지 올라가는 데 걸리는 시간은 각각 $\\sqrt{\\frac{H}{5}}$ 초이다."
+   }
+  ]
+ },
+ {
+  "num": 1349,
+  "id": "최고난도500(3)-047",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 2년마다 인상되는 영구 장학금의 현재 가치(실생활)",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "어느 재단이 지금 기금을 마련하여, 지금부터 $1$ 년 후부터 매년 한 번씩 장학금을 영원히 지급하려고 한다."
+   },
+   {
+    "t": "p",
+    "s": "$1$ 년 후와 $2$ 년 후에는 각각 $1$ 억 원을 지급하고, 그 후 $2$ 년마다 지급액을 직전 지급액의 10%만큼 늘린다."
+   }
+  ]
+ },
+ {
+  "num": 1350,
+  "id": "최고난도500(3)-048",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 포물선의 활꼴을 채우는 삼각형들(아르키메데스)과 홀수 단계",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "곡선 $y=x^{2}$ 위의 두 점 $(a,\\,a^{2})$ , $(b,\\,b^{2})$ $(a<b)$ 를 양 끝점으로 하는 현에 대하여, 곡선 위의 점 중 $x$ 좌표가 $\\frac{a+b}{2}$ 인 점과 이 현의 양 끝점을 꼭짓점으로 하는 삼각형을 이 현의 '새 삼각형'이라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$1$ 단계에서는 두 점 $(0,\\,0)$ , $(4,\\,16)$ 을 양 끝점으로 하는 현의 새 삼각형을 그리고, $(k+1)$ 단계에서는 $k$ 단계에서 그린 각 새 삼각형의 변 중 그 단계에서 새로 생긴 두 현 각각의 새 삼각형을 그린다."
+   }
+  ]
+ },
+ {
+  "num": 1351,
+  "id": "최고난도500(3)-049",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "함수의 극한과 급수 — 문턱값 이상인 항만 더한 등비합의 r→1 극한",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0<r<1$ 인 실수 $r$ 에 대하여 등비수열 $1,\\,r,\\,r^{2},\\,r^{3},\\,\\cdots$ 의 항 중에서 $\\frac{1}{4}$ 이상인 모든 항의 합을 $T(r)$ , $\\frac{1}{4}$ 이상인 모든 항의 제곱의 합을 $U(r)$ 라 하자."
+   },
+   {
+    "t": "eq",
+    "tex": "\\lim_{r \\to 1-}(1-r)\\left\\{16 T(r)+32 U(r)\\right\\}"
+   },
+   {
+    "t": "p",
+    "s": "의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1352,
+  "id": "최고난도500(3)-050",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "급수 — 겹친 유리판 사이의 무한 반사와 투과율의 역수(실생활)",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "빛을 흡수하지 않는 얇은 유리판이 있다."
+   },
+   {
+    "t": "p",
+    "s": "이 유리판은 어느 쪽에서 빛이 들어오든 들어온 빛의 $\\frac{1}{3}$ 을 반사하고 $\\frac{2}{3}$ 을 투과시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1353,
+  "id": "최고난도500(3)-051",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "역함수의 미분 — 감소함수와 그 역함수의 직선 y=x 밖의 교점",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양수 $a$ 에 대하여 함수"
+   },
+   {
+    "t": "eq",
+    "tex": "f(x)=-\\left(x-1 \\right)^{3}-a \\left(x-1 \\right)+1"
+   },
+   {
+    "t": "p",
+    "s": "의 역함수를 $g(x)$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1354,
+  "id": "최고난도500(3)-052",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "매개변수로 나타낸 함수의 미분 — 원의 신개선과 접선에 수직인 직선",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "매개변수 $t$ $(0<t<6 \\pi)$ 로 나타낸 곡선"
+   },
+   {
+    "t": "eq",
+    "tex": "x=\\cos t+t \\sin t,\\,\\,\\,y=\\sin t-t \\cos t"
+   },
+   {
+    "t": "p",
+    "s": "위의 점 $\\mathrm{P}$ 에서 이 곡선에 접하는 직선에 수직이고 점 $\\mathrm{P}$ 를 지나는 직선을 $l$ 이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1355,
+  "id": "최고난도500(3)-053",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "매개변수 미분과 이계도함수 — 케플러 방정식 모델의 변곡점",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "행성의 운동을 나타내는 케플러 방정식을 본떠, $0<e<1$ 인 상수 $e$ 에 대하여 매개변수 $\\theta$ $(0<\\theta<\\pi)$ 로 나타낸 곡선"
+   },
+   {
+    "t": "eq",
+    "tex": "x=\\theta-e \\sin \\theta,\\,\\,\\,y=1-e \\cos \\theta"
+   },
+   {
+    "t": "p",
+    "s": "를 생각하자."
+   }
+  ]
+ },
+ {
+  "num": 1356,
+  "id": "최고난도500(3)-054",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "곱의 미분과 로그미분 — 코사인의 거듭곱과 배각 망원",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수"
+   },
+   {
+    "t": "eq",
+    "tex": "f(x)=\\cos x \\times \\cos 2 x \\times \\cos 4 x \\times \\cos 8 x \\times \\cos 16 x \\times \\cos 32 x"
+   },
+   {
+    "t": "p",
+    "s": "에 대하여 $f' \\left(\\frac{\\pi}{7}\\right)\\times \\tan \\frac{\\pi}{7}=-\\frac{q}{p}$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1357,
+  "id": "최고난도500(3)-055",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "매개변수 미분과 덧셈정리 — 델토이드의 접선이 곡선과 다시 만나는 두 점",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "매개변수 $t$ $(0 \\le t<2 \\pi)$ 로 나타낸 곡선"
+   },
+   {
+    "t": "eq",
+    "tex": "x=2 \\cos t+\\cos 2 t,\\,\\,\\,y=2 \\sin t-\\sin 2 t"
+   },
+   {
+    "t": "p",
+    "s": "위의 $t=\\frac{\\pi}{3}$ 에 대응하는 점 $\\mathrm{P}$ 에서의 접선이 이 곡선과 만나는 점 중 $\\mathrm{P}$ 가 아닌 두 점을 $\\mathrm{A}$ , $\\mathrm{B}$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1358,
+  "id": "최고난도500(3)-056",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "합성함수의 미분 — f(cos x)=cos 7x로 정의된 함수의 미분계수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "닫힌구간 $[-1,\\,1]$ 에서 연속이고 열린구간 $(-1,\\,1)$ 에서 두 번 미분가능한 함수 $f(x)$ 가 모든 실수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "f(\\cos x)=\\cos 7 x"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1359,
+  "id": "최고난도500(3)-057",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "역함수의 미분 — 최댓값으로 정의된 함수(르장드르 변환)의 도함수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $f(x)=\\frac{1}{2}e^{2 x}+e^{x}$ 에 대하여, 양수 $t$ 에 대하여 $x$ 에 대한 함수 $t x-f(x)$ 의 최댓값을 $g(t)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "함수 $g(t)$ 는 양의 실수 전체에서 두 번 미분가능하다."
+   }
+  ]
+ },
+ {
+  "num": 1360,
+  "id": "최고난도500(3)-058",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "매개변수 미분과 삼각함수의 합차 — 네프로이드의 접선과 원",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "매개변수 $t$ $(0<t<2 \\pi,\\,t \\ne \\pi)$ 로 나타낸 곡선"
+   },
+   {
+    "t": "eq",
+    "tex": "x=3 \\cos t-\\cos 3 t,\\,\\,\\,y=3 \\sin t-\\sin 3 t"
+   },
+   {
+    "t": "p",
+    "s": "위의 점에서의 접선 중 원 $x^{2}+y^{2}=4$ 에 접하는 직선은 모두 $4$ 개이다."
+   }
+  ]
+ },
+ {
+  "num": 1361,
+  "id": "최고난도500(3)-059",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "실수 지수 거듭제곱함수의 미분과 역함수 — 도함수가 역함수와 같은 함수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 양수 $a$ , $k$ 에 대하여 양의 실수 전체의 집합에서 정의된 함수 $f(x)=a x^{k}$ 의 역함수를 $g(x)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "모든 양수 $x$ 에 대하여 $f'(x)=g(x)$ 일 때, $(2 k-1)^{2}+10 \\times \\left\\{f(1)\\right\\}^{k}\\times k$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1362,
+  "id": "최고난도500(3)-060",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "곱의 미분과 이계도함수 — 접선의 y절편 함수 h(t)와 h'(t)=-tf''(t)",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "곡선 $y=f(x)$ 위의 점 $(t,\\,f(t))$ 에서의 접선의 $y$ 절편을 $h(t)$ 라 할 때, 함수 $h(t)$ 는 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 함수 $h(t)$ 가 극값을 갖는 $t$ 의 값은 오직 하나뿐이다.",
+     "(나) 함수 $h(t)$ 의 극값은 $\\frac{18}{e^{2}}$ 이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$e^{3}\\times h(3)$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1363,
+  "id": "최고난도500(3)-061",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "음함수의 미분 — f(x)e^{f(x)}=x로 정의된 함수의 이계도함수",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양의 실수 전체의 집합에서 정의된 함수 $f(x)$ 가 $f(x)>0$ 이고 모든 양수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "f(x)e^{f(x)}=x"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1364,
+  "id": "최고난도500(3)-062",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "합성함수의 미분 — 도함수가 0이 되는 안쪽 함수와 극한 조건",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "최고차항의 계수가 $1$ 인 삼차함수 $f(x)$ 와 함수 $g(x)=x+\\frac{1}{\\pi}\\sin \\pi x$ 에 대하여 함수 $h(x)=f(g(x))$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 함수 $h(x)$ 는 극값을 갖지 않는다.",
+     "(나) $\\lim_{x \\to 3}\\frac{h'(x)}{(x-3)^{2}}=0$"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$f(5)-f(1)$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1365,
+  "id": "최고난도500(3)-063",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "매개변수로 나타낸 함수의 미분 — 원과 직선으로 작도한 곡선(아녜시의 곡선)의 변곡점",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면에서 원 $x^{2}+(y-1)^{2}=1$ 과 직선 $y=2$ 가 있다."
+   },
+   {
+    "t": "p",
+    "s": "$0<\\theta<\\pi$ 인 $\\theta$ 에 대하여 원점 $\\mathrm{O}$ 를 지나고 $x$ 축의 양의 방향과 이루는 각의 크기가 $\\theta$ 인 직선이 원과 만나는 점 중 $\\mathrm{O}$ 가 아닌 점을 $\\mathrm{A}$ , 직선 $y=2$ 와 만나는 점을 $\\mathrm{B}$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1366,
+  "id": "최고난도500(3)-064",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "합성함수의 미분과 미분계수의 정의 — cos x=x의 근에서 반복 합성함수의 극한",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 극한값"
+   },
+   {
+    "t": "eq",
+    "tex": "A=\\lim_{x \\to \\alpha}\\frac{\\cos(\\cos x)-x}{\\cos x-x},\\,\\,\\,B=\\lim_{x \\to \\alpha}\\frac{\\cos(\\cos(\\cos x))-x}{\\cos x-x}"
+   },
+   {
+    "t": "p",
+    "s": "에 대하여 $10 \\left(B-A^{2}+A \\right)$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1367,
+  "id": "최고난도500(3)-065",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "매개변수 미분과 삼각함수의 합차 — 심장형 곡선의 평행한 세 접선",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "매개변수 $t$ $(0 \\le t<2 \\pi,\\,t \\ne \\pi)$ 로 나타낸 곡선"
+   },
+   {
+    "t": "eq",
+    "tex": "x=(1+\\cos t)\\cos t,\\,\\,\\,y=(1+\\cos t)\\sin t"
+   },
+   {
+    "t": "p",
+    "s": "위의 점에서의 접선 중 기울기가 $1$ 인 접선은 모두 $3$ 개이다."
+   }
+  ]
+ },
+ {
+  "num": 1368,
+  "id": "최고난도500(3)-066",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "음함수의 미분과 이계도함수 — 물방울 속 빛의 굴절(무지개) 모델",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 7,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "햇빛이 공 모양의 물방울에 입사각 $x$ 로 들어가 굴절각 $y$ 로 굴절된 후 물방울 안에서 한 번 반사되어 나올 때, 빛이 꺾인 각의 크기 $D$ 는"
+   },
+   {
+    "t": "eq",
+    "tex": "D=\\pi+2 x-4 y,\\,\\,\\,\\sin x=n \\sin y"
+   },
+   {
+    "t": "p",
+    "s": "로 나타난다고 한다."
+   }
+  ]
+ },
+ {
+  "num": 1369,
+  "id": "최고난도500(3)-067",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "합성함수의 미분 — ln(x+√(x²+1))의 접선 기울기와 상반방정식",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $f(x)=\\ln \\left(x+\\sqrt{x^{2}+1}\\right)$ 와 양수 $s$ 에 대하여 곡선 $y=f(x)$ 위의 두 점 $\\mathrm{A}$ , $\\mathrm{B}$ 의 $y$ 좌표가 각각 $s$ , $2 s$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "두 점 $\\mathrm{A}$ , $\\mathrm{B}$ 에서의 접선의 기울기의 곱이 $\\frac{32}{85}$ 이고, 두 접선이 이루는 예각의 크기를 $\\theta$ 라 할 때, $\\tan \\theta=\\frac{q}{p}$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1370,
+  "id": "최고난도500(3)-068",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "음함수의 미분 — x−y=e^{x+y}로 정의된 곡선의 이계도함수",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "곡선 $x-y=e^{x+y}$ 위의 점 $\\mathrm{P}$ 에서의 접선의 기울기가 $-\\frac{1}{3}$ 일 때, 점 $\\mathrm{P}$ 에서의 $\\frac{d^{2}y}{dx^{2}}$ 의 값은 $-\\frac{q}{p}$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "$p+q$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1371,
+  "id": "최고난도500(3)-069",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "역함수의 미분 — x+a sin x의 역함수의 이계도함수의 최댓값",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0<a<1$ 인 상수 $a$ 에 대하여 함수 $f(x)=x+a \\sin x$ 의 역함수를 $g(x)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "곡선 $y=g(x)$ 위의 점에서의 접선의 기울기의 최댓값이 $\\frac{5}{4}$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1372,
+  "id": "최고난도500(3)-070",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "삼각함수의 극한 — sin(nπ cos x)의 극한과 부호의 주기",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "자연수 $n$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "a_{n}=\\lim_{x \\to 0}\\frac{\\sin \\left(n \\pi \\cos x \\right)}{\\pi x^{2}}"
+   },
+   {
+    "t": "p",
+    "s": "이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1373,
+  "id": "최고난도500(3)-071",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "지수함수의 미분과 미분계수의 정의 — 이웃한 두 법선의 교점의 극한",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "곡선 $y=e^{x}$ 위의 점 $(s,\\,e^{s})$ 를 지나고 이 점에서의 접선에 수직인 직선을 $l_{s}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "실수 $t$ 와 $0$ 이 아닌 실수 $h$ 에 대하여 두 직선 $l_{t}$ , $l_{t+h}$ 의 교점을 $\\mathrm{Q}_{h}$ 라 할 때, $h \\to 0$ 이면 점 $\\mathrm{Q}_{h}$ 는 한 점 $\\mathrm{C}(t)$ 에 한없이 가까워진다."
+   }
+  ]
+ },
+ {
+  "num": 1374,
+  "id": "최고난도500(3)-072",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "합성함수의 미분 — f(f(x))가 주어진 증가함수의 고정점에서의 미분계수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 전체의 집합에서 증가하고 두 번 미분가능한 함수 $f(x)$ 가 모든 실수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "f(f(x))=e^{3 x}+6 x-1"
+   },
+   {
+    "t": "p",
+    "s": "을 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1375,
+  "id": "최고난도500(3)-073",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "지수·삼각함수의 곱의 미분 — 감쇠진동의 극점에서 성립하는 x''=−(a²+b²)x",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 양수 $a$ , $b$ 에 대하여 용수철에 매달린 물체의 시각 $t$ $(t \\ge 0)$ 에서의 위치가"
+   },
+   {
+    "t": "eq",
+    "tex": "x(t)=e^{-a t}\\sin b t"
+   },
+   {
+    "t": "p",
+    "s": "로 주어진다(감쇠진동). $x'(t)=0$ 인 양수 $t$ 를 작은 것부터 차례로 $t_{1}$ , $t_{2}$ , $t_{3}$ , $\\cdots$ 이라 할 때, 다음 조건이 성립한다."
+   }
+  ]
+ },
+ {
+  "num": 1376,
+  "id": "최고난도500(3)-074",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "지수·로그함수의 미분 — 두 곡선 y=e^x",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 곡선 $y=e^{x}$ , $y=\\ln x$ 에 동시에 접하는 직선은 두 개 있다."
+   },
+   {
+    "t": "p",
+    "s": "이 두 직선의 $x$ 절편과 $y$ 절편을 모두 더한 값을 $S$ 라 할 때, $S^{2}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1377,
+  "id": "최고난도500(3)-075",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "역함수와 합성함수의 미분 — 사인의 역함수와 배각",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $f(x)=\\sin x$ $\\left(-\\frac{\\pi}{2}\\le x \\le \\frac{\\pi}{2}\\right)$ 의 역함수를 $g(x)$ 라 하고, $0<x<1$ 에서 함수 $h(x)$ 를"
+   },
+   {
+    "t": "eq",
+    "tex": "h(x)=g \\left(2 x \\sqrt{1-x^{2}}\\right)"
+   },
+   {
+    "t": "p",
+    "s": "라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1378,
+  "id": "최고난도500(3)-076",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "매개변수로 나타낸 함수의 미분 — 원과 접선으로 작도한 시소이드",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면에서 원 $(x-1)^{2}+y^{2}=1$ 과 직선 $x=2$ 가 있다."
+   },
+   {
+    "t": "p",
+    "s": "$0<\\theta<\\frac{\\pi}{2}$ 인 $\\theta$ 에 대하여 원점 $\\mathrm{O}$ 를 지나고 $x$ 축의 양의 방향과 이루는 각의 크기가 $\\theta$ 인 직선이 원과 만나는 점 중 $\\mathrm{O}$ 가 아닌 점을 $\\mathrm{B}$ , 직선 $x=2$ 와 만나는 점을 $\\mathrm{C}$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1379,
+  "id": "최고난도500(3)-077",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "몫의 미분과 미분계수의 정의 — 접선의 x절편 함수(뉴턴 사상)의 근 근처 거동",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$g(t)=t$ 를 만족시키는 실수 $t$ 가 $0$ 과 $\\ln 2$ 뿐일 때,"
+   },
+   {
+    "t": "eq",
+    "tex": "\\lim_{t \\to 0}\\frac{g'(t)}{t}+\\lim_{t \\to \\ln 2}\\frac{g'(t)}{t-\\ln 2}"
+   },
+   {
+    "t": "p",
+    "s": "의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1380,
+  "id": "최고난도500(3)-078",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "몫의 미분 — f'=f(1−f)를 만족시키는 함수를 미분법만으로 결정",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 전체의 집합에서 미분가능한 함수 $f(x)$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 모든 실수 $x$ 에 대하여 $0<f(x)<1$ 이고 $f'(x)=f(x)\\left\\{1-f(x)\\right\\}$ 이다.",
+     "(나) $f(0)=\\frac{1}{3}$"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$f(\\ln 6)+f'(\\ln 10)=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1381,
+  "id": "최고난도500(3)-079",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "역함수의 이계도함수 — 구간별로 정의된 함수의 두 번 미분가능 조건",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 상수 $a$ , $b$ 에 대하여 함수"
+   },
+   {
+    "t": "eq",
+    "tex": "f(x)=\\begin{cases}e^{x}-1&\\,\\,\\,(x \\le 0)\\\\ a \\ln(1+x)+b x&\\,\\,\\,(x>0)\\end{cases}"
+   },
+   {
+    "t": "p",
+    "s": "은 실수 전체의 집합에서 증가하고, $f(x)$ 의 역함수 $g(x)$ 는 열린구간 $(-1,\\,\\infty)$ 에서 두 번 미분가능하다."
+   }
+  ]
+ },
+ {
+  "num": 1382,
+  "id": "최고난도500(3)-080",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "삼각함수의 덧셈정리와 미분 — tan x+tan(x+π/3)+tan(x+2π/3)=3tan 3x",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수"
+   },
+   {
+    "t": "eq",
+    "tex": "f(x)=\\tan x+\\tan \\left(x+\\frac{\\pi}{3}\\right)+\\tan \\left(x+\\frac{2 \\pi}{3}\\right)"
+   },
+   {
+    "t": "p",
+    "s": "에 대하여 $f' \\left(\\frac{\\pi}{36}\\right)=a+b \\sqrt{3}$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1383,
+  "id": "최고난도500(3)-081",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "합성함수의 미분가능성 — |e^{x^k}−e|의 합에서 꺾이는 점의 상쇄",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $f(x)=e^{x}-e$ 와 두 자연수 $a$ , $n$ $(n \\ge 2)$ 에 대하여 함수 $g(x)$ 를"
+   },
+   {
+    "t": "eq",
+    "tex": "g(x)=a \\left|f(x)\\right|-\\sum_{k=1}^{n}\\left|f \\left(x^{k}\\right)\\right|"
+   },
+   {
+    "t": "p",
+    "s": "라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1384,
+  "id": "최고난도500(3)-082",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "매개변수로 나타낸 함수의 미분 — 반삼차포물선의 서로 수직인 두 접선의 교점의 자취",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "매개변수 $t$ 로 나타낸 곡선 $x=t^{2}$ , $y=t^{3}$ 위의 서로 다른 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 에서의 접선이 서로 수직일 때, 두 접선의 교점을 $\\mathrm{R}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{R}$ 가 나타내는 도형이 곡선 $x=a y^{2}+b$ 일 때, $a+b=\\frac{q}{p}$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1385,
+  "id": "최고난도500(3)-083",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "삼각함수의 미분 — 직교하는 두 곡선 a sin x",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 양수 $a$ , $b$ 에 대하여 두 곡선 $y=a \\sin x$ , $y=b \\cos x$ 가 $0<x<\\frac{\\pi}{2}$ 에서 만나는 점을 $\\mathrm{P}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{P}$ 에서 두 곡선에 각각 그은 두 접선이 서로 수직이고, 이 두 접선과 $x$ 축으로 둘러싸인 삼각형의 넓이가 $2$ 일 때, $a^{4}+b^{4}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1386,
+  "id": "최고난도500(3)-084",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "음함수의 미분 — 곡선 √x+√y=1의 접선의 절편과 이계도함수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "곡선 $\\sqrt{x}+\\sqrt{y}=1$ $(0<x<1)$ 위의 점 $\\mathrm{P}$ 에서의 접선이 $x$ 축, $y$ 축과 만나는 점을 각각 $\\mathrm{A}$ , $\\mathrm{B}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$\\overline{\\mathrm{OA}}^{2}+\\overline{\\mathrm{OB}}^{2}=\\frac{5}{8}$ 이고 점 $\\mathrm{P}$ 의 $x$ 좌표가 $y$ 좌표보다 작을 때, 점 $\\mathrm{P}$ 에서의 $\\frac{d^{2}y}{dx^{2}}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1387,
+  "id": "최고난도500(3)-085",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "로그함수의 미분 — f(xy)=xf(y)+yf(x)를 미분하여 함수 결정",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양의 실수 전체의 집합에서 미분가능한 함수 $f(x)$ 가 모든 양수 $x$ , $y$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "f(x y)=x f(y)+y f(x)"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시키고 $f'(1)=2$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1388,
+  "id": "최고난도500(3)-086",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "삼각함수의 덧셈정리와 극한 — f(x+h)f(x−h)−f(x)²의 극한이 상수가 될 조건",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "모든 실수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "\\lim_{h \\to 0}\\frac{f(x+h)f(x-h)-\\left\\{f(x)\\right\\}^{2}}{h^{2}}=-25"
+   },
+   {
+    "t": "p",
+    "s": "이고 $f(0)=4$ , $f'(0)>0$ 일 때, $\\left\\{f \\left(\\frac{\\pi}{4}\\right)\\right\\}^{2}=\\frac{q}{p}$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1389,
+  "id": "최고난도500(3)-087",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "합성함수의 미분 — g(x)=f(ln x)의 접선의 y절편이 (ln t)³인 삼차함수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "삼차함수 $f(x)$ 에 대하여 함수 $g(x)=f(\\ln x)$ $(x>0)$ 이 있다."
+   },
+   {
+    "t": "p",
+    "s": "모든 양수 $t$ 에 대하여 곡선 $y=g(x)$ 위의 점 $(t,\\,g(t))$ 에서의 접선의 $y$ 절편이 $(\\ln t)^{3}$ 일 때, $g(e)+g \\left(e^{2}\\right)$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1390,
+  "id": "최고난도500(3)-088",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "역함수의 미분 — 빛이 도착하는 시각으로 본 겉보기 속력(초광속처럼 보이는 운동)",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "빛의 속력을 $1$ 로 하는 단위를 쓰자."
+   },
+   {
+    "t": "p",
+    "s": "좌표평면의 원점 $\\mathrm{O}$ 에 관측자가 있고, 천체 $\\mathrm{S}$ 가 직선 $y=1$ 위를 일정한 속력 $\\frac{4}{5}$ 로 움직여 시각 $\\tau$ 에서의 위치가 $\\left(\\frac{4}{5}\\tau,\\,1 \\right)$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1391,
+  "id": "최고난도500(3)-089",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "지수·삼각함수의 극한 — 1^∞ 꼴 두 극한의 곱",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 극한값"
+   },
+   {
+    "t": "eq",
+    "tex": "A=\\lim_{x \\to 0}(\\cos 7 x)^{\\frac{1}{x^{2}}},\\,\\,\\,B=\\lim_{x \\to \\frac{\\pi}{2}}(\\sin x)^{\\tan^{2}x}"
+   },
+   {
+    "t": "p",
+    "s": "에 대하여 $A B=e^{-k}$ 일 때, 상수 $k$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1392,
+  "id": "최고난도500(3)-090",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "합성함수의 미분 — 골목에 엇갈려 세운 두 사다리의 교차 높이(실생활)",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "폭이 $w$ 인 골목의 양쪽 벽의 아래 끝에서 길이가 각각 $5$ , $3 \\sqrt{2}$ 인 두 사다리를 맞은편 벽에 기대어 세웠더니, 두 사다리가 바닥으로부터 높이 $h$ 인 곳에서 엇갈렸다."
+   },
+   {
+    "t": "p",
+    "s": "골목의 폭 $w$ 가 변할 때 $h$ 를 $w$ 의 함수로 보자."
+   }
+  ]
+ },
+ {
+  "num": 1393,
+  "id": "최고난도500(3)-091",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "삼각함수의 미분 — 원을 바라보는 두 접선 사이의 각의 변화율",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 $t$ 에 대하여 점 $\\mathrm{P}(t,\\,0)$ 에서 원 $x^{2}+(y-2)^{2}=1$ 에 그은 두 접선이 이루는 각의 크기를 $\\theta(t)$ $(0<\\theta(t)<\\pi)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$\\left\\{\\theta'(1)\\right\\}^{2}+\\left\\{\\theta' \\left(\\sqrt{6}\\right)\\right\\}^{2}=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1394,
+  "id": "최고난도500(3)-092",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "몫의 미분 — 곡선 y=1/x의 법선이 곡선과 다시 만나는 점",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "곡선 $y=\\frac{1}{x}$ 위의 점 $\\mathrm{P}\\left(\\sqrt{2},\\,\\frac{1}{\\sqrt{2}}\\right)$ 을 지나고 점 $\\mathrm{P}$ 에서의 접선에 수직인 직선이 곡선 $y=\\frac{1}{x}$ 와 만나는 점 중 $\\mathrm{P}$ 가 아닌 점을 $\\mathrm{Q}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "삼각형 $\\mathrm{OPQ}$ 의 넓이가 $\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1395,
+  "id": "최고난도500(3)-093",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "합성함수의 미분과 이계도함수 — sin(πe^x)의 임계점에서의 부호",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $g(x)=\\sin \\left(\\pi e^{x}\\right)$ 에 대하여 열린구간 $(0,\\,\\ln 5)$ 에서 $g'(x)=0$ 인 모든 $x$ 의 값을 $x_{1}$ , $x_{2}$ , $\\cdots$ , $x_{n}$ 이라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$-\\frac{1}{\\pi^{2}}\\sum_{i=1}^{n}g''(x_{i})$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1396,
+  "id": "최고난도500(3)-094",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "삼각함수의 덧셈정리와 미분 — 등간격 각의 cos⁴ 합이 상수가 되는 조건",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$2$ 이상의 자연수 $n$ 에 대하여 함수 $f_{n}(x)$ 를"
+   },
+   {
+    "t": "eq",
+    "tex": "f_{n}(x)=\\sum_{k=0}^{n-1}\\cos^{4}\\left(x+\\frac{2 k \\pi}{n}\\right)"
+   },
+   {
+    "t": "p",
+    "s": "라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1397,
+  "id": "최고난도500(3)-095",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "음함수의 미분 — 렌즈 공식에서 상의 배율의 변화율(실생활)",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "초점거리가 $10$ 인 볼록렌즈에서 물체까지의 거리를 $a$ , 상까지의 거리를 $b$ 라 하면 $\\frac{1}{a}+\\frac{1}{b}=\\frac{1}{10}$ 이 성립하고, 상의 배율은 $m=\\frac{b}{a}$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "물체가 렌즈 쪽으로 매초 $2$ 씩 다가오고 있다( $a$ 가 매초 $2$ 씩 감소한다). $a=30$ 인 순간 배율 $m$ 의 시간에 대한 변화율이 $\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1398,
+  "id": "최고난도500(3)-096",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "매개변수 미분과 덧셈정리 — 아르키메데스 나선의 접선과 동경이 이루는 각",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "매개변수 $t$ $(t>0)$ 로 나타낸 곡선 $x=t \\cos t$ , $y=t \\sin t$ 위의 점 $\\mathrm{P}$ 에서의 접선과 직선 $\\mathrm{OP}$ 가 이루는 예각의 크기를 $\\psi(t)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$\\psi'(1)+\\tan \\psi(2)=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1399,
+  "id": "최고난도500(3)-097",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "몫의 미분과 합성함수의 미분 — 조명의 높이에 따른 바닥의 밝기(실생활)",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "바닥 위의 점 $\\mathrm{A}$ 로부터 수평 거리가 $1$ 인 곳에 세운 기둥에 전등을 높이 $h$ 로 달았다."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{A}$ 에서의 밝기는 전등까지의 거리의 제곱에 반비례하고, 빛이 바닥과 이루는 각의 사인값에 비례하여 $I(h)=\\frac{h}{\\left(h^{2}+1 \\right)^{\\frac{3}{2}}}$ 로 나타난다고 하자."
+   }
+  ]
+ },
+ {
+  "num": 1400,
+  "id": "최고난도500(3)-098",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "로그함수의 미분 — 접선과 법선이 y축과 만드는 삼각형에서 로그가 사라짐",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "곡선 $y=\\ln x$ 위의 점 $\\mathrm{P}(t,\\,\\ln t)$ 에서의 접선과, 점 $\\mathrm{P}$ 를 지나고 이 접선에 수직인 직선이 $y$ 축과 만나는 점을 각각 $\\mathrm{A}$ , $\\mathrm{B}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "삼각형 $\\mathrm{PAB}$ 의 넓이를 $S(t)$ 라 할 때, $S(t)=15$ 를 만족시키는 $t$ 에 대하여 $S'(t)$ 와 점 $\\mathrm{P}$ 에서의 접선의 기울기의 곱은 $\\frac{q}{p}$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1401,
+  "id": "최고난도500(3)-099",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "음함수(역함수)의 미분 — f(x)³+f(x)=x로 정의된 함수의 합성",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 전체의 집합에서 미분가능한 함수 $f(x)$ 가 모든 실수 $x$ 에 대하여 $\\left\\{f(x)\\right\\}^{3}+f(x)=x$ 를 만족시킨다."
+   },
+   {
+    "t": "p",
+    "s": "함수 $g(x)=f(x+8 f(x))$ 에 대하여 $g'(2)=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1402,
+  "id": "최고난도500(3)-100",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "삼각함수의 미분 — 곡선 y=(sin x)/x와 y=1/x가 만나는 점은 모두 접점",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$x>0$ 에서 두 곡선 $y=\\frac{\\sin x}{x}$ , $y=\\frac{1}{x}$ 가 만나는 점을 $x$ 좌표가 작은 것부터 차례로 $\\mathrm{P}_{1}$ , $\\mathrm{P}_{2}$ , $\\mathrm{P}_{3}$ , $\\cdots$ 이라 하자."
+   },
+   {
+    "t": "p",
+    "s": "세 점 $\\mathrm{P}_{1}$ , $\\mathrm{P}_{2}$ , $\\mathrm{P}_{3}$ 에서 곡선 $y=\\frac{\\sin x}{x}$ 에 그은 접선이 $x$ 축과 만나는 점의 $x$ 좌표의 합이 $k \\pi$ 일 때, $k$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1403,
+  "id": "최고난도500(3)-101",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "그래프 개형 — 가우스 기호를 씌운 함수의 불연속점 개수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양수 $k$ 에 대하여 함수 $f(x)=k x e^{\\frac{1-x^{2}}{2}}$ 이 있다."
+   },
+   {
+    "t": "p",
+    "s": "실수 $x$ 에 대하여 $\\left[x \\right]$ 는 $x$ 보다 크지 않은 최대의 정수일 때, 함수 $g(x)=\\left[f(x)\\right]$ 가 불연속인 $x$ 의 개수를 $h(k)$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1404,
+  "id": "최고난도500(3)-102",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "평균값 정리를 만족시키는 c의 개수와 tan t = t",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양수 $t$ 에 대하여 $0<c<t$ 이고"
+   },
+   {
+    "t": "eq",
+    "tex": "\\frac{\\sin t}{t}=\\cos c"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시키는 실수 $c$ 의 개수를 $N(t)$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1405,
+  "id": "최고난도500(3)-103",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "원점을 지나는 접선의 접점이 이루는 수열의 극한",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "이 점의 $x$ 좌표를 $t_{n}$ 이라 할 때,"
+   },
+   {
+    "t": "eq",
+    "tex": "\\lim_{n \\to \\infty}100 n \\pi \\left(n \\pi+\\frac{\\pi}{4}-t_{n}\\right)"
+   },
+   {
+    "t": "p",
+    "s": "의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1406,
+  "id": "최고난도500(3)-104",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "방정식의 실근 — 지수함수와 로그함수의 교점 개수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$1$ 이 아닌 양수 $a$ 에 대하여 두 곡선 $y=a^{x}$ , $y=\\log_{a}x$ 가 만나는 서로 다른 점의 개수를 $N(a)$ 라 하자."
+   },
+   {
+    "t": "eq",
+    "tex": "\\sum_{k=1}^{20}\\left\\{N \\left(e^{\\frac{k}{40}}\\right)+N \\left(e^{-\\frac{k}{4}}\\right)\\right\\}"
+   },
+   {
+    "t": "p",
+    "s": "의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1407,
+  "id": "최고난도500(3)-105",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "최단 시간 경로(굴절)와 최솟값 함수의 미분",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면에서 $x$ 축의 위쪽은 모래밭이고 아래쪽은 물이다."
+   },
+   {
+    "t": "p",
+    "s": "한 구조대원은 모래밭에서 매초 $4$ , 물에서 매초 $3$ 의 일정한 속력으로 움직인다."
+   }
+  ]
+ },
+ {
+  "num": 1408,
+  "id": "최고난도500(3)-106",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "방정식 f(x)=f(t)의 실근의 개수와 불연속점",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 $t$ 에 대하여 $x$ 에 대한 방정식 $f(x)=f(t)$ 의 서로 다른 실근의 개수를 $g(t)$ 라 할 때, 함수 $g(t)$ 는 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 함수 $g(t)$ 가 불연속인 실수 $t$ 의 개수는 $3$ 이다.",
+     "(나) $g(t)=2$ 를 만족시키는 실수 $t$ 의 최댓값은 $3$ 이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$\\sum_{n=-3}^{4}g(n)+e^{3}\\times f(3)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1409,
+  "id": "최고난도500(3)-107",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "두 지수함수 중 큰 값으로 정의된 함수의 미분가능성",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 $k$ 에 대하여 함수 $g(x)$ 를 두 수 $e^{x}$ , $e^{2 x}-k$ 중 작지 않은 값으로 정의하고, 함수 $g(x)$ 가 미분가능하지 않은 $x$ 의 개수를 $h(k)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "함수 $h(k)$ 가 불연속인 $k$ 의 개수를 $m$ 이라 할 때, $10 m+\\sum_{n=-4}^{4}h \\left(\\frac{n}{8}\\right)$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1410,
+  "id": "최고난도500(3)-108",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "변곡점에서의 두 접선과 극값의 개수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양수 $a$ 와 실수 $b$ 에 대하여 함수 $f(x)=\\ln(x^{2}+a)+b x$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 곡선 $y=f(x)$ 의 두 변곡점에서의 접선은 서로 수직이다.",
+     "(나) 함수 $f(x)$ 가 극값을 갖는 $x$ 의 개수는 $1$ 이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$e^{f(9)}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1411,
+  "id": "최고난도500(3)-109",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "평면 운동 — 크랭크와 피스톤의 속도와 가속도",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위를 움직이는 점 $\\mathrm{P}$ 의 시각 $t$ 에서의 위치는 $(\\cos t,\\,\\sin t)$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{Q}$ 는 $x$ 축 위를 움직이고, 모든 시각 $t$ 에서 점 $\\mathrm{Q}$ 의 $x$ 좌표는 $\\cos t$ 보다 크며 $\\overline{\\mathrm{PQ}}=2$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1412,
+  "id": "최고난도500(3)-110",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "역함수 관계인 두 곡선 사이의 최단 거리와 그 최댓값",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양수 $k$ 에 대하여 함수 $f(x)=e^{k x}$ 의 역함수를 $g(x)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$k>\\frac{1}{e}$ 일 때, 곡선 $y=f(x)$ 위의 점과 곡선 $y=g(x)$ 위의 점 사이의 거리의 최솟값을 $D(k)$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1413,
+  "id": "최고난도500(3)-111",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "y축 위의 점에서 종 모양 곡선에 그은 접선의 개수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $f(x)=e^{-x^{2}}$ 이 있다."
+   },
+   {
+    "t": "p",
+    "s": "실수 $t$ 에 대하여 점 $(0,\\,t)$ 를 지나고 곡선 $y=f(x)$ 에 접하는 서로 다른 직선의 개수를 $g(t)$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1414,
+  "id": "최고난도500(3)-112",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "실생활 — 로지스틱 모형의 증가 속도가 최대인 순간",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "어느 호수에 사는 물고기의 수를 시각 $t$ $(t \\ge 0)$ 에서 $P(t)$ 라 할 때, 세 양수 $K$ , $A$ , $r$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "P(t)=\\frac{K}{1+A e^{-r t}}"
+   },
+   {
+    "t": "p",
+    "s": "로 나타낼 수 있다고 하자."
+   }
+  ]
+ },
+ {
+  "num": 1415,
+  "id": "최고난도500(3)-113",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "음함수로 나타낸 곡선의 수평 접선과 원점에서의 거리",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "곡선 $C:\\,\\left(x^{2}+y^{2}\\right)^{2}=2 \\left(x^{2}-y^{2}\\right)$ 위의 점 중 원점이 아니고 그 점에서의 접선이 $x$ 축과 평행한 점은 네 개이다."
+   },
+   {
+    "t": "p",
+    "s": "이 네 점을 꼭짓점으로 하는 사각형의 넓이를 $S$ , 곡선 $C$ 위의 점과 원점 사이의 거리의 최댓값을 $d$ 라 할 때, $20 \\left(S^{2}+d^{2}\\right)$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1416,
+  "id": "최고난도500(3)-114",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "평면 운동 — 서로 수직인 두 접선의 교점이 그리는 곡선",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "시각 $t$ $(t>0)$ 에서 곡선 $y=e^{x}$ 위의 점 $(t,\\,e^{t})$ 에서의 접선과 곡선 $y=e^{-x}$ 위의 점 $(t,\\,e^{-t})$ 에서의 접선이 만나는 점을 $\\mathrm{Q}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{Q}$ 의 속력이 $\\frac{3}{5}$ 인 시각을 $t_{0}$ 이라 하고, 시각 $t_{0}$ 에서 점 $\\mathrm{Q}$ 의 $y$ 좌표를 $Y$ 라 할 때, $100 \\left(Y+\\frac{3}{5}\\right)+e^{2 t_{0}}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1417,
+  "id": "최고난도500(3)-115",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "부등식 — k^n과 n^k의 대소와 ln x/x의 그래프",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 1,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "자연수 $n$ 에 대하여 $20$ 이하의 자연수 $k$ 중 $k^{n}>n^{k}$ 를 만족시키는 $k$ 의 개수를 $a_{n}$ 이라 할 때, $\\sum_{n=1}^{20}a_{n}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1418,
+  "id": "최고난도500(3)-116",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "변곡점의 개수와 극값의 개수 — 접하는 두 경계",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 $t$ 에 대하여 함수 $f(x)=e^{x}+t x^{3}$ 의 그래프의 변곡점의 개수를 $I(t)$ , 함수 $f(x)$ 가 극값을 갖는 $x$ 의 개수를 $J(t)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$\\sum_{k=-8}^{2}\\left\\{I \\left(\\frac{k}{10}\\right)+J \\left(\\frac{k}{10}\\right)\\right\\}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1419,
+  "id": "최고난도500(3)-117",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "변곡점에서의 두 접선 — 수평인 접선과 원점을 지나는 접선",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 상수 $a$ , $b$ 에 대하여 함수 $f(x)=(x^{2}+a x+b)e^{-x}$ 이 있다."
+   },
+   {
+    "t": "p",
+    "s": "곡선 $y=f(x)$ 의 변곡점은 두 개이고, 한 변곡점에서의 접선은 $x$ 축과 평행하며 다른 한 변곡점에서의 접선은 원점을 지난다."
+   }
+  ]
+ },
+ {
+  "num": 1420,
+  "id": "최고난도500(3)-118",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "극대·극소의 위치와 변곡점으로 정해지는 함수",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 상수 $a$ , $b$ 에 대하여 $x>0$ 에서 정의된 함수 $f(x)=x+\\frac{a}{x}+b \\ln x$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 함수 $f(x)$ 는 $x=\\alpha$ 에서 극대, $x=\\beta$ 에서 극소이고 $\\beta=4 \\alpha$ 이다.",
+     "(나) 곡선 $y=f(x)$ 의 변곡점의 $x$ 좌표는 $1$ 이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$f(\\alpha)-f(\\beta)=p+q \\ln 2$ 일 때, $4(q-p)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1421,
+  "id": "최고난도500(3)-119",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "방정식 f(x)=t의 실근의 개수 — 숨은 경우 a≥1",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 7,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 $t$ 에 대하여 $x$ 에 대한 방정식 $f(x)=t$ 의 서로 다른 실근의 개수를 $g(t)$ 라 할 때, 함수 $g(t)$ 는 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $g(t)=3$ 을 만족시키는 실수 $t$ 가 존재하지 않는다.",
+     "(나) 함수 $g(t)$ 가 불연속인 $t$ 의 개수는 $3$ 이다.",
+     "(다) 함수 $g(t)$ 가 불연속인 $t$ 의 값 중 가장 작은 값은 $-1$ 이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$\\sum_{n=-11}^{2}g \\left(\\frac{n}{10}\\right)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1422,
+  "id": "최고난도500(3)-120",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "변곡점이 원점인 함수와 세 실근을 갖는 조건",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 상수 $a$ , $b$ 에 대하여 함수 $f(x)=e^{x}+a e^{-x}+b x$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 곡선 $y=f(x)$ 의 변곡점은 원점이다.",
+     "(나) 함수 $f(x)$ 는 $x=\\alpha$ 에서 극대, $x=\\beta$ 에서 극소이고 $\\beta-\\alpha=2 \\ln 2$ 이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "함수 $f(x)$ 의 극댓값이 $p+q \\ln 2$ 이고, 방정식 $f(x)=\\frac{n}{10}$ 이 서로 다른 세 실근을 갖도록 하는 정수 $n$ 의 개수가 $k$ 일 때, $k+10(p+q)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1423,
+  "id": "최고난도500(3)-121",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "누적 최댓값 함수의 미분가능성",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $f(x)=x+2 \\sin x$ 에 대하여 양수 $t$ 일 때, 닫힌구간 $[0,\\,t]$ 에서 함수 $f(x)$ 의 최댓값을 $M(t)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "열린구간 $(0,\\,10 \\pi)$ 에서 함수 $M(t)$ 가 미분가능하지 않은 $t$ 의 개수를 $p$ 라 하고, $q=\\sum_{k=1}^{30}M' \\left(\\frac{k \\pi}{3}\\right)$ 라 할 때, $p+q$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1424,
+  "id": "최고난도500(3)-122",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "두 점에서 접하는 직선 — 일차식을 빼서 드러나는 대칭",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $f(x)=x^{2}+4 e^{-x^{2}+2 x-1}$ 에 대하여 곡선 $y=f(x)$ 에 서로 다른 두 점에서 접하는 직선은 오직 하나 존재한다."
+   },
+   {
+    "t": "p",
+    "s": "이 직선을 $y=m x+n$ , 두 접점의 $x$ 좌표를 $\\alpha$ , $\\beta$ $(\\alpha<\\beta)$ 라 할 때, $3 m+e^{n}+e^{\\frac{(\\beta-\\alpha)^{2}}{2}}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1425,
+  "id": "최고난도500(3)-123",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "롤의 정리와 근과 계수의 관계 — 극점의 개수와 합",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "자연수 $n$ 에 대하여 함수"
+   },
+   {
+    "t": "eq",
+    "tex": "f_{n}(x)=(x-1)(x-2)\\cdots(x-n)e^{-x}"
+   },
+   {
+    "t": "p",
+    "s": "이 극값을 갖는 $x$ 의 개수를 $a_{n}$ , 극값을 갖는 모든 $x$ 의 값의 합을 $b_{n}$ 이라 할 때, $\\sum_{n=1}^{10}(a_{n}+b_{n})$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1426,
+  "id": "최고난도500(3)-124",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "실생활 — 조각상을 가장 크게 보는 위치와 시각의 변화율",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면에서 두 점 $\\mathrm{A}(0,\\,1)$ , $\\mathrm{B}(0,\\,4)$ 는 각각 받침대 위에 놓인 조각상의 아래 끝과 위 끝을 나타낸다."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{P}$ 는 $x$ 축 위를 움직이고 시각 $t$ $(t>0)$ 에서의 위치는 $(t,\\,0)$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1427,
+  "id": "최고난도500(3)-125",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "실생활 — 비탈면 위로 던진 공의 최대 도달 거리",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면에서 원점에 있는 공을 $x$ 축의 양의 방향과 이루는 각의 크기가 $\\alpha$ $\\left(\\frac{\\pi}{6}<\\alpha<\\frac{\\pi}{2}\\right)$ 인 방향으로 던지면 시각 $t$ 에서 공의 위치는 $(15 t \\cos \\alpha,\\,15 t \\sin \\alpha-5 t^{2})$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "원점을 지나는 비탈면 $y=\\frac{x}{\\sqrt{3}}$ $(x \\ge 0)$ 위에 공이 떨어지는 점과 원점 사이의 거리를 $R(\\alpha)$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1428,
+  "id": "최고난도500(3)-126",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "로그함수의 접선이 좌표축과 만드는 삼각형 — 내분비와 두 경우",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$e$ 가 아닌 양수 $t$ 에 대하여 곡선 $y=\\ln x$ 위의 점 $\\mathrm{P}(t,\\,\\ln t)$ 에서의 접선이 $x$ 축, $y$ 축과 만나는 점을 각각 $\\mathrm{A}$ , $\\mathrm{B}$ 라 하고, 삼각형 $\\mathrm{OAB}$ 의 넓이를 $S(t)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "( $\\mathrm{O}$ 는 원점이다.) $0<t<e$ 에서 $S(t)$ 의 최댓값을 $M$ 이라 하고, $\\overline{\\mathrm{AP}}:\\overline{\\mathrm{PB}}=2:1$ 이 되도록 하는 모든 $t$ 에 대하여 $S(t)$ 의 값을 모두 곱한 값을 $\\pi$ 라 할 때, $e M+4 \\pi$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1429,
+  "id": "최고난도500(3)-127",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "원점을 지나는 접선의 개수 — 황금비가 만드는 경계",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $T(a)$ 가 불연속인 $a$ 의 값을 작은 것부터 차례로 $\\alpha$ , $\\beta$ , $\\gamma$ 라 할 때,"
+   },
+   {
+    "t": "eq",
+    "tex": "\\sum_{k=-12}^{1}T(k)+(\\gamma-\\alpha)^{2}"
+   },
+   {
+    "t": "p",
+    "s": "의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1430,
+  "id": "최고난도500(3)-128",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "삼각함수의 합성함수가 극값을 갖는 점의 개수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "자연수 $n$ 에 대하여 열린구간 $(0,\\,2 \\pi)$ 에서 두 함수"
+   },
+   {
+    "t": "eq",
+    "tex": "f(x)=\\sin(n \\pi \\sin x),\\,\\,\\,g(x)=\\cos(n \\pi \\sin x)"
+   },
+   {
+    "t": "p",
+    "s": "가 극값을 갖는 $x$ 의 개수를 각각 $a_{n}$ , $b_{n}$ 이라 할 때, $\\sum_{n=1}^{10}(a_{n}+b_{n})$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1431,
+  "id": "최고난도500(3)-129",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "극값의 개수가 바뀌는 경계값의 곱 — 근과 계수의 관계",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $g(a)$ 가 불연속인 $a$ 의 값 중 양수인 것을 모두 곱한 값을 $P$ 라 할 때,"
+   },
+   {
+    "t": "eq",
+    "tex": "\\sum_{k=-3}^{5}g(k)+400 e P"
+   },
+   {
+    "t": "p",
+    "s": "의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1432,
+  "id": "최고난도500(3)-130",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "한 점에서 그을 수 있는 법선의 개수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 $b$ 에 대하여 점 $(3,\\,b)$ 를 지나고 곡선 $y=\\ln x$ 위의 어떤 점에서의 접선과 그 점에서 수직인 직선(법선)의 개수를 $N(b)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$N(b)=3$ 이 되도록 하는 $b$ 의 값의 범위가 $\\beta_{1}<b<\\beta_{2}$ 일 때, $e^{3+4(\\beta_{1}-\\beta_{2})}+N(\\beta_{1})+N(\\beta_{2})$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1433,
+  "id": "최고난도500(3)-131",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "함수 x^x의 그래프와 한 점을 지나는 직선",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$x>0$ 에서 정의된 함수 $f(x)=x^{x}$ 이 있다."
+   },
+   {
+    "t": "p",
+    "s": "실수 $k$ 에 대하여 점 $(1,\\,1)$ 을 지나고 기울기가 $k$ 인 직선과 곡선 $y=f(x)$ 가 만나는 서로 다른 점의 개수를 $n(k)$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1434,
+  "id": "최고난도500(3)-132",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "평균값 정리를 만족시키는 c의 극한 — 부등식으로 끼우기",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양수 $t$ 에 대하여 닫힌구간 $[0,\\,t]$ 에서 함수 $f(x)=e^{x}$ 에 대한 평균값 정리를 만족시키는 $c$ 의 값을 $c(t)$ 라 하자."
+   },
+   {
+    "t": "eq",
+    "tex": "\\alpha=\\lim_{t \\to 0+}\\frac{c(t)}{t},\\,\\,\\,\\beta=\\lim_{t \\to \\infty}\\frac{t-c(t)}{\\ln t}"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $100 \\alpha+10 \\beta$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1435,
+  "id": "최고난도500(3)-133",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "삼각함수의 합성함수 방정식의 실근의 개수 — 안쪽 값의 범위",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $f(x)=2 \\sin x$ 에 대하여 실수 $k$ 에 대하여 $0 \\le x<2 \\pi$ 에서 $x$ 에 대한 방정식 $f(f(x))=k$ 의 서로 다른 실근의 개수를 $N(k)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$N(k)=3$ 을 만족시키는 실수 $k$ 의 개수를 $m$ 이라 할 때, $10 m+\\sum_{n=-20}^{20}N \\left(\\frac{n}{10}\\right)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1436,
+  "id": "최고난도500(3)-134",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "sin^n x+cos^n x가 극값을 갖는 점의 개수",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 1,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$3$ 이상의 자연수 $n$ 에 대하여 열린구간 $(0,\\,2 \\pi)$ 에서 함수 $f(x)=\\sin^{n}x+\\cos^{n}x$ 가 극값을 갖는 $x$ 의 개수를 $g(n)$ 이라 할 때, $\\sum_{n=3}^{13}g(n)$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1437,
+  "id": "최고난도500(3)-135",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "부등식이 항상 성립할 조건 — 지수와 계수의 부호에 따른 네 경우",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$-5$ 이상 $5$ 이하의 두 정수 $a$ , $b$ $(a \\ne 0)$ 에 대하여 모든 양수 $x$ 에 대하여 부등식 $x^{a}\\ge b \\ln x$ 가 성립하도록 하는 순서쌍 $(a,\\,b)$ 의 개수를 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "(단, $2.71<e<2.72$ 이다.) [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1438,
+  "id": "최고난도500(3)-136",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "두 극점 사이의 거리와 극대의 위치로 정해지는 함수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0$ 이 아닌 실수 $a$ 에 대하여 함수 $f(x)=(a x+1)e^{-x^{2}}$ 이 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 함수 $f(x)$ 가 극값을 갖는 두 점의 $x$ 좌표의 차는 $\\frac{3}{2}$ 이다.",
+     "(나) 함수 $f(x)$ 가 극대가 되는 $x$ 의 값은 양수이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "함수 $f(x)$ 의 극댓값을 $M$ , 극솟값을 $m$ 이라 할 때, $10 \\left(e^{\\frac{1}{4}}M \\right)^{2}+100 e \\left|m \\right|$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1439,
+  "id": "최고난도500(3)-137",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "함수열 x^n ln x — 극소점과 변곡점이 1로 모여드는 속도의 비교",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$2$ 이상의 자연수 $n$ 에 대하여 $x>0$ 에서 정의된 함수 $f_{n}(x)=x^{n}\\ln x$ 는 $x=q_{n}$ 에서 극솟값 $a_{n}$ 을 갖고, 곡선 $y=f_{n}(x)$ 의 변곡점의 좌표는 $(p_{n},\\,b_{n})$ 이다."
+   },
+   {
+    "t": "eq",
+    "tex": "\\alpha=\\lim_{n \\to \\infty}\\frac{b_{n}}{a_{n}},\\,\\,\\,\\beta=\\lim_{n \\to \\infty}n(q_{n}-p_{n})"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $50 e \\alpha+10 \\beta$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1440,
+  "id": "최고난도500(3)-138",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "극값을 갖지 않을 조건과 변곡점",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 실수 $a$ , $b$ 에 대하여 함수 $f(x)=e^{x}-a x^{2}-b x$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 곡선 $y=f(x)$ 의 변곡점의 $x$ 좌표는 $\\ln 4$ 이다.",
+     "(나) 함수 $f(x)$ 는 극값을 갖지 않는다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$b$ 가 최댓값을 가질 때, $f(\\ln 4)=p+q \\ln 2+r(\\ln 2)^{2}$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1441,
+  "id": "최고난도500(3)-139",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "극값의 부호로 정해지는 지수와 변곡점의 위치",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0$ 이 아닌 실수 $a$ 에 대하여 $x>0$ 에서 정의된 함수 $f(x)=\\frac{\\ln x}{x^{a}}$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 함수 $f(x)$ 의 극값의 절댓값은 $\\frac{1}{2 e}$ 이다.",
+     "(나) 곡선 $y=f(x)$ 의 변곡점의 $x$ 좌표는 $1$ 보다 작다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "곡선 $y=f(x)$ 의 변곡점의 $y$ 좌표를 $k$ 라 할 때, $20 a^{2}+4 e^{3}\\left|k \\right|$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1442,
+  "id": "최고난도500(3)-140",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "실생활 — 회전하는 등대 빛이 해안선을 비추는 점의 속도",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면에서 $x$ 축은 곧은 해안선이고 점 $\\mathrm{L}(0,\\,2)$ 에 등대가 있다."
+   },
+   {
+    "t": "p",
+    "s": "등대의 빛이 해안선을 비추는 점을 $\\mathrm{P}$ 라 할 때, 시각 $t$ $(0<t<2 \\pi)$ 에서 직선 $\\mathrm{LP}$ 와 $y$ 축의 음의 방향이 이루는 각의 크기는 $\\frac{t}{4}$ 이고 점 $\\mathrm{P}$ 의 $x$ 좌표는 양수이다."
+   }
+  ]
+ },
+ {
+  "num": 1443,
+  "id": "최고난도500(3)-141",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "극점의 자취 — 매개변수를 소거한 곡선에서 빠지는 두 점",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 $t$ 에 대하여 함수 $f(x)=e^{x}-t x^{2}$ 이 $x=p$ 에서 극값 $q$ 를 가질 때, 이러한 점 $(p,\\,q)$ 를 모든 실수 $t$ 에 대하여 모은 집합을 $S$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "실수 $k$ 에 대하여 직선 $y=k$ 와 집합 $S$ 가 만나는 점의 개수를 $h(k)$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1444,
+  "id": "최고난도500(3)-142",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "방정식 e^x=x^n의 실근의 개수 — 정수 지수 전체",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "정수 $n$ 에 대하여 $x$ 에 대한 방정식 $e^{x}=x^{n}$ 의 서로 다른 실근의 개수를 $a_{n}$ 이라 하자."
+   },
+   {
+    "t": "p",
+    "s": "(단, $x^{n}$ 은 $n \\le 0$ 일 때 $x \\ne 0$ 에서만 정의된다.) $\\sum_{n=-10}^{10}a_{n}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1445,
+  "id": "최고난도500(3)-143",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "원점을 지나는 접선이 정확히 두 개일 조건 — 세 경우",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "이 직선과 곡선의 접점의 $x$ 좌표를 $p$ 라 할 때,"
+   },
+   {
+    "t": "eq",
+    "tex": "a+\\frac{1}{a}+\\left(a-\\frac{1}{a}\\right)^{2}+\\left(m e^{-p}-2 \\right)^{2}"
+   },
+   {
+    "t": "p",
+    "s": "의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1446,
+  "id": "최고난도500(3)-144",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "삼각함수에 대한 부등식이 항상 성립할 최적의 상수",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0<x \\le \\frac{\\pi}{2}$ 인 모든 실수 $x$ 에 대하여 두 부등식"
+   },
+   {
+    "t": "eq",
+    "tex": "a x \\le \\sin x,\\,\\,\\,\\cos x \\le 1-b x^{2}"
+   },
+   {
+    "t": "p",
+    "s": "이 성립하도록 하는 실수 $a$ 의 최댓값을 $\\alpha$ , 실수 $b$ 의 최댓값을 $\\beta$ 라 할 때, $10 \\pi \\alpha+\\pi^{2}\\beta$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1447,
+  "id": "최고난도500(3)-145",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "방정식 xe^{-x}=t의 두 근의 극한 — 로그로 되먹임",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0<t<\\frac{1}{e}$ 인 실수 $t$ 에 대하여 $x$ 에 대한 방정식 $x e^{-x}=t$ 의 두 실근을 $\\alpha(t)$ , $\\beta(t)$ $(\\alpha(t)<\\beta(t))$ 라 하자."
+   },
+   {
+    "t": "eq",
+    "tex": "p=\\lim_{t \\to 0+}\\frac{\\alpha(t)}{t},\\,\\,\\,q=\\lim_{t \\to 0+}\\frac{\\beta(t)+\\ln t}{\\ln(-\\ln t)}"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $200 p+10 q$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1448,
+  "id": "최고난도500(3)-146",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "실생활 — 보트와 걷기로 강을 건너는 최소 시간",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면에서 $0 \\le y \\le 3$ 인 부분은 강이다."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{A}(0,\\,0)$ 에서 보트를 타고 매초 $3$ 의 속력으로 직선 경로를 따라 강을 건너 직선 $y=3$ 위의 한 점에 내린 뒤, 그 직선을 따라 매초 $5$ 의 속력으로 걸어서 점 $\\mathrm{B}(d,\\,3)$ $(d>0)$ 에 도착하려고 한다."
+   }
+  ]
+ },
+ {
+  "num": 1449,
+  "id": "최고난도500(3)-147",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "극댓값·극솟값을 매개변수의 함수로 미분하기 — 극점에서 사라지는 항",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$t>-1$ 인 실수 $t$ 에 대하여 함수 $f(x)=\\left(x^{2}-t \\right)e^{-x}$ 의 극댓값을 $M(t)$ , 극솟값을 $m(t)$ 라 하자."
+   },
+   {
+    "t": "eq",
+    "tex": "100 e^{2}M'(3)m'(3)+\\frac{m(8)}{m'(8)}-\\frac{M(8)}{M'(8)}"
+   },
+   {
+    "t": "p",
+    "s": "의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1450,
+  "id": "최고난도500(3)-148",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "거듭제곱함수와 로그함수의 그래프가 오직 한 점에서 만날 조건",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 1,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$-5$ 이상 $5$ 이하의 두 정수 $n$ , $c$ $(n \\ne 0)$ 에 대하여 두 곡선 $y=x^{n}$ $(x>0)$ , $y=\\ln x+c$ 가 오직 한 점에서 만나도록 하는 순서쌍 $(n,\\,c)$ 의 개수를 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1451,
+  "id": "최고난도500(3)-149",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "접선이 곡선과 다시 만나는 점의 반복 — 탄젠트의 배각으로 드러나는 주기",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "자연수 $n$ 에 대하여 점 $\\mathrm{P}_{n-1}$ 에서의 곡선 $C$ 의 접선이 곡선 $C$ 와 만나는 점 중 $\\mathrm{P}_{n-1}$ 이 아닌 점을 $\\mathrm{P}_{n}$ 이라 하고, 점 $\\mathrm{P}_{n}$ 의 $x$ 좌표를 $x_{n}$ 이라 하자."
+   },
+   {
+    "t": "eq",
+    "tex": "\\left(\\sum_{n=1}^{9}x_{n}\\right)^{2}+\\left(x_{1}x_{2}x_{3}\\right)^{2}"
+   },
+   {
+    "t": "p",
+    "s": "의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1452,
+  "id": "최고난도500(3)-150",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "극값의 개수 함수 — 분리한 함수의 세 갈래",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 $a$ 에 대하여 함수 $f(x)=x^{2}e^{-x}+a x$ 가 극값을 갖는 $x$ 의 개수를 $g(a)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "함수 $g(a)$ 가 불연속인 $a$ 의 개수를 $k$ 라 할 때, $10 k+\\sum_{n=-5}^{2}g \\left(\\frac{n}{10}\\right)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1453,
+  "id": "최고난도500(3)-151",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "치환적분 — 점대칭 삼차함수의 역함수의 제곱의 적분",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 8,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "최고차항의 계수가 $1$ 인 삼차함수 $f(x)$ 가 모든 실수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "f(x)+f(2-x)=4"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시키고, $f(0)=0$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1454,
+  "id": "최고난도500(3)-152",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "정적분으로 정의된 함수 — 구간을 미는 적분과 미분가능성의 이음 조건",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 전체의 집합에서 미분가능한 함수 $f(x)$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $0 \\le x \\le 1$ 일 때, $f(x)=x^{3}+a x^{2}+b x+c$ 이다. (단, $a$ , $b$ , $c$ 는 상수이다.)",
+     "(나) 모든 실수 $x$ 에 대하여 $\\int_{x}^{x+1}f(t)dt=x^{2}+x$ 이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$f \\left(\\frac{5}{2}\\right)=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1455,
+  "id": "최고난도500(3)-153",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "정적분으로 정의된 함수 — 서로를 적분으로 정의하는 두 함수",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 전체의 집합에서 미분가능한 두 함수 $f(x)$ , $g(x)$ 가 모든 실수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "f(x)=1+\\int_{0}^{x}g(t)dt,\\,\\,\\,g(x)=x+\\int_{0}^{x}f(t)dt"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1456,
+  "id": "최고난도500(3)-154",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "부분적분 — 상수를 조절한 부정적분 선택으로 로그 항 소거",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $f(x)=\\ln \\left(1+\\sqrt{x}\\right)$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "\\int_{0}^{1}x f(x)dx=\\frac{q}{p}"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $p+q$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1457,
+  "id": "최고난도500(3)-155",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "정적분의 성질 — 제곱 적분이 0이 되는 숨은 함수 결정",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "닫힌구간 $[0,\\,\\pi]$ 에서 연속인 함수 $f(x)$ 가"
+   },
+   {
+    "t": "eq",
+    "tex": "\\int_{0}^{\\pi}f(x)\\sin x \\,dx=\\pi,\\,\\,\\,\\int_{0}^{\\pi}\\left\\{f(x)\\right\\}^{2}dx=2 \\pi"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1458,
+  "id": "최고난도500(3)-156",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "정적분으로 정의된 함수 — 길이가 일정한 구간의 |sin t| 적분의 최대·최소",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0<a<\\pi$ 인 상수 $a$ 에 대하여 함수"
+   },
+   {
+    "t": "eq",
+    "tex": "H(x)=\\int_{x}^{x+a}\\left|\\sin t \\right|dt"
+   },
+   {
+    "t": "p",
+    "s": "의 최댓값이 최솟값의 $2$ 배일 때, $50 \\sin a$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1459,
+  "id": "최고난도500(3)-157",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "부등식 조건과 적분값의 등호 — 하한 함수와 일치하는 함수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 전체의 집합에서 미분가능한 함수 $f(x)$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 모든 실수 $x$ 에 대하여 $f'(x)\\ge f(x)+e^{x}$ 이다.",
+     "(나) $f(0)=1$ , $\\int_{0}^{2}f(x)dx=2 e^{2}$"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$\\int_{0}^{2}\\left\\{f(x)\\right\\}^{2}e^{-x}dx=p e^{2}+q$ 일 때, $p^{2}+q^{2}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1460,
+  "id": "최고난도500(3)-158",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "정적분으로 정의된 함수 — 극값이 커지는 진동 함수와 실근의 개수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수"
+   },
+   {
+    "t": "eq",
+    "tex": "g(x)=\\int_{0}^{x}\\sin t \\,\\sin(x-t)dt"
+   },
+   {
+    "t": "p",
+    "s": "에 대하여 방정식 $g(x)=\\pi$ 의 $0<x<20 \\pi$ 에서 서로 다른 실근의 개수를 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1461,
+  "id": "최고난도500(3)-159",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "정적분으로 정의된 함수 — 최댓값의 뜻밖의 소거",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$x \\ge 0$ 에서 정의된 함수"
+   },
+   {
+    "t": "eq",
+    "tex": "g(x)=\\int_{x}^{x+\\ln 3}t e^{-t}dt"
+   },
+   {
+    "t": "p",
+    "s": "의 최댓값을 $M$ 이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1462,
+  "id": "최고난도500(3)-160",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "역함수의 정적분 — 자기 자신이 역함수인 감소함수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "닫힌구간 $[0,\\,2]$ 에서 연속인 함수 $f(x)$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $0 \\le x \\le 1$ 일 때, $f(x)=2-x e^{x-1}$ 이다.",
+     "(나) $0 \\le x \\le 2$ 인 모든 실수 $x$ 에 대하여 $0 \\le f(x)\\le 2$ 이고 $f(f(x))=x$ 이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$\\int_{0}^{2}f(x)dx=p+\\frac{q}{e}$ 일 때, $p^{2}+q^{2}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1463,
+  "id": "최고난도500(3)-161",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "정적분으로 정의된 함수 — 접선 아래 넓이의 최소와 구간의 중점",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 $t$ 에 대하여 곡선 $y=e^{x}$ 위의 점 $(t,\\,e^{t})$ 에서의 접선을 $y=l_{t}(x)$ 라 하고,"
+   },
+   {
+    "t": "eq",
+    "tex": "S(t)=\\int_{0}^{\\ln 9}\\left\\{e^{x}-l_{t}(x)\\right\\} dx"
+   },
+   {
+    "t": "p",
+    "s": "라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1464,
+  "id": "최고난도500(3)-162",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "정적분과 급수 — 진동하는 피적분함수의 극한과 2차 오차",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 9,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "자연수 $n$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "a_{n}=\\int_{0}^{\\pi}x^{2}\\left|\\sin n x \\right|dx"
+   },
+   {
+    "t": "p",
+    "s": "라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1465,
+  "id": "최고난도500(3)-163",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "대칭성을 갖는 함수의 정적분 — 이계도함수의 존재가 주는 조건",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 전체의 집합에서 이계도함수를 갖는 함수 $f(x)$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) 모든 실수 $x$ 에 대하여 $f(-x)=f(x)$ , $f(2-x)=-f(x)$ 이다.",
+     "(나) $0 \\le x \\le 1$ 일 때, $f(x)=a x^{3}+b x^{2}+1$ 이다. (단, $a$ , $b$ 는 상수이다.)"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$\\int_{0}^{5}x f(x)dx=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1466,
+  "id": "최고난도500(3)-164",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "치환적분 — 삼차방정식의 근을 적분변수로 바꾸기",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$-2<t<2$ 인 실수 $t$ 에 대하여 $x$ 에 대한 방정식 $x^{3}-3 x=t$ 의 서로 다른 세 실근을 $\\alpha(t)$ , $\\beta(t)$ , $\\gamma(t)$ $(\\alpha(t)<\\beta(t)<\\gamma(t))$ 라 하자."
+   },
+   {
+    "t": "eq",
+    "tex": "\\int_{-2}^{2}\\left\\{\\gamma(t)-\\alpha(t)\\right\\}^{2}dt=\\frac{q}{p}"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $p+q$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1467,
+  "id": "최고난도500(3)-165",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "최댓값으로 정의된 함수의 적분 — 최대점을 변수로 치환",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 $t$ 에 대하여 닫힌구간 $[0,\\,\\pi]$ 에서 함수 $\\sin x+t x$ 의 최댓값을 $M(t)$ 라 하자."
+   },
+   {
+    "t": "eq",
+    "tex": "\\int_{-1}^{1}M(t)dt=k \\pi"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $100 k$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1468,
+  "id": "최고난도500(3)-166",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "역함수와의 차의 제곱 적분 — 치환 후 대칭성",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "닫힌구간 $[0,\\,1]$ 에서 정의된 함수 $f(x)=3 x^{2}-2 x^{3}$ 의 역함수를 $g(x)$ 라 하자."
+   },
+   {
+    "t": "eq",
+    "tex": "\\int_{0}^{1}\\left\\{g(x)-x \\right\\}^{2}dx=\\frac{q}{p}"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $p+q$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1469,
+  "id": "최고난도500(3)-167",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "부분적분 — 탄젠트함수의 역함수와 역함수의 미분",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $f(x)=\\tan x$ $\\left(-\\frac{\\pi}{2}<x<\\frac{\\pi}{2}\\right)$ 의 역함수를 $g(x)$ 라 하자."
+   },
+   {
+    "t": "eq",
+    "tex": "\\int_{0}^{\\sqrt{3}}x g(x)dx=p \\pi+q \\sqrt{3}"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $12(p-q)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1470,
+  "id": "최고난도500(3)-168",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "정적분으로 정의된 함수 — 해가 하나로 정해지지 않는 듯한 적분방정식",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 전체의 집합에서 연속이고 모든 실수 $x$ 에 대하여 $f(x)\\ge 0$ 인 함수 $f(x)$ 가 모든 실수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "\\left\\{f(x)\\right\\}^{2}=4 \\int_{0}^{x}f(t)dt"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시키고, $f(3)=2$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1471,
+  "id": "최고난도500(3)-169",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "부분적분 — 두 교점 사이의 거리를 적분변수 치환으로",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0<t<1$ 인 실수 $t$ 에 대하여 직선 $y=t$ 와 곡선 $y=\\sin x$ $(0 \\le x \\le \\pi)$ 가 만나는 두 점 사이의 거리를 $L(t)$ 라 하자."
+   },
+   {
+    "t": "eq",
+    "tex": "\\int_{0}^{1}\\left\\{L(t)\\right\\}^{2}dt=p \\pi+q"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $p^{2}+q^{2}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1472,
+  "id": "최고난도500(3)-170",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "치환적분 — 숨은 역함수를 알아보는 로그 적분",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $f(x)=\\ln \\left(x+\\sqrt{x^{2}+1}\\right)$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "\\int_{0}^{\\frac{4}{3}}\\left\\{f(x)\\right\\}^{2}dx=p(\\ln 3)^{2}+q \\ln 3+r"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $3(p-q+r)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1473,
+  "id": "최고난도500(3)-171",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "삼각함수의 정적분 — 이웃한 항의 차로 만드는 점화식",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "자연수 $n$ 에 대하여 닫힌구간 $\\left[0,\\,\\frac{\\pi}{2}\\right]$ 에서 연속인 함수 $f_{n}(x)$ 가 $0<x \\le \\frac{\\pi}{2}$ 일 때"
+   },
+   {
+    "t": "eq",
+    "tex": "f_{n}(x)=\\frac{\\sin 2 n x}{\\sin x}"
+   },
+   {
+    "t": "p",
+    "s": "이다."
+   }
+  ]
+ },
+ {
+  "num": 1474,
+  "id": "최고난도500(3)-172",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "정적분으로 정의된 함수 — 합을 곱으로 바꾸면 사라지는 절댓값",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0 \\le x \\le \\pi$ 인 실수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "H(x)=\\int_{0}^{\\pi}\\left|\\sin t-\\sin(x-t)\\right|dt"
+   },
+   {
+    "t": "p",
+    "s": "라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1475,
+  "id": "최고난도500(3)-173",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "정적분으로 정의된 함수 — 절댓값 핵을 두 번 미분하기",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "닫힌구간 $[0,\\,1]$ 에서 연속인 함수 $f(x)$ 와 두 상수 $p$ , $q$ 가 $0 \\le x \\le 1$ 인 모든 실수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "\\int_{0}^{1}\\left|x-t \\right|f(t)dt=x^{3}+p x+q"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시킬 때, $10(q-p)$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1476,
+  "id": "최고난도500(3)-174",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "정적분의 최소 — 대칭축을 기준으로 다시 쓴 일차식",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 실수 $a$ , $b$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "I(a,\\,b)=\\int_{0}^{\\pi}(\\sin x-a x-b)^{2}dx"
+   },
+   {
+    "t": "p",
+    "s": "의 최솟값을 $m$ 이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1477,
+  "id": "최고난도500(3)-175",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "치환적분 — 탄젠트 치환 후 로그 적분의 상쇄",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양수 $k$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "\\int_{0}^{3}\\frac{\\ln(1+x)}{3+x^{2}}dx=\\frac{\\pi \\ln 2}{k}"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $k^{2}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1478,
+  "id": "최고난도500(3)-176",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "정적분으로 정의된 함수 — 평균을 내는 적분으로 삼차함수 결정",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "삼차함수 $f(x)$ 가 모든 실수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "\\int_{0}^{2 \\pi}f(x+\\cos t)dt=2 \\pi \\left(x^{3}+3 x \\right)"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1479,
+  "id": "최고난도500(3)-177",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "정적분과 급수 — 교대급수를 적분으로 표현하기",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "급수"
+   },
+   {
+    "t": "eq",
+    "tex": "\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}}{n(n+1)(n+2)}=p \\ln 2+q"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $16 \\left(p^{2}+q^{2}\\right)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1480,
+  "id": "최고난도500(3)-178",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "정적분으로 정의된 함수 — 음이 아닌 함수가 0이 되는 조건",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 전체의 집합에서 연속인 함수 $f(x)$ 와 상수 $a$ 가 모든 실수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "\\int_{0}^{x}e^{t}f(t)dt+e^{x}f(x)=x^{2}+a"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1481,
+  "id": "최고난도500(3)-179",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "절댓값이 있는 정적분 — 부호가 바뀌는 조건에 따른 경우 나누기",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 9,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양수 $a$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "\\int_{0}^{\\pi}\\left|\\sin x-a \\sin 2 x \\right|dx=\\frac{5}{2}"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $\\int_{0}^{\\pi}\\left|\\sin x-a \\sin 2 x \\right|\\cos^{2}x \\,dx=\\frac{q}{p}$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1482,
+  "id": "최고난도500(3)-180",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "부분적분 점화식 — 수열의 양쪽 평가로 범위 결정",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "자연수 $n$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "a_{n}=\\int_{0}^{1}x^{n}e^{x}dx"
+   },
+   {
+    "t": "p",
+    "s": "라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1483,
+  "id": "최고난도500(3)-181",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "정적분으로 정의된 함수 — 지수 안에 들어간 자기 자신의 적분",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$x \\ge 0$ 에서 연속인 함수 $f(x)$ 가 $x \\ge 0$ 인 모든 실수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "f(x)=(2 x+2)e^{-\\int_{0}^{x}f(t)dt}"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1484,
+  "id": "최고난도500(3)-182",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "정적분과 급수 — 적분의 급수를 등비급수의 적분으로",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "자연수 $n$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "a_{n}=\\int_{0}^{1}x^{n}(1-x)^{n}dx"
+   },
+   {
+    "t": "p",
+    "s": "라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1485,
+  "id": "최고난도500(3)-183",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "정적분으로 정의된 함수열 — 두 적분값의 연립 점화식과 등비급수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 전체의 집합에서 정의된 함수 $f_{n}(x)$ ( $n$ 은 자연수)가 $f_{1}(x)=1$ 이고, 모든 자연수 $n$ 과 모든 실수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "f_{n+1}(x)=\\frac{1}{2}\\int_{0}^{1}(x+t)f_{n}(t)dt"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1486,
+  "id": "최고난도500(3)-184",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "자기닮음 함수의 정적분 — 치환으로 세우는 적분값의 방정식",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 9,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "닫힌구간 $[0,\\,1]$ 에서 연속이고 감소하지 않는 함수 $f(x)$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $0 \\le x \\le 1$ 인 모든 실수 $x$ 에 대하여 $f(x)+f(1-x)=1$ 이다.",
+     "(나) $0 \\le x \\le 1$ 인 모든 실수 $x$ 에 대하여 $f \\left(\\frac{x}{3}\\right)=\\frac{1}{2}f(x)$ 이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$\\int_{0}^{1}\\left\\{f(x)-x \\right\\}^{2}dx=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1487,
+  "id": "최고난도500(3)-185",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "정적분으로 정의된 함수 — 원시함수가 없는 피적분함수와 부분적분",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $h(t)$ 가 $t \\ne 0$ 일 때 $h(t)=\\frac{\\sin t}{t}$ , $h(0)=1$ 이고, 함수 $g(x)$ 를"
+   },
+   {
+    "t": "eq",
+    "tex": "g(x)=\\int_{x}^{\\pi}h(t)dt"
+   },
+   {
+    "t": "p",
+    "s": "라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1488,
+  "id": "최고난도500(3)-186",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "숨은 역함수 — 이차방정식의 양의 근으로 정의된 함수의 적분",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 $x$ 에 대하여 $t$ 에 대한 이차방정식 $t^{2}-x t-1=0$ 의 양의 실근을 $g(x)$ 라 하자."
+   },
+   {
+    "t": "eq",
+    "tex": "\\int_{-\\frac{3}{2}}^{\\frac{3}{2}}g(x)dx=p+q \\ln 2"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $8(p+q)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1489,
+  "id": "최고난도500(3)-187",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "함수방정식으로 이어 붙인 함수 — 이음 조건과 반주기",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 전체의 집합에서 미분가능한 함수 $f(x)$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $0 \\le x \\le 2$ 일 때, $f(x)=x^{3}+a x^{2}+b x$ 이다. (단, $a$ , $b$ 는 상수이다.)",
+     "(나) 모든 실수 $x$ 에 대하여 $f(x+2)=f(x+1)-f(x)$ 이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$\\int_{0}^{6}x f(x)dx=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1490,
+  "id": "최고난도500(3)-188",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "부분적분 — 분모의 제곱을 미분의 결과로 보기",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$\\int_{0}^{\\frac{\\pi}{2}}\\frac{x^{2}\\cos x}{(1+\\sin x)^{2}}dx=p \\pi^{2}+q \\ln 2$ 일 때, $8(q-p)$ 의 값을 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "(단, $p$ , $q$ 는 유리수이다.) [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1491,
+  "id": "최고난도500(3)-189",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "함수방정식 — x와 1-x를 바꾼 연립",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 전체의 집합에서 연속인 함수 $f(x)$ 가 모든 실수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "f(x)+2 f(1-x)=x e^{x}"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1492,
+  "id": "최고난도500(3)-190",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "함수방정식과 미분계수 — 배각 관계를 만족시키는 함수의 결정",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 전체의 집합에서 정의되고 $x=0$ 에서 미분가능한 함수 $f(x)$ 가 모든 실수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "f(2 x)=f(x)\\left(e^{x}+e^{-x}\\right)"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시키고 $f'(0)=2$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1493,
+  "id": "최고난도500(3)-191",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "대칭 조건의 정적분 — 함수가 정해지지 않아도 정해지는 적분값",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "닫힌구간 $[0,\\,\\pi]$ 에서 연속인 함수 $f(x)$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $0 \\le x \\le \\pi$ 인 모든 실수 $x$ 에 대하여 $f(x)+f(\\pi-x)=2 \\sin x$ 이다.",
+     "(나) $\\int_{0}^{\\pi}x f(x)dx=2 \\pi$"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$\\int_{0}^{\\pi}x^{2}f(x)dx=p \\pi^{2}+q$ 일 때, $p^{2}+q^{2}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1494,
+  "id": "최고난도500(3)-192",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "치환적분 — 역수 치환과 탄젠트함수의 역함수의 여각 관계",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $f(x)=\\tan x$ $\\left(-\\frac{\\pi}{2}<x<\\frac{\\pi}{2}\\right)$ 의 역함수를 $g(x)$ 라 하자."
+   },
+   {
+    "t": "eq",
+    "tex": "\\int_{\\frac{1}{\\sqrt{3}}}^{\\sqrt{3}}\\frac{g(x)(\\ln x)^{4}}{x}dx=\\frac{\\pi(\\ln 3)^{5}}{k}"
+   },
+   {
+    "t": "p",
+    "s": "일 때, 상수 $k$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1495,
+  "id": "최고난도500(3)-193",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "도함수에 x와 1-x가 섞인 함수방정식",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 전체의 집합에서 미분가능한 함수 $f(x)$ 가 모든 실수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "f'(x)=f(x)+f(1-x)+e^{x}"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시키고 $f(1)=2 e$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1496,
+  "id": "최고난도500(3)-194",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "평균값으로 정의된 함수방정식 — 산술평균과 기하평균",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$x \\ge 0$ 에서 연속이고 양의 값을 갖는 함수 $f(x)$ 가 $f(0)=4$ , $f(1)=1$ 이고, 모든 양수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "\\frac{1}{x}\\int_{0}^{x}f(t)dt=\\sqrt{f(0)f(x)}"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1497,
+  "id": "최고난도500(3)-195",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "삼각함수의 정적분 — 대칭 치환으로 만드는 sin x - cos x 치환",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$\\int_{0}^{\\frac{\\pi}{2}}\\frac{\\sin^{2}2 x \\,\\cos x}{2-\\sin 2 x}dx=p \\pi+q$ 일 때, $3(p-q)$ 의 값을 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "(단, $p$ , $q$ 는 유리수이다.) [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1498,
+  "id": "최고난도500(3)-196",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "부분적분 — e^x(g+g') 꼴 알아보기",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 5,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$\\int_{0}^{3}\\frac{(x^{2}+1)e^{x}}{(x+1)^{2}}dx=p e^{3}+q$ 일 때, $100 p+q$ 의 값을 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "(단, $p$ , $q$ 는 유리수이다.) [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1499,
+  "id": "최고난도500(3)-197",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "f(x)와 f(-x)가 얽힌 미분방정식 — 곱의 불변량",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 전체의 집합에서 미분가능한 함수 $f(x)$ 가 모든 실수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "f'(x)f(-x)=1"
+   },
+   {
+    "t": "p",
+    "s": "을 만족시키고 $f(0)=2$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1500,
+  "id": "최고난도500(3)-198",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "정적분으로 정의된 함수 — 완전제곱으로 숨은 도함수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "도함수가 실수 전체의 집합에서 연속인 함수 $f(x)$ 가 $f(0)=1$ 이고, 모든 실수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "2 \\left\\{f(x)\\right\\}^{2}=2+\\int_{0}^{x}\\left[\\left\\{f'(t)\\right\\}^{2}+4 \\left\\{f(t)\\right\\}^{2}\\right]dt"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1501,
+  "id": "최고난도500(3)-199",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "정적분으로 정의된 함수 — 자기 자신의 적분값을 포함한 절댓값 함수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "실수 전체의 집합에서 연속인 함수 $f(x)$ 가 모든 실수 $x$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "f(x)=\\left|x-\\int_{0}^{1}f(t)dt \\right|"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시킨다."
+   }
+  ]
+ },
+ {
+  "num": 1502,
+  "id": "최고난도500(3)-200",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "부분적분 점화식과 등비급수 — 코사인 거듭제곱과 배각의 곱",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0$ 이상의 정수 $n$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "a_{n}=\\int_{0}^{\\frac{\\pi}{2}}\\cos^{n}x \\,\\cos n x \\,dx"
+   },
+   {
+    "t": "p",
+    "s": "라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1503,
+  "id": "최고난도500(3)-201",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "정적분과 급수 — 격자점의 개수와 넓이",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "자연수 $n$ 에 대하여 다음 조건을 만족시키는 두 자연수 $a$ , $b$ 의 순서쌍 $(a,\\,b)$ 의 개수를 $N_{n}$ 이라 하자."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $a \\le n$ , $b \\le n$",
+     "(나) $4 a b \\le n^{2}\\le n(a+b)$"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$\\lim_{n \\to \\infty}\\frac{N_{n}}{n^{2}}=p+q \\ln 2$ 일 때, $40(q-p)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1504,
+  "id": "최고난도500(3)-202",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "정적분과 급수 — 사분원을 자르는 직선과 활꼴의 넓이",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 7,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(단, $\\mathrm{P}_{n}=\\mathrm{A}$ 일 때 $\\theta_{n}=0$ , $S_{n}=0$ 이다.)"
+   },
+   {
+    "t": "eq",
+    "tex": "\\lim_{n \\to \\infty}\\frac{1}{n}\\sum_{k=1}^{n}\\left(S_{k}+\\theta_{k}^{2}\\right)=p \\pi+q"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $30(p-q)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1505,
+  "id": "최고난도500(3)-203",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "정적분과 급수 — 함숫값의 변화량의 합과 평균값 정리",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 9,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $f(x)=\\sin 2 \\pi x$ 에 대하여 수열 $\\left\\{a_{n}\\right\\}$ 을"
+   },
+   {
+    "t": "eq",
+    "tex": "a_{n}=\\sum_{k=1}^{n}\\left(\\frac{k}{n}\\right)^{2}\\left|f \\left(\\frac{k}{n}\\right)-f \\left(\\frac{k-1}{n}\\right)\\right|"
+   },
+   {
+    "t": "p",
+    "s": "이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1506,
+  "id": "최고난도500(3)-204",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "정적분과 급수 — 넓이를 등분하는 직선들의 평균",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$2$ 이상의 자연수 $n$ 과 $n-1$ 이하의 자연수 $k$ 에 대하여 직선 $x=c_{k}$ 가 $R$ 를 두 부분으로 나눌 때, 직선 $x=c_{k}$ 의 왼쪽 부분의 넓이가 $R$ 의 넓이의 $\\frac{k}{n}$ 배가 되도록 하는 실수를 $c_{k}$ 라 하자."
+   },
+   {
+    "t": "eq",
+    "tex": "\\lim_{n \\to \\infty}\\frac{1}{n}\\sum_{k=1}^{n-1}c_{k}=p e^{2}+q"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $100(p+q)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1507,
+  "id": "최고난도500(3)-205",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "정적분과 급수 — 접선의 y절편이 만드는 삼각형",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "세 점 $\\mathrm{O}$ , $\\mathrm{P}_{k}$ , $\\mathrm{Q}_{k}$ 를 꼭짓점으로 하는 삼각형의 넓이를 $T_{k}$ 라 할 때 (단, $\\mathrm{O}$ 는 원점이고, 세 점이 한 직선 위에 있으면 $T_{k}=0$ 이다.)"
+   },
+   {
+    "t": "eq",
+    "tex": "\\lim_{n \\to \\infty}\\frac{1}{n}\\sum_{k=1}^{n}T_{k}=p e^{2}+q e+r"
+   },
+   {
+    "t": "p",
+    "s": "이다."
+   }
+  ]
+ },
+ {
+  "num": 1508,
+  "id": "최고난도500(3)-206",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "정적분과 급수 — 최댓값으로 정의된 함수의 구분구적",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0$ 이상의 실수 $t$ 에 대하여 닫힌구간 $[0,\\,1]$ 에서 함수 $x-t x^{2}$ 의 최댓값을 $g(t)$ 라 하자."
+   },
+   {
+    "t": "eq",
+    "tex": "\\lim_{n \\to \\infty}\\frac{1}{n}\\sum_{k=1}^{n}g \\left(\\frac{2 k}{n}\\right)=p+q \\ln 2"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $160(p+q)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1509,
+  "id": "최고난도500(3)-207",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "정적분과 급수 — 수평선 위쪽 넓이들의 가중 평균",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "(단, $A_{n}=0$ 이다.)"
+   },
+   {
+    "t": "eq",
+    "tex": "\\lim_{n \\to \\infty}\\frac{1}{n}\\sum_{k=1}^{n}\\frac{k}{n}A_{k}=\\frac{q}{p}"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $p+q$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1510,
+  "id": "최고난도500(3)-208",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "매개변수 곡선으로 둘러싸인 부분과 원의 바깥쪽 넓이",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면에서 매개변수 $t \\,(0 \\le t \\le \\pi)$ 로 나타낸 곡선"
+   },
+   {
+    "t": "eq",
+    "tex": "x=\\sin t,\\,\\,\\,y=\\sin 2 t"
+   },
+   {
+    "t": "p",
+    "s": "를 $C$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1511,
+  "id": "최고난도500(3)-209",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "역함수의 그래프와 두 접선으로 둘러싸인 넓이",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $f(x)=e^{x}-e^{-x}$ 의 역함수를 $g(x)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "곡선 $y=g(x)$ 위의 점 중 $x$ 좌표가 양수이고 그 점에서의 접선의 기울기가 $\\frac{2}{5}$ 인 점을 $\\mathrm{A}$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1512,
+  "id": "최고난도500(3)-210",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "넓이의 비를 정하는 곡선 — 교점의 위치에 따른 경우",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 9,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "곡선 $y=e^{-x}$ 와 $x$ 축, $y$ 축 및 직선 $x=\\ln 4$ 로 둘러싸인 부분을 $R$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "양수 $a$ 에 대하여 $R$ 에 속하는 점 중 부등식 $y \\le a e^{-2 x}$ 을 만족시키는 점 전체의 집합이 나타내는 부분의 넓이가 $R$ 의 넓이의 $\\frac{2}{3}$ 일 때, $a=p+q \\sqrt{3}$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1513,
+  "id": "최고난도500(3)-211",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "넓이 함수의 최솟값 — 사인곡선과 코사인곡선의 상수배",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양수 $t$ 에 대하여 두 곡선 $y=\\sin x$ , $y=t \\cos x$ 와 두 직선 $x=0$ , $x=\\frac{\\pi}{2}$ 로 둘러싸인 부분의 넓이를 $S(t)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "함수 $S(t)$ 의 최솟값을 $m$ , $S(\\beta)=1$ 을 만족시키는 양수를 $\\beta$ 라 할 때, $9 \\beta^{2}+3(m+1)^{2}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1514,
+  "id": "최고난도500(3)-212",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "직선의 계수를 좌표로 하는 영역의 넓이",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면에서 직선 $y=a x+b$ 가 곡선 $y=e^{x}\\,(0 \\le x \\le 1)$ 과 서로 다른 두 점에서 만나도록 하는 두 실수 $a$ , $b$ 에 대하여, 점 $(a,\\,b)$ 전체의 집합이 나타내는 영역의 넓이가 $p e^{2}+q e+r$ 일 때, $20(q-p-r)$ 의 값을 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "(단, $p$ , $q$ , $r$ 는 유리수이다.) [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1515,
+  "id": "최고난도500(3)-213",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "반복 축소되는 그래프 — 넓이의 급수가 수렴하는 기준선",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 7,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$x \\ge 0$ 에서 연속인 함수 $f(x)$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $0 \\le x \\le 1$ 일 때, $f(x)=x$ 이다.",
+     "(나) 모든 $x \\ge 0$ 에 대하여 $f(x+1)=1-\\frac{1}{2}f(x)$ 이다."
+    ]
+   },
+   {
+    "t": "p",
+    "s": "실수 $k$ 와 자연수 $n$ 에 대하여 곡선 $y=f(x)\\,(0 \\le x \\le n)$ 과 직선 $y=k$ 및 두 직선 $x=0$ , $x=n$ 으로 둘러싸인 부분의 넓이를 $S_{n}(k)$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1516,
+  "id": "최고난도500(3)-214",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "곡선 위가 아닌 점에서 그은 두 접선 — 닮음 불변성",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "곡선 $x y=\\frac{3}{4}\\,(x>0)$ 위의 점 $\\mathrm{A}$ 에서 곡선 $y=\\frac{1}{x}\\,(x>0)$ 에 그은 두 접선과 곡선 $y=\\frac{1}{x}$ 로 둘러싸인 부분의 넓이는 점 $\\mathrm{A}$ 의 위치에 관계없이 일정하다."
+   },
+   {
+    "t": "p",
+    "s": "이 넓이가 $p+q \\ln 3$ 일 때, $10(q-p)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1517,
+  "id": "최고난도500(3)-215",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "넓이를 삼등분하는 두 곡선",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "곡선 $y=\\sin x$ 와 $x$ 축 및 직선 $x=\\frac{\\pi}{2}$ 로 둘러싸인 부분을 $R$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "두 양수 $a$ , $b \\,(a<b)$ 에 대하여 두 곡선 $y=a \\cos x$ , $y=b \\cos x \\,\\left(0 \\le x \\le \\frac{\\pi}{2}\\right)$ 가 $R$ 를 넓이가 모두 같은 세 부분으로 나눌 때, $36(a+b)$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1518,
+  "id": "최고난도500(3)-216",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "매개변수 곡선(심장형)의 y축 오른쪽 넓이",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "매개변수 $t \\,(0 \\le t \\le 2 \\pi)$ 로 나타낸 곡선"
+   },
+   {
+    "t": "eq",
+    "tex": "x=(1+\\cos t)\\cos t,\\,\\,\\,y=(1+\\cos t)\\sin t"
+   },
+   {
+    "t": "p",
+    "s": "로 둘러싸인 부분 중 $x \\ge 0$ 인 부분의 넓이가 $a+b \\pi$ 일 때, $8(a+b)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1519,
+  "id": "최고난도500(3)-217",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "역함수가 식으로 표현되지 않는 밑면의 입체",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$x \\ge 0$ 에서 정의된 함수 $f(x)=x e^{x}$ 의 역함수를 $g(x)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "곡선 $y=g(x)$ 와 $x$ 축 및 직선 $x=e$ 로 둘러싸인 부분을 밑면으로 하고 $x$ 축에 수직인 평면으로 자른 단면이 모두 정사각형인 입체도형의 부피가 $a+b e$ 일 때, $a^{2}+b^{2}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1520,
+  "id": "최고난도500(3)-218",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "같은 밑면",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "곡선 $y=\\sin x \\,(0 \\le x \\le \\pi)$ 와 $x$ 축으로 둘러싸인 부분을 밑면으로 하는 두 입체도형 $A$ , $B$ 가 있다."
+   },
+   {
+    "t": "p",
+    "s": "입체도형 $A$ 를 $x$ 축에 수직인 평면으로 자른 단면은 모두 밑면 위의 선분을 지름으로 하는 반원이고, 입체도형 $B$ 를 $y$ 축에 수직인 평면으로 자른 단면은 모두 밑면 위의 선분을 한 변으로 하는 정삼각형이다."
+   }
+  ]
+ },
+ {
+  "num": 1521,
+  "id": "최고난도500(3)-219",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "매개변수 곡선으로 둘러싸인 밑면의 입체",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "매개변수 $t \\,\\left(0 \\le t \\le \\frac{\\pi}{2}\\right)$ 로 나타낸 곡선 $x=\\cos^{3}t$ , $y=\\sin^{3}t$ 와 $x$ 축 및 $y$ 축으로 둘러싸인 부분을 밑면으로 하고 $x$ 축에 수직인 평면으로 자른 단면이 모두 정사각형인 입체도형의 부피가 $\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1522,
+  "id": "최고난도500(3)-220",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "입체도형들의 부피의 급수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "자연수 $n$ 에 대하여 두 곡선 $y=x^{n}$ , $y=x^{n+1}\\,(0 \\le x \\le 1)$ 로 둘러싸인 부분을 밑면으로 하고 $x$ 축에 수직인 평면으로 자른 단면이 모두 정사각형인 입체도형의 부피를 $V_{n}$ 이라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$\\sum_{n=1}^{\\infty}V_{n}=p+q \\ln 2$ 일 때, $30(q-p)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1523,
+  "id": "최고난도500(3)-221",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "선분이 지나간 부분의 넓이 — 사다리의 포락선",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면에서 길이가 $4$ 인 선분 $\\mathrm{AB}$ 의 한 끝점 $\\mathrm{A}$ 는 $x$ 축의 $x \\ge 0$ 인 부분 위에, 다른 끝점 $\\mathrm{B}$ 는 $y$ 축의 $y \\ge 0$ 인 부분 위에 있다."
+   },
+   {
+    "t": "p",
+    "s": "처음에 두 점 $\\mathrm{A}$ , $\\mathrm{B}$ 는 각각 점 $(4,\\,0)$ , 원점 $\\mathrm{O}$ 에 있고, 선분 $\\mathrm{AB}$ 의 길이를 $4$ 로 유지한 채 $\\angle \\mathrm{OAB}$ 의 크기가 $0$ 에서 $\\frac{\\pi}{4}$ 까지 증가하도록 움직인다."
+   }
+  ]
+ },
+ {
+  "num": 1524,
+  "id": "최고난도500(3)-222",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "직선 운동 — 위치의 최댓값으로 정한 계수와 가짜 근",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양수 $a$ 에 대하여 수직선 위를 움직이는 점 $\\mathrm{P}$ 의 시각 $t$ $(t \\ge 0)$ 에서의 속도 $v(t)$ 가"
+   },
+   {
+    "t": "eq",
+    "tex": "v(t)=\\sin t+a \\sin 2 t"
+   },
+   {
+    "t": "p",
+    "s": "이다."
+   }
+  ]
+ },
+ {
+  "num": 1525,
+  "id": "최고난도500(3)-223",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "평면 운동 — 삼배각으로 숨긴 곡선과 원 안에 있는 동안의 거리",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위를 움직이는 점 $\\mathrm{P}$ 의 시각 $t$ $(t \\ge 0)$ 에서의 위치 $(x,\\,y)$ 가"
+   },
+   {
+    "t": "eq",
+    "tex": "x=3 \\cos t+\\cos 3 t,\\,\\,\\,y=3 \\sin t-\\sin 3 t"
+   },
+   {
+    "t": "p",
+    "s": "이다."
+   }
+  ]
+ },
+ {
+  "num": 1526,
+  "id": "최고난도500(3)-224",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "직선 운동 — 위치의 함수로 주어진 속도와 치환적분",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 8,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "시각 $t$ 에서 점 $\\mathrm{P}$ 의 위치를 $x(t)$ , 속도를 $v(t)$ 라 할 때, 모든 $t \\ge 0$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "v(t)=x(t)\\left\\{2-x(t)\\right\\}"
+   },
+   {
+    "t": "p",
+    "s": "이다."
+   }
+  ]
+ },
+ {
+  "num": 1527,
+  "id": "최고난도500(3)-225",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "정사각형과 마름모의 공통부분을 단면으로 하는 입체",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표공간에서 다음 조건을 모두 만족시키는 점 $(x,\\,y,\\,z)$ 전체의 집합으로 이루어진 입체도형이 있다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $0 \\le x \\le \\pi$",
+     "(나) $\\left|y \\right|\\le 1$ , $\\left|z \\right|\\le 1$",
+     "(다) $\\left|y \\right|+\\left|z \\right|\\le 2 \\sin x$"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "이 입체도형의 부피가 $p \\sqrt{3}+q \\pi$ 일 때, $p^{2}+q^{2}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1528,
+  "id": "최고난도500(3)-226",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "직선 운동 — 움직인 거리를 최소로 하는 상수(중앙값의 성질)",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0 \\le k \\le 1$ 인 실수 $k$ 에 대하여 수직선 위를 움직이는 점 $\\mathrm{P}$ 의 시각 $t$ $(t \\ge 0)$ 에서의 속도가"
+   },
+   {
+    "t": "eq",
+    "tex": "v(t)=\\left|\\sin t \\right|-k"
+   },
+   {
+    "t": "p",
+    "s": "이다."
+   }
+  ]
+ },
+ {
+  "num": 1529,
+  "id": "최고난도500(3)-227",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "세 원기둥의 공통부분 — 원과 정사각형의 겹침 단면",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표공간에서 세 부등식"
+   },
+   {
+    "t": "eq",
+    "tex": "x^{2}+y^{2}\\le 1,\\,\\,\\,y^{2}+z^{2}\\le 1,\\,\\,\\,z^{2}+x^{2}\\le 1"
+   },
+   {
+    "t": "p",
+    "s": "을 모두 만족시키는 점 $(x,\\,y,\\,z)$ 전체의 집합으로 이루어진 입체도형의 부피가 $a+b \\sqrt{2}$ 일 때, $a^{2}+b^{2}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1530,
+  "id": "최고난도500(3)-228",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "근의 개수를 세는 함수의 적분 — 그래프가 오르내린 높이의 합",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $f(x)=x+2 \\cos x$ 에 대하여 실수 $t$ 에 대하여 $0 \\le x \\le 2 \\pi$ 에서 방정식 $f(x)=t$ 의 서로 다른 실근의 개수를 $g(t)$ 라 하자."
+   },
+   {
+    "t": "eq",
+    "tex": "\\int_{0}^{10}g(t)dt=a \\pi+b \\sqrt{3}"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $9 a^{2}+b^{2}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1531,
+  "id": "최고난도500(3)-229",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "평면 운동 — 속력이 완전제곱이 되는 곡선과 운동 방향 조건",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 6,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위를 움직이는 점 $\\mathrm{P}$ 의 시각 $t$ $(t>0)$ 에서의 위치 $(x,\\,y)$ 가"
+   },
+   {
+    "t": "eq",
+    "tex": "x=4 \\sqrt{t},\\,\\,\\,y=t-\\ln t"
+   },
+   {
+    "t": "p",
+    "s": "이다."
+   }
+  ]
+ },
+ {
+  "num": 1532,
+  "id": "최고난도500(3)-230",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "평면 운동 — 두 원운동의 합이 그리는 곡선의 넓이와 거리",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위를 움직이는 점 $\\mathrm{P}$ 의 시각 $t$ $(0 \\le t \\le 2 \\pi)$ 에서의 위치 $(x,\\,y)$ 가"
+   },
+   {
+    "t": "eq",
+    "tex": "x=3 \\cos t+\\cos 3 t,\\,\\,\\,y=3 \\sin t+\\sin 3 t"
+   },
+   {
+    "t": "p",
+    "s": "이다."
+   }
+  ]
+ },
+ {
+  "num": 1533,
+  "id": "최고난도500(3)-231",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "원점을 지나는 직선과 곡선 사이의 넓이의 최소 — 2^4=4^2 의 발견",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 9,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양수 $m$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "f(m)=\\int_{1}^{5}\\left|\\ln x-m x \\right|dx"
+   },
+   {
+    "t": "p",
+    "s": "라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1534,
+  "id": "최고난도500(3)-232",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "쌍곡선 위의 운동 — 선분이 휩쓴 넓이가 시간과 같을 때",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위를 움직이는 점 $\\mathrm{P}$ 는 곡선 $y=\\frac{1}{x}$ $(x>0)$ 위에 있고, 시각 $t=0$ 일 때 점 $\\mathrm{A}(1,\\,1)$ 에서 출발하여 $x$ 좌표가 증가하는 방향으로 움직인다."
+   },
+   {
+    "t": "p",
+    "s": "모든 $t>0$ 에 대하여 시각 $t$ 에서 두 선분 $\\mathrm{OA}$ , $\\mathrm{OP}$ 와 곡선 $y=\\frac{1}{x}$ 로 둘러싸인 부분의 넓이가 $t$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1535,
+  "id": "최고난도500(3)-233",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "구멍 뚫린 구 — 반지름에 관계없는 부피",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$R>3$ 인 실수 $R$ 에 대하여 좌표공간에서 구 $x^{2}+y^{2}+z^{2}\\le R^{2}$ 의 내부 및 경계 중에서 부등식 $x^{2}+y^{2}\\ge R^{2}-9$ 를 만족시키는 점 전체의 집합으로 이루어진 입체도형의 부피를 $V$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$\\frac{V}{\\pi}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1536,
+  "id": "최고난도500(3)-234",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "원기둥을 비스듬한 평면과 수평면으로 자른 입체",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표공간에서 세 부등식"
+   },
+   {
+    "t": "eq",
+    "tex": "x^{2}+y^{2}\\le 4,\\,\\,\\,0 \\le z \\le y,\\,\\,\\,z \\le 1"
+   },
+   {
+    "t": "p",
+    "s": "을 모두 만족시키는 점 $(x,\\,y,\\,z)$ 전체의 집합으로 이루어진 입체도형의 부피가 $p+q \\pi+r \\sqrt{3}$ 일 때, $3(p+q-r)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1537,
+  "id": "최고난도500(3)-235",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "감쇠 진동 — 정지 시각의 위치와 이동 거리의 등비급수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0<a<1$ 인 상수 $a$ 에 대하여 수직선 위를 움직이는 점 $\\mathrm{P}$ 의 시각 $t$ $(t \\ge 0)$ 에서의 속도가"
+   },
+   {
+    "t": "eq",
+    "tex": "v(t)=a^{t}\\sin \\pi t"
+   },
+   {
+    "t": "p",
+    "s": "이고, 시각 $t=0$ 에서 점 $\\mathrm{P}$ 의 위치는 $0$ 이다."
+   }
+  ]
+ },
+ {
+  "num": 1538,
+  "id": "최고난도500(3)-236",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "법선 위 내분점의 자취와 넓이",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0 \\le s \\le \\pi$ 인 실수 $s$ 에 대하여 곡선 $y=\\sin x$ 위의 점 $\\mathrm{P}(s,\\,\\sin s)$ 에서의 접선에 수직이고 점 $\\mathrm{P}$ 를 지나는 직선이 $x$ 축과 만나는 점을 $\\mathrm{Q}$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "(단, $s=\\frac{\\pi}{2}$ 일 때 $\\mathrm{Q}$ 는 $\\left(\\frac{\\pi}{2},\\,0 \\right)$ 이다.) 선분 $\\mathrm{PQ}$ 를 $1:2$ 로 내분하는 점을 $\\mathrm{R}$ 라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1539,
+  "id": "최고난도500(3)-237",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "현수선 위의 운동 — 속력이 높이와 같을 때",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 6,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위를 움직이는 점 $\\mathrm{P}$ 는 시각 $t=0$ 일 때 점 $(0,\\,1)$ 에서 출발하여 곡선 $y=\\frac{e^{x}+e^{-x}}{2}$ 위를 $x$ 좌표가 증가하는 방향으로 움직인다."
+   },
+   {
+    "t": "p",
+    "s": "점 $\\mathrm{P}$ 의 속력은 항상 점 $\\mathrm{P}$ 의 $y$ 좌표와 같다."
+   }
+  ]
+ },
+ {
+  "num": 1540,
+  "id": "최고난도500(3)-238",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "원기둥 위의 지붕 z = max(|x|",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표공간에서 두 조건"
+   },
+   {
+    "t": "eq",
+    "tex": "x^{2}+y^{2}\\le 1,\\,\\,\\,0 \\le z \\le \\max \\left(\\left|x \\right|,\\,\\left|y \\right|\\right)"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시키는 점 $(x,\\,y,\\,z)$ 전체의 집합으로 이루어진 입체도형의 부피를 $V$ 라 할 때, $(3 V)^{2}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1541,
+  "id": "최고난도500(3)-239",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "정적분으로 정의된 계단 모양 함수와 직선 사이의 넓이",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "함수 $F(x)=\\int_{0}^{x}\\left|\\cos t \\right|dt$ 에 대하여"
+   },
+   {
+    "t": "eq",
+    "tex": "\\int_{0}^{2 \\pi}\\left|F(x)-\\frac{2}{\\pi}x \\right|dx=a+b \\pi"
+   },
+   {
+    "t": "p",
+    "s": "일 때, $a^{2}+b^{2}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1542,
+  "id": "최고난도500(3)-240",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "속력이 2|sin t| 인 곡선 — 숨은 사이클로이드와 직선 위쪽 부분",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위를 움직이는 점 $\\mathrm{P}$ 의 시각 $t$ $(0 \\le t \\le \\pi)$ 에서의 위치 $(x,\\,y)$ 가"
+   },
+   {
+    "t": "eq",
+    "tex": "x=t-\\sin t \\cos t,\\,\\,\\,y=\\sin^{2}t"
+   },
+   {
+    "t": "p",
+    "s": "이다."
+   }
+  ]
+ },
+ {
+  "num": 1543,
+  "id": "최고난도500(3)-241",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "지붕이 min(sin²x",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 9,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표공간에서 세 조건"
+   },
+   {
+    "t": "eq",
+    "tex": "0 \\le x \\le \\pi,\\,\\,\\,0 \\le y \\le \\pi,\\,\\,\\,0 \\le z \\le \\min(\\sin^{2}x,\\,\\sin^{2}y)"
+   },
+   {
+    "t": "p",
+    "s": "를 만족시키는 점 $(x,\\,y,\\,z)$ 전체의 집합으로 이루어진 입체도형의 부피가 $a \\pi^{2}+b$ 일 때, $20(a-b)$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1544,
+  "id": "최고난도500(3)-242",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "원점을 지나는 접선이 무수히 많은 점에서 접할 때 — 넓이의 등차수열",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 9,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "원점을 지나고 곡선 $y=x \\sin x$ $(x>0)$ 에 접하는 직선 중 기울기가 양수인 것을 $l$ 이라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$x \\ge 0$ 에서 곡선 $y=x \\sin x$ 와 직선 $l$ 로 둘러싸인 부분들을 원점에 가까운 것부터 차례로 $R_{1}$ , $R_{2}$ , $R_{3}$ , $\\cdots$ 이라 하고, $R_{n}$ 의 넓이를 $S_{n}$ 이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1545,
+  "id": "최고난도500(3)-243",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "유리식으로 주어진 운동 — 숨은 원과 호의 길이",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 7,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위를 움직이는 점 $\\mathrm{P}$ 의 시각 $t$ $(t \\ge 0)$ 에서의 위치 $(x,\\,y)$ 가"
+   },
+   {
+    "t": "eq",
+    "tex": "x=\\frac{2 t}{1+t^{2}},\\,\\,\\,y=\\frac{1-t^{2}}{1+t^{2}}"
+   },
+   {
+    "t": "p",
+    "s": "이다."
+   }
+  ]
+ },
+ {
+  "num": 1546,
+  "id": "최고난도500(3)-244",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "속도 t sin t — 정지 시각 사이 거리의 등차수열과 원점 통과 횟수",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "수직선 위를 움직이는 점 $\\mathrm{P}$ 의 시각 $t$ $(t \\ge 0)$ 에서의 속도가 $v(t)=t \\sin t$ 이고, 시각 $t=0$ 에서 점 $\\mathrm{P}$ 의 위치는 $0$ 이다."
+   },
+   {
+    "t": "p",
+    "s": "시각 $t=0$ 에서 $t=T$ 까지 점 $\\mathrm{P}$ 가 움직인 거리가 $100 \\pi$ 일 때, $0<t<T$ 에서 점 $\\mathrm{P}$ 가 원점을 지나는 횟수를 $N$ 이라 하자."
+   }
+  ]
+ },
+ {
+  "num": 1547,
+  "id": "최고난도500(3)-245",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "ln x 와 (ln x)^2 사이의 입체 — 거듭제곱 적분의 점화식",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 2,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 곡선 $y=\\ln x$ , $y=\\left(\\ln x \\right)^{2}$ 으로 둘러싸인 부분을 밑면으로 하고 $x$ 축에 수직인 평면으로 자른 단면이 모두 정사각형인 입체도형의 부피가 $p e+q$ 일 때, $p-q$ 의 값을 구하시오."
+   },
+   {
+    "t": "p",
+    "s": "(단, $p$ , $q$ 는 유리수이다.) [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1548,
+  "id": "최고난도500(3)-246",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "y = |ln x| 와 수평선 사이의 넓이 — 지수함수로 정리되는 넓이와 부피",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 3,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "양수 $k$ 에 대하여 곡선 $y=\\left|\\ln x \\right|$ 와 직선 $y=k$ 로 둘러싸인 부분의 넓이를 $S(k)$ 라 하자."
+   },
+   {
+    "t": "p",
+    "s": "$S(k)=\\frac{1}{2}$ 인 $k$ 에 대하여, 곡선 $y=\\left|\\ln x \\right|$ 와 직선 $y=k$ 로 둘러싸인 부분을 밑면으로 하고 $x$ 축에 수직인 평면으로 자른 단면이 모두 정사각형인 입체도형의 부피가 $p+q \\ln 2$ 일 때, $p^{2}+q^{2}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1549,
+  "id": "최고난도500(3)-247",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "a sin x + b cos x 의 절댓값 적분 — 구간 길이 π 의 위상 불변성",
+  "stars": 4,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 7,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "두 실수 $a$ , $b$ 에 대하여 함수 $f(x)=a \\sin x+b \\cos x$ 가 다음 조건을 만족시킨다."
+   },
+   {
+    "t": "box",
+    "items": [
+     "(가) $\\int_{0}^{\\pi}\\left|f(x)\\right|dx=2 \\sqrt{5}$",
+     "(나) $\\int_{0}^{\\frac{\\pi}{2}}f(x)dx=3$",
+     "(다) $f(0)>f \\left(\\frac{\\pi}{2}\\right)$"
+    ]
+   },
+   {
+    "t": "p",
+    "s": "$0 \\le x \\le \\pi$ 에서 곡선 $y=f(x)$ 와 $x$ 축으로 둘러싸인 부분 중 $x$ 축 위쪽에 있는 부분의 넓이를 $S_{1}$ , 아래쪽에 있는 부분의 넓이를 $S_{2}$ 라 할 때, $S_{1}^{2}+S_{2}^{2}$ 의 값을 구하시오. [4점]"
+   }
+  ]
+ },
+ {
+  "num": 1550,
+  "id": "최고난도500(3)-248",
+  "subject": "미적분Ⅱ",
+  "type": "30번형",
+  "topic": "적분 구간 끝이 피적분함수 안에도 있는 함수 — ∫|sin t - sin x| dt",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 9,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "$0 \\le x \\le \\pi$ 에서 정의된 함수"
+   },
+   {
+    "t": "eq",
+    "tex": "f(x)=\\int_{0}^{x}\\left|\\sin t-\\sin x \\right|dt"
+   },
+   {
+    "t": "p",
+    "s": "에 대하여 $\\int_{0}^{\\pi}f(x)dx=a+b \\pi$ 일 때, $a^{2}+b^{2}$ 의 값을 구하시오."
+   }
+  ]
+ },
+ {
+  "num": 1551,
+  "id": "최고난도500(3)-249",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "부분적분으로 정의된 좌표 — 숨은 나선의 중심",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 5,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위를 움직이는 점 $\\mathrm{P}$ 의 시각 $t$ $(t \\ge 0)$ 에서의 위치 $(x,\\,y)$ 가"
+   },
+   {
+    "t": "eq",
+    "tex": "x=\\int_{0}^{t}e^{s}\\sin s ds,\\,\\,\\,y=\\int_{0}^{t}e^{s}\\cos s ds"
+   },
+   {
+    "t": "p",
+    "s": "이다."
+   }
+  ]
+ },
+ {
+  "num": 1552,
+  "id": "최고난도500(3)-250",
+  "subject": "미적분Ⅱ",
+  "type": "29번형",
+  "topic": "접선의 기울어진 각이 시각과 같은 운동 — 곡선 y = -ln cos x",
+  "stars": 5,
+  "rate": "",
+  "full": false,
+  "nconds": 4,
+  "nsteps": 8,
+  "art": "",
+  "snip": [
+   {
+    "t": "p",
+    "s": "좌표평면 위를 움직이는 점 $\\mathrm{P}$ 는 시각 $t=0$ 일 때 원점에서 출발하여 곡선 $y=-\\ln(\\cos x)$ $\\left(-\\frac{\\pi}{2}<x<\\frac{\\pi}{2}\\right)$ 위를 $x$ 좌표가 증가하는 방향으로 움직인다."
+   },
+   {
+    "t": "p",
+    "s": "시각 $t$ $\\left(0 \\le t<\\frac{\\pi}{2}\\right)$ 에서 점 $\\mathrm{P}$ 에서의 접선이 $x$ 축의 양의 방향과 이루는 각의 크기는 $t$ 이다."
+   }
+  ]
  }
 ]

@@ -1,0 +1,89 @@
+{
+ "num": 1299,
+ "id": "최고난도500(2)-097",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12기하02-02]",
+  "[12기하02-03]"
+ ],
+ "source": "ShrekMath 창작 · 수능 30번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 96,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "사면체 $\\mathrm{ABCD}$ 에서 직선 $\\mathrm{AB}$ 는 평면 $\\mathrm{BCD}$ 에 수직이고 $\\angle \\mathrm{BCD}=\\frac{\\pi}{2}$ 이며, $\\overline{\\mathrm{AB}}=4$ , $\\overline{\\mathrm{BC}}=3$ , $\\overline{\\mathrm{CD}}=12$ 이다.",
+    "삼각형 $\\mathrm{ABD}$ 의 평면 $\\mathrm{ACD}$ 위로의 정사영의 넓이를 $S$ 라 할 때, $5 S$ 의 값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "사면체 $\\mathrm{ABCD}$ 에서 직선 $\\mathrm{AB}$ 는 평면 $\\mathrm{BCD}$ 에 수직이고 $\\angle \\mathrm{BCD}=\\frac{\\pi}{2}$ 이며, $\\overline{\\mathrm{AB}}=4$ , $\\overline{\\mathrm{BC}}=3$ , $\\overline{\\mathrm{CD}}=12$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "삼각형 $\\mathrm{ABD}$ 의 평면 $\\mathrm{ACD}$ 위로의 정사영의 넓이를 $S$ 라 할 때, $5 S$ 의 값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "삼수선의 정리 — 네 면이 모두 직각삼각형인 사면체의 정사영",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 삼수선의 정리로 두 평면의 수직을 끌어내 꼭짓점의 정사영을 교선 위에서 찾기",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$\\mathrm{AB}$ 가 평면 $\\mathrm{BCD}$ 에 수직이고 $\\mathrm{BC}$ 와 $\\mathrm{CD}$ 가 수직이므로 삼수선의 정리에 의하여 $\\mathrm{AC}$ 와 $\\mathrm{CD}$ 는 수직이다. 따라서 직선 $\\mathrm{CD}$ 는 두 직선 $\\mathrm{BC}$ , $\\mathrm{AC}$ 에 수직이므로 평면 $\\mathrm{ABC}$ 에 수직이고, 평면 $\\mathrm{ACD}$ 는 평면 $\\mathrm{ABC}$ 에 수직이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "점 $\\mathrm{B}$ 에서 직선 $\\mathrm{AC}$ 에 내린 수선의 발을 $\\mathrm{H}$ 라 하자. $\\mathrm{BH}$ 는 $\\mathrm{AC}$ 에 수직이고, 평면 $\\mathrm{ABC}$ 위의 직선이므로 $\\mathrm{CD}$ 에도 수직이다. 따라서 $\\mathrm{BH}$ 는 평면 $\\mathrm{ACD}$ 에 수직이고, 점 $\\mathrm{B}$ 의 정사영은 $\\mathrm{H}$ 이다. 이것이 핵심 관문이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "직각삼각형 $\\mathrm{ABC}$ 에서 $\\overline{\\mathrm{AC}}=5$ , $\\overline{\\mathrm{AH}}=\\frac{\\overline{\\mathrm{AB}}^{2}}{\\overline{\\mathrm{AC}}}=\\frac{16}{5}$ 이다. 삼각형 $\\mathrm{ABD}$ 의 정사영은 삼각형 $\\mathrm{AHD}$ 이고, 이는 삼각형 $\\mathrm{ACD}$ 에서 밑변 $\\mathrm{AC}$ 를 $\\frac{16}{25}$ 로 줄인 것이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "삼각형 $\\mathrm{ACD}$ 의 넓이는 $\\frac{1}{2}\\times 5 \\times 12=30$ 이므로 $S=30 \\times \\frac{16}{25}=\\frac{96}{5}$ , $5 S=96$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

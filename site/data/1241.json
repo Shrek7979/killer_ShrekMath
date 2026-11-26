@@ -1,0 +1,112 @@
+{
+ "num": 1241,
+ "id": "최고난도500(2)-039",
+ "subject": "기하",
+ "type": "29번형",
+ "typeDesc": "기하 · 수능 29번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12기하01-01]"
+ ],
+ "source": "ShrekMath 창작 · 수능 29번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 112,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "초점이 $\\mathrm{F}$ 인 포물선 $y^{2}=4 p x$ $(p>0)$ 의 준선이 $x$ 축과 만나는 점을 $\\mathrm{K}$ 라 하자.",
+    "점 $\\mathrm{K}$ 를 지나는 직선이 이 포물선과 서로 다른 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 에서 만나고 $\\overline{\\mathrm{KP}}:\\overline{\\mathrm{KQ}}=1:3$ 이다.",
+    "삼각형 $\\mathrm{PFQ}$ 의 넓이가 $12 \\sqrt{3}$ 일 때, $\\overline{\\mathrm{PQ}}^{2}$ 의 값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "초점이 $\\mathrm{F}$ 인 포물선 $y^{2}=4 p x$ $(p>0)$ 의 준선이 $x$ 축과 만나는 점을 $\\mathrm{K}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "점 $\\mathrm{K}$ 를 지나는 직선이 이 포물선과 서로 다른 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 에서 만나고 $\\overline{\\mathrm{KP}}:\\overline{\\mathrm{KQ}}=1:3$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "삼각형 $\\mathrm{PFQ}$ 의 넓이가 $12 \\sqrt{3}$ 일 때, $\\overline{\\mathrm{PQ}}^{2}$ 의 값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "포물선 — 준선과 축의 교점을 지나는 직선과 초점거리의 비",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 준선 위의 점에서 그은 할선에서 길이의 비가 초점거리의 비와 같아짐(준선까지의 거리의 비)을 찾고, 두 매개변수의 곱이 1임을 이용",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 에서 준선에 내린 수선의 발을 각각 $\\mathrm{P'}$ , $\\mathrm{Q'}$ 라 하면 두 직각삼각형 $\\mathrm{KP'P}$ , $\\mathrm{KQ'Q}$ 는 닮음이다. 핵심 관문: 따라서 $\\overline{\\mathrm{PF}}:\\overline{\\mathrm{QF}}=\\overline{\\mathrm{PP'}}:\\overline{\\mathrm{QQ'}}=\\overline{\\mathrm{KP}}:\\overline{\\mathrm{KQ}}=1:3$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$\\mathrm{P}(p t_{1}^{2},\\,2 p t_{1})$ , $\\mathrm{Q}(p t_{2}^{2},\\,2 p t_{2})$ 라 하면 세 점 $\\mathrm{K}(-p,\\,0)$ , $\\mathrm{P}$ , $\\mathrm{Q}$ 가 한 직선 위에 있으므로 $\\frac{2 t_{1}}{t_{1}^{2}+1}=\\frac{2 t_{2}}{t_{2}^{2}+1}$ , 즉 $(t_{1}-t_{2})(1-t_{1}t_{2})=0$ 에서 $t_{1}t_{2}=1$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$\\overline{\\mathrm{PF}}:\\overline{\\mathrm{QF}}=(t_{1}^{2}+1):\\left(\\frac{1}{t_{1}^{2}}+1 \\right)=t_{1}^{2}:1=1:3$ 이므로 $t_{1}^{2}=\\frac{1}{3}$ 이다. 대칭성에 의해 $t_{1}=\\frac{1}{\\sqrt{3}}$ , $t_{2}=\\sqrt{3}$ 이라 하면 $\\mathrm{P}\\left(\\frac{p}{3},\\,\\frac{2 p}{\\sqrt{3}}\\right)$ , $\\mathrm{Q}(3 p,\\,2 \\sqrt{3}p)$ , $\\overline{\\mathrm{PF}}=\\frac{4 p}{3}$ , $\\overline{\\mathrm{QF}}=4 p$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$\\vec{\\mathrm{FP}}$ 와 $x$ 축의 양의 방향이 이루는 각의 코사인은 $\\frac{\\frac{p}{3}-p}{\\frac{4 p}{3}}=-\\frac{1}{2}$ , $\\vec{\\mathrm{FQ}}$ 의 경우는 $\\frac{3 p-p}{4 p}=\\frac{1}{2}$ 이므로 $\\angle \\mathrm{PFQ}=120^{\\circ}-60^{\\circ}=60^{\\circ}$ 이다. (두 직선 $\\mathrm{FP}$ , $\\mathrm{FQ}$ 는 $x$ 축과 같은 크기의 각을 이룬다.)",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "삼각형 $\\mathrm{PFQ}$ 의 넓이는 $\\frac{1}{2}\\times \\frac{4 p}{3}\\times 4 p \\times \\sin 60^{\\circ}=\\frac{4 \\sqrt{3}}{3}p^{2}=12 \\sqrt{3}$ 이므로 $p^{2}=9$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "$\\overline{\\mathrm{PQ}}^{2}=\\left(\\frac{8 p}{3}\\right)^{2}+\\left(\\frac{4 p}{\\sqrt{3}}\\right)^{2}=\\frac{64}{9}p^{2}+\\frac{16}{3}p^{2}=\\frac{112}{9}p^{2}=112$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

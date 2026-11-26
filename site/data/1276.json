@@ -1,0 +1,121 @@
+{
+ "num": 1276,
+ "id": "최고난도500(2)-074",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12기하03-01]",
+  "[12기하03-04]"
+ ],
+ "source": "ShrekMath 창작 · 수능 30번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 192,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "$\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AC}}=5$ , $\\overline{\\mathrm{BC}}=6$ 인 삼각형 $\\mathrm{ABC}$ 의 내부의 점 $\\mathrm{X}$ 가"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "\\frac{\\vec{\\mathrm{XA}}}{\\left|\\vec{\\mathrm{XA}}\\right|}+\\frac{\\vec{\\mathrm{XB}}}{\\left|\\vec{\\mathrm{XB}}\\right|}+\\frac{\\vec{\\mathrm{XC}}}{\\left|\\vec{\\mathrm{XC}}\\right|}=\\vec{0}"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "을 만족시킨다.",
+    "$k=\\vec{\\mathrm{XA}}\\cdot \\vec{\\mathrm{XB}}+\\vec{\\mathrm{XB}}\\cdot \\vec{\\mathrm{XC}}+\\vec{\\mathrm{XC}}\\cdot \\vec{\\mathrm{XA}}$ 일 때, $k^{2}$ 의 값을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "$\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AC}}=5$ , $\\overline{\\mathrm{BC}}=6$ 인 삼각형 $\\mathrm{ABC}$ 의 내부의 점 $\\mathrm{X}$ 가",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$\\frac{\\vec{\\mathrm{XA}}}{\\left|\\vec{\\mathrm{XA}}\\right|}+\\frac{\\vec{\\mathrm{XB}}}{\\left|\\vec{\\mathrm{XB}}\\right|}+\\frac{\\vec{\\mathrm{XC}}}{\\left|\\vec{\\mathrm{XC}}\\right|}=\\vec{0}$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    2,
+    0
+   ],
+   "text": "을 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    1
+   ],
+   "text": "$k=\\vec{\\mathrm{XA}}\\cdot \\vec{\\mathrm{XB}}+\\vec{\\mathrm{XB}}\\cdot \\vec{\\mathrm{XC}}+\\vec{\\mathrm{XC}}\\cdot \\vec{\\mathrm{XA}}$ 일 때, $k^{2}$ 의 값을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "단위벡터의 합이 영벡터인 점(페르마 점)과 내적의 합",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 단위벡터 합이 영벡터 ⇒ 세 방향이 120°를 이룸을 찾아 내적의 합을 넓이와 연결",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "세 단위벡터 $\\vec{e_{1}}$ , $\\vec{e_{2}}$ , $\\vec{e_{3}}$ 의 합이 $\\vec{0}$ 이면 $\\vec{e_{1}}+\\vec{e_{2}}=-\\vec{e_{3}}$ 에서 $2+2 \\vec{e_{1}}\\cdot \\vec{e_{2}}=1$ , 즉 $\\vec{e_{1}}\\cdot \\vec{e_{2}}=-\\frac{1}{2}$ 이다. 따라서 세 벡터 $\\vec{\\mathrm{XA}}$ , $\\vec{\\mathrm{XB}}$ , $\\vec{\\mathrm{XC}}$ 는 서로 $\\frac{2 \\pi}{3}$ 의 각을 이룬다. 이것이 숨은 관문이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$\\overline{\\mathrm{XA}}=x$ , $\\overline{\\mathrm{XB}}=y$ , $\\overline{\\mathrm{XC}}=z$ 라 하면 $k=-\\frac{1}{2}(x y+y z+z x)$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "한편 삼각형 $\\mathrm{ABC}$ 는 세 삼각형 $\\mathrm{XAB}$ , $\\mathrm{XBC}$ , $\\mathrm{XCA}$ 로 나뉘고 각각의 넓이는 $\\frac{1}{2}x y \\sin \\frac{2 \\pi}{3}$ 등이므로 삼각형 $\\mathrm{ABC}$ 의 넓이는 $\\frac{\\sqrt{3}}{4}(x y+y z+z x)$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "삼각형 $\\mathrm{ABC}$ 의 넓이는 $\\frac{1}{2}\\times 6 \\times 4=12$ 이므로 $x y+y z+z x=\\frac{48}{\\sqrt{3}}=16 \\sqrt{3}$ , $k=-8 \\sqrt{3}$ 이고 $k^{2}=192$ 이다. (삼각형의 모든 내각이 $\\frac{2 \\pi}{3}$ 보다 작으므로 이런 점 $\\mathrm{X}$ 는 내부에 존재한다.)",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

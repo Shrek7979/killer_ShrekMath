@@ -1,0 +1,156 @@
+{
+ "num": 1481,
+ "id": "최고난도500(3)-179",
+ "subject": "미적분Ⅱ",
+ "type": "30번형",
+ "typeDesc": "미적분Ⅱ · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12미적Ⅱ-03-01]"
+ ],
+ "source": "ShrekMath 창작 · 수능 30번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 97,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "양수 $a$ 에 대하여"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "\\int_{0}^{\\pi}\\left|\\sin x-a \\sin 2 x \\right|dx=\\frac{5}{2}"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "일 때, $\\int_{0}^{\\pi}\\left|\\sin x-a \\sin 2 x \\right|\\cos^{2}x \\,dx=\\frac{q}{p}$ 이다.",
+    "$p+q$ 의 값을 구하시오.",
+    "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "양수 $a$ 에 대하여",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$\\int_{0}^{\\pi}\\left|\\sin x-a \\sin 2 x \\right|dx=\\frac{5}{2}$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    2,
+    0
+   ],
+   "text": "일 때, $\\int_{0}^{\\pi}\\left|\\sin x-a \\sin 2 x \\right|\\cos^{2}x \\,dx=\\frac{q}{p}$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    1
+   ],
+   "text": "$p+q$ 의 값을 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    2,
+    2
+   ],
+   "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "절댓값이 있는 정적분 — 부호가 바뀌는 조건에 따른 경우 나누기",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 치환으로 절댓값을 일차식으로 바꾸고, 부호가 바뀌는 경우와 아닌 경우를 나누어 가짜 해를 걸러내는 것",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$\\sin x-a \\sin 2 x=\\sin x(1-2 a \\cos x)$ 이고 $0 \\le x \\le \\pi$ 에서 $\\sin x \\ge 0$ 이다. $u=\\cos x$ 로 치환하면 $du=-\\sin x \\,dx$ 이므로 $\\int_{0}^{\\pi}\\left|\\sin x-a \\sin 2 x \\right|dx=\\int_{-1}^{1}\\left|1-2 a u \\right|du$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "핵심 관문은 $1-2 a u$ 가 $-1<u<1$ 에서 부호가 바뀌는지에 따른 경우 나누기이다. $0<a \\le \\frac{1}{2}$ 이면 $1-2 a u \\ge 0$ 이므로 값이 $2$ 가 되어 조건을 만족시키지 않는다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$a>\\frac{1}{2}$ 이면 $c=\\frac{1}{2 a}$ 에서 부호가 바뀌고",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$$\\int_{-1}^{1}\\left|1-2 a u \\right|du=2+2 \\int_{c}^{1}(2 a u-1)du=2+2 \\left(a-1+\\frac{1}{4 a}\\right)=2 a+\\frac{1}{2 a}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "이다. $2 a+\\frac{1}{2 a}=\\frac{5}{2}$ 에서 $4 a^{2}-5 a+1=0$ , 즉 $a=1$ 또는 $a=\\frac{1}{4}$ 인데 $a>\\frac{1}{2}$ 이므로 $a=1$ 이다. ( $a=\\frac{1}{4}$ 은 앞의 경우에 해당하여 버린다.)",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "같은 치환으로 구하는 값은 $\\int_{-1}^{1}\\left|1-2 u \\right|u^{2}du$ 이다. $\\int_{-1}^{1}(1-2 u)u^{2}du=\\frac{2}{3}$ 이고 $\\int_{\\frac{1}{2}}^{1}(2 u-1)u^{2}du=\\frac{17}{96}$ 이므로",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 8,
+   "text": "$$\\int_{-1}^{1}\\left|1-2 u \\right|u^{2}du=\\frac{2}{3}+2 \\times \\frac{17}{96}=\\frac{49}{48}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 9,
+   "text": "따라서 $p+q=48+49=97$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}
