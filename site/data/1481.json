@@ -10,9 +10,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 30번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $a=\\frac14$까지 해로 남긴 경우",
  "answer": 97,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -41,9 +41,11 @@
     0
    ],
    "text": "양수 $a$ 에 대하여",
-   "label": "",
+   "label": "양수 $a$",
    "why": "",
-   "uses": []
+   "uses": [
+    3
+   ]
   },
   {
    "id": "C2",
@@ -52,9 +54,14 @@
     0
    ],
    "text": "$\\int_{0}^{\\pi}\\left|\\sin x-a \\sin 2 x \\right|dx=\\frac{5}{2}$",
-   "label": "",
+   "label": "조건",
    "why": "",
-   "uses": []
+   "uses": [
+    2,
+    3,
+    4,
+    5
+   ]
   },
   {
    "id": "C3",
@@ -63,9 +70,11 @@
     0
    ],
    "text": "일 때, $\\int_{0}^{\\pi}\\left|\\sin x-a \\sin 2 x \\right|\\cos^{2}x \\,dx=\\frac{q}{p}$ 이다.",
-   "label": "",
+   "label": "묻는 것",
    "why": "",
-   "uses": []
+   "uses": [
+    6
+   ]
   },
   {
    "id": "C4",
@@ -74,9 +83,11 @@
     1
    ],
    "text": "$p+q$ 의 값을 구하시오.",
-   "label": "",
+   "label": "$p+q$",
    "why": "",
-   "uses": []
+   "uses": [
+    7
+   ]
   },
   {
    "id": "C5",
@@ -85,72 +96,118 @@
     2
    ],
    "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
-   "label": "",
+   "label": "단서",
    "why": "",
-   "uses": []
+   "uses": [
+    7
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "$u=\\cos x$ → $\\int_{-1}^1|1-2au|du$.",
+  "$a>\\frac12$일 때만 부호가 바뀐다 → $a=1$."
+ ],
  "topic": "절댓값이 있는 정적분 — 부호가 바뀌는 조건에 따른 경우 나누기",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "치환",
+   "p": [
+    "$\\cos x$."
+   ]
+  },
+  {
+   "h": "절댓값 적분",
+   "p": [
+    "부호 경계."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 치환으로 절댓값을 일차식으로 바꾸고, 부호가 바뀌는 경우와 아닌 경우를 나누어 가짜 해를 걸러내는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "$\\sin x-a \\sin 2 x=\\sin x(1-2 a \\cos x)$ 이고 $0 \\le x \\le \\pi$ 에서 $\\sin x \\ge 0$ 이다. $u=\\cos x$ 로 치환하면 $du=-\\sin x \\,dx$ 이므로 $\\int_{0}^{\\pi}\\left|\\sin x-a \\sin 2 x \\right|dx=\\int_{-1}^{1}\\left|1-2 a u \\right|du$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "치환"
   },
   {
    "n": 3,
    "text": "핵심 관문은 $1-2 a u$ 가 $-1<u<1$ 에서 부호가 바뀌는지에 따른 경우 나누기이다. $0<a \\le \\frac{1}{2}$ 이면 $1-2 a u \\ge 0$ 이므로 값이 $2$ 가 되어 조건을 만족시키지 않는다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "$a\\le\\frac12$"
   },
   {
    "n": 4,
-   "text": "$a>\\frac{1}{2}$ 이면 $c=\\frac{1}{2 a}$ 에서 부호가 바뀌고",
-   "uses": [],
-   "title": ""
+   "text": "$a>\\frac{1}{2}$ 이면 $c=\\frac{1}{2 a}$ 에서 부호가 바뀌고 $$\\int_{-1}^{1}\\left|1-2 a u \\right|du=2+2 \\int_{c}^{1}(2 a u-1)du=2+2 \\left(a-1+\\frac{1}{4 a}\\right)=2 a+\\frac{1}{2 a}$$",
+   "uses": [
+    "C2"
+   ],
+   "title": "$a>\\frac12$"
   },
   {
    "n": 5,
-   "text": "$$\\int_{-1}^{1}\\left|1-2 a u \\right|du=2+2 \\int_{c}^{1}(2 a u-1)du=2+2 \\left(a-1+\\frac{1}{4 a}\\right)=2 a+\\frac{1}{2 a}$$",
-   "uses": [],
-   "title": ""
+   "text": "이다. $2 a+\\frac{1}{2 a}=\\frac{5}{2}$ 에서 $4 a^{2}-5 a+1=0$ , 즉 $a=1$ 또는 $a=\\frac{1}{4}$ 인데 $a>\\frac{1}{2}$ 이므로 $a=1$ 이다. ( $a=\\frac{1}{4}$ 은 앞의 경우에 해당하여 버린다.)",
+   "uses": [
+    "C2"
+   ],
+   "title": "$a$"
   },
   {
    "n": 6,
-   "text": "이다. $2 a+\\frac{1}{2 a}=\\frac{5}{2}$ 에서 $4 a^{2}-5 a+1=0$ , 즉 $a=1$ 또는 $a=\\frac{1}{4}$ 인데 $a>\\frac{1}{2}$ 이므로 $a=1$ 이다. ( $a=\\frac{1}{4}$ 은 앞의 경우에 해당하여 버린다.)",
-   "uses": [],
-   "title": ""
+   "text": "같은 치환으로 구하는 값은 $\\int_{-1}^{1}\\left|1-2 u \\right|u^{2}du$ 이다. $\\int_{-1}^{1}(1-2 u)u^{2}du=\\frac{2}{3}$ 이고 $\\int_{\\frac{1}{2}}^{1}(2 u-1)u^{2}du=\\frac{17}{96}$ 이므로 $$\\int_{-1}^{1}\\left|1-2 u \\right|u^{2}du=\\frac{2}{3}+2 \\times \\frac{17}{96}=\\frac{49}{48}$$",
+   "uses": [
+    "C3"
+   ],
+   "title": "같은 치환"
   },
   {
    "n": 7,
-   "text": "같은 치환으로 구하는 값은 $\\int_{-1}^{1}\\left|1-2 u \\right|u^{2}du$ 이다. $\\int_{-1}^{1}(1-2 u)u^{2}du=\\frac{2}{3}$ 이고 $\\int_{\\frac{1}{2}}^{1}(2 u-1)u^{2}du=\\frac{17}{96}$ 이므로",
-   "uses": [],
-   "title": ""
-  },
-  {
-   "n": 8,
-   "text": "$$\\int_{-1}^{1}\\left|1-2 u \\right|u^{2}du=\\frac{2}{3}+2 \\times \\frac{17}{96}=\\frac{49}{48}$$",
-   "uses": [],
-   "title": ""
-  },
-  {
-   "n": 9,
    "text": "따라서 $p+q=48+49=97$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4",
+    "C5"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "가짜 해",
+   "cond": "C2",
+   "text": [
+    "$a=\\frac14$은 다른 경우."
+   ]
+  },
+  {
+   "h": "$\\cos^2x=u^2$",
+   "cond": "C3",
+   "text": [
+    "가중치."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\frac{10}3$",
+   "body": [
+    "양수 $a$에 대하여 $\\int_0^\\pi|\\sin x-a\\sin2x|dx=\\frac{10}3$일 때, $\\int_0^\\pi|\\sin x-a\\sin2x|\\cos^2x\\,dx=\\frac qp$이다. $p+q$의 값을 구하시오. (단, $p$, $q$는 서로소)"
+   ],
+   "answer": 203,
+   "hint": "$2a+\\frac1{2a}=\\frac{10}3$ → $a=\\frac32$. $\\int_{-1}^1|1-3u|u^2du=\\frac{122}{81}$."
+  }
+ ],
+ "line": "부호가 안 바뀌는 경우의 해는 버린다.",
  "note": ""
 }

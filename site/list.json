@@ -36218,9 +36218,9 @@
   "topic": "삼각함수의 정적분 — 이웃한 항의 차로 만드는 점화식",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 6,
-  "nsteps": 8,
+  "nsteps": 7,
   "art": "",
   "snip": [
    {
@@ -36245,7 +36245,7 @@
   "topic": "정적분으로 정의된 함수 — 합을 곱으로 바꾸면 사라지는 절댓값",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
   "nsteps": 6,
   "art": "",
@@ -36272,9 +36272,9 @@
   "topic": "정적분으로 정의된 함수 — 절댓값 핵을 두 번 미분하기",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 3,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -36299,7 +36299,7 @@
   "topic": "정적분의 최소 — 대칭축을 기준으로 다시 쓴 일차식",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
   "nsteps": 7,
   "art": "",
@@ -36326,9 +36326,9 @@
   "topic": "치환적분 — 탄젠트 치환 후 로그 적분의 상쇄",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 3,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -36353,7 +36353,7 @@
   "topic": "정적분으로 정의된 함수 — 평균을 내는 적분으로 삼차함수 결정",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
   "nsteps": 8,
   "art": "",
@@ -36380,9 +36380,9 @@
   "topic": "정적분과 급수 — 교대급수를 적분으로 표현하기",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 4,
-  "nsteps": 8,
+  "nsteps": 7,
   "art": "",
   "snip": [
    {
@@ -36407,9 +36407,9 @@
   "topic": "정적분으로 정의된 함수 — 음이 아닌 함수가 0이 되는 조건",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 6,
-  "nsteps": 8,
+  "nsteps": 7,
   "art": "",
   "snip": [
    {
@@ -36434,9 +36434,9 @@
   "topic": "절댓값이 있는 정적분 — 부호가 바뀌는 조건에 따른 경우 나누기",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
-  "nsteps": 9,
+  "nsteps": 7,
   "art": "",
   "snip": [
    {
@@ -36461,9 +36461,9 @@
   "topic": "부분적분 점화식 — 수열의 양쪽 평가로 범위 결정",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 4,
-  "nsteps": 8,
+  "nsteps": 7,
   "art": "",
   "snip": [
    {
