@@ -1,0 +1,127 @@
+{
+ "wrong": "예상 오답 — $\\theta$를 역탄젠트로 직접 미분하려다 계산이 꼬인 경우",
+ "intro": [
+  "$\\tan\\theta=\\frac{3t}{t^2+4}$ — 덧셈정리.",
+  "$\\sec^2\\theta\\cdot\\theta'$로 $\\theta'$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "두 점",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "점 $\\mathrm{P}$",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C3": {
+   "label": "각",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "",
+   "uses": [
+    3,
+    4,
+    5
+   ]
+  },
+  "C5": {
+   "label": "단서",
+   "why": "",
+   "uses": [
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "덧셈정리",
+   "p": [
+    "$\\tan(\\beta-\\alpha)$."
+   ]
+  },
+  {
+   "h": "음함수 꼴 미분",
+   "p": [
+    "$\\tan\\theta$를 $t$로."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 보는 각을 두 각의 차로 보고 탄젠트의 덧셈정리로 나타낸 뒤, tan θ를 미분하여 θ'을 구하는 것",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$\\tan\\theta$",
+   "text": "$\\angle \\mathrm{APO}=\\alpha$ , $\\angle \\mathrm{BPO}=\\beta$ 라 하면 $\\tan \\beta=\\frac{4}{t}$ , $\\tan \\alpha=\\frac{1}{t}$ 이고 덧셈정리에서 $\\tan \\theta=\\tan(\\beta-\\alpha)=\\frac{\\frac{4}{t}-\\frac{1}{t}}{1+\\frac{4}{t^{2}}}=\\frac{3 t}{t^{2}+4}$ 이다.",
+   "uses": [
+    "C1",
+    "C2",
+    "C3"
+   ]
+  },
+  {
+   "title": "최대",
+   "text": "$0<\\theta<\\frac{\\pi}{2}$ 에서 $\\tan \\theta$ 가 최대일 때 $\\theta$ 도 최대이다. $\\frac{3 t}{t^{2}+4}$ 의 도함수는 $\\frac{3(4-t^{2})}{(t^{2}+4)^{2}}$ 이므로 $t=2$ 에서 최대이고 $m=\\frac{6}{8}=\\frac{3}{4}$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "미분",
+   "text": "핵심 관문: $\\theta$ 자체를 쓰지 않고 $\\tan \\theta$ 를 미분한다. $\\sec^{2}\\theta \\times \\theta'=\\frac{3(4-t^{2})}{(t^{2}+4)^{2}}$ 이고 $t=1$ 에서 $\\tan \\theta=\\frac{3}{5}$ , $\\sec^{2}\\theta=\\frac{34}{25}$ , 우변은 $\\frac{9}{25}$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $\\theta'(1)=\\frac{9}{34}$ 이고 구하는 값은 $75+34+9=118$ 이다.",
+   "uses": [
+    "C4",
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\sec^2$",
+   "cond": "C4",
+   "text": [
+    "$1+\\frac9{25}$."
+   ]
+  },
+  {
+   "h": "최대 위치",
+   "cond": "C4",
+   "text": [
+    "$t=\\sqrt{1\\cdot4}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\mathrm{A}(0,2)$, $\\mathrm{B}(0,8)$, $t=2$",
+   "body": [
+    "두 점 $\\mathrm{A}(0,2)$, $\\mathrm{B}(0,8)$과 시각 $t$에서 $(t,0)$에 있는 점 $\\mathrm{P}$에 대하여 $\\angle\\mathrm{APB}=\\theta(t)$라 하자. $\\theta(t)$가 최대일 때 $\\tan\\theta$의 값을 $m$, $\\theta'(2)=\\frac qp$일 때, $100m+p+q$의 값을 구하시오. (단, $p$, $q$는 서로소)"
+   ],
+   "answer": 152,
+   "hint": "$\\tan\\theta=\\frac{6t}{t^2+16}$, $m=\\frac34$. $t=2$: $\\frac9{50}\\cdot\\frac{25}{34}=\\frac9{68}$."
+  }
+ ],
+ "line": "보는 각은 두 각의 차."
+}

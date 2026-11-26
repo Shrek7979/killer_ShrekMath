@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 평지에서처럼 $\\alpha=\\frac\\pi4$에서 최대라고 본 경우",
  "answer": 55,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -32,9 +32,12 @@
     0
    ],
    "text": "좌표평면에서 원점에 있는 공을 $x$ 축의 양의 방향과 이루는 각의 크기가 $\\alpha$ $\\left(\\frac{\\pi}{6}<\\alpha<\\frac{\\pi}{2}\\right)$ 인 방향으로 던지면 시각 $t$ 에서 공의 위치는 $(15 t \\cos \\alpha,\\,15 t \\sin \\alpha-5 t^{2})$ 이다.",
-   "label": "",
+   "label": "공의 위치",
    "why": "",
-   "uses": []
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C2",
@@ -43,9 +46,12 @@
     1
    ],
    "text": "원점을 지나는 비탈면 $y=\\frac{x}{\\sqrt{3}}$ $(x \\ge 0)$ 위에 공이 떨어지는 점과 원점 사이의 거리를 $R(\\alpha)$ 라 하자.",
-   "label": "",
+   "label": "비탈면",
    "why": "",
-   "uses": []
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C3",
@@ -54,48 +60,103 @@
     2
    ],
    "text": "$R(\\alpha)$ 의 최댓값을 $M$ , 그때의 $\\alpha$ 의 값을 $\\theta$ 라 할 때, $M+\\frac{120 \\theta}{\\pi}$ 의 값을 구하시오. [4점]",
-   "label": "",
+   "label": "묻는 것",
    "why": "",
-   "uses": []
+   "uses": [
+    4,
+    5
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "$R(\\alpha)=60\\cos\\alpha\\sin\\left(\\alpha-\\frac\\pi6\\right)$.",
+  "곱을 합으로 → $\\alpha=\\frac\\pi4+\\frac\\beta2$."
+ ],
  "topic": "실생활 — 비탈면 위로 던진 공의 최대 도달 거리",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "곱을 합으로",
+   "p": [
+    "$\\cos A\\sin B$."
+   ]
+  },
+  {
+   "h": "삼각함수 최대",
+   "p": [
+    "$\\sin=1$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 도달 거리를 발사각의 삼각함수로 나타내고 미분(또는 곱을 합으로 바꾸기)으로 최대 조건 α=π/4+β/2를 찾는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "비탈면의 경사각을 $\\beta=\\frac{\\pi}{6}$ 이라 하자. 공이 비탈면에 떨어지는 시각은 $15 t \\sin \\alpha-5 t^{2}=\\frac{15 t \\cos \\alpha}{\\sqrt{3}}$ 의 양의 근 $t=3 \\left(\\sin \\alpha-\\frac{\\cos \\alpha}{\\sqrt{3}}\\right)=\\frac{3 \\sin(\\alpha-\\beta)}{\\cos \\beta}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "착지 시각"
   },
   {
    "n": 3,
    "text": "떨어지는 점의 $x$ 좌표는 $15 t \\cos \\alpha$ 이고 $R(\\alpha)=\\frac{15 t \\cos \\alpha}{\\cos \\beta}=\\frac{45 \\cos \\alpha \\sin(\\alpha-\\beta)}{\\cos^{2}\\beta}=60 \\cos \\alpha \\sin \\left(\\alpha-\\frac{\\pi}{6}\\right)$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "$R(\\alpha)$"
   },
   {
    "n": 4,
    "text": "핵심 관문: 곱을 합으로 바꾸면 $\\cos \\alpha \\sin \\left(\\alpha-\\frac{\\pi}{6}\\right)=\\frac{1}{2}\\left\\{\\sin \\left(2 \\alpha-\\frac{\\pi}{6}\\right)-\\frac{1}{2}\\right\\}$ 이다. (또는 $R'(\\alpha)=60 \\cos \\left(2 \\alpha-\\frac{\\pi}{6}\\right)=0$ 에서) $2 \\alpha-\\frac{\\pi}{6}=\\frac{\\pi}{2}$ , 즉 $\\alpha=\\frac{\\pi}{3}$ 에서 최대이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "최대 조건"
   },
   {
    "n": 5,
    "text": "$M=60 \\times \\frac{1}{2}\\times \\frac{1}{2}=15$ , $\\theta=\\frac{\\pi}{3}$ 이므로 구하는 값은 $15+40=55$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "거리",
+   "cond": "C2",
+   "text": [
+    "$x$좌표 ÷ $\\cos\\beta$."
+   ]
+  },
+  {
+   "h": "$\\alpha$ 범위",
+   "cond": "C1",
+   "text": [
+    "$\\frac\\pi6<\\alpha$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 속력 $30$",
+   "body": [
+    "원점에서 공을 $x$축과 각 $\\alpha$ $\\left(\\frac\\pi6<\\alpha<\\frac\\pi2\\right)$로 던지면 시각 $t$에서 위치가 $(30t\\cos\\alpha,30t\\sin\\alpha-5t^2)$이다. 비탈면 $y=\\frac x{\\sqrt3}$ 위에 떨어지는 점과 원점 사이 거리 $R(\\alpha)$의 최댓값을 $M$, 그때의 $\\alpha$를 $\\theta$라 할 때, $M+\\frac{120\\theta}\\pi$의 값을 구하시오."
+   ],
+   "answer": 100,
+   "hint": "$R=240\\cos\\alpha\\sin\\left(\\alpha-\\frac\\pi6\\right)$, $M=60$, $\\theta=\\frac\\pi3$."
+  }
+ ],
+ "line": "비탈면 최대 도달각 $\\frac\\pi4+\\frac\\beta2$.",
  "note": ""
 }
