@@ -1,0 +1,121 @@
+{
+ "wrong": "예상 오답 — $\\overline{\\mathrm{AM}}\\times\\overline{\\mathrm{A'N}}=b^2$을 몰라 $\\mathrm{P}$의 좌표부터 구하려 한 경우",
+ "intro": [
+  "장축 끝의 두 접선이 자르는 길이의 곱 $=b^2$.",
+  "$\\vec{\\mathrm{FM}}\\cdot\\vec{\\mathrm{FN}}=c^2-a^2+b^2=0$ — 두 초점은 $\\mathrm{MN}$을 지름으로 하는 원 위."
+ ],
+ "conds": {
+  "C1": {
+   "label": "타원과 $\\mathrm{A},\\mathrm{A'}$",
+   "why": "장축의 양 끝.",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "$\\mathrm{M},\\mathrm{N}$",
+   "why": "$\\mathrm{P}$에서의 접선과 $x=\\pm a$의 교점.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C3": {
+   "label": "수치와 묻는 것",
+   "why": "$2$, $8$, $2\\sqrt{34}$; 두 넓이의 곱.",
+   "uses": [
+    3,
+    4,
+    5,
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "타원의 접선",
+   "p": [
+    "$\\frac{x_0x}{a^2}+\\frac{y_0y}{b^2}=1$."
+   ]
+  },
+  {
+   "h": "지름의 원주각",
+   "p": [
+    "$\\vec{\\mathrm{FM}}\\cdot\\vec{\\mathrm{FN}}=0$ ⟺ $\\mathrm{F}$가 지름 $\\mathrm{MN}$의 원 위."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 장축 양 끝의 접선이 잘라내는 두 길이의 곱이 b²으로 일정하다는 관계와, 두 초점이 선분 MN을 지름으로 하는 원 위에 있다는 사실을 연결",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "두 길이",
+   "text": "$\\mathrm{P}(x_{0},\\,y_{0})$ 에서의 접선 $\\frac{x_{0}x}{a^{2}}+\\frac{y_{0}y}{b^{2}}=1$ 에 $x=\\pm a$ 를 대입하면 $\\overline{\\mathrm{AM}}=\\frac{b^{2}}{y_{0}}\\left(1-\\frac{x_{0}}{a}\\right)$ , $\\overline{\\mathrm{A'N}}=\\frac{b^{2}}{y_{0}}\\left(1+\\frac{x_{0}}{a}\\right)$ 이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "곱 $=b^2$",
+   "text": "핵심 관문: $\\overline{\\mathrm{AM}}\\times \\overline{\\mathrm{A'N}}=\\frac{b^{4}}{y_{0}^{2}}\\left(1-\\frac{x_{0}^{2}}{a^{2}}\\right)=\\frac{b^{4}}{y_{0}^{2}}\\times \\frac{y_{0}^{2}}{b^{2}}=b^{2}$ 이므로 $b^{2}=16$ 이다.",
+   "uses": [
+    "C2",
+    "C3"
+   ]
+  },
+  {
+   "title": "$a,c$",
+   "text": "$\\overline{\\mathrm{MN}}^{2}=(2 a)^{2}+(8-2)^{2}=136$ 에서 $a=5$ 이고 $c=3$ 이다. $\\mathrm{M}(5,\\,2)$ , $\\mathrm{N}(-5,\\,8)$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$\\triangle\\mathrm{MFN}$",
+   "text": "$\\vec{\\mathrm{FM}}=(2,\\,2)$ , $\\vec{\\mathrm{FN}}=(-8,\\,8)$ 이므로 $\\vec{\\mathrm{FM}}\\cdot \\vec{\\mathrm{FN}}=0$ 이고 삼각형 $\\mathrm{MFN}$ 의 넓이는 $\\frac{1}{2}\\times 2 \\sqrt{2}\\times 8 \\sqrt{2}=16$ 이다. (일반적으로 $\\vec{\\mathrm{FM}}\\cdot \\vec{\\mathrm{FN}}=c^{2}-a^{2}+\\overline{\\mathrm{AM}}\\times \\overline{\\mathrm{A'N}}=0$ 이므로 두 초점은 선분 $\\mathrm{MN}$ 을 지름으로 하는 원 위에 있다.)",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$\\triangle\\mathrm{MF'N}$와 답",
+   "text": "$\\vec{\\mathrm{F'M}}=(8,\\,2)$ , $\\vec{\\mathrm{F'N}}=(-2,\\,8)$ 이므로 삼각형 $\\mathrm{MF'N}$ 의 넓이는 $\\frac{1}{2}\\times \\sqrt{68}\\times \\sqrt{68}=34$ 이다. 따라서 구하는 값은 $16 \\times 34=544$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\overline{\\mathrm{MN}}$",
+   "cond": "C3",
+   "text": [
+    "가로 $2a$, 세로 $8-2$."
+   ]
+  },
+  {
+   "h": "두 초점 모두 직각",
+   "cond": "C3",
+   "text": [
+    "$\\mathrm{F}$와 $\\mathrm{F'}$ 모두에서 직각 — 넓이는 두 변의 곱의 절반."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $3$, $12$",
+   "body": [
+    "두 초점이 $\\mathrm{F}(c,0)$, $\\mathrm{F'}(-c,0)$인 타원 $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ $(a>b>0)$과 두 점 $\\mathrm{A}(a,0)$, $\\mathrm{A'}(-a,0)$이 있다. 제$1$사분면 위의 점 $\\mathrm{P}$에서의 접선이 두 직선 $x=a$, $x=-a$와 만나는 점을 각각 $\\mathrm{M}$, $\\mathrm{N}$이라 하자. $\\overline{\\mathrm{AM}}=3$, $\\overline{\\mathrm{A'N}}=12$, $\\overline{\\mathrm{MN}}=\\sqrt{481}$일 때, 삼각형 $\\mathrm{MFN}$의 넓이와 삼각형 $\\mathrm{MF'N}$의 넓이의 합을 구하시오."
+   ],
+   "answer": 150,
+   "hint": "$b^2=36$, $4a^2+81=481$에서 $a=10$, $c=8$. 넓이 $39$, $111$."
+  }
+ ],
+ "line": "끝 접선의 곱 $=b^2$, 초점은 지름의 원 위."
+}

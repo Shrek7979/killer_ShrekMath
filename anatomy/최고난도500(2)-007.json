@@ -1,0 +1,137 @@
+{
+ "wrong": "예상 오답 — 넓이가 일정함을 쓰지 않고 특정 점으로만 $a,b$를 정하려 한 경우",
+ "intro": [
+  "$\\mathrm{P}=s(a,b)+t(a,-b)$로 점근선 방향 분해 → 쌍곡선 위 ⟺ $4st=1$.",
+  "넓이 $2abst=\\frac{ab}2$ 일정, 꼭짓점에서 둘레 $2c$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "쌍곡선과 $\\mathrm{A},\\mathrm{B}$",
+   "why": "점근선에 평행한 두 직선.",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "연결",
+   "why": "다음 두 조건.",
+   "uses": [
+    3
+   ]
+  },
+  "C3": {
+   "label": "(가)",
+   "why": "넓이 항상 $6$ → $ab=12$.",
+   "uses": [
+    3
+   ]
+  },
+  "C4": {
+   "label": "(나)",
+   "why": "꼭짓점일 때 둘레 $10$ → $c=5$.",
+   "uses": [
+    4
+   ]
+  },
+  "C5": {
+   "label": "묻는 것",
+   "why": "$\\overline{\\mathrm{OA}}=2\\overline{\\mathrm{OB}}$일 때 $8\\,\\overline{\\mathrm{PF}}\\cdot\\overline{\\mathrm{PF'}}$.",
+   "uses": [
+    5,
+    6
+   ]
+  },
+  "C6": {
+   "label": "단서",
+   "why": "$\\mathrm{O}$는 원점.",
+   "uses": [
+    2
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "점근선 좌표",
+   "p": [
+    "$\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=\\left(\\frac xa-\\frac yb\\right)\\left(\\frac xa+\\frac yb\\right)$."
+   ]
+  },
+  {
+   "h": "초점 거리",
+   "p": [
+    "$\\overline{\\mathrm{PF}}=ex-a$, $\\overline{\\mathrm{PF'}}=ex+a$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 점근선 방향으로 분해한 계수의 곱이 일정(4st=1)하여 평행사변형 넓이가 ab/2로 일정함을 이용해 쌍곡선을 결정",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "분해",
+   "text": "$\\mathrm{A}=s(a,\\,b)$ , $\\mathrm{B}=t(a,\\,-b)$ 로 두면 $\\mathrm{OAPB}$ 는 평행사변형이므로 $\\mathrm{P}=(a(s+t),\\,b(s-t))$ 이고, 쌍곡선의 방정식에 대입하면 $(s+t)^{2}-(s-t)^{2}=4 s t=1$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "넓이 일정",
+   "text": "넓이는 $\\left|s a(-t b)-s b \\times t a \\right|=2 a b s t=\\frac{a b}{2}$ 로 일정하므로 (가)에서 $a b=12$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$a,b$",
+   "text": "핵심 관문: $\\mathrm{P}(a,\\,0)$ 이면 $s=t=\\frac{1}{2}$ 이고 네 변의 길이는 모두 $\\frac{1}{2}\\sqrt{a^{2}+b^{2}}=\\frac{c}{2}$ 이므로 둘레는 $2 c=10$ , $c=5$ 이다. $a^{2}+b^{2}=25$ , $a b=12$ , $a<b$ 에서 $a=3$ , $b=4$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "$\\mathrm{P}$의 $x$좌표",
+   "text": "$\\overline{\\mathrm{OA}}=5 s$ , $\\overline{\\mathrm{OB}}=5 t$ 이므로 $s=2 t$ 이고 $4 s t=1$ 에서 $t=\\frac{1}{2 \\sqrt{2}}$ , $s=\\frac{1}{\\sqrt{2}}$ 이다. 따라서 $\\mathrm{P}$ 의 $x$ 좌표는 $3(s+t)=\\frac{9 \\sqrt{2}}{4}$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "거리의 곱",
+   "text": "쌍곡선 위의 점 $(x,\\,y)$ 에 대하여 $(x-5)^{2}+y^{2}=(x-5)^{2}+\\frac{16}{9}x^{2}-16=\\left(\\frac{5}{3}x-3 \\right)^{2}$ 이고, 점 $\\mathrm{P}$ 는 오른쪽 부분 위의 점이므로 $\\overline{\\mathrm{PF}}=\\frac{5}{3}x-3$ , $\\overline{\\mathrm{PF'}}=\\frac{5}{3}x+3$ 이고 $\\overline{\\mathrm{PF}}\\times \\overline{\\mathrm{PF'}}=\\frac{25}{9}x^{2}-9=\\frac{25}{9}\\times \\frac{81}{8}-9=\\frac{153}{8}$ 이다. 따라서 구하는 값은 $153$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$a<b$",
+   "cond": "C1",
+   "text": [
+    "$ab=12$, $a^2+b^2=25$의 해 $(3,4)$와 $(4,3)$ 중 $a<b$."
+   ]
+  },
+  {
+   "h": "길이",
+   "cond": "C5",
+   "text": [
+    "$\\overline{\\mathrm{OA}}=s\\sqrt{a^2+b^2}=5s$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\overline{\\mathrm{OA}}=3\\overline{\\mathrm{OB}}$",
+   "body": [
+    "두 초점이 $\\mathrm{F}$, $\\mathrm{F'}$인 쌍곡선 $\\frac{x^2}{9}-\\frac{y^2}{16}=1$ 위의 점 $\\mathrm{P}$를 지나고 두 점근선 $y=\\frac43x$, $y=-\\frac43x$에 각각 평행한 두 직선이 점근선 $y=-\\frac43x$, $y=\\frac43x$와 만나는 점을 각각 $\\mathrm{B}$, $\\mathrm{A}$라 하자. $\\mathrm{P}$가 제$1$사분면 위에 있고 $\\overline{\\mathrm{OA}}=3\\overline{\\mathrm{OB}}$일 때, $3\\times\\overline{\\mathrm{PF}}\\times\\overline{\\mathrm{PF'}}$의 값을 구하시오. (단, $\\mathrm{O}$는 원점)"
+   ],
+   "answer": 73,
+   "hint": "$s=3t$, $4st=1$ → $x=3(s+t)=2\\sqrt3$. $\\frac{25}9x^2-9=\\frac{73}3$."
+  }
+ ],
+ "line": "점근선 방향으로 쪼개면 $4st=1$."
+}

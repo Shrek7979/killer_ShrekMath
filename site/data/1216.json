@@ -10,9 +10,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $p$를 구한 뒤 $x$좌표의 합을 $49$로 그대로 답한 경우",
  "answer": 37,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -30,9 +30,12 @@
     0
    ],
    "text": "양수 $p$ 에 대하여 포물선 $y^{2}=4 p x$ 의 초점 $\\mathrm{F}$ 를 지나는 서로 수직인 두 직선이 이 포물선과 만나는 점을 각각 $\\mathrm{A}$ , $\\mathrm{B}$ 와 $\\mathrm{C}$ , $\\mathrm{D}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "수직인 두 초점현",
+   "why": "$\\mathrm{AB}\\perp\\mathrm{CD}$, 모두 $\\mathrm{F}$를 지난다.",
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C2",
@@ -41,60 +44,101 @@
     1
    ],
    "text": "$\\overline{\\mathrm{AB}}+\\overline{\\mathrm{CD}}=49$ , $\\overline{\\mathrm{AB}}\\times \\overline{\\mathrm{CD}}=588$ 일 때, 네 점 $\\mathrm{A}$ , $\\mathrm{B}$ , $\\mathrm{C}$ , $\\mathrm{D}$ 의 $x$ 좌표의 합을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "수치와 묻는 것",
+   "why": "합 $49$, 곱 $588$; $x$좌표의 합.",
+   "uses": [
+    4,
+    5
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "초점현 $\\overline{\\mathrm{AB}}=\\frac{4p}{\\sin^2\\theta}$, 수직인 현 $\\frac{4p}{\\cos^2\\theta}$.",
+  "역수의 합 $\\frac1{4p}$ 일정 → $p=3$. 현의 길이 $=x_{\\mathrm{A}}+x_{\\mathrm{B}}+2p$."
+ ],
  "topic": "포물선 — 초점을 지나는 서로 수직인 두 현의 길이의 역수의 합",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "포물선의 극방정식",
+   "p": [
+    "$r=\\frac{2p}{1-\\cos\\phi}$."
+   ]
+  },
+  {
+   "h": "초점현의 길이",
+   "p": [
+    "$x_1+x_2+2p$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 초점을 지나는 수직인 두 현의 길이의 역수의 합이 1/(4p)로 일정함을 찾아 p를 결정하고, 현의 길이를 다시 x좌표로 바꿈",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "직선 $\\mathrm{AB}$ 가 $x$ 축의 양의 방향과 이루는 각을 $\\theta$ 라 하자. 초점을 지나는 현의 끝점 $\\mathrm{P}$ 에 대하여 $\\overline{\\mathrm{PF}}=r$ 이라 하면 포물선의 정의에서 $r=2 p+r \\cos \\phi$ ( $\\phi$ 는 $\\vec{\\mathrm{FP}}$ 의 방향각)이므로 $r=\\frac{2 p}{1-\\cos \\phi}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "초점 거리"
   },
   {
    "n": 3,
    "text": "따라서 $\\overline{\\mathrm{AB}}=\\frac{2 p}{1-\\cos \\theta}+\\frac{2 p}{1+\\cos \\theta}=\\frac{4 p}{\\sin^{2}\\theta}$ 이고, 수직인 현은 $\\overline{\\mathrm{CD}}=\\frac{4 p}{\\cos^{2}\\theta}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "두 현의 길이"
   },
   {
    "n": 4,
-   "text": "핵심 관문: $\\frac{1}{\\overline{\\mathrm{AB}}}+\\frac{1}{\\overline{\\mathrm{CD}}}=\\frac{\\sin^{2}\\theta+\\cos^{2}\\theta}{4 p}=\\frac{1}{4 p}$ 로 일정하다.",
-   "uses": [],
-   "title": ""
+   "text": "핵심 관문: $\\frac{1}{\\overline{\\mathrm{AB}}}+\\frac{1}{\\overline{\\mathrm{CD}}}=\\frac{\\sin^{2}\\theta+\\cos^{2}\\theta}{4 p}=\\frac{1}{4 p}$ 로 일정하다. $\\frac{1}{\\overline{\\mathrm{AB}}}+\\frac{1}{\\overline{\\mathrm{CD}}}=\\frac{49}{588}=\\frac{1}{12}$ 이므로 $p=3$ 이다.",
+   "uses": [
+    "C2"
+   ],
+   "title": "역수의 합"
   },
   {
    "n": 5,
-   "text": "$\\frac{1}{\\overline{\\mathrm{AB}}}+\\frac{1}{\\overline{\\mathrm{CD}}}=\\frac{49}{588}=\\frac{1}{12}$ 이므로 $p=3$ 이다.",
-   "uses": [],
-   "title": ""
-  },
-  {
-   "n": 6,
-   "text": "포물선의 정의에서 $\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AF}}+\\overline{\\mathrm{BF}}=(x_{\\mathrm{A}}+3)+(x_{\\mathrm{B}}+3)$ 이고 같은 방법으로 $\\overline{\\mathrm{CD}}=x_{\\mathrm{C}}+x_{\\mathrm{D}}+6$ 이다.",
-   "uses": [],
-   "title": ""
-  },
-  {
-   "n": 7,
-   "text": "따라서 네 점의 $x$ 좌표의 합은 $49-12=37$ 이다.",
-   "uses": [],
-   "title": ""
+   "text": "포물선의 정의에서 $\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AF}}+\\overline{\\mathrm{BF}}=(x_{\\mathrm{A}}+3)+(x_{\\mathrm{B}}+3)$ 이고 같은 방법으로 $\\overline{\\mathrm{CD}}=x_{\\mathrm{C}}+x_{\\mathrm{D}}+6$ 이다. 따라서 네 점의 $x$ 좌표의 합은 $49-12=37$ 이다.",
+   "uses": [
+    "C2"
+   ],
+   "title": "$x$좌표로"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$2p$ 두 번",
+   "cond": "C2",
+   "text": [
+    "두 현이므로 $4p=12$를 뺀다."
+   ]
+  },
+  {
+   "h": "합·곱의 역할",
+   "cond": "C2",
+   "text": [
+    "$\\frac{\\text{합}}{\\text{곱}}=\\frac1{4p}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 합 $50$, 곱 $400$",
+   "body": [
+    "양수 $p$에 대하여 포물선 $y^2=4px$의 초점 $\\mathrm{F}$를 지나는 서로 수직인 두 직선이 이 포물선과 만나는 점을 각각 $\\mathrm{A}$, $\\mathrm{B}$와 $\\mathrm{C}$, $\\mathrm{D}$라 하자. $\\overline{\\mathrm{AB}}+\\overline{\\mathrm{CD}}=50$, $\\overline{\\mathrm{AB}}\\times\\overline{\\mathrm{CD}}=400$일 때, 네 점의 $x$좌표의 합을 구하시오."
+   ],
+   "answer": 42,
+   "hint": "$\\frac{50}{400}=\\frac18=\\frac1{4p}$에서 $p=2$, $50-8$."
+  }
+ ],
+ "line": "수직인 초점현 — 역수의 합 $\\frac1{4p}$.",
  "note": ""
 }

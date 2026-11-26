@@ -29441,9 +29441,9 @@
   "topic": "타원 — 접선과 그에 수직인 직선의 x절편의 곱",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
-  "nsteps": 6,
+  "nsteps": 5,
   "art": "",
   "snip": [
    {
@@ -29464,9 +29464,9 @@
   "topic": "초점을 공유하는 타원과 쌍곡선 — 교점에서의 두 접선의 y절편",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 4,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -29487,9 +29487,9 @@
   "topic": "쌍곡선 — 점근선에 평행한 직선이 만드는 평행사변형의 넓이가 일정",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 6,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -29517,7 +29517,7 @@
   "topic": "포물선 — 외부의 점에서 그은 접선의 접점과 원점이 만드는 직각",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 4,
   "nsteps": 7,
   "art": "",
@@ -29540,9 +29540,9 @@
   "topic": "포물선 — 두 접선이 이루는 각이 일정한 점의 자취가 쌍곡선",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 3,
-  "nsteps": 8,
+  "nsteps": 5,
   "art": "",
   "snip": [
    {
@@ -29563,7 +29563,7 @@
   "topic": "타원 — 초점까지의 거리와 중심까지의 거리가 모두 자연수인 점",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 2,
   "nsteps": 6,
   "art": "",
@@ -29586,9 +29586,9 @@
   "topic": "타원 — 원 위의 점에서 그은 두 접선의 접점을 잇는 직선과 원점 사이의 거리",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
-  "nsteps": 7,
+  "nsteps": 5,
   "art": "",
   "snip": [
    {
@@ -29609,9 +29609,9 @@
   "topic": "타원 — 원점에서 수직인 두 반지름의 역수 제곱의 합이 일정",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 6,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -29639,9 +29639,9 @@
   "topic": "타원 — 장축 끝점의 접선과 만나는 두 점이 두 초점에서 직각을 이룸",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 3,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -29662,9 +29662,9 @@
   "topic": "포물선 — 초점을 지나는 서로 수직인 두 현의 길이의 역수의 합",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 2,
-  "nsteps": 7,
+  "nsteps": 5,
   "art": "",
   "snip": [
    {
@@ -29685,9 +29685,9 @@
   "topic": "포물선 — 길이가 일정한 현의 중점과 준선 사이의 거리의 최솟값(경우 나누기)",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 4,
-  "nsteps": 8,
+  "nsteps": 5,
   "art": "",
   "snip": [
    {
@@ -29708,7 +29708,7 @@
   "topic": "타원과 포물선의 교점의 개수 — 이중 접촉이 생기는 위치",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 3,
   "nsteps": 7,
   "art": "",
@@ -29731,7 +29731,7 @@
   "topic": "타원과 원의 공통접선이 만드는 마름모",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 2,
   "nsteps": 6,
   "art": "",
@@ -29754,7 +29754,7 @@
   "topic": "직각쌍곡선 — 두 초점까지의 거리의 곱이 중심까지의 거리의 제곱",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
   "nsteps": 6,
   "art": "",
@@ -29784,9 +29784,9 @@
   "topic": "타원 — 접선에 평행한 반지름과 초점거리의 곱",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 6,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {

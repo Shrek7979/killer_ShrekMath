@@ -1,0 +1,112 @@
+{
+ "wrong": "예상 오답 — 장축의 끝점을 $2$개씩 세거나 $|d|=16$을 빠뜨린 경우",
+ "intro": [
+  "$\\overline{\\mathrm{PF}}=20-\\frac45x$, $\\overline{\\mathrm{OP}}^2=144+\\left(\\frac45x\\right)^2$.",
+  "$d=20-\\overline{\\mathrm{PF}}$로 두면 $\\overline{\\mathrm{OP}}^2=144+d^2$ — 피타고라스 수 찾기."
+ ],
+ "conds": {
+  "C1": {
+   "label": "타원과 셈",
+   "why": "$c=16$, $a=20$, $b=12$. 두 거리가 모두 자연수인 점.",
+   "uses": [
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  "C2": {
+   "label": "단서",
+   "why": "$\\mathrm{O}$는 원점.",
+   "uses": [
+    2
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "초점 거리",
+   "p": [
+    "$\\overline{\\mathrm{PF}}=a-ex$."
+   ]
+  },
+  {
+   "h": "인수분해로 세기",
+   "p": [
+    "$(\\overline{\\mathrm{OP}}-|d|)(\\overline{\\mathrm{OP}}+|d|)=144$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: OP² = b² + (a − PF)²라는 숨은 관계를 찾아 문제를 피타고라스 수의 탐색으로 바꾸고, 꼭짓점에서 점이 하나뿐인 경우를 구별",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "초점 거리",
+   "text": "타원은 $\\frac{x^{2}}{400}+\\frac{y^{2}}{144}=1$ 이다. $\\mathrm{P}(x,\\,y)$ 에 대하여 $(x-16)^{2}+y^{2}=(x-16)^{2}+144-\\frac{144}{400}x^{2}=\\left(20-\\frac{4}{5}x \\right)^{2}$ 이므로 $\\overline{\\mathrm{PF}}=20-\\frac{4}{5}x$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "숨은 관계",
+   "text": "핵심 관문: $\\overline{\\mathrm{OP}}^{2}=x^{2}+144 \\left(1-\\frac{x^{2}}{400}\\right)=144+\\left(\\frac{4}{5}x \\right)^{2}$ 이므로 $d=\\frac{4}{5}x=20-\\overline{\\mathrm{PF}}$ 라 하면 $\\overline{\\mathrm{OP}}^{2}=144+d^{2}$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "후보",
+   "text": "$\\overline{\\mathrm{PF}}$ 가 자연수이면 $d$ 는 $-16 \\le d \\le 16$ 인 정수이고, $144+d^{2}$ 이 제곱수가 되어야 한다. $(\\overline{\\mathrm{OP}}-\\left|d \\right|)(\\overline{\\mathrm{OP}}+\\left|d \\right|)=144$ 에서 $\\left|d \\right|=0,\\,5,\\,9,\\,16$ 이고 이때 $\\overline{\\mathrm{OP}}=12,\\,13,\\,15,\\,20$ 이다. ( $\\left|d \\right|=35$ 는 범위를 벗어난다.)",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "점의 개수",
+   "text": "$d=\\pm 16$ 이면 장축의 끝점으로 각각 $1$ 개, $d=0$ 이면 단축의 끝점 $2$ 개, $d=\\pm 5$ , $d=\\pm 9$ 이면 각각 $2$ 개씩이다. 따라서 $n=2+2+4+4=12$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$s=2 \\times 20+2 \\times 12+4 \\times 13+4 \\times 15=176$ 이므로 $n+s=188$ 이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "꼭짓점",
+   "cond": "C1",
+   "text": [
+    "$d=\\pm16$은 장축의 끝 — 점이 하나뿐."
+   ]
+  },
+  {
+   "h": "범위",
+   "cond": "C1",
+   "text": [
+    "$|d|\\le16$ — $|d|=35$는 제외."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $a=20$, $c=12$",
+   "body": [
+    "두 초점이 $\\mathrm{F}(12,0)$, $\\mathrm{F'}(-12,0)$이고 장축의 길이가 $40$인 타원 위의 점 $\\mathrm{P}$ 중 $\\overline{\\mathrm{PF}}$와 $\\overline{\\mathrm{OP}}$가 모두 자연수인 점의 개수를 $n$, 이러한 모든 점에 대한 $\\overline{\\mathrm{OP}}$의 합을 $s$라 할 때, $n+s$의 값을 구하시오. (단, $\\mathrm{O}$는 원점)"
+   ],
+   "answer": 76,
+   "hint": "$\\overline{\\mathrm{OP}}^2=256+d^2$, $|d|\\le12$ → $d=0$($16$, $2$개), $d=\\pm12$($20$, $1$개씩)."
+  }
+ ],
+ "line": "초점 거리 하나가 피타고라스 수로 바뀐다."
+}

@@ -79,7 +79,7 @@ def _split_word(w):
     while i < len(w):
         for k in KEYS:
             seg = w[i:i + len(k)]
-            if seg.lower() == k and len(k) > 1 and not (k == 'of' and seg != 'of'):   # 대문자 OF(선분 OF)는 키워드 of 가 아니다
+            if seg.lower() == k and len(k) > 1 and not (k == 'of' and seg != 'of') and not (k in ('rm', 'it') and seg not in (k, k.upper())):   # 선분 OF, 곱 Rm·It 은 키워드가 아니다 (RM·IT 는 키워드)
                 out.append(k); i += len(k); break
         else:
             out.append(w[i]); i += 1
