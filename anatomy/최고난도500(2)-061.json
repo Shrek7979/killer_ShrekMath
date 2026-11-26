@@ -1,0 +1,104 @@
+{
+ "wrong": "예상 오답 — 반원이 아닌 원으로 보고 모든 값을 두 번씩 센 경우",
+ "intro": [
+  "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}=\\overline{\\mathrm{PN}}^2-20$, $\\mathrm{N}(4,3)$.",
+  "반원에서 $\\overline{\\mathrm{PN}}^2=34-30\\cos(t-\\alpha)$ — 감소 후 증가, 비대칭."
+ ],
+ "conds": {
+  "C1": {
+   "label": "점과 반원",
+   "why": "$\\mathrm{A}(2,7)$, $\\mathrm{B}(6,-1)$, 반원 $y\\ge0$; 정수가 되는 점의 수.",
+   "uses": [
+    2,
+    3,
+    4,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "중선 내적",
+   "p": [
+    "$\\mathrm{PN}^2-\\frac{\\mathrm{AB}^2}4$."
+   ]
+  },
+  {
+   "h": "삼각함수 합성",
+   "p": [
+    "$4\\cos t+3\\sin t=5\\cos(t-\\alpha)$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 내적을 거리로 바꾼 뒤 반원 위 거리 함수의 증감을 따져 각 정숫값을 몇 번 취하는지 셈",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "중점으로",
+   "text": "선분 $\\mathrm{AB}$ 의 중점 $\\mathrm{N}(4,\\,3)$ 에 대하여 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}=\\overline{\\mathrm{PN}}^{2}-\\frac{1}{4}\\overline{\\mathrm{AB}}^{2}=\\overline{\\mathrm{PN}}^{2}-20$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "매개변수",
+   "text": "$\\mathrm{P}(3 \\cos t,\\,3 \\sin t)\\,(0 \\le t \\le \\pi)$ 라 하면 $\\overline{\\mathrm{PN}}^{2}=34-6(4 \\cos t+3 \\sin t)=34-30 \\cos(t-\\alpha)$ 이다. 여기서 $\\cos \\alpha=\\frac{4}{5}$ , $\\sin \\alpha=\\frac{3}{5}$ 이고 $0<\\alpha<\\frac{\\pi}{2}$ 이므로 $t=\\alpha$ 는 반원 위의 점이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "증감",
+   "text": "따라서 $f(t)=\\overline{\\mathrm{PN}}^{2}-20$ 은 $t=0$ 에서 $-10$ , $t=\\alpha$ 에서 최솟값 $-16$ , $t=\\pi$ 에서 최댓값 $38$ 이고, $0 \\le t \\le \\alpha$ 에서 감소, $\\alpha \\le t \\le \\pi$ 에서 증가한다. 반원이므로 대칭이 깨져 한 번만 취하는 값과 두 번 취하는 값이 갈린다는 것이 핵심이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "값별 개수",
+   "text": "정수 $k$ 에 대하여 $f(t)=k$ 인 점의 개수는 $k=-16$ 일 때 $1$ , $-15 \\le k \\le-10$ 일 때 $2$ (감소 구간의 끝점 $t=0$ 도 포함), $-9 \\le k \\le 38$ 일 때 $1$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 구하는 개수는 $1+6 \\times 2+48=61$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "끝점 $t=0$",
+   "cond": "C1",
+   "text": [
+    "$-10$은 감소 구간의 끝 — 두 번."
+   ]
+  },
+  {
+   "h": "최솟값",
+   "cond": "C1",
+   "text": [
+    "$t=\\alpha$에서 한 번만."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 반지름 $5$",
+   "body": [
+    "두 점 $\\mathrm{A}(2,7)$, $\\mathrm{B}(6,-1)$과 반원 $x^2+y^2=25$ $(y\\ge0)$ 위의 점 $\\mathrm{P}$에 대하여 $\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}$의 값이 정수가 되도록 하는 점 $\\mathrm{P}$의 개수를 구하시오."
+   ],
+   "answer": 101,
+   "hint": "$\\overline{\\mathrm{PN}}^2=50-50\\cos(t-\\alpha)$: $t=0$에서 $-10$, 최소 $-20$, 최대 $70$. $1+10\\times2+80$."
+  }
+ ],
+ "line": "반원은 대칭이 깨진다 — 한 번과 두 번을 가른다."
+}

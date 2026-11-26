@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 상수항 $\\sum\\vec{\\mathrm{GA}}\\cdot\\vec{\\mathrm{GB}}$를 계산하지 못한 경우",
  "answer": 100,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -40,9 +40,12 @@
     0
    ],
    "text": "$\\angle \\mathrm{ACB}=\\frac{\\pi}{2}$ , $\\overline{\\mathrm{CA}}=6$ , $\\overline{\\mathrm{CB}}=8$ 인 직각삼각형 $\\mathrm{ABC}$ 의 외접원 위를 움직이는 점 $\\mathrm{P}$ 에 대하여",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "직각삼각형과 외접원",
+   "why": "$6,8,10$, 반지름 $5$.",
+   "uses": [
+    3,
+    4
+   ]
   },
   {
    "id": "C2",
@@ -51,9 +54,12 @@
     0
    ],
    "text": "$\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}+\\vec{\\mathrm{PB}}\\cdot \\vec{\\mathrm{PC}}+\\vec{\\mathrm{PC}}\\cdot \\vec{\\mathrm{PA}}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "세 내적의 합",
+   "why": "$\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}+\\cdots$.",
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C3",
@@ -62,54 +68,101 @@
     0
    ],
    "text": "의 최댓값과 최솟값의 합을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "최댓값과 최솟값의 합.",
+   "uses": [
+    4,
+    5
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "세 내적의 합 $=3\\mathrm{PG}^2+\\sum\\vec{\\mathrm{GA}}\\cdot\\vec{\\mathrm{GB}}$.",
+  "$\\sum\\vec{\\mathrm{GA}}\\cdot\\vec{\\mathrm{GB}}=-\\frac12\\sum\\mathrm{GA}^2=-\\frac{a^2+b^2+c^2}6$."
+ ],
  "topic": "내적 — 세 내적의 합과 무게중심",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "무게중심",
+   "p": [
+    "$\\vec{\\mathrm{GA}}+\\vec{\\mathrm{GB}}+\\vec{\\mathrm{GC}}=\\vec0$."
+   ]
+  },
+  {
+   "h": "직각삼각형의 외심",
+   "p": [
+    "빗변의 중점."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 세 내적의 합을 무게중심까지의 거리로 바꾸고, 직각삼각형에서 외심·무게중심의 위치로 범위를 확정",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
-   "text": "삼각형의 무게중심을 $\\mathrm{G}$ 라 하면 $\\vec{\\mathrm{GA}}+\\vec{\\mathrm{GB}}+\\vec{\\mathrm{GC}}=\\vec{0}$ 이다. $\\vec{\\mathrm{PA}}=\\vec{\\mathrm{PG}}+\\vec{\\mathrm{GA}}$ 등을 대입하면",
-   "uses": [],
-   "title": ""
+   "text": "삼각형의 무게중심을 $\\mathrm{G}$ 라 하면 $\\vec{\\mathrm{GA}}+\\vec{\\mathrm{GB}}+\\vec{\\mathrm{GC}}=\\vec{0}$ 이다. $\\vec{\\mathrm{PA}}=\\vec{\\mathrm{PG}}+\\vec{\\mathrm{GA}}$ 등을 대입하면 $$\\sum \\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}=3 \\left|\\vec{\\mathrm{PG}}\\right|^{2}+2 \\vec{\\mathrm{PG}}\\cdot(\\vec{\\mathrm{GA}}+\\vec{\\mathrm{GB}}+\\vec{\\mathrm{GC}})+(\\vec{\\mathrm{GA}}\\cdot \\vec{\\mathrm{GB}}+\\vec{\\mathrm{GB}}\\cdot \\vec{\\mathrm{GC}}+\\vec{\\mathrm{GC}}\\cdot \\vec{\\mathrm{GA}})$$",
+   "uses": [
+    "C2"
+   ],
+   "title": "무게중심으로"
   },
   {
    "n": 3,
-   "text": "$$\\sum \\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}=3 \\left|\\vec{\\mathrm{PG}}\\right|^{2}+2 \\vec{\\mathrm{PG}}\\cdot(\\vec{\\mathrm{GA}}+\\vec{\\mathrm{GB}}+\\vec{\\mathrm{GC}})+(\\vec{\\mathrm{GA}}\\cdot \\vec{\\mathrm{GB}}+\\vec{\\mathrm{GB}}\\cdot \\vec{\\mathrm{GC}}+\\vec{\\mathrm{GC}}\\cdot \\vec{\\mathrm{GA}})$$",
-   "uses": [],
-   "title": ""
+   "text": "이고, $\\left|\\vec{\\mathrm{GA}}+\\vec{\\mathrm{GB}}+\\vec{\\mathrm{GC}}\\right|^{2}=0$ 에서 마지막 괄호는 $-\\frac{1}{2}(\\overline{\\mathrm{GA}}^{2}+\\overline{\\mathrm{GB}}^{2}+\\overline{\\mathrm{GC}}^{2})=-\\frac{1}{6}(36+64+100)=-\\frac{100}{3}$ 이다.",
+   "uses": [
+    "C1"
+   ],
+   "title": "상수"
   },
   {
    "n": 4,
-   "text": "이고, $\\left|\\vec{\\mathrm{GA}}+\\vec{\\mathrm{GB}}+\\vec{\\mathrm{GC}}\\right|^{2}=0$ 에서 마지막 괄호는 $-\\frac{1}{2}(\\overline{\\mathrm{GA}}^{2}+\\overline{\\mathrm{GB}}^{2}+\\overline{\\mathrm{GC}}^{2})=-\\frac{1}{6}(36+64+100)=-\\frac{100}{3}$ 이다.",
-   "uses": [],
-   "title": ""
+   "text": "외접원의 중심 $\\mathrm{O}$ 는 빗변 $\\mathrm{AB}$ 의 중점이고 반지름은 $5$ 이다. $\\mathrm{G}$ 는 중선 $\\mathrm{CO}$ 위에서 $\\overline{\\mathrm{OG}}=\\frac{1}{3}\\overline{\\mathrm{OC}}=\\frac{5}{3}$ 인 점이므로 $5-\\frac{5}{3}\\le \\overline{\\mathrm{PG}}\\le 5+\\frac{5}{3}$ 이다.",
+   "uses": [
+    "C1"
+   ],
+   "title": "거리 범위"
   },
   {
    "n": 5,
-   "text": "외접원의 중심 $\\mathrm{O}$ 는 빗변 $\\mathrm{AB}$ 의 중점이고 반지름은 $5$ 이다. $\\mathrm{G}$ 는 중선 $\\mathrm{CO}$ 위에서 $\\overline{\\mathrm{OG}}=\\frac{1}{3}\\overline{\\mathrm{OC}}=\\frac{5}{3}$ 인 점이므로 $5-\\frac{5}{3}\\le \\overline{\\mathrm{PG}}\\le 5+\\frac{5}{3}$ 이다.",
-   "uses": [],
-   "title": ""
-  },
-  {
-   "n": 6,
    "text": "최솟값은 $3 \\times \\frac{100}{9}-\\frac{100}{3}=0$ (이때 $\\mathrm{P}=\\mathrm{C}$ ), 최댓값은 $3 \\times \\frac{400}{9}-\\frac{100}{3}=100$ 이므로 합은 $100$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\overline{\\mathrm{OG}}$",
+   "cond": "C1",
+   "text": [
+    "중선 $\\mathrm{CO}$의 $\\frac13$."
+   ]
+  },
+  {
+   "h": "최소 $0$",
+   "cond": "C3",
+   "text": [
+    "$\\mathrm{P}=\\mathrm{C}$일 때."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $5,12,13$",
+   "body": [
+    "$\\angle\\mathrm{ACB}=\\frac\\pi2$, $\\overline{\\mathrm{CA}}=5$, $\\overline{\\mathrm{CB}}=12$인 직각삼각형 $\\mathrm{ABC}$의 외접원 위를 움직이는 점 $\\mathrm{P}$에 대하여 $\\vec{\\mathrm{PA}}\\cdot\\vec{\\mathrm{PB}}+\\vec{\\mathrm{PB}}\\cdot\\vec{\\mathrm{PC}}+\\vec{\\mathrm{PC}}\\cdot\\vec{\\mathrm{PA}}$의 최댓값과 최솟값의 합을 구하시오."
+   ],
+   "answer": 169,
+   "hint": "상수 $-\\frac{169}3$, $\\overline{\\mathrm{PG}}\\in\\left[\\frac{13}3,\\frac{26}3\\right]$. 최소 $0$, 최대 $169$."
+  }
+ ],
+ "line": "세 내적의 합은 무게중심까지 거리.",
  "note": ""
 }

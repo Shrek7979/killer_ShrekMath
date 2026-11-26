@@ -1,0 +1,133 @@
+{
+ "wrong": "예상 오답 — 최댓값을 양 끝점 $\\mathrm{A}$에서의 $10$으로 본 경우",
+ "intro": [
+  "$|\\vec{\\mathrm{OP}}|^2=7+3\\cos2\\theta+4\\sin2\\theta=7+5\\cos(2\\theta-\\phi)$.",
+  "$2\\theta-\\phi=0$이 범위 안 → 최대 $12$는 끝점이 아닌 곳."
+ ],
+ "conds": {
+  "C1": {
+   "label": "두 벡터",
+   "why": "$\\sqrt{10}$, $2$, 내적 $4$.",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "범위",
+   "why": "$0\\le\\theta\\le\\frac\\pi2$.",
+   "uses": [
+    3,
+    4,
+    5
+   ]
+  },
+  "C3": {
+   "label": "정의 연결",
+   "why": "$\\vec{\\mathrm{OP}}$의 정의.",
+   "uses": [
+    2
+   ]
+  },
+  "C4": {
+   "label": "최대·최소",
+   "why": "$M$, $m$.",
+   "uses": [
+    4,
+    5
+   ]
+  },
+  "C5": {
+   "label": "묻는 것",
+   "why": "$M^2m^2$.",
+   "uses": [
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "배각",
+   "p": [
+    "$\\cos^2\\theta=\\frac{1+\\cos2\\theta}2$."
+   ]
+  },
+  {
+   "h": "합성",
+   "p": [
+    "$a\\cos x+b\\sin x=\\sqrt{a^2+b^2}\\cos(x-\\phi)$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 계수가 cos·sin인 위치벡터의 크기를 합성하여, 제한된 각의 범위에서 내부 최댓값을 찾기",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "크기의 제곱",
+   "text": "$\\left|\\vec{\\mathrm{OP}}\\right|^{2}=10 \\cos^{2}\\theta+4 \\sin^{2}\\theta+8 \\sin \\theta \\cos \\theta=7+3 \\cos 2 \\theta+4 \\sin 2 \\theta$ 이다.",
+   "uses": [
+    "C1",
+    "C3"
+   ]
+  },
+  {
+   "title": "합성",
+   "text": "$\\cos \\phi=\\frac{3}{5}$ , $\\sin \\phi=\\frac{4}{5}$ $\\left(0<\\phi<\\frac{\\pi}{2}\\right)$ 라 하면 $\\left|\\vec{\\mathrm{OP}}\\right|^{2}=7+5 \\cos(2 \\theta-\\phi)$ 이고, $2 \\theta-\\phi$ 는 $-\\phi$ 부터 $\\pi-\\phi$ 까지 변한다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "최댓값",
+   "text": "$2 \\theta-\\phi=0$ 이 범위 안에 있으므로 최댓값은 $7+5=12$ 이다. 이때 $\\theta=\\frac{\\phi}{2}$ 로, 양 끝점 $\\mathrm{A}$ ( $\\left|\\vec{\\mathrm{OA}}\\right|^{2}=10$ ), $\\mathrm{B}$ ( $\\left|\\vec{\\mathrm{OB}}\\right|^{2}=4$ )가 아닌 곳에서 최대가 된다는 것이 함정이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "최솟값",
+   "text": "$\\cos(2 \\theta-\\phi)$ 는 $-\\phi \\le 2 \\theta-\\phi \\le 0$ 에서 증가, $0 \\le 2 \\theta-\\phi \\le \\pi-\\phi$ 에서 감소하므로 최솟값은 끝점에서 생기고 $\\cos(-\\phi)=\\frac{3}{5}$ , $\\cos(\\pi-\\phi)=-\\frac{3}{5}$ 중 작은 값을 택하면 $7-3=4$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $M^{2}=12$ , $m^{2}=4$ 이고 $M^{2}\\times m^{2}=48$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "내부 최대",
+   "cond": "C4",
+   "text": [
+    "끝점 $10$보다 큰 $12$."
+   ]
+  },
+  {
+   "h": "최소는 끝점",
+   "cond": "C4",
+   "text": [
+    "$\\theta=\\frac\\pi2$의 $4$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $|\\vec{\\mathrm{OA}}|^2=12$",
+   "body": [
+    "$|\\vec{\\mathrm{OA}}|=2\\sqrt3$, $|\\vec{\\mathrm{OB}}|=2$, $\\vec{\\mathrm{OA}}\\cdot\\vec{\\mathrm{OB}}=3$인 두 점 $\\mathrm{A}$, $\\mathrm{B}$에 대하여 $0\\le\\theta\\le\\frac\\pi2$일 때 $\\vec{\\mathrm{OP}}=\\cos\\theta\\,\\vec{\\mathrm{OA}}+\\sin\\theta\\,\\vec{\\mathrm{OB}}$로 정한다. $|\\vec{\\mathrm{OP}}|$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $M^2\\times m^2$의 값을 구하시오."
+   ],
+   "answer": 52,
+   "hint": "$8+4\\cos2\\theta+3\\sin2\\theta=8+5\\cos(2\\theta-\\phi)$. $M^2=13$, $m^2=4$."
+  }
+ ],
+ "line": "합성한 각이 범위 안이면 최대는 내부에."
+}

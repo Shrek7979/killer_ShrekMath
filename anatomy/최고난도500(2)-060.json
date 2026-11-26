@@ -1,0 +1,125 @@
+{
+ "wrong": "예상 오답 — 우변 $\\vec{\\mathrm{AB}}$를 놓치고 $\\vec{\\mathrm{AP}}=\\frac{2\\vec b+3\\vec c}6$으로 둔 경우",
+ "intro": [
+  "시점을 $\\mathrm{A}$로 통일: $\\vec{\\mathrm{AP}}=\\frac{\\vec b+3\\vec c}6$.",
+  "수직 조건 → $\\vec b\\cdot\\vec c=6$, 내분 구조 → 넓이 $\\frac13$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "삼각형",
+   "why": "$\\overline{\\mathrm{AB}}=6$, $\\overline{\\mathrm{AC}}=4$.",
+   "uses": [
+    3,
+    4
+   ]
+  },
+  "C2": {
+   "label": "(가)",
+   "why": "벡터 등식.",
+   "uses": [
+    2
+   ]
+  },
+  "C3": {
+   "label": "(나)",
+   "why": "$\\mathrm{AP}\\perp\\mathrm{BC}$.",
+   "uses": [
+    3
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$|\\vec{\\mathrm{AP}}|^2+S^2$.",
+   "uses": [
+    4,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "시점 통일",
+   "p": [
+    "$\\vec{\\mathrm{PB}}=\\vec b-\\vec{\\mathrm{AP}}$."
+   ]
+  },
+  {
+   "h": "넓이",
+   "p": [
+    "$\\frac12\\sqrt{|\\vec b|^2|\\vec c|^2-(\\vec b\\cdot\\vec c)^2}$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 우변에 벡터가 있는 위치벡터 등식을 정리해 점을 표현하고, 수직 조건으로 사잇각을 결정",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$\\vec{\\mathrm{AP}}$",
+   "text": "$\\vec{\\mathrm{AB}}=\\vec{b}$ , $\\vec{\\mathrm{AC}}=\\vec{c}$ 라 하자. (가)에서 $-\\vec{\\mathrm{AP}}+2(\\vec{b}-\\vec{\\mathrm{AP}})+3(\\vec{c}-\\vec{\\mathrm{AP}})=\\vec{b}$ 이므로 $\\vec{\\mathrm{AP}}=\\frac{\\vec{b}+3 \\vec{c}}{6}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "내적",
+   "text": "(나)에서 $(\\vec{b}+3 \\vec{c})\\cdot(\\vec{c}-\\vec{b})=3 \\left|\\vec{c}\\right|^{2}-\\left|\\vec{b}\\right|^{2}-2 \\vec{b}\\cdot \\vec{c}=48-36-2 \\vec{b}\\cdot \\vec{c}=0$ 이므로 $\\vec{b}\\cdot \\vec{c}=6$ 이다.",
+   "uses": [
+    "C1",
+    "C3"
+   ]
+  },
+  {
+   "title": "$|\\vec{\\mathrm{AP}}|^2$",
+   "text": "$\\left|\\vec{\\mathrm{AP}}\\right|^{2}=\\frac{36+9 \\times 16+6 \\times 6}{36}=6$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "넓이",
+   "text": "$\\vec{\\mathrm{AP}}=\\frac{2}{3}\\times \\frac{\\vec{b}+3 \\vec{c}}{4}$ 이므로 직선 $\\mathrm{AP}$ 와 변 $\\mathrm{BC}$ 의 교점을 $\\mathrm{D}$ 라 하면 $\\overline{\\mathrm{AP}}:\\overline{\\mathrm{PD}}=2:1$ 이고, 삼각형 $\\mathrm{PBC}$ 의 넓이는 삼각형 $\\mathrm{ABC}$ 의 넓이의 $\\frac{1}{3}$ 이다. 삼각형 $\\mathrm{ABC}$ 의 넓이는 $\\frac{1}{2}\\sqrt{36 \\times 16-36}=3 \\sqrt{15}$ 이므로 $S=\\sqrt{15}$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $\\left|\\vec{\\mathrm{AP}}\\right|^{2}+S^{2}=6+15=21$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "우변",
+   "cond": "C2",
+   "text": [
+    "$\\vec{\\mathrm{AB}}=\\vec b$가 우변에 남는다."
+   ]
+  },
+  {
+   "h": "비율",
+   "cond": "C4",
+   "text": [
+    "$\\overline{\\mathrm{AP}}:\\overline{\\mathrm{PD}}=2:1$ → $\\frac13$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $8$과 $6$",
+   "body": [
+    "$\\overline{\\mathrm{AB}}=8$, $\\overline{\\mathrm{AC}}=6$인 삼각형 $\\mathrm{ABC}$와 점 $\\mathrm{P}$가 $\\vec{\\mathrm{PA}}+2\\vec{\\mathrm{PB}}+3\\vec{\\mathrm{PC}}=\\vec{\\mathrm{AB}}$, $\\vec{\\mathrm{AP}}\\cdot\\vec{\\mathrm{BC}}=0$을 만족시킨다. 삼각형 $\\mathrm{PBC}$의 넓이를 $S$라 할 때, $|\\vec{\\mathrm{AP}}|^2+S^2$의 값을 구하시오."
+   ],
+   "answer": 65,
+   "hint": "$108-64-2\\vec b\\cdot\\vec c=0$ → $22$. $|\\vec{\\mathrm{AP}}|^2=\\frac{520}{36}$, $S^2=\\frac{455}9$."
+  }
+ ],
+ "line": "시점을 하나로 — 우변의 벡터도 같이."
+}

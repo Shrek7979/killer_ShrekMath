@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — (가)를 수직 조건으로 착각하거나 (나)의 범위를 반영하지 않은 경우",
  "answer": 90,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -44,9 +44,11 @@
     0
    ],
    "text": "좌표평면에서 원 $C_{1}:x^{2}+y^{2}=4$ 위의 점 $\\mathrm{P}$ 와 원 $C_{2}:(x-8)^{2}+y^{2}=16$ 위의 점 $\\mathrm{Q}$ 가 다음 조건을 만족시킨다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "두 원",
+   "why": "$C_1$ 반지름 $2$, $C_2$ 중심 $\\mathrm{A}$ 반지름 $4$.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C2",
@@ -55,9 +57,11 @@
     0
    ],
    "text": "(가) $\\vec{\\mathrm{OP}}\\cdot \\vec{\\mathrm{AQ}}=\\left|\\vec{\\mathrm{OP}}\\right|\\left|\\vec{\\mathrm{AQ}}\\right|$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(가)",
+   "why": "같은 방향.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C3",
@@ -66,9 +70,11 @@
     1
    ],
    "text": "(나) $\\left|\\vec{\\mathrm{PQ}}\\right|\\le 8$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "(나)",
+   "why": "$|\\vec{\\mathrm{PQ}}|\\le8$ → $\\cos\\theta\\le-\\frac18$.",
+   "uses": [
+    3
+   ]
   },
   {
    "id": "C4",
@@ -77,9 +83,12 @@
     0
    ],
    "text": "$\\vec{\\mathrm{PQ}}\\cdot \\vec{\\mathrm{OQ}}$ 의 최댓값과 최솟값의 합을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\vec{\\mathrm{PQ}}\\cdot\\vec{\\mathrm{OQ}}$의 최대+최소.",
+   "uses": [
+    4,
+    5
+   ]
   },
   {
    "id": "C5",
@@ -88,48 +97,102 @@
     1
    ],
    "text": "(단, $\\mathrm{O}$ 는 원점이고, $\\mathrm{A}(8,\\,0)$ 이다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "단서",
+   "why": "$\\mathrm{O}$ 원점, $\\mathrm{A}(8,0)$.",
+   "uses": [
+    2
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "$\\vec{\\mathrm{OP}}\\cdot\\vec{\\mathrm{AQ}}=|\\vec{\\mathrm{OP}}||\\vec{\\mathrm{AQ}}|$ → 같은 방향.",
+  "$\\vec{\\mathrm{OP}}=2\\vec e$, $\\vec{\\mathrm{OQ}}=\\vec{\\mathrm{OA}}+4\\vec e$ — 한 각 $\\theta$로."
+ ],
  "topic": "내적 — 방향이 같은 두 반지름과 닮음의 중심",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "내적과 각",
+   "p": [
+    "$\\vec a\\cdot\\vec b=|\\vec a||\\vec b|$ ⟺ 각 $0$."
+   ]
+  },
+  {
+   "h": "닮음의 중심",
+   "p": [
+    "같은 방향의 반지름."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 내적이 크기의 곱과 같다는 조건을 같은 방향으로 해석하여 두 점을 한 각으로 매개화",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "(가)는 두 벡터 $\\vec{\\mathrm{OP}}$ , $\\vec{\\mathrm{AQ}}$ 가 이루는 각의 크기가 $0$ , 즉 방향이 같다는 뜻이다. 단위벡터 $\\vec{e}=(\\cos \\theta,\\,\\sin \\theta)$ 에 대하여 $\\vec{\\mathrm{OP}}=2 \\vec{e}$ , $\\vec{\\mathrm{OQ}}=\\vec{\\mathrm{OA}}+4 \\vec{e}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2",
+    "C5"
+   ],
+   "title": "매개화"
   },
   {
    "n": 3,
    "text": "$\\vec{\\mathrm{PQ}}=\\vec{\\mathrm{OA}}+2 \\vec{e}$ 이므로 $\\left|\\vec{\\mathrm{PQ}}\\right|^{2}=64+32 \\cos \\theta+4$ 이고, (나)에서 $\\cos \\theta \\le-\\frac{1}{8}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "범위"
   },
   {
    "n": 4,
    "text": "$\\vec{\\mathrm{PQ}}\\cdot \\vec{\\mathrm{OQ}}=(\\vec{\\mathrm{OA}}+2 \\vec{e})\\cdot(\\vec{\\mathrm{OA}}+4 \\vec{e})=64+48 \\cos \\theta+8=72+48 \\cos \\theta$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "내적"
   },
   {
    "n": 5,
    "text": "$-1 \\le \\cos \\theta \\le-\\frac{1}{8}$ 이므로 최솟값은 $24$ , 최댓값은 $66$ 이고 합은 $90$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "같은 방향",
+   "cond": "C2",
+   "text": [
+    "$\\vec{\\mathrm{AQ}}$와 $\\vec{\\mathrm{OP}}$ — 시점이 다르다."
+   ]
+  },
+  {
+   "h": "범위",
+   "cond": "C3",
+   "text": [
+    "$68+32\\cos\\theta\\le64$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 중심 $(6,0)$, $|\\vec{\\mathrm{PQ}}|\\le6$",
+   "body": [
+    "원 $x^2+y^2=4$ 위의 점 $\\mathrm{P}$와 원 $(x-6)^2+y^2=16$ 위의 점 $\\mathrm{Q}$가 $\\vec{\\mathrm{OP}}\\cdot\\vec{\\mathrm{AQ}}=|\\vec{\\mathrm{OP}}||\\vec{\\mathrm{AQ}}|$, $|\\vec{\\mathrm{PQ}}|\\le6$을 만족시킨다. $\\vec{\\mathrm{PQ}}\\cdot\\vec{\\mathrm{OQ}}$의 최댓값과 최솟값의 합을 구하시오. (단, $\\mathrm{O}$는 원점, $\\mathrm{A}(6,0)$)"
+   ],
+   "answer": 46,
+   "hint": "$|\\vec{\\mathrm{PQ}}|^2=40+24\\cos\\theta\\le36$ → $\\cos\\theta\\le-\\frac16$. $44+36\\cos\\theta\\in[8,38]$."
+  }
+ ],
+ "line": "내적 = 크기의 곱 → 같은 방향.",
  "note": ""
 }

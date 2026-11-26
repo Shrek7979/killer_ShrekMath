@@ -1,0 +1,114 @@
+{
+ "wrong": "예상 오답 — 가중 무게중심을 쓰지 않고 좌표로 전개하다 계산이 꼬인 경우",
+ "intro": [
+  "가중 무게중심 $\\mathrm{W}=\\frac{\\mathrm{A}+2\\mathrm{B}+3\\mathrm{C}}6=(4,0)$.",
+  "교차항이 사라져 $6|\\vec{\\mathrm{PW}}|^2+$ 상수."
+ ],
+ "conds": {
+  "C1": {
+   "label": "세 점과 원",
+   "why": "$\\mathrm{A},\\mathrm{B},\\mathrm{C}$, 반지름 $3$.",
+   "uses": [
+    2,
+    5
+   ]
+  },
+  "C2": {
+   "label": "가중 합",
+   "why": "$1:2:3$.",
+   "uses": [
+    2,
+    3,
+    4
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "최댓값과 최솟값의 합.",
+   "uses": [
+    4,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "가중 무게중심",
+   "p": [
+    "$\\sum w_i\\vec{\\mathrm{WX_i}}=\\vec0$."
+   ]
+  },
+  {
+   "h": "원 위 점까지 거리",
+   "p": [
+    "$|\\overline{\\mathrm{OW}}\\pm r|$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 가중치 무게중심을 잡아 교차항을 없애고 한 점까지의 거리 문제로 환원",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "무게중심 $\\mathrm{W}$",
+   "text": "점 $\\mathrm{W}$ 를 $\\vec{\\mathrm{OW}}=\\frac{\\vec{\\mathrm{OA}}+2 \\vec{\\mathrm{OB}}+3 \\vec{\\mathrm{OC}}}{6}$ 으로 정하면 $\\mathrm{W}(4,\\,0)$ 이고, $\\vec{\\mathrm{WA}}+2 \\vec{\\mathrm{WB}}+3 \\vec{\\mathrm{WC}}=\\vec{0}$ 이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "교차항 소거",
+   "text": "$\\vec{\\mathrm{PA}}=\\vec{\\mathrm{PW}}+\\vec{\\mathrm{WA}}$ 등을 대입하면 교차항 $2 \\vec{\\mathrm{PW}}\\cdot(\\vec{\\mathrm{WA}}+2 \\vec{\\mathrm{WB}}+3 \\vec{\\mathrm{WC}})$ 가 사라져 $$\\left|\\vec{\\mathrm{PA}}\\right|^{2}+2 \\left|\\vec{\\mathrm{PB}}\\right|^{2}+3 \\left|\\vec{\\mathrm{PC}}\\right|^{2}=6 \\left|\\vec{\\mathrm{PW}}\\right|^{2}+\\left|\\vec{\\mathrm{WA}}\\right|^{2}+2 \\left|\\vec{\\mathrm{WB}}\\right|^{2}+3 \\left|\\vec{\\mathrm{WC}}\\right|^{2}$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "상수",
+   "text": "이다. 상수항은 $36+2 \\times 18+3 \\times 4=84$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$\\overline{\\mathrm{OW}}=4$ 이므로 원 위의 점 $\\mathrm{P}$ 에 대하여 $1 \\le \\left|\\vec{\\mathrm{PW}}\\right|\\le 7$ 이다. 최솟값은 $6+84=90$ , 최댓값은 $294+84=378$ 이고 합은 $468$ 이다.",
+   "uses": [
+    "C1",
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "상수항",
+   "cond": "C3",
+   "text": [
+    "$36+2\\cdot18+3\\cdot4$."
+   ]
+  },
+  {
+   "h": "거리 범위",
+   "cond": "C1",
+   "text": [
+    "$4-3$부터 $4+3$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 반지름 $4$",
+   "body": [
+    "세 점 $\\mathrm{A}(6,0)$, $\\mathrm{B}(3,3)$, $\\mathrm{C}(2,-2)$와 원 $x^2+y^2=16$ 위를 움직이는 점 $\\mathrm{P}$에 대하여 $|\\vec{\\mathrm{PA}}|^2+2|\\vec{\\mathrm{PB}}|^2+3|\\vec{\\mathrm{PC}}|^2$의 최댓값과 최솟값의 합을 구하시오."
+   ],
+   "answer": 384,
+   "hint": "$\\mathrm{W}(3,0)$, 상수 $9+18+15=42$, $|\\vec{\\mathrm{PW}}|\\in[1,7]$. $48+336$."
+  }
+ ],
+ "line": "가중 합은 가중 무게중심으로."
+}
