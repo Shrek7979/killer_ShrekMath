@@ -1,0 +1,105 @@
+{
+ "wrong": "예상 오답 — 아래쪽 점을 택하거나 $\\overline{\\mathrm{HA}}$를 $\\mathrm{A}$ 쪽으로 잡은 경우",
+ "intro": [
+  "수평거리 $\\rho$ 고정 → $\\overline{\\mathrm{HA}}\\le\\rho+10$, $\\overline{\\mathrm{PH}}\\le1+\\sqrt{18-\\rho^2}$.",
+  "$\\rho+\\sqrt{18-\\rho^2}\\le6$ — 삼각치환."
+ ],
+ "conds": {
+  "C1": {
+   "label": "구와 수선의 발",
+   "why": "중심 $(0,0,1)$, 반지름 $3\\sqrt2$.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C2": {
+   "label": "묻는 것",
+   "why": "$\\overline{\\mathrm{PH}}+\\overline{\\mathrm{HA}}$ 최댓값.",
+   "uses": [
+    3,
+    4,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "원 위 점까지 거리",
+   "p": [
+    "원점 반대쪽에서 최대."
+   ]
+  },
+  {
+   "h": "삼각치환",
+   "p": [
+    "$\\rho=3\\sqrt2\\cos t$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 구 위의 점을 수평거리 ρ로 매개화해 두 거리를 분리 최대화하고, ρ에 대한 삼각치환으로 마무리",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$\\rho$로",
+   "text": "$\\mathrm{H}(x,\\,y,\\,0)$ 이고 $\\rho=\\sqrt{x^{2}+y^{2}}$ 이라 하면 $\\rho \\le \\sqrt{18}$ 이고 점 $\\mathrm{P}$ 의 $z$ 좌표는 $1 \\pm \\sqrt{18-\\rho^{2}}$ 이다. $\\overline{\\mathrm{PH}}$ 는 $z$ 좌표의 절댓값이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "분리 최대화",
+   "text": "$\\rho$ 를 고정하면 $\\overline{\\mathrm{HA}}$ 는 $\\mathrm{H}$ 가 원점에 대하여 $\\mathrm{A}$ 와 반대쪽에 있을 때 최대 $\\rho+10$ 이다. $\\overline{\\mathrm{PH}}$ 는 위쪽 점을 택할 때 $1+\\sqrt{18-\\rho^{2}}$ 으로 최대이다. (아래쪽 점은 $\\left|1-\\sqrt{18-\\rho^{2}}\\right|\\le 1+\\sqrt{18-\\rho^{2}}$ )",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "한 변수",
+   "text": "따라서 $f(\\rho)=11+\\rho+\\sqrt{18-\\rho^{2}}$ $(0 \\le \\rho \\le 3 \\sqrt{2})$ 의 최댓값을 구하면 된다. $\\rho=3 \\sqrt{2}\\cos t$ , $\\sqrt{18-\\rho^{2}}=3 \\sqrt{2}\\sin t$ $\\left(0 \\le t \\le \\frac{\\pi}{2}\\right)$ 로 놓으면 $\\rho+\\sqrt{18-\\rho^{2}}=6 \\sin \\left(t+\\frac{\\pi}{4}\\right)\\le 6$ 이고 등호는 $\\rho=3$ 일 때 성립한다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 최댓값은 $11+6=17$ 이고, 이때 $\\mathrm{H}\\left(-\\frac{12}{5},\\,-\\frac{9}{5},\\,0 \\right)$ , $\\mathrm{P}\\left(-\\frac{12}{5},\\,-\\frac{9}{5},\\,4 \\right)$ 이다. 수직 거리와 수평 거리를 따로 최대화하되 둘이 $\\rho$ 로 묶여 있다는 것이 핵심이다.",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "위쪽 점",
+   "cond": "C1",
+   "text": [
+    "$|1-\\sqrt{\\cdot}|\\le1+\\sqrt{\\cdot}$."
+   ]
+  },
+  {
+   "h": "묶인 변수",
+   "cond": "C2",
+   "text": [
+    "둘 다 $\\rho$에 달려 있다."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 반지름 $2\\sqrt2$",
+   "body": [
+    "구 $x^2+y^2+(z-1)^2=8$ 위의 점 $\\mathrm{P}$에서 $xy$평면에 내린 수선의 발을 $\\mathrm{H}$라 하자. 점 $\\mathrm{A}(3,4,0)$에 대하여 $\\overline{\\mathrm{PH}}+\\overline{\\mathrm{HA}}$의 최댓값을 구하시오."
+   ],
+   "answer": 10,
+   "hint": "$6+\\rho+\\sqrt{8-\\rho^2}\\le6+4$."
+  }
+ ],
+ "line": "수직·수평을 따로 키우되 $\\rho$로 묶는다."
+}

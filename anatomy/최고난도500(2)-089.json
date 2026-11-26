@@ -1,0 +1,111 @@
+{
+ "wrong": "예상 오답 — 자취 원의 중심을 무게중심 $\\mathrm{G}$로 잡은 경우",
+ "intro": [
+  "$\\angle\\mathrm{APB}=\\frac\\pi2$ ⟺ 지름 $\\mathrm{AB}$의 구 위.",
+  "구의 중심 $\\mathrm{N}$의 수선의 발 $\\mathrm{K}$ = $\\mathrm{BG}$의 중점, 반지름 $\\sqrt3$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "정사면체",
+   "why": "모서리 $6$.",
+   "uses": [
+    3
+   ]
+  },
+  "C2": {
+   "label": "자취",
+   "why": "평면 $\\mathrm{BCD}$ 위, 직각을 보는 점.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "$M^2+m^2$.",
+   "uses": [
+    4,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "지름의 구",
+   "p": [
+    "직각을 보는 점의 자취."
+   ]
+  },
+  {
+   "h": "구의 단면",
+   "p": [
+    "중심의 수선의 발, $\\sqrt{R^2-d^2}$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 직각을 보는 점의 자취를 지름 구로 바꾸고, 구와 면의 교선 원의 중심·반지름을 수선의 발로 결정",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "구",
+   "text": "$\\angle \\mathrm{APB}=\\frac{\\pi}{2}$ 인 점 $\\mathrm{P}$ 는 선분 $\\mathrm{AB}$ 를 지름으로 하는 구 위의 점이다. 따라서 이 점들은 중심이 선분 $\\mathrm{AB}$ 의 중점 $\\mathrm{N}$ , 반지름이 $3$ 인 구와 평면 $\\mathrm{BCD}$ 의 교선(원) 위에 있다. 이 원은 점 $\\mathrm{B}$ 를 지나지만 $\\mathrm{B}$ 에서는 각이 정의되지 않으므로, 점 $\\mathrm{B}$ 를 제외한 원 위의 점이 조건을 만족시킨다. 아래의 최대·최소는 점 $\\mathrm{B}$ 에서 생기지 않는다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "원의 중심과 반지름",
+   "text": "삼각형 $\\mathrm{BCD}$ 의 무게중심을 $\\mathrm{G}$ 라 하면 점 $\\mathrm{A}$ 에서 평면 $\\mathrm{BCD}$ 에 내린 수선의 발은 $\\mathrm{G}$ 이고 높이는 $\\sqrt{36-12}=2 \\sqrt{6}$ 이다. 점 $\\mathrm{N}$ 에서 평면에 내린 수선의 발 $\\mathrm{K}$ 는 선분 $\\mathrm{BG}$ 의 중점이고 $\\overline{\\mathrm{NK}}=\\sqrt{6}$ 이므로, 원의 중심은 $\\mathrm{K}$ , 반지름은 $\\sqrt{9-6}=\\sqrt{3}$ 이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "$\\overline{\\mathrm{KC}}$",
+   "text": "평면 $\\mathrm{BCD}$ 에서 $\\mathrm{G}$ 를 원점으로 하면 $\\mathrm{B}(2 \\sqrt{3},\\,0)$ , $\\mathrm{C}(-\\sqrt{3},\\,3)$ , $\\mathrm{K}(\\sqrt{3},\\,0)$ 이므로 $\\overline{\\mathrm{KC}}^{2}=12+9=21$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "점 $\\mathrm{C}$ 는 원과 같은 평면 위에 있으므로 $M=\\sqrt{21}+\\sqrt{3}$ , $m=\\sqrt{21}-\\sqrt{3}$ 이고 $M^{2}+m^{2}=2(21+3)=48$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\mathrm{B}$ 제외",
+   "cond": "C2",
+   "text": [
+    "$\\mathrm{B}$에서는 각이 없다 — 최대·최소엔 영향 없음."
+   ]
+  },
+  {
+   "h": "$\\overline{\\mathrm{NK}}$",
+   "cond": "C1",
+   "text": [
+    "높이 $2\\sqrt6$의 절반."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 모서리 $12$",
+   "body": [
+    "한 모서리의 길이가 $12$인 정사면체 $\\mathrm{ABCD}$가 있다. 평면 $\\mathrm{BCD}$ 위의 점 $\\mathrm{P}$ 중 $\\angle\\mathrm{APB}=\\frac\\pi2$인 점은 모두 한 원 위에 있다. 이 원 위의 점 $\\mathrm{P}$에 대하여 $\\overline{\\mathrm{CP}}$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $M^2+m^2$의 값을 구하시오."
+   ],
+   "answer": 192,
+   "hint": "$2$배 닮음 → $4\\times48$."
+  }
+ ],
+ "line": "직각을 보는 점은 지름의 구 위."
+}

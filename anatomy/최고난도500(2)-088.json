@@ -1,0 +1,109 @@
+{
+ "wrong": "예상 오답 — 단면을 삼각형으로 보거나 육각형의 꼭짓점 위치를 잘못 잡은 경우",
+ "intro": [
+  "$\\mathrm{AG}$ 방향 그림자 길이: 꼭짓점마다 $0,2\\sqrt3,4\\sqrt3,6\\sqrt3$.",
+  "$\\frac{8\\sqrt3}3$은 둘째와 셋째 사이 → 육각형, 밑면 정사영 $26$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "정육면체",
+   "why": "모서리 $6$.",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "점 $\\mathrm{P}$",
+   "why": "$\\overline{\\mathrm{AP}}=\\frac{8\\sqrt3}3$.",
+   "uses": [
+    3
+   ]
+  },
+  "C3": {
+   "label": "단면과 묻는 것",
+   "why": "$k$.",
+   "uses": [
+    4,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "직선 위로의 정사영",
+   "p": [
+    "모서리와 대각선의 코사인 $\\frac1{\\sqrt3}$."
+   ]
+  },
+  {
+   "h": "정사영의 넓이",
+   "p": [
+    "$S=\\frac{S'}{\\cos\\theta}$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 대각선 방향으로의 정사영 길이로 단면이 지나는 모서리와 위치를 정하고, 밑면 정사영과 cos으로 넓이 계산",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "그림자 길이",
+   "text": "직선 $\\mathrm{AG}$ 와 각 모서리가 이루는 각의 코사인은 $\\frac{1}{\\sqrt{3}}$ 이다. 점 $\\mathrm{X}$ 에서 직선 $\\mathrm{AG}$ 에 내린 수선의 발을 $\\mathrm{X}'$ 이라 하면, 단면은 $\\overline{\\mathrm{AX}'}=\\overline{\\mathrm{AP}}$ 인 점 $\\mathrm{X}$ 전체이다. 꼭짓점에 대하여 $\\overline{\\mathrm{AX}'}$ 은 $\\mathrm{A}$ 에서 $0$ , $\\mathrm{B}$ , $\\mathrm{D}$ , $\\mathrm{E}$ 에서 $2 \\sqrt{3}$ , $\\mathrm{C}$ , $\\mathrm{F}$ , $\\mathrm{H}$ 에서 $4 \\sqrt{3}$ , $\\mathrm{G}$ 에서 $6 \\sqrt{3}$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "육각형",
+   "text": "$2 \\sqrt{3}<\\frac{8 \\sqrt{3}}{3}<4 \\sqrt{3}$ 이므로 단면은 $\\mathrm{B}$ , $\\mathrm{D}$ , $\\mathrm{E}$ 에서 $\\mathrm{C}$ , $\\mathrm{F}$ , $\\mathrm{H}$ 로 가는 여섯 모서리 $\\mathrm{BC}$ , $\\mathrm{BF}$ , $\\mathrm{DC}$ , $\\mathrm{DH}$ , $\\mathrm{EF}$ , $\\mathrm{EH}$ 와 만나는 육각형이다. 예를 들어 모서리 $\\mathrm{BC}$ 위에서 $\\mathrm{B}$ 로부터 $u$ 만큼 떨어진 점에 대하여 $\\frac{6+u}{\\sqrt{3}}=\\frac{8}{\\sqrt{3}}$ 이므로 $u=2$ 이다. 즉 육각형의 꼭짓점은 $\\mathrm{B}$ , $\\mathrm{D}$ , $\\mathrm{E}$ 에서 각 모서리를 따라 $2$ 만큼 떨어진 점이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "밑면 정사영",
+   "text": "이 육각형의 밑면 $\\mathrm{ABCD}$ 위로의 정사영은 정사각형에서 꼭짓점 $\\mathrm{A}$ 쪽 직각이등변삼각형(직각을 낀 두 변의 길이 $2$ )과 꼭짓점 $\\mathrm{C}$ 쪽 직각이등변삼각형(직각을 낀 두 변의 길이 $4$ )을 잘라낸 육각형이므로 넓이는 $36-2-8=26$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "단면과 밑면이 이루는 각은 두 평면에 각각 수직인 직선 $\\mathrm{AG}$ 와 $\\mathrm{AE}$ 가 이루는 각과 같으므로 그 코사인은 $\\frac{1}{\\sqrt{3}}$ 이다. 따라서 단면의 넓이는 $26 \\sqrt{3}$ 이고 $k=26$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "모양",
+   "cond": "C2",
+   "text": [
+    "$2\\sqrt3<\\overline{\\mathrm{AP}}<4\\sqrt3$ — 여섯 모서리를 자른다."
+   ]
+  },
+  {
+   "h": "잘라낼 삼각형",
+   "cond": "C3",
+   "text": [
+    "$\\mathrm{A}$ 쪽 다리 $2$, $\\mathrm{C}$ 쪽 다리 $4$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\overline{\\mathrm{AP}}=3\\sqrt3$",
+   "body": [
+    "한 모서리의 길이가 $6$인 정육면체 $\\mathrm{ABCD}-\\mathrm{EFGH}$의 대각선 $\\mathrm{AG}$ 위의 점 $\\mathrm{P}$가 $\\overline{\\mathrm{AP}}=3\\sqrt3$을 만족시킨다. $\\mathrm{P}$를 지나고 $\\mathrm{AG}$에 수직인 평면으로 자른 단면의 넓이가 $k\\sqrt3$일 때, $k$의 값을 구하시오."
+   ],
+   "answer": 27,
+   "hint": "중심을 지나므로 정육각형(한 변 $3\\sqrt2$): $\\frac{3\\sqrt3}2\\times18$. 또는 $36-\\frac92-\\frac92=27$."
+  }
+ ],
+ "line": "대각선에 수직인 단면 — 그림자 길이로 자르는 모서리를 고른다."
+}

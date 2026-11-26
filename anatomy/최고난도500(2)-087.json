@@ -1,0 +1,117 @@
+{
+ "wrong": "예상 오답 — 직각 조건을 $\\mathrm{A'B}$, $\\mathrm{A'C}$ 길이로만 풀다 막힌 경우",
+ "intro": [
+  "$\\angle\\mathrm{BA'C}=\\frac\\pi2$ ⟺ $\\overline{\\mathrm{A'O}}=\\frac12\\overline{\\mathrm{BC}}=6$.",
+  "삼각형 $\\mathrm{A'LO}$에서 이면각 $\\cos\\theta=\\frac13$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "정삼각형과 중점",
+   "why": "한 변 $12$, $\\mathrm{D}$, $\\mathrm{E}$.",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "접기와 직각",
+   "why": "$\\angle\\mathrm{BA'C}=\\frac\\pi2$.",
+   "uses": [
+    3,
+    4
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "$S^2$.",
+   "uses": [
+    5
+   ]
+  },
+  "C4": {
+   "label": "단서",
+   "why": "$\\mathrm{A'}$은 평면 밖.",
+   "uses": [
+    4
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "빗변의 중점",
+   "p": [
+    "직각삼각형의 외심."
+   ]
+  },
+  {
+   "h": "이면각",
+   "p": [
+    "$\\angle\\mathrm{A'LO}$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 직각 조건을 '빗변의 중점까지의 거리 = 빗변의 절반'으로 바꾸어 이면각을 결정",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "이면각 잡기",
+   "text": "선분 $\\mathrm{BC}$ 의 중점을 $\\mathrm{O}$ , 선분 $\\mathrm{DE}$ 의 중점을 $\\mathrm{L}$ 라 하면 $\\overline{\\mathrm{OL}}=\\overline{\\mathrm{LA}}=3 \\sqrt{3}$ 이고, 접은 뒤에도 $\\mathrm{A}' \\mathrm{L}$ 는 $\\mathrm{DE}$ 에 수직이다. 직선 $\\mathrm{OL}$ 와 $\\mathrm{A}' \\mathrm{L}$ 가 이루는 각, 즉 $\\angle \\mathrm{A}' \\mathrm{LO}=\\theta$ 는 접어 올린 면과 평면 $\\mathrm{DBCE}$ 가 이루는 이면각이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "직각 → 거리",
+   "text": "점 $\\mathrm{A}'$ 은 선분 $\\mathrm{BC}$ 의 수직이등분면 위에 있으므로 $\\overline{\\mathrm{A}' \\mathrm{B}}=\\overline{\\mathrm{A}' \\mathrm{C}}$ 이고, $\\angle \\mathrm{B}\\mathrm{A}' \\mathrm{C}=\\frac{\\pi}{2}$ 에서 $\\overline{\\mathrm{A}' \\mathrm{O}}=\\frac{1}{2}\\overline{\\mathrm{BC}}=6$ 이다. 이것이 숨은 관문이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$\\cos\\theta$",
+   "text": "삼각형 $\\mathrm{A}' \\mathrm{LO}$ 에서 $36=27+27-54 \\cos \\theta$ , $\\cos \\theta=\\frac{1}{3}$ 이다. 점 $\\mathrm{A}'$ 에서 평면 $\\mathrm{DBCE}$ 에 내린 수선의 발 $\\mathrm{H}$ 는 선분 $\\mathrm{LO}$ 위에 있고 $\\overline{\\mathrm{LH}}=3 \\sqrt{3}\\times \\frac{1}{3}=\\sqrt{3}$ , $\\overline{\\mathrm{OH}}=2 \\sqrt{3}$ 이다.",
+   "uses": [
+    "C2",
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "삼각형 $\\mathrm{A}' \\mathrm{BC}$ 의 정사영은 삼각형 $\\mathrm{HBC}$ 이고, $\\mathrm{OH}$ 는 $\\mathrm{BC}$ 에 수직이므로 $S=\\frac{1}{2}\\times 12 \\times 2 \\sqrt{3}=12 \\sqrt{3}$ , $S^{2}=432$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "수직이등분면",
+   "cond": "C2",
+   "text": [
+    "$\\mathrm{A'B}=\\mathrm{A'C}$."
+   ]
+  },
+  {
+   "h": "수선의 발",
+   "cond": "C3",
+   "text": [
+    "$\\mathrm{H}$는 $\\mathrm{LO}$ 위, $\\overline{\\mathrm{OH}}=2\\sqrt3$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\overline{\\mathrm{A'B}}=3\\sqrt{10}$",
+   "body": [
+    "한 변의 길이가 $12$인 정삼각형 모양의 종이 $\\mathrm{ABC}$에서 두 변 $\\mathrm{AB}$, $\\mathrm{AC}$의 중점을 $\\mathrm{D}$, $\\mathrm{E}$라 하자. 선분 $\\mathrm{DE}$를 접는 선으로 삼각형 $\\mathrm{ADE}$를 접어 $\\mathrm{A}$가 옮겨진 점을 $\\mathrm{A'}$이라 하면 $\\overline{\\mathrm{A'B}}=3\\sqrt{10}$이다. 삼각형 $\\mathrm{A'BC}$의 평면 $\\mathrm{DBCE}$ 위로의 정사영의 넓이를 $S$라 할 때, $S^2$의 값을 구하시오."
+   ],
+   "answer": 972,
+   "hint": "$\\overline{\\mathrm{A'O}}^2=90-36=54$ → $\\cos\\theta=0$, $\\mathrm{H}=\\mathrm{L}$, $\\overline{\\mathrm{OH}}=3\\sqrt3$."
+  }
+ ],
+ "line": "직각은 빗변의 중점까지의 거리로."
+}
