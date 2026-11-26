@@ -1,0 +1,148 @@
+{
+ "num": 1556,
+ "id": "매시간_5제_누적_최고난도-004",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12기하01-02]",
+  "[12기하01-04]"
+ ],
+ "source": "ShrekMath 창작 · 수능 30번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 94,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "장축의 길이가 $10$ 인 타원의 두 초점을 $\\mathrm{F},\\,\\mathrm{F}'$ 이라 하자.",
+    "이 타원 위의 점 $\\mathrm{P}$ 에서의 접선에 두 점 $\\mathrm{F},\\,\\mathrm{F}'$ 에서 내린 수선의 발을 각각 $\\mathrm{H},\\,\\mathrm{H}'$ 이라 하고, 사각형 $\\mathrm{FHH'F'}$ 의 넓이를 $S(\\mathrm{P})$ 라 하자.",
+    "점 $\\mathrm{P}$ 가 타원 위를 움직일 때 $S(\\mathrm{P})$ 의 최댓값은 $24$ 이다."
+   ]
+  },
+  {
+   "t": "p",
+   "sents": [
+    "$S(\\mathrm{P})$ 의 값이 자연수가 되도록 하는 타원 위의 점 $\\mathrm{P}$ 의 개수를 구하시오.",
+    "(단, 네 점 $\\mathrm{F},\\,\\mathrm{H},\\,\\mathrm{H}',\\,\\mathrm{F}'$ 이 한 직선 위에 있거나 두 점 $\\mathrm{H},\\,\\mathrm{H}'$ 이 일치할 때는 $S(\\mathrm{P})=0$ 으로 본다.) [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "장축의 길이가 $10$ 인 타원의 두 초점을 $\\mathrm{F},\\,\\mathrm{F}'$ 이라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "이 타원 위의 점 $\\mathrm{P}$ 에서의 접선에 두 점 $\\mathrm{F},\\,\\mathrm{F}'$ 에서 내린 수선의 발을 각각 $\\mathrm{H},\\,\\mathrm{H}'$ 이라 하고, 사각형 $\\mathrm{FHH'F'}$ 의 넓이를 $S(\\mathrm{P})$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "점 $\\mathrm{P}$ 가 타원 위를 움직일 때 $S(\\mathrm{P})$ 의 최댓값은 $24$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$S(\\mathrm{P})$ 의 값이 자연수가 되도록 하는 타원 위의 점 $\\mathrm{P}$ 의 개수를 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    1,
+    1
+   ],
+   "text": "(단, 네 점 $\\mathrm{F},\\,\\mathrm{H},\\,\\mathrm{H}',\\,\\mathrm{F}'$ 이 한 직선 위에 있거나 두 점 $\\mathrm{H},\\,\\mathrm{H}'$ 이 일치할 때는 $S(\\mathrm{P})=0$ 으로 본다.) [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "타원의 접선에 내린 두 초점의 수선의 발 — 사다리꼴 넓이의 최댓값으로 초점을 정하고 넓이가 자연수인 접점 세기",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 사다리꼴 넓이를 sin^2에 대한 이차식의 제곱근으로 바꾸면 꼭짓점이 범위 안이면 최댓값이 장반축의 제곱(25)으로 고정되므로, 최댓값 24는 꼭짓점이 범위 밖이라는 숨은 조건이 되어 두 후보 (b,c)=(4,3),(3,4) 중 하나를 버리게 하고, 넓이가 단조임을 이용해 자연수 값마다 접점을 4개(최댓값에서는 2개)씩 세는 것",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "타원을 $\\frac{x^{2}}{25}+\\frac{y^{2}}{\\beta^{2}}=1 \\,(5>\\beta>0)$ , $\\mathrm{F}(c,\\,0)$ , $\\mathrm{F}'(-c,\\,0)$ , $c^{2}=25-\\beta^{2}$ 이라 하자. 점 $\\mathrm{P}$ 에서의 접선의 단위 법선벡터를 $(\\cos \\phi,\\,\\sin \\phi)$ $(0 \\le \\phi<2 \\pi)$ 라 하면 접선은 $x \\cos \\phi+y \\sin \\phi=d$ , $d=\\sqrt{25 \\cos^{2}\\phi+\\beta^{2}\\sin^{2}\\phi}$ 이고, $\\phi$ 의 값 하나에 점 $\\mathrm{P}$ 가 하나씩 대응한다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$d^{2}-c^{2}\\cos^{2}\\phi=\\beta^{2}>0$ 이므로 두 초점은 접선의 같은 쪽에 있고 $\\overline{\\mathrm{FH}}=d-c \\cos \\phi$ , $\\overline{\\mathrm{F'H'}}=d+c \\cos \\phi$ 이다. 두 선분은 접선에 수직이므로 사각형 $\\mathrm{FHH'F'}$ 은 사다리꼴이고 높이는 $\\overline{\\mathrm{FF'}}$ 의 접선 방향 성분 $\\overline{\\mathrm{HH'}}=2 c \\left|\\sin \\phi \\right|$ 이다. 따라서 $S=\\frac{\\overline{\\mathrm{FH}}+\\overline{\\mathrm{F'H'}}}{2}\\times \\overline{\\mathrm{HH'}}=2 c d \\left|\\sin \\phi \\right|$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$u=\\sin^{2}\\phi \\,(0 \\le u \\le 1)$ 라 하면 $S^{2}=4 c^{2}u \\left(25-c^{2}u \\right)$ 이고, 이 이차식의 꼭짓점은 $u=\\frac{25}{2 c^{2}}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "핵심 관문: $\\frac{25}{2 c^{2}}\\le 1$ 이면 최댓값은 꼭짓점에서 $S^{2}=4 c^{2}\\times \\frac{25}{2 c^{2}}\\times \\frac{25}{2}=625$ , 즉 $S=25$ 로 $c$ 와 관계없이 정해지므로 최댓값이 $24$ 일 수 없다. 따라서 $c^{2}<\\frac{25}{2}$ 이고 최댓값은 $u=1$ 에서 $S=2 c \\beta=24$ 이다. $c^{2}+\\beta^{2}=25$ , $c^{2}\\beta^{2}=144$ 에서 $c^{2}$ 은 $9$ 또는 $16$ 인데 $c^{2}<\\frac{25}{2}$ 이므로 $c=3$ , $\\beta=4$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "이때 $S^{2}=36 u(25-9 u)$ 의 꼭짓점 $u=\\frac{25}{18}$ 은 $1$ 보다 크므로 $S$ 는 $0 \\le u \\le 1$ 에서 $u$ 에 대하여 증가하고 $0$ 부터 $24$ 까지의 값을 한 번씩 갖는다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "$S=m \\,(m=1,\\,2,\\,\\cdots,\\,23)$ 이 되는 $u$ 는 $0<u<1$ 에 하나씩 있고, $\\sin^{2}\\phi=u$ 를 만족시키는 $\\phi$ 는 $4$ 개이므로 점 $\\mathrm{P}$ 는 $4$ 개씩이다. $S=24$ 는 $u=1$ , 즉 $\\phi=\\frac{\\pi}{2},\\,\\frac{3 \\pi}{2}$ 일 때로 점 $\\mathrm{P}$ 는 단축의 두 끝점 $2$ 개이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 8,
+   "text": "따라서 구하는 점의 개수는 $4 \\times 23+2=94$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}
