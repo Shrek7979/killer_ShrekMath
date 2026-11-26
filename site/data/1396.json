@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $n=4$에서도 상수라고 보거나 $n=2$를 빠뜨린 경우",
  "answer": 17,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -41,9 +41,11 @@
     0
    ],
    "text": "$2$ 이상의 자연수 $n$ 에 대하여 함수 $f_{n}(x)$ 를",
-   "label": "",
+   "label": "$n$",
    "why": "",
-   "uses": []
+   "uses": [
+    4
+   ]
   },
   {
    "id": "C2",
@@ -52,9 +54,12 @@
     0
    ],
    "text": "$f_{n}(x)=\\sum_{k=0}^{n-1}\\cos^{4}\\left(x+\\frac{2 k \\pi}{n}\\right)$",
-   "label": "",
+   "label": "$f_n$",
    "why": "",
-   "uses": []
+   "uses": [
+    2,
+    3
+   ]
   },
   {
    "id": "C3",
@@ -63,9 +68,11 @@
     0
    ],
    "text": "라 하자.",
-   "label": "",
+   "label": "연결",
    "why": "",
-   "uses": []
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C4",
@@ -74,54 +81,110 @@
     1
    ],
    "text": "$2 \\le n \\le 20$ 인 자연수 $n$ 중에서 모든 실수 $x$ 에 대하여 $f_{n}'(x)=0$ 이 되도록 하는 $n$ 의 개수를 구하시오. [4점]",
-   "label": "",
+   "label": "묻는 것",
    "why": "",
-   "uses": []
+   "uses": [
+    5,
+    6
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "$\\cos^4=\\frac{3+4\\cos2\\theta+\\cos4\\theta}8$.",
+  "등간격 코사인 합은 $0$ — 단, $\\beta$가 $2\\pi$의 배수면 예외."
+ ],
  "topic": "삼각함수의 덧셈정리와 미분 — 등간격 각의 cos⁴ 합이 상수가 되는 조건",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "배각 공식",
+   "p": [
+    "차수 낮추기."
+   ]
+  },
+  {
+   "h": "등간격 각의 합",
+   "p": [
+    "망원으로 $0$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: cos⁴을 배각으로 낮춘 뒤 등간격 각의 코사인 합이 사라지는 조건을 판정하는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "배각 공식으로 $\\cos^{4}\\theta=\\frac{3+4 \\cos 2 \\theta+\\cos 4 \\theta}{8}$ 이므로 $f_{n}(x)=\\frac{3 n}{8}+\\frac{1}{2}\\sum_{k}\\cos \\left(2 x+\\frac{4 k \\pi}{n}\\right)+\\frac{1}{8}\\sum_{k}\\cos \\left(4 x+\\frac{8 k \\pi}{n}\\right)$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2",
+    "C3"
+   ],
+   "title": "차수 낮추기"
   },
   {
    "n": 3,
    "text": "핵심 관문: $\\sum_{k=0}^{n-1}\\cos(\\theta+k \\beta)$ 는 $\\beta$ 가 $2 \\pi$ 의 정수배이면 $n \\cos \\theta$ 이고, 그렇지 않으면서 $n \\beta$ 가 $2 \\pi$ 의 정수배이면 $0$ 이다. ( $\\sin \\frac{\\beta}{2}$ 를 곱하고 곱을 합으로 바꾸면 망원 꼴이 되기 때문이다.)",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "합의 성질"
   },
   {
    "n": 4,
    "text": "$\\beta=\\frac{4 \\pi}{n}$ 이 $2 \\pi$ 의 정수배인 것은 $n=2$ 뿐이고, $\\beta=\\frac{8 \\pi}{n}$ 이 $2 \\pi$ 의 정수배인 것은 $n=2,\\,4$ 뿐이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "예외"
   },
   {
    "n": 5,
    "text": "따라서 $n \\ne 2,\\,4$ 이면 $f_{n}(x)=\\frac{3 n}{8}$ 로 상수이고 $f_{n}'(x)=0$ 이다. $n=4$ 이면 $f_{4}(x)=\\frac{3}{2}+\\frac{1}{2}\\cos 4 x$ , $n=2$ 이면 $f_{2}(x)=2 \\cos^{4}x$ 이므로 $f_{n}'$ 이 $0$ 이 아닌 $x$ 가 있다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "판정"
   },
   {
    "n": 6,
    "text": "구하는 개수는 $19-2=17$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$n=4$",
+   "cond": "C4",
+   "text": [
+    "$\\cos4x$ 항이 남는다."
+   ]
+  },
+  {
+   "h": "개수",
+   "cond": "C4",
+   "text": [
+    "$2\\le n\\le20$은 $19$개."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\cos^6$",
+   "body": [
+    "$2$ 이상의 자연수 $n$에 대하여 $f_n(x)=\\sum_{k=0}^{n-1}\\cos^6\\left(x+\\frac{2k\\pi}n\\right)$이라 하자. $2\\le n\\le20$인 $n$ 중 모든 실수 $x$에서 $f_n'(x)=0$인 $n$의 개수를 구하시오."
+   ],
+   "answer": 15,
+   "hint": "$\\cos2\\theta$, $\\cos4\\theta$, $\\cos6\\theta$ 항 — 예외 $n=2,3,4,6$."
+  }
+ ],
+ "line": "등간격 각의 코사인 합은 사라진다.",
  "note": ""
 }

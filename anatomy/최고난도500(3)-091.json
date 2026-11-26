@@ -1,0 +1,111 @@
+{
+ "wrong": "예상 오답 — $\\tan\\frac\\theta2$로 두고 $\\overline{\\mathrm{PC}}$ 대신 접선 길이를 잘못 쓴 경우",
+ "intro": [
+  "$\\sin\\frac\\theta2=\\frac1{\\sqrt{t^2+4}}$.",
+  "양변 미분 → $\\theta'=-\\frac{2t}{(t^2+4)\\sqrt{t^2+3}}$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "원과 접선",
+   "why": "",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C2": {
+   "label": "묻는 것",
+   "why": "",
+   "uses": [
+    4,
+    5
+   ]
+  },
+  "C3": {
+   "label": "단서",
+   "why": "",
+   "uses": [
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "접선과 반지름",
+   "p": [
+    "수직."
+   ]
+  },
+  {
+   "h": "음함수 꼴 미분",
+   "p": [
+    "$\\sin\\frac\\theta2$를 $t$로 미분."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 두 접선이 이루는 각의 절반의 사인이 중심까지의 거리의 역수임을 이용해 음함수 꼴로 미분하는 것",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "관계",
+   "text": "원의 중심을 $\\mathrm{C}(0,\\,2)$ 라 하면 $\\overline{\\mathrm{PC}}=\\sqrt{t^{2}+4}$ 이고, 접선과 반지름이 수직이므로 $\\sin \\frac{\\theta(t)}{2}=\\frac{1}{\\sqrt{t^{2}+4}}$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "미분",
+   "text": "양변을 $t$ 에 대하여 미분하면 $\\frac{1}{2}\\cos \\frac{\\theta}{2}\\times \\theta'=-\\frac{t}{(t^{2}+4)^{\\frac{3}{2}}}$ 이고, $\\cos \\frac{\\theta}{2}=\\frac{\\sqrt{t^{2}+3}}{\\sqrt{t^{2}+4}}$ 이므로 $\\theta'(t)=-\\frac{2 t}{(t^{2}+4)\\sqrt{t^{2}+3}}$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "값",
+   "text": "$\\theta'(1)=-\\frac{2}{5 \\times 2}=-\\frac{1}{5}$ , $\\theta' \\left(\\sqrt{6}\\right)=-\\frac{2 \\sqrt{6}}{10 \\times 3}=-\\frac{\\sqrt{6}}{15}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$\\left\\{\\theta'(1)\\right\\}^{2}+\\left\\{\\theta' \\left(\\sqrt{6}\\right)\\right\\}^{2}=\\frac{1}{25}+\\frac{6}{225}=\\frac{1}{15}$ 이므로 $p+q=16$ 이다.",
+   "uses": [
+    "C2",
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\frac12$",
+   "cond": "C1",
+   "text": [
+    "반각의 미분."
+   ]
+  },
+  {
+   "h": "$\\cos\\frac\\theta2$",
+   "cond": "C1",
+   "text": [
+    "$\\frac{\\sqrt{t^2+3}}{\\sqrt{t^2+4}}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $t=\\sqrt{13}$",
+   "body": [
+    "실수 $t$에 대하여 점 $\\mathrm{P}(t,0)$에서 원 $x^2+(y-2)^2=1$에 그은 두 접선이 이루는 각을 $\\theta(t)$ $(0<\\theta(t)<\\pi)$라 하자. $\\{\\theta'(1)\\}^2+\\{\\theta'(\\sqrt{13})\\}^2=\\frac qp$일 때, $p+q$의 값을 구하시오. (단, $p$, $q$는 서로소)"
+   ],
+   "answer": 30381,
+   "hint": "$\\theta'(\\sqrt{13})=-\\frac{2\\sqrt{13}}{17\\cdot4}$: $\\frac1{25}+\\frac{13}{1156}=\\frac{1481}{28900}$."
+  }
+ ],
+ "line": "반각의 사인 = 반지름 ÷ 거리."
+}
