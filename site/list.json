@@ -36760,9 +36760,9 @@
   "topic": "대칭 조건의 정적분 — 함수가 정해지지 않아도 정해지는 적분값",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
-  "nsteps": 8,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -36790,9 +36790,9 @@
   "topic": "치환적분 — 역수 치환과 탄젠트함수의 역함수의 여각 관계",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 3,
-  "nsteps": 8,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -36817,9 +36817,9 @@
   "topic": "도함수에 x와 1-x가 섞인 함수방정식",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
-  "nsteps": 8,
+  "nsteps": 7,
   "art": "",
   "snip": [
    {
@@ -36844,9 +36844,9 @@
   "topic": "평균값으로 정의된 함수방정식 — 산술평균과 기하평균",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -36871,9 +36871,9 @@
   "topic": "삼각함수의 정적분 — 대칭 치환으로 만드는 sin x - cos x 치환",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 2,
-  "nsteps": 8,
+  "nsteps": 7,
   "art": "",
   "snip": [
    {
@@ -36894,7 +36894,7 @@
   "topic": "부분적분 — e^x(g+g') 꼴 알아보기",
   "stars": 4,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 2,
   "nsteps": 5,
   "art": "",
@@ -36917,7 +36917,7 @@
   "topic": "f(x)와 f(-x)가 얽힌 미분방정식 — 곱의 불변량",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 4,
   "nsteps": 6,
   "art": "",
@@ -36944,7 +36944,7 @@
   "topic": "정적분으로 정의된 함수 — 완전제곱으로 숨은 도함수",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
   "nsteps": 6,
   "art": "",
@@ -36971,9 +36971,9 @@
   "topic": "정적분으로 정의된 함수 — 자기 자신의 적분값을 포함한 절댓값 함수",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 5,
-  "nsteps": 7,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {
@@ -36998,9 +36998,9 @@
   "topic": "부분적분 점화식과 등비급수 — 코사인 거듭제곱과 배각의 곱",
   "stars": 5,
   "rate": "",
-  "full": false,
+  "full": true,
   "nconds": 4,
-  "nsteps": 8,
+  "nsteps": 6,
   "art": "",
   "snip": [
    {

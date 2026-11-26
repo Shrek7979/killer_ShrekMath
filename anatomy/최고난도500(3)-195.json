@@ -1,0 +1,119 @@
+{
+ "wrong": "예상 오답 — $\\sin2x=2\\sin x\\cos x$로 바꾸어 치환하다 막힌 경우",
+ "intro": [
+  "$x\\to\\frac\\pi2-x$로 $\\cos\\to\\sin$, 더한다.",
+  "$t=\\sin x-\\cos x$: $\\sin2x=1-t^2$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "적분",
+   "why": "",
+   "uses": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  "C2": {
+   "label": "단서",
+   "why": "",
+   "uses": [
+    7
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "대칭 치환",
+   "p": [
+    "$\\frac\\pi2-x$."
+   ]
+  },
+  {
+   "h": "$\\sin x-\\cos x$ 치환",
+   "p": [
+    "$dt=(\\sin+\\cos)dx$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 대칭 치환으로 sin x와 cos x를 합쳐 sin x - cos x 치환이 가능한 꼴로 만드는 것",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "대칭",
+   "text": "구하는 적분을 $I$ 라 하자. $x$ 를 $\\frac{\\pi}{2}-x$ 로 치환하면 $\\sin 2 x$ 는 그대로이고 $\\cos x$ 는 $\\sin x$ 로 바뀌므로 $I=\\int_{0}^{\\frac{\\pi}{2}}\\frac{\\sin^{2}2 x \\,\\sin x}{2-\\sin 2 x}dx$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "합",
+   "text": "핵심 관문은 두 식을 더해 $\\sin x+\\cos x$ 를 만드는 것이다. $$2 I=\\int_{0}^{\\frac{\\pi}{2}}\\frac{\\sin^{2}2 x(\\sin x+\\cos x)}{2-\\sin 2 x}dx$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "치환",
+   "text": "$t=\\sin x-\\cos x$ 라 하면 $dt=(\\cos x+\\sin x)dx$ , $\\sin 2 x=1-t^{2}$ 이고 $t$ 는 $-1$ 에서 $1$ 까지 변한다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "나눗셈",
+   "text": "$$2 I=\\int_{-1}^{1}\\frac{(1-t^{2})^{2}}{1+t^{2}}dt=\\int_{-1}^{1}\\left(t^{2}-3+\\frac{4}{1+t^{2}}\\right)dt$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$\\tan$ 치환",
+   "text": "$t=\\tan \\theta$ 로 치환하면 $\\int_{-1}^{1}\\frac{1}{1+t^{2}}dt=\\int_{-\\frac{\\pi}{4}}^{\\frac{\\pi}{4}}d \\theta=\\frac{\\pi}{2}$ 이므로 $2 I=\\frac{2}{3}-6+2 \\pi$ , 즉 $I=\\pi-\\frac{8}{3}$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $p=1$ , $q=-\\frac{8}{3}$ 이고 $3(p-q)=3+8=11$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$2-\\sin2x$",
+   "cond": "C1",
+   "text": [
+    "$1+t^2$."
+   ]
+  },
+  {
+   "h": "$(1-t^2)^2$",
+   "cond": "C1",
+   "text": [
+    "나눗셈."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\sin2x\\cos x$",
+   "body": [
+    "$\\int_0^{\\frac\\pi2}\\frac{\\sin2x\\cos x}{2-\\sin2x}dx=p\\pi+q$일 때, $2(p-q)$의 값을 구하시오. (단, $p$, $q$는 유리수)"
+   ],
+   "answer": 3,
+   "hint": "$2I=\\int_{-1}^1\\frac{1-t^2}{1+t^2}dt=\\pi-2$."
+  }
+ ],
+ "line": "대칭으로 $\\sin+\\cos$을 만든다."
+}
