@@ -118,13 +118,13 @@
   },
   {
    "n": 4,
-   "text": "$\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}=\\overline{\\pm}^{2}-16$ , $\\vec{\\mathrm{PC}}\\cdot \\vec{\\mathrm{PD}}=\\overline{\\pm'}^{2}-16$ 이고, 중선 정리에 의하여 $\\overline{\\pm}^{2}+\\overline{\\pm'}^{2}=2 \\overline{\\mathrm{OP}}^{2}+2 \\overline{\\mathrm{OM}}^{2}=68$ 이다.",
+   "text": "$\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}=\\overline{\\mathrm{PM}}^{2}-16$ , $\\vec{\\mathrm{PC}}\\cdot \\vec{\\mathrm{PD}}=\\overline{\\mathrm{PM}'}^{2}-16$ 이고, 중선 정리에 의하여 $\\overline{\\mathrm{PM}}^{2}+\\overline{\\mathrm{PM}'}^{2}=2 \\overline{\\mathrm{OP}}^{2}+2 \\overline{\\mathrm{OM}}^{2}=68$ 이다.",
    "uses": [],
    "title": ""
   },
   {
    "n": 5,
-   "text": "$x=\\overline{\\pm}^{2}$ 이라 하면 $2 \\le \\overline{\\pm}\\le 8$ 이므로 $4 \\le x \\le 64$ 이고, 구하는 식은 $(x-16)(52-x)$ 이다.",
+   "text": "$x=\\overline{\\mathrm{PM}}^{2}$ 이라 하면 $2 \\le \\overline{\\mathrm{PM}}\\le 8$ 이므로 $4 \\le x \\le 64$ 이고, 구하는 식은 $(x-16)(52-x)$ 이다.",
    "uses": [],
    "title": ""
   },

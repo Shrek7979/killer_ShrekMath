@@ -128,7 +128,7 @@
   },
   {
    "n": 4,
-   "text": "선분 $\\mathrm{AB}$ 의 중점을 $\\mathrm{M}$ 이라 하면 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}=\\overline{\\pm}^{2}-9$ 이고 $\\overline{\\mathrm{GM}}=\\sqrt{3}<2$ 이다. 원 $\\overline{\\mathrm{GP}}=2$ 는 삼각형 밖으로 나가므로 점 $\\mathrm{P}$ 는 이 원 중 삼각형의 내부 또는 둘레에 있는 세 호 위를 움직인다.",
+   "text": "선분 $\\mathrm{AB}$ 의 중점을 $\\mathrm{M}$ 이라 하면 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}=\\overline{\\mathrm{PM}}^{2}-9$ 이고 $\\overline{\\mathrm{GM}}=\\sqrt{3}<2$ 이다. 원 $\\overline{\\mathrm{GP}}=2$ 는 삼각형 밖으로 나가므로 점 $\\mathrm{P}$ 는 이 원 중 삼각형의 내부 또는 둘레에 있는 세 호 위를 움직인다.",
    "uses": [],
    "title": ""
   },
@@ -140,7 +140,7 @@
   },
   {
    "n": 6,
-   "text": "최솟값: $\\mathrm{M}$ 에 가까운 원 위의 점들은 변 $\\mathrm{AB}$ 아래쪽에 있어 제외되고, 원과 변 $\\mathrm{AB}$ 의 교점 ( $\\overline{\\pm}=\\sqrt{4-3}=1$ ) 에서 최소이다. 원을 따라 그 교점에서 멀어질수록 $\\overline{\\pm}$ 가 커지므로 최솟값은 $1-9=-8$ 이다.",
+   "text": "최솟값: $\\mathrm{M}$ 에 가까운 원 위의 점들은 변 $\\mathrm{AB}$ 아래쪽에 있어 제외되고, 원과 변 $\\mathrm{AB}$ 의 교점 ( $\\overline{\\mathrm{PM}}=\\sqrt{4-3}=1$ ) 에서 최소이다. 원을 따라 그 교점에서 멀어질수록 $\\overline{\\mathrm{PM}}$ 가 커지므로 최솟값은 $1-9=-8$ 이다.",
    "uses": [],
    "title": ""
   },

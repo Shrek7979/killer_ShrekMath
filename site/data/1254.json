@@ -98,13 +98,13 @@
   },
   {
    "n": 3,
-   "text": "$$\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PC}}=\\left|\\vec{\\pm}\\right|^{2}-\\frac{1}{4}\\overline{\\mathrm{AC}}^{2},\\,\\,\\,\\vec{\\mathrm{PB}}\\cdot \\vec{\\mathrm{PD}}=\\left|\\vec{\\pm}\\right|^{2}-\\frac{1}{4}\\overline{\\mathrm{BD}}^{2}$$",
+   "text": "$$\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PC}}=\\left|\\vec{\\mathrm{PM}}\\right|^{2}-\\frac{1}{4}\\overline{\\mathrm{AC}}^{2},\\,\\,\\,\\vec{\\mathrm{PB}}\\cdot \\vec{\\mathrm{PD}}=\\left|\\vec{\\mathrm{PM}}\\right|^{2}-\\frac{1}{4}\\overline{\\mathrm{BD}}^{2}$$",
    "uses": [],
    "title": ""
   },
   {
    "n": 4,
-   "text": "이다. 또 $\\vec{\\mathrm{PA}}+\\vec{\\mathrm{PB}}+\\vec{\\mathrm{PC}}+\\vec{\\mathrm{PD}}=4 \\vec{\\pm}$ 이므로 (나)에서 $\\left|\\vec{\\pm}\\right|=2$ 이다. 따라서 (가)에서 $\\overline{\\mathrm{AC}}^{2}=4(4+7)=44$ , $\\overline{\\mathrm{BD}}^{2}=4(4+9)=52$ 이다.",
+   "text": "이다. 또 $\\vec{\\mathrm{PA}}+\\vec{\\mathrm{PB}}+\\vec{\\mathrm{PC}}+\\vec{\\mathrm{PD}}=4 \\vec{\\mathrm{PM}}$ 이므로 (나)에서 $\\left|\\vec{\\mathrm{PM}}\\right|=2$ 이다. 따라서 (가)에서 $\\overline{\\mathrm{AC}}^{2}=4(4+7)=44$ , $\\overline{\\mathrm{BD}}^{2}=4(4+9)=52$ 이다.",
    "uses": [],
    "title": ""
   },

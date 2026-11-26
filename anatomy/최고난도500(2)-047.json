@@ -1,0 +1,111 @@
+{
+ "wrong": "예상 오답 — 두 곡선을 연립하다 사차식에서 막힌 경우",
+ "intro": [
+  "교점에서는 $\\mathrm{F}$까지의 거리가 두 식으로: 포물선 $x$, 쌍곡선 $\\frac5ax-a$.",
+  "같게 놓으면 $x=\\frac{a^2}{5-a}$ 하나 — 교점은 $x$축 대칭."
+ ],
+ "conds": {
+  "C1": {
+   "label": "공초점",
+   "why": "쌍곡선 초점 $\\pm5$, 포물선 초점 $\\mathrm{F}$, 준선 $y$축.",
+   "uses": [
+    2,
+    3,
+    4
+   ]
+  },
+  "C2": {
+   "label": "수치와 묻는 것",
+   "why": "$\\overline{\\mathrm{PQ}}=4\\sqrt5$; $4\\overline{\\mathrm{PF}}\\cdot\\overline{\\mathrm{PF'}}$.",
+   "uses": [
+    5,
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "포물선의 정의",
+   "p": [
+    "초점 거리 $=$ 준선까지 거리."
+   ]
+  },
+  {
+   "h": "쌍곡선 초점 거리",
+   "p": [
+    "오른쪽 가지 $ex-a$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 두 곡선의 교점을 연립방정식 대신 '초점까지의 거리'의 두 일차식 표현을 같게 놓아 구하게 함",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "포물선",
+   "text": "포물선 위의 점 $(x,\\,y)$ 는 $(x-5)^{2}+y^{2}=x^{2}$ , 즉 $y^{2}=10 x-25$ 를 만족시키고 $x \\ge \\frac{5}{2}>0$ 이며, 초점 $\\mathrm{F}$ 까지의 거리는 $y$ 축까지의 거리 $x$ 와 같다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "쌍곡선",
+   "text": "쌍곡선 위의 점 $(x,\\,y)$ 에 대하여 $(x-5)^{2}+y^{2}=(x-5)^{2}+\\frac{b^{2}}{a^{2}}x^{2}-b^{2}=\\left(\\frac{5}{a}x-a \\right)^{2}$ 이므로 오른쪽 가지 위의 점에서 $\\mathrm{F}$ 까지의 거리는 $\\frac{5}{a}x-a$ 이다. 포물선은 $x>0$ 인 부분에만 있으므로 두 교점은 오른쪽 가지 위에 있다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "거리 같게",
+   "text": "핵심 관문: 교점에서는 두 거리가 같으므로 $x=\\frac{5}{a}x-a$ , 즉 $x=\\frac{a^{2}}{5-a}$ 로 교점의 $x$ 좌표가 하나로 정해지고, 두 교점 $\\mathrm{P}$ , $\\mathrm{Q}$ 는 $x$ 축에 대하여 대칭이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$a$",
+   "text": "$\\overline{\\mathrm{PQ}}=4 \\sqrt{5}$ 이므로 $y^{2}=20$ 이고 $x=\\frac{45}{10}=\\frac{9}{2}$ 이다. $\\frac{a^{2}}{5-a}=\\frac{9}{2}$ 에서 $2 a^{2}+9 a-45=0$ , $(a-3)(2 a+15)=0$ 이므로 $a=3$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$\\overline{\\mathrm{PF}}=\\frac{9}{2}$ , $\\overline{\\mathrm{PF'}}=\\overline{\\mathrm{PF}}+2 a=\\frac{21}{2}$ 이므로 $4 \\times \\overline{\\mathrm{PF}}\\times \\overline{\\mathrm{PF'}}=189$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "오른쪽 가지",
+   "cond": "C1",
+   "text": [
+    "포물선은 $x\\ge\\frac52$ — 왼쪽 가지와 안 만난다."
+   ]
+  },
+  {
+   "h": "$\\overline{\\mathrm{PF'}}$",
+   "cond": "C2",
+   "text": [
+    "$\\overline{\\mathrm{PF}}+2a$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 초점 $(\\pm3,0)$",
+   "body": [
+    "두 초점이 $\\mathrm{F}(3,0)$, $\\mathrm{F'}(-3,0)$인 쌍곡선 $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$과 초점이 $\\mathrm{F}$이고 준선이 $y$축인 포물선이 서로 다른 두 점 $\\mathrm{P}$, $\\mathrm{Q}$에서 만난다. $\\overline{\\mathrm{PQ}}=2\\sqrt{15}$일 때, $\\overline{\\mathrm{PF}}\\times\\overline{\\mathrm{PF'}}$의 값을 구하시오."
+   ],
+   "answer": 32,
+   "hint": "포물선 $y^2=6x-9$, $y^2=15$ → $x=4$. $\\frac{a^2}{3-a}=4$ → $a=2$. $4\\times8$."
+  }
+ ],
+ "line": "교점은 같은 초점까지의 거리 두 식으로."
+}

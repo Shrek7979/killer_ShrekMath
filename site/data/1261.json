@@ -70,7 +70,7 @@
   },
   {
    "n": 2,
-   "text": "선분 $\\mathrm{AB}$ 의 중점을 $\\mathrm{M}$ 이라 하면 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}=\\overline{\\pm}^{2}-\\frac{1}{4}\\overline{\\mathrm{AB}}^{2}$ 이다.",
+   "text": "선분 $\\mathrm{AB}$ 의 중점을 $\\mathrm{M}$ 이라 하면 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}=\\overline{\\mathrm{PM}}^{2}-\\frac{1}{4}\\overline{\\mathrm{AB}}^{2}$ 이다.",
    "uses": [],
    "title": ""
   },
@@ -82,13 +82,13 @@
   },
   {
    "n": 4,
-   "text": "따라서 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}=\\overline{\\pm}^{2}-9$ 이고, $\\mathrm{M}$ 은 원점 중심 반지름 $4$ 인 원 위, $\\mathrm{P}$ 는 중심 $(12,\\,5)$ 반지름 $2$ 인 원 위를 움직인다. 두 중심 사이의 거리는 $13$ 이다.",
+   "text": "따라서 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}=\\overline{\\mathrm{PM}}^{2}-9$ 이고, $\\mathrm{M}$ 은 원점 중심 반지름 $4$ 인 원 위, $\\mathrm{P}$ 는 중심 $(12,\\,5)$ 반지름 $2$ 인 원 위를 움직인다. 두 중심 사이의 거리는 $13$ 이다.",
    "uses": [],
    "title": ""
   },
   {
    "n": 5,
-   "text": "$\\overline{\\pm}$ 의 최댓값은 $13+4+2=19$ , 최솟값은 $13-4-2=7$ 이므로 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}$ 의 최댓값은 $361-9=352$ , 최솟값은 $49-9=40$ 이다.",
+   "text": "$\\overline{\\mathrm{PM}}$ 의 최댓값은 $13+4+2=19$ , 최솟값은 $13-4-2=7$ 이므로 $\\vec{\\mathrm{PA}}\\cdot \\vec{\\mathrm{PB}}$ 의 최댓값은 $361-9=352$ , 최솟값은 $49-9=40$ 이다.",
    "uses": [],
    "title": ""
   },

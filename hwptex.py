@@ -71,6 +71,8 @@ def _pre(s):
 
 def _split_word(w):
     """piover2 → [pi, over]; rmA → [rm, A]; ita → [it, a]; rootn → [root, n]"""
+    if w.lower() in ('pm', 'mp', 'of') and w != w.lower():   # 대문자 PM·MP·OF 는 선분·점 이름 (±, of 아님)
+        return list(w)
     if w.lower() in WORDS or w in ('over', 'root', 'of', 'rm', 'it', 'cases', 'left', 'right'):
         return [w]
     if len(w) == 1 or w in NOSPLIT:
@@ -79,7 +81,7 @@ def _split_word(w):
     while i < len(w):
         for k in KEYS:
             seg = w[i:i + len(k)]
-            if seg.lower() == k and len(k) > 1 and not (k == 'of' and seg != 'of') and not (k in ('rm', 'it') and seg not in (k, k.upper())):   # 선분 OF, 곱 Rm·It 은 키워드가 아니다 (RM·IT 는 키워드)
+            if seg.lower() == k and len(k) > 1 and not (k in ('of', 'pm', 'mp') and seg != k) and not (k in ('rm', 'it') and seg not in (k, k.upper())):   # 선분 OF, 곱 Rm·It 은 키워드가 아니다 (RM·IT 는 키워드)
                 out.append(k); i += len(k); break
         else:
             out.append(w[i]); i += 1

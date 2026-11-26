@@ -32,7 +32,7 @@
    "label": "[문제2-ⅰ]",
    "points": null,
    "text": [
-    "<제시문1>에서 $\\overline{{\\pm_1}}=5$ 이고 ${\\overline{\\pm_{2}}}=1$ 일 때, 사각형 $\\mathrm{ABCD}$ 의 넓이를 구하고 그 이유를 논하시오."
+    "<제시문1>에서 $\\overline{\\mathrm{PM_1}}=5$ 이고 ${\\overline{P M_{2}}}=1$ 일 때, 사각형 $\\mathrm{ABCD}$ 의 넓이를 구하고 그 이유를 논하시오."
    ],
    "answer": [
     "두 직선 $L_{1}$ , $L_{2}$ 의 기울기를 $k$ 라 하면, 두 직선의 방정식은",
@@ -40,7 +40,7 @@
     "이다. $L_{2}$ 와 $y=x^{2}$ 의 교점은 $\\mathrm{B}(0,0)$ 와 $\\mathrm{C}(k,k^{2})$ 이고, 이로부터 $\\mathrm{M}_{2}\\left(\\frac{k}{2},\\frac{k^{2}}{2}\\right)$ 이다.",
     "두 점 $\\mathrm{A}$ , $\\mathrm{D}$ 의 $x$ 좌표를 각각 $x_{1}$ , $x_{2}$ 라 하면, 이차방정식 $x^2-k x-p=0$ 의 해이므로",
     "$x_{1}+x_{2}=k$ , $x_{1}x_{2}=-p$",
-    "와 $\\mathrm{M}_{1}\\left(\\frac{k}{2},\\frac{k^{2}}{2}+p \\right)$ 를 얻을 수 있다. 두 점 $\\mathrm{M}_{1}$ , $\\mathrm{M}_{2}$ 의 $x$ 좌표가 같고 $\\overline{{\\pm_1}}=5$ , ${\\overline{\\pm_{2}}}=1$ 이므로",
+    "와 $\\mathrm{M}_{1}\\left(\\frac{k}{2},\\frac{k^{2}}{2}+p \\right)$ 를 얻을 수 있다. 두 점 $\\mathrm{M}_{1}$ , $\\mathrm{M}_{2}$ 의 $x$ 좌표가 같고 $\\overline{\\mathrm{PM_1}}=5$ , ${\\overline{P M_{2}}}=1$ 이므로",
     "$\\mathrm{P}\\left(\\frac{k}{2},\\frac{k^{2}}{2}+1 \\right)$ , $\\overline{\\mathrm{M_1M_2}}=p=6$",
     "이다. 직선 $\\mathrm{BP}$ 의 방정식이 $y=\\left(\\frac{\\frac{k^{2}}{2}+1}{\\frac{k}{2}}\\right)x=\\left(\\frac{k^{2}+2}{k}\\right)x$ 이고, 이 직선과 그래프 $y=x^2$ 의",
     "교점 중의 하나가 점 $\\mathrm{D}$ 이므로,",
