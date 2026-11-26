@@ -1,0 +1,134 @@
+{
+ "wrong": "예상 오답 — 꺾은선의 각 선분을 새 정사각형의 변 길이로 본 경우",
+ "intro": [
+  "$s_{n+1}=ks_n$, $k=\\sqrt{t^2+(1-t)^2}$.",
+  "$\\overline{\\mathrm{A}_n\\mathrm{A}_{n+1}}=ts_n$ — 꺾은선 길이 $\\frac t{1-k}$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "정사각형",
+   "why": "한 변 $1$.",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "내분",
+   "why": "$t:(1-t)$.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C3": {
+   "label": "꺾은선과 넓이",
+   "why": "길이 $\\frac32$.",
+   "uses": [
+    4,
+    5,
+    6
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$p+q$.",
+   "uses": [
+    6
+   ]
+  },
+  "C5": {
+   "label": "단서",
+   "why": "서로소.",
+   "uses": [
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "합동인 직각삼각형",
+   "p": [
+    "네 귀퉁이."
+   ]
+  },
+  {
+   "h": "등비급수",
+   "p": [
+    "넓이의 공비 $k^2$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 회전하며 작아지는 정사각형에서 한 꼭짓점의 자취가 각 단계 변의 일부(ts_n)라는 것을 보고, 길이 조건에서 비율 t를 결정하는 것",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "정사각형",
+   "text": "정사각형 $\\mathrm{A}_{n}\\mathrm{B}_{n}\\mathrm{C}_{n}\\mathrm{D}_{n}$ 의 한 변의 길이를 $s_{n}$ 이라 하자. 네 귀퉁이의 직각삼각형은 모두 합동이므로 $\\mathrm{A}_{n+1}\\mathrm{B}_{n+1}\\mathrm{C}_{n+1}\\mathrm{D}_{n+1}$ 도 정사각형이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "닮음비",
+   "text": "직각삼각형 $\\mathrm{A}_{n+1}\\mathrm{B}_{n}\\mathrm{B}_{n+1}$ 의 두 변의 길이가 $(1-t)s_{n}$ , $t s_{n}$ 이므로 $s_{n+1}=k s_{n}$ , $k=\\sqrt{t^{2}+(1-t)^{2}}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "꺾은선",
+   "text": "핵심 관문: 점 $\\mathrm{A}_{n+1}$ 은 변 $\\mathrm{A}_{n}\\mathrm{B}_{n}$ 위에 있으므로 $\\overline{\\mathrm{A}_{n}\\mathrm{A}_{n+1}}=t s_{n}=t k^{n-1}$ 이고, 꺾은선의 길이는 $\\frac{t}{1-k}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$t$",
+   "text": "$\\frac{t}{1-k}=\\frac{3}{2}$ 에서 $k=1-\\frac{2 t}{3}$ 이므로 $2 t^{2}-2 t+1=1-\\frac{4 t}{3}+\\frac{4 t^{2}}{9}$ , 즉 $\\frac{14}{9}t^{2}=\\frac{2}{3}t$ 이다. $t>0$ 이므로 $t=\\frac{3}{7}$ 이고 $k=\\frac{5}{7}$ 이다 (실제로 $\\sqrt{\\frac{9}{49}+\\frac{16}{49}}=\\frac{5}{7}$ ).",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "넓이의 합은 $\\sum_{n=1}^{\\infty}k^{2(n-1)}=\\frac{1}{1-\\frac{25}{49}}=\\frac{49}{24}$ 이므로 $p+q=73$ 이다.",
+   "uses": [
+    "C4",
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "선분의 위치",
+   "cond": "C3",
+   "text": [
+    "$\\mathrm{A}_{n+1}$은 변 $\\mathrm{A}_n\\mathrm{B}_n$ 위."
+   ]
+  },
+  {
+   "h": "넓이 첫째항",
+   "cond": "C3",
+   "text": [
+    "$s_1^2=1$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 길이 $\\frac54$",
+   "body": [
+    "한 변의 길이가 $1$인 정사각형 $\\mathrm{A}_1\\mathrm{B}_1\\mathrm{C}_1\\mathrm{D}_1$에서, $0<t<\\frac12$에 대하여 정사각형 $\\mathrm{A}_n\\mathrm{B}_n\\mathrm{C}_n\\mathrm{D}_n$의 네 변을 각각 $t:(1-t)$로 내분하는 점을 차례로 $\\mathrm{A}_{n+1}$, $\\mathrm{B}_{n+1}$, $\\mathrm{C}_{n+1}$, $\\mathrm{D}_{n+1}$이라 하자. 꺾은선 $\\mathrm{A}_1\\mathrm{A}_2\\mathrm{A}_3\\cdots$의 길이가 $\\frac54$일 때, 모든 정사각형의 넓이의 합은 $\\frac qp$이다. $p+q$의 값을 구하시오. (단, $p$, $q$는 서로소)"
+   ],
+   "answer": 409,
+   "hint": "$k=1-\\frac45t$ → $t=\\frac5{17}$, $k=\\frac{13}{17}$. 합 $\\frac{289}{120}$."
+  }
+ ],
+ "line": "꼭짓점의 자취는 변의 일부 $ts_n$."
+}

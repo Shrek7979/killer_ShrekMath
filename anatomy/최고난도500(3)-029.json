@@ -1,0 +1,148 @@
+{
+ "wrong": "예상 오답 — 네 식을 그대로 연립하다 막히거나 $r$, $s$를 바꾸면 답이 달라진다고 본 경우",
+ "intro": [
+  "$\\beta s=-\\alpha r$ 대입 → $r+s=\\frac16$, 나누면 $rs=-\\frac16$.",
+  "곱의 급수는 등비급수 세 개."
+ ],
+ "conds": {
+  "C1": {
+   "label": "두 등비수열",
+   "why": "공비가 서로 다름.",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "네 항",
+   "why": "",
+   "uses": [
+    2,
+    3,
+    4
+   ]
+  },
+  "C3": {
+   "label": "급수",
+   "why": "$\\frac qp$.",
+   "uses": [
+    6,
+    7
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$p+q$.",
+   "uses": [
+    8
+   ]
+  },
+  "C5": {
+   "label": "단서",
+   "why": "서로소.",
+   "uses": [
+    8
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "근과 계수",
+   "p": [
+    "$r+s$, $rs$로 이차방정식."
+   ]
+  },
+  {
+   "h": "등비급수",
+   "p": [
+    "$|rs|<1$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 합으로 섞인 두 등비수열을 네 항만으로 분리하기 위해 βs=-αr을 대입하여 r+s와 rs를 차례로 얻고, 곱의 급수를 세 개의 등비급수로 나누는 것",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "네 식",
+   "text": "$a_{n}=\\alpha r^{n-1}$ , $b_{n}=\\beta s^{n-1}$ $(r \\ne s)$ 이라 하면 $\\alpha+\\beta=5$ , $\\alpha r+\\beta s=0$ , $\\alpha r^{2}+\\beta s^{2}=\\frac{5}{6}$ , $\\alpha r^{3}+\\beta s^{3}=\\frac{5}{36}$ 이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "$r+s$",
+   "text": "둘째 식에서 $\\beta s=-\\alpha r$ 이므로 셋째 식은 $\\alpha r(r-s)=\\frac{5}{6}$ , 넷째 식은 $\\alpha r \\left(r^{2}-s^{2}\\right)=\\alpha r(r-s)(r+s)=\\frac{5}{36}$ 이 되어 $r+s=\\frac{1}{6}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$rs$",
+   "text": "핵심 관문: 첫째 식은 $\\alpha \\left(1-\\frac{r}{s}\\right)=5$ , 즉 $\\alpha(s-r)=5 s$ 이고, 이것과 $\\alpha r(r-s)=\\frac{5}{6}$ 을 나누면 $-r s=\\frac{1}{6}$ 이다. 따라서 $r$ , $s$ 는 $x^{2}-\\frac{1}{6}x-\\frac{1}{6}=0$ 의 두 근 $\\frac{1}{2}$ , $-\\frac{1}{3}$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$\\alpha$, $\\beta$",
+   "text": "$r=\\frac{1}{2}$ , $s=-\\frac{1}{3}$ 이라 하면 $\\alpha+\\beta=5$ , $\\frac{\\alpha}{2}-\\frac{\\beta}{3}=0$ 에서 $\\alpha=2$ , $\\beta=3$ 이다 ( $r$ , $s$ 를 바꾸어도 수열 $\\left\\{c_{n}\\right\\}$ 은 같다).",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "곱의 전개",
+   "text": "$c_{n}c_{n+1}=\\alpha^{2}r^{2 n-1}+\\alpha \\beta(r+s)(r s)^{n-1}+\\beta^{2}s^{2 n-1}$ 이고 $\\left|r \\right|$ , $\\left|s \\right|$ , $\\left|r s \\right|$ 가 모두 $1$ 보다 작으므로",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "합",
+   "text": "$$\\sum_{n=1}^{\\infty}c_{n}c_{n+1}=\\frac{\\alpha^{2}r}{1-r^{2}}+\\frac{\\alpha \\beta(r+s)}{1-r s}+\\frac{\\beta^{2}s}{1-s^{2}}=\\frac{8}{3}+\\frac{6}{7}-\\frac{27}{8}=\\frac{25}{168}$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이다. 따라서 $p+q=168+25=193$ 이다.",
+   "uses": [
+    "C4",
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "대칭",
+   "cond": "C1",
+   "text": [
+    "$r$, $s$를 바꿔도 $c_n$은 같다."
+   ]
+  },
+  {
+   "h": "교차항",
+   "cond": "C3",
+   "text": [
+    "$\\alpha\\beta(r+s)(rs)^{n-1}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $3,0,\\frac38,\\frac3{32}$",
+   "body": [
+    "첫째항과 공비가 모두 $0$이 아니고 공비가 서로 다른 두 등비수열 $\\{a_n\\}$, $\\{b_n\\}$에 대하여 $c_n=a_n+b_n$이라 하자. $c_1=3$, $c_2=0$, $c_3=\\frac38$, $c_4=\\frac3{32}$일 때, $\\sum_{n=1}^\\infty c_nc_{n+1}=\\frac qp$이다. $p+q$의 값을 구하시오. (단, $p$, $q$는 서로소)"
+   ],
+   "answer": 47,
+   "hint": "$r=\\frac12$, $s=-\\frac14$, $\\alpha=1$, $\\beta=2$. $\\frac23+\\frac49-\\frac{16}{15}=\\frac2{45}$."
+  }
+ ],
+ "line": "섞인 등비수열은 $r+s$, $rs$로 분리."
+}
