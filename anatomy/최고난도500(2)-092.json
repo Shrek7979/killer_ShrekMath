@@ -1,0 +1,113 @@
+{
+ "wrong": "예상 오답 — 단면의 넷째 꼭짓점을 찾지 못해 삼각형 $\\mathrm{APQ}$로 계산한 경우",
+ "intro": [
+  "평행한 면 → 평행한 교선: $\\mathrm{P}$에서 $\\mathrm{AQ}$와 평행하게 가면 $\\mathrm{G}$.",
+  "정사영: $\\mathrm{A}\\to\\mathrm{O}$, $\\mathrm{G}\\to\\mathrm{O'}$ — 대각선 $\\mathrm{OO'}$이 연직."
+ ],
+ "conds": {
+  "C1": {
+   "label": "정육면체",
+   "why": "모서리 $6$.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C2": {
+   "label": "두 점",
+   "why": "$\\overline{\\mathrm{BP}}=2$, $\\overline{\\mathrm{DQ}}=4$.",
+   "uses": [
+    2
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "$S^2$.",
+   "uses": [
+    3,
+    4,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "평행한 교선",
+   "p": [
+    "단면의 대변은 평행."
+   ]
+  },
+  {
+   "h": "대각선이 수직인 사각형",
+   "p": [
+    "넓이 $\\frac12d_1d_2$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 평행한 면의 교선으로 단면을 완성(R=G)하고, 꼭짓점의 정사영을 직접 찾아 넓이 계산",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "단면 완성",
+   "text": "정육면체의 마주 보는 두 면은 평행하므로 단면이 면 $\\mathrm{BCGF}$ 와 만나는 선분은 $\\mathrm{AQ}$ 와 평행하고, 면 $\\mathrm{DCGH}$ 와 만나는 선분은 $\\mathrm{AP}$ 와 평행하다. 점 $\\mathrm{P}$ 에서 $\\mathrm{AQ}$ 와 평행하게 면 $\\mathrm{BCGF}$ 위를 따라가면 높이가 $4$ 만큼 올라가므로 모서리 $\\mathrm{CG}$ 위의 높이 $2+4=6$ 인 점, 즉 $\\mathrm{G}$ 에 도달한다. 따라서 단면은 평행사변형 $\\mathrm{APGQ}$ 이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "꼭짓점의 그림자",
+   "text": "평면 $\\mathrm{BFHD}$ 는 직선 $\\mathrm{BD}$ 를 포함하는 연직 평면이다. 점 $\\mathrm{A}$ 의 정사영은 선분 $\\mathrm{BD}$ 의 중점 $\\mathrm{O}$ , 점 $\\mathrm{G}$ 의 정사영은 선분 $\\mathrm{FH}$ 의 중점 $\\mathrm{O}'$ 이고, $\\mathrm{P}$ , $\\mathrm{Q}$ 는 평면 위에 있다. 따라서 정사영은 사각형 $\\mathrm{POQO}'$ 이다.",
+   "uses": [
+    "C1",
+    "C3"
+   ]
+  },
+  {
+   "title": "넓이",
+   "text": "이 사각형의 대각선 $\\mathrm{OO}'$ 은 길이가 $6$ 인 연직선분이고, 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 는 그 양쪽에서 각각 $\\overline{\\mathrm{OB}}=\\overline{\\mathrm{OD}}=3 \\sqrt{2}$ 만큼 떨어져 있다. 따라서 넓이는 $\\frac{1}{2}\\times 6 \\times(3 \\sqrt{2}+3 \\sqrt{2})=18 \\sqrt{2}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$S^{2}=648$ 이다. 단면을 구한 뒤 이면각을 구하지 않고 꼭짓점의 정사영을 직접 찾는 것이 핵심이다.",
+   "uses": [
+    "C3"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\mathrm{R}=\\mathrm{G}$",
+   "cond": "C2",
+   "text": [
+    "$2+4=6$ — 꼭짓점에 정확히."
+   ]
+  },
+  {
+   "h": "이면각 불필요",
+   "cond": "C3",
+   "text": [
+    "꼭짓점의 그림자로 바로."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $1$과 $3$",
+   "body": [
+    "한 모서리의 길이가 $6$인 정육면체 $\\mathrm{ABCD}-\\mathrm{EFGH}$에서 $\\mathrm{E},\\mathrm{F},\\mathrm{G},\\mathrm{H}$는 각각 $\\mathrm{A},\\mathrm{B},\\mathrm{C},\\mathrm{D}$의 바로 위에 있다. 모서리 $\\mathrm{BF}$ 위의 점 $\\mathrm{P}$와 $\\mathrm{DH}$ 위의 점 $\\mathrm{Q}$가 $\\overline{\\mathrm{BP}}=1$, $\\overline{\\mathrm{DQ}}=3$을 만족시킬 때, 세 점 $\\mathrm{A},\\mathrm{P},\\mathrm{Q}$를 지나는 평면으로 자른 단면의 평면 $\\mathrm{BFHD}$ 위로의 정사영의 넓이를 $S$라 하자. $S^2$의 값을 구하시오."
+   ],
+   "answer": 288,
+   "hint": "넷째 꼭짓점은 $\\mathrm{CG}$ 위 높이 $4$. 대각선 $4$, 폭 $6\\sqrt2$ → $12\\sqrt2$."
+  }
+ ],
+ "line": "단면은 평행한 교선으로 완성, 그림자는 꼭짓점으로."
+}

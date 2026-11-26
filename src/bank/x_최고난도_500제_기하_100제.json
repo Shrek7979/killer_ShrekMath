@@ -4807,7 +4807,7 @@
    ],
    [
     "p",
-    "삼각형 $rm BDE it$ 는 정삼각형이고 $bar {rm AB it} = bar {rm AD it} = bar {rm AE it}$ , $bar {rm GB it} = bar {rm GD it} = bar {rm GE it}$ 이므로 직선 $rm AG it$ 는 평면 $rm BDE it$ 에 수직이다. 따라서 평면 $rm BDE it$ 위로의 정사영은 직선 $rm AG it$ 방향으로 내리는 정사영이다."
+    "삼각형 $rm BDE it$ 는 정삼각형이고 $bar {rm AB it} = bar {rm AD it} = bar {rm AE it}$ , $bar {rm GB it} = bar {rm GD it} = bar {rm \"GE\" it}$ 이므로 직선 $rm AG it$ 는 평면 $rm BDE it$ 에 수직이다. 따라서 평면 $rm BDE it$ 위로의 정사영은 직선 $rm AG it$ 방향으로 내리는 정사영이다."
    ],
    [
     "p",

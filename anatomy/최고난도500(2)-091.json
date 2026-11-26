@@ -1,0 +1,103 @@
+{
+ "wrong": "예상 오답 — 이면각을 구해 넓이에 곱하려다 계산이 꼬인 경우",
+ "intro": [
+  "$\\mathrm{B}$의 그림자는 무게중심 $\\mathrm{G}$, $\\mathrm{A}$는 제자리.",
+  "내분비 보존 → $\\mathrm{P'}$은 $\\mathrm{AG}$를 $1:2$로 내분."
+ ],
+ "conds": {
+  "C1": {
+   "label": "정사면체와 $\\mathrm{P}$",
+   "why": "모서리 $6$, $\\mathrm{AB}$를 $1:2$.",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C2": {
+   "label": "묻는 것",
+   "why": "$S^2$.",
+   "uses": [
+    4,
+    5
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "정사면체의 수선",
+   "p": [
+    "꼭짓점에서 맞은편 면의 무게중심으로."
+   ]
+  },
+  {
+   "h": "정사영과 내분",
+   "p": [
+    "평행한 투사선은 비를 보존."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 이면각을 계산하는 대신 꼭짓점의 수선의 발과 내분비 보존으로 정사영을 직접 구성",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "그림자 점",
+   "text": "삼각형 $\\mathrm{ACD}$ 의 무게중심을 $\\mathrm{G}$ 라 하면 점 $\\mathrm{B}$ 에서 평면 $\\mathrm{ACD}$ 에 내린 수선의 발은 $\\mathrm{G}$ 이다. 점 $\\mathrm{A}$ 는 평면 위에 있으므로, 선분 $\\mathrm{AB}$ 를 $1:2$ 로 내분하는 점 $\\mathrm{P}$ 의 정사영 $\\mathrm{P}'$ 은 선분 $\\mathrm{AG}$ 를 $1:2$ 로 내분하는 점이다. (수직선과 평행한 직선들이 선분의 내분비를 보존한다.)",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "직선 $\\mathrm{AGN}$",
+   "text": "삼각형 $\\mathrm{PCD}$ 의 정사영은 삼각형 $\\mathrm{P}' \\mathrm{CD}$ 이다. 선분 $\\mathrm{CD}$ 의 중점을 $\\mathrm{N}$ 이라 하면 $\\mathrm{A}$ , $\\mathrm{G}$ , $\\mathrm{N}$ 은 한 직선 위에 있고 $\\overline{\\mathrm{AN}}=3 \\sqrt{3}$ , $\\overline{\\mathrm{GN}}=\\sqrt{3}$ 이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "높이",
+   "text": "$\\overline{\\mathrm{P}' \\mathrm{N}}=\\frac{2}{3}\\times 3 \\sqrt{3}+\\frac{1}{3}\\times \\sqrt{3}=\\frac{7 \\sqrt{3}}{3}$ 이고 $\\mathrm{P}' \\mathrm{N}$ 는 $\\mathrm{CD}$ 에 수직이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "$S=\\frac{1}{2}\\times 6 \\times \\frac{7 \\sqrt{3}}{3}=7 \\sqrt{3}$ 이므로 $S^{2}=147$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "방향",
+   "cond": "C1",
+   "text": [
+    "$\\mathrm{A}$에서 $1$, $\\mathrm{G}$ 쪽으로."
+   ]
+  },
+  {
+   "h": "$\\overline{\\mathrm{P'N}}$",
+   "cond": "C2",
+   "text": [
+    "$\\frac23\\overline{\\mathrm{AN}}+\\frac13\\overline{\\mathrm{GN}}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $2:1$",
+   "body": [
+    "한 모서리의 길이가 $6$인 정사면체 $\\mathrm{ABCD}$에서 모서리 $\\mathrm{AB}$를 $2:1$로 내분하는 점을 $\\mathrm{P}$라 하자. 삼각형 $\\mathrm{PCD}$의 평면 $\\mathrm{ACD}$ 위로의 정사영의 넓이를 $S$라 할 때, $S^2$의 값을 구하시오."
+   ],
+   "answer": 75,
+   "hint": "$\\overline{\\mathrm{P'N}}=\\frac13\\cdot3\\sqrt3+\\frac23\\cdot\\sqrt3=\\frac{5\\sqrt3}3$, $S=5\\sqrt3$."
+  }
+ ],
+ "line": "그림자는 꼭짓점의 그림자를 이은 것."
+}

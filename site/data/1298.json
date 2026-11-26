@@ -58,7 +58,7 @@
   },
   {
    "n": 2,
-   "text": "삼각형 $\\mathrm{BDE}$ 는 정삼각형이고 $\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AD}}=\\overline{\\mathrm{AE}}$ , $\\overline{\\mathrm{GB}}=\\overline{\\mathrm{GD}}=\\overline{\\ge}$ 이므로 직선 $\\mathrm{AG}$ 는 평면 $\\mathrm{BDE}$ 에 수직이다. 따라서 평면 $\\mathrm{BDE}$ 위로의 정사영은 직선 $\\mathrm{AG}$ 방향으로 내리는 정사영이다.",
+   "text": "삼각형 $\\mathrm{BDE}$ 는 정삼각형이고 $\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AD}}=\\overline{\\mathrm{AE}}$ , $\\overline{\\mathrm{GB}}=\\overline{\\mathrm{GD}}=\\overline{\\mathrm{GE}}$ 이므로 직선 $\\mathrm{AG}$ 는 평면 $\\mathrm{BDE}$ 에 수직이다. 따라서 평면 $\\mathrm{BDE}$ 위로의 정사영은 직선 $\\mathrm{AG}$ 방향으로 내리는 정사영이다.",
    "uses": [],
    "title": ""
   },
