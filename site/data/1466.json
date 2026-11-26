@@ -10,9 +10,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 30번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 세 근을 $t$의 식으로 구하려다 막힌 경우",
  "answer": 233,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -40,9 +40,12 @@
     0
    ],
    "text": "$-2<t<2$ 인 실수 $t$ 에 대하여 $x$ 에 대한 방정식 $x^{3}-3 x=t$ 의 서로 다른 세 실근을 $\\alpha(t)$ , $\\beta(t)$ , $\\gamma(t)$ $(\\alpha(t)<\\beta(t)<\\gamma(t))$ 라 하자.",
-   "label": "",
+   "label": "세 근",
    "why": "",
-   "uses": []
+   "uses": [
+    2,
+    4
+   ]
   },
   {
    "id": "C2",
@@ -51,9 +54,13 @@
     0
    ],
    "text": "$\\int_{-2}^{2}\\left\\{\\gamma(t)-\\alpha(t)\\right\\}^{2}dt=\\frac{q}{p}$",
-   "label": "",
+   "label": "적분",
    "why": "",
-   "uses": []
+   "uses": [
+    3,
+    4,
+    5
+   ]
   },
   {
    "id": "C3",
@@ -62,9 +69,11 @@
     0
    ],
    "text": "일 때, $p+q$ 의 값을 구하시오.",
-   "label": "",
+   "label": "$p+q$",
    "why": "",
-   "uses": []
+   "uses": [
+    5
+   ]
   },
   {
    "id": "C4",
@@ -73,60 +82,103 @@
     1
    ],
    "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
-   "label": "",
+   "label": "단서",
    "why": "",
-   "uses": []
+   "uses": [
+    5
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "$(\\gamma-\\alpha)^2=12-3\\beta^2$.",
+  "$t=\\beta^3-3\\beta$ — 가운데 근으로 치환."
+ ],
  "topic": "치환적분 — 삼차방정식의 근을 적분변수로 바꾸기",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "근과 계수",
+   "p": [
+    "대칭식."
+   ]
+  },
+  {
+   "h": "치환적분",
+   "p": [
+    "역함수 변수."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 양 끝 근의 차를 가운데 근의 식으로 바꾼 뒤, 가운데 근을 새 적분변수로 치환하는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "근과 계수의 관계에서 $\\alpha+\\beta+\\gamma=0$ , $\\alpha \\beta+\\beta \\gamma+\\gamma \\alpha=-3$ 이다. 따라서 $\\alpha+\\gamma=-\\beta$ 이고 $\\alpha \\gamma=-3-\\beta(\\alpha+\\gamma)=\\beta^{2}-3$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "근과 계수"
   },
   {
    "n": 3,
-   "text": "핵심 관문은 $\\gamma-\\alpha$ 를 가운데 근 $\\beta$ 만으로 나타내는 것이다.",
-   "uses": [],
-   "title": ""
+   "text": "핵심 관문은 $\\gamma-\\alpha$ 를 가운데 근 $\\beta$ 만으로 나타내는 것이다. $$(\\gamma-\\alpha)^{2}=(\\gamma+\\alpha)^{2}-4 \\alpha \\gamma=\\beta^{2}-4(\\beta^{2}-3)=12-3 \\beta^{2}$$",
+   "uses": [
+    "C2"
+   ],
+   "title": "$\\beta$만으로"
   },
   {
    "n": 4,
-   "text": "$$(\\gamma-\\alpha)^{2}=(\\gamma+\\alpha)^{2}-4 \\alpha \\gamma=\\beta^{2}-4(\\beta^{2}-3)=12-3 \\beta^{2}$$",
-   "uses": [],
-   "title": ""
+   "text": "$\\beta(t)$ 는 $-1<\\beta<1$ 이고 $t=\\beta^{3}-3 \\beta$ 를 만족시키며, 이 구간에서 $\\beta^{3}-3 \\beta$ 는 감소하므로 $t$ 가 $-2$ 에서 $2$ 까지 변할 때 $\\beta$ 는 $1$ 에서 $-1$ 까지 변한다. $dt=(3 \\beta^{2}-3)d \\beta$ 로 치환하면 $$\\int_{-2}^{2}(12-3 \\beta^{2})dt=\\int_{1}^{-1}(12-3 \\beta^{2})(3 \\beta^{2}-3)d \\beta=\\int_{-1}^{1}(12-3 \\beta^{2})(3-3 \\beta^{2})d \\beta$$",
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "치환"
   },
   {
    "n": 5,
-   "text": "$\\beta(t)$ 는 $-1<\\beta<1$ 이고 $t=\\beta^{3}-3 \\beta$ 를 만족시키며, 이 구간에서 $\\beta^{3}-3 \\beta$ 는 감소하므로 $t$ 가 $-2$ 에서 $2$ 까지 변할 때 $\\beta$ 는 $1$ 에서 $-1$ 까지 변한다. $dt=(3 \\beta^{2}-3)d \\beta$ 로 치환하면",
-   "uses": [],
-   "title": ""
-  },
-  {
-   "n": 6,
-   "text": "$$\\int_{-2}^{2}(12-3 \\beta^{2})dt=\\int_{1}^{-1}(12-3 \\beta^{2})(3 \\beta^{2}-3)d \\beta=\\int_{-1}^{1}(12-3 \\beta^{2})(3-3 \\beta^{2})d \\beta$$",
-   "uses": [],
-   "title": ""
-  },
-  {
-   "n": 7,
    "text": "$=2 \\int_{0}^{1}\\left(36-45 \\beta^{2}+9 \\beta^{4}\\right)d \\beta=2 \\left(36-15+\\frac{9}{5}\\right)=\\frac{228}{5}$ 이다. 따라서 $p+q=233$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2",
+    "C3",
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "방향",
+   "cond": "C2",
+   "text": [
+    "$\\beta$는 $1$에서 $-1$."
+   ]
+  },
+  {
+   "h": "부호",
+   "cond": "C2",
+   "text": [
+    "$3\\beta^2-3<0$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $x^3-12x$",
+   "body": [
+    "$-16<t<16$에 대하여 방정식 $x^3-12x=t$의 세 실근을 $\\alpha<\\beta<\\gamma$라 할 때, $\\int_{-16}^{16}\\{\\gamma(t)-\\alpha(t)\\}^2dt=\\frac qp$이다. $p+q$의 값을 구하시오. (단, $p$, $q$는 서로소)"
+   ],
+   "answer": 7301,
+   "hint": "$(\\gamma-\\alpha)^2=48-3\\beta^2$, $\\int_{-2}^2(48-3\\beta^2)(12-3\\beta^2)d\\beta=\\frac{7296}5$."
+  }
+ ],
+ "line": "가운데 근을 적분변수로.",
  "note": ""
 }
