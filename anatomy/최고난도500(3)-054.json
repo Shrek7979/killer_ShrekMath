@@ -1,0 +1,133 @@
+{
+ "wrong": "예상 오답 — 여섯 항을 곱의 미분으로 직접 계산하다 틀린 경우",
+ "intro": [
+  "$64\\sin x\\cdot f(x)=\\sin64x$ — 배각 망원.",
+  "$\\frac{64\\pi}7=9\\pi+\\frac\\pi7$ — 탄젠트가 같다."
+ ],
+ "conds": {
+  "C1": {
+   "label": "함수",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "곱",
+   "why": "",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C3": {
+   "label": "값",
+   "why": "",
+   "uses": [
+    4,
+    5
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "",
+   "uses": [
+    6
+   ]
+  },
+  "C5": {
+   "label": "단서",
+   "why": "",
+   "uses": [
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "배각 공식",
+   "p": [
+    "$\\sin2\\alpha=2\\sin\\alpha\\cos\\alpha$."
+   ]
+  },
+  {
+   "h": "로그미분",
+   "p": [
+    "$\\frac{f'}f$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 코사인의 거듭곱을 배각 공식으로 망원시켜 몫으로 바꾸고, 64π/7이 π/7과 같은 탄젠트 값을 갖는다는 주기성을 쓰는 것",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "망원",
+   "text": "$\\sin 2 \\alpha=2 \\sin \\alpha \\cos \\alpha$ 를 반복하면 $\\sin x \\ne 0$ 일 때 $64 \\sin x \\times f(x)=\\sin 64 x$ , 즉 $f(x)=\\frac{\\sin 64 x}{64 \\sin x}$ 이다. 여섯 개의 곱을 하나의 몫으로 바꾸는 것이 핵심 관문이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "로그미분",
+   "text": "$f(x)\\ne 0$ 인 점에서 $\\ln \\left|f(x)\\right|=\\ln \\left|\\sin 64 x \\right|-\\ln \\left|\\sin x \\right|-\\ln 64$ 이므로 양변을 미분하면 $$\\frac{f'(x)}{f(x)}=\\frac{64 \\cos 64 x}{\\sin 64 x}-\\frac{\\cos x}{\\sin x}$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "주기",
+   "text": "$\\frac{64 \\pi}{7}=9 \\pi+\\frac{\\pi}{7}$ 이므로 $\\sin \\frac{64 \\pi}{7}=-\\sin \\frac{\\pi}{7}$ , $\\cos \\frac{64 \\pi}{7}=-\\cos \\frac{\\pi}{7}$ 이고, 따라서 $f \\left(\\frac{\\pi}{7}\\right)=-\\frac{1}{64}$ , $\\frac{64 \\cos 64 x}{\\sin 64 x}$ 의 값은 $x=\\frac{\\pi}{7}$ 에서 $64 \\times \\frac{\\cos \\frac{\\pi}{7}}{\\sin \\frac{\\pi}{7}}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "계산",
+   "text": "그러므로 $\\frac{f' \\left(\\frac{\\pi}{7}\\right)}{f \\left(\\frac{\\pi}{7}\\right)}=63 \\times \\frac{\\cos \\frac{\\pi}{7}}{\\sin \\frac{\\pi}{7}}$ , 즉 $f' \\left(\\frac{\\pi}{7}\\right)\\tan \\frac{\\pi}{7}=63 \\times \\left(-\\frac{1}{64}\\right)=-\\frac{63}{64}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $p+q=64+63=127$ 이다.",
+   "uses": [
+    "C4",
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "부호",
+   "cond": "C3",
+   "text": [
+    "$f\\left(\\frac\\pi7\\right)=-\\frac1{64}$."
+   ]
+  },
+  {
+   "h": "$64-1$",
+   "cond": "C3",
+   "text": [
+    "$63\\cot$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 세 개의 곱",
+   "body": [
+    "함수 $f(x)=\\cos x\\cos2x\\cos4x$에 대하여 $f'\\left(\\frac\\pi7\\right)\\times\\tan\\frac\\pi7=-\\frac qp$이다. $p+q$의 값을 구하시오. (단, $p$, $q$는 서로소)"
+   ],
+   "answer": 15,
+   "hint": "$f=\\frac{\\sin8x}{8\\sin x}$, $\\frac{8\\pi}7=\\pi+\\frac\\pi7$: $f=-\\frac18$, $\\frac{f'}f=7\\cot$ → $-\\frac78$."
+  }
+ ],
+ "line": "코사인 배각의 곱은 사인 하나로."
+}

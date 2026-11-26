@@ -1,0 +1,133 @@
+{
+ "wrong": "예상 오답 — 이계도함수를 $\\frac{d}{d\\theta}\\left(\\frac{dy}{dx}\\right)$로만 계산해 $\\frac{dx}{d\\theta}$로 나누지 않은 경우",
+ "intro": [
+  "$\\frac{d^2y}{dx^2}=\\frac{e(\\cos\\theta-e)}{(1-e\\cos\\theta)^3}$.",
+  "변곡점은 $\\cos\\theta=e$ — 기울기 $\\frac e{\\sqrt{1-e^2}}$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "케플러 모델",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "곡선",
+   "why": "",
+   "uses": [
+    2,
+    3
+   ]
+  },
+  "C3": {
+   "label": "연결",
+   "why": "",
+   "uses": [
+    2
+   ]
+  },
+  "C4": {
+   "label": "변곡점",
+   "why": "기울기 $\\frac34$.",
+   "uses": [
+    4,
+    5
+   ]
+  },
+  "C5": {
+   "label": "묻는 것",
+   "why": "$100k$.",
+   "uses": [
+    6
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "매개변수 이계도함수",
+   "p": [
+    "나누기 $\\frac{dx}{d\\theta}$."
+   ]
+  },
+  {
+   "h": "변곡점",
+   "p": [
+    "이계도함수 부호 변화."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 매개변수 곡선의 이계도함수가 cos θ − e의 부호로 정리되어 변곡점이 cos θ = e에서 생긴다는 것을 찾는 것",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "일계",
+   "text": "$\\frac{dx}{d \\theta}=1-e \\cos \\theta>0$ , $\\frac{dy}{d \\theta}=e \\sin \\theta$ 이므로 $\\frac{dy}{dx}=\\frac{e \\sin \\theta}{1-e \\cos \\theta}$ 이다.",
+   "uses": [
+    "C1",
+    "C2",
+    "C3"
+   ]
+  },
+  {
+   "title": "이계",
+   "text": "$\\frac{d}{d \\theta}\\left(\\frac{e \\sin \\theta}{1-e \\cos \\theta}\\right)=\\frac{e \\cos \\theta(1-e \\cos \\theta)-e \\sin \\theta \\times e \\sin \\theta}{(1-e \\cos \\theta)^{2}}=\\frac{e(\\cos \\theta-e)}{(1-e \\cos \\theta)^{2}}$ 이므로 $$\\frac{d^{2}y}{dx^{2}}=\\frac{e(\\cos \\theta-e)}{(1-e \\cos \\theta)^{3}}$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "부호",
+   "text": "핵심 관문: 분모는 양수이므로 $\\frac{d^{2}y}{dx^{2}}$ 의 부호는 $\\cos \\theta-e$ 의 부호와 같고, $\\cos \\theta$ 는 감소하므로 $\\cos \\theta=e$ 인 점에서만 부호가 바뀐다. 즉 변곡점은 $\\cos \\theta=e$ 인 점이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "$e$",
+   "text": "이때 $\\sin \\theta=\\sqrt{1-e^{2}}$ 이므로 접선의 기울기는 $\\frac{e \\sqrt{1-e^{2}}}{1-e^{2}}=\\frac{e}{\\sqrt{1-e^{2}}}=\\frac{3}{4}$ 이고, $16 e^{2}=9 \\left(1-e^{2}\\right)$ 에서 $e^{2}=\\frac{9}{25}$ , $e=\\frac{3}{5}$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "변곡점의 $y$ 좌표는 $k=1-e \\cos \\theta=1-e^{2}=\\frac{16}{25}$ 이므로 $100 k=64$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "분모 세제곱",
+   "cond": "C2",
+   "text": [
+    "한 번 더 나눈다."
+   ]
+  },
+  {
+   "h": "$k=1-e^2$",
+   "cond": "C5",
+   "text": [
+    "$1-e\\cos\\theta$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 기울기 $\\frac43$",
+   "body": [
+    "$0<e<1$인 $e$에 대하여 $0<\\theta<\\pi$에서 $x=\\theta-e\\sin\\theta$, $y=1-e\\cos\\theta$로 나타낸 곡선의 변곡점에서의 접선의 기울기가 $\\frac43$이다. 변곡점의 $y$좌표를 $k$라 할 때, $100k$의 값을 구하시오."
+   ],
+   "answer": 36,
+   "hint": "$\\frac e{\\sqrt{1-e^2}}=\\frac43$ → $e=\\frac45$, $k=\\frac9{25}$."
+  }
+ ],
+ "line": "매개변수 곡선의 변곡점 — 한 번 더 나눈다."
+}
