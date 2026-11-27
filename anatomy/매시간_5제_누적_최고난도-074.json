@@ -1,0 +1,174 @@
+{
+ "wrong": "예상 오답 — 두 타원이 접할 조건을 연립해 풀다 막히거나 접점 $\\mathrm P$를 $\\mathrm F$ 쪽에서 찾은 경우",
+ "intro": [
+  "$\\overline{\\mathrm{XG}}\\le\\overline{\\mathrm{XF'}}+\\overline{\\mathrm{F'G}}$ → 포함·한 점 접촉 ⇔ $2a=10+\\overline{\\mathrm{F'G}}$.",
+  "접점은 반직선 $\\mathrm{GF'}$ 위 $\\mathrm F'$ 너머; 단축 조건 $b^2=34+5k$에서 $k=10$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "$E_1$",
+   "why": "$\\frac{x^2}{25}+\\frac{y^2}{16}=1$, 초점 $\\mathrm F(3,0)$, $\\mathrm F'(-3,0)$.",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "$E_2$",
+   "why": "초점 $\\mathrm F$, $\\mathrm G(3,g)$ ($g<0$).",
+   "uses": [
+    2,
+    7
+   ]
+  },
+  "C3": {
+   "label": "(가)",
+   "why": "$E_1\\subset E_2$, 오직 한 점 $\\mathrm P$에서 만남.",
+   "uses": [
+    1,
+    3,
+    4,
+    8,
+    9
+   ]
+  },
+  "C4": {
+   "label": "(나)",
+   "why": "단축 $4\\sqrt{21}$.",
+   "uses": [
+    5,
+    6,
+    7
+   ]
+  },
+  "C5": {
+   "label": "묻는 것",
+   "why": "삼각형 $\\mathrm{PFG}$의 넓이 $\\frac qp$.",
+   "uses": [
+    10
+   ]
+  },
+  "C6": {
+   "label": "서로소",
+   "why": "기약분수.",
+   "uses": [
+    10
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "삼각부등식",
+   "p": [
+    "등호 = 일직선."
+   ]
+  },
+  {
+   "h": "두 원의 내접 유비",
+   "p": [
+    "중심 거리 = 반지름 차."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 한 초점을 공유하는 두 타원에서 안쪽 타원이 포함되며 오직 한 점에서 만날 조건을 삼각형의 성질 XG ≤ XF'+F'G로 따지면 '나머지 두 초점 사이의 거리 = 장축 길이의 차'(두 원의 내접 조건의 타원판)와 '접점은 반직선 GF' 위'가 나오므로, 단축 조건이 F'G에 대한 일차식 b²=34+5·F'G로 정리되어 G가 정해지고, 접점은 그 반직선 위에서 정의로 세운 식의 이차항이 소거되어 구해지는 것",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "설정",
+   "text": "타원 $E_{2}$ 의 장축의 길이를 $2 a$ , 점 $\\mathrm{G}$ 를 $(3,\\,g)\\,(g<0)$ , $k=\\overline{\\mathrm{F'G}}$ 라 하자. $E_{1}$ 위의 점 $\\mathrm{X}$ 는 $\\overline{\\mathrm{XF}}+\\overline{\\mathrm{XF'}}=10$ 을 만족시키고, 타원 $E_{2}$ 로 둘러싸인 부분(경계 포함)은 $\\overline{\\mathrm{XF}}+\\overline{\\mathrm{XG}}\\le 2 a$ 인 점 $\\mathrm{X}$ 전체이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "부등식",
+   "text": "[관문 1: 포함되면서 한 점에서 만날 조건] $E_{1}$ 위의 모든 점 $\\mathrm{X}$ 에 대하여 삼각형의 성질에서 $\\overline{\\mathrm{XG}}\\le \\overline{\\mathrm{XF'}}+\\overline{\\mathrm{F'G}}$ 이므로 $\\overline{\\mathrm{XF}}+\\overline{\\mathrm{XG}}\\le 10+k$ 이고, 등호는 $\\mathrm{F'}$ 가 선분 $\\mathrm{XG}$ 위에 있을 때, 곧 $\\mathrm{X}$ 가 반직선 $\\mathrm{GF'}$ 의 $\\mathrm{F'}$ 너머 부분 위에 있을 때만 성립한다. 점 $\\mathrm{F'}$ 는 $E_{1}$ 의 내부에 있으므로 이 부분은 $E_{1}$ 과 만나며, 그 점을 $\\mathrm{X}_{0}$ 라 하면 $\\overline{\\mathrm{X}_{0}F}+\\overline{\\mathrm{X}_{0}G}=10+k$ 이다. (가)에서 $\\mathrm{X}_{0}$ 도 $E_{2}$ 로 둘러싸인 부분에 있으므로 $10+k \\le 2 a$ 이다. 만약 $10+k<2 a$ 이면 $E_{1}$ 위의 모든 점에서 $\\overline{\\mathrm{XF}}+\\overline{\\mathrm{XG}}<2 a$ 가 되어 두 타원이 만나지 않으므로 모순이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "접점 위치",
+   "text": "따라서 $2 a=10+k$ 이고, 두 타원이 만나는 점은 등호가 성립하는 점뿐이므로 $\\mathrm{P}=\\mathrm{X}_{0}$ 이다. 곧 점 $\\mathrm{P}$ 는 반직선 $\\mathrm{GF'}$ 위에서 $\\mathrm{F'}$ 너머에 있고, $\\overline{\\mathrm{F'G}}=2 a-10$ (두 원이 내접할 때 '중심 사이의 거리 = 반지름의 차'에 해당하는 관계)이다. 점 $\\mathrm{P}$ 는 직선 $\\mathrm{FG}$ 위나 꼭짓점이 아님에 주의한다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$b^2$",
+   "text": "[관문 2: 단축의 길이를 $k$ 의 식으로] $k^{2}=6^{2}+g^{2}$ 이고 $E_{2}$ 의 중심에서 초점까지의 거리는 $\\frac{\\overline{\\mathrm{FG}}}{2}=\\frac{\\left|g \\right|}{2}$ 이므로 $E_{2}$ 의 단축의 길이의 절반을 $b$ 라 하면",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "$k$",
+   "text": "$$b^{2}=a^{2}-\\frac{g^{2}}{4}=\\left(5+\\frac{k}{2}\\right)^{2}-\\frac{k^{2}-36}{4}=34+5 k$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "$\\mathrm G$",
+   "text": "이다. (나)에서 $b^{2}=84$ 이므로 $k=10$ 이고, $g^{2}=64$ , $g<0$ 에서 $\\mathrm{G}(3,\\,-8)$ , $a=10$ 이다.",
+   "uses": [
+    "C2",
+    "C4"
+   ]
+  },
+  {
+   "title": "단위벡터",
+   "text": "[관문 3: 반직선 위의 접점] 점 $\\mathrm{G}$ 에서 $\\mathrm{F'}$ 로 향하는 방향의 단위벡터는 $\\frac{1}{10}(-6,\\,8)=\\left(-\\frac{3}{5},\\,\\frac{4}{5}\\right)$ 이므로 $\\overline{\\mathrm{PF'}}=s \\,(s>0)$ 라 하면 $\\mathrm{P}\\left(-3-\\frac{3}{5}s,\\,\\frac{4}{5}s \\right)$ 이다. 타원 $E_{1}$ 의 정의에서 $\\overline{\\mathrm{PF}}=10-s$ 이므로",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$s$",
+   "text": "$$\\overline{\\mathrm{PF}}^{2}=\\left(-6-\\frac{3}{5}s \\right)^{2}+\\left(\\frac{4}{5}s \\right)^{2}=36+\\frac{36}{5}s+s^{2}=(10-s)^{2}$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "에서 $s^{2}$ 이 소거되어 $\\frac{136}{5}s=64$ , $s=\\frac{40}{17}$ 이고 $\\mathrm{P}\\left(-\\frac{75}{17},\\,\\frac{32}{17}\\right)$ 이다. (실제로 $\\frac{225}{289}+\\frac{64}{289}=1$ 이다.) 선분 $\\mathrm{FG}$ 는 직선 $x=3$ 위에 있고 길이가 $8$ 이며, 점 $\\mathrm{P}$ 와 직선 $x=3$ 사이의 거리는 $3+\\frac{75}{17}=\\frac{126}{17}$ 이므로 삼각형 $\\mathrm{PFG}$ 의 넓이는 $\\frac{1}{2}\\times 8 \\times \\frac{126}{17}=\\frac{504}{17}$ 이다. 따라서 $p+q=17+504=521$ 이다.",
+   "uses": [
+    "C5",
+    "C6"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\mathrm F'$ 너머",
+   "cond": "C3",
+   "text": [
+    "$\\mathrm X$가 $\\mathrm G$, $\\mathrm F'$와 일직선이고 $\\mathrm F'$가 가운데."
+   ]
+  },
+  {
+   "h": "$s^2$ 소거",
+   "cond": "C3",
+   "text": [
+    "일차방정식으로."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\overline{\\mathrm{PG}}$",
+   "body": [
+    "(같은 두 타원 $E_1$, $E_2$와 점 $\\mathrm P$에 대하여) 선분 $\\mathrm{PG}$의 길이가 $\\frac qp$일 때, $p+q$의 값을 구하시오. (단, $p$와 $q$는 서로소인 자연수이다.)"
+   ],
+   "answer": 227,
+   "hint": "$\\overline{\\mathrm{PF'}}+\\overline{\\mathrm{F'G}}=\\frac{40}{17}+10=\\frac{210}{17}$."
+  }
+ ],
+ "line": "포함·내접하는 두 타원 = 초점 거리 = 장축 차."
+}

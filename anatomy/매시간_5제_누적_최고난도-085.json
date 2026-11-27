@@ -1,0 +1,156 @@
+{
+ "wrong": "예상 오답 — 접점에서 $|f|$가 단조라고 보아 일반적인 접선 조건만 풀다 '가로지름'을 쓰지 못한 경우",
+ "intro": [
+  "$\\varphi=G-mx$가 $\\alpha$에서 부호를 바꾸려면 $|f|$가 극값 → $\\alpha$는 $f$의 꼭짓점.",
+  "$f$의 부호로 경우 나누기 → $F(x)=x(x-3\\delta)^2$, (나)에서 $\\delta=1$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "$f$",
+   "why": "최고차 계수 $3$인 이차함수.",
+   "uses": [
+    4,
+    6
+   ]
+  },
+  "C2": {
+   "label": "$G$",
+   "why": "$\\int_0^x|f|$.",
+   "uses": [
+    2,
+    7
+   ]
+  },
+  "C5": {
+   "label": "(가)",
+   "why": "원점을 지나는 접선, 접점 $\\alpha>0$ 좌우에서 부호 바뀜.",
+   "uses": [
+    1,
+    2,
+    3,
+    5
+   ]
+  },
+  "C6": {
+   "label": "(나)",
+   "why": "$G(1)=4$.",
+   "uses": [
+    8
+   ]
+  },
+  "C7": {
+   "label": "묻는 것",
+   "why": "$G(9)$.",
+   "uses": [
+    9
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "변곡과 가로지름",
+   "p": [
+    "$\\varphi'=|f|-m$의 부호."
+   ]
+  },
+  {
+   "h": "절댓값 적분",
+   "p": [
+    "근에서 구간 분리."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 원점을 지나는 접선이 접점 좌우에서 곡선을 가로지르려면 G'=|f| 가 접점 근처에서 단조이면 안 되므로 접점이 f의 꼭짓점이어야 한다는 관찰로 시작해, f의 부호 구간에 따라 경우를 나누면 접선 조건이 α³=0(불가능) 또는 s³−6s+4=0 으로 바뀌어 두 근의 비 1:3 만 남고, (나)를 G의 세 조각마다 확인해 δ=1 을 정하는 것",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "접선 조건",
+   "text": "$G'(x)=\\left|f(x)\\right|$ 이다. $\\varphi(x)=G(x)-m x$ 라 하면 (가)에서 $\\varphi(\\alpha)=0$ , $\\varphi'(\\alpha)=0$ 이므로 $m=\\left|f(\\alpha)\\right|$ , $G(\\alpha)=\\alpha \\left|f(\\alpha)\\right|$ 이다. $\\left|f(t)\\right|$ 가 $0$ 이 되는 $t$ 는 많아야 두 개이므로 $G(\\alpha)>0$ 이고, 따라서 $f(\\alpha)\\ne 0$ 이다.",
+   "uses": [
+    "C2",
+    "C5"
+   ]
+  },
+  {
+   "title": "꼭짓점",
+   "text": "[관문 1: 접점은 꼭짓점] $f(\\alpha)\\ne 0$ 이므로 $\\alpha$ 의 근처에서 $\\left|f(x)\\right|$ 는 $f(x)$ 또는 $-f(x)$ 와 같은 이차함수이다. 만약 $f'(\\alpha)\\ne 0$ 이면 $\\left|f(x)\\right|$ 는 $\\alpha$ 의 근처에서 증가하거나 감소하므로 $\\varphi'(x)=\\left|f(x)\\right|-\\left|f(\\alpha)\\right|$ 의 부호가 $x=\\alpha$ 의 좌우에서 바뀌어 $\\varphi$ 는 $x=\\alpha$ 에서 극값 $0$ 을 갖는다. 그러면 $\\alpha$ 의 좌우에서 $\\varphi$ 의 부호가 같아 (가)에 모순이다. 따라서 $f'(\\alpha)=0$ 이고, $f(x)=3(x-\\alpha)^{2}+c \\,(c \\ne 0)$ 꼴이다. 이때 $F(x)=\\int_{0}^{x}f(t)dt=(x-\\alpha)^{3}+\\alpha^{3}+c x$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "부호",
+   "text": "[관문 2: $f$ 의 부호에 따른 경우 나누기] $c>0$ 이면 $f>0$ 이므로 $G=F$ 이고, $G(\\alpha)=\\alpha f(\\alpha)$ 에서 $\\alpha^{3}+c \\alpha=c \\alpha$ , 곧 $\\alpha^{3}=0$ 이 되어 모순이다. $c<0$ 이면 $c=-3 \\delta^{2}\\,(\\delta>0)$ 이라 할 때 $f(x)=0$ 의 두 근은 $\\alpha-\\delta$ , $\\alpha+\\delta$ 이다. $\\alpha-\\delta \\le 0$ 이면 $0 \\le x \\le \\alpha$ 에서 $f(x)\\le 0$ 이므로 $G(\\alpha)=-F(\\alpha)$ 이고, $-F(\\alpha)=\\alpha \\left(-f(\\alpha)\\right)$ 에서 다시 $\\alpha^{3}=0$ 이 되어 모순이다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "남은 경우",
+   "text": "남은 경우는 $p=\\alpha-\\delta>0$ 일 때이다. 이때 $G(\\alpha)=\\int_{0}^{p}f(t)dt-\\int_{p}^{\\alpha}f(t)dt=2 F(p)-F(\\alpha)$ 이므로 $G(\\alpha)=\\alpha \\left(-f(\\alpha)\\right)=-c \\alpha$ 에서 $2 F(p)=F(\\alpha)-c \\alpha=\\alpha^{3}$ 이다. $F(p)=-\\delta^{3}+\\alpha^{3}-3 \\delta^{2}(\\alpha-\\delta)=\\alpha^{3}-3 \\alpha \\delta^{2}+2 \\delta^{3}$ 을 대입하면 $\\alpha^{3}-6 \\alpha \\delta^{2}+4 \\delta^{3}=0$ 이고, $s=\\frac{\\alpha}{\\delta}$ 라 하면 $s^{3}-6 s+4=(s-2)(s^{2}+2 s-2)=0$ 이다. $p>0$ 에서 $s>1$ 이므로 $s=2$ 이다 ( $s=-1+\\sqrt{3}<1$ ). 따라서 $\\alpha=2 \\delta$ 이고 $f(x)=3(x-\\delta)(x-3 \\delta)$ 이다. 이때 $\\alpha$ 의 근처에서 $\\left|f(x)\\right|=-f(x)=3 \\delta^{2}-3(x-\\alpha)^{2}$ 이므로 $x \\ne \\alpha$ 이면 $\\varphi'(x)=\\left|f(x)\\right|-\\left|f(\\alpha)\\right|=-3(x-\\alpha)^{2}<0$ 이 되어 $\\varphi$ 는 $\\alpha$ 의 근처에서 감소하고, (가)를 실제로 만족시킨다.",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "$F$",
+   "text": "[관문 3: (나)로 $\\delta$ 정하기] $F(x)=x^{3}-6 \\delta x^{2}+9 \\delta^{2}x=x(x-3 \\delta)^{2}$ 이므로 $F(\\delta)=4 \\delta^{3}$ , $F(3 \\delta)=0$ 이고",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$G$ 식",
+   "text": "$$G(x)=\\begin{cases}F(x)&\\,\\,\\,(0 \\le x \\le \\delta)\\\\ 8 \\delta^{3}-F(x)&\\,\\,\\,(\\delta \\le x \\le 3 \\delta)\\\\ 8 \\delta^{3}+F(x)&\\,\\,\\,(x \\ge 3 \\delta)\\end{cases}$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$\\delta$",
+   "text": "이다. $\\delta \\ge 1$ 이면 $G(1)=(1-3 \\delta)^{2}=4$ 에서 $\\delta=1$ 이다. $\\frac{1}{3}\\le \\delta \\le 1$ 이면 $8 \\delta^{3}-(1-3 \\delta)^{2}=4$ , 곧 $(\\delta-1)(8 \\delta^{2}-\\delta+5)=0$ 에서 $\\delta=1$ 이다. $\\delta \\le \\frac{1}{3}$ 이면 $G(1)=8 \\delta^{3}+(1-3 \\delta)^{2}\\le \\frac{8}{27}+1<4$ 이다. 따라서 $\\delta=1$ , $f(x)=3(x-1)(x-3)$ 이다.",
+   "uses": [
+    "C6"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "그러므로 $G(9)=8+F(9)=8+9 \\times 6^{2}=332$ 이다.",
+   "uses": [
+    "C7"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "가로지름",
+   "cond": "C5",
+   "text": [
+    "$|f|$가 $\\alpha$에서 단조면 $\\varphi$는 극값 — 부호 유지."
+   ]
+  },
+  {
+   "h": "$c>0$",
+   "cond": "C1",
+   "text": [
+    "$f>0$이면 모순."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $G(1)=25$",
+   "body": [
+    "최고차항의 계수가 $3$인 이차함수 $f(x)$에 대하여 $G(x)=\\int_0^x|f(t)|dt$가 (같은 조건 (가))를 만족시키고 $G(1)=25$일 때, $G(9)$의 값을 구하시오."
+   ],
+   "answer": 145,
+   "hint": "$\\delta=2$: $G(9)=64+F(9)=64+81$."
+  }
+ ],
+ "line": "가로지르는 접선 → 접점은 극값점."
+}

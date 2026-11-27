@@ -1,0 +1,158 @@
+{
+ "wrong": "예상 오답 — 절댓값을 무시하고 $\\sin t$로 계산해 주기마다 쌓이는 항 $-\\frac{2k}3\\sin2x$를 놓친 경우",
+ "intro": [
+  "덧셈정리로 $f=\\sin2x\\,C(x)-\\cos2x\\,S(x)$, 한 주기마다 $C$만 $-\\frac23$씩 쌓임.",
+  "$f(k\\pi+s)=\\frac23\\sin s\\{1-(2k+1)\\cos s\\}$ → $\\frac{A_n}{B_n}=\\left(\\frac{n+1}n\\right)^2$."
+ ],
+ "conds": {
+  "C2": {
+   "label": "함수",
+   "why": "$f=\\int_0^x|\\sin t|\\sin(2x-2t)dt$.",
+   "uses": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  "C4": {
+   "label": "$A_n$, $B_n$",
+   "why": "$[n\\pi,(n+1)\\pi]$에서 양·음 부분 넓이.",
+   "uses": [
+    6,
+    7,
+    8
+   ]
+  },
+  "C5": {
+   "label": "조건과 묻는 것",
+   "why": "$25A_n=36B_n$; $A_n+B_n=\\frac qp$.",
+   "uses": [
+    9,
+    10
+   ]
+  },
+  "C6": {
+   "label": "서로소",
+   "why": "기약분수.",
+   "uses": [
+    10
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "덧셈정리 분리",
+   "p": [
+    "$x$를 적분 밖으로."
+   ]
+  },
+  {
+   "h": "주기 누적",
+   "p": [
+    "$C(x+\\pi)=C(x)+C(\\pi)$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "덧셈정리",
+   "text": "출제 의도: |sin t|의 주기 π마다 덧셈정리로 분리한 두 적분 중 하나만 −2/3씩 쌓여 f(x+kπ)=f(x)−(2k/3)sin2x가 되고, 첫 주기의 닫힌 꼴과 합치면 (2/3)sin s{1−(2k+1)cos s}로 인수분해되어 위·아래 넓이의 비가 ((n+1)/n)²이라는 단순한 꼴로 정리됨을 찾는 것",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "분리",
+   "text": "삼각함수의 덧셈정리 $\\sin(2 x-2 t)=\\sin 2 x \\cos 2 t-\\cos 2 x \\sin 2 t$ 에서",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "누적",
+   "text": "$$f(x)=\\sin 2 x \\times C(x)-\\cos 2 x \\times S(x),\\,\\,C(x)=\\int_{0}^{x}\\left|\\sin t \\right|\\cos 2 t dt,\\,\\,S(x)=\\int_{0}^{x}\\left|\\sin t \\right|\\sin 2 t dt$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "첫 주기",
+   "text": "이다. [관문 1: 한 주기마다 쌓이는 양] $\\left|\\sin t \\right|$ , $\\cos 2 t$ , $\\sin 2 t$ 는 모두 주기가 $\\pi$ 인 함수이므로 $C(x+\\pi)=C(x)+C(\\pi)$ , $S(x+\\pi)=S(x)+S(\\pi)$ 이다. 여기서 $C(\\pi)=\\int_{0}^{\\pi}\\sin t \\cos 2 t dt=\\frac{1}{2}\\int_{0}^{\\pi}(\\sin 3 t-\\sin t)dt=\\frac{1}{2}\\left(\\frac{2}{3}-2 \\right)=-\\frac{2}{3}$ , $S(\\pi)=\\int_{0}^{\\pi}2 \\sin^{2}t \\cos t dt=\\left[\\frac{2}{3}\\sin^{3}t \\right]_{0}^{\\pi}=0$ 이다. $\\sin 2 x$ , $\\cos 2 x$ 도 주기가 $\\pi$ 이므로 $f(x+\\pi)=f(x)-\\frac{2}{3}\\sin 2 x$ 이고, 이를 되풀이하면 음이 아닌 정수 $k$ 에 대하여 $f(x+k \\pi)=f(x)-\\frac{2 k}{3}\\sin 2 x$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "[관문 2: 첫 주기의 식과 인수분해] $0 \\le x \\le \\pi$ 이면 $\\left|\\sin t \\right|=\\sin t$ 이고, 곱을 합으로 바꾸면 $\\sin t \\sin(2 x-2 t)=\\frac{1}{2}\\left\\{\\cos(3 t-2 x)-\\cos(2 x-t)\\right\\}$ 이므로",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "일반 주기",
+   "text": "$$f(x)=\\frac{1}{2}\\left[\\frac{1}{3}\\sin(3 t-2 x)+\\sin(2 x-t)\\right]_{0}^{x}=\\frac{2}{3}\\sin x-\\frac{1}{3}\\sin 2 x=\\frac{2}{3}\\sin x(1-\\cos x)$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "치환",
+   "text": "이다. 따라서 $0 \\le s \\le \\pi$ 와 음이 아닌 정수 $k$ 에 대하여 $f(k \\pi+s)=\\frac{2}{3}\\sin s(1-\\cos s)-\\frac{4 k}{3}\\sin s \\cos s=\\frac{2}{3}\\sin s \\left\\{1-(2 k+1)\\cos s \\right\\}$ 이다. 자연수 $n$ 에 대하여 $m=2 n+1$ 이라 하면 닫힌구간 $\\left[n \\pi,\\,(n+1)\\pi \\right]$ 에서 $f(n \\pi+s)=\\frac{2}{3}\\sin s(1-m \\cos s)$ 이고, $0<s<\\pi$ 에서 $\\sin s>0$ 이므로 $f$ 는 $\\cos s>\\frac{1}{m}$ 일 때 음, $\\cos s<\\frac{1}{m}$ 일 때 양이다. $\\cos s$ 는 감소하므로 $\\cos s_{0}=\\frac{1}{m}$ 인 $s_{0}$ 이 오직 하나 있어, 아래쪽 부분은 $0 \\le s \\le s_{0}$ , 위쪽 부분은 $s_{0}\\le s \\le \\pi$ 에 대응한다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "넓이",
+   "text": "[관문 3: 넓이와 비] $u=\\cos s$ 로 치환하면 $du=-\\sin s ds$ 이므로",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "비",
+   "text": "$$B_{n}=\\frac{2}{3}\\int_{1/m}^{1}(\\mu-1)du=\\frac{(m-1)^{2}}{3 m},\\,\\,A_{n}=\\frac{2}{3}\\int_{-1}^{1/m}(1-\\mu)du=\\frac{(m+1)^{2}}{3 m}$$",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이다. 따라서 $\\frac{A_{n}}{B_{n}}=\\left(\\frac{m+1}{m-1}\\right)^{2}=\\left(\\frac{n+1}{n}\\right)^{2}$ 이고, 이 값은 $n$ 에 대하여 감소하므로 $\\frac{A_{n}}{B_{n}}=\\frac{36}{25}$ , 즉 $\\frac{n+1}{n}=\\frac{6}{5}$ 인 자연수는 $n=5$ 하나뿐이다. 이때 $m=11$ 이고 $A_{5}+B_{5}=\\frac{(m+1)^{2}+(m-1)^{2}}{3 m}=\\frac{2(m^{2}+1)}{3 m}=\\frac{244}{33}$ 이다. 따라서 $p+q=33+244=277$ 이다.",
+   "uses": [
+    "C5",
+    "C6"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$|\\sin t|$",
+   "cond": "C2",
+   "text": [
+    "주기 $\\pi$ — $\\sin t$의 주기 $2\\pi$와 다름."
+   ]
+  },
+  {
+   "h": "감소",
+   "cond": "C5",
+   "text": [
+    "비가 $n$에 대해 감소 → $n$ 하나."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $16A_n=25B_n$",
+   "body": [
+    "(같은 $f(x)$, $A_n$, $B_n$에 대하여) $16A_n=25B_n$을 만족시키는 자연수 $n$에 대하여 $A_n+B_n=\\frac qp$일 때, $p+q$의 값을 구하시오. (단, $p$와 $q$는 서로소인 자연수이다.)"
+   ],
+   "answer": 191,
+   "hint": "$n=4$, $m=9$: $\\frac{100+64}{27}$."
+  }
+ ],
+ "line": "합성곱 적분 → 덧셈정리 분리 + 주기 누적."
+}

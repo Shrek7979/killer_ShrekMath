@@ -1,0 +1,164 @@
+{
+ "wrong": "예상 오답 — 현을 등간격으로 그었다고 보고 $\\int_{-1}^12\\sqrt{1-y^2}dy\\div2=\\frac\\pi2$로 답한 경우",
+ "intro": [
+  "위쪽 넓이 $A(\\theta)=\\theta-\\sin\\theta\\cos\\theta$, 현의 길이 $2\\sin\\theta$.",
+  "넓이 비율 $u$를 변수로 → 등간격 리만 합 → 다시 $\\theta$로 치환."
+ ],
+ "conds": {
+  "C1": {
+   "label": "원",
+   "why": "반지름 $1$.",
+   "uses": [
+    2,
+    3,
+    4
+   ]
+  },
+  "C2": {
+   "label": "현",
+   "why": "평행한 $n$개로 넓이가 같은 $n+1$부분, 길이 합 $L_n$.",
+   "uses": [
+    1,
+    5,
+    6
+   ]
+  },
+  "C3": {
+   "label": "극한",
+   "why": "$\\lim\\frac{L_n}n=\\frac q{p\\pi}$.",
+   "uses": [
+    7,
+    8,
+    9
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$p+q$.",
+   "uses": [
+    10
+   ]
+  },
+  "C5": {
+   "label": "서로소",
+   "why": "기약분수.",
+   "uses": [
+    10
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "리만 합",
+   "p": [
+    "등간격 점에서의 합."
+   ]
+  },
+  {
+   "h": "역함수 치환",
+   "p": [
+    "$du=\\frac2\\pi\\sin^2\\theta\\,d\\theta$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 넓이가 같도록 그은 현의 위치는 등간격이 아니어서 그대로는 급수를 정적분으로 바꿀 수 없지만, '현 위쪽의 넓이'를 새 변수로 잡으면 합이 등간격 점에서의 리만 합이 되고, 다시 각으로 치환하면 넓이의 도함수 2sin²θ가 가중치로 붙어 ∫sin³θ로 정리되는 것",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "넓이 함수",
+   "text": "원 $C$ 를 $x^{2}+y^{2}=1$ 로 놓고 현들이 $x$ 축에 평행하다고 하자. $-1<c<1$ 일 때 직선 $y=c$ 의 위쪽에 있는 원의 내부의 넓이는 $\\int_{c}^{1}2 \\sqrt{1-y^{2}}dy$ 이고, $c=\\cos \\theta \\,(0<\\theta<\\pi)$ 로 놓고 $y=\\cos \\phi$ 로 치환하면",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "$A(\\theta)$",
+   "text": "$$A(\\theta)=\\int_{0}^{\\theta}2 \\sin^{2}\\phi d \\phi=\\theta-\\sin \\theta \\cos \\theta$$",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "증가",
+   "text": "이다. 이때 현의 길이는 $2 \\sin \\theta$ 이다. $A'(\\theta)=2 \\sin^{2}\\theta>0$ 이므로 $A$ 는 $0$ 에서 $\\pi$ 까지 증가한다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "비등간격",
+   "text": "[관문 1: 현의 위치는 등간격이 아니다] 위에서부터 $k$ 번째 현을 $y=\\cos \\theta_{k}$ 라 하면 그 위쪽의 넓이가 $\\frac{k \\pi}{n+1}$ 이므로 $A(\\theta_{k})=\\frac{k \\pi}{n+1}$ $(k=1,\\,2,\\,\\cdots,\\,n)$ 이고 $\\theta_{k}$ 는 하나로 정해진다. 현의 높이나 $\\theta_{k}$ 는 등간격이 아니므로 그대로는 급수의 합을 정적분으로 바꿀 수 없다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "넓이 변수",
+   "text": "[관문 2: 넓이를 변수로 보기] $u=\\frac{A(\\theta)}{\\pi}$ 의 역함수를 $\\theta=\\theta(u)\\,(0 \\le u \\le 1)$ 라 하면 $\\theta$ 는 연속이고, $G(u)=2 \\sin \\theta(u)$ 는 닫힌구간 $[0,\\,1]$ 에서 연속이며 $G(1)=0$ 이다. $L_{n}=\\sum_{k=1}^{n}G \\left(\\frac{k}{n+1}\\right)=\\sum_{k=1}^{n+1}G \\left(\\frac{k}{n+1}\\right)$ 이므로",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "극한",
+   "text": "$$\\lim_{n \\to \\infty}\\frac{L_{n}}{n}=\\lim_{n \\to \\infty}\\frac{n+1}{n}\\times \\frac{1}{n+1}\\sum_{k=1}^{n+1}G \\left(\\frac{k}{n+1}\\right)=\\int_{0}^{1}G(u)du$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "치환",
+   "text": "이다. [관문 3: 다시 각으로 치환] $u=\\frac{A(\\theta)}{\\pi}$ 로 치환하면 $du=\\frac{2}{\\pi}\\sin^{2}\\theta d \\theta$ 이고 $u=0,\\,1$ 은 각각 $\\theta=0,\\,\\pi$ 에 대응하므로",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "적분",
+   "text": "$$\\int_{0}^{1}G(u)du=\\int_{0}^{\\pi}2 \\sin \\theta \\times \\frac{2}{\\pi}\\sin^{2}\\theta d \\theta=\\frac{4}{\\pi}\\int_{0}^{\\pi}(1-\\cos^{2}\\theta)\\sin \\theta d \\theta=\\frac{4}{\\pi}\\left[-\\cos \\theta+\\frac{\\cos^{3}\\theta}{3}\\right]_{0}^{\\pi}=\\frac{16}{3 \\pi}$$",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "이다. (현을 등간격으로 그으면 같은 극한이 $\\frac{\\pi}{2}$ 가 되므로, 넓이가 같다는 조건이 현의 위치를 실제로 바꾼다.) 따라서 $p=3$ , $q=16$ 이고 $p+q=19$ 이다.",
+   "uses": [
+    "C4",
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "등간격 아님",
+   "cond": "C2",
+   "text": [
+    "가운데 현일수록 간격이 좁음."
+   ]
+  },
+  {
+   "h": "$G(1)=0$",
+   "cond": "C3",
+   "text": [
+    "$n+1$번째 항을 더해도 됨."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 길이의 제곱",
+   "body": [
+    "(같은 방법으로 원 $C$를 나누는 $n$개의 현에 대하여) 현의 길이의 제곱의 합을 $M_n$이라 할 때, $\\lim_{n\\to\\infty}\\frac{M_n}n$의 값을 구하시오."
+   ],
+   "answer": 3,
+   "hint": "$\\int_0^\\pi4\\sin^2\\theta\\cdot\\frac2\\pi\\sin^2\\theta\\,d\\theta=\\frac8\\pi\\cdot\\frac{3\\pi}8$."
+  }
+ ],
+ "line": "등넓이 분할 → 넓이를 변수로 한 리만 합."
+}
