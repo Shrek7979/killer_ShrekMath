@@ -1,0 +1,185 @@
+{
+ "num": 1633,
+ "id": "매시간_5제_누적_최고난도-081",
+ "subject": "미적분Ⅱ",
+ "type": "30번형",
+ "typeDesc": "미적분Ⅱ · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12미적Ⅱ-02-07]",
+  "[12미적Ⅱ-02-08]",
+  "[12미적Ⅱ-03-02]",
+  "[12미적Ⅱ-03-05]"
+ ],
+ "source": "ShrekMath 창작 · 수능 30번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 61,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "좌표평면에서 곡선 $x^{2}-y^{2}=1 \\,(x>0)$ 을 $C$ 라 하자.",
+    "곡선 $C$ 위의 서로 다른 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 가 다음 조건을 만족시킨다."
+   ]
+  },
+  {
+   "t": "box",
+   "items": [
+    "(가) 두 선분 $\\mathrm{OP}$ , $\\mathrm{OQ}$ 와 곡선 $C$ 의 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 사이의 부분으로 둘러싸인 도형의 넓이는 $\\ln 2$ 이다.",
+    "(나) 곡선 $C$ 위의 점 $\\mathrm{P}$ 에서의 접선과 점 $\\mathrm{Q}$ 에서의 접선이 만나는 점은 직선 $y=\\frac{1}{3}x$ 위에 있다."
+   ]
+  },
+  {
+   "t": "p",
+   "sents": [
+    "$\\left(\\overline{\\mathrm{PQ}}\\right)^{2}=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오.",
+    "(단, $\\mathrm{O}$ 는 원점이고, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "좌표평면에서 곡선 $x^{2}-y^{2}=1 \\,(x>0)$ 을 $C$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "곡선 $C$ 위의 서로 다른 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 가 다음 조건을 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    1,
+    0
+   ],
+   "text": "(가) 두 선분 $\\mathrm{OP}$ , $\\mathrm{OQ}$ 와 곡선 $C$ 의 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 사이의 부분으로 둘러싸인 도형의 넓이는 $\\ln 2$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    1,
+    1
+   ],
+   "text": "(나) 곡선 $C$ 위의 점 $\\mathrm{P}$ 에서의 접선과 점 $\\mathrm{Q}$ 에서의 접선이 만나는 점은 직선 $y=\\frac{1}{3}x$ 위에 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    2,
+    0
+   ],
+   "text": "$\\left(\\overline{\\mathrm{PQ}}\\right)^{2}=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C6",
+   "at": [
+    2,
+    1
+   ],
+   "text": "(단, $\\mathrm{O}$ 는 원점이고, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "쌍곡선 위의 두 점과 원점이 만드는 도형 — x+y 로 매개하면 넓이는 비(比)로",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 곡선 위의 점을 u=x+y 로 매개하면 x=(u+1/u)/2 꼴이 되어, 두 선분과 호로 둘러싸인 넓이는 치환적분으로 (1/2)ln(u_Q/u_P), 곧 비(比)만의 함수가 되고, 두 접선의 교점의 방향은 곱 u_P u_Q 만의 함수가 되어 (가)·(나)가 비와 곱을 따로 정하며, 그 결과 P가 x축 아래에 있어 넓이가 두 조각의 합인 경우까지 같은 식으로 처리됨을 확인하는 것",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "곡선 $C$ 위의 점 $(x,\\,y)$ 에 대하여 $u=x+y$ 라 하자. $x>\\left|y \\right|$ 이므로 $u>0$ 이고, $(x+y)(x-y)=1$ 에서 $x-y=\\frac{1}{u}$ 이므로 $x=\\frac{1}{2}\\left(u+\\frac{1}{u}\\right)$ , $y=\\frac{1}{2}\\left(u-\\frac{1}{u}\\right)$ 이다. $y$ 는 $u$ 에 대하여 증가하므로 곡선 $C$ 위의 점과 양수 $u$ 는 일대일로 대응한다. 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 에 대응하는 값을 각각 $\\alpha$ , $\\beta$ 라 하고, $\\alpha<\\beta$ 라 하여도 일반성을 잃지 않는다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "[관문 1: 넓이는 비만의 함수] $\\mathrm{A}(1,\\,0)$ 이라 하고, 곡선 $C$ 위의 점 $\\mathrm{X}(x_{0},\\,y_{0})\\,(y_{0}\\ge 0)$ 에 대응하는 값을 $u_{0}$ 이라 하자. 선분 $\\mathrm{OX}$ 위의 점 $(\\lambda x_{0},\\,\\lambda y_{0})\\,(0 \\le \\lambda<1)$ 은 $(\\lambda x_{0})^{2}-(\\lambda y_{0})^{2}=\\lambda^{2}<1$ 이므로 곡선 $C$ 의 왼쪽 위에 있다. 따라서 두 선분 $\\mathrm{OA}$ , $\\mathrm{OX}$ 와 곡선의 호 $\\mathrm{AX}$ 로 둘러싸인 도형의 넓이 $S$ 는",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$$S=\\frac{1}{2}x_{0}y_{0}-\\int_{1}^{x_{0}}\\sqrt{t^{2}-1}dt$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "이다. $t=\\frac{1}{2}\\left(v+\\frac{1}{v}\\right)$ ( $v$ 는 $1$ 에서 $u_{0}$ 까지) 로 치환하면 $\\sqrt{t^{2}-1}=\\frac{1}{2}\\left(v-\\frac{1}{v}\\right)$ , $dt=\\frac{1}{2}\\left(1-\\frac{1}{v^{2}}\\right)dv$ 이므로 $\\int_{1}^{x_{0}}\\sqrt{t^{2}-1}dt=\\frac{1}{4}\\int_{1}^{u_{0}}\\left(v-\\frac{2}{v}+\\frac{1}{v^{3}}\\right)dv=\\frac{1}{8}\\left(u_{0}^{2}-\\frac{1}{u_{0}^{2}}\\right)-\\frac{1}{2}\\ln u_{0}$ 이고, $\\frac{1}{2}x_{0}y_{0}=\\frac{1}{8}\\left(u_{0}^{2}-\\frac{1}{u_{0}^{2}}\\right)$ 이므로 $S=\\frac{1}{2}\\ln u_{0}$ 이다. $y_{0}<0$ 이면 $x$ 축에 대하여 대칭인 점은 $u=\\frac{1}{u_{0}}$ 에 대응하므로 넓이는 $-\\frac{1}{2}\\ln u_{0}$ 이다. 곡선 $C$ 위의 점 $\\mathrm{X}$ 에 대응하는 값이 $u$ 일 때 직선 $\\mathrm{OX}$ 의 기울기는 $\\frac{y}{x}=\\frac{u^{2}-1}{u^{2}+1}=1-\\frac{2}{u^{2}+1}$ 로 $u$ 에 대하여 증가하므로 세 선분 $\\mathrm{OP}$ , $\\mathrm{OA}$ , $\\mathrm{OQ}$ 는 대응하는 값 $\\alpha$ , $1$ , $\\beta$ 의 크기 순서대로 놓이고 서로 겹치지 않는다. 따라서 두 점 $\\mathrm{P}$ , $\\mathrm{Q}$ 가 $x$ 축의 같은 쪽에 있으면 두 넓이의 차, 다른 쪽에 있으면 두 넓이의 합이 되어 어느 경우든 (가)의 넓이는 $\\frac{1}{2}\\ln \\frac{\\beta}{\\alpha}$ 이다. 따라서 $\\frac{\\beta}{\\alpha}=4$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "[관문 2: 접선의 교점은 곱만의 함수] $x^{2}-y^{2}=1$ 의 양변을 $x$ 에 대하여 미분하면 $2 x-2 y \\frac{dy}{dx}=0$ 이므로 점 $(x_{1},\\,y_{1})$ 에서의 접선은 $x_{1}x-y_{1}y=1$ 이다 ( $y_{1}=0$ 일 때의 접선 $x=1$ 도 이 식에 포함된다). 두 접선의 교점을 $\\mathrm{T}$ 라 하면 $x_{\\mathrm{P}}y_{\\mathrm{Q}}-x_{\\mathrm{Q}}y_{\\mathrm{P}}=\\frac{1}{2}\\left(\\frac{\\beta}{\\alpha}-\\frac{\\alpha}{\\beta}\\right)\\ne 0$ 이고, 연립하여 풀면 직선 $\\mathrm{OT}$ 의 기울기는 $\\frac{x_{\\mathrm{Q}}-x_{\\mathrm{P}}}{y_{\\mathrm{Q}}-y_{\\mathrm{P}}}$ 이다. 여기서",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "$$x_{\\mathrm{Q}}-x_{\\mathrm{P}}=\\frac{\\beta-\\alpha}{2}\\left(1-\\frac{1}{\\alpha \\beta}\\right),\\,\\,y_{\\mathrm{Q}}-y_{\\mathrm{P}}=\\frac{\\beta-\\alpha}{2}\\left(1+\\frac{1}{\\alpha \\beta}\\right)$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 8,
+   "text": "이므로 기울기는 $\\frac{\\alpha \\beta-1}{\\alpha \\beta+1}$ 로 곱 $\\alpha \\beta$ 만으로 정해진다. (나)에서 이 값이 $\\frac{1}{3}$ 이므로 $\\alpha \\beta=2$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 9,
+   "text": "[관문 3: 숨은 위치] $\\beta=4 \\alpha$ , $\\alpha \\beta=2$ 에서 $\\alpha^{2}=\\frac{1}{2}$ , $\\beta^{2}=8$ 이다. $\\alpha=\\frac{1}{\\sqrt{2}}<1$ 이므로 점 $\\mathrm{P}$ 는 $x$ 축 아래에 있다. 즉 (가)의 도형은 점 $\\mathrm{A}$ 를 품고 있어 두 조각의 넓이의 합이며, 관문 1에서 이 경우까지 같은 식으로 다루었다. 이제 위의 식에서",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 10,
+   "text": "$$\\left(\\overline{\\mathrm{PQ}}\\right)^{2}=\\frac{(\\beta-\\alpha)^{2}}{4}\\left\\{\\left(1-\\frac{1}{\\alpha \\beta}\\right)^{2}+\\left(1+\\frac{1}{\\alpha \\beta}\\right)^{2}\\right\\}=\\frac{(\\beta-\\alpha)^{2}}{2}\\left(1+\\frac{1}{(\\alpha \\beta)^{2}}\\right)$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 11,
+   "text": "이고 $(\\beta-\\alpha)^{2}=\\beta^{2}-2 \\alpha \\beta+\\alpha^{2}=8-4+\\frac{1}{2}=\\frac{9}{2}$ 이므로 $\\left(\\overline{\\mathrm{PQ}}\\right)^{2}=\\frac{9}{4}\\times \\frac{5}{4}=\\frac{45}{16}$ 이다. 따라서 $p+q=16+45=61$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}
