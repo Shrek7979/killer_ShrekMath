@@ -1,0 +1,177 @@
+{
+ "num": 1612,
+ "id": "매시간_5제_누적_최고난도-060",
+ "subject": "대수",
+ "type": "30번형",
+ "typeDesc": "대수 · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12대수02-02]",
+  "[12대수02-03]"
+ ],
+ "source": "ShrekMath 창작 · 수능 30번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 126,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "삼각형 $\\mathrm{ABC}$ 의 변 $\\mathrm{BC}$ 위를 움직이는 점 $\\mathrm{P}$ 가 있다.",
+    "(단, 점 $\\mathrm{P}$ 는 두 점 $\\mathrm{B}$ , $\\mathrm{C}$ 가 아니다.) 두 삼각형 $\\mathrm{ABP}$ , $\\mathrm{APC}$ 의 외접원의 중심을 각각 $\\mathrm{O}_{1}$ , $\\mathrm{O}_{2}$ 라 하자.",
+    "삼각형 $\\mathrm{ABC}$ 가 다음 조건을 만족시킨다."
+   ]
+  },
+  {
+   "t": "box",
+   "items": [
+    "(가) 점 $\\mathrm{P}$ 의 위치에 관계없이 삼각형 $\\mathrm{ABP}$ 의 외접원의 반지름의 길이와 삼각형 $\\mathrm{APC}$ 의 외접원의 반지름의 길이의 비는 $13:20$ 이다.",
+    "(나) 선분 $\\mathrm{O}_{1}O_{2}$ 의 길이의 최솟값은 $\\frac{21}{2}$ 이다.",
+    "(다) $\\overline{\\mathrm{O}_{1}O_{2}}=k$ 가 되도록 하는 점 $\\mathrm{P}$ 가 오직 하나 존재하도록 하는 실수 $k$ 중에서 $\\frac{21}{2}$ 이 아닌 것의 최솟값은 $\\frac{91}{8}$ 이다."
+   ]
+  },
+  {
+   "t": "p",
+   "sents": [
+    "삼각형 $\\mathrm{ABC}$ 의 넓이를 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "삼각형 $\\mathrm{ABC}$ 의 변 $\\mathrm{BC}$ 위를 움직이는 점 $\\mathrm{P}$ 가 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "(단, 점 $\\mathrm{P}$ 는 두 점 $\\mathrm{B}$ , $\\mathrm{C}$ 가 아니다.) 두 삼각형 $\\mathrm{ABP}$ , $\\mathrm{APC}$ 의 외접원의 중심을 각각 $\\mathrm{O}_{1}$ , $\\mathrm{O}_{2}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "삼각형 $\\mathrm{ABC}$ 가 다음 조건을 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    1,
+    0
+   ],
+   "text": "(가) 점 $\\mathrm{P}$ 의 위치에 관계없이 삼각형 $\\mathrm{ABP}$ 의 외접원의 반지름의 길이와 삼각형 $\\mathrm{APC}$ 의 외접원의 반지름의 길이의 비는 $13:20$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    1,
+    1
+   ],
+   "text": "(나) 선분 $\\mathrm{O}_{1}O_{2}$ 의 길이의 최솟값은 $\\frac{21}{2}$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C6",
+   "at": [
+    1,
+    2
+   ],
+   "text": "(다) $\\overline{\\mathrm{O}_{1}O_{2}}=k$ 가 되도록 하는 점 $\\mathrm{P}$ 가 오직 하나 존재하도록 하는 실수 $k$ 중에서 $\\frac{21}{2}$ 이 아닌 것의 최솟값은 $\\frac{91}{8}$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C7",
+   "at": [
+    2,
+    0
+   ],
+   "text": "삼각형 $\\mathrm{ABC}$ 의 넓이를 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "변 위의 점으로 나눈 두 삼각형의 외접원 — 반지름의 비와 두 중심 사이 거리의 사인법칙",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 보각의 사인이 같아 두 외접원의 반지름의 비가 AB:AC로 고정되고, 두 중심을 BC 위로 내리면 BP, PC의 중점이 되어 O₁O₂·sin∠APB=BC/2, 곧 O₁O₂가 AP에 비례한다는 숨은 구조를 찾은 뒤, 최솟값의 존재(수선의 발이 변 위)와 'P가 하나뿐인 k'의 경계(P→B의 극한값 13t)로 높이를 정하는 것",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "두 외접원의 반지름의 길이를 $R_{1}$ , $R_{2}$ 라 하면 사인법칙에 의하여 $\\overline{\\mathrm{AB}}=2 R_{1}\\sin(\\angle \\mathrm{APB})$ , $\\overline{\\mathrm{AC}}=2 R_{2}\\sin(\\angle \\mathrm{APC})$ 이다. $\\angle \\mathrm{APB}+\\angle \\mathrm{APC}=\\pi$ 이므로 두 사인값이 같고, [관문 1] $R_{1}:R_{2}=\\overline{\\mathrm{AB}}:\\overline{\\mathrm{AC}}$ 가 $\\mathrm{P}$ 에 관계없이 성립한다. 따라서 (가)는 $\\overline{\\mathrm{AB}}=13 t$ , $\\overline{\\mathrm{AC}}=20 t$ $(t>0)$ 와 같다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "[관문 2: 두 중심 사이 거리] $\\mathrm{O}_{1}$ 은 선분 $\\mathrm{BP}$ 의 수직이등분선 위에 있으므로 $\\mathrm{O}_{1}$ 에서 직선 $\\mathrm{BC}$ 에 내린 수선의 발은 선분 $\\mathrm{BP}$ 의 중점 $\\mathrm{M}_{1}$ 이고, 마찬가지로 $\\mathrm{O}_{2}$ 에서 내린 수선의 발은 선분 $\\mathrm{PC}$ 의 중점 $\\mathrm{M}_{2}$ 이다. 따라서 $\\overline{\\mathrm{M}_{1}M_{2}}=\\frac{1}{2}\\overline{\\mathrm{BC}}$ 이다. 또 $\\mathrm{O}_{1}$ , $\\mathrm{O}_{2}$ 는 모두 선분 $\\mathrm{AP}$ 의 수직이등분선 위에 있으므로 직선 $\\mathrm{O}_{1}O_{2}$ 는 직선 $\\mathrm{AP}$ 에 수직이고, 직선 $\\mathrm{O}_{1}O_{2}$ 와 직선 $\\mathrm{BC}$ 가 이루는 예각의 코사인은 $\\sin(\\angle \\mathrm{APB})$ 이다. 그러므로",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$$\\overline{\\mathrm{O}_{1}O_{2}}\\times \\sin(\\angle \\mathrm{APB})=\\overline{\\mathrm{M}_{1}M_{2}}=\\frac{1}{2}\\overline{\\mathrm{BC}}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "이다. 점 $\\mathrm{A}$ 에서 직선 $\\mathrm{BC}$ 에 내린 수선의 발을 $\\mathrm{H}$ , $\\overline{\\mathrm{AH}}=a$ 라 하면 $\\sin(\\angle \\mathrm{APB})=\\frac{a}{\\overline{\\mathrm{AP}}}$ 이므로 $\\overline{\\mathrm{O}_{1}O_{2}}=\\frac{\\overline{\\mathrm{BC}}}{2 a}\\times \\overline{\\mathrm{AP}}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "[관문 3: 최솟값의 존재] $\\overline{\\mathrm{O}_{1}O_{2}}\\ge \\frac{1}{2}\\overline{\\mathrm{BC}}$ 이고 등호는 $\\mathrm{P}=\\mathrm{H}$ 일 때만 성립한다. 만약 $\\mathrm{H}$ 가 선분 $\\mathrm{BC}$ 의 양 끝점 사이에 있지 않으면 $\\overline{\\mathrm{AP}}$ 는 $\\mathrm{P}$ 가 $\\mathrm{H}$ 에 가까운 끝점으로 갈수록 작아지기만 하고 그 끝점은 제외되므로 최솟값이 없다. 따라서 (나)에서 $\\mathrm{H}$ 는 두 점 $\\mathrm{B}$ , $\\mathrm{C}$ 사이에 있고 $\\overline{\\mathrm{BC}}=21$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "[관문 4: 한 점뿐인 k] $\\overline{\\mathrm{O}_{1}O_{2}}=\\frac{21}{2 a}\\overline{\\mathrm{AP}}$ 이므로 $\\overline{\\mathrm{O}_{1}O_{2}}=k$ 인 점의 개수는 $\\overline{\\mathrm{AP}}=\\frac{2 a k}{21}$ 인 점의 개수와 같다. $\\mathrm{P}$ 가 $\\mathrm{H}$ 에서 $\\mathrm{B}$ 쪽으로 가면 $\\overline{\\mathrm{AP}}$ 는 $a$ 이상 $13 t$ 미만의 값을 한 번씩, $\\mathrm{C}$ 쪽으로 가면 $a$ 이상 $20 t$ 미만의 값을 한 번씩 갖는다. 따라서 점이 하나뿐인 경우는 $\\overline{\\mathrm{AP}}=a$ 이거나 $13 t \\le \\overline{\\mathrm{AP}}<20 t$ 인 경우이고, $\\frac{21}{2}$ 이 아닌 $k$ 의 최솟값은 $\\frac{21}{2 a}\\times 13 t=\\frac{91}{8}$ 이다. 즉 $a=12 t$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 8,
+   "text": "$\\overline{\\mathrm{BH}}=\\sqrt{(13 t)^{2}-(12 t)^{2}}=5 t$ , $\\overline{\\mathrm{CH}}=\\sqrt{(20 t)^{2}-(12 t)^{2}}=16 t$ 이고 $\\mathrm{H}$ 가 두 점 사이에 있으므로 $21 t=21$ , $t=1$ 이다. 따라서 넓이는 $\\frac{1}{2}\\times 21 \\times 12=126$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}
