@@ -1,0 +1,178 @@
+{
+ "wrong": "예상 오답 — 속력 $4|1-2\\cos3\\theta|$의 절댓값을 빼고 적분해 길이를 $8\\pi$로 구한 경우",
+ "intro": [
+  "속도 $=4(1-2\\cos3\\theta)(-\\sin\\theta,\\cos\\theta)$ — 방향이 $\\theta$로 고르게 돎.",
+  "법선 $(\\cos\\theta,\\sin\\theta)$와의 내적 $4+\\cos3\\theta$ → 마주 보는 두 접선 사이 거리 $8$."
+ ],
+ "conds": {
+  "C2": {
+   "label": "곡선",
+   "why": "$x=4\\cos\\theta+2\\cos2\\theta-\\cos4\\theta$, $y=4\\sin\\theta-2\\sin2\\theta-\\sin4\\theta$.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
+  },
+  "C4": {
+   "label": "점",
+   "why": "$\\mathrm P(\\theta)$.",
+   "uses": [
+    4
+   ]
+  },
+  "C5": {
+   "label": "길이",
+   "why": "$a\\pi+b\\sqrt3$.",
+   "uses": [
+    5,
+    6,
+    7
+   ]
+  },
+  "C6": {
+   "label": "평행 접선",
+   "why": "$\\mathrm P(\\theta)$, $\\mathrm P(\\theta+\\pi)$의 접선 사이 거리 $d(\\theta)$.",
+   "uses": [
+    8,
+    9,
+    10
+   ]
+  },
+  "C7": {
+   "label": "묻는 것",
+   "why": "$3a+b+d\\left(\\frac\\pi4\\right)$.",
+   "uses": [
+    11
+   ]
+  },
+  "C8": {
+   "label": "유리수",
+   "why": "$a$, $b$ 유리수.",
+   "uses": [
+    11
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "곱→합",
+   "p": [
+    "$\\sin4\\theta-\\sin2\\theta=2\\cos3\\theta\\sin\\theta$."
+   ]
+  },
+  {
+   "h": "지지함수",
+   "p": [
+    "접선 $x\\cos\\theta+y\\sin\\theta=h(\\theta)$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 성분을 덧셈정리로 묶으면 속도가 (−sinθ, cosθ)의 4(1−2cos3θ)배여서 접선의 방향이 θ로 고르게 돌고, 이 계수가 부호를 바꾸는 6개의 첨점에서 절댓값을 나누어 길이를 구하며, 법선 방향의 내적 4+cos3θ로 마주 보는 두 접선 사이 거리가 일정(폭이 일정한 곡선)함을 찾는 것",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "미분",
+   "text": "$\\frac{dx}{d \\theta}=-4 \\sin \\theta+4(\\sin 4 \\theta-\\sin 2 \\theta)$ , $\\frac{dy}{d \\theta}=4 \\cos \\theta-4(\\cos 2 \\theta+\\cos 4 \\theta)$ 이다. 덧셈정리로 $\\sin(3 \\theta+\\theta)-\\sin(3 \\theta-\\theta)=2 \\cos 3 \\theta \\sin \\theta$ , $\\cos(3 \\theta-\\theta)+\\cos(3 \\theta+\\theta)=2 \\cos 3 \\theta \\cos \\theta$ 이므로",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "묶기",
+   "text": "$$\\frac{dx}{d \\theta}=-4(1-2 \\cos 3 \\theta)\\sin \\theta,\\,\\,\\,\\frac{dy}{d \\theta}=4(1-2 \\cos 3 \\theta)\\cos \\theta$$",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "방향",
+   "text": "[핵심 관문 1] 속도는 단위벡터 $(-\\sin \\theta,\\,\\cos \\theta)$ 의 $4(1-2 \\cos 3 \\theta)$ 배이다. 따라서 속력은 $4 \\left|1-2 \\cos 3 \\theta \\right|$ 이고, 속도가 영벡터가 아닌 점에서의 접선은 단위벡터 $(\\cos \\theta,\\,\\sin \\theta)$ 에 수직이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "첨점",
+   "text": "[핵심 관문 2] $1-2 \\cos 3 \\theta$ 는 $\\cos 3 \\theta=\\frac{1}{2}$ 인 $6$ 개의 $\\theta$ ( $\\theta=\\frac{\\pi}{9},\\,\\frac{5 \\pi}{9},\\,\\frac{7 \\pi}{9},\\,\\frac{11 \\pi}{9},\\,\\frac{13 \\pi}{9},\\,\\frac{17 \\pi}{9}$ )에서 부호가 바뀌고, 그때마다 점 $\\mathrm{P}$ 는 멈추었다가 반대 방향으로 움직인다. 절댓값을 벗기지 않고 적분하면 틀린다. $u=3 \\theta$ 로 치환하고 주기성을 쓰면",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "길이 식",
+   "text": "$$4 \\int_{0}^{2 \\pi}\\left|1-2 \\cos 3 \\theta \\right|d \\theta=\\frac{4}{3}\\int_{0}^{6 \\pi}\\left|1-2 \\cos u \\right|du=8 \\int_{0}^{\\pi}\\left|1-2 \\cos u \\right|du$$",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "길이",
+   "text": "이다. $\\int_{0}^{\\frac{\\pi}{3}}(2 \\cos u-1)du=\\sqrt{3}-\\frac{\\pi}{3}$ , $\\int_{\\frac{\\pi}{3}}^{\\pi}(1-2 \\cos u)du=\\frac{2 \\pi}{3}+\\sqrt{3}$ 이므로 곡선의 길이는 $8 \\left(\\frac{\\pi}{3}+2 \\sqrt{3}\\right)=\\frac{8}{3}\\pi+16 \\sqrt{3}$ 이다. 즉 $a=\\frac{8}{3}$ , $b=16$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "법선",
+   "text": "단위벡터 $\\vec{n}=(\\cos \\theta,\\,\\sin \\theta)$ 에 대하여 $\\mathrm{P}(\\theta)$ 의 위치벡터와 $\\vec{n}$ 의 내적은 덧셈정리로",
+   "uses": [
+    "C6"
+   ]
+  },
+  {
+   "title": "내적",
+   "text": "$$x \\cos \\theta+y \\sin \\theta=4+2 \\cos 3 \\theta-\\cos 3 \\theta=4+\\cos 3 \\theta$$",
+   "uses": [
+    "C6"
+   ]
+  },
+  {
+   "title": "거리",
+   "text": "이다. 따라서 $\\mathrm{P}(\\theta)$ 에서의 접선은 $x \\cos \\theta+y \\sin \\theta=4+\\cos 3 \\theta$ 이고, $\\mathrm{P}(\\theta+\\pi)$ 에서의 접선은 법선 방향이 $-\\vec{n}$ 이므로 $-x \\cos \\theta-y \\sin \\theta=4+\\cos(3 \\theta+3 \\pi)=4-\\cos 3 \\theta$ 이다. 두 직선은 평행하고 거리는 $d(\\theta)=(4+\\cos 3 \\theta)+(4-\\cos 3 \\theta)=8$ 로 $\\theta$ 에 관계없이 일정하다. $\\theta=\\frac{\\pi}{4}$ 에서는 $\\cos 3 \\theta=-\\frac{\\sqrt{2}}{2}\\ne \\pm \\frac{1}{2}$ 이므로 두 접선이 모두 정의되고 $d \\left(\\frac{\\pi}{4}\\right)=8$ 이다.",
+   "uses": [
+    "C6"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $3 a+b+d \\left(\\frac{\\pi}{4}\\right)=8+16+8=32$ 이다.",
+   "uses": [
+    "C7",
+    "C8"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "절댓값",
+   "cond": "C5",
+   "text": [
+    "첨점 $6$개에서 부호가 바뀜."
+   ]
+  },
+  {
+   "h": "$d$ 일정",
+   "cond": "C6",
+   "text": [
+    "$(4+\\cos3\\theta)+(4-\\cos3\\theta)=8$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 일부 호의 길이",
+   "body": [
+    "(같은 곡선에서) $0\\le\\theta\\le\\frac\\pi3$에 대응하는 곡선 $C$의 길이가 $a\\pi+b\\sqrt3$일 때, $9a+3b$의 값을 구하시오. (단, $a$, $b$는 유리수이다.)"
+   ],
+   "answer": 12,
+   "hint": "$\\frac43\\left(\\frac\\pi3+2\\sqrt3\\right)$ → $a=\\frac49$, $b=\\frac83$."
+  }
+ ],
+ "line": "속도 = 스칼라 × 회전 단위벡터 → 첨점에서 절댓값 분리."
+}

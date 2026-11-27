@@ -1,0 +1,144 @@
+{
+ "wrong": "예상 오답 — 보이는 부분의 경계 원의 정사영(타원)만 넓이로 계산한 경우",
+ "intro": [
+  "보임 조건 $\\angle\\mathrm{OPA}\\ge\\frac\\pi2$ ⇔ $x+y+z\\ge3$.",
+  "정사영 = 활꼴($x+y\\ge3$) ∪ 기울어진 원판 조각의 정사영($x+y<3$)."
+ ],
+ "conds": {
+  "C1": {
+   "label": "구와 점",
+   "why": "$x^2+y^2+z^2=9$, $\\mathrm A(3,3,3)$.",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "보이는 부분 $T$",
+   "why": "선분 $\\mathrm{AP}$가 구와 $\\mathrm P$에서만 만남.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
+  },
+  "C3": {
+   "label": "묻는 것",
+   "why": "정사영 넓이 $(a+b\\sqrt3)\\pi+c$; $12(a+b)-c$.",
+   "uses": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  "C4": {
+   "label": "유리수",
+   "why": "$a,b,c$ 유리수.",
+   "uses": [
+    8
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "보이는 영역",
+   "p": [
+    "$\\overrightarrow{\\mathrm{OA}}\\cdot\\overrightarrow{\\mathrm{OP}}\\ge r^2$."
+   ]
+  },
+  {
+   "h": "정사영 넓이",
+   "p": [
+    "$S\\cos\\theta$, 삼수선의 정리."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 보이는 부분의 경계 원의 정사영(타원)만 구하면 틀리고, 위에서 볼 때 구의 가장자리 너머까지 보이므로 정사영이 '기울어진 원판의 xy평면 위쪽 조각의 정사영'과 '바닥 원의 활꼴'의 합집합이 됨을 찾는 것",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "조건",
+   "text": "$\\mathrm{O}$ 를 원점이라 하자. 직선 $\\mathrm{AP}$ 가 구와 만나는 두 점 중 $\\mathrm{A}$ 에 가까운 점이 $\\mathrm{P}$ 일 조건은 $\\angle \\mathrm{OPA}\\ge \\frac{\\pi}{2}$ , 즉 $\\overline{\\mathrm{OA}}^{2}\\ge \\overline{\\mathrm{OP}}^{2}+\\overline{\\mathrm{AP}}^{2}$ 이다(등호는 접할 때). $\\overline{\\mathrm{OA}}^{2}=27$ 이므로 $T$ 는 $\\overline{\\mathrm{AP}}^{2}\\le 18$ 인 구 위의 점 전체이다.",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "평면",
+   "text": "$\\mathrm{P}(x,\\,y,\\,z)$ 이면 $\\overline{\\mathrm{AP}}^{2}=(x^{2}+y^{2}+z^{2})-6(x+y+z)+27=36-6(x+y+z)$ 이므로 조건은 $x+y+z \\ge 3$ 이다. 등호인 점, 곧 $\\angle \\mathrm{OPA}=\\frac{\\pi}{2}$ 인 점 $\\mathrm{P}$ 에서 선분 $\\mathrm{OA}$ 에 내린 수선의 발을 $\\mathrm{H}$ 라 하면 $\\overline{\\mathrm{OH}}=\\frac{\\overline{\\mathrm{OP}}^{2}}{\\overline{\\mathrm{OA}}}=\\sqrt{3}$ 이므로 $\\mathrm{H}(1,\\,1,\\,1)$ , $\\overline{\\mathrm{HP}}=\\sqrt{9-3}=\\sqrt{6}$ 이다. 즉 $T$ 의 경계는 점 $\\mathrm{H}$ 를 지나고 직선 $\\mathrm{OA}$ 에 수직인 평면 $\\beta$ 위의 원(중심 $\\mathrm{H}$ , 반지름의 길이 $\\sqrt{6}$ )이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "정사영 조건",
+   "text": "핵심 관문: $x y$ 평면 위의 점 $\\mathrm{Q}(x,\\,y,\\,0)$ $(x^{2}+y^{2}\\le 9)$ 위에 있는 구 위의 점은 $(x,\\,y,\\,\\pm \\sqrt{9-x^{2}-y^{2}})$ 이고, $z$ 좌표가 클수록 $x+y+z$ 가 크므로 $\\mathrm{Q}$ 가 정사영에 속할 조건은 $x+y+\\sqrt{9-x^{2}-y^{2}}\\ge 3$ 이다. 경계 원의 정사영(타원)만 생각하면 안 되고, 다음 두 경우로 나뉜다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "활꼴",
+   "text": "(i) $x+y \\ge 3$ 이면 항상 성립한다. 원 $x^{2}+y^{2}=9$ 의 내부 중 직선 $x+y=3$ 의 위쪽 부분은 원점과 직선 사이의 거리가 $\\frac{3}{\\sqrt{2}}$ 이므로 중심각이 $\\frac{\\pi}{2}$ 인 활꼴이고, 넓이는 $\\frac{1}{2}\\times 9 \\times \\left(\\frac{\\pi}{2}-1 \\right)=\\frac{9}{4}\\pi-\\frac{9}{2}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "원판 조각",
+   "text": "(ii) $x+y<3$ 이면 $z=3-x-y>0$ 으로 놓을 때 조건은 $x^{2}+y^{2}+z^{2}\\le 9$ 이다. 점 $\\mathrm{R}(x,\\,y,\\,z)$ 에서 직선 $\\mathrm{OA}$ 에 내린 수선의 발을 $\\mathrm{F}$ 라 하면 피타고라스 정리에서 $\\overline{\\mathrm{OR}}^{2}-\\overline{\\mathrm{AR}}^{2}=\\overline{\\mathrm{OF}}^{2}-\\overline{\\mathrm{AF}}^{2}$ 이고, $x+y+z=3$ 이면 이 값이 $6(x+y+z)-27=-9=\\overline{\\mathrm{OH}}^{2}-\\overline{\\mathrm{AH}}^{2}$ 이므로 $\\mathrm{F}=\\mathrm{H}$ , 곧 $\\mathrm{R}$ 는 평면 $\\beta$ 위에 있다. 거꾸로 $\\beta$ 위의 점은 같은 계산으로 $x+y+z=3$ 을 만족시킨다. 또 $\\overline{\\mathrm{OR}}^{2}\\le 9$ 는 $\\overline{\\mathrm{HR}}^{2}=\\overline{\\mathrm{OR}}^{2}-3 \\le 6$ 과 같다. 따라서 이 부분은 $\\beta$ 위의 원판(중심 $\\mathrm{H}$ , 반지름 $\\sqrt{6}$ ) 중 $x y$ 평면의 위쪽 부분의 정사영이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "정사영 넓이",
+   "text": "$\\beta$ 와 $x y$ 평면의 교선 $l$ 은 $z=0,\\,x+y=3$ 인 직선이다. $\\mathrm{H}$ 의 $x y$ 평면 위로의 정사영 $\\mathrm{H'}(1,\\,1,\\,0)$ 에서 $l$ 에 내린 수선의 발은 $\\mathrm{M}\\left(\\frac{3}{2},\\,\\frac{3}{2},\\,0 \\right)$ 이고 삼수선의 정리에 의하여 직선 $\\mathrm{HM}$ 은 $l$ 과 수직이다. $\\overline{\\mathrm{H'M}}=\\frac{\\sqrt{2}}{2}$ , $\\overline{\\mathrm{HM}}=\\sqrt{\\frac{1}{2}+1}=\\frac{\\sqrt{6}}{2}$ 이므로 두 평면이 이루는 각 $\\theta$ 에 대하여 $\\cos \\theta=\\frac{\\overline{\\mathrm{H'M}}}{\\overline{\\mathrm{HM}}}=\\frac{1}{\\sqrt{3}}$ 이고, $\\mathrm{H}$ 와 $l$ 사이의 거리 $\\frac{\\sqrt{6}}{2}$ 는 반지름의 $\\frac{1}{2}$ 이다. 교선이 잘라 내는 활꼴은 중심각이 $\\frac{2 \\pi}{3}$ 이고 넓이가 $\\frac{1}{2}\\times 6 \\times \\left(\\frac{2 \\pi}{3}-\\frac{\\sqrt{3}}{2}\\right)=2 \\pi-\\frac{3 \\sqrt{3}}{2}$ 이므로, 위쪽 부분의 넓이는 $6 \\pi-\\left(2 \\pi-\\frac{3 \\sqrt{3}}{2}\\right)=4 \\pi+\\frac{3 \\sqrt{3}}{2}$ 이다. 정사영의 넓이는 $\\left(4 \\pi+\\frac{3 \\sqrt{3}}{2}\\right)\\times \\frac{1}{\\sqrt{3}}=\\frac{4 \\sqrt{3}}{3}\\pi+\\frac{3}{2}$ 이다.",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "(i), (ii)의 두 부분은 직선 $x+y=3$ 의 양쪽에 있으므로 구하는 넓이는 $\\frac{9}{4}\\pi-\\frac{9}{2}+\\frac{4 \\sqrt{3}}{3}\\pi+\\frac{3}{2}=\\left(\\frac{9}{4}+\\frac{4}{3}\\sqrt{3}\\right)\\pi-3$ 이다. $a=\\frac{9}{4}$ , $b=\\frac{4}{3}$ , $c=-3$ 이므로 $12(a+b)-c=27+16+3=46$ 이다.",
+   "uses": [
+    "C3",
+    "C4"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "가장자리 너머",
+   "cond": "C2",
+   "text": [
+    "위에서 보면 적도 아래까지 보여 바닥 원 일부가 포함."
+   ]
+  },
+  {
+   "h": "$z$ 최대",
+   "cond": "C3",
+   "text": [
+    "같은 $(x,y)$에서 위쪽 점이 더 잘 보임."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\mathrm A(0,3,3)$",
+   "body": [
+    "좌표공간에서 구 $S:\\,x^2+y^2+z^2=9$와 점 $\\mathrm A(0,\\,3,\\,3)$이 있다. 구 $S$ 위의 점 $\\mathrm P$ 중에서 선분 $\\mathrm{AP}$와 구 $S$가 만나는 점이 $\\mathrm P$뿐인 점 전체의 집합을 $T$라 하자. $T$의 $xy$평면 위로의 정사영의 넓이가 $k\\pi$일 때, $8k^2$의 값을 구하시오."
+   ],
+   "answer": 81,
+   "hint": "조건 $y+z\\ge3$ → 타원 $x^2+2\\left(y-\\frac32\\right)^2\\le\\frac92$, $k=\\frac{9\\sqrt2}4$."
+  }
+ ],
+ "line": "보이는 구면 = 내적 조건 → 정사영은 경계 너머까지."
+}

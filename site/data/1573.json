@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $r$, $s$, $u$를 각각 $\\theta^2$ 근사로 바꿔 극한을 $0$으로 답한 경우",
  "answer": 257,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -47,9 +47,11 @@
     0
    ],
    "text": "좌표평면에서 원점 $\\mathrm{O}$ 를 중심으로 하고 반지름의 길이가 $1$ 인 원 위에 두 점 $\\mathrm{A}(1,\\,0)$ , $\\mathrm{P}(\\cos \\theta,\\,\\sin \\theta)$ $\\left(0<\\theta<\\frac{\\pi}{2}\\right)$ 가 있다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "원과 두 점",
+   "why": "단위원, $\\mathrm A(1,0)$, $\\mathrm P(\\cos\\theta,\\sin\\theta)$.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C2",
@@ -58,9 +60,11 @@
     1
    ],
    "text": "두 점 $\\mathrm{A}$ , $\\mathrm{P}$ 에서 이 원에 그은 두 접선이 만나는 점을 $\\mathrm{T}$ 라 하고, 중심각의 크기가 $\\theta$ 인 호를 호 $\\mathrm{AP}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "접선",
+   "why": "교점 $\\mathrm T$, 호 $\\mathrm{AP}$.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C3",
@@ -80,9 +84,11 @@
     0
    ],
    "text": "$r(\\theta)$ : 삼각형 $\\mathrm{TAP}$ 에 내접하는 원",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "$r$",
+   "why": "삼각형 $\\mathrm{TAP}$의 내접원.",
+   "uses": [
+    3
+   ]
   },
   {
    "id": "C5",
@@ -91,9 +97,12 @@
     1
    ],
    "text": "$s(\\theta)$ : 삼각형 $\\mathrm{TAP}$ 의 내부에 있고 두 선분 $\\mathrm{TA}$ , $\\mathrm{TP}$ 와 호 $\\mathrm{AP}$ 에 모두 접하는 원",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "$s$",
+   "why": "두 접선과 호에 접하는 원.",
+   "uses": [
+    5,
+    6
+   ]
   },
   {
    "id": "C6",
@@ -102,9 +111,11 @@
     2
    ],
    "text": "$u(\\theta)$ : 선분 $\\mathrm{AP}$ 와 호 $\\mathrm{AP}$ 로 둘러싸인 부분에 들어 있는 원 중 반지름의 길이가 최대인 원",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "$u$",
+   "why": "활꼴 안 최대 원.",
+   "uses": [
+    4
+   ]
   },
   {
    "id": "C7",
@@ -113,9 +124,14 @@
     0
    ],
    "text": "$\\lim_{\\theta \\to 0+}\\frac{s(\\theta)+u(\\theta)-r(\\theta)}{\\theta^{4}}=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\lim\\frac{s+u-r}{\\theta^4}=\\frac qp$.",
+   "uses": [
+    1,
+    7,
+    8,
+    9
+   ]
   },
   {
    "id": "C8",
@@ -124,72 +140,134 @@
     1
    ],
    "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "서로소",
+   "why": "기약분수.",
+   "uses": [
+    9
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "내심이 호의 중점 → $r=2u$ (정확히), 따라서 $s+u-r=s-u$.",
+  "$s=\\tan^2\\frac\\theta4$, $u=\\sin^2\\frac\\theta4$ → $s-u=\\frac{\\sin^4v}{\\cos^2v}$."
+ ],
  "topic": "원의 두 접선과 호 사이에 끼인 세 원 — 1차 근사가 모두 상쇄되는 반지름의 정확한 표현",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "접선과 현의 각",
+   "p": [
+    "$\\angle\\mathrm{TAP}=\\frac\\theta2$."
+   ]
+  },
+  {
+   "h": "반각 공식",
+   "p": [
+    "$\\frac{1-c}{1+c}=\\tan^2\\frac\\theta4$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 세 반지름 r, s, u 를 θ⁴ 으로 각각 나눈 극한은 모두 발산하므로, 내심이 호의 중점이라는 각의 관계로 r=2u 를 정확히 얻고 바깥 원을 s=tan²(θ/4) 로 구해 s−u=sin⁴v/cos²v 로 묶는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C7"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "$c=\\cos \\frac{\\theta}{2}$ 라 하자. 두 접선은 직선 $\\mathrm{OT}$ 에 대하여 대칭이고 $\\angle \\mathrm{AOT}=\\frac{\\theta}{2}$ 이다. 직선 $\\mathrm{OT}$ 와 호 $\\mathrm{AP}$ 가 만나는 점을 $\\mathrm{M}$ , 선분 $\\mathrm{AP}$ 의 중점을 $\\mathrm{N}$ 라 하면 $\\overline{\\mathrm{ON}}=c$ , $\\overline{\\mathrm{MN}}=1-c$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "설정"
   },
   {
    "n": 3,
    "text": "[ $r$ : 내심은 호의 중점] 접선과 현이 이루는 각에 의하여 $\\angle \\mathrm{TAP}=\\frac{\\theta}{2}$ 이고, 이등변삼각형 $\\mathrm{OAM}$ 에서 $\\angle \\mathrm{OAM}=\\frac{\\pi}{2}-\\frac{\\theta}{4}$ 이므로 $\\angle \\mathrm{TAM}=\\frac{\\theta}{4}$ 이다. 즉 $\\mathrm{AM}$ 는 $\\angle \\mathrm{TAP}$ 를 이등분하고 $\\mathrm{M}$ 는 $\\angle \\mathrm{ATP}$ 의 이등분선 $\\mathrm{OT}$ 위에 있으므로 $\\mathrm{M}$ 가 내심이다. 따라서 $r(\\theta)=\\overline{\\mathrm{MN}}=1-c$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$r$"
   },
   {
    "n": 4,
    "text": "[ $u$ : 활꼴의 높이] 활꼴 안의 원은 직선 $\\mathrm{OT}$ 방향의 폭 $\\overline{\\mathrm{MN}}=1-c$ 보다 지름이 클 수 없고, 선분 $\\mathrm{MN}$ 을 지름으로 하는 원은 점 $\\mathrm{M}$ 에서 큰 원에 안쪽으로 접하고 선분 $\\mathrm{AP}$ 에 접하므로 활꼴 안에 있다. 따라서 $u(\\theta)=\\frac{1-c}{2}$ 이다. 곧 $r=2 u$ 가 정확히 성립한다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C6"
+   ],
+   "title": "$u$"
   },
   {
    "n": 5,
    "text": "[ $s$ : 바깥에서 접하는 원] 두 선분 $\\mathrm{TA}$ , $\\mathrm{TP}$ 에 접하는 원의 중심 $\\mathrm{K}$ 는 직선 $\\mathrm{OT}$ 위에 있고, 큰 원에 바깥에서 접하므로 $\\overline{\\mathrm{OK}}=1+s$ 이다. $\\mathrm{K}((1+s)c,\\,(1+s)\\sin \\frac{\\theta}{2})$ 와 직선 $x=1$ 사이의 거리가 $s$ 이므로 $1-(1+s)c=s$ , 곧",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "$s$"
   },
   {
    "n": 6,
    "text": "$$s(\\theta)=\\frac{1-c}{1+c}=\\tan^{2}\\frac{\\theta}{4}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "$s$ 식"
   },
   {
    "n": 7,
    "text": "[주요 항의 상쇄] $s+u-r=s-u$ 이고 $\\frac{s}{\\theta^{2}}$ , $\\frac{u}{\\theta^{2}}$ 는 모두 $\\frac{1}{16}$ 로 수렴하므로, $s$ , $u$ 를 따로 $\\theta^{4}$ 으로 나눈 극한은 각각 발산한다. 따라서 차를 정확한 식으로 묶어야 한다. $v=\\frac{\\theta}{4}$ 라 하면 $u=\\frac{1-c}{2}=\\sin^{2}v$ 이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C7"
+   ],
+   "title": "상쇄"
   },
   {
    "n": 8,
    "text": "$$s+u-r=\\tan^{2}v-\\sin^{2}v=\\sin^{2}v \\left(\\frac{1}{\\cos^{2}v}-1 \\right)=\\frac{\\sin^{4}v}{\\cos^{2}v}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C7"
+   ],
+   "title": "정리"
   },
   {
    "n": 9,
    "text": "이다. 따라서 $\\lim_{\\theta \\to 0+}\\frac{s+u-r}{\\theta^{4}}=\\lim_{v \\to 0+}\\frac{1}{256}\\left(\\frac{\\sin v}{v}\\right)^{4}\\frac{1}{\\cos^{2}v}=\\frac{1}{256}$ 이고, $p+q=257$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C7",
+    "C8"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "주요 항 상쇄",
+   "cond": "C7",
+   "text": [
+    "$s$, $u$ 모두 $\\frac{\\theta^2}{16}$ — 차를 정확한 식으로."
+   ]
+  },
+  {
+   "h": "$r=2u$",
+   "cond": "C4",
+   "text": [
+    "근사가 아닌 항등식."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $2s-r$",
+   "body": [
+    "(같은 $r$, $s$, $u$에 대하여) $\\lim_{\\theta\\to0+}\\frac{2s(\\theta)-r(\\theta)}{\\theta^4}=\\frac qp$일 때, $p+q$의 값을 구하시오. (단, $p$와 $q$는 서로소인 자연수이다.)"
+   ],
+   "answer": 129,
+   "hint": "$2s-r=2(s-u)$ → $\\frac1{128}$."
+  }
+ ],
+ "line": "근사가 상쇄되면 정확한 식으로 묶는다.",
  "note": ""
 }

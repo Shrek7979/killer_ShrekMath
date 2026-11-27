@@ -13,9 +13,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 30번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 곡선 아래 넓이를 부채꼴의 합만으로 계산해 삼각형 조각을 빠뜨린 경우",
  "answer": 30,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -42,9 +42,11 @@
     0
    ],
    "text": "좌표평면에서 외접원의 반지름의 길이가 $2$ 인 정 $n$ 각형 ( $n \\ge 3$ )이 한 변이 $x$ 축 위에 놓이고 나머지 부분은 $x$ 축의 위쪽에 있도록 놓여 있다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "도형",
+   "why": "외접원 반지름 $2$인 정$n$각형.",
+   "uses": [
+    3
+   ]
   },
   {
    "id": "C2",
@@ -53,9 +55,11 @@
     1
    ],
    "text": "$x$ 축 위에 놓인 변의 왼쪽 끝 꼭짓점을 $\\mathrm{P}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "점",
+   "why": "바닥 변의 왼쪽 꼭짓점 $\\mathrm P$.",
+   "uses": [
+    3
+   ]
   },
   {
    "id": "C3",
@@ -64,9 +68,11 @@
     2
    ],
    "text": "이 정 $n$ 각형을 $x$ 축 위에서 미끄러지지 않게 오른쪽으로 굴려(오른쪽 끝 꼭짓점을 중심으로 돌려 다음 변이 $x$ 축 위에 놓이게 하는 것을 반복하여), 점 $\\mathrm{P}$ 가 처음으로 다시 $x$ 축 위에 올 때까지 움직인다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "굴리기",
+   "why": "$\\mathrm P$가 다시 $x$축에 올 때까지.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C4",
@@ -75,9 +81,14 @@
     0
    ],
    "text": "이 동안 점 $\\mathrm{P}$ 가 그리는 곡선의 길이를 $L_{n}$ , 이 곡선과 $x$ 축으로 둘러싸인 부분의 넓이를 $S_{n}$ 이라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "$L_n$, $S_n$",
+   "why": "곡선의 길이와 넓이.",
+   "uses": [
+    1,
+    4,
+    6,
+    7
+   ]
   },
   {
    "id": "C5",
@@ -86,9 +97,13 @@
     1
    ],
    "text": "$\\lim_{n \\to \\infty}L_{n}=\\alpha$ 이고 $S_{6}=p \\pi+q \\sqrt{3}$ 일 때, $\\alpha+p+q$ 의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$\\lim L_n=\\alpha$, $S_6=p\\pi+q\\sqrt3$; $\\alpha+p+q$.",
+   "uses": [
+    5,
+    8,
+    9
+   ]
   },
   {
    "id": "C6",
@@ -97,72 +112,134 @@
     2
    ],
    "text": "(단, $p$ , $q$ 는 유리수이다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "유리수",
+   "why": "$p$, $q$ 유리수.",
+   "uses": [
+    9
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "$\\mathrm P$의 경로 = 받침점마다 중심각 $\\frac{2\\pi}n$, 반지름 $4\\sin\\frac{k\\pi}n$인 호 $n-1$개.",
+  "넓이 = 부채꼴 합($8\\pi$, $n$에 무관) + 다각형을 $\\mathrm P$에서 나눈 삼각형 조각들."
+ ],
  "topic": "직선 위를 구르는 정n각형의 꼭짓점이 그리는 곡선 — n에 무관한 부채꼴 넓이의 합과 길이의 극한",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "정적분과 급수",
+   "p": [
+    "$\\sum\\frac\\pi n\\sin\\frac{k\\pi}n\\to\\int_0^\\pi\\sin x\\,dx$."
+   ]
+  },
+  {
+   "h": "코사인 합",
+   "p": [
+    "$\\sum_{k=0}^{n-1}\\cos\\frac{2k\\pi}n=0$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 꼭짓점의 경로를 받침점마다의 호 n−1개로 보아 길이의 극한을 정적분과 급수의 관계로 구하고, 곡선 아래 넓이를 부채꼴들과 '정n각형을 P에서 나눈 삼각형 조각들'로 분해한 뒤 Σcos(2kπ/n)=−1 때문에 부채꼴 넓이의 합이 n에 무관하게 8π임을 찾는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "정 $n$ 각형의 꼭짓점을 $\\mathrm{P}$ 에서 시작하여 오른쪽으로 차례로 $\\mathrm{V}_{0}=\\mathrm{P}$ , $\\mathrm{V}_{1}$ , $\\cdots$ , $\\mathrm{V}_{n-1}$ 이라 하자. 한 번 구를 때마다 도형은 $x$ 축 위의 오른쪽 꼭짓점을 중심으로 외각 $\\frac{2 \\pi}{n}$ 만큼 돌아간다. 중심이 되는 꼭짓점은 $\\mathrm{V}_{1}$ , $\\mathrm{V}_{2}$ , $\\cdots$ 의 차례이고, $\\mathrm{V}_{n-1}$ 을 중심으로 돈 직후 $\\mathrm{P}$ 가 처음으로 $x$ 축 위에 온다. 따라서 $\\mathrm{P}$ 는 $n-1$ 개의 호를 그리며, $k$ 번째 호는 중심이 $x$ 축 위의 점 $\\mathrm{Q}_{k}$ (그때의 $\\mathrm{V}_{k}$ ), 반지름이 $\\overline{\\mathrm{PV}_{k}}$ , 중심각이 $\\frac{2 \\pi}{n}$ 인 호이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "회전"
   },
   {
    "n": 3,
    "text": "두 꼭짓점 $\\mathrm{P}$ , $\\mathrm{V}_{k}$ 는 외접원 위에서 중심각 $\\frac{2 k \\pi}{n}$ 을 이루므로 $\\overline{\\mathrm{PV}_{k}}=4 \\sin \\frac{k \\pi}{n}$ 이다. 따라서 길이는 호의 길이의 합으로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2"
+   ],
+   "title": "반지름"
   },
   {
    "n": 4,
    "text": "$$L_{n}=\\sum_{k=1}^{n-1}\\frac{2 \\pi}{n}\\times 4 \\sin \\frac{k \\pi}{n}=8 \\sum_{k=1}^{n}\\frac{\\pi}{n}\\sin \\frac{k \\pi}{n}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$L_n$"
   },
   {
    "n": 5,
    "text": "이다( $k=n$ 인 항은 $0$ ). 이는 함수 $\\sin x$ 의 구간 $[0,\\,\\pi]$ 에서의 정적분의 급수 꼴이므로 정적분과 급수의 관계에 의하여 $\\alpha=\\lim_{n \\to \\infty}L_{n}=8 \\int_{0}^{\\pi}\\sin x dx=16$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "극한"
   },
   {
    "n": 6,
    "text": "[넓이의 분해] $k$ 번째 호의 처음 위치를 $\\mathrm{P}_{k-1}$ , 나중 위치를 $\\mathrm{P}_{k}$ 라 하면, 곡선과 $x$ 축으로 둘러싸인 부분은 부채꼴 $\\mathrm{Q}{}_{k}\\mathrm{P}{}_{k-1}\\mathrm{P}_{k}$ ( $k=1,\\,2,\\,\\cdots,\\,n-1$ )와, 이웃한 두 부채꼴 사이의 삼각형 $\\mathrm{P}_{k}\\mathrm{Q}_{k}\\mathrm{Q}_{k+1}$ ( $k=1,\\,\\cdots,\\,n-2$ )으로 겹치지 않게 나뉜다. 삼각형 $\\mathrm{P}_{k}\\mathrm{Q}_{k}\\mathrm{Q}_{k+1}$ 은 처음 도형의 삼각형 $\\mathrm{PV}_{k}\\mathrm{V}_{k+1}$ 과 합동이고, 이 삼각형들은 정 $n$ 각형을 $\\mathrm{P}$ 에서 그은 대각선으로 나눈 조각들이므로 그 넓이의 합은 정 $n$ 각형의 넓이 $n \\times \\frac{1}{2}\\times 2^{2}\\sin \\frac{2 \\pi}{n}=2 n \\sin \\frac{2 \\pi}{n}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "넓이 분해"
   },
   {
    "n": 7,
    "text": "[n에 무관한 부채꼴의 합] 부채꼴들의 넓이의 합은 $\\frac{1}{2}\\times \\frac{2 \\pi}{n}\\sum_{k=1}^{n-1}16 \\sin^{2}\\frac{k \\pi}{n}=\\frac{8 \\pi}{n}\\sum_{k=1}^{n-1}\\left(1-\\cos \\frac{2 k \\pi}{n}\\right)$ 이다. $2 \\sin \\frac{\\pi}{n}\\cos \\frac{2 k \\pi}{n}=\\sin \\frac{(2 k+1)\\pi}{n}-\\sin \\frac{(2 k-1)\\pi}{n}$ 을 더하면 $\\sum_{k=1}^{n-1}\\cos \\frac{2 k \\pi}{n}=\\frac{\\sin \\frac{(2 n-1)\\pi}{n}-\\sin \\frac{\\pi}{n}}{2 \\sin \\frac{\\pi}{n}}=-1$ 이므로, 부채꼴들의 넓이의 합은 $\\frac{8 \\pi}{n}\\times n=8 \\pi$ 로 $n$ 에 관계없이 일정하다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "부채꼴 합"
   },
   {
    "n": 8,
    "text": "따라서 $S_{n}=8 \\pi+2 n \\sin \\frac{2 \\pi}{n}$ 이고 $S_{6}=8 \\pi+12 \\times \\frac{\\sqrt{3}}{2}=8 \\pi+6 \\sqrt{3}$ 이다. $p$ , $q$ 가 유리수이므로 $p=8$ , $q=6$ 이다. (참고로 $\\lim_{n \\to \\infty}S_{n}=12 \\pi$ 이다.)",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "$S_n$"
   },
   {
    "n": 9,
    "text": "그러므로 $\\alpha+p+q=16+8+6=30$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5",
+    "C6"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "삼각형 조각",
+   "cond": "C4",
+   "text": [
+    "부채꼴 사이마다 다각형 조각이 끼어 있음."
+   ]
+  },
+  {
+   "h": "$k=n$",
+   "cond": "C4",
+   "text": [
+    "$\\sin\\pi=0$ — 급수 꼴로 맞추는 항."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $S_4$",
+   "body": [
+    "(같은 조건에서) $\\lim_{n\\to\\infty}L_n=\\alpha$이고 $S_4=p\\pi+q$일 때, $\\alpha+p+q$의 값을 구하시오. (단, $p$, $q$는 유리수이다.)"
+   ],
+   "answer": 32,
+   "hint": "$S_4=8\\pi+8\\sin\\frac\\pi2=8\\pi+8$."
+  }
+ ],
+ "line": "구르는 다각형 = 호의 합 + 부채꼴·조각 분해.",
  "note": ""
 }

@@ -12,9 +12,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 30번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 두 원을 모두 품는 원(쌍곡선의 왼쪽 가지)을 빠뜨리거나 꼭짓점에서 원을 $2$개로 센 경우",
  "answer": 40,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -54,9 +54,13 @@
     0
    ],
    "text": "$C_{1}:\\,(x+3)^{2}+y^{2}=49,\\,\\,\\,C_{2}:\\,(x-3)^{2}+y^{2}=9$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "두 원",
+   "why": "$C_1$: 중심 $(-3,0)$, 반지름 $7$; $C_2$: 중심 $(3,0)$, 반지름 $3$.",
+   "uses": [
+    2,
+    4,
+    5
+   ]
   },
   {
    "id": "C3",
@@ -76,9 +80,14 @@
     1
    ],
    "text": "두 원 $C_{1}$ , $C_{2}$ 에 모두 접하는 원 $C$ 중에서 반지름의 길이가 $10$ 이하이고 중심의 $x$ 좌표가 정수인 원 $C$ 의 개수를 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "두 원에 모두 접하고 $\\rho\\le10$, 중심 $x$좌표 정수인 원의 개수.",
+   "uses": [
+    1,
+    6,
+    7,
+    8
+   ]
   },
   {
    "id": "C5",
@@ -87,66 +96,126 @@
     2
    ],
    "text": "(단, 두 원이 접한다는 것은 두 원이 한 점에서만 만나는 것이고, 외접하는 경우와 내접하는 경우를 모두 포함한다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "접함",
+   "why": "외접·내접 모두 포함.",
+   "uses": [
+    2,
+    3
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "접하는 방식별로 $\\overline{\\mathrm{XF_1}}\\pm\\overline{\\mathrm{XF_2}}$가 상수 → 타원 $E$ 또는 쌍곡선 $H$.",
+  "초점까지 거리가 $x$의 일차식 → $\\rho\\le10$을 $x$의 범위로."
+ ],
  "topic": "두 원에 모두 접하는 원의 중심 — 타원과 쌍곡선의 두 가지",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "이차곡선의 정의",
+   "p": [
+    "거리의 합·차 일정."
+   ]
+  },
+  {
+   "h": "초점 거리 공식",
+   "p": [
+    "$\\overline{\\mathrm{XF}_1}^2-\\overline{\\mathrm{XF}_2}^2=12x$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 접하는 방식 여섯 가지 중 가능한 다섯 가지를 거리의 합·차로 바꾸어 중심이 타원과 쌍곡선의 두 가지 모두에 놓임을 찾고(두 원을 품는 원이 숨은 왼쪽 가지), 초점까지의 거리를 x의 일차식으로 써서 반지름 조건을 x의 범위로 바꾸어 세는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "$\\mathrm{F}_{1}(-3,\\,0)$ , $\\mathrm{F}_{2}(3,\\,0)$ 이라 하면 $\\overline{\\mathrm{F}_{1}\\mathrm{F}_{2}}=6$ 이고 $7-3<6<7+3$ 이므로 두 원은 두 점에서 만난다. 원 $C$ 의 중심을 $\\mathrm{X}$ , 반지름을 $\\rho$ 라 하면 $C$ 가 $C_{1}$ 에 외접하면 $\\overline{\\mathrm{XF}_{1}}=\\rho+7$ , 내접하면 $\\overline{\\mathrm{XF}_{1}}=\\left|\\rho-7 \\right|$ 이고, $C_{2}$ 에 대해서도 $7$ 대신 $3$ 으로 같다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2",
+    "C5"
+   ],
+   "title": "위치 관계"
   },
   {
    "n": 3,
    "text": "[경우 나누기] (ⅰ) 둘 다 외접: $\\overline{\\mathrm{XF}_{1}}-\\overline{\\mathrm{XF}_{2}}=4$ . (ⅱ) $C$ 가 두 원을 모두 품고 내접: $\\overline{\\mathrm{XF}_{1}}=\\rho-7$ , $\\overline{\\mathrm{XF}_{2}}=\\rho-3$ 이므로 $\\overline{\\mathrm{XF}_{2}}-\\overline{\\mathrm{XF}_{1}}=4$ . (ⅲ) $C$ 가 두 원 안에 모두 내접: $\\overline{\\mathrm{XF}_{1}}=7-\\rho$ , $\\overline{\\mathrm{XF}_{2}}=3-\\rho$ 이므로 $\\overline{\\mathrm{XF}_{1}}-\\overline{\\mathrm{XF}_{2}}=4$ . (ⅳ) $C_{1}$ 안에 내접하고 $C_{2}$ 에 외접, (ⅴ) $C_{2}$ 안에 내접하고 $C_{1}$ 에 외접: 모두 $\\overline{\\mathrm{XF}_{1}}+\\overline{\\mathrm{XF}_{2}}=10$ . 나머지 경우는 두 거리의 합이 $4$ 이하이거나 차가 $10$ 이 되어 $\\overline{\\mathrm{F}_{1}\\mathrm{F}_{2}}=6$ 과 삼각형의 성질에 모순이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "경우"
   },
   {
    "n": 4,
    "text": "따라서 중심은 타원 $E$ : $\\overline{\\mathrm{XF}_{1}}+\\overline{\\mathrm{XF}_{2}}=10$ , 곧 $\\frac{x^{2}}{25}+\\frac{y^{2}}{16}=1$ 위에 있거나 쌍곡선 $H$ : $\\left|\\overline{\\mathrm{XF}_{1}}-\\overline{\\mathrm{XF}_{2}}\\right|=4$ , 곧 $\\frac{x^{2}}{4}-\\frac{y^{2}}{5}=1$ 위에 있다. 거꾸로, $E$ 위의 점은 $\\overline{\\mathrm{XF}_{1}}<7$ 이면 (ⅳ)( $\\rho=7-\\overline{\\mathrm{XF}_{1}}$ ), $\\overline{\\mathrm{XF}_{1}}>7$ 이면 (ⅴ)( $\\rho=3-\\overline{\\mathrm{XF}_{2}}$ )의 중심이 되고, $H$ 의 오른쪽 가지 위의 점은 $\\overline{\\mathrm{XF}_{1}}<7$ 이면 (ⅲ), $\\overline{\\mathrm{XF}_{1}}>7$ 이면 (ⅰ)의 중심이 되며, [숨은 가지] 왼쪽 가지 위의 점은 언제나 (ⅱ)( $\\rho=\\overline{\\mathrm{XF}_{1}}+7$ )의 중심이 된다. $\\overline{\\mathrm{XF}_{1}}=7$ 인 점은 두 원의 교점이라 $\\rho=0$ 이 되어 제외된다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "곡선"
   },
   {
    "n": 5,
    "text": "[초점까지의 거리] $\\overline{\\mathrm{XF}_{1}}^{2}-\\overline{\\mathrm{XF}_{2}}^{2}=(x+3)^{2}-(x-3)^{2}=12 x$ 이다. $E$ 위에서는 $\\overline{\\mathrm{XF}_{1}}+\\overline{\\mathrm{XF}_{2}}=10$ 이므로 $\\overline{\\mathrm{XF}_{1}}-\\overline{\\mathrm{XF}_{2}}=\\frac{6 x}{5}$ , $\\overline{\\mathrm{XF}_{1}}=5+\\frac{3 x}{5}$ 이고 $\\rho=\\left|2-\\frac{3 x}{5}\\right|$ 이다. $H$ 의 오른쪽 가지( $x \\ge 2$ )에서는 $\\overline{\\mathrm{XF}_{1}}=2+\\frac{3 x}{2}$ , $\\rho=\\left|\\frac{3 x}{2}-5 \\right|$ 이고, 왼쪽 가지( $x \\le-2$ )에서는 $\\overline{\\mathrm{XF}_{1}}=-2-\\frac{3 x}{2}$ , $\\rho=5-\\frac{3 x}{2}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "거리"
   },
   {
    "n": 6,
    "text": "$E$ : $-5 \\le x \\le 5$ 에서 $\\rho \\le 5$ 이고 $\\rho=0$ 인 $x=\\frac{10}{3}$ 은 정수가 아니다. 정수 $x$ 는 $11$ 개이고 $x=\\pm 5$ 에서는 점이 하나, 나머지에서는 $x$ 축 대칭인 점이 두 개이므로 $2+9 \\times 2=20$ 개이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "타원"
   },
   {
    "n": 7,
    "text": "$H$ 의 오른쪽 가지: $\\rho \\le 10$ 은 $x \\le 10$ 과 같으므로 $x=2$ (꼭짓점, $1$ 개)와 $x=3,\\,4,\\,\\cdots,\\,10$ (각 $2$ 개)에서 $1+8 \\times 2=17$ 개이다. 왼쪽 가지: $\\rho \\le 10$ 은 $x \\ge-\\frac{10}{3}$ 과 같으므로 $x=-2$ ( $1$ 개), $x=-3$ ( $2$ 개)에서 $3$ 개이다. 서로 다른 경우의 원은 반지름이나 중심이 달라 겹치지 않는다(중심이 같은 점 $x=-\\frac{10}{3}$ 에서도 반지름이 $4$ 와 $10$ 으로 다르다).",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "쌍곡선"
   },
   {
    "n": 8,
    "text": "따라서 구하는 원의 개수는 $20+17+3=40$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "숨은 가지",
+   "cond": "C5",
+   "text": [
+    "$C$가 두 원을 품으면 $\\overline{\\mathrm{XF}_2}-\\overline{\\mathrm{XF}_1}=4$."
+   ]
+  },
+  {
+   "h": "꼭짓점",
+   "cond": "C4",
+   "text": [
+    "$y=0$이면 원 하나."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\rho\\le6$",
+   "body": [
+    "(같은 두 원 $C_1$, $C_2$에 대하여) 두 원에 모두 접하는 원 $C$ 중에서 반지름의 길이가 $6$ 이하이고 중심의 $x$좌표가 정수인 원 $C$의 개수를 구하시오. (단, 외접과 내접을 모두 포함한다.)"
+   ],
+   "answer": 31,
+   "hint": "타원 $20$ + 쌍곡선 쪽에서 $x$ 범위가 줄어듦."
+  }
+ ],
+ "line": "두 원에 접하는 원 = 타원 + 쌍곡선 두 가지.",
  "note": ""
 }

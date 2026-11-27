@@ -1,0 +1,178 @@
+{
+ "wrong": "예상 오답 — 회전 후 기울기의 최솟값을 $f'$의 최댓값에서 찾아 $a$, $b$를 바꿔 구한 경우",
+ "intro": [
+  "$C_\\theta$가 함수 그래프 ⇔ 회전 후 $x$좌표 $X(s)$가 단조 ⇔ $a+b\\le\\cot\\theta$.",
+  "$g'=\\frac{1+3f'}{3-f'}$는 $f'$에 대해 증가 → 최솟값 $0$은 $f'=a-b$에서."
+ ],
+ "conds": {
+  "C1": {
+   "label": "함수",
+   "why": "$f=ax+b\\sin x$, $a,b>0$.",
+   "uses": [
+    3
+   ]
+  },
+  "C2": {
+   "label": "회전",
+   "why": "각 $\\theta$만큼 회전한 $C_\\theta$.",
+   "uses": [
+    1,
+    2
+   ]
+  },
+  "C3": {
+   "label": "범위",
+   "why": "함수 그래프인 $\\theta$: $0<\\theta\\le\\alpha$, $\\tan\\alpha=\\frac13$.",
+   "uses": [
+    3,
+    4
+   ]
+  },
+  "C4": {
+   "label": "$g$",
+   "why": "$C_\\alpha$의 함수.",
+   "uses": [
+    4,
+    5,
+    7
+   ]
+  },
+  "C5": {
+   "label": "기울기",
+   "why": "$g'\\ge0$, $g'(c)=0$인 $c$ 존재.",
+   "uses": [
+    6
+   ]
+  },
+  "C6": {
+   "label": "적분",
+   "why": "$\\int_0^{\\frac{\\sqrt{10}}6\\pi}g=p\\pi^2+q$.",
+   "uses": [
+    8
+   ]
+  },
+  "C7": {
+   "label": "묻는 것",
+   "why": "$12(p+q)$.",
+   "uses": [
+    9
+   ]
+  },
+  "C8": {
+   "label": "유리수",
+   "why": "$p$, $q$ 유리수.",
+   "uses": [
+    9
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "회전변환",
+   "p": [
+    "$X=s\\cos\\theta-f\\sin\\theta$."
+   ]
+  },
+  {
+   "h": "매개변수 미분·적분",
+   "p": [
+    "$g'=\\frac{Y'}{X'}$, $\\int g\\,dx=\\int YX'ds$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 회전한 곡선이 함수의 그래프일 조건을 회전 후 x좌표 X(s)의 단조성, 곧 f'의 최댓값과 cot θ의 비교로 바꾸고, 회전 후 기울기 (1+3f')/(3−f')가 f'에 대해 증가함을 이용해 최솟값 0 조건으로 두 계수를 정한 뒤 매개변수 치환으로 적분하는 것",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "단조",
+   "text": "곡선 $C$ 위의 점 $(s,\\,f(s))$ 는 점 $(X(s),\\,Y(s))$ 로 옮겨진다. 여기서 $X(s)=s \\cos \\theta-f(s)\\sin \\theta$ , $Y(s)=s \\sin \\theta+f(s)\\cos \\theta$ 이다. $X(s)\\cos \\theta+Y(s)\\sin \\theta=s$ 이므로 서로 다른 $s$ 에 대한 점 $(X(s),\\,Y(s))$ 는 서로 다르고, 따라서 $C_{\\theta}$ 가 함수의 그래프일 필요충분조건은 서로 다른 $s$ 에 대하여 $X(s)$ 가 서로 다른 것, 즉 연속함수 $X$ 가 증가하거나 감소하는 것이다. 이는 $X'(s)=\\cos \\theta-f'(s)\\sin \\theta$ 의 부호가 바뀌지 않는 것과 같다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$a+b=3$",
+   "text": "$f'(s)=a+b \\cos s$ 는 $a-b$ 이상 $a+b$ 이하의 모든 값을 갖는다. $X$ 가 증가할 조건은 $a+b \\le \\frac{1}{\\tan \\theta}$ 이고 ( $X'(s)=0$ 은 $\\cos s=1$ 인 점에서만 일어남), 감소할 조건은 $a-b \\ge \\frac{1}{\\tan \\theta}$ 이다. 만약 $a-b>0$ 이면 $\\theta$ 가 $\\frac{\\pi}{2}$ 에 가까울 때도 조건을 만족시키므로 범위가 $0<\\theta \\le \\alpha$ 꼴이 될 수 없다. 따라서 $a-b \\le 0$ 이고 $\\frac{1}{\\tan \\alpha}=a+b=3$ 이다.",
+   "uses": [
+    "C1",
+    "C3"
+   ]
+  },
+  {
+   "title": "$\\alpha$ 값",
+   "text": "핵심 관문: $\\theta=\\alpha$ 일 때 $\\cos \\alpha=\\frac{3}{\\sqrt{10}}$ , $\\sin \\alpha=\\frac{1}{\\sqrt{10}}$ 이고, $X'(s)\\ne 0$ 인 $s$ 에 대하여",
+   "uses": [
+    "C3",
+    "C4"
+   ]
+  },
+  {
+   "title": "$g'$",
+   "text": "$$g'(X(s))=\\frac{Y'(s)}{X'(s)}=\\frac{\\sin \\alpha+f'(s)\\cos \\alpha}{\\cos \\alpha-f'(s)\\sin \\alpha}=\\frac{1+3 f'(s)}{3-f'(s)}$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "$a$, $b$",
+   "text": "이다. $u<3$ 에서 $\\frac{1+3 u}{3-u}=-3+\\frac{10}{3-u}$ 는 증가하므로 $g'$ 의 최솟값은 $f'(s)$ 가 최소인 $\\cos s=-1$ 일 때 $\\frac{1+3(a-b)}{3-(a-b)}$ 이다. 이 값이 $0$ 이어야 하므로 $a-b=-\\frac{1}{3}$ 이고, $a+b=3$ 과 연립하면 $a=\\frac{4}{3}$ , $b=\\frac{5}{3}$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "$X$, $Y$",
+   "text": "이때 $X(s)=\\frac{3 s-f(s)}{\\sqrt{10}}=\\frac{5}{3 \\sqrt{10}}(s-\\sin s)$ , $Y(s)=\\frac{s+3 f(s)}{\\sqrt{10}}=\\frac{5}{\\sqrt{10}}(s+\\sin s)$ 이고, $X(0)=0$ , $X(\\pi)=\\frac{5 \\pi}{3 \\sqrt{10}}=\\frac{\\sqrt{10}}{6}\\pi$ 이다.",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "적분",
+   "text": "$x=X(s)$ 로 치환하면 $\\int_{0}^{\\frac{\\sqrt{10}}{6}\\pi}g(x)dx=\\int_{0}^{\\pi}Y(s)X'(s)ds=\\frac{5}{6}\\int_{0}^{\\pi}(s+\\sin s)(1-\\cos s)ds$ 이다. $\\int_{0}^{\\pi}s ds=\\frac{\\pi^{2}}{2}$ , $\\int_{0}^{\\pi}s \\cos s ds=\\left[s \\sin s+\\cos s \\right]_{0}^{\\pi}=-2$ , $\\int_{0}^{\\pi}\\sin s ds=2$ , $\\int_{0}^{\\pi}\\sin s \\cos s ds=0$ 이므로 적분값은 $\\frac{5}{6}\\left(\\frac{\\pi^{2}}{2}+4 \\right)=\\frac{5}{12}\\pi^{2}+\\frac{10}{3}$ 이다.",
+   "uses": [
+    "C6"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $p=\\frac{5}{12}$ , $q=\\frac{10}{3}$ 이고 $12(p+q)=5+40=45$ 이다.",
+   "uses": [
+    "C7",
+    "C8"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$a-b<0$",
+   "cond": "C3",
+   "text": [
+    "$a-b>0$이면 큰 $\\theta$에서 다시 함수가 됨 — 범위가 한 구간이 아님."
+   ]
+  },
+  {
+   "h": "증가함수",
+   "cond": "C5",
+   "text": [
+    "$\\frac{1+3u}{3-u}$는 $u<3$에서 증가."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\tan\\alpha=\\frac12$",
+   "body": [
+    "두 양수 $a$, $b$에 대하여 $f(x)=ax+b\\sin x$의 그래프를 원점을 중심으로 $\\theta\\,(0<\\theta<\\frac\\pi2)$만큼 회전한 곡선을 $C_\\theta$라 하자. $C_\\theta$가 함수의 그래프가 되는 $\\theta$의 범위가 $0<\\theta\\le\\alpha$이고 $\\tan\\alpha=\\frac12$이다. $C_\\alpha$를 그래프로 하는 함수 $g(x)$가 미분가능한 모든 $x$에서 $g'(x)\\ge0$이고 $g'(c)=0$인 $c$가 존재할 때, $\\int_0^{\\frac{\\sqrt5}4\\pi}g(x)dx=p\\pi^2+q$이다. $48(p+q)$의 값을 구하시오. (단, $p$, $q$는 유리수)"
+   ],
+   "answer": 135,
+   "hint": "$a=\\frac34$, $b=\\frac54$; $\\frac58\\left(\\frac{\\pi^2}2+4\\right)$."
+  }
+ ],
+ "line": "회전 그래프 = $X$의 단조성, 기울기 = 뫼비우스형 증가함수."
+}
