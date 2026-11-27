@@ -1,0 +1,114 @@
+{
+ "num": 1696,
+ "id": "매시간_5제_누적_최고난도-144",
+ "subject": "기하",
+ "type": "29번형",
+ "typeDesc": "기하 · 수능 29번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12기하02-03]",
+  "[12기하02-02]",
+  "[12기하02-01]"
+ ],
+ "source": "ShrekMath 창작 · 수능 29번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 560,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "밑면이 세 변의 길이가 $\\overline{\\mathrm{BC}}=28$ , $\\overline{\\mathrm{CD}}=25$ , $\\overline{\\mathrm{DB}}=17$ 인 삼각형 $\\mathrm{BCD}$ 이고 꼭짓점이 $\\mathrm{A}$ 인 삼각뿔이 있다.",
+    "세 옆면 $\\mathrm{ABC}$ , $\\mathrm{ACD}$ , $\\mathrm{ADB}$ 를 각각 밑면을 품은 평면 위로 정사영한 도형의 넓이는 차례로 $70$ , $230$ , $50$ 이고, 옆면 $\\mathrm{ABC}$ 의 넓이는 $182$ 이다.",
+    "선분 $\\mathrm{AD}$ 의 길이의 제곱을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "밑면이 세 변의 길이가 $\\overline{\\mathrm{BC}}=28$ , $\\overline{\\mathrm{CD}}=25$ , $\\overline{\\mathrm{DB}}=17$ 인 삼각형 $\\mathrm{BCD}$ 이고 꼭짓점이 $\\mathrm{A}$ 인 삼각뿔이 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "세 옆면 $\\mathrm{ABC}$ , $\\mathrm{ACD}$ , $\\mathrm{ADB}$ 를 각각 밑면을 품은 평면 위로 정사영한 도형의 넓이는 차례로 $70$ , $230$ , $50$ 이고, 옆면 $\\mathrm{ABC}$ 의 넓이는 $182$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "선분 $\\mathrm{AD}$ 의 길이의 제곱을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "사면체의 세 옆면의 정사영의 넓이 — 넓이의 합이 밑면보다 커서 드러나는 '수선의 발이 밑면 밖' 의 숨은 경우",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 옆면의 정사영 넓이의 합(350)이 밑면(210)보다 크다는 데서 수선의 발이 밑면 밖에 있음을 알아차리고, 세 직선까지의 거리 조건의 부호 경우를 따져 발의 위치를 하나로 정한 뒤, 한 옆면의 넓이와 삼수선의 정리로 높이를 구해 꼭짓점 D 까지의 거리를 얻는 것 — 정사영 넓이가 '밑면을 나눈다' 는 직관이 깨지는 숨은 경우",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "밑면을 품은 평면을 $\\alpha$ 라 하고, 점 $\\mathrm{A}$ 에서 평면 $\\alpha$ 에 내린 수선의 발을 $\\mathrm{H}$ 라 하자. [관문 1] 세 점 $\\mathrm{A},\\,\\mathrm{B},\\,\\mathrm{C}$ 의 평면 $\\alpha$ 위로의 정사영은 $\\mathrm{H},\\,\\mathrm{B},\\,\\mathrm{C}$ 이므로 세 옆면의 정사영은 삼각형 $\\mathrm{HBC}$ , $\\mathrm{HCD}$ , $\\mathrm{HDB}$ 이고 넓이가 각각 $70,\\,230,\\,50$ 이다. 한편 삼각형 $\\mathrm{BCD}$ 의 넓이는 헤론의 공식으로 $\\sqrt{35 \\times 7 \\times 10 \\times 18}=210$ 인데 $70+230+50=350 \\ne 210$ 이므로 $\\mathrm{H}$ 는 삼각형 $\\mathrm{BCD}$ 의 내부나 변 위에 있지 않다. [관문 2] 곧 '세 정사영이 밑면을 나눈다' 는 생각은 틀리고, $\\mathrm{H}$ 의 위치를 따로 정해야 한다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "평면 $\\alpha$ 위에 $\\mathrm{B}(0,\\,0)$ , $\\mathrm{C}(28,\\,0)$ 인 좌표를 잡으면 $\\overline{\\mathrm{DB}}=17$ , $\\overline{\\mathrm{CD}}=25$ 에서 $\\mathrm{D}(8,\\,15)$ 로 놓을 수 있다. 직선 $\\mathrm{CD}$ 는 $3 x+4 y-84=0$ , 직선 $\\mathrm{DB}$ 는 $15 x-8 y=0$ 이다. $\\mathrm{H}(s,\\,u)$ 라 하면 세 정사영의 넓이에서 $\\mathrm{H}$ 와 세 직선 $\\mathrm{BC}$ , $\\mathrm{CD}$ , $\\mathrm{DB}$ 사이의 거리는 각각 $\\frac{2 \\times 70}{28}=5$ , $\\frac{2 \\times 230}{25}=\\frac{92}{5}$ , $\\frac{2 \\times 50}{17}=\\frac{100}{17}$ 이므로",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "$$\\left|u \\right|=5,\\,\\,\\,\\left|3 s+4 u-84 \\right|=92,\\,\\,\\,\\left|15 s-8 u \\right|=100$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "이다. [관문 3: 부호의 경우] $u=5$ 이면 둘째 식에서 $s=52$ 또는 $s=-\\frac{28}{3}$ , 셋째 식에서 $s=\\frac{28}{3}$ 또는 $s=-4$ 가 되어 공통인 $s$ 가 없다. $u=-5$ 이면 둘째 식에서 $s=\\frac{196}{3}$ 또는 $s=4$ , 셋째 식에서 $s=4$ 또는 $s=-\\frac{28}{3}$ 이므로 $s=4$ 이다. 따라서 $\\mathrm{H}(4,\\,-5)$ 로 하나뿐이고, $\\mathrm{H}$ 는 직선 $\\mathrm{BC}$ 에 대하여 $\\mathrm{D}$ 의 반대쪽에 있다. (실제로 $230+50-70=210$ 이다.)",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "[관문 4: 삼수선] $\\mathrm{H}$ 에서 직선 $\\mathrm{BC}$ 에 내린 수선의 발은 $\\mathrm{K}(4,\\,0)$ 이고 $\\overline{\\mathrm{HK}}=5$ 이다. $\\overline{\\mathrm{AH}}$ 가 평면 $\\alpha$ 에 수직이고 $\\overline{\\mathrm{HK}}\\perp \\overline{\\mathrm{BC}}$ 이므로 삼수선의 정리에 의하여 $\\overline{\\mathrm{AK}}\\perp \\overline{\\mathrm{BC}}$ 이다. 삼각형 $\\mathrm{ABC}$ 의 넓이가 $182$ 이므로 $\\overline{\\mathrm{AK}}=\\frac{2 \\times 182}{28}=13$ , 따라서 $\\overline{\\mathrm{AH}}=\\sqrt{13^{2}-5^{2}}=12$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "$\\overline{\\mathrm{HD}}^{2}=(4-8)^{2}+(-5-15)^{2}=416$ 이고 삼각형 $\\mathrm{AHD}$ 는 $\\angle \\mathrm{AHD}=\\frac{\\pi}{2}$ 인 직각삼각형이므로 $\\overline{\\mathrm{AD}}^{2}=12^{2}+416=560$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}
