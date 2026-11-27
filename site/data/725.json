@@ -130,7 +130,7 @@
   },
   {
    "n": 2,
-   "text": "$${\\mathrm{P}}(A)-{\\mathrm{P}}(A^{C})=\\sum_{k=0}^{n}_{n}{\\mathrm{C}}_{k}\\left(-\\frac{1}{4}\\right)^{k}\\left(\\frac{3}{4}\\right)^{n-k}=\\left(\\frac{3}{4}-\\frac{1}{4}\\right)^{n}=\\left(\\frac{1}{2}\\right)^{n}$$",
+   "text": "$${\\mathrm{P}}(A)-{\\mathrm{P}}(A^{C})=\\sum_{k=0}^{n}{}_{n}{\\mathrm{C}}_{k}\\left(-\\frac{1}{4}\\right)^{k}\\left(\\frac{3}{4}\\right)^{n-k}=\\left(\\frac{3}{4}-\\frac{1}{4}\\right)^{n}=\\left(\\frac{1}{2}\\right)^{n}$$",
    "uses": [
     "C2"
    ],
@@ -154,7 +154,7 @@
   },
   {
    "n": 5,
-   "text": "$${\\mathrm{P}}(X=2)=_{6}{\\mathrm{C}}_{2}\\left(\\frac{1}{4}\\right)^{2}\\left(\\frac{3}{4}\\right)^{4}=\\frac{15 \\times 81}{4096}=\\frac{1215}{4096}$$",
+   "text": "$${\\mathrm{P}}(X=2)={}_{6}{\\mathrm{C}}_{2}\\left(\\frac{1}{4}\\right)^{2}\\left(\\frac{3}{4}\\right)^{4}=\\frac{15 \\times 81}{4096}=\\frac{1215}{4096}$$",
    "uses": [
     "C4"
    ],

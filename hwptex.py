@@ -308,6 +308,7 @@ def hwp2tex(s):
     out = re.sub(r'\\left\\lbrace\s*', r'\\left\\{', out).replace(r'\right\rbrace', r'\right\}')
     out = re.sub(r'[_^]\{\}', '', out).replace('{}', '')  # 한글 수식의 빈 그룹
     out = re.sub(r'([A-Za-z])_\{([a-z]) ?\1\}_\{', r'\1_{\2}\1_{', out)  # a_{na}_{n+1} 오타 → a_{n}a_{n+1}
+    out = re.sub(r'_\{([^{}]+)\}(?=\{?\\mathrm\{[CPH]\})', r'{}_{\1}', out)  # 조합·순열 앞첨자 ₙCᵣ: \sum·\times 뒤에서도 깨지지 않게
     for k, txt in enumerate(texts):
         txt = re.sub(r'\(\s+', '(', re.sub(r'\s+\)', ')', re.sub(r'\s+', ' ', txt)))
         pad = ' ' if re.match(r'[가-힣]', txt) else ''

@@ -15,7 +15,7 @@
  "concepts":[["축소 변환","고정점으로의 수렴."],["넓이의 비","극한 삼각형은 $\\frac17$."]],
  "steps":[["의도",[1],["C2"]],["세 번 묶기",[2],["C1","C2"]],["극한점",[3],["C2"]],["$S$",[4],["C3","C4"]],["$L$",[5],["C4"]],["답",[6],["C5"]]],
  "traps":[["순서","C3",["세 점의 순서만 바뀐다 — 넓이는 같다."]],["일직선","C4",["합이 한 선분 $\\overline{\\mathrm{AX}}$."]]],
- "variants":[["변형 · $\\mathrm{B}(28,0)$, $\\mathrm{C}(0,28)$","세 점 $\\mathrm{A}(0,0)$, $\\mathrm{B}(28,0)$, $\\mathrm{C}(0,28)$에 대하여 $\\mathrm{P}_1=\\mathrm{A}$이고, $n$을 $3$으로 나눈 나머지가 $1,2,0$일 때 $\\mathrm{P}_{n+1}$은 각각 선분 $\\mathrm{P}_n\\mathrm{B}$, $\\mathrm{P}_n\\mathrm{C}$, $\\mathrm{P}_n\\mathrm{A}$의 중점이다. 삼각형 $\\mathrm{P}_n\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}$의 넓이를 $S_n$, $S=\\lim S_n$, $L=\\sum_{m=0}^\\infty\\overline{\\mathrm{P}_{3m+1}\\mathrm{P}_{3m+4}}$이라 할 때, $S+L^2$의 값을 구하시오.",136,"$2$배 닮음: $S=56$, $L^2=80$."]],
+ "variants":[["변형 · $\\mathrm{B}(28,0)$, $\\mathrm{C}(0,28)$","세 점 $\\mathrm{A}(0,0)$, $\\mathrm{B}(28,0)$, $\\mathrm{C}(0,28)$에 대하여 $\\mathrm{P}_1=\\mathrm{A}$이고, $n$을 $3$으로 나눈 나머지가 $1,2,0$일 때 $\\mathrm{P}_{n+1}$은 각각 선분 $\\mathrm{P}_n\\mathrm{B}$, $\\mathrm{P}_n\\mathrm{C}$, $\\mathrm{P}_n\\mathrm{A}$의 중점이다. 삼각형 $\\mathrm{P}_n\\mathrm{P}{}_{n+1}\\mathrm{P}_{n+2}$의 넓이를 $S_n$, $S=\\lim S_n$, $L=\\sum_{m=0}^\\infty\\overline{\\mathrm{P}{}_{3m+1}\\mathrm{P}_{3m+4}}$이라 할 때, $S+L^2$의 값을 구하시오.",136,"$2$배 닮음: $S=56$, $L^2=80$."]],
  "line":"주기 이동은 묶어서 축소 변환으로."},
 {"n":1340,"raw":1,
  "wrong":"예상 오답 — 두 근 모두 같은 속도로 수렴한다고 보고 $L_2$를 비 $\\frac12$로 계산한 경우",

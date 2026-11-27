@@ -73,7 +73,7 @@
  "steps": [
   {
    "n": 1,
-   "text": "${\\mathrm{P}}(X=k)=_{n}{\\mathrm{C}}_{k}\\left(\\frac{1}{3}\\right)^{k}\\left(\\frac{2}{3}\\right)^{n-k}$ 이므로 이항정리에 의하여",
+   "text": "${\\mathrm{P}}(X=k)={}_{n}{\\mathrm{C}}_{k}\\left(\\frac{1}{3}\\right)^{k}\\left(\\frac{2}{3}\\right)^{n-k}$ 이므로 이항정리에 의하여",
    "uses": [
     "C1"
    ],
@@ -81,7 +81,7 @@
   },
   {
    "n": 2,
-   "text": "$${\\mathrm{E}}(Y)=\\sum_{k=0}^{n}2^{k}\\times_{n}{\\mathrm{C}}_{k}\\left(\\frac{1}{3}\\right)^{k}\\left(\\frac{2}{3}\\right)^{n-k}=\\sum_{k=0}^{n}_{n}{\\mathrm{C}}_{k}\\left(\\frac{2}{3}\\right)^{k}\\left(\\frac{2}{3}\\right)^{n-k}=\\left(\\frac{4}{3}\\right)^{n}$$",
+   "text": "$${\\mathrm{E}}(Y)=\\sum_{k=0}^{n}2^{k}\\times_{n}{\\mathrm{C}}_{k}\\left(\\frac{1}{3}\\right)^{k}\\left(\\frac{2}{3}\\right)^{n-k}=\\sum_{k=0}^{n}{}_{n}{\\mathrm{C}}_{k}\\left(\\frac{2}{3}\\right)^{k}\\left(\\frac{2}{3}\\right)^{n-k}=\\left(\\frac{4}{3}\\right)^{n}$$",
    "uses": [
     "C1"
    ],

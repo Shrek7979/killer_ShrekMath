@@ -40,7 +40,7 @@
  "steps": [
   {
    "title": "거리",
-   "text": "원점을 $\\mathrm{O}$라 하면 삼각형 $\\mathrm{OP}_{i}\\mathrm{P}_{j}$에서 코사인법칙에 의하여 ${\\overline{\\mathrm{P}_{i}\\mathrm{P}_{j}}}^{2}=2-2 \\cos \\frac{(j-i)\\pi}{6}$이다. ($j-i \\ge 7$일 때는 $\\angle \\mathrm{P}_{i}\\mathrm{OP}_{j}=2 \\pi-\\frac{(j-i)\\pi}{6}$이지만 코사인의 값이 같고, $j-i=6$일 때는 선분 $\\mathrm{P}_{i}\\mathrm{P}_{j}$가 지름이므로 역시 성립한다.)",
+   "text": "원점을 $\\mathrm{O}$라 하면 삼각형 $\\mathrm{OP}{}_{i}\\mathrm{P}_{j}$에서 코사인법칙에 의하여 ${\\overline{\\mathrm{P}{}_{i}\\mathrm{P}_{j}}}^{2}=2-2 \\cos \\frac{(j-i)\\pi}{6}$이다. ($j-i \\ge 7$일 때는 $\\angle \\mathrm{P}_{i}\\mathrm{OP}_{j}=2 \\pi-\\frac{(j-i)\\pi}{6}$이지만 코사인의 값이 같고, $j-i=6$일 때는 선분 $\\mathrm{P}{}_{i}\\mathrm{P}_{j}$가 지름이므로 역시 성립한다.)",
    "uses": [
     "C1"
    ]

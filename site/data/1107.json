@@ -143,7 +143,7 @@
   },
   {
    "n": 4,
-   "text": "$$720-_{6}\\mathrm{C}_{1}\\times 120+_{6}\\mathrm{C}_{2}\\times 24-_{6}\\mathrm{C}_{3}\\times 6+_{6}\\mathrm{C}_{4}\\times 2-_{6}\\mathrm{C}_{5}\\times 1+1=265$$",
+   "text": "$$720-{}_{6}\\mathrm{C}_{1}\\times 120+{}_{6}\\mathrm{C}_{2}\\times 24-{}_{6}\\mathrm{C}_{3}\\times 6+{}_{6}\\mathrm{C}_{4}\\times 2-{}_{6}\\mathrm{C}_{5}\\times 1+1=265$$",
    "uses": [
     "C3"
    ],

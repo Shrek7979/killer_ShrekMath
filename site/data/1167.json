@@ -123,7 +123,7 @@
   },
   {
    "n": 3,
-   "text": "$$\\sum_{a=1}^{n-d-1}(n-a-d)=_{n-d}\\mathrm{C}_{2},\\,\\,\\,\\mathrm{P}(X=d)=\\frac{_{n-d}\\mathrm{C}_{2}}{_{n}\\mathrm{C}_{3}}$$",
+   "text": "$$\\sum_{a=1}^{n-d-1}(n-a-d)={}_{n-d}\\mathrm{C}_{2},\\,\\,\\,\\mathrm{P}(X=d)=\\frac{{}_{n-d}\\mathrm{C}_{2}}{{}_{n}\\mathrm{C}_{3}}$$",
    "uses": [
     "C2"
    ],
@@ -131,7 +131,7 @@
   },
   {
    "n": 4,
-   "text": "이항계수의 성질 $\\sum_{d}_{d}\\mathrm{C}_{1}\\times_{n-d}\\mathrm{C}_{2}=_{n+1}\\mathrm{C}_{4}$ , $\\sum_{d}_{d+1}\\mathrm{C}_{2}\\times_{n-d}\\mathrm{C}_{2}=_{n+2}\\mathrm{C}_{5}$ 를 이용하면 ( $n+1$ 개 또는 $n+2$ 개 중에서 고르는 수를 기준 위치로 나누어 센다)",
+   "text": "이항계수의 성질 $\\sum_{d}{}_{d}\\mathrm{C}_{1}\\times_{n-d}\\mathrm{C}_{2}={}_{n+1}\\mathrm{C}_{4}$ , $\\sum_{d}{}_{d+1}\\mathrm{C}_{2}\\times_{n-d}\\mathrm{C}_{2}={}_{n+2}\\mathrm{C}_{5}$ 를 이용하면 ( $n+1$ 개 또는 $n+2$ 개 중에서 고르는 수를 기준 위치로 나누어 센다)",
    "uses": [
     "C2"
    ],
@@ -139,7 +139,7 @@
   },
   {
    "n": 5,
-   "text": "$$\\mathrm{E}(X)=\\frac{_{n+1}\\mathrm{C}_{4}}{_{n}\\mathrm{C}_{3}}=\\frac{n+1}{4},\\,\\,\\,\\mathrm{E}(X(X+1))=\\frac{2 \\times_{n+2}\\mathrm{C}_{5}}{_{n}\\mathrm{C}_{3}}=\\frac{(n+1)(n+2)}{10}$$",
+   "text": "$$\\mathrm{E}(X)=\\frac{{}_{n+1}\\mathrm{C}_{4}}{{}_{n}\\mathrm{C}_{3}}=\\frac{n+1}{4},\\,\\,\\,\\mathrm{E}(X(X+1))=\\frac{2 \\times_{n+2}\\mathrm{C}_{5}}{{}_{n}\\mathrm{C}_{3}}=\\frac{(n+1)(n+2)}{10}$$",
    "uses": [
     "C2"
    ],
@@ -163,7 +163,7 @@
   },
   {
    "n": 8,
-   "text": "$$\\mathrm{P}(X \\ge 4)=\\frac{_{9}\\mathrm{C}_{2}+_{8}\\mathrm{C}_{2}+\\cdots+_{2}\\mathrm{C}_{2}}{_{13}\\mathrm{C}_{3}}=\\frac{_{10}\\mathrm{C}_{3}}{286}=\\frac{120}{286}=\\frac{60}{143}$$",
+   "text": "$$\\mathrm{P}(X \\ge 4)=\\frac{{}_{9}\\mathrm{C}_{2}+{}_{8}\\mathrm{C}_{2}+\\cdots+{}_{2}\\mathrm{C}_{2}}{{}_{13}\\mathrm{C}_{3}}=\\frac{{}_{10}\\mathrm{C}_{3}}{286}=\\frac{120}{286}=\\frac{60}{143}$$",
    "uses": [
     "C3"
    ],

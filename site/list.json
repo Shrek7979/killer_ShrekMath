@@ -331,7 +331,7 @@
    },
    {
     "t": "p",
-    "s": "$1 \\le i<j \\le 12$인 두 자연수 $i$, $j$의 모든 순서쌍 $(i,\\,j)$에 대하여 ${\\overline{\\mathrm{P}_{i}\\mathrm{P}_{j}}}^{2}$의 값을 모두 더한 값을 구하시오. [4점]"
+    "s": "$1 \\le i<j \\le 12$인 두 자연수 $i$, $j$의 모든 순서쌍 $(i,\\,j)$에 대하여 ${\\overline{\\mathrm{P}{}_{i}\\mathrm{P}_{j}}}^{2}$의 값을 모두 더한 값을 구하시오. [4점]"
    }
   ]
  },
@@ -14179,7 +14179,7 @@
    },
    {
     "t": "eq",
-    "tex": "\\sum_{k=0}^{8}(-1)^{k}\\times_{10}{\\mathrm{C}}_{k}\\times_{10}{\\mathrm{C}}_{k+2}"
+    "tex": "\\sum_{k=0}^{8}(-1)^{k}\\times{}_{10}{\\mathrm{C}}_{k}\\times{}_{10}{\\mathrm{C}}_{k+2}"
    }
   ]
  },
@@ -18839,7 +18839,7 @@
   "snip": [
    {
     "t": "eq",
-    "tex": "\\lim_{n \\to \\infty}\\left(\\frac{_{3 n}{\\mathrm{C}}_{n}}{_{2 n}{\\mathrm{C}}_{n}}\\right)^{\\frac{1}{n}}=\\frac{q}{p}"
+    "tex": "\\lim_{n \\to \\infty}\\left(\\frac{{}_{3 n}{\\mathrm{C}}_{n}}{{}_{2 n}{\\mathrm{C}}_{n}}\\right)^{\\frac{1}{n}}=\\frac{q}{p}"
    },
    {
     "t": "p",
@@ -25652,7 +25652,7 @@
    },
    {
     "t": "eq",
-    "tex": "a_{m}=\\sum_{k}(-1)^{k}_{10}\\mathrm{C}_{k}\\times_{10}\\mathrm{C}_{m-k}"
+    "tex": "a_{m}=\\sum_{k}(-1)^{k}{}_{10}\\mathrm{C}_{k}\\times{}_{10}\\mathrm{C}_{m-k}"
    },
    {
     "t": "p",
@@ -25865,7 +25865,7 @@
   "snip": [
    {
     "t": "p",
-    "s": "$\\sum_{k=0}^{7}\\frac{_{7}\\mathrm{C}_{k}}{(k+1)(k+2)}=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오."
+    "s": "$\\sum_{k=0}^{7}\\frac{{}_{7}\\mathrm{C}_{k}}{(k+1)(k+2)}=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오."
    },
    {
     "t": "p",
@@ -27000,7 +27000,7 @@
   "snip": [
    {
     "t": "p",
-    "s": "$5$ 개의 도시가 있고, 서로 다른 두 도시를 잇는 도로를 놓을 수 있는 곳이 모두 $_{5}\\mathrm{C}_{2}=10$ 곳이다."
+    "s": "$5$ 개의 도시가 있고, 서로 다른 두 도시를 잇는 도로를 놓을 수 있는 곳이 모두 ${}_{5}\\mathrm{C}_{2}=10$ 곳이다."
    },
    {
     "t": "p",
@@ -28182,7 +28182,7 @@
    },
    {
     "t": "eq",
-    "tex": "\\mathrm{P}(X=k)=a \\times k \\times_{n}\\mathrm{C}_{k}\\times 2^{k}\\,\\,\\,(k=1,\\,2,\\,\\cdots,\\,n)"
+    "tex": "\\mathrm{P}(X=k)=a \\times k \\times{}_{n}\\mathrm{C}_{k}\\times 2^{k}\\,\\,\\,(k=1,\\,2,\\,\\cdots,\\,n)"
    },
    {
     "t": "p",
@@ -30034,12 +30034,12 @@
     "t": "box",
     "items": [
      "(가) 점 $\\mathrm{P}$ 의 위치에 관계없이 $\\overline{\\mathrm{PH}_{1}}\\times \\overline{\\mathrm{PH}_{2}}=\\frac{36}{13}$ 이다.",
-     "(나) 선분 $\\mathrm{H}_{1}\\mathrm{H}_{2}$ 의 길이의 최솟값은 $\\frac{36}{13}$ 이다."
+     "(나) 선분 $\\mathrm{H}{}_{1}\\mathrm{H}_{2}$ 의 길이의 최솟값은 $\\frac{36}{13}$ 이다."
     ]
    },
    {
     "t": "p",
-    "s": "점 $\\mathrm{P}$ 의 $x$ 좌표가 $5$ 일 때, $13 \\times \\overline{\\mathrm{H}_{1}\\mathrm{H}_{2}}$ 의 값을 구하시오. [4점]"
+    "s": "점 $\\mathrm{P}$ 의 $x$ 좌표가 $5$ 일 때, $13 \\times \\overline{\\mathrm{H}{}_{1}\\mathrm{H}_{2}}$ 의 값을 구하시오. [4점]"
    }
   ]
  },
@@ -32289,13 +32289,13 @@
    {
     "t": "box",
     "items": [
-     "(가) 모든 자연수 $n$ 에 대하여 직선 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}$ 의 기울기는 $\\left(\\frac{1}{2}\\right)^{n-1}$ 이다.",
+     "(가) 모든 자연수 $n$ 에 대하여 직선 $\\mathrm{P}{}_{n}\\mathrm{P}_{n+1}$ 의 기울기는 $\\left(\\frac{1}{2}\\right)^{n-1}$ 이다.",
      "(나) 수열 $\\left\\{a_{n}\\right\\}$ 은 수렴한다."
     ]
    },
    {
     "t": "p",
-    "s": "원점 $\\mathrm{O}$ 에 대하여 삼각형 $\\mathrm{OP}_{n}\\mathrm{P}_{n+1}$ 의 넓이를 $T_{n}$ 이라 하자."
+    "s": "원점 $\\mathrm{O}$ 에 대하여 삼각형 $\\mathrm{OP}{}_{n}\\mathrm{P}_{n+1}$ 의 넓이를 $T_{n}$ 이라 하자."
    }
   ]
  },
@@ -32369,7 +32369,7 @@
    {
     "t": "box",
     "items": [
-     "선분 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}$ 의 중점을 $\\mathrm{M}_{n}$ 이라 할 때, 점 $\\mathrm{P}_{n+3}$ 은 선분 $\\mathrm{M}_{n}\\mathrm{P}_{n+2}$ 의 중점이다."
+     "선분 $\\mathrm{P}{}_{n}\\mathrm{P}_{n+1}$ 의 중점을 $\\mathrm{M}_{n}$ 이라 할 때, 점 $\\mathrm{P}_{n+3}$ 은 선분 $\\mathrm{M}{}_{n}\\mathrm{P}_{n+2}$ 의 중점이다."
     ]
    },
    {
@@ -32474,11 +32474,11 @@
   "snip": [
    {
     "t": "p",
-    "s": "한 변의 길이가 $1$ 인 정사각형 $\\mathrm{A}_{1}\\mathrm{B}_{1}\\mathrm{C}_{1}\\mathrm{D}_{1}$ 이 있다."
+    "s": "한 변의 길이가 $1$ 인 정사각형 $\\mathrm{A}_{1}\\mathrm{B}{}_{1}\\mathrm{C}_{1}\\mathrm{D}_{1}$ 이 있다."
    },
    {
     "t": "p",
-    "s": "$0<t<\\frac{1}{2}$ 인 실수 $t$ 에 대하여, 자연수 $n$ 마다 정사각형 $\\mathrm{A}_{n}\\mathrm{B}_{n}\\mathrm{C}_{n}\\mathrm{D}_{n}$ 의 네 변 $\\mathrm{A}_{n}\\mathrm{B}_{n}$ , $\\mathrm{B}_{n}\\mathrm{C}_{n}$ , $\\mathrm{C}_{n}\\mathrm{D}_{n}$ , $\\mathrm{D}_{n}\\mathrm{A}_{n}$ 을 각각 $t:(1-t)$ 로 내분하는 점을 차례로 $\\mathrm{A}_{n+1}$ , $\\mathrm{B}_{n+1}$ , $\\mathrm{C}_{n+1}$ , $\\mathrm{D}_{n+1}$ 이라 하자."
+    "s": "$0<t<\\frac{1}{2}$ 인 실수 $t$ 에 대하여, 자연수 $n$ 마다 정사각형 $\\mathrm{A}_{n}\\mathrm{B}{}_{n}\\mathrm{C}_{n}\\mathrm{D}_{n}$ 의 네 변 $\\mathrm{A}_{n}\\mathrm{B}_{n}$ , $\\mathrm{B}{}_{n}\\mathrm{C}_{n}$ , $\\mathrm{C}_{n}\\mathrm{D}_{n}$ , $\\mathrm{D}_{n}\\mathrm{A}_{n}$ 을 각각 $t:(1-t)$ 로 내분하는 점을 차례로 $\\mathrm{A}_{n+1}$ , $\\mathrm{B}_{n+1}$ , $\\mathrm{C}_{n+1}$ , $\\mathrm{D}_{n+1}$ 이라 하자."
    }
   ]
  },
@@ -32748,12 +32748,12 @@
    {
     "t": "box",
     "items": [
-     "직선 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}$ 의 기울기는 $-\\frac{1}{n(n+1)}$ 이다."
+     "직선 $\\mathrm{P}{}_{n}\\mathrm{P}_{n+1}$ 의 기울기는 $-\\frac{1}{n(n+1)}$ 이다."
     ]
    },
    {
     "t": "p",
-    "s": "삼각형 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}$ 의 넓이를 $T_{n}$ 이라 하자."
+    "s": "삼각형 $\\mathrm{P}{}_{n}\\mathrm{P}{}_{n+1}\\mathrm{P}_{n+2}$ 의 넓이를 $T_{n}$ 이라 하자."
    }
   ]
  },
@@ -32772,11 +32772,11 @@
   "snip": [
    {
     "t": "p",
-    "s": "세 내각의 크기가 각각 90°, 75°, 15°인 삼각형 $\\mathrm{A}_{1}\\mathrm{B}_{1}\\mathrm{C}_{1}$ 이 있다."
+    "s": "세 내각의 크기가 각각 90°, 75°, 15°인 삼각형 $\\mathrm{A}_{1}\\mathrm{B}{}_{1}\\mathrm{C}_{1}$ 이 있다."
    },
    {
     "t": "p",
-    "s": "( $\\mathrm{A}_{1}$ , $\\mathrm{B}_{1}$ , $\\mathrm{C}_{1}$ 에서의 내각의 크기가 차례로 90°, 75°, 15°이다.) 자연수 $n$ 에 대하여 삼각형 $\\mathrm{A}_{n}\\mathrm{B}_{n}\\mathrm{C}_{n}$ 의 내접원이 세 변 $\\mathrm{B}_{n}\\mathrm{C}_{n}$ , $\\mathrm{C}_{n}\\mathrm{A}_{n}$ , $\\mathrm{A}_{n}\\mathrm{B}_{n}$ 과 접하는 점을 각각 $\\mathrm{A}_{n+1}$ , $\\mathrm{B}_{n+1}$ , $\\mathrm{C}_{n+1}$ 이라 하자."
+    "s": "( $\\mathrm{A}_{1}$ , $\\mathrm{B}_{1}$ , $\\mathrm{C}_{1}$ 에서의 내각의 크기가 차례로 90°, 75°, 15°이다.) 자연수 $n$ 에 대하여 삼각형 $\\mathrm{A}_{n}\\mathrm{B}{}_{n}\\mathrm{C}_{n}$ 의 내접원이 세 변 $\\mathrm{B}{}_{n}\\mathrm{C}_{n}$ , $\\mathrm{C}_{n}\\mathrm{A}_{n}$ , $\\mathrm{A}_{n}\\mathrm{B}_{n}$ 과 접하는 점을 각각 $\\mathrm{A}_{n+1}$ , $\\mathrm{B}_{n+1}$ , $\\mathrm{C}_{n+1}$ 이라 하자."
    }
   ]
  },
@@ -32800,12 +32800,12 @@
    {
     "t": "box",
     "items": [
-     "$n$ 을 $3$ 으로 나눈 나머지가 $1$ , $2$ , $0$ 일 때, 점 $\\mathrm{P}_{n+1}$ 은 각각 선분 $\\mathrm{P}_{n}\\mathrm{B}$ , 선분 $\\mathrm{P}_{n}\\mathrm{C}$ , 선분 $\\mathrm{P}_{n}\\mathrm{A}$ 의 중점이다."
+     "$n$ 을 $3$ 으로 나눈 나머지가 $1$ , $2$ , $0$ 일 때, 점 $\\mathrm{P}_{n+1}$ 은 각각 선분 $\\mathrm{P}_{n}\\mathrm{B}$ , 선분 $\\mathrm{P}{}_{n}\\mathrm{C}$ , 선분 $\\mathrm{P}_{n}\\mathrm{A}$ 의 중점이다."
     ]
    },
    {
     "t": "p",
-    "s": "삼각형 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}$ 의 넓이를 $S_{n}$ 이라 하고,"
+    "s": "삼각형 $\\mathrm{P}{}_{n}\\mathrm{P}{}_{n+1}\\mathrm{P}_{n+2}$ 의 넓이를 $S_{n}$ 이라 하고,"
    }
   ]
  },

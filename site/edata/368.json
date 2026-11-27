@@ -59,7 +59,7 @@
    "label": "[3.3]",
    "points": null,
    "text": [
-    "$n=1,2,3,\\cdots$ 에 대하여 삼각형 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}\\mathrm{Q}_{n}$ 의 넓이를 $A_n$ 이라고 할 때, $\\sum_{n=1}^{10}A_{n}A_{n+1}$ 의 값을 구하시오."
+    "$n=1,2,3,\\cdots$ 에 대하여 삼각형 $\\mathrm{P}{}_{n}\\mathrm{P}_{n+1}\\mathrm{Q}_{n}$ 의 넓이를 $A_n$ 이라고 할 때, $\\sum_{n=1}^{10}A_{n}A_{n+1}$ 의 값을 구하시오."
    ],
    "answer": [
     "두 점 $\\mathrm{P}_{n}$ 과 $\\mathrm{P}_{n+1}$ 사이의 거리는 $\\pi$ 이므로 $A_{n}=\\frac{1}{2}\\times \\pi \\times \\frac{2}{(2 n-1)\\pi}=\\frac{1}{2 n-1}$ 이고",

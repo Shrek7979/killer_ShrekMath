@@ -41,7 +41,7 @@
  "steps": [
   {
    "title": "정리",
-   "text": "$$\\frac{_{3 n}{\\mathrm{C}}_{n}}{_{2 n}{\\mathrm{C}}_{n}}=\\frac{(3 n)!}{n!(2 n)!}\\times \\frac{n!n!}{(2 n)!}=\\frac{(3 n)!}{(2 n)!}\\div \\frac{(2 n)!}{n!}=\\frac{(2 n+1)(2 n+2)\\cdots(3 n)}{(n+1)(n+2)\\cdots(2 n)}$$",
+   "text": "$$\\frac{{}_{3 n}{\\mathrm{C}}_{n}}{{}_{2 n}{\\mathrm{C}}_{n}}=\\frac{(3 n)!}{n!(2 n)!}\\times \\frac{n!n!}{(2 n)!}=\\frac{(3 n)!}{(2 n)!}\\div \\frac{(2 n)!}{n!}=\\frac{(2 n+1)(2 n+2)\\cdots(3 n)}{(n+1)(n+2)\\cdots(2 n)}$$",
    "uses": [
     "C1"
    ]
@@ -55,7 +55,7 @@
   },
   {
    "title": "로그",
-   "text": "$$\\frac{1}{n}\\ln \\frac{_{3 n}{\\mathrm{C}}_{n}}{_{2 n}{\\mathrm{C}}_{n}}=\\frac{1}{n}\\sum_{k=1}^{n}\\left\\{\\ln \\left(2+\\frac{k}{n}\\right)-\\ln \\left(1+\\frac{k}{n}\\right)\\right\\}$$",
+   "text": "$$\\frac{1}{n}\\ln \\frac{{}_{3 n}{\\mathrm{C}}_{n}}{{}_{2 n}{\\mathrm{C}}_{n}}=\\frac{1}{n}\\sum_{k=1}^{n}\\left\\{\\ln \\left(2+\\frac{k}{n}\\right)-\\ln \\left(1+\\frac{k}{n}\\right)\\right\\}$$",
    "uses": [
     "C1"
    ]

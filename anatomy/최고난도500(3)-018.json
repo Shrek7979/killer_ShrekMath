@@ -74,7 +74,7 @@
   },
   {
    "title": "점화식",
-   "text": "직선 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}$ 의 기울기는 $\\frac{a_{n+1}^{2}-a_{n}^{2}}{a_{n+1}-a_{n}}=a_{n}+a_{n+1}$ 이므로 (가)는 $a_{n}+a_{n+1}=\\left(\\frac{1}{2}\\right)^{n-1}$ 이다.",
+   "text": "직선 $\\mathrm{P}{}_{n}\\mathrm{P}_{n+1}$ 의 기울기는 $\\frac{a_{n+1}^{2}-a_{n}^{2}}{a_{n+1}-a_{n}}=a_{n}+a_{n+1}$ 이므로 (가)는 $a_{n}+a_{n+1}=\\left(\\frac{1}{2}\\right)^{n-1}$ 이다.",
    "uses": [
     "C1",
     "C2"
@@ -96,7 +96,7 @@
   },
   {
    "title": "넓이",
-   "text": "$\\triangle \\mathrm{OP}_{n}\\mathrm{P}_{n+1}$ 의 넓이 $T_{n}$ 은 $\\frac{1}{2}\\left|a_{n}a_{n+1}^{2}-a_{n+1}a_{n}^{2}\\right|=\\frac{1}{2}a_{n}a_{n+1}(a_{n}-a_{n+1})$ 이다.",
+   "text": "$\\triangle \\mathrm{OP}{}_{n}\\mathrm{P}_{n+1}$ 의 넓이 $T_{n}$ 은 $\\frac{1}{2}\\left|a_{n}a_{n+1}^{2}-a_{n+1}a_{n}^{2}\\right|=\\frac{1}{2}a_{n}a_{n+1}(a_{n}-a_{n+1})$ 이다.",
    "uses": [
     "C4"
    ]

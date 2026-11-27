@@ -70,7 +70,7 @@
  "steps": [
   {
    "n": 1,
-   "text": "$x^{k}$ 의 계수는 $_{n}{\\mathrm{C}}_{k}$ 이므로 조건은 $2 \\times_{n}{\\mathrm{C}}_{k+1}=_{n}{\\mathrm{C}}_{k}+_{n}{\\mathrm{C}}_{k+2}$ 이다. 양변을 $_{n}{\\mathrm{C}}_{k+1}$ 로 나누고",
+   "text": "$x^{k}$ 의 계수는 ${}_{n}{\\mathrm{C}}_{k}$ 이므로 조건은 $2 \\times_{n}{\\mathrm{C}}_{k+1}={}_{n}{\\mathrm{C}}_{k}+{}_{n}{\\mathrm{C}}_{k+2}$ 이다. 양변을 ${}_{n}{\\mathrm{C}}_{k+1}$ 로 나누고",
    "uses": [
     "C1"
    ],
@@ -78,7 +78,7 @@
   },
   {
    "n": 2,
-   "text": "$$\\frac{_{n}{\\mathrm{C}}_{k}}{_{n}{\\mathrm{C}}_{k+1}}=\\frac{k+1}{n-k},\\,\\,\\,\\frac{_{n}{\\mathrm{C}}_{k+2}}{_{n}{\\mathrm{C}}_{k+1}}=\\frac{n-k-1}{k+2}$$",
+   "text": "$$\\frac{{}_{n}{\\mathrm{C}}_{k}}{{}_{n}{\\mathrm{C}}_{k+1}}=\\frac{k+1}{n-k},\\,\\,\\,\\frac{{}_{n}{\\mathrm{C}}_{k+2}}{{}_{n}{\\mathrm{C}}_{k+1}}=\\frac{n-k-1}{k+2}$$",
    "uses": [
     "C1"
    ],

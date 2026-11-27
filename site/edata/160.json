@@ -19,7 +19,7 @@
   "<제시문 1>",
   "자연수 $n$ 에 대하여, 수열 $\\left\\{t_n \\right\\}$ 을 다음과 같이 정의하자. $n$ 이 홀수일 때 $t_n=3$ 이고, $n$ 이 짝수일 때 $t_n=4$ 이다. 점 $\\mathrm{P}_0 \\left(-1,0 \\right)$ 에서 그은 기울기가 $\\tan \\left(\\frac{t_{1}}{12}\\pi \\right)$ 인 직선이 원 $x^2+y^2=1$ 과 다시 만나는 점을 $\\mathrm{P}_1$ 이라 하자. 자연수 $n$ 에 대하여, 점 $\\mathrm{P}_{n}$ 에서 그은 기울기가 $\\tan \\left(\\frac{t_{n+1}}{12}\\pi \\right)$ 인 직선이 원 $x^2+y^2=1$ 과 다시 만나는 점을 $\\mathrm{P}_{n+1}$ 이라 하자. 만약 이 직선이 원과 접할 경우, $\\mathrm{P}_{n+1}=\\mathrm{P}_{n}$ 이다.",
   "<제시문 2>",
-  "음이 아닌 정수 $n$ 에 대하여, $A(n)$ 을 삼각형 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}$ 의 넓이라 하자. (단, 세 점 $\\mathrm{P}_{n}$ , $\\mathrm{P}_{n+1}$ , $\\mathrm{P}_{n+2}$ 중에서 두 점이 일치할 경우, $A(n)=0$ 이다.)"
+  "음이 아닌 정수 $n$ 에 대하여, $A(n)$ 을 삼각형 $\\mathrm{P}{}_{n}\\mathrm{P}{}_{n+1}\\mathrm{P}_{n+2}$ 의 넓이라 하자. (단, 세 점 $\\mathrm{P}_{n}$ , $\\mathrm{P}_{n+1}$ , $\\mathrm{P}_{n+2}$ 중에서 두 점이 일치할 경우, $A(n)=0$ 이다.)"
  ],
  "subs": [
   {
@@ -27,12 +27,12 @@
    "label": "[문제2-ⅰ]",
    "points": null,
    "text": [
-    "$0 \\le n \\le 7$ 인 정수 $n$ 에 대하여 호 $\\mathrm{P}_{n}\\mathrm{P}_{n+2}$ 의 길이가 항상 일정함을 보이고, 그 값을 구하시오. (단, 호 $\\mathrm{P}_{n}\\mathrm{P}_{n+2}$ 는 두 점 $\\mathrm{P}_{n}$ , $\\mathrm{P}_{n+2}$ 에 의하여 나누어지는 원 $x^2+y^2=1$ 의 두 부분 중 길이가 짧은 것으로 한다.)"
+    "$0 \\le n \\le 7$ 인 정수 $n$ 에 대하여 호 $\\mathrm{P}{}_{n}\\mathrm{P}_{n+2}$ 의 길이가 항상 일정함을 보이고, 그 값을 구하시오. (단, 호 $\\mathrm{P}{}_{n}\\mathrm{P}_{n+2}$ 는 두 점 $\\mathrm{P}_{n}$ , $\\mathrm{P}_{n+2}$ 에 의하여 나누어지는 원 $x^2+y^2=1$ 의 두 부분 중 길이가 짧은 것으로 한다.)"
    ],
    "answer": [
     "점 $\\mathrm{P}_{0}(-1,0)$ 에서 그은 기울기가 $\\tan \\left(\\frac{t_{1}\\pi}{12}\\right)=\\tan \\left(\\frac{3 \\pi}{12}\\right)=1$ 인 직선이 원 $x^2+y^2=1$ 과 다시 만나는 점은 $(0,1)$ 이므로, 점 $\\mathrm{P}_1$ 의 좌표는 $(0,1)$ 임을 알 수 있다. 또한 $n$ 이 홀수이면, 점 $\\mathrm{P}_{n}$ 에서 그은 기울기가 $\\tan \\left(\\frac{t_{n+1}\\pi}{12}\\right)=\\tan \\left(\\frac{4 \\pi}{12}\\right)=\\sqrt{3}$ 인 직선이 원 $x^2+y^2=1$ 과 다시 만나는 점이 $\\mathrm{P}_{n+1}$ 이 된다. 이로부터 얻어지는 점들 $\\mathrm{P}_{0}$ , $\\mathrm{P}_{1}$ , $\\cdots$ , $\\mathrm{P}_{9}$ 을 그림으로 나타내면 다음 그림과 같다.",
     "[그림]",
-    "선분 $\\mathrm{P}_{0}P_{1}$ 이 $x$ 축과 이루는 각이 $\\frac{\\pi}{4}$ 이고, 선분 $\\mathrm{P}_{1}P_{2}$ 가 $x$ 축과 이루는 각이 $\\frac{\\pi}{3}$ 이므로, 호 $\\mathrm{P}_{0}P_{2}$ 에 대한 원주각 $\\angle \\mathrm{P}_{0}P_{1}P_{2}=\\frac{\\pi}{12}$ 임을 알 수 있다. 따라서 호 $\\mathrm{P}_{0}P_{2}$ 에 대한 중심각은 $\\frac{\\pi}{6}$ 가 되므로, 호 $\\mathrm{P}_{0}P_{2}$ 의 길이도 $\\frac{\\pi}{6}$ 가 된다. 동일한 방법으로, $1 \\le n \\le 7$ 인 자연수 $n$ 에 대하여, 호 $\\mathrm{P}_{n}\\mathrm{P}_{n+2}$ 에 대한 원주각 $\\angle \\mathrm{P}_{n}\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}=\\frac{\\pi}{12}$ 가 되므로, 호 $\\mathrm{P}_{n}\\mathrm{P}_{n+2}$ 에 대한 중심각은 $\\frac{\\pi}{6}$ 가 되고, 호 $\\mathrm{P}_{n}\\mathrm{P}_{n+2}$ 의 길이 역시 $\\frac{\\pi}{6}$ 로 항상 일정하게 된다."
+    "선분 $\\mathrm{P}_{0}P_{1}$ 이 $x$ 축과 이루는 각이 $\\frac{\\pi}{4}$ 이고, 선분 $\\mathrm{P}_{1}P_{2}$ 가 $x$ 축과 이루는 각이 $\\frac{\\pi}{3}$ 이므로, 호 $\\mathrm{P}_{0}P_{2}$ 에 대한 원주각 $\\angle \\mathrm{P}_{0}P_{1}P_{2}=\\frac{\\pi}{12}$ 임을 알 수 있다. 따라서 호 $\\mathrm{P}_{0}P_{2}$ 에 대한 중심각은 $\\frac{\\pi}{6}$ 가 되므로, 호 $\\mathrm{P}_{0}P_{2}$ 의 길이도 $\\frac{\\pi}{6}$ 가 된다. 동일한 방법으로, $1 \\le n \\le 7$ 인 자연수 $n$ 에 대하여, 호 $\\mathrm{P}{}_{n}\\mathrm{P}_{n+2}$ 에 대한 원주각 $\\angle \\mathrm{P}{}_{n}\\mathrm{P}{}_{n+1}\\mathrm{P}_{n+2}=\\frac{\\pi}{12}$ 가 되므로, 호 $\\mathrm{P}{}_{n}\\mathrm{P}_{n+2}$ 에 대한 중심각은 $\\frac{\\pi}{6}$ 가 되고, 호 $\\mathrm{P}{}_{n}\\mathrm{P}_{n+2}$ 의 길이 역시 $\\frac{\\pi}{6}$ 로 항상 일정하게 된다."
    ],
    "rubric": []
   },
@@ -141,10 +141,10 @@
     "<제시문2>에 주어진 $A(n)$ 의 최댓값을 구하고, 그 이유를 논하시오."
    ],
    "answer": [
-    "$n$ 이 $22$ 보다 큰 경우에는 같은 모양의 도형이 계속 반복되므로, $n \\le 22$ 일 때, $A(n)$ 의 최댓값을 구하면 충분하다. $n=8,9,20,21$ 인 경우에는 $A(n)=0$ 이 된다. $n \\le 22$ 이고, $n \\ne 8,9,20,21$ 이면, 선분 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}$ , 선분 $\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}$ , 선분 $\\mathrm{P}_{n}\\mathrm{P}_{n+2}$ 로 둘러싸인 도형은 원에 내접하는 삼각형이 되므로, $A(n)={{\\frac{\\overline{P_{n}\\mathrm{P}_{n+1}}\\cdot \\overline{\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}}\\cdot \\overline{\\mathrm{P}_{n}\\mathrm{P}_{n+2}}}{4}}}$ 이 됨을 알 수 있다.",
-    "(보충. $A(n)=\\frac{1}{2}\\times \\sin \\frac{\\pi}{12}\\times{\\overline{\\mathrm{P}_{n}\\mathrm{P}_{n+1}}}\\cdot{\\overline{\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}}}=\\frac{{\\overline{P_{n}\\mathrm{P}_{n+1}}}\\cdot{\\overline{\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}}}\\cdot{\\overline{\\mathrm{P}_{n}\\mathrm{P}_{n+2}}}}{4}$",
-    "$\\left(\\because \\frac{{\\overline{\\mathrm{P}_{n}\\mathrm{P}_{n+2}}}}{\\sin \\frac{\\pi}{12}}=2 R,\\sin \\frac{\\pi}{12}=\\frac{{\\overline{\\mathrm{P}_{n}\\mathrm{P}_{n+2}}}}{2 R}\\right)$ )",
-    "[문제2-ⅰ]로부터, 호 $\\mathrm{P}_{n}\\mathrm{P}_{n+2}$ 의 길이가 일정하므로, 선분 $\\mathrm{P}_{n}\\mathrm{P}_{n+2}$ 의 길이도 일정하게 된다. 선분 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}$ 의 길이는 이 선분이 지름이 되는 경우 (즉, 중심각이 $\\pi$ , 원주각이 $\\frac{\\pi}{2}$ 인 경우) 최대가 되고, 그 다음으로는 중심각이 $\\frac{5 \\pi}{6}$ , 원주각이 $\\frac{5 \\pi}{12}$ 인 경우임을 알 수 있다. 선분 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}$ 이 지름이 되는 경우, 선분 $\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}$ 의 원주각이 $\\frac{5 \\pi}{12}$ 임을 관찰할 수 있다. 또한 선분 $\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}$ 가 지름이 되는 경우에는, 선분 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}$ 의 원주각이 $\\frac{5 \\pi}{12}$ 임을 관찰할 수 있다. 따라서 선분 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}$ 또는 선분 $\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}$ 가 지름이 되는 경우(즉, $n=2,3,14,15$ ), $A(n)$ 은 최대가 된다. 이제 삼각형 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}$ 를 지름을 밑변으로 하는 삼각형으로 볼 때, $A(n)=\\frac{1}{2}\\times 2 \\times \\sin \\frac{\\pi}{6}=\\frac{1}{2}$ 이므로, $A(n)$ 의 최댓값은 $\\frac{1}{2}$ 이 된다.",
+    "$n$ 이 $22$ 보다 큰 경우에는 같은 모양의 도형이 계속 반복되므로, $n \\le 22$ 일 때, $A(n)$ 의 최댓값을 구하면 충분하다. $n=8,9,20,21$ 인 경우에는 $A(n)=0$ 이 된다. $n \\le 22$ 이고, $n \\ne 8,9,20,21$ 이면, 선분 $\\mathrm{P}{}_{n}\\mathrm{P}_{n+1}$ , 선분 $\\mathrm{P}{}_{n+1}\\mathrm{P}_{n+2}$ , 선분 $\\mathrm{P}{}_{n}\\mathrm{P}_{n+2}$ 로 둘러싸인 도형은 원에 내접하는 삼각형이 되므로, $A(n)={{\\frac{\\overline{P{}_{n}\\mathrm{P}_{n+1}}\\cdot \\overline{\\mathrm{P}{}_{n+1}\\mathrm{P}_{n+2}}\\cdot \\overline{\\mathrm{P}{}_{n}\\mathrm{P}_{n+2}}}{4}}}$ 이 됨을 알 수 있다.",
+    "(보충. $A(n)=\\frac{1}{2}\\times \\sin \\frac{\\pi}{12}\\times{\\overline{\\mathrm{P}{}_{n}\\mathrm{P}_{n+1}}}\\cdot{\\overline{\\mathrm{P}{}_{n+1}\\mathrm{P}_{n+2}}}=\\frac{{\\overline{P{}_{n}\\mathrm{P}_{n+1}}}\\cdot{\\overline{\\mathrm{P}{}_{n+1}\\mathrm{P}_{n+2}}}\\cdot{\\overline{\\mathrm{P}{}_{n}\\mathrm{P}_{n+2}}}}{4}$",
+    "$\\left(\\because \\frac{{\\overline{\\mathrm{P}{}_{n}\\mathrm{P}_{n+2}}}}{\\sin \\frac{\\pi}{12}}=2 R,\\sin \\frac{\\pi}{12}=\\frac{{\\overline{\\mathrm{P}{}_{n}\\mathrm{P}_{n+2}}}}{2 R}\\right)$ )",
+    "[문제2-ⅰ]로부터, 호 $\\mathrm{P}{}_{n}\\mathrm{P}_{n+2}$ 의 길이가 일정하므로, 선분 $\\mathrm{P}{}_{n}\\mathrm{P}_{n+2}$ 의 길이도 일정하게 된다. 선분 $\\mathrm{P}{}_{n}\\mathrm{P}_{n+1}$ 의 길이는 이 선분이 지름이 되는 경우 (즉, 중심각이 $\\pi$ , 원주각이 $\\frac{\\pi}{2}$ 인 경우) 최대가 되고, 그 다음으로는 중심각이 $\\frac{5 \\pi}{6}$ , 원주각이 $\\frac{5 \\pi}{12}$ 인 경우임을 알 수 있다. 선분 $\\mathrm{P}{}_{n}\\mathrm{P}_{n+1}$ 이 지름이 되는 경우, 선분 $\\mathrm{P}{}_{n+1}\\mathrm{P}_{n+2}$ 의 원주각이 $\\frac{5 \\pi}{12}$ 임을 관찰할 수 있다. 또한 선분 $\\mathrm{P}{}_{n+1}\\mathrm{P}_{n+2}$ 가 지름이 되는 경우에는, 선분 $\\mathrm{P}{}_{n}\\mathrm{P}_{n+1}$ 의 원주각이 $\\frac{5 \\pi}{12}$ 임을 관찰할 수 있다. 따라서 선분 $\\mathrm{P}{}_{n}\\mathrm{P}_{n+1}$ 또는 선분 $\\mathrm{P}{}_{n+1}\\mathrm{P}_{n+2}$ 가 지름이 되는 경우(즉, $n=2,3,14,15$ ), $A(n)$ 은 최대가 된다. 이제 삼각형 $\\mathrm{P}{}_{n}\\mathrm{P}{}_{n+1}\\mathrm{P}_{n+2}$ 를 지름을 밑변으로 하는 삼각형으로 볼 때, $A(n)=\\frac{1}{2}\\times 2 \\times \\sin \\frac{\\pi}{6}=\\frac{1}{2}$ 이므로, $A(n)$ 의 최댓값은 $\\frac{1}{2}$ 이 된다.",
     "(보충. $A(n)=\\frac{1}{2}\\times 2 \\times 2 \\cos \\frac{\\pi}{12}\\sin \\frac{\\pi}{12}=\\frac{1}{2}\\times 2 \\times \\sin \\frac{\\pi}{6}$ )"
    ],
    "rubric": []

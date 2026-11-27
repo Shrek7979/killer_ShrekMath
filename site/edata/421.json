@@ -45,13 +45,13 @@
    "label": "[1-2]",
    "points": null,
    "text": [
-    "$0$ 이상의 서로 다른 두 정수 $m$ , $n$ 에 대하여 $k=|m-n|$ 이라 할 때, 선분 $\\mathrm{P}_{m}\\mathrm{P}_{n}$ 의 길이를 $k$ 와 $b_{k}$ 를 이용하여 나타내시오."
+    "$0$ 이상의 서로 다른 두 정수 $m$ , $n$ 에 대하여 $k=|m-n|$ 이라 할 때, 선분 $\\mathrm{P}{}_{m}\\mathrm{P}_{n}$ 의 길이를 $k$ 와 $b_{k}$ 를 이용하여 나타내시오."
    ],
    "answer": [
     "두 점 $\\mathrm{P}_{m}$ , $\\mathrm{P}_{n}$ 사이의 거리의 제곱은",
     "$(\\cos 2 m \\theta-\\cos 2 n \\theta)^{2}+(\\sin 2 m \\theta-\\sin 2 n \\theta)^{2}=2-2 \\cos 2 k \\theta=4 \\sin^{2}k \\theta$",
     "이므로",
-    "$\\overline{\\mathrm{P}_{m}\\mathrm{P}_{n}}=2|\\sin k \\theta|=\\frac{2|b_{k}|}{5^{k}}$",
+    "$\\overline{\\mathrm{P}{}_{m}\\mathrm{P}_{n}}=2|\\sin k \\theta|=\\frac{2|b_{k}|}{5^{k}}$",
     "이다. ( $b_{k}$ 가 정수이므로 이 길이는 항상 유리수이다.)"
    ],
    "rubric": []

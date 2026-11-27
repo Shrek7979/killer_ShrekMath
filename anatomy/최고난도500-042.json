@@ -83,7 +83,7 @@
   },
   {
    "title": "식",
-   "text": "$$\\sum_{t=0}^{4}(-1)^{4-t}_{4}\\mathrm{C}_{t}(t-1)^{t}t^{6-t}=3^{4}\\times 4^{2}-4 \\times 2^{3}\\times 3^{3}+6 \\times 1^{2}\\times 2^{4}-4 \\times 0+0$$",
+   "text": "$$\\sum_{t=0}^{4}(-1)^{4-t}{}_{4}\\mathrm{C}_{t}(t-1)^{t}t^{6-t}=3^{4}\\times 4^{2}-4 \\times 2^{3}\\times 3^{3}+6 \\times 1^{2}\\times 2^{4}-4 \\times 0+0$$",
    "uses": [
     "C4"
    ]

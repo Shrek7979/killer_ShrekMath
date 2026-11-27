@@ -80,7 +80,7 @@
   },
   {
    "n": 2,
-   "text": "$r=6$ : ${\\mathrm{WBWBWB}}$ , ${\\mathrm{BWBWBW}}$ 의 $2$ 가지, 빨간색 자리는 $_{7}{\\mathrm{C}}_{2}=21$ 이므로 $42$",
+   "text": "$r=6$ : ${\\mathrm{WBWBWB}}$ , ${\\mathrm{BWBWBW}}$ 의 $2$ 가지, 빨간색 자리는 ${}_{7}{\\mathrm{C}}_{2}=21$ 이므로 $42$",
    "uses": [
     "C1"
    ],

@@ -49,7 +49,7 @@
   },
   {
    "title": "분포",
-   "text": "$${\\mathrm{P}}(X=k)=\\frac{_{k-1}{\\mathrm{C}}_{2}}{_{8}{\\mathrm{C}}_{3}}=\\frac{_{k-1}{\\mathrm{C}}_{2}}{56}\\,\\,(k=3,\\,4,\\,\\cdots,\\,8)$$",
+   "text": "$${\\mathrm{P}}(X=k)=\\frac{{}_{k-1}{\\mathrm{C}}_{2}}{{}_{8}{\\mathrm{C}}_{3}}=\\frac{{}_{k-1}{\\mathrm{C}}_{2}}{56}\\,\\,(k=3,\\,4,\\,\\cdots,\\,8)$$",
    "uses": [
     "C1"
    ]

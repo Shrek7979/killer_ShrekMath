@@ -14,7 +14,7 @@
  "body": [
   {
    "t": "eq",
-   "tex": "\\lim_{n \\to \\infty}\\left(\\frac{_{3 n}{\\mathrm{C}}_{n}}{_{2 n}{\\mathrm{C}}_{n}}\\right)^{\\frac{1}{n}}=\\frac{q}{p}"
+   "tex": "\\lim_{n \\to \\infty}\\left(\\frac{{}_{3 n}{\\mathrm{C}}_{n}}{{}_{2 n}{\\mathrm{C}}_{n}}\\right)^{\\frac{1}{n}}=\\frac{q}{p}"
   },
   {
    "t": "p",
@@ -31,7 +31,7 @@
     0,
     0
    ],
-   "text": "$\\lim_{n \\to \\infty}\\left(\\frac{_{3 n}{\\mathrm{C}}_{n}}{_{2 n}{\\mathrm{C}}_{n}}\\right)^{\\frac{1}{n}}=\\frac{q}{p}$",
+   "text": "$\\lim_{n \\to \\infty}\\left(\\frac{{}_{3 n}{\\mathrm{C}}_{n}}{{}_{2 n}{\\mathrm{C}}_{n}}\\right)^{\\frac{1}{n}}=\\frac{q}{p}$",
    "label": "극한",
    "why": "$\\lim\\left(\\frac{{}_{3n}\\mathrm C_n}{{}_{2n}\\mathrm C_n}\\right)^{1/n}=\\frac qp$.",
    "uses": [
@@ -89,7 +89,7 @@
  "steps": [
   {
    "n": 1,
-   "text": "$$\\frac{_{3 n}{\\mathrm{C}}_{n}}{_{2 n}{\\mathrm{C}}_{n}}=\\frac{(3 n)!}{n!(2 n)!}\\times \\frac{n!n!}{(2 n)!}=\\frac{(3 n)!}{(2 n)!}\\div \\frac{(2 n)!}{n!}=\\frac{(2 n+1)(2 n+2)\\cdots(3 n)}{(n+1)(n+2)\\cdots(2 n)}$$",
+   "text": "$$\\frac{{}_{3 n}{\\mathrm{C}}_{n}}{{}_{2 n}{\\mathrm{C}}_{n}}=\\frac{(3 n)!}{n!(2 n)!}\\times \\frac{n!n!}{(2 n)!}=\\frac{(3 n)!}{(2 n)!}\\div \\frac{(2 n)!}{n!}=\\frac{(2 n+1)(2 n+2)\\cdots(3 n)}{(n+1)(n+2)\\cdots(2 n)}$$",
    "uses": [
     "C1"
    ],
@@ -105,7 +105,7 @@
   },
   {
    "n": 3,
-   "text": "$$\\frac{1}{n}\\ln \\frac{_{3 n}{\\mathrm{C}}_{n}}{_{2 n}{\\mathrm{C}}_{n}}=\\frac{1}{n}\\sum_{k=1}^{n}\\left\\{\\ln \\left(2+\\frac{k}{n}\\right)-\\ln \\left(1+\\frac{k}{n}\\right)\\right\\}$$",
+   "text": "$$\\frac{1}{n}\\ln \\frac{{}_{3 n}{\\mathrm{C}}_{n}}{{}_{2 n}{\\mathrm{C}}_{n}}=\\frac{1}{n}\\sum_{k=1}^{n}\\left\\{\\ln \\left(2+\\frac{k}{n}\\right)-\\ln \\left(1+\\frac{k}{n}\\right)\\right\\}$$",
    "uses": [
     "C1"
    ],

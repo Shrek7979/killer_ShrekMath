@@ -26,11 +26,11 @@
    "label": "[2-1]",
    "points": null,
    "text": [
-    "점 $\\mathrm{P}_{n}$ 의 $x$ 좌표를 $x_{n}$ 이라 할 때 $x_{n}$ 을 구하고, 모든 자연수 $n$ 에 대하여 두 선분 $\\mathrm{P}_{n}\\mathrm{Q}_{n}$ , $\\mathrm{Q}_{n}\\mathrm{P}_{n+1}$ 의 길이를 모두 더한 값 $L(m)$ 을 $m$ 에 대한 식으로 나타내시오."
+    "점 $\\mathrm{P}_{n}$ 의 $x$ 좌표를 $x_{n}$ 이라 할 때 $x_{n}$ 을 구하고, 모든 자연수 $n$ 에 대하여 두 선분 $\\mathrm{P}_{n}\\mathrm{Q}_{n}$ , $\\mathrm{Q}{}_{n}\\mathrm{P}_{n+1}$ 의 길이를 모두 더한 값 $L(m)$ 을 $m$ 에 대한 식으로 나타내시오."
    ],
    "answer": [
     "점 $\\mathrm{P}_{n}(x_{n},\\,0)$ 을 지나고 직선 $l$ 에 수직인 직선 $y=-\\frac{1}{m}(x-x_{n})$ 과 $y=m x$ 의 교점을 구하면 $\\mathrm{Q}_{n}\\left(\\frac{x_{n}}{1+m^{2}},\\,\\frac{m x_{n}}{1+m^{2}}\\right)$ 이므로 $x_{n+1}=\\frac{x_{n}}{1+m^{2}}$ 이다. 따라서 수열 $\\{x_{n}\\}$ 은 첫째항이 $1$ 이고 공비가 $r=\\frac{1}{1+m^{2}}$ 인 등비수열이고 $x_{n}=\\left(\\frac{1}{1+m^{2}}\\right)^{n-1}$ 이다.",
-    "점 $\\mathrm{P}_{n}$ 과 직선 $m x-y=0$ 사이의 거리에서 $\\overline{\\mathrm{P}_{n}\\mathrm{Q}_{n}}=\\frac{m x_{n}}{\\sqrt{1+m^{2}}}$ 이고, $\\overline{\\mathrm{Q}_{n}\\mathrm{P}_{n+1}}=\\frac{m x_{n}}{1+m^{2}}$ 이다. $0<r<1$ 이므로 $\\sum_{n=1}^{\\infty}x_{n}=\\frac{1}{1-r}=\\frac{1+m^{2}}{m^{2}}$ 이고",
+    "점 $\\mathrm{P}_{n}$ 과 직선 $m x-y=0$ 사이의 거리에서 $\\overline{\\mathrm{P}_{n}\\mathrm{Q}_{n}}=\\frac{m x_{n}}{\\sqrt{1+m^{2}}}$ 이고, $\\overline{\\mathrm{Q}{}_{n}\\mathrm{P}_{n+1}}=\\frac{m x_{n}}{1+m^{2}}$ 이다. $0<r<1$ 이므로 $\\sum_{n=1}^{\\infty}x_{n}=\\frac{1}{1-r}=\\frac{1+m^{2}}{m^{2}}$ 이고",
     "$L(m)=\\left(\\frac{m}{\\sqrt{1+m^{2}}}+\\frac{m}{1+m^{2}}\\right)\\cdot \\frac{1+m^{2}}{m^{2}}=\\frac{1+\\sqrt{1+m^{2}}}{m}$",
     "이다."
    ],
@@ -41,10 +41,10 @@
    "label": "[2-2]",
    "points": null,
    "text": [
-    "모든 자연수 $n$ 에 대하여 삼각형 $\\mathrm{P}_{n}\\mathrm{Q}_{n}\\mathrm{P}_{n+1}$ 의 넓이를 모두 더한 값을 $S(m)$ 이라고 하자. $S(m)$ 을 $m$ 에 대한 식으로 나타내고, $S(m)$ 의 최댓값을 구하시오."
+    "모든 자연수 $n$ 에 대하여 삼각형 $\\mathrm{P}_{n}\\mathrm{Q}{}_{n}\\mathrm{P}_{n+1}$ 의 넓이를 모두 더한 값을 $S(m)$ 이라고 하자. $S(m)$ 을 $m$ 에 대한 식으로 나타내고, $S(m)$ 의 최댓값을 구하시오."
    ],
    "answer": [
-    "삼각형 $\\mathrm{P}_{n}\\mathrm{Q}_{n}\\mathrm{P}_{n+1}$ 은 각 $\\mathrm{P}_{n+1}$ 이 직각인 직각삼각형이고 $\\overline{\\mathrm{P}_{n}\\mathrm{P}_{n+1}}=x_{n}-x_{n+1}=\\frac{m^{2}x_{n}}{1+m^{2}}$ , $\\overline{\\mathrm{Q}_{n}\\mathrm{P}_{n+1}}=\\frac{m x_{n}}{1+m^{2}}$ 이므로 넓이는 $\\frac{m^{3}x_{n}^{2}}{2(1+m^{2})^{2}}$ 이다. 수열 $\\{x_{n}^{2}\\}$ 은 공비가 $r^{2}$ 인 등비수열이므로",
+    "삼각형 $\\mathrm{P}_{n}\\mathrm{Q}{}_{n}\\mathrm{P}_{n+1}$ 은 각 $\\mathrm{P}_{n+1}$ 이 직각인 직각삼각형이고 $\\overline{\\mathrm{P}{}_{n}\\mathrm{P}_{n+1}}=x_{n}-x_{n+1}=\\frac{m^{2}x_{n}}{1+m^{2}}$ , $\\overline{\\mathrm{Q}{}_{n}\\mathrm{P}_{n+1}}=\\frac{m x_{n}}{1+m^{2}}$ 이므로 넓이는 $\\frac{m^{3}x_{n}^{2}}{2(1+m^{2})^{2}}$ 이다. 수열 $\\{x_{n}^{2}\\}$ 은 공비가 $r^{2}$ 인 등비수열이므로",
     "$\\sum_{n=1}^{\\infty}x_{n}^{2}=\\frac{1}{1-r^{2}}=\\frac{(1+m^{2})^{2}}{m^{2}(m^{2}+2)}$",
     "이고, 따라서 $S(m)=\\frac{m}{2(m^{2}+2)}$ 이다.",
     "$m>0$ 이므로 산술평균과 기하평균의 관계에서 $m+\\frac{2}{m}\\ge 2 \\sqrt{2}$ 이고 등호는 $m=\\sqrt{2}$ 일 때 성립한다. $S(m)=\\frac{1}{2 \\left(m+\\frac{2}{m}\\right)}$ 이므로 $S(m)$ 의 최댓값은 $\\frac{1}{4 \\sqrt{2}}=\\frac{\\sqrt{2}}{8}$ 이다."
@@ -70,11 +70,11 @@
    "label": "[2-4]",
    "points": null,
    "text": [
-    "모든 자연수 $n$ 에 대하여 삼각형 $\\mathrm{P}_{n}\\mathrm{Q}_{n}\\mathrm{P}_{n+1}$ 에 내접하는 원의 넓이를 모두 더한 값을 $T(m)$ 이라고 하자. $T(m)$ 을 $m$ 에 대한 식으로 나타내고, 두 극한값 $\\lim_{m \\to \\infty}m^{2}T(m)$ 과 $\\lim_{m \\to 0+}\\frac{T(m)}{m^{2}}$ 을 각각 구하시오.",
+    "모든 자연수 $n$ 에 대하여 삼각형 $\\mathrm{P}_{n}\\mathrm{Q}{}_{n}\\mathrm{P}_{n+1}$ 에 내접하는 원의 넓이를 모두 더한 값을 $T(m)$ 이라고 하자. $T(m)$ 을 $m$ 에 대한 식으로 나타내고, 두 극한값 $\\lim_{m \\to \\infty}m^{2}T(m)$ 과 $\\lim_{m \\to 0+}\\frac{T(m)}{m^{2}}$ 을 각각 구하시오.",
     "※ 제시문을 읽고 문제에 답하시오."
    ],
    "answer": [
-    "직각을 낀 두 변의 길이가 $u$ , $v$ 이고 빗변의 길이가 $w$ 인 직각삼각형의 내접원의 반지름의 길이는 $\\frac{u+v-w}{2}$ 이다. 삼각형 $\\mathrm{P}_{n}\\mathrm{Q}_{n}\\mathrm{P}_{n+1}$ 에서 $u=\\frac{m x_{n}}{1+m^{2}}$ , $v=\\frac{m^{2}x_{n}}{1+m^{2}}$ , $w=\\frac{m x_{n}}{\\sqrt{1+m^{2}}}$ 이므로 내접원의 반지름의 길이는",
+    "직각을 낀 두 변의 길이가 $u$ , $v$ 이고 빗변의 길이가 $w$ 인 직각삼각형의 내접원의 반지름의 길이는 $\\frac{u+v-w}{2}$ 이다. 삼각형 $\\mathrm{P}_{n}\\mathrm{Q}{}_{n}\\mathrm{P}_{n+1}$ 에서 $u=\\frac{m x_{n}}{1+m^{2}}$ , $v=\\frac{m^{2}x_{n}}{1+m^{2}}$ , $w=\\frac{m x_{n}}{\\sqrt{1+m^{2}}}$ 이므로 내접원의 반지름의 길이는",
     "$\\frac{m x_{n}}{2(1+m^{2})}\\left(1+m-\\sqrt{1+m^{2}}\\right)$",
     "이다. 문제 2-2에서 구한 $\\sum_{n=1}^{\\infty}x_{n}^{2}$ 의 값을 이용하면",
     "$T(m)=\\frac{\\pi m^{2}\\left(1+m-\\sqrt{1+m^{2}}\\right)^{2}}{4(1+m^{2})^{2}}\\cdot \\frac{(1+m^{2})^{2}}{m^{2}(m^{2}+2)}=\\frac{\\pi \\left(1+m-\\sqrt{1+m^{2}}\\right)^{2}}{4(m^{2}+2)}$",

@@ -115,7 +115,7 @@
   },
   {
    "n": 4,
-   "text": "$$\\mathrm{E}(Y)=\\sum_{k=0}^{4}\\frac{_{4}\\mathrm{C}_{k}}{k+1}p^{k}q^{4-k}=\\frac{1}{5 p}\\sum_{k=0}^{4}_{5}\\mathrm{C}_{k+1}p^{k+1}q^{4-k}=\\frac{1-q^{5}}{5 p}$$",
+   "text": "$$\\mathrm{E}(Y)=\\sum_{k=0}^{4}\\frac{{}_{4}\\mathrm{C}_{k}}{k+1}p^{k}q^{4-k}=\\frac{1}{5 p}\\sum_{k=0}^{4}{}_{5}\\mathrm{C}_{k+1}p^{k+1}q^{4-k}=\\frac{1-q^{5}}{5 p}$$",
    "uses": [
     "C2"
    ],

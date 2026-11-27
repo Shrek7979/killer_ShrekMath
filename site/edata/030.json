@@ -51,7 +51,7 @@
    "answer": [
     "[그림]",
     "선분 $\\mathrm{A}_{k-1}\\mathrm{A}_{k}$ 의 중점을 $\\mathrm{C}_{k}$ 라 하자. $\\angle \\mathrm{A}_{k-1}O C_{k}=\\delta$ 라 하면 $\\angle \\mathrm{A}_{k-1}\\ O A_{k}=\\frac{\\pi}{3 n}$ 이므로 $\\delta=\\frac{\\pi}{6 n}$ 이다.",
-    "${\\overline{\\mathrm{OA}_{k-1}}}=1$ 이므로 $\\left.{\\overline{\\mathrm{A}_{k-1}\\mathrm{C}_{k}}}=\\sin \\delta \\right.$ 이다.",
+    "${\\overline{\\mathrm{OA}_{k-1}}}=1$ 이므로 $\\left.{\\overline{\\mathrm{A}{}_{k-1}\\mathrm{C}_{k}}}=\\sin \\delta \\right.$ 이다.",
     "그러므로 ${\\overline{\\mathrm{A}_{k-1}\\mathrm{A}_{k}}}=2 \\sin \\delta$ …… ③",
     "$\\angle \\mathrm{A}_{0}O A_{k}=t_{k}$ 라 하면 $t_{k}=\\frac{k}{3 n}$ 이고, $\\angle \\mathrm{A}_{0}O C_{k}=\\theta_{k}$ 라 하면 $t_{k-1}=\\theta_{k}-\\delta$ 이다.",
     "한편 넓이가 $T_{k}$ 인 직사각형이 선분 $\\mathrm{B}_{k-1}\\mathrm{B}_{k}$ 와 만나는 점을 $\\mathrm{D}_{k}$ 라 하면,",

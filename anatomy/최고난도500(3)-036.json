@@ -55,14 +55,14 @@
   },
   {
    "title": "이등변",
-   "text": "꼭짓점 $\\mathrm{B}_{n}$ 에서 내접원에 그은 두 접선의 길이는 같으므로 삼각형 $\\mathrm{B}_{n}\\mathrm{A}_{n+1}\\mathrm{C}_{n+1}$ 은 이등변삼각형이고, 점 $\\mathrm{A}_{n+1}$ 에서의 밑각의 크기는 $90-\\frac{\\beta_{n}}{2}$ (도)이다. 같은 방법으로 삼각형 $\\mathrm{C}_{n}\\mathrm{A}_{n+1}\\mathrm{B}_{n+1}$ 에서 점 $\\mathrm{A}_{n+1}$ 에서의 밑각의 크기는 $90-\\frac{\\gamma_{n}}{2}$ (도)이다.",
+   "text": "꼭짓점 $\\mathrm{B}_{n}$ 에서 내접원에 그은 두 접선의 길이는 같으므로 삼각형 $\\mathrm{B}_{n}\\mathrm{A}{}_{n+1}\\mathrm{C}_{n+1}$ 은 이등변삼각형이고, 점 $\\mathrm{A}_{n+1}$ 에서의 밑각의 크기는 $90-\\frac{\\beta_{n}}{2}$ (도)이다. 같은 방법으로 삼각형 $\\mathrm{C}_{n}\\mathrm{A}_{n+1}\\mathrm{B}_{n+1}$ 에서 점 $\\mathrm{A}_{n+1}$ 에서의 밑각의 크기는 $90-\\frac{\\gamma_{n}}{2}$ (도)이다.",
    "uses": [
     "C2"
    ]
   },
   {
    "title": "각의 점화식",
-   "text": "점 $\\mathrm{A}_{n+1}$ 은 변 $\\mathrm{B}_{n}\\mathrm{C}_{n}$ 위에 있으므로 $\\alpha_{n+1}=180-\\left(90-\\frac{\\beta_{n}}{2}\\right)-\\left(90-\\frac{\\gamma_{n}}{2}\\right)=\\frac{\\beta_{n}+\\gamma_{n}}{2}=90-\\frac{\\alpha_{n}}{2}$ 이다. 마찬가지로 $\\beta_{n+1}=90-\\frac{\\beta_{n}}{2}$ , $\\gamma_{n+1}=90-\\frac{\\gamma_{n}}{2}$ 이다.",
+   "text": "점 $\\mathrm{A}_{n+1}$ 은 변 $\\mathrm{B}{}_{n}\\mathrm{C}_{n}$ 위에 있으므로 $\\alpha_{n+1}=180-\\left(90-\\frac{\\beta_{n}}{2}\\right)-\\left(90-\\frac{\\gamma_{n}}{2}\\right)=\\frac{\\beta_{n}+\\gamma_{n}}{2}=90-\\frac{\\alpha_{n}}{2}$ 이다. 마찬가지로 $\\beta_{n+1}=90-\\frac{\\beta_{n}}{2}$ , $\\gamma_{n+1}=90-\\frac{\\gamma_{n}}{2}$ 이다.",
    "uses": [
     "C2"
    ]

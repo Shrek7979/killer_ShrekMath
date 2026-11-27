@@ -155,7 +155,7 @@
   "variants": [
    [
     "변형 · 합 $8$, $y=\\frac13x$",
-    "세 점 $\\mathrm{P}_1(0,0)$, $\\mathrm{P}_2(6,0)$, $\\mathrm{P}_3(p,q)$ $(q>0)$에서 시작하여 선분 $\\mathrm{P}_n\\mathrm{P}_{n+1}$의 중점 $\\mathrm{M}_n$과 $\\mathrm{P}_{n+2}$를 잇는 선분의 중점을 $\\mathrm{P}_{n+3}$으로 정한다. $\\mathrm{P}_n$은 한 점 $\\mathrm{L}$에 한없이 가까워지고, 삼각형 $\\mathrm{P}_n\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}$의 넓이 $T_n$에 대하여 $\\sum T_n=8$, $\\mathrm{L}$은 직선 $y=\\frac13x$ 위에 있다. $4(p+q)$의 값을 구하시오.",
+    "세 점 $\\mathrm{P}_1(0,0)$, $\\mathrm{P}_2(6,0)$, $\\mathrm{P}_3(p,q)$ $(q>0)$에서 시작하여 선분 $\\mathrm{P}_n\\mathrm{P}_{n+1}$의 중점 $\\mathrm{M}_n$과 $\\mathrm{P}_{n+2}$를 잇는 선분의 중점을 $\\mathrm{P}_{n+3}$으로 정한다. $\\mathrm{P}_n$은 한 점 $\\mathrm{L}$에 한없이 가까워지고, 삼각형 $\\mathrm{P}_n\\mathrm{P}{}_{n+1}\\mathrm{P}_{n+2}$의 넓이 $T_n$에 대하여 $\\sum T_n=8$, $\\mathrm{L}$은 직선 $y=\\frac13x$ 위에 있다. $4(p+q)$의 값을 구하시오.",
     20,
     "$4q=8$ → $q=2$, $\\mathrm{L}\\left(\\frac{12+4p}7,\\frac87\\right)$ → $p=3$."
    ]

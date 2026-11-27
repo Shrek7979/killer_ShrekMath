@@ -184,7 +184,7 @@
   },
   {
    "n": 8,
-   "text": "$t=0$ : $_{8}{\\mathrm{C}}_{3}\\times 1=56$ / $t=1$ : $_{6}{\\mathrm{C}}_{3}\\times_{3}{\\mathrm{H}}_{1}=20 \\times 3=60$ / $t=2$ : $_{4}{\\mathrm{C}}_{3}\\times_{3}{\\mathrm{H}}_{2}=4 \\times 6=24$ / $t=3$ : $u-1=2<3$ 이므로 $0$",
+   "text": "$t=0$ : ${}_{8}{\\mathrm{C}}_{3}\\times 1=56$ / $t=1$ : ${}_{6}{\\mathrm{C}}_{3}\\times_{3}{\\mathrm{H}}_{1}=20 \\times 3=60$ / $t=2$ : ${}_{4}{\\mathrm{C}}_{3}\\times_{3}{\\mathrm{H}}_{2}=4 \\times 6=24$ / $t=3$ : $u-1=2<3$ 이므로 $0$",
    "uses": [
     "C3"
    ],

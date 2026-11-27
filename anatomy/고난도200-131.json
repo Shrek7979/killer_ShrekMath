@@ -35,7 +35,7 @@
  "steps": [
   {
    "title": "계수",
-   "text": "$x^{k}$ 의 계수를 $a_{k}=_{n}{\\mathrm{C}}_{k}2^{k}$ $(0 \\le k \\le n)$ 라 하면",
+   "text": "$x^{k}$ 의 계수를 $a_{k}={}_{n}{\\mathrm{C}}_{k}2^{k}$ $(0 \\le k \\le n)$ 라 하면",
    "uses": [
     "C1"
    ]

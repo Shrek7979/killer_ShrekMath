@@ -68,7 +68,7 @@
   },
   {
    "title": "정사각형",
-   "text": "정사각형 $\\mathrm{A}_{n}\\mathrm{B}_{n}\\mathrm{C}_{n}\\mathrm{D}_{n}$ 의 한 변의 길이를 $s_{n}$ 이라 하자. 네 귀퉁이의 직각삼각형은 모두 합동이므로 $\\mathrm{A}_{n+1}\\mathrm{B}_{n+1}\\mathrm{C}_{n+1}\\mathrm{D}_{n+1}$ 도 정사각형이다.",
+   "text": "정사각형 $\\mathrm{A}_{n}\\mathrm{B}{}_{n}\\mathrm{C}_{n}\\mathrm{D}_{n}$ 의 한 변의 길이를 $s_{n}$ 이라 하자. 네 귀퉁이의 직각삼각형은 모두 합동이므로 $\\mathrm{A}_{n+1}\\mathrm{B}{}_{n+1}\\mathrm{C}_{n+1}\\mathrm{D}_{n+1}$ 도 정사각형이다.",
    "uses": [
     "C1",
     "C2"

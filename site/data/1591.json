@@ -113,7 +113,7 @@
   },
   {
    "n": 5,
-   "text": "[핵심 관문] 두 포물선에 대하여 $\\mathrm{H}(a,\\,4)$ 는 공통이고 $\\overline{\\mathrm{QF}_{1}}=\\overline{\\mathrm{QF}_{2}}=\\overline{\\mathrm{QH}}=R$ 이므로 세 점 $\\mathrm{F}_{1}$ , $\\mathrm{F}_{2}$ , $\\mathrm{H}$ 는 중심이 $\\mathrm{Q}$ 이고 반지름의 길이가 $R$ 인 원 위에 있다. 두 접선은 각각 $\\mathrm{F}_{1}\\mathrm{H}$ , $\\mathrm{F}_{2}\\mathrm{H}$ 에 수직이므로, 두 접선이 서로 수직일 조건은 $\\angle \\mathrm{F}_{1}\\mathrm{HF}_{2}=\\frac{\\pi}{2}$ , 곧 원주각이 직각이므로 $\\overline{\\mathrm{F}_{1}\\mathrm{F}_{2}}$ 가 이 원의 지름인 것이다. 즉 $\\mathrm{Q}$ 는 선분 $\\mathrm{F}_{1}\\mathrm{F}_{2}$ 의 중점이다.",
+   "text": "[핵심 관문] 두 포물선에 대하여 $\\mathrm{H}(a,\\,4)$ 는 공통이고 $\\overline{\\mathrm{QF}_{1}}=\\overline{\\mathrm{QF}_{2}}=\\overline{\\mathrm{QH}}=R$ 이므로 세 점 $\\mathrm{F}_{1}$ , $\\mathrm{F}_{2}$ , $\\mathrm{H}$ 는 중심이 $\\mathrm{Q}$ 이고 반지름의 길이가 $R$ 인 원 위에 있다. 두 접선은 각각 $\\mathrm{F}{}_{1}\\mathrm{H}$ , $\\mathrm{F}{}_{2}\\mathrm{H}$ 에 수직이므로, 두 접선이 서로 수직일 조건은 $\\angle \\mathrm{F}_{1}\\mathrm{HF}_{2}=\\frac{\\pi}{2}$ , 곧 원주각이 직각이므로 $\\overline{\\mathrm{F}_{1}\\mathrm{F}_{2}}$ 가 이 원의 지름인 것이다. 즉 $\\mathrm{Q}$ 는 선분 $\\mathrm{F}_{1}\\mathrm{F}_{2}$ 의 중점이다.",
    "uses": [],
    "title": ""
   },

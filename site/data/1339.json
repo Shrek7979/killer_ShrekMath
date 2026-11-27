@@ -24,18 +24,18 @@
   {
    "t": "box",
    "items": [
-    "$n$ 을 $3$ 으로 나눈 나머지가 $1$ , $2$ , $0$ 일 때, 점 $\\mathrm{P}_{n+1}$ 은 각각 선분 $\\mathrm{P}_{n}\\mathrm{B}$ , 선분 $\\mathrm{P}_{n}\\mathrm{C}$ , 선분 $\\mathrm{P}_{n}\\mathrm{A}$ 의 중점이다."
+    "$n$ 을 $3$ 으로 나눈 나머지가 $1$ , $2$ , $0$ 일 때, 점 $\\mathrm{P}_{n+1}$ 은 각각 선분 $\\mathrm{P}_{n}\\mathrm{B}$ , 선분 $\\mathrm{P}{}_{n}\\mathrm{C}$ , 선분 $\\mathrm{P}_{n}\\mathrm{A}$ 의 중점이다."
    ]
   },
   {
    "t": "p",
    "sents": [
-    "삼각형 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}$ 의 넓이를 $S_{n}$ 이라 하고,"
+    "삼각형 $\\mathrm{P}{}_{n}\\mathrm{P}{}_{n+1}\\mathrm{P}_{n+2}$ 의 넓이를 $S_{n}$ 이라 하고,"
    ]
   },
   {
    "t": "eq",
-   "tex": "S=\\lim_{n \\to \\infty}S_{n},\\,\\,\\,\\,L=\\sum_{m=0}^{\\infty}\\overline{\\mathrm{P}_{3 m+1}\\mathrm{P}_{3 m+4}}"
+   "tex": "S=\\lim_{n \\to \\infty}S_{n},\\,\\,\\,\\,L=\\sum_{m=0}^{\\infty}\\overline{\\mathrm{P}{}_{3 m+1}\\mathrm{P}_{3 m+4}}"
   },
   {
    "t": "p",
@@ -64,7 +64,7 @@
     1,
     0
    ],
-   "text": "$n$ 을 $3$ 으로 나눈 나머지가 $1$ , $2$ , $0$ 일 때, 점 $\\mathrm{P}_{n+1}$ 은 각각 선분 $\\mathrm{P}_{n}\\mathrm{B}$ , 선분 $\\mathrm{P}_{n}\\mathrm{C}$ , 선분 $\\mathrm{P}_{n}\\mathrm{A}$ 의 중점이다.",
+   "text": "$n$ 을 $3$ 으로 나눈 나머지가 $1$ , $2$ , $0$ 일 때, 점 $\\mathrm{P}_{n+1}$ 은 각각 선분 $\\mathrm{P}_{n}\\mathrm{B}$ , 선분 $\\mathrm{P}{}_{n}\\mathrm{C}$ , 선분 $\\mathrm{P}_{n}\\mathrm{A}$ 의 중점이다.",
    "label": "규칙",
    "why": "",
    "uses": [
@@ -78,7 +78,7 @@
     2,
     0
    ],
-   "text": "삼각형 $\\mathrm{P}_{n}\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}$ 의 넓이를 $S_{n}$ 이라 하고,",
+   "text": "삼각형 $\\mathrm{P}{}_{n}\\mathrm{P}{}_{n+1}\\mathrm{P}_{n+2}$ 의 넓이를 $S_{n}$ 이라 하고,",
    "label": "$S_n$",
    "why": "",
    "uses": [
@@ -91,7 +91,7 @@
     3,
     0
    ],
-   "text": "$S=\\lim_{n \\to \\infty}S_{n},\\,\\,\\,\\,L=\\sum_{m=0}^{\\infty}\\overline{\\mathrm{P}_{3 m+1}\\mathrm{P}_{3 m+4}}$",
+   "text": "$S=\\lim_{n \\to \\infty}S_{n},\\,\\,\\,\\,L=\\sum_{m=0}^{\\infty}\\overline{\\mathrm{P}{}_{3 m+1}\\mathrm{P}_{3 m+4}}$",
    "label": "두 값",
    "why": "$S$, $L$.",
    "uses": [
@@ -204,7 +204,7 @@
   {
    "h": "변형 · $\\mathrm{B}(28,0)$, $\\mathrm{C}(0,28)$",
    "body": [
-    "세 점 $\\mathrm{A}(0,0)$, $\\mathrm{B}(28,0)$, $\\mathrm{C}(0,28)$에 대하여 $\\mathrm{P}_1=\\mathrm{A}$이고, $n$을 $3$으로 나눈 나머지가 $1,2,0$일 때 $\\mathrm{P}_{n+1}$은 각각 선분 $\\mathrm{P}_n\\mathrm{B}$, $\\mathrm{P}_n\\mathrm{C}$, $\\mathrm{P}_n\\mathrm{A}$의 중점이다. 삼각형 $\\mathrm{P}_n\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}$의 넓이를 $S_n$, $S=\\lim S_n$, $L=\\sum_{m=0}^\\infty\\overline{\\mathrm{P}_{3m+1}\\mathrm{P}_{3m+4}}$이라 할 때, $S+L^2$의 값을 구하시오."
+    "세 점 $\\mathrm{A}(0,0)$, $\\mathrm{B}(28,0)$, $\\mathrm{C}(0,28)$에 대하여 $\\mathrm{P}_1=\\mathrm{A}$이고, $n$을 $3$으로 나눈 나머지가 $1,2,0$일 때 $\\mathrm{P}_{n+1}$은 각각 선분 $\\mathrm{P}_n\\mathrm{B}$, $\\mathrm{P}_n\\mathrm{C}$, $\\mathrm{P}_n\\mathrm{A}$의 중점이다. 삼각형 $\\mathrm{P}_n\\mathrm{P}{}_{n+1}\\mathrm{P}_{n+2}$의 넓이를 $S_n$, $S=\\lim S_n$, $L=\\sum_{m=0}^\\infty\\overline{\\mathrm{P}{}_{3m+1}\\mathrm{P}_{3m+4}}$이라 할 때, $S+L^2$의 값을 구하시오."
    ],
    "answer": 136,
    "hint": "$2$배 닮음: $S=56$, $L^2=80$."

@@ -78,7 +78,7 @@
   },
   {
    "title": "식",
-   "text": "$$_{3}{\\mathrm{C}}_{2}\\times \\left(\\frac{1}{2}\\right)^{2}\\times \\left(\\frac{1}{4}+\\frac{1}{8}\\right)=\\frac{9}{32}=\\frac{144}{512}$$",
+   "text": "$${}_{3}{\\mathrm{C}}_{2}\\times \\left(\\frac{1}{2}\\right)^{2}\\times \\left(\\frac{1}{4}+\\frac{1}{8}\\right)=\\frac{9}{32}=\\frac{144}{512}$$",
    "uses": [
     "C5"
    ]

@@ -98,7 +98,7 @@
  "steps": [
   {
    "n": 1,
-   "text": "$\\frac{{\\mathrm{P}}(X=k+1)}{{\\mathrm{P}}(X=k)}=\\frac{_{n}{\\mathrm{C}}_{k+1}}{_{n}{\\mathrm{C}}_{k}}\\times \\frac{1}{3}=\\frac{n-k}{3(k+1)}$ 이다.",
+   "text": "$\\frac{{\\mathrm{P}}(X=k+1)}{{\\mathrm{P}}(X=k)}=\\frac{{}_{n}{\\mathrm{C}}_{k+1}}{{}_{n}{\\mathrm{C}}_{k}}\\times \\frac{1}{3}=\\frac{n-k}{3(k+1)}$ 이다.",
    "uses": [
     "C1"
    ],

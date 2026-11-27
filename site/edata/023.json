@@ -46,7 +46,7 @@
    "answer": [
     "다섯 자리의 비밀번호의 각 자리를 $\\alpha,\\beta,\\gamma,\\delta,\\varepsilon$ 이라고 하자. 숫자는 $0$ 부터 $9$ 까지의 정수로 구성되어 있으므로, 각각의 $\\alpha,\\beta,\\gamma,\\delta,\\varepsilon$ 은 각각 $0$ 이상 $9$ 이하의 한 자리 정수가 된다. 또한, 문제에서 그 합은 $38$ 이라고 하였으므로 $\\alpha+\\beta+\\gamma+\\delta+\\varepsilon=38$ 이다.",
     "추가로, $\\alpha_{1}=9-\\alpha,\\beta_{1}=9-\\beta,\\gamma_{1}=9-\\gamma,\\delta_{1}=9-\\delta,\\varepsilon_{1}=9-\\varepsilon$ 이라고 놓으면, 한 자리 정수인 $\\alpha_{1},\\beta_{1},\\gamma_{1},\\delta_{1},\\varepsilon_{1}$ 는 $\\alpha_{1}+\\beta_{1}+\\gamma_{1}+\\delta_{1}+\\varepsilon_{1}=7$ 을 만족시키다. 따라서 $\\alpha_{1},\\beta_{1},\\gamma_{1},\\delta_{1},\\varepsilon_{1}$ 이 될 수 있는 총 경우의 수는 서로 다른 $5$ 개에서 $7$ 개를 택하는 중복조합의 수와 같으므로",
-    "$_{5}\\mathrm{H}_{7}=_{11}\\mathrm{C}_{7}=\\frac{11!}{4!\\times 7!}=11 \\times 10 \\times 3=330$",
+    "${}_{5}\\mathrm{H}_{7}={}_{11}\\mathrm{C}_{7}=\\frac{11!}{4!\\times 7!}=11 \\times 10 \\times 3=330$",
     "이다. $\\alpha,\\beta,\\gamma,\\delta,\\varepsilon$ 가 될 수 있는 총 경우의 $\\alpha_{1},\\beta_{1},\\gamma_{1},\\delta_{1},\\varepsilon_{1}$ 가 될 수 있는 총 경우의 수와 같으므로, 정답은 $330$ 이다."
    ],
    "rubric": [

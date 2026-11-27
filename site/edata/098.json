@@ -28,7 +28,7 @@
   "두 직선 $\\mathrm{B}_1 C_1$ 과 $\\mathrm{B}_{2}C_{2}$ 가 서로 평행하고 두 직선 $\\mathrm{C}_{1}D_{1}$ 과",
   "$\\mathrm{C}_{2}D_{2}$ 가 서로 평행하며, 사각형 $\\mathrm{A}_{2}B_{2}C_{2}D_{2}$ 는 정사각형이다.",
   "정사각형 $\\mathrm{A}_{2}B_{2}C_{2}D_{2}$ 에도 같은 방법을 적용하여, 선분 $\\mathrm{B}_{2}C_{2}$ 의 중점을 $\\mathrm{F}_{2}$ , 선분 $\\mathrm{C}_{2}D_{2}$ 의 중점을 $\\mathrm{G}_{2}$ 라 하자. 정사각형 $\\mathrm{A}_{2}B_{2}C_{2}D_{2}$ 에 내접하는 원 위의 점 $\\mathrm{E}_{2}$ 는",
-  "$\\angle \\mathrm{E}_{1}G_{1}F_{1}=\\angle \\mathrm{E}_{2}G_{2}F_{2}$ 를 만족시킨다. 이와 같은 과정을 반복하여 정사각형 $\\mathrm{A}_{n}\\mathrm{B}_{n}\\mathrm{C}_{n}\\mathrm{D}_{n}$ 과 세 점 $\\mathrm{E}_{n}$ , $\\mathrm{F}_{n}$ , $\\mathrm{G}_{n}$ $(n \\ge 3)$ 을 얻을 수 있다. 모든 자연수 $n$ 에 대하여 정사각형 $\\mathrm{A}_{n}\\mathrm{B}_{n}\\mathrm{C}_{n}\\mathrm{D}_{n}$ 의 넓이를 $S_{n}$ 이라 하자. $\\cos \\theta=\\frac{\\sqrt{5}}{5}$ 일 때 급수 $\\sum_{n=1}^{\\infty}S_n$ 의 합을 구하시오.",
+  "$\\angle \\mathrm{E}_{1}G_{1}F_{1}=\\angle \\mathrm{E}_{2}G_{2}F_{2}$ 를 만족시킨다. 이와 같은 과정을 반복하여 정사각형 $\\mathrm{A}_{n}\\mathrm{B}{}_{n}\\mathrm{C}_{n}\\mathrm{D}_{n}$ 과 세 점 $\\mathrm{E}_{n}$ , $\\mathrm{F}_{n}$ , $\\mathrm{G}_{n}$ $(n \\ge 3)$ 을 얻을 수 있다. 모든 자연수 $n$ 에 대하여 정사각형 $\\mathrm{A}_{n}\\mathrm{B}{}_{n}\\mathrm{C}_{n}\\mathrm{D}_{n}$ 의 넓이를 $S_{n}$ 이라 하자. $\\cos \\theta=\\frac{\\sqrt{5}}{5}$ 일 때 급수 $\\sum_{n=1}^{\\infty}S_n$ 의 합을 구하시오.",
   "3. ${\\overline{A B}}={\\overline{B C}}={\\overline{D E}}={\\overline{E F}}=3$ , $\\angle A B C=\\angle D E F=\\frac{\\pi}{2}$ , ${\\overline{A D}}=6$ 인 [그림] 삼각기둥 $\\mathrm{ABC}-D E F$ 가 있다.",
   "점 $\\mathrm{P}$ 는 선분 $\\mathrm{AC}$ 를 $2:1$ 로 내분하는 점이고, 점 $\\mathrm{M}$ 은",
   "선분 $\\mathrm{DF}$ 의 중점이다. 선분 $\\mathrm{DE}$ 위의 점 $\\mathrm{Q}$ 는 ${\\overline{E Q}}=t(0<t<3)$ ,",

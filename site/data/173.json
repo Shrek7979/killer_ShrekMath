@@ -104,7 +104,7 @@
   },
   {
    "n": 3,
-   "text": "따라서 ${\\mathrm{F}}$ 는 선분 ${\\mathrm{T}}_{1}{\\mathrm{T}}_{2}$ 의 중점이고 $\\overline{{\\mathrm{FP}}}=\\overline{{\\mathrm{F}}{\\mathrm{T}}_{1}}=\\overline{{\\mathrm{F}}{\\mathrm{T}}_{2}}$ 이므로 $\\angle{\\mathrm{T}}_{1}{\\mathrm{P}}{\\mathrm{T}}_{2}=\\frac{\\pi}{2}$ 이다. $\\overline{{\\mathrm{T}}_{1}{\\mathrm{T}}_{2}}=10$ , $\\overline{{\\mathrm{FP}}}=5$ 이고 $y_{1}=\\frac{8 \\times 6}{10}=\\frac{24}{5}$ 이다.",
+   "text": "따라서 ${\\mathrm{F}}$ 는 선분 ${\\mathrm{T}}_{1}{\\mathrm{T}}_{2}$ 의 중점이고 $\\overline{{\\mathrm{FP}}}=\\overline{{\\mathrm{F}}{\\mathrm{T}}_{1}}=\\overline{{\\mathrm{F}}{\\mathrm{T}}_{2}}$ 이므로 $\\angle{\\mathrm{T}}{}_{1}{\\mathrm{P}}{\\mathrm{T}}_{2}=\\frac{\\pi}{2}$ 이다. $\\overline{{\\mathrm{T}}_{1}{\\mathrm{T}}_{2}}=10$ , $\\overline{{\\mathrm{FP}}}=5$ 이고 $y_{1}=\\frac{8 \\times 6}{10}=\\frac{24}{5}$ 이다.",
    "uses": [
     "C3"
    ],

@@ -65,7 +65,7 @@
   },
   {
    "title": "확률",
-   "text": "$${\\mathrm{P}}(\\overline{X}=1)=_{8}{\\mathrm{C}}_{4}\\left(\\frac{1}{2}\\right)^{8}=\\frac{70}{256}=\\frac{35}{128}$$",
+   "text": "$${\\mathrm{P}}(\\overline{X}=1)={}_{8}{\\mathrm{C}}_{4}\\left(\\frac{1}{2}\\right)^{8}=\\frac{70}{256}=\\frac{35}{128}$$",
    "uses": [
     "C4"
    ]

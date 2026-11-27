@@ -186,7 +186,7 @@
   },
   {
    "n": 2,
-   "text": "$${\\mathrm{A}}:\\,\\frac{3 \\times 2}{_{5}{\\mathrm{C}}_{2}}=\\frac{3}{5},\\,\\,\\,{\\mathrm{B}}:\\,\\frac{n(6-n)}{_{6}{\\mathrm{C}}_{2}}=\\frac{n(6-n)}{15}$$",
+   "text": "$${\\mathrm{A}}:\\,\\frac{3 \\times 2}{{}_{5}{\\mathrm{C}}_{2}}=\\frac{3}{5},\\,\\,\\,{\\mathrm{B}}:\\,\\frac{n(6-n)}{{}_{6}{\\mathrm{C}}_{2}}=\\frac{n(6-n)}{15}$$",
    "uses": [
     "C1"
    ],

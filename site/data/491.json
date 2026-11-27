@@ -26,7 +26,7 @@
    "t": "p",
    "sents": [
     "과 원점 ${\\mathrm{O}}$ 가 있다.",
-    "삼각형 ${\\mathrm{OP}}_{k-1}{\\mathrm{P}}_{k}$ 의 넓이를 $T_{k}$ $(k=1,\\,2,\\,\\cdots,\\,n)$ 라 할 때, $\\lim_{n \\to \\infty}\\sum_{k=1}^{n}T_{k}=p e+q$ 이다.",
+    "삼각형 ${\\mathrm{OP}}{}_{k-1}{\\mathrm{P}}_{k}$ 의 넓이를 $T_{k}$ $(k=1,\\,2,\\,\\cdots,\\,n)$ 라 할 때, $\\lim_{n \\to \\infty}\\sum_{k=1}^{n}T_{k}=p e+q$ 이다.",
     "$100(p-q)$ 의 값을 구하시오.",
     "(단, $p$ , $q$ 는 유리수이다.) [4점]"
    ]
@@ -74,7 +74,7 @@
     2,
     1
    ],
-   "text": "삼각형 ${\\mathrm{OP}}_{k-1}{\\mathrm{P}}_{k}$ 의 넓이를 $T_{k}$ $(k=1,\\,2,\\,\\cdots,\\,n)$ 라 할 때, $\\lim_{n \\to \\infty}\\sum_{k=1}^{n}T_{k}=p e+q$ 이다.",
+   "text": "삼각형 ${\\mathrm{OP}}{}_{k-1}{\\mathrm{P}}_{k}$ 의 넓이를 $T_{k}$ $(k=1,\\,2,\\,\\cdots,\\,n)$ 라 할 때, $\\lim_{n \\to \\infty}\\sum_{k=1}^{n}T_{k}=p e+q$ 이다.",
    "label": "넓이와 극한",
    "why": "$T_k=\\triangle\\mathrm{OP_{k-1}P_k}$, $\\lim\\sum T_k=pe+q$.",
    "uses": [
@@ -130,7 +130,7 @@
  "steps": [
   {
    "n": 1,
-   "text": "$0<x<1$ 에서 $\\left(\\frac{e^{x}}{x}\\right)'=\\frac{(x-1)e^{x}}{x^{2}}<0$ 이므로 직선 ${\\mathrm{OP}}_{k}$ 의 기울기는 $k$ 가 커질수록 작아진다. 즉 반직선 ${\\mathrm{OP}}_{0}$ ( $y$ 축), ${\\mathrm{OP}}_{1}$ , $\\cdots$ , ${\\mathrm{OP}}_{n}$ 이 차례로 시계 방향으로 놓이므로 삼각형 ${\\mathrm{OP}}_{k-1}{\\mathrm{P}}_{k}$ 들은 겹치지 않고, 넓이의 합은 다각형 ${\\mathrm{OP}}_{0}{\\mathrm{P}}_{1}\\cdots{\\mathrm{P}}_{n}$ 의 넓이이다.",
+   "text": "$0<x<1$ 에서 $\\left(\\frac{e^{x}}{x}\\right)'=\\frac{(x-1)e^{x}}{x^{2}}<0$ 이므로 직선 ${\\mathrm{OP}}_{k}$ 의 기울기는 $k$ 가 커질수록 작아진다. 즉 반직선 ${\\mathrm{OP}}_{0}$ ( $y$ 축), ${\\mathrm{OP}}_{1}$ , $\\cdots$ , ${\\mathrm{OP}}_{n}$ 이 차례로 시계 방향으로 놓이므로 삼각형 ${\\mathrm{OP}}{}_{k-1}{\\mathrm{P}}_{k}$ 들은 겹치지 않고, 넓이의 합은 다각형 ${\\mathrm{OP}}{}_{0}{\\mathrm{P}}_{1}\\cdots{\\mathrm{P}}_{n}$ 의 넓이이다.",
    "uses": [
     "C2"
    ],
@@ -138,7 +138,7 @@
   },
   {
    "n": 2,
-   "text": "이 다각형의 넓이는 꺾은선 ${\\mathrm{P}}_{0}{\\mathrm{P}}_{1}\\cdots{\\mathrm{P}}_{n}$ 과 $x$ 축 및 두 직선 $x=0$ , $x=1$ 로 둘러싸인 부분의 넓이에서 세 점 ${\\mathrm{O}}$ , $(1,\\,0)$ , ${\\mathrm{P}}_{n}(1,\\,e)$ 를 꼭짓점으로 하는 삼각형의 넓이 $\\frac{e}{2}$ 를 뺀 것이다. 앞의 넓이는 사다리꼴 넓이의 합",
+   "text": "이 다각형의 넓이는 꺾은선 ${\\mathrm{P}}{}_{0}{\\mathrm{P}}_{1}\\cdots{\\mathrm{P}}_{n}$ 과 $x$ 축 및 두 직선 $x=0$ , $x=1$ 로 둘러싸인 부분의 넓이에서 세 점 ${\\mathrm{O}}$ , $(1,\\,0)$ , ${\\mathrm{P}}_{n}(1,\\,e)$ 를 꼭짓점으로 하는 삼각형의 넓이 $\\frac{e}{2}$ 를 뺀 것이다. 앞의 넓이는 사다리꼴 넓이의 합",
    "uses": [
     "C4"
    ],

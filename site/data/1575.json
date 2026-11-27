@@ -198,7 +198,7 @@
   },
   {
    "n": 6,
-   "text": "$$N_{k}=_{4}\\mathrm{C}_{k-1}\\times G(k-1)\\times G(5-k)$$",
+   "text": "$$N_{k}={}_{4}\\mathrm{C}_{k-1}\\times G(k-1)\\times G(5-k)$$",
    "uses": [],
    "title": ""
   },

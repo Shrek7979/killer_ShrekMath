@@ -66,7 +66,7 @@
   },
   {
    "title": "넓이",
-   "text": "원점과 직선 $4 x+3 y=25$ 사이의 거리는 $5$ 이므로 $\\overline{{\\mathrm{P}}_{1}{\\mathrm{P}}_{2}}=2 \\sqrt{169-25}=24$ 이다. 따라서 삼각형 ${\\mathrm{OP}}_{1}{\\mathrm{P}}_{2}$ 의 넓이는 $\\frac{1}{2}\\times 24 \\times 5=60$ 이다.",
+   "text": "원점과 직선 $4 x+3 y=25$ 사이의 거리는 $5$ 이므로 $\\overline{{\\mathrm{P}}{}_{1}{\\mathrm{P}}_{2}}=2 \\sqrt{169-25}=24$ 이다. 따라서 삼각형 ${\\mathrm{OP}}{}_{1}{\\mathrm{P}}_{2}$ 의 넓이는 $\\frac{1}{2}\\times 24 \\times 5=60$ 이다.",
    "uses": [
     "C4"
    ]

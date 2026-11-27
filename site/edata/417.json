@@ -42,9 +42,9 @@
    ],
    "answer": [
     "$X$ 는 이항분포 $\\mathrm{B}\\left(n,\\,\\frac{1}{3}\\right)$ 을 따르므로 구하는 기댓값을 $E_{n}$ 이라 하면",
-    "$E_{n}=\\sum_{k}k \\cdot{_{n}\\mathrm{C}_{k}}\\left(\\frac{1}{3}\\right)^{k}\\left(\\frac{2}{3}\\right)^{n-k}$",
-    "이다. (단, 합은 $1 \\le k \\le n$ 인 홀수 $k$ 전체에 대한 것이다.) $k \\cdot{_{n}\\mathrm{C}_{k}}=n \\cdot{_{n-1}\\mathrm{C}_{k-1}}$ 이므로 $j=k-1$ 이라 하면",
-    "$E_{n}=\\frac{n}{3}\\sum_{j}{_{n-1}\\mathrm{C}_{j}}\\left(\\frac{1}{3}\\right)^{j}\\left(\\frac{2}{3}\\right)^{n-1-j}$",
+    "$E_{n}=\\sum_{k}k \\cdot{{}_{n}\\mathrm{C}_{k}}\\left(\\frac{1}{3}\\right)^{k}\\left(\\frac{2}{3}\\right)^{n-k}$",
+    "이다. (단, 합은 $1 \\le k \\le n$ 인 홀수 $k$ 전체에 대한 것이다.) $k \\cdot{{}_{n}\\mathrm{C}_{k}}=n \\cdot{{}_{n-1}\\mathrm{C}_{k-1}}$ 이므로 $j=k-1$ 이라 하면",
+    "$E_{n}=\\frac{n}{3}\\sum_{j}{{}_{n-1}\\mathrm{C}_{j}}\\left(\\frac{1}{3}\\right)^{j}\\left(\\frac{2}{3}\\right)^{n-1-j}$",
     "이다. (단, 합은 $0 \\le j \\le n-1$ 인 짝수 $j$ 전체에 대한 것이다.) 이 합은 동전 $n-1$ 개를 던질 때 앞면의 개수가 짝수일 확률이므로, $n \\ge 2$ 일 때 $1-r_{n-1}=\\frac{1}{2}\\left\\{1+\\left(\\frac{1}{3}\\right)^{n-1}\\right\\}$ 이다. $n=1$ 일 때 이 합은 $1$ 이고 같은 식의 값과 일치한다. 따라서",
     "$E_{n}=\\frac{n}{6}\\left\\{1+\\left(\\frac{1}{3}\\right)^{n-1}\\right\\}=\\frac{n \\left(3^{n-1}+1 \\right)}{2 \\cdot 3^{n}}$",
     "이다."

@@ -75,7 +75,7 @@
   },
   {
    "title": "포함배제",
-   "text": "$$6 \\times \\frac{1}{27}-_{6}\\mathrm{C}_{2}\\times \\frac{1}{15^{3}}=\\frac{2}{9}-\\frac{1}{225}=\\frac{49}{225}$$",
+   "text": "$$6 \\times \\frac{1}{27}-{}_{6}\\mathrm{C}_{2}\\times \\frac{1}{15^{3}}=\\frac{2}{9}-\\frac{1}{225}=\\frac{49}{225}$$",
    "uses": [
     "C2"
    ]

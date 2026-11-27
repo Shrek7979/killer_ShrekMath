@@ -73,7 +73,7 @@
   },
   {
    "title": "지름이 $\\mathrm{OP}$인 원",
-   "text": "핵심 관문: $\\angle \\mathrm{OH}_{1}\\mathrm{P}=\\angle \\mathrm{OH}_{2}\\mathrm{P}=90^{\\circ}$ 이므로 네 점 $\\mathrm{O}$ , $\\mathrm{H}_{1}$ , $\\mathrm{P}$ , $\\mathrm{H}_{2}$ 는 지름이 $\\mathrm{OP}$ 인 원 위에 있고, 사인법칙에서 $\\overline{\\mathrm{H}_{1}\\mathrm{H}_{2}}=\\overline{\\mathrm{OP}}\\times \\sin(\\angle \\mathrm{H}_{1}\\mathrm{OH}_{2})$ 이다.",
+   "text": "핵심 관문: $\\angle \\mathrm{OH}{}_{1}\\mathrm{P}=\\angle \\mathrm{OH}{}_{2}\\mathrm{P}=90^{\\circ}$ 이므로 네 점 $\\mathrm{O}$ , $\\mathrm{H}_{1}$ , $\\mathrm{P}$ , $\\mathrm{H}_{2}$ 는 지름이 $\\mathrm{OP}$ 인 원 위에 있고, 사인법칙에서 $\\overline{\\mathrm{H}{}_{1}\\mathrm{H}_{2}}=\\overline{\\mathrm{OP}}\\times \\sin(\\angle \\mathrm{H}_{1}\\mathrm{OH}_{2})$ 이다.",
    "uses": [
     "C1"
    ]
@@ -95,7 +95,7 @@
   },
   {
    "title": "답",
-   "text": "$x_{1}=5$ 이면 $y_{1}^{2}=4 \\left(\\frac{25}{9}-1 \\right)=\\frac{64}{9}$ , $\\overline{\\mathrm{OP}}=\\sqrt{25+\\frac{64}{9}}=\\frac{17}{3}$ 이므로 $\\overline{\\mathrm{H}_{1}\\mathrm{H}_{2}}=\\frac{17}{3}\\times \\frac{12}{13}=\\frac{68}{13}$ 이고, 구하는 값은 $68$ 이다.",
+   "text": "$x_{1}=5$ 이면 $y_{1}^{2}=4 \\left(\\frac{25}{9}-1 \\right)=\\frac{64}{9}$ , $\\overline{\\mathrm{OP}}=\\sqrt{25+\\frac{64}{9}}=\\frac{17}{3}$ 이므로 $\\overline{\\mathrm{H}{}_{1}\\mathrm{H}_{2}}=\\frac{17}{3}\\times \\frac{12}{13}=\\frac{68}{13}$ 이고, 구하는 값은 $68$ 이다.",
    "uses": [
     "C5"
    ]

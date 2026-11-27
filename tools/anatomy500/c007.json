@@ -744,7 +744,7 @@
   "variants": [
    [
     "변형 · 기울기 $-\\frac1{(n+1)(n+2)}$",
-    "곡선 $y=\\frac1x$ $(x>0)$ 위의 점 $\\mathrm{P}_n\\left(x_n,\\frac1{x_n}\\right)$이 모든 $n$에 대하여 직선 $\\mathrm{P}_n\\mathrm{P}_{n+1}$의 기울기가 $-\\frac1{(n+1)(n+2)}$이다. 삼각형 $\\mathrm{P}_n\\mathrm{P}_{n+1}\\mathrm{P}_{n+2}$의 넓이를 $T_n$이라 하고 $\\sum T_n$이 수렴할 때, $x_{10}+120\\sum_{n=1}^\\infty T_n$의 값을 구하시오.",
+    "곡선 $y=\\frac1x$ $(x>0)$ 위의 점 $\\mathrm{P}_n\\left(x_n,\\frac1{x_n}\\right)$이 모든 $n$에 대하여 직선 $\\mathrm{P}_n\\mathrm{P}_{n+1}$의 기울기가 $-\\frac1{(n+1)(n+2)}$이다. 삼각형 $\\mathrm{P}_n\\mathrm{P}{}_{n+1}\\mathrm{P}_{n+2}$의 넓이를 $T_n$이라 하고 $\\sum T_n$이 수렴할 때, $x_{10}+120\\sum_{n=1}^\\infty T_n$의 값을 구하시오.",
     21,
     "$x_n=n+1$, $T_n=\\frac1{(n+1)(n+2)(n+3)}$, 합 $\\frac1{12}$. $11+10$."
    ]

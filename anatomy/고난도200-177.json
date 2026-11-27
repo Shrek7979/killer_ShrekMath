@@ -51,7 +51,7 @@
   },
   {
    "title": "분포",
-   "text": "$${\\mathrm{P}}(X=d)=\\frac{n-d}{_{n}{\\mathrm{C}}_{2}}$$",
+   "text": "$${\\mathrm{P}}(X=d)=\\frac{n-d}{{}_{n}{\\mathrm{C}}_{2}}$$",
    "uses": [
     "C1"
    ]

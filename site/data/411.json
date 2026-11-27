@@ -117,7 +117,7 @@
   },
   {
    "n": 2,
-   "text": "$$_{3}{\\mathrm{C}}_{j}\\times_{4-w-1}{\\mathrm{C}}_{j-1}\\times_{4-b-1}{\\mathrm{C}}_{2-j}$$",
+   "text": "$${}_{3}{\\mathrm{C}}_{j}\\times_{4-w-1}{\\mathrm{C}}_{j-1}\\times_{4-b-1}{\\mathrm{C}}_{2-j}$$",
    "uses": [
     "C3",
     "C4"

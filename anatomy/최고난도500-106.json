@@ -76,7 +76,7 @@
   },
   {
    "title": "이항",
-   "text": "$$\\mathrm{P}(X-1=j)=_{n-1}\\mathrm{C}_{j}\\left(\\frac{2}{3}\\right)^{j}\\left(\\frac{1}{3}\\right)^{n-1-j}\\,\\,\\,(j=0,\\,1,\\,\\cdots,\\,n-1)$$",
+   "text": "$$\\mathrm{P}(X-1=j)={}_{n-1}\\mathrm{C}_{j}\\left(\\frac{2}{3}\\right)^{j}\\left(\\frac{1}{3}\\right)^{n-1-j}\\,\\,\\,(j=0,\\,1,\\,\\cdots,\\,n-1)$$",
    "uses": [
     "C2"
    ]

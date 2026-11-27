@@ -111,7 +111,7 @@
   },
   {
    "n": 3,
-   "text": "$n(S)=1$ : $_{4}{\\mathrm{C}}_{1}\\times 1 \\times 1^{3}=4$",
+   "text": "$n(S)=1$ : ${}_{4}{\\mathrm{C}}_{1}\\times 1 \\times 1^{3}=4$",
    "uses": [
     "C1"
    ],
@@ -119,7 +119,7 @@
   },
   {
    "n": 4,
-   "text": "$n(S)=2$ : $_{4}{\\mathrm{C}}_{2}\\times 2 \\times 2^{2}=48$",
+   "text": "$n(S)=2$ : ${}_{4}{\\mathrm{C}}_{2}\\times 2 \\times 2^{2}=48$",
    "uses": [
     "C1"
    ],
@@ -127,7 +127,7 @@
   },
   {
    "n": 5,
-   "text": "$n(S)=3$ : $_{4}{\\mathrm{C}}_{3}\\times 4 \\times 3^{1}=48$",
+   "text": "$n(S)=3$ : ${}_{4}{\\mathrm{C}}_{3}\\times 4 \\times 3^{1}=48$",
    "uses": [
     "C1"
    ],
