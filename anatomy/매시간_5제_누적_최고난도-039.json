@@ -1,0 +1,158 @@
+{
+ "wrong": "예상 오답 — 두 접선이 수직인 조건을 기울기 곱으로 직접 계산하다 미지수가 너무 많아진 경우",
+ "intro": [
+  "초점은 원 $|\\mathrm F|=4$ 위, $\\mathrm Q$를 지나면 $\\overline{\\mathrm{QF}}=4-b$인 원 위.",
+  "접선은 $\\angle\\mathrm{FQH}$의 이등분선 → 수직 조건 ⇔ $\\mathrm F_1\\mathrm F_2$가 지름."
+ ],
+ "conds": {
+  "C1": {
+   "label": "$T$",
+   "why": "준선 $y=4$, 원점을 지나는 포물선.",
+   "uses": [
+    1,
+    2
+   ]
+  },
+  "C2": {
+   "label": "조건",
+   "why": "$\\mathrm Q(a,b)$를 지나는 것은 두 개, 접선은 수직.",
+   "uses": [
+    1,
+    3,
+    4,
+    5,
+    8
+   ]
+  },
+  "C3": {
+   "label": "거리",
+   "why": "$\\overline{\\mathrm F_1\\mathrm F_2}=\\frac{10}3$.",
+   "uses": [
+    6
+   ]
+  },
+  "C4": {
+   "label": "묻는 것",
+   "why": "$a^2=\\frac qp$; $p+q$.",
+   "uses": [
+    7,
+    9
+   ]
+  },
+  "C5": {
+   "label": "서로소",
+   "why": "기약분수.",
+   "uses": [
+    9
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "포물선의 정의",
+   "p": [
+    "초점까지 = 준선까지."
+   ]
+  },
+  {
+   "h": "접선의 반사 성질",
+   "p": [
+    "접선은 $\\angle\\mathrm{FQH}$를 이등분."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 준선을 공유하는 포물선들이 원점을 지난다는 조건을 '초점이 반지름 4인 원 위'로, 점 Q를 지난다는 조건을 '초점이 Q 중심·반지름 4−b인 원 위'로 바꾸고, Q에서의 접선이 FH에 수직(∠FQH의 이등분선)임을 이용해 두 접선의 수직을 '∠F₁HF₂=90°', 곧 'Q가 두 초점의 중점'으로 바꾸어 피타고라스 정리로 Q를 정하는 것",
+   "uses": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "title": "초점의 원",
+   "text": "[초점의 자취] 준선이 $y=4$ 이고 초점이 $\\mathrm{F}$ 인 포물선이 $\\mathrm{O}$ 를 지나려면 포물선의 정의에 의하여 $\\overline{\\mathrm{OF}}$ 가 $\\mathrm{O}$ 와 준선 사이의 거리 $4$ 와 같아야 한다. 따라서 $T$ 의 포물선의 초점은 원 $C$ : $x^{2}+y^{2}=16$ 위의 점 중 준선 위의 점 $(0,\\,4)$ 가 아닌 점이고, 거꾸로 그런 점마다 $T$ 의 포물선이 하나씩 있다. 이때 초점은 준선의 아래쪽에 있으므로 포물선 위의 점은 모두 준선의 아래쪽에 있다.",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "두 원",
+   "text": "따라서 $b<4$ 이고, 초점이 $\\mathrm{F}$ 인 $T$ 의 포물선이 $\\mathrm{Q}$ 를 지날 조건은 $\\overline{\\mathrm{QF}}=4-b$ 이다. $R=4-b$ 라 하면 $\\mathrm{F}_{1}$ , $\\mathrm{F}_{2}$ 는 원 $C$ 와 중심이 $\\mathrm{Q}$ 이고 반지름의 길이가 $R$ 인 원의 두 교점이다. 특히 $\\overline{\\mathrm{OF}_{1}}=\\overline{\\mathrm{OF}_{2}}=4$ , $\\overline{\\mathrm{QF}_{1}}=\\overline{\\mathrm{QF}_{2}}=R$ 이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "접선 기울기",
+   "text": "[접선의 성질] 초점이 $\\mathrm{F}(p,\\,q)$ 인 $T$ 의 포물선은 $(x-p)^{2}+(y-q)^{2}=(4-y)^{2}$ , 곧 $y=-\\frac{(x-p)^{2}}{2(4-q)}+\\frac{4+q}{2}$ 로 이차함수의 그래프이다 $(q<4)$ . 이 포물선 위의 점 $\\mathrm{Q}(a,\\,b)$ 에서의 접선의 기울기는 미분하여 $-\\frac{a-p}{4-q}$ 이고, $\\mathrm{Q}$ 에서 준선에 내린 수선의 발 $\\mathrm{H}(a,\\,4)$ 에 대하여 $\\vec{\\mathrm{FH}}=(a-p,\\,4-q)$ 이므로 $(1,\\,-\\frac{a-p}{4-q})\\cdot \\vec{\\mathrm{FH}}=0$ 이다. 즉 $\\mathrm{Q}$ 에서의 접선은 $\\mathrm{Q}$ 를 지나고 선분 $\\mathrm{FH}$ 에 수직인 직선이다. 포물선의 정의에서 $\\overline{\\mathrm{QF}}=\\overline{\\mathrm{QH}}$ 이므로 이 직선은 이등변삼각형 $\\mathrm{QFH}$ 의 꼭지각 $\\angle \\mathrm{FQH}$ 를 이등분한다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "지름",
+   "text": "[핵심 관문] 두 포물선에 대하여 $\\mathrm{H}(a,\\,4)$ 는 공통이고 $\\overline{\\mathrm{QF}_{1}}=\\overline{\\mathrm{QF}_{2}}=\\overline{\\mathrm{QH}}=R$ 이므로 세 점 $\\mathrm{F}_{1}$ , $\\mathrm{F}_{2}$ , $\\mathrm{H}$ 는 중심이 $\\mathrm{Q}$ 이고 반지름의 길이가 $R$ 인 원 위에 있다. 두 접선은 각각 $\\mathrm{F}{}_{1}\\mathrm{H}$ , $\\mathrm{F}{}_{2}\\mathrm{H}$ 에 수직이므로, 두 접선이 서로 수직일 조건은 $\\angle \\mathrm{F}_{1}\\mathrm{HF}_{2}=\\frac{\\pi}{2}$ , 곧 원주각이 직각이므로 $\\overline{\\mathrm{F}_{1}\\mathrm{F}_{2}}$ 가 이 원의 지름인 것이다. 즉 $\\mathrm{Q}$ 는 선분 $\\mathrm{F}_{1}\\mathrm{F}_{2}$ 의 중점이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "$R$, $b$",
+   "text": "따라서 $\\overline{\\mathrm{F}_{1}\\mathrm{F}_{2}}=2 R=\\frac{10}{3}$ 에서 $R=\\frac{5}{3}$ , $b=4-R=\\frac{7}{3}$ 이다. 또 이등변삼각형 $\\mathrm{OF}_{1}F_{2}$ 에서 $\\mathrm{Q}$ 는 밑변의 중점이므로 $\\mathrm{OQ}\\perp \\mathrm{F}_{1}\\mathrm{F}_{2}$ 이고",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "$a^2$",
+   "text": "$$\\overline{\\mathrm{OQ}}^{2}=4^{2}-R^{2}=16-\\frac{25}{9}=\\frac{119}{9},\\,\\,\\,a^{2}=\\frac{119}{9}-\\left(\\frac{7}{3}\\right)^{2}=\\frac{70}{9}$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "역확인",
+   "text": "이다. 거꾸로 $\\mathrm{Q}\\left(\\frac{\\sqrt{70}}{3},\\,\\frac{7}{3}\\right)$ 이면 $4-\\frac{5}{3}<\\overline{\\mathrm{OQ}}=\\frac{\\sqrt{119}}{3}<4+\\frac{5}{3}$ 이어서 두 원은 두 점에서 만나고, 점 $(0,\\,4)$ 와 $\\mathrm{Q}$ 사이의 거리 $\\frac{\\sqrt{95}}{3}$ 은 $\\frac{5}{3}$ 이 아니므로 $\\mathrm{Q}$ 를 지나는 $T$ 의 포물선은 정확히 두 개이다. 또 $\\mathrm{Q}$ 를 지나고 $\\mathrm{OQ}$ 에 수직인 직선 위에서 $\\mathrm{Q}$ 로부터 거리가 $\\frac{5}{3}$ 인 두 점은 원점으로부터 거리가 $\\sqrt{\\frac{119}{9}+\\frac{25}{9}}=4$ 이므로 두 원의 교점 $\\mathrm{F}_{1}$ , $\\mathrm{F}_{2}$ 이고, $\\mathrm{Q}$ 는 그 중점이므로 위의 관문에 의해 두 접선은 수직이다.",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $p=9$ , $q=70$ 이고 $p+q=79$ 이다.",
+   "uses": [
+    "C4",
+    "C5"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$b<4$",
+   "cond": "C2",
+   "text": [
+    "$\\overline{\\mathrm{QF}}=4-b>0$."
+   ]
+  },
+  {
+   "h": "직교",
+   "cond": "C2",
+   "text": [
+    "$\\mathrm H$를 지나는 반지름 $R$ 원에서 $\\angle\\mathrm F_1\\mathrm H\\mathrm F_2=90^\\circ$와 연결."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\overline{\\mathrm F_1\\mathrm F_2}=\\frac{24}5$",
+   "body": [
+    "(같은 집합 $T$에 대하여) 점 $\\mathrm Q(a,b)\\,(a>0)$를 지나는 $T$의 포물선이 정확히 두 개이고 $\\mathrm Q$에서의 두 접선이 서로 수직이며, 두 포물선의 초점 사이 거리가 $\\frac{24}5$이다. $a^2=\\frac qp$일 때, $p+q$의 값을 구하시오. (단, $p$, $q$는 서로소인 자연수)"
+   ],
+   "answer": 217,
+   "hint": "$R=\\frac{12}5$, $b=\\frac85$, $a^2=\\frac{256}{25}-\\frac{64}{25}$."
+  }
+ ],
+ "line": "준선 공유 포물선 → 초점의 두 원 + 반사 성질."
+}

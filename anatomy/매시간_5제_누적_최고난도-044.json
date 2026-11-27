@@ -1,0 +1,170 @@
+{
+ "wrong": "예상 오답 — 경로 길이를 특정 점 $\\mathrm P$에서 계산해 $a$를 구하려다 막히거나, 선분 $\\mathrm{PF}$가 쌍곡선의 다른 가지와 만난다고 본 경우",
+ "intro": [
+  "$\\overline{\\mathrm{AP}}+\\overline{\\mathrm{PQ}}+\\overline{\\mathrm{QF'}}=(16-x)+(x+4)-\\overline{\\mathrm{QF}}+\\overline{\\mathrm{QF}}+2a=20+2a$.",
+  "$h(\\mathrm X)=\\overline{\\mathrm{XF'}}-\\overline{\\mathrm{XF}}$가 선분 위에서 $\\mathrm F$ 쪽으로 증가 → 만날 조건 $h(\\mathrm P)\\le2a$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "두 곡선",
+   "why": "포물선 $C_1$(초점 원점, 준선 $x=-4$), 쌍곡선 $C_2$(초점 $\\mathrm F$, $\\mathrm F'(-6,0)$, 주축 $2a$).",
+   "uses": [
+    1
+   ]
+  },
+  "C2": {
+   "label": "점",
+   "why": "$\\mathrm Q$, $\\mathrm A$의 정의.",
+   "uses": [
+    2
+   ]
+  },
+  "C3": {
+   "label": "어떤 점",
+   "why": "만나는 어떤 $\\mathrm P$에서.",
+   "uses": [
+    4
+   ]
+  },
+  "C4": {
+   "label": "경로",
+   "why": "$=25$.",
+   "uses": [
+    3,
+    4
+   ]
+  },
+  "C6": {
+   "label": "호",
+   "why": "만나는 $\\mathrm P$ 전체 = 호 $\\mathrm R_1\\mathrm R_2$.",
+   "uses": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "C7": {
+   "label": "묻는 것",
+   "why": "$\\overline{\\mathrm R_1\\mathrm R_2}^2$.",
+   "uses": [
+    10
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "포물선·쌍곡선 정의",
+   "p": [
+    "$\\overline{\\mathrm{PF}}=x+4$, $\\overline{\\mathrm{QF'}}-\\overline{\\mathrm{QF}}=2a$."
+   ]
+  },
+  {
+   "h": "사잇값 정리",
+   "p": [
+    "연속함수 $h$."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 초점 F를 공유하는 포물선과 쌍곡선에서 두 정의를 이어 붙이면 A→P→Q→F' 의 꺾인 경로 길이가 P에 무관한 20+2a가 되어 '어떤 P' 하나의 정보로 a가 정해지고, 선분 위에서 거리의 차가 F 쪽으로 갈수록 커진다는 삼각형의 성질과 사잇값 정리로 교점이 생기는 호를 정의만으로 구하는 것",
+   "uses": [
+    "C1"
+   ]
+  },
+  {
+   "title": "경로",
+   "text": "[관문 1: 경로의 길이는 P에 무관] $\\mathrm{P}(x,\\,y)$ 라 하면 포물선의 정의에서 $\\overline{\\mathrm{PF}}=x+4$ 이다. $\\mathrm{Q}$ 는 선분 $\\mathrm{PF}$ 위에 있으므로 $\\overline{\\mathrm{PQ}}=\\overline{\\mathrm{PF}}-\\overline{\\mathrm{QF}}$ 이다. 또 아래에서 보듯 $\\mathrm{Q}$ 는 $\\mathrm{F}$ 에 가까운 가지 위에 있어 쌍곡선의 정의에서 $\\overline{\\mathrm{QF'}}-\\overline{\\mathrm{QF}}=2 a$ 이다. 따라서",
+   "uses": [
+    "C2"
+   ]
+  },
+  {
+   "title": "식",
+   "text": "$$\\overline{\\mathrm{AP}}+\\overline{\\mathrm{PQ}}+\\overline{\\mathrm{QF'}}=(16-x)+(x+4)-\\overline{\\mathrm{QF}}+\\overline{\\mathrm{QF}}+2 a=20+2 a$$",
+   "uses": [
+    "C4"
+   ]
+  },
+  {
+   "title": "$a$",
+   "text": "로 $\\mathrm{P}$ 에 무관하다(아래에서 구할 범위에서 $x<16$ ). 따라서 $20+2 a=25$ , $a=\\frac{5}{2}$ 이다.",
+   "uses": [
+    "C3",
+    "C4"
+   ]
+  },
+  {
+   "title": "$h$",
+   "text": "[관문 2: 만나는 조건] 평면 위의 점 $\\mathrm{X}$ 에 대하여 $h(\\mathrm{X})=\\overline{\\mathrm{XF'}}-\\overline{\\mathrm{XF}}$ 라 하자. 선분 $\\mathrm{PF}$ 위의 점 $\\mathrm{X}$ 에 대하여 $\\overline{\\mathrm{XF}}=\\overline{\\mathrm{PF}}-\\overline{\\mathrm{PX}}$ 이고 삼각형의 성질에서 $\\overline{\\mathrm{XF'}}\\ge \\overline{\\mathrm{PF'}}-\\overline{\\mathrm{PX}}$ 이므로 $h(\\mathrm{X})\\ge h(\\mathrm{P})$ 이다. 곧 $h$ 는 $\\mathrm{P}$ 에서 $\\mathrm{F}$ 쪽으로 갈수록 줄지 않으며(등호는 $\\mathrm{X}$ 가 선분 $\\mathrm{PF'}$ 위에 있을 때뿐인데, $\\mathrm{X}\\ne \\mathrm{P}$ 이면 그러려면 $\\mathrm{F}$ 와 $\\mathrm{F'}$ 가 $\\mathrm{P}$ 에서 같은 쪽 방향에 있어야 하므로 일어나지 않는다. 따라서 $h$ 는 $\\mathrm{P}$ 에서 $\\mathrm{F}$ 쪽으로 갈수록 증가한다), $h(\\mathrm{F})=6$ 이다.",
+   "uses": [
+    "C6"
+   ]
+  },
+  {
+   "title": "가지",
+   "text": "포물선 위에서 $h(\\mathrm{P})>0$ 이므로 선분 $\\mathrm{PF}$ 는 $h=-2 a$ 인 가지와 만나지 않는다. $h(\\mathrm{P})\\le 5$ 이면 사잇값 정리에 의해 $h=5$ 인 점, 곧 $C_{2}$ 위의 점이 선분 위에 정확히 하나 있고, $h(\\mathrm{P})>5$ 이면 선분 위의 모든 점에서 $h>5$ 이므로 만나지 않는다.",
+   "uses": [
+    "C6"
+   ]
+  },
+  {
+   "title": "부등식",
+   "text": "[관문 3: 호의 끝점] $h(\\mathrm{P})\\le 5$ 는 $\\overline{\\mathrm{PF'}}\\le x+9$ 와 같다. $\\overline{\\mathrm{PF'}}^{2}=(x+6)^{2}+y^{2}$ 이고 $y^{2}=\\overline{\\mathrm{PF}}^{2}-x^{2}=(x+4)^{2}-x^{2}=8 x+16$ 이므로",
+   "uses": [
+    "C6"
+   ]
+  },
+  {
+   "title": "풀이",
+   "text": "$$x^{2}+20 x+52 \\le(x+9)^{2}\\,\\,\\le>\\,\\,x \\le \\frac{29}{2}$$",
+   "uses": [
+    "C6"
+   ]
+  },
+  {
+   "title": "끝점",
+   "text": "이다. 따라서 $\\mathrm{R}_{1}$ , $\\mathrm{R}_{2}$ 는 $x=\\frac{29}{2}$ 인 $C_{1}$ 위의 두 점이고 $y^{2}=8 \\times \\frac{29}{2}+16=132$ 이다. 이때 $x \\le \\frac{29}{2}<16$ 이므로 관문 1의 계산도 성립한다.",
+   "uses": [
+    "C6"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $\\overline{\\mathrm{R}_{1}R_{2}}^{2}=(2 \\sqrt{132})^{2}=528$ 이다.",
+   "uses": [
+    "C7"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "$\\mathrm P$에 무관",
+   "cond": "C3",
+   "text": [
+    "'어떤 $\\mathrm P$' 하나로 충분."
+   ]
+  },
+  {
+   "h": "$x<16$",
+   "cond": "C2",
+   "text": [
+    "$\\overline{\\mathrm{AP}}=16-x$ 부호 확인."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 경로 $24$",
+   "body": [
+    "(같은 $C_1$, $C_2$, $\\mathrm Q$, $\\mathrm A$에 대하여) 선분 $\\mathrm{PF}$가 $C_2$와 만나는 어떤 점 $\\mathrm P$에 대하여 $\\overline{\\mathrm{AP}}+\\overline{\\mathrm{PQ}}+\\overline{\\mathrm{QF'}}=24$이다. 선분 $\\mathrm{PF}$가 $C_2$와 만나도록 하는 $C_1$ 위의 점 $\\mathrm P$ 전체가 두 점 $\\mathrm R_1$, $\\mathrm R_2$를 양 끝으로 하는 $C_1$의 일부분일 때, $\\overline{\\mathrm R_1\\mathrm R_2}^2$의 값을 구하시오."
+   ],
+   "answer": 160,
+   "hint": "$a=2$, $x\\le3$, $y^2=40$."
+  }
+ ],
+ "line": "공유 초점 → 정의를 이어 붙인 일정한 경로."
+}

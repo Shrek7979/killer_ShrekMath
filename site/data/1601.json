@@ -10,9 +10,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $\\mathrm A$가 두 포물선의 안쪽에 있다고 보고 준선까지의 거리만 비교해 $49$로 답한 경우",
  "answer": 34,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -32,9 +32,14 @@
     0
    ],
    "text": "좌표평면에서 원 $x^{2}+y^{2}=9$ 까지의 거리와 직선 $y=1$ 까지의 거리가 같은 점 전체의 집합을 $S$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "$S$",
+   "why": "원 $x^2+y^2=9$까지와 직선 $y=1$까지 거리가 같은 점.",
+   "uses": [
+    1,
+    2,
+    3,
+    4
+   ]
   },
   {
    "id": "C2",
@@ -43,9 +48,12 @@
     1
    ],
    "text": "원점 $\\mathrm{O}$ 와 점 $\\mathrm{A}(3,\\,5)$ 에 대하여 집합 $S$ 에 속하는 점 $\\mathrm{P}$ 가 움직일 때, $\\overline{\\mathrm{PA}}+\\overline{\\mathrm{PO}}$ 의 최솟값을 $m$ 이라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "최솟값",
+   "why": "$\\mathrm A(3,5)$, $\\overline{\\mathrm{PA}}+\\overline{\\mathrm{PO}}$의 최솟값 $m$.",
+   "uses": [
+    5,
+    6
+   ]
   },
   {
    "id": "C3",
@@ -54,9 +62,11 @@
     2
    ],
    "text": "$m^{2}$ 의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$m^2$.",
+   "uses": [
+    7
+   ]
   },
   {
    "id": "C4",
@@ -65,60 +75,117 @@
     3
    ],
    "text": "(단, 한 점과 원 사이의 거리는 그 점과 원 위의 점 사이의 거리의 최솟값이다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "정의",
+   "why": "점과 원 사이 거리.",
+   "uses": [
+    2
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "네 경우가 짝지어 초점 $\\mathrm O$를 공유하는 두 포물선 $C_1$(준선 $y=-2$), $C_2$(준선 $y=4$).",
+  "$\\mathrm A$가 $C_1$ 안쪽 → 준선 이용, $C_2$ 바깥쪽 → 삼각부등식 $\\overline{\\mathrm{AO}}$."
+ ],
  "topic": "원과 직선에서 같은 거리에 있는 점 — 네 경우가 초점을 공유하는 두 포물선 전체로 모이는 구조와 안쪽·바깥쪽에 따른 최솟값",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "점과 원의 거리",
+   "p": [
+    "$|\\overline{\\mathrm{OP}}-3|$."
+   ]
+  },
+  {
+   "h": "포물선의 정의",
+   "p": [
+    "$\\overline{\\mathrm{PO}}$ = 준선까지 거리."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 원과 직선에서 같은 거리인 점을 원의 안·밖과 직선의 위·아래로 네 경우로 나누면 경우들이 짝지어 초점 O를 공유하는 두 포물선 전체로 모이고, PO를 준선까지의 거리로 바꾸는 방법은 A가 그 포물선의 안쪽일 때만 통하므로 바깥쪽인 포물선에서는 삼각형의 성질과 사잇값 정리로 AO가 최솟값이 됨을 가려내는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "점 $\\mathrm{P}(x,\\,y)$ 와 원 사이의 거리는 $\\left|\\overline{\\mathrm{OP}}-3 \\right|$ , 직선 $y=1$ 까지의 거리는 $\\left|y-1 \\right|$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C4"
+   ],
+   "title": "거리"
   },
   {
    "n": 3,
    "text": "[관문 1: 네 경우가 두 포물선으로] (i) $\\overline{\\mathrm{OP}}\\ge 3$ , $y \\ge 1$ 이면 $\\overline{\\mathrm{OP}}=y+2$ , (ii) $\\overline{\\mathrm{OP}}\\le 3$ , $y \\le 1$ 이면 $3-\\overline{\\mathrm{OP}}=1-y$ 에서 다시 $\\overline{\\mathrm{OP}}=y+2$ , (iii) $\\overline{\\mathrm{OP}}\\ge 3$ , $y \\le 1$ 이면 $\\overline{\\mathrm{OP}}=4-y$ , (iv) $\\overline{\\mathrm{OP}}\\le 3$ , $y \\ge 1$ 이면 $3-\\overline{\\mathrm{OP}}=y-1$ 에서 다시 $\\overline{\\mathrm{OP}}=4-y$ 이다. 거꾸로 $\\overline{\\mathrm{OP}}=y+2$ 인 점은 $y \\ge 1$ 이면 $\\overline{\\mathrm{OP}}\\ge 3$ 이라 (i), $y \\le 1$ 이면 $\\overline{\\mathrm{OP}}\\le 3$ 이라 (ii)에 해당하므로 모두 $S$ 에 속하고, $\\overline{\\mathrm{OP}}=4-y$ 인 점도 같다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "네 경우"
   },
   {
    "n": 4,
    "text": "따라서 $S$ 는 초점이 $\\mathrm{O}$ , 준선이 $y=-2$ 인 포물선 $C_{1}$ : $x^{2}=4(y+1)$ 과 초점이 $\\mathrm{O}$ , 준선이 $y=4$ 인 포물선 $C_{2}$ : $x^{2}=-8(y-2)$ 의 합집합이다. 두 포물선은 초점을 공유하며, 원과 직선의 교점 $(2 \\sqrt{2},\\,1)$ , $(-2 \\sqrt{2},\\,1)$ 에서 만난다. 이제 $\\overline{\\mathrm{PO}}$ 는 각 포물선에서 준선까지의 거리로 바꿀 수 있다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "두 포물선"
   },
   {
    "n": 5,
    "text": "[관문 2: $C_{1}$ 위에서] $x=3$ 일 때 $C_{1}$ 의 $y$ 좌표는 $\\frac{5}{4}$ 이고 $5>\\frac{5}{4}$ 이므로 $\\mathrm{A}$ 는 $C_{1}$ 의 초점 쪽(안쪽)에 있다. $C_{1}$ 위의 $\\mathrm{P}$ 에서 준선 $y=-2$ 에 내린 수선의 발을 $\\mathrm{H}$ 라 하면 $\\overline{\\mathrm{PA}}+\\overline{\\mathrm{PO}}=\\overline{\\mathrm{PA}}+\\overline{\\mathrm{PH}}$ 이고, 이는 $\\mathrm{A}$ 와 준선 사이의 거리 $7$ 이상이며 $\\mathrm{P}(3,\\,\\frac{5}{4})$ 에서 $7$ 이 된다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$C_1$"
   },
   {
    "n": 6,
    "text": "[관문 3: $C_{2}$ 위에서] $x=3$ 일 때 $C_{2}$ 의 $y$ 좌표는 $\\frac{7}{8}$ 이고 $5>\\frac{7}{8}$ 이므로 $\\mathrm{A}$ 는 $C_{2}$ 의 바깥쪽에 있다(준선 $y=4$ 보다도 위에 있다). 따라서 준선을 이용한 방법은 쓸 수 없고, 삼각형의 성질에서 $\\overline{\\mathrm{PA}}+\\overline{\\mathrm{PO}}\\ge \\overline{\\mathrm{AO}}=\\sqrt{34}$ 이다. 선분 $\\mathrm{OA}$ 위의 점 $\\mathrm{Q}$ 에 대하여 $\\overline{\\mathrm{OQ}}-(4-y)$ 는 $\\mathrm{Q}=\\mathrm{O}$ 에서 $-4<0$ , $\\mathrm{Q}=\\mathrm{A}$ 에서 $\\sqrt{34}+1>0$ 이고 연속이므로 사잇값 정리에 의해 선분 $\\mathrm{OA}$ 는 $C_{2}$ 와 만난다. 그 점에서 등호가 성립하므로 $C_{2}$ 위에서의 최솟값은 $\\sqrt{34}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "$C_2$"
   },
   {
    "n": 7,
    "text": "$\\sqrt{34}<7$ 이므로 $m=\\sqrt{34}$ 이고 $m^{2}=34$ 이다. ( $\\mathrm{A}$ 가 두 포물선의 안쪽에 있다고 보고 준선까지의 거리만 비교하면 $49$ 라는 틀린 답이 나온다.)",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "안·밖",
+   "cond": "C2",
+   "text": [
+    "준선 방법은 $\\mathrm A$가 포물선 안쪽일 때만."
+   ]
+  },
+  {
+   "h": "공유 초점",
+   "cond": "C1",
+   "text": [
+    "두 포물선 모두 초점 $\\mathrm O$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\mathrm A(4,6)$",
+   "body": [
+    "(같은 집합 $S$에 대하여) 원점 $\\mathrm O$와 점 $\\mathrm A(4,\\,6)$에 대하여 $\\mathrm P$가 $S$ 위를 움직일 때 $\\overline{\\mathrm{PA}}+\\overline{\\mathrm{PO}}$의 최솟값을 $m$이라 하자. $m^2$의 값을 구하시오."
+   ],
+   "answer": 52,
+   "hint": "$C_2$ 쪽 $\\overline{\\mathrm{AO}}=\\sqrt{52}<8$."
+  }
+ ],
+ "line": "원과 직선에서 같은 거리 → 공유 초점 포물선 둘.",
  "note": ""
 }

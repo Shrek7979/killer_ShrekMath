@@ -12,9 +12,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 30번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $\\cos\\frac k2=0$인 갈래(π의 홀수배)를 빠뜨리거나 $\\tan s=\\frac{4s}\\pi$의 근을 구간마다 하나씩 세지 않은 경우",
  "answer": 32,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -54,9 +54,13 @@
     0
    ],
    "text": "$\\int_{t}^{t+2}f(x)dx=\\alpha \\left\\{f(t)+f(t+2)\\right\\}+\\beta f(t+1)$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "공식",
+   "why": "$\\int_t^{t+2}f=\\alpha\\{f(t)+f(t+2)\\}+\\beta f(t+1)$.",
+   "uses": [
+    1,
+    2,
+    3
+   ]
   },
   {
    "id": "C3",
@@ -65,9 +69,11 @@
     0
    ],
    "text": "를 만족시킬 때, 함수 $f(x)$ 를 '좋은 함수'라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "좋은 함수",
+   "why": "모든 $t$에서 성립.",
+   "uses": [
+    4
+   ]
   },
   {
    "id": "C4",
@@ -76,9 +82,15 @@
     1
    ],
    "text": "두 함수 $\\sin \\left(\\frac{\\pi}{2}x \\right)$ , $\\sin \\pi x$ 가 모두 좋은 함수일 때, 함수 $\\sin k x$ 가 좋은 함수가 되도록 하는 $100$ 보다 작은 양수 $k$ 의 개수를 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건과 묻는 것",
+   "why": "$\\sin\\frac\\pi2x$, $\\sin\\pi x$가 좋은 함수; $\\sin kx$가 좋은 $k<100$의 개수.",
+   "uses": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
   },
   {
    "id": "C5",
@@ -87,72 +99,135 @@
     2
    ],
    "text": "(단, $3.14<\\pi<3.15$ 이다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "근삿값",
+   "why": "$3.14<\\pi<3.15$.",
+   "uses": [
+    7,
+    9
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "덧셈정리로 조건이 $\\frac{2\\sin k}k=2\\alpha\\cos k+\\beta$ 한 식, 두 진동수로 $\\alpha=\\frac2\\pi$, $\\beta=\\frac4\\pi$.",
+  "반각으로 $\\cos\\frac k2\\left(\\frac4k\\sin\\frac k2-\\frac8\\pi\\cos\\frac k2\\right)=0$ — 두 갈래."
+ ],
  "topic": "세 점 적분 공식이 정확해지는 사인함수 — 반각으로 갈라지는 두 갈래의 진동수",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "덧셈정리",
+   "p": [
+    "$\\sin(u\\pm k)$ 전개."
+   ]
+  },
+  {
+   "h": "방정식의 근의 개수",
+   "p": [
+    "$\\tan s$와 직선의 교점."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 세 점 적분 공식의 정확성을 덧셈정리로 sin k(t+1)의 계수 비교 한 식으로 줄이고, 두 진동수로 가중치를 정한 뒤 반각으로 묶으면 '반각의 코사인이 0인 갈래(π의 홀수배)'와 'tan s=4s/π의 갈래'가 숨어 있음을 찾아, 각 갈래의 근을 구간별 증감으로 정확히 세는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "양수 $k$ 에 대하여 $u=k(t+1)$ 이라 하자. 삼각함수의 덧셈정리에 의하여",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "치환"
   },
   {
    "n": 3,
    "text": "$$\\int_{t}^{t+2}\\sin k x \\,dx=\\frac{\\cos(u-k)-\\cos(u+k)}{k}=\\frac{2 \\sin k}{k}\\sin u,\\,\\,\\,\\sin k t+\\sin k(t+2)=\\sin(u-k)+\\sin(u+k)=2 \\cos k \\,\\sin u$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "계산"
   },
   {
    "n": 4,
    "text": "이므로 조건식은 $\\left(\\frac{2 \\sin k}{k}-2 \\alpha \\cos k-\\beta \\right)\\sin u=0$ 이다. $t$ 가 모든 실수를 지나면 $u$ 도 모든 실수를 지나므로 $\\sin u=1$ 인 경우를 생각하면, $\\sin k x$ 가 좋은 함수일 필요충분조건은 $\\frac{2 \\sin k}{k}=2 \\alpha \\cos k+\\beta$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "필요충분"
   },
   {
    "n": 5,
    "text": "$k=\\frac{\\pi}{2}$ 를 대입하면 $\\frac{4}{\\pi}=\\beta$ , $k=\\pi$ 를 대입하면 $0=-2 \\alpha+\\beta$ 이므로 $\\alpha=\\frac{2}{\\pi}$ , $\\beta=\\frac{4}{\\pi}$ 이다. 따라서 조건은 $\\frac{2 \\sin k}{k}=\\frac{4}{\\pi}(1+\\cos k)$ 이고, 반각으로 나타내면 $\\sin k=2 \\sin \\frac{k}{2}\\cos \\frac{k}{2}$ , $1+\\cos k=2 \\cos^{2}\\frac{k}{2}$ 이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "$\\alpha$, $\\beta$"
   },
   {
    "n": 6,
    "text": "$$\\cos \\frac{k}{2}\\left(\\frac{4}{k}\\sin \\frac{k}{2}-\\frac{8}{\\pi}\\cos \\frac{k}{2}\\right)=0$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "반각"
   },
   {
    "n": 7,
    "text": "[관문 1: 두 갈래] (ⅰ) $\\cos \\frac{k}{2}=0$ , 곧 $k$ 가 $\\pi$ 의 홀수배인 경우와 (ⅱ) $\\cos \\frac{k}{2}\\ne 0$ 이고 $s=\\frac{k}{2}$ 가 $\\tan s=\\frac{4 s}{\\pi}$ 를 만족시키는 경우로 나뉜다. (ⅰ)에서 $31 \\pi<31 \\times 3.15<100<33 \\times 3.14<33 \\pi$ 이므로 $k=\\pi,\\,3 \\pi,\\,\\cdots,\\,31 \\pi$ 의 $16$ 개이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4",
+    "C5"
+   ],
+   "title": "두 갈래"
   },
   {
    "n": 8,
    "text": "[관문 2: (ⅱ)의 근의 개수] $g(s)=\\tan s-\\frac{4 s}{\\pi}$ 라 하자. $n \\ge 1$ 일 때 열린구간 $\\left(n \\pi-\\frac{\\pi}{2},\\,n \\pi \\right)$ 에서는 $\\tan s<0<\\frac{4 s}{\\pi}$ 이므로 근이 없다. 구간 $\\left[n \\pi,\\,n \\pi+\\frac{\\pi}{2}\\right)$ $(n \\ge 0)$ 에서 $g'(s)=\\frac{1}{\\cos^{2}s}-\\frac{4}{\\pi}$ 는 증가하므로 $g$ 는 감소하다가 증가하거나 계속 증가하고, $s$ 가 $n \\pi+\\frac{\\pi}{2}$ 에 가까워지면 $g(s)$ 는 한없이 커진다. $n \\ge 1$ 이면 $g(n \\pi)=-4 n<0$ 이므로 근이 정확히 하나 있다. $n=0$ 이면 $g(0)=0$ , $g'(0)=1-\\frac{4}{\\pi}<0$ 이므로 $0$ 의 오른쪽에서 $g<0$ 이 되었다가 증가하여 근이 정확히 하나 있고, 그것은 $\\tan \\frac{\\pi}{4}=1$ 인 $s=\\frac{\\pi}{4}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "근의 개수"
   },
   {
    "n": 9,
    "text": "$k<100$ 은 $s<50$ 이다. $15 \\pi+\\frac{\\pi}{2}<15.5 \\times 3.15<50<16 \\times 3.14<16 \\pi$ 이므로 $n=0,\\,1,\\,\\cdots,\\,15$ 의 구간에서 하나씩 $16$ 개이고, 이 근들은 $\\cos s \\ne 0$ 이므로 (ⅰ)과 겹치지 않는다. 따라서 구하는 개수는 $16+16=32$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4",
+    "C5"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\sin u=1$",
+   "cond": "C3",
+   "text": [
+    "모든 $u$에서 성립 ⇔ 계수가 $0$."
+   ]
+  },
+  {
+   "h": "겹침",
+   "cond": "C4",
+   "text": [
+    "(ⅱ)의 근은 $\\cos s\\ne0$이라 (ⅰ)과 다름."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $k<60$",
+   "body": [
+    "(같은 조건에서) 함수 $\\sin kx$가 좋은 함수가 되도록 하는 $60$보다 작은 양수 $k$의 개수를 구하시오. (단, $3.14<\\pi<3.15$이다.)"
+   ],
+   "answer": 20,
+   "hint": "홀수배 $1\\pi\\sim19\\pi$의 $10$개 + $s<30$에서 $n=0\\sim9$의 $10$개."
+  }
+ ],
+ "line": "적분 공식의 정확성 → 계수 비교 + 반각 두 갈래.",
  "note": ""
 }

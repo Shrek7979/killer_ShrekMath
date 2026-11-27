@@ -12,9 +12,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 30번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $|\\sin2nx|$의 평균을 $\\frac2\\pi$로 바꿔 $\\max$ 안에 넣거나, 큰 값을 항상 진동 쪽으로 본 경우",
  "answer": 37,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -44,9 +44,13 @@
     0
    ],
    "text": "자연수 $n$ 과 실수 $x$ 에 대하여 두 수 $\\sin x$ , $\\left|\\sin 2 n x \\right|$ 중 작지 않은 값을 $f_{n}(x)$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "$f_n$",
+   "why": "$\\sin x$와 $|\\sin2nx|$ 중 작지 않은 값.",
+   "uses": [
+    1,
+    2,
+    6
+   ]
   },
   {
    "id": "C2",
@@ -66,9 +70,13 @@
     0
    ],
    "text": "$a_{n}=\\int_{0}^{\\frac{\\pi}{2}}\\left\\{f_{n}(x)\\right\\}^{3}dx$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "$a_n$",
+   "why": "$\\int_0^{\\pi/2}f_n^3dx$.",
+   "uses": [
+    3,
+    4,
+    7
+   ]
   },
   {
    "id": "C4",
@@ -77,9 +85,14 @@
     0
    ],
    "text": "라 할 때, $\\lim_{n \\to \\infty}a_{n}=\\frac{q}{p \\pi}$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "극한",
+   "why": "$\\frac q{p\\pi}$.",
+   "uses": [
+    5,
+    8,
+    9,
+    10
+   ]
   },
   {
    "id": "C5",
@@ -88,9 +101,11 @@
     1
    ],
    "text": "$p+q$ 의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$p+q$.",
+   "uses": [
+    10
+   ]
   },
   {
    "id": "C6",
@@ -99,78 +114,142 @@
     2
    ],
    "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "서로소",
+   "why": "기약분수.",
+   "uses": [
+    10
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "한 주기 $\\frac\\pi{2n}$마다 적분 $=\\frac\\pi{2n}g(c)$, $c$는 그 구간의 $\\sin x$ — 단조성으로 끼움.",
+  "$\\sin u\\ge\\sin x$인 경계각이 $x$ 자신 → $\\pi g(\\sin x)=2x\\sin^3x+\\int_x^{\\pi-x}\\sin^3u\\,du$."
+ ],
  "topic": "빠르게 진동하는 수와 천천히 변하는 수 중 큰 값 — 한 주기씩 끼워 정적분과 급수로",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "빠른 진동의 평균",
+   "p": [
+    "한 주기 평균으로 대체 — 끼움으로 정당화."
+   ]
+  },
+  {
+   "h": "부분적분",
+   "p": [
+    "$\\int x\\sin^3x\\,dx$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 빠르게 진동하는 |sin 2nx| 를 한 주기 평균 g(c)로 바꾸는 것을 단조성과 망원합으로 엄밀히 끼워 정당화하고(a_n 자체는 n에 따라 변함), 평균을 구할 때 |sin u| ≥ sin x 인 경계각이 바로 x 자신이 되어 역함수 없이 g(sin x)가 x의 식으로 닫혀 부분적분으로 마무리되는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "[주기로 자르기] $x_{k}=\\frac{k \\pi}{2 n}\\,(k=0,\\,1,\\,\\cdots,\\,n)$ 이라 하면 $\\left|\\sin 2 n x \\right|$ 는 각 구간 $\\left[x_{k-1},\\,x_{k}\\right]$ 에서 한 주기를 이룬다. $0 \\le c \\le 1$ 인 실수 $c$ 에 대하여 $2 n x-(k-1)\\pi=u$ 로 치환하면",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "주기"
   },
   {
    "n": 3,
    "text": "$$\\int_{x_{k-1}}^{x_{k}}\\left\\{\\max \\left(c,\\,\\left|\\sin 2 n x \\right|\\right)\\right\\}^{3}dx=\\frac{\\pi}{2 n}g(c),\\,\\,\\,g(c)=\\frac{1}{\\pi}\\int_{0}^{\\pi}\\left\\{\\max(c,\\,\\sin u)\\right\\}^{3}du$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "$g(c)$"
   },
   {
    "n": 4,
    "text": "이고, $g(c)$ 는 $k$ , $n$ 에 무관하며 $c$ 에 대하여 증가하고 연속이다. $g(0)=\\frac{4}{3 \\pi}$ , $g(1)=1$ 이다. (여기서 $\\max(c,\\,s)$ 는 두 수 중 작지 않은 값이다.)",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "성질"
   },
   {
    "n": 5,
    "text": "[부등식으로 끼우기] 구간 $\\left[x_{k-1},\\,x_{k}\\right]$ 에서 $\\sin x_{k-1}\\le \\sin x \\le \\sin x_{k}$ 이므로 그 구간에서의 적분은 $\\frac{\\pi}{2 n}g(\\sin x_{k-1})$ 이상, $\\frac{\\pi}{2 n}g(\\sin x_{k})$ 이하이다. $U_{n}=\\sum_{k=1}^{n}\\frac{\\pi}{2 n}g(\\sin x_{k})$ , $L_{n}=\\sum_{k=1}^{n}\\frac{\\pi}{2 n}g(\\sin x_{k-1})$ 이라 하면 $L_{n}\\le a_{n}\\le U_{n}$ 이고, 망원합에 의해 $U_{n}-L_{n}=\\frac{\\pi}{2 n}\\left\\{g(1)-g(0)\\right\\}$ 은 $0$ 으로 수렴한다. 정적분과 급수의 관계에 의해 $U_{n}$ 은 $\\int_{0}^{\\frac{\\pi}{2}}g(\\sin x)dx$ 로 수렴하므로 $\\lim_{n \\to \\infty}a_{n}$ 은 이 정적분과 같다. (실제로 $a_{1}=\\frac{49}{48}$ 이고 $a_{n}$ 은 $n$ 에 따라 변하므로 극한을 구하는 이 과정이 필요하다.)",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "끼우기"
   },
   {
    "n": 6,
    "text": "[핵심 관문: 경계각이 x 자신] $0 \\le x \\le \\frac{\\pi}{2}$ 일 때 $0 \\le u \\le \\pi$ 에서 $\\sin u \\ge \\sin x$ 인 $u$ 의 범위는 정확히 $x \\le u \\le \\pi-x$ 이다. 따라서 $\\sin^{3}u=(1-\\cos^{2}u)\\sin u$ 를 이용하면",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "경계각"
   },
   {
    "n": 7,
    "text": "$$\\pi g(\\sin x)=2 x \\sin^{3}x+\\int_{x}^{\\pi-x}\\sin^{3}u \\,du=2 x \\sin^{3}x+2 \\cos x-\\frac{2}{3}\\cos^{3}x$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "식"
   },
   {
    "n": 8,
    "text": "이다. 부분적분으로 ( $\\sin^{3}x$ 의 한 부정적분은 $-\\cos x+\\frac{1}{3}\\cos^{3}x$ )",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "부분적분"
   },
   {
    "n": 9,
    "text": "$$\\int_{0}^{\\frac{\\pi}{2}}x \\sin^{3}x \\,dx=\\left[x \\left(-\\cos x+\\frac{1}{3}\\cos^{3}x \\right)\\right]_{0}^{\\frac{\\pi}{2}}-\\int_{0}^{\\frac{\\pi}{2}}\\left(-\\cos x+\\frac{1}{3}\\cos^{3}x \\right)dx=0+1-\\frac{2}{9}=\\frac{7}{9}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "적분값"
   },
   {
    "n": 10,
    "text": "이고 ( $\\int_{0}^{\\frac{\\pi}{2}}\\cos^{3}x \\,dx=\\frac{2}{3}$ ), $\\int_{0}^{\\frac{\\pi}{2}}2 \\cos x \\,dx=2$ 이므로 $\\lim_{n \\to \\infty}a_{n}=\\frac{1}{\\pi}\\left(\\frac{14}{9}+2-\\frac{4}{9}\\right)=\\frac{28}{9 \\pi}$ 이다. 따라서 $p+q=9+28=37$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4",
+    "C5",
+    "C6"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "평균의 위치",
+   "cond": "C1",
+   "text": [
+    "$\\max$를 먼저 취한 뒤 평균 — 순서를 바꾸면 틀림."
+   ]
+  },
+  {
+   "h": "경계각",
+   "cond": "C1",
+   "text": [
+    "$[0,\\pi]$에서 $\\sin u\\ge\\sin x$ ⇔ $x\\le u\\le\\pi-x$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · 세제곱 대신 일차",
+   "body": [
+    "(같은 $f_n$에 대하여) $a_n=\\int_0^{\\frac\\pi2}f_n(x)dx$라 할 때 $\\lim_{n\\to\\infty}a_n=\\frac q{p\\pi}$이다. $p+q$의 값을 구하시오. (단, $p$와 $q$는 서로소인 자연수이다.)"
+   ],
+   "answer": 5,
+   "hint": "$\\pi g(\\sin x)=2x\\sin x+2\\cos x$ → $\\frac4\\pi$."
+  }
+ ],
+ "line": "빠른 진동 × 느린 변화 → 한 주기 평균 + 끼움.",
  "note": ""
 }
