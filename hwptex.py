@@ -290,12 +290,47 @@ def _render(n):
     return ''
 
 
+def _wrap_lr_over(s):
+    """LEFT ( … RIGHT ) over {12} → {LEFT ( … RIGHT )} over {12}
+    (괄호 묶음 전체가 분자가 되도록. 없으면 over가 RIGHT 뒤 닫는 괄호만 분자로 잡는다)"""
+    pat = re.compile(r'\b(LEFT|RIGHT)\b')
+    while True:
+        ms = list(pat.finditer(s))
+        done = True
+        for k, m in enumerate(ms):
+            if m.group(1) != 'RIGHT':
+                continue
+            d = re.match(r'\s*(\\?[\(\)\[\]\{\}\|]|rbrace|lbrace|rangle|langle)', s[m.end():])
+            if not d:
+                continue
+            end = m.end() + d.end()
+            sup = re.match(r'(?:\s*[\^_]\s*(?:\{[^{}]*\}|\w+))*', s[end:])
+            end += sup.end()
+            if not re.match(r'\s*over\b', s[end:]):
+                continue
+            depth = 0
+            for j in range(k, -1, -1):
+                depth += 1 if ms[j].group(1) == 'RIGHT' else -1
+                if depth == 0:
+                    st = ms[j].start()
+                    if s[:st].rstrip().endswith('{') and s[end:].lstrip().startswith('}'):
+                        break
+                    s = s[:st] + '{' + s[st:end] + '}' + s[end:]
+                    done = False
+                    break
+            if not done:
+                break
+        if done:
+            return s
+
+
 def hwp2tex(s):
     # 수식 안의 한글 따옴표 문자열({rm "이" it}, "배수인 경우")은 \text{…}로 그대로 살린다 (글자 사이 띄움 방지)
     texts = []
     def _keep(m):
         texts.append(m.group(1).strip()); return ' ' + chr(0xE000 + len(texts) - 1) + ' '
     s = re.sub(r'(?:\{\s*rm\s*)?"([^"]*[가-힣][^"]*)"(?:\s*it\s*\})?', _keep, s)
+    s = _wrap_lr_over(s)
     s = _pre(s)
     nodes, _ = _parse(_tokens(s))
     nodes = _rm_it(nodes)

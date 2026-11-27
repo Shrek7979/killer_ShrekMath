@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $\\mathrm Q$가 $S$ 밖일 때도 수직으로 내려가는 경로를 최단으로 보거나 $S$를 포물선 바깥으로 잡은 경우",
  "answer": 64,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -43,9 +43,11 @@
     0
    ],
    "text": "좌표평면 위의 점 $\\mathrm{B}(0,\\,3)$ 과 벡터 $\\vec{e}=(1,\\,0)$ 에 대하여, 모든 실수 $t$ 에 대하여",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "설정",
+   "why": "$\\mathrm B(0,3)$, $\\vec e=(1,0)$.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C2",
@@ -54,9 +56,12 @@
     0
    ],
    "text": "$\\left|\\vec{\\mathrm{OP}}-t \\vec{e}\\right|\\ge \\left|\\vec{\\mathrm{BP}}\\right|$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건",
+   "why": "$|\\vec{\\mathrm{OP}}-t\\vec e|\\ge|\\vec{\\mathrm{BP}}|$ (모든 $t$).",
+   "uses": [
+    1,
+    2
+   ]
   },
   {
    "id": "C3",
@@ -65,9 +70,11 @@
     0
    ],
    "text": "를 만족시키는 점 $\\mathrm{P}$ 전체의 집합을 $S$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "$S$",
+   "why": "점 $\\mathrm P$ 전체.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C4",
@@ -76,9 +83,14 @@
     1
    ],
    "text": "좌표평면 위의 점 $\\mathrm{Q}$ 에 대하여, 집합 $S$ 에 속하는 점 $\\mathrm{P}$ 와 $x$ 축 위의 점 $\\mathrm{R}$ 에 대한 $\\overline{\\mathrm{QP}}+\\overline{\\mathrm{PR}}$ 의 최솟값을 $g(\\mathrm{Q})$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "$g(\\mathrm Q)$",
+   "why": "$\\overline{\\mathrm{QP}}+\\overline{\\mathrm{PR}}$의 최솟값.",
+   "uses": [
+    3,
+    4,
+    5,
+    6
+   ]
   },
   {
    "id": "C5",
@@ -87,9 +99,12 @@
     2
    ],
    "text": "$g(\\mathrm{Q})\\le 5$ 를 만족시키는 점 $\\mathrm{Q}$ 중에서 $x$ 좌표와 $y$ 좌표가 모두 정수인 점의 개수를 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$g\\le5$인 격자점의 수.",
+   "uses": [
+    7,
+    8
+   ]
   },
   {
    "id": "C6",
@@ -98,66 +113,124 @@
     3
    ],
    "text": "(단, $\\mathrm{O}$ 는 원점이고, 두 점이 일치하면 두 점 사이의 거리는 $0$ 으로 본다.) [4점]",
-   "label": "",
-   "why": "",
+   "label": "규약",
+   "why": "같은 점이면 거리 $0$.",
    "uses": []
   }
  ],
- "intro": [],
+ "intro": [
+  "$\\min_t|\\vec{\\mathrm{OP}}-t\\vec e|=|y|$ → $S$: $|y|\\ge\\overline{\\mathrm{PB}}$, 초점 $\\mathrm B$·준선 $x$축 포물선 안쪽.",
+  "$g(\\mathrm Q)=\\max\\{\\overline{\\mathrm{QB}},|y_{\\mathrm Q}|\\}$ → 원과 띠의 공통부분."
+ ],
  "topic": "포물선의 내부를 거쳐 직선에 이르는 최단 경로 — 안쪽 점은 수직으로",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "포물선의 정의",
+   "p": [
+    "초점까지 = 준선까지."
+   ]
+  },
+  {
+   "h": "최단 경로",
+   "p": [
+    "안쪽이면 수직, 밖이면 초점으로."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: '모든 t' 조건을 x축까지의 거리로 읽어 S가 초점 B·준선 x축인 포물선의 안쪽임을 찾고, S를 거쳐 x축에 이르는 최단 경로가 Q가 안쪽이면 그대로 수직 하강(y좌표), 바깥이면 포물선의 정의로 PR을 PB로 바꾸어 QB(사잇값 정리로 실현)가 되어, 두 경우가 g(Q)=max(QB, |y|) 하나로 합쳐짐을 발견하는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "[관문 1: 집합 S는 포물선의 안쪽] $\\mathrm{P}(x,\\,y)$ 라 하면 $\\left|\\vec{\\mathrm{OP}}-t \\vec{e}\\right|^{2}=(x-t)^{2}+y^{2}\\ge y^{2}$ 이고 $t=x$ 일 때 등호가 성립하므로, 조건은 ' $\\left|y \\right|\\ge \\overline{\\mathrm{PB}}$ ', 즉 점 $\\mathrm{P}$ 에서 $x$ 축까지의 거리가 $\\overline{\\mathrm{PB}}$ 이상이라는 것이다. $y<0$ 이면 $\\overline{\\mathrm{PB}}\\ge 3-y>\\left|y \\right|$ 이므로 $S$ 의 점은 $y>0$ 이다. 따라서 $S$ 는 초점이 $\\mathrm{B}$ , 준선이 $x$ 축인 포물선과 그 안쪽(초점 쪽)으로 이루어진 영역이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C2",
+    "C3"
+   ],
+   "title": "$S$"
   },
   {
    "n": 3,
    "text": "[관문 2: Q가 S에 속하는 경우] $S$ 의 점 $\\mathrm{P}$ 와 $x$ 축 위의 점 $\\mathrm{R}$ 에 대하여 $\\overline{\\mathrm{QP}}$ 는 두 점의 $y$ 좌표의 차 이상이고 $\\overline{\\mathrm{PR}}$ 는 $\\mathrm{P}$ 의 $y$ 좌표 이상이므로 $\\overline{\\mathrm{QP}}+\\overline{\\mathrm{PR}}\\ge y_{\\mathrm{Q}}-y_{\\mathrm{P}}+y_{\\mathrm{P}}=y_{\\mathrm{Q}}$ 이다. $\\mathrm{P}=\\mathrm{Q}$ , $\\mathrm{R}=(x_{\\mathrm{Q}},\\,0)$ 일 때 등호가 성립하므로 $g(\\mathrm{Q})=y_{\\mathrm{Q}}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "안쪽"
   },
   {
    "n": 4,
    "text": "[관문 3: Q가 S에 속하지 않는 경우 — 포물선의 정의] $S$ 의 점 $\\mathrm{P}$ 에 대하여 $\\overline{\\mathrm{PR}}$ 는 $\\mathrm{P}$ 에서 $x$ 축까지의 거리 이상이고, 이 거리는 $S$ 의 정의에 의하여 $\\overline{\\mathrm{PB}}$ 이상이므로 $\\overline{\\mathrm{QP}}+\\overline{\\mathrm{PR}}\\ge \\overline{\\mathrm{QP}}+\\overline{\\mathrm{PB}}\\ge \\overline{\\mathrm{QB}}$ 이다. 한편 선분 $\\mathrm{QB}$ 위의 점 $\\mathrm{X}$ 에 대하여 $\\varphi(\\mathrm{X})$ = ( $\\mathrm{X}$ 에서 $x$ 축까지의 거리) $-\\overline{\\mathrm{XB}}$ 는 연속이고 $\\varphi(\\mathrm{Q})<0$ , $\\varphi(\\mathrm{B})=3>0$ 이므로 사잇값 정리에 의하여 $\\varphi(\\mathrm{X}_{0})=0$ 인 점 $\\mathrm{X}_{0}$ (포물선 위의 점)가 선분 $\\mathrm{QB}$ 위에 있다. $\\mathrm{P}=\\mathrm{X}_{0}$ , $\\mathrm{R}$ 를 $\\mathrm{X}_{0}$ 에서 $x$ 축에 내린 수선의 발로 잡으면 $\\overline{\\mathrm{QP}}+\\overline{\\mathrm{PR}}=\\overline{\\mathrm{QX}_{0}}+\\overline{\\mathrm{X}_{0}B}=\\overline{\\mathrm{QB}}$ 이므로 $g(\\mathrm{Q})=\\overline{\\mathrm{QB}}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "바깥"
   },
   {
    "n": 5,
    "text": "[관문 4: 하나의 식으로 통합] $\\mathrm{Q}$ 가 $S$ 에 속하는 것은 $\\left|y_{\\mathrm{Q}}\\right|\\ge \\overline{\\mathrm{QB}}$ 와 같으므로, 두 경우를 합치면 모든 점 $\\mathrm{Q}$ 에 대하여",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "통합"
   },
   {
    "n": 6,
    "text": "$$g(\\mathrm{Q})=\\max \\left\\{\\overline{\\mathrm{QB}},\\,\\left|y_{\\mathrm{Q}}\\right|\\right\\}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "식"
   },
   {
    "n": 7,
    "text": "이다. 따라서 $g(\\mathrm{Q})\\le 5$ 는 $\\overline{\\mathrm{QB}}\\le 5$ 이고 $\\left|y_{\\mathrm{Q}}\\right|\\le 5$ 인 것과 같다. 즉 중심이 $\\mathrm{B}$ , 반지름의 길이가 $5$ 인 원의 내부 및 경계에서 $y \\le 5$ 인 부분이다(원 위의 점은 $y \\ge-2$ 이므로 아래쪽 제한은 저절로 만족된다).",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "영역"
   },
   {
    "n": 8,
    "text": "[관문 5: 격자점 세기] $x^{2}+(y-3)^{2}\\le 25$ 인 격자점은 $y-3=0,\\,\\pm 1,\\,\\pm 2,\\,\\pm 3,\\,\\pm 4,\\,\\pm 5$ 일 때 각각 $11,\\,9 \\times 2,\\,9 \\times 2,\\,9 \\times 2,\\,7 \\times 2,\\,1 \\times 2$ 개로 모두 $81$ 개이다. 이 중 $y \\ge 6$ 인 것은 $y=6,\\,7,\\,8$ 에서 $9+7+1=17$ 개이므로 구하는 개수는 $81-17=64$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C5"
+   ],
+   "title": "격자점"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "모든 $t$",
+   "cond": "C2",
+   "text": [
+    "최솟값 $|y|$만 비교하면 됨."
+   ]
+  },
+  {
+   "h": "바깥",
+   "cond": "C4",
+   "text": [
+    "$\\overline{\\mathrm{QP}}+\\overline{\\mathrm{PB}}\\ge\\overline{\\mathrm{QB}}$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $g\\le4$",
+   "body": [
+    "(같은 집합 $S$와 $g(\\mathrm Q)$에 대하여) $g(\\mathrm Q)\\le4$를 만족시키는 점 $\\mathrm Q$ 중에서 $x$좌표와 $y$좌표가 모두 정수인 점의 개수를 구하시오."
+   ],
+   "answer": 36,
+   "hint": "$x^2+(y-3)^2\\le16$, $|y|\\le4$."
+  }
+ ],
+ "line": "포물선 안쪽 경유 최단 경로 = $\\max$(초점 거리, 높이).",
  "note": ""
 }

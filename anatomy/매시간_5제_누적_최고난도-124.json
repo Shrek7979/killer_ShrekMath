@@ -1,0 +1,148 @@
+{
+ "wrong": "예상 오답 — 최댓값도 원 위의 점에서 생긴다고 보아 (나)의 직선 $y=3$을 쓰지 않은 경우",
+ "intro": [
+  "중심 분해: $\\max_{\\mathrm P}\\vec{\\mathrm{OP}}\\cdot\\vec{\\mathrm{OX}}=\\vec{\\mathrm{OC}}\\cdot\\vec{\\mathrm{OX}}+5|\\vec{\\mathrm{OX}}|$.",
+  "$\\vec{\\mathrm{OD}}$를 $\\vec{\\mathrm{OT}}$, $\\vec{\\mathrm{OQ}}$의 양수 결합으로 → 최댓값 $9$; 최솟값은 원 위 $\\mathrm Y(-1,-3)$."
+ ],
+ "conds": {
+  "C1": {
+   "label": "원",
+   "why": "$K$: 중심 $\\mathrm C(3,0)$, 반지름 $5$.",
+   "uses": [
+    2
+   ]
+  },
+  "C2": {
+   "label": "점",
+   "why": "$\\mathrm O$, $\\mathrm Q(0,5)$.",
+   "uses": [
+    3
+   ]
+  },
+  "C3": {
+   "label": "(가)",
+   "why": "모든 $\\mathrm P\\in K$에서 $\\vec{\\mathrm{OP}}\\cdot\\vec{\\mathrm{OX}}\\le15$.",
+   "uses": [
+    1,
+    2
+   ]
+  },
+  "C4": {
+   "label": "(나)",
+   "why": "$\\vec{\\mathrm{OQ}}\\cdot\\vec{\\mathrm{OX}}\\le15$.",
+   "uses": [
+    3
+   ]
+  },
+  "C5": {
+   "label": "최대·최소",
+   "why": "$\\mathrm D(1,3)$에 대한 내적.",
+   "uses": [
+    4,
+    5,
+    6
+   ]
+  },
+  "C6": {
+   "label": "묻는 것",
+   "why": "$M-m$.",
+   "uses": [
+    7
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "h": "중심 분해",
+   "p": [
+    "$\\vec{\\mathrm{CP}}\\cdot\\vec{\\mathrm{OX}}\\le5|\\vec{\\mathrm{OX}}|$."
+   ]
+  },
+  {
+   "h": "볼록 결합",
+   "p": [
+    "양수 계수 결합으로 상한."
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "title": "의도",
+   "text": "출제 의도: 원 위의 모든 점과의 내적 조건을 중심 분해로 OC·OX+5|OX|≤15 로 바꾼 뒤, 최댓값은 반직선 OD 가 원이 아니라 Q 에서 그은 접선 위의 점을 지난다는 데서 접점 T 와 Q 의 내분으로 상한 9 를 얻고, 최솟값은 원 위의 점 (−1,−3) 으로 얻어 각 상한을 실제로 이루는 점을 구성하는 것",
+   "uses": [
+    "C3"
+   ]
+  },
+  {
+   "title": "분해",
+   "text": "[관문 1: 원 위의 점에 대한 최댓값] 원 $K$ 위의 점 $\\mathrm{P}$ 에 대하여 $\\vec{\\mathrm{OP}}=\\vec{\\mathrm{OC}}+\\vec{\\mathrm{CP}}$ , $\\left|\\vec{\\mathrm{CP}}\\right|=5$ 이므로 $\\vec{\\mathrm{OP}}\\cdot \\vec{\\mathrm{OX}}=\\vec{\\mathrm{OC}}\\cdot \\vec{\\mathrm{OX}}+\\vec{\\mathrm{CP}}\\cdot \\vec{\\mathrm{OX}}\\le \\vec{\\mathrm{OC}}\\cdot \\vec{\\mathrm{OX}}+5 \\left|\\vec{\\mathrm{OX}}\\right|$ 이고, 등호는 $\\vec{\\mathrm{CP}}$ 가 $\\vec{\\mathrm{OX}}$ 와 방향이 같을 때 성립한다. 따라서 (가)는 $\\vec{\\mathrm{OC}}\\cdot \\vec{\\mathrm{OX}}+5 \\left|\\vec{\\mathrm{OX}}\\right|\\le 15$ 와 같다. 또 $R$ 의 점 $\\mathrm{X}$ 는 원 위의 어느 점 $\\mathrm{Y}$ 에 대해서도 $\\vec{\\mathrm{OY}}\\cdot \\vec{\\mathrm{OX}}\\le 15$ 를 만족시킨다.",
+   "uses": [
+    "C1",
+    "C3"
+   ]
+  },
+  {
+   "title": "접선",
+   "text": "[관문 2: 최댓값 — 점 Q 에서 그은 접선의 접점] 직선 $y=5$ 는 점 $\\mathrm{Q}$ 를 지나고 원 $K$ 에 점 $\\mathrm{T}(3,\\,5)$ 에서 접한다( $\\vec{\\mathrm{CT}}=(0,\\,5)$ 와 $\\vec{\\mathrm{TQ}}=(-3,\\,0)$ 이 수직). 반직선 $\\mathrm{OD}$ 는 선분 $\\mathrm{QT}$ 와 점 $\\mathrm{Z}\\left(\\frac{5}{3},\\,5 \\right)$ 에서 만나고 $\\vec{\\mathrm{OZ}}=\\frac{5}{9}\\vec{\\mathrm{OT}}+\\frac{4}{9}\\vec{\\mathrm{OQ}}$ , $\\vec{\\mathrm{OD}}=\\frac{3}{5}\\vec{\\mathrm{OZ}}$ 이다. 따라서 $R$ 의 모든 점 $\\mathrm{X}$ 에 대하여",
+   "uses": [
+    "C2",
+    "C4"
+   ]
+  },
+  {
+   "title": "결합",
+   "text": "$$\\vec{\\mathrm{OD}}\\cdot \\vec{\\mathrm{OX}}=\\frac{3}{5}\\left(\\frac{5}{9}\\vec{\\mathrm{OT}}\\cdot \\vec{\\mathrm{OX}}+\\frac{4}{9}\\vec{\\mathrm{OQ}}\\cdot \\vec{\\mathrm{OX}}\\right)\\le \\frac{3}{5}\\times 15=9$$",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "등호",
+   "text": "이다. 등호가 성립하려면 $\\vec{\\mathrm{OX}}$ 가 $\\vec{\\mathrm{CT}}$ 와 방향이 같고 $\\vec{\\mathrm{OT}}\\cdot \\vec{\\mathrm{OX}}=15$ 이어야 하므로 $\\mathrm{X}_{0}(0,\\,3)$ 을 잡으면, $\\vec{\\mathrm{OC}}\\cdot \\vec{\\mathrm{OX}_{0}}+5 \\left|\\vec{\\mathrm{OX}_{0}}\\right|=0+15=15$ , $\\vec{\\mathrm{OQ}}\\cdot \\vec{\\mathrm{OX}_{0}}=15$ 로 $\\mathrm{X}_{0}\\in R$ 이고 $\\vec{\\mathrm{OD}}\\cdot \\vec{\\mathrm{OX}_{0}}=9$ 이다. 즉 $M=9$ 이다. (나)를 빼고 반직선 $\\mathrm{OD}$ 가 원과 만나는 점 $\\left(\\frac{8}{5},\\,\\frac{24}{5}\\right)$ 만 쓰면 $\\frac{75}{8}$ 이 나오지만 그 값을 주는 점은 (나)를 만족시키지 않는다.",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "최솟값",
+   "text": "[관문 3: 최솟값 — 원 위의 점] 반직선 $\\mathrm{OD}$ 의 반대 방향으로는 원 위의 점 $\\mathrm{Y}(-1,\\,-3)$ 에 이르고( $\\left|\\vec{\\mathrm{CY}}\\right|^{2}=16+9=25$ ), $\\vec{\\mathrm{OD}}=-\\vec{\\mathrm{OY}}$ 이므로 $\\vec{\\mathrm{OD}}\\cdot \\vec{\\mathrm{OX}}=-\\vec{\\mathrm{OY}}\\cdot \\vec{\\mathrm{OX}}\\ge-15$ 이다. $\\vec{\\mathrm{CY}}=(-4,\\,-3)$ 과 방향이 같은 $\\mathrm{X}_{1}\\left(-\\frac{60}{13},\\,-\\frac{45}{13}\\right)$ 는 $\\vec{\\mathrm{OC}}\\cdot \\vec{\\mathrm{OX}_{1}}+5 \\left|\\vec{\\mathrm{OX}_{1}}\\right|=-\\frac{180}{13}+\\frac{375}{13}=15$ , $\\vec{\\mathrm{OQ}}\\cdot \\vec{\\mathrm{OX}_{1}}=-\\frac{225}{13}<15$ 이므로 $\\mathrm{X}_{1}\\in R$ 이고 $\\vec{\\mathrm{OD}}\\cdot \\vec{\\mathrm{OX}_{1}}=-\\frac{60}{13}-\\frac{135}{13}=-15$ 이다. 즉 $m=-15$ 이다.",
+   "uses": [
+    "C5"
+   ]
+  },
+  {
+   "title": "답",
+   "text": "따라서 $M-m=9-(-15)=24$ 이다. (참고: (가)의 경계 $3 x+5 \\sqrt{x^{2}+y^{2}}=15$ 는 $\\mathrm{O}$ 를 한 초점으로 하는 타원이지만, 내적의 분해만으로 답이 정해진다.)",
+   "uses": [
+    "C6"
+   ]
+  }
+ ],
+ "traps": [
+  {
+   "h": "최댓값",
+   "cond": "C5",
+   "text": [
+    "반직선 $\\mathrm{OD}$가 (나)의 경계와 먼저 만남."
+   ]
+  },
+  {
+   "h": "타원",
+   "cond": "C3",
+   "text": [
+    "경계는 $\\mathrm O$를 초점으로 하는 타원."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\mathrm D(1,0)$",
+   "body": [
+    "(같은 집합 $R$에 대하여) 점 $\\mathrm D(1,\\,0)$에 대하여 $\\mathrm X\\in R$일 때 $\\vec{\\mathrm{OD}}\\cdot\\vec{\\mathrm{OX}}$의 최댓값을 $M$, 최솟값을 $m$이라 하자. $8(M-m)$의 값을 구하시오."
+   ],
+   "answer": 75,
+   "hint": "$3x+5|x|=15$: $M=\\frac{15}8$, $m=-\\frac{15}2$."
+  }
+ ],
+ "line": "원 위 모든 점과의 내적 → 중심 분해."
+}

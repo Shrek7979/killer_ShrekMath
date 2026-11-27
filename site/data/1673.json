@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — $\\mathrm A_2$가 원점의 왼쪽에 있음을 놓쳐 두 선분 길이를 좌표의 차로 잘못 계산한 경우",
  "answer": 125,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -51,9 +51,11 @@
     0
    ],
    "text": "좌표평면에서 원 $x^{2}+y^{2}=1$ 의 안쪽 면은 빛을 반사하는 거울이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "거울",
+   "why": "단위원 안쪽.",
+   "uses": [
+    2
+   ]
   },
   {
    "id": "C2",
@@ -62,9 +64,11 @@
     1
    ],
    "text": "$0<\\theta<\\frac{\\pi}{12}$ 인 실수 $\\theta$ 에 대하여, 원의 내부에서 직선 $y=\\sin \\theta$ 를 따라 $x$ 축의 양의 방향으로 진행하던 빛이 원 위의 점 $\\mathrm{P}_{1}(\\cos \\theta,\\,\\sin \\theta)$ 에서 반사된 후 원 위의 점 $\\mathrm{P}_{2}$ , $\\mathrm{P}_{3}$ 에서 차례로 반사되어 원 위의 점 $\\mathrm{P}_{4}$ 에 도달한다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "빛",
+   "why": "$y=\\sin\\theta$를 따라 $\\mathrm P_1$에서 반사.",
+   "uses": [
+    3
+   ]
   },
   {
    "id": "C3",
@@ -73,9 +77,12 @@
     2
    ],
    "text": "(단, 빛이 원 위의 점에서 반사될 때 입사각의 크기와 반사각의 크기는 서로 같다.)",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "반사",
+   "why": "입사각 = 반사각.",
+   "uses": [
+    1,
+    2
+   ]
   },
   {
    "id": "C4",
@@ -84,9 +91,12 @@
     0
    ],
    "text": "$k=1,\\,2,\\,3$ 에 대하여 선분 $\\mathrm{P}{}_{k}\\mathrm{P}_{k+1}$ 과 $x$ 축의 교점을 $\\mathrm{A}_{k}$ 라 하고, $f(\\theta)=\\overline{\\mathrm{A}_{1}\\mathrm{A}_{2}}+\\overline{\\mathrm{A}_{2}\\mathrm{A}_{3}}$ 이라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "$f(\\theta)$",
+   "why": "$\\overline{\\mathrm A_1\\mathrm A_2}+\\overline{\\mathrm A_2\\mathrm A_3}$.",
+   "uses": [
+    4,
+    5
+   ]
   },
   {
    "id": "C5",
@@ -95,8 +105,8 @@
     1
    ],
    "text": "$\\lim_{\\theta \\to 0+}f(\\theta)=\\alpha$ 일 때,",
-   "label": "",
-   "why": "",
+   "label": "$\\alpha$",
+   "why": "$\\lim f$.",
    "uses": []
   },
   {
@@ -106,9 +116,15 @@
     0
    ],
    "text": "$\\lim_{\\theta \\to 0+}\\frac{f(\\theta)-\\alpha}{\\theta^{2}}=\\frac{q}{p}$",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "극한",
+   "why": "$\\lim\\frac{f-\\alpha}{\\theta^2}=\\frac qp$.",
+   "uses": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
   },
   {
    "id": "C7",
@@ -128,9 +144,11 @@
     1
    ],
    "text": "$p+q$ 의 값을 구하시오.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "$p+q$.",
+   "uses": [
+    11
+   ]
   },
   {
    "id": "C9",
@@ -139,84 +157,150 @@
     2
    ],
    "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "서로소",
+   "why": "기약분수.",
+   "uses": [
+    11
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "반사마다 입사각 $\\theta$ 유지 → 반사점이 중심각 $\\pi-2\\theta$씩 이동, 현과 $\\mathrm O$의 거리 $\\sin\\theta$.",
+  "$x$축 교점 $\\frac{\\sin\\theta}{\\sin2\\theta}$, $-\\frac{\\sin\\theta}{\\sin4\\theta}$, $\\frac{\\sin\\theta}{\\sin6\\theta}$ — 차를 정확한 식으로."
+ ],
  "topic": "원 모양 거울 안에서 세 번 반사되는 빛 — 반사점마다 같은 입사각",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "반사와 원",
+   "p": [
+    "반지름이 법선."
+   ]
+  },
+  {
+   "h": "이차 극한",
+   "p": [
+    "$1-\\cos a\\theta\\sim\\frac{a^2\\theta^2}2$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 반사마다 입사각 θ 가 유지되어 반사점이 중심각 π−2θ 씩 시계 방향으로 건너가므로 각 현은 O 에서 거리 sinθ 인 직선이 되고, x축 교점이 양·음·양으로 번갈아 놓여 f=OA₁+2OA₂+OA₃ 가 됨을 본 뒤, 배각·3배각으로 각 항을 정확히 변형해 이차 극한을 구하는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "[관문 1: 반사점의 규칙] 원 위의 점에서 거울에 수직인 직선은 반지름이다. 점 $\\mathrm{P}_{1}$ 에 들어오는 빛의 방향 $(1,\\,0)$ 은 반지름 $\\mathrm{OP}_{1}$ 과 크기가 $\\theta$ 인 각을 이루므로 반사된 빛도 $\\mathrm{OP}_{1}$ 과 크기가 $\\theta$ 인 각을 이루며 $x$ 축 아래쪽으로 나아간다. 삼각형 $\\mathrm{OP}{}_{1}\\mathrm{P}_{2}$ 는 $\\overline{\\mathrm{OP}_{1}}=\\overline{\\mathrm{OP}_{2}}=1$ 인 이등변삼각형이므로 $\\angle \\mathrm{OP}{}_{2}\\mathrm{P}_{1}=\\theta$ , $\\angle \\mathrm{P}_{1}\\mathrm{OP}_{2}=\\pi-2 \\theta$ 이다. 즉 $\\mathrm{P}_{2}$ 에서도 입사각이 $\\theta$ 이고, 같은 논리가 반복되어 모든 반사점에서 입사각·반사각은 $\\theta$ , 이웃한 두 반사점이 중심 $\\mathrm{O}$ 에서 이루는 각은 $\\pi-2 \\theta$ 이다. 빛은 원을 따라 시계 방향으로 돌아가므로 동경 $\\mathrm{OP}_{1}$ , $\\mathrm{OP}_{2}$ , $\\mathrm{OP}_{3}$ , $\\mathrm{OP}_{4}$ 가 나타내는 각은 차례로 $\\theta$ , $3 \\theta-\\pi$ , $5 \\theta-2 \\pi$ , $7 \\theta-3 \\pi$ 이고, $0<\\theta<\\frac{\\pi}{12}$ 에서 $\\mathrm{P}_{1}$ , $\\mathrm{P}_{3}$ 은 $x$ 축 위쪽, $\\mathrm{P}_{2}$ , $\\mathrm{P}_{4}$ 는 아래쪽에 있어 각 선분은 $x$ 축과 한 점에서 만난다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C3"
+   ],
+   "title": "반사 규칙"
   },
   {
    "n": 3,
    "text": "[관문 2: 교점의 위치와 부호] 중심각이 $\\pi-2 \\theta$ 인 현은 $\\mathrm{O}$ 에서의 거리가 $\\cos \\left(\\frac{\\pi}{2}-\\theta \\right)=\\sin \\theta$ 이고, $\\mathrm{O}$ 에서 현에 내린 수선은 두 끝점의 동경이 나타내는 각의 평균 $\\psi$ 의 방향이다. 따라서 현 $\\mathrm{P}{}_{k}\\mathrm{P}_{k+1}$ 은 직선 $x \\cos \\psi_{k}+y \\sin \\psi_{k}=\\sin \\theta$ 이고 $x$ 절편은 $\\frac{\\sin \\theta}{\\cos \\psi_{k}}$ 이다. $\\psi_{1}=2 \\theta-\\frac{\\pi}{2}$ , $\\psi_{2}=4 \\theta-\\frac{3}{2}\\pi$ , $\\psi_{3}=6 \\theta-\\frac{5}{2}\\pi$ 에서 $\\cos \\psi_{1}=\\sin 2 \\theta$ , $\\cos \\psi_{2}=-\\sin 4 \\theta$ , $\\cos \\psi_{3}=\\sin 6 \\theta$ 이므로",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "현"
   },
   {
    "n": 4,
    "text": "$$\\mathrm{A}_{1}\\left(\\frac{\\sin \\theta}{\\sin 2 \\theta},\\,0 \\right),\\,\\,\\,\\mathrm{A}_{2}\\left(-\\frac{\\sin \\theta}{\\sin 4 \\theta},\\,0 \\right),\\,\\,\\,\\mathrm{A}_{3}\\left(\\frac{\\sin \\theta}{\\sin 6 \\theta},\\,0 \\right)$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "교점"
   },
   {
    "n": 5,
    "text": "이다. $\\mathrm{A}_{2}$ 만 원점의 왼쪽에 있으므로 두 선분이 모두 원점을 지나고, $f(\\theta)=\\frac{\\sin \\theta}{\\sin 2 \\theta}+2 \\times \\frac{\\sin \\theta}{\\sin 4 \\theta}+\\frac{\\sin \\theta}{\\sin 6 \\theta}$ 이다. (가운데 항의 계수 $2$ 를 놓치지 않아야 한다.) $\\lim_{\\theta \\to 0+}\\frac{\\sin \\theta}{\\sin 2 k \\theta}=\\frac{1}{2 k}$ 이므로 $\\alpha=\\frac{1}{2}+\\frac{2}{4}+\\frac{1}{6}=\\frac{7}{6}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "부호"
   },
   {
    "n": 6,
    "text": "[관문 3: 근사 없이 정리하는 이차 극한] 배각과 $3$ 배각 공식 $\\sin 3 \\theta=\\sin 2 \\theta \\cos \\theta+\\cos 2 \\theta \\sin \\theta=\\sin \\theta(3-4 \\sin^{2}\\theta)$ 를 이용하면 세 항은 다음과 같이 정확히 정리된다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C6"
+   ],
+   "title": "배각 정리"
   },
   {
    "n": 7,
    "text": "$$\\frac{\\sin \\theta}{\\sin 2 \\theta}-\\frac{1}{2}=\\frac{1-\\cos \\theta}{2 \\cos \\theta},\\,\\,\\,\\frac{\\sin \\theta}{\\sin 4 \\theta}-\\frac{1}{4}=\\frac{(1-\\cos \\theta)+\\cos \\theta(1-\\cos 2 \\theta)}{4 \\cos \\theta \\cos 2 \\theta}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C6"
+   ],
+   "title": "둘째 항"
   },
   {
    "n": 8,
    "text": "$$\\frac{\\sin \\theta}{\\sin 6 \\theta}-\\frac{1}{6}=\\frac{1}{2(3-4 \\sin^{2}\\theta)\\cos 3 \\theta}-\\frac{1}{6}=\\frac{3(1-\\cos 3 \\theta)+4 \\sin^{2}\\theta \\cos 3 \\theta}{6(3-4 \\sin^{2}\\theta)\\cos 3 \\theta}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C6"
+   ],
+   "title": "셋째 항"
   },
   {
    "n": 9,
    "text": "$\\lim_{\\theta \\to 0}\\frac{1-\\cos a \\theta}{\\theta^{2}}=\\frac{a^{2}}{2}$ 이므로 세 식을 $\\theta^{2}$ 으로 나눈 극한은 차례로 $\\frac{1}{4}$ , $\\frac{1}{4}\\left(\\frac{1}{2}+2 \\right)=\\frac{5}{8}$ , $\\frac{1}{18}\\left(\\frac{27}{2}+4 \\right)=\\frac{35}{36}$ 이다. 따라서",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C6"
+   ],
+   "title": "극한"
   },
   {
    "n": 10,
    "text": "$$\\lim_{\\theta \\to 0+}\\frac{f(\\theta)-\\alpha}{\\theta^{2}}=\\frac{1}{4}+2 \\times \\frac{5}{8}+\\frac{35}{36}=\\frac{89}{36}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C6"
+   ],
+   "title": "합"
   },
   {
    "n": 11,
    "text": "이고 $p=36$ , $q=89$ 이므로 $p+q=125$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C8",
+    "C9"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\mathrm A_2<0$",
+   "cond": "C4",
+   "text": [
+    "두 선분이 모두 원점을 지남 — 거리의 합."
+   ]
+  },
+  {
+   "h": "$\\alpha$",
+   "cond": "C5",
+   "text": [
+    "$\\frac12+\\frac24+\\frac16$."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\alpha$",
+   "body": [
+    "(같은 빛의 경로에 대하여) $\\lim_{\\theta\\to0+}f(\\theta)=\\frac qp$일 때, $p+q$의 값을 구하시오. (단, $p$와 $q$는 서로소인 자연수이다.)"
+   ],
+   "answer": 13,
+   "hint": "$\\frac12+2\\times\\frac14+\\frac16=\\frac76$."
+  }
+ ],
+ "line": "원 거울 반사 = 같은 현 거리의 회전.",
  "note": ""
 }

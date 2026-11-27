@@ -11,9 +11,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 30번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 내접원의 접점 $\\mathrm D$를 현의 중점으로 보거나 $m=-6$을 버리지 않은 경우",
  "answer": 306,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -33,9 +33,12 @@
     0
    ],
    "text": "두 초점이 $\\mathrm{F}(c,\\,0)$ , $\\mathrm{F'}(-c,\\,0)$ $(c>0)$ 인 타원 $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ $(a>b>0)$ 이 있다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "타원",
+   "why": "초점 $\\mathrm F(c,0)$, $\\mathrm F'(-c,0)$.",
+   "uses": [
+    2,
+    4
+   ]
   },
   {
    "id": "C2",
@@ -44,9 +47,11 @@
     1
    ],
    "text": "점 $\\mathrm{F'}$ 를 지나고 $x$ 축이 아닌 직선이 이 타원과 만나는 두 점을 $\\mathrm{P}$ , $\\mathrm{Q}$ 라 하고, 삼각형 $\\mathrm{PQF}$ 의 내접원이 선분 $\\mathrm{PQ}$ 에 접하는 점을 $\\mathrm{D}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "현",
+   "why": "$\\mathrm F'$를 지나는 현 $\\mathrm{PQ}$, 내접원 접점 $\\mathrm D$.",
+   "uses": [
+    3
+   ]
   },
   {
    "id": "C3",
@@ -55,9 +60,15 @@
     2
    ],
    "text": "삼각형 $\\mathrm{PQF}$ 의 둘레의 길이는 $36$ 이고, 삼각형 $\\mathrm{PQF}$ 의 내접원의 반지름의 길이와 선분 $\\mathrm{F'D}$ 의 길이는 모두 $3$ 이다.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "조건",
+   "why": "둘레 $36$, 내접원 반지름 $3$, $\\overline{\\mathrm{F'D}}=3$.",
+   "uses": [
+    1,
+    2,
+    5,
+    6,
+    7
+   ]
   },
   {
    "id": "C4",
@@ -66,66 +77,125 @@
     3
    ],
    "text": "가능한 모든 $\\overline{\\mathrm{PQ}}^{2}$ 의 값의 합을 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "가능한 $\\overline{\\mathrm{PQ}}^2$의 합.",
+   "uses": [
+    8
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "둘레 $=4a=36$; 접선 길이로 $\\overline{\\mathrm{PD}}=\\overline{\\mathrm{QF'}}$ → $\\overline{\\mathrm{F'D}}=|\\overline{\\mathrm{PF'}}-\\overline{\\mathrm{QF'}}|$.",
+  "초점 거리 공식으로 $|u|=\\frac{27}m$, 넓이·내접원으로 $b^2$ → $(m-9)(m-15)(m+6)=0$."
+ ],
  "topic": "타원의 초점을 지나는 현과 다른 초점이 만드는 삼각형의 내접원 — 둘레 4a",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "타원의 정의",
+   "p": [
+    "$\\overline{\\mathrm{PF}}+\\overline{\\mathrm{PF'}}=2a$."
+   ]
+  },
+  {
+   "h": "내접원",
+   "p": [
+    "넓이 $=rs$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 초점을 지나는 현 PQ 와 다른 초점 F 가 만드는 삼각형은 둘레가 4a 로 고정되고, 내접원의 접점 D 가 PD=QF′ 로 F′ 와 대칭인 위치에 오므로 F′D=|PF′−QF′| 가 되며, 코사인법칙으로 얻은 초점거리와 넓이(F′F 로 나누기)로 현의 길이 m 에 대한 삼차방정식을 세우면 두 타원이 모두 가능함을 찾는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "[관문 1: 둘레] 점 $\\mathrm{F'}$ 는 타원의 내부에 있으므로 선분 $\\mathrm{PQ}$ 위에 있고 $\\overline{\\mathrm{PQ}}=\\overline{\\mathrm{PF'}}+\\overline{\\mathrm{QF'}}$ 이다. 타원의 정의에 의하여 둘레는 $(\\overline{\\mathrm{PF}}+\\overline{\\mathrm{PF'}})+(\\overline{\\mathrm{QF}}+\\overline{\\mathrm{QF'}})=4 a=36$ 이므로 $a=9$ 이고, 삼각형 $\\mathrm{PQF}$ 의 둘레의 절반은 $18$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1",
+    "C3"
+   ],
+   "title": "둘레"
   },
   {
    "n": 3,
    "text": "[관문 2: 접점의 위치] 꼭짓점에서 내접원까지의 접선의 길이를 쓰면 $\\overline{\\mathrm{PD}}=18-\\overline{\\mathrm{QF}}=\\overline{\\mathrm{QF'}}$ , $\\overline{\\mathrm{QD}}=18-\\overline{\\mathrm{PF}}=\\overline{\\mathrm{PF'}}$ 이다. 따라서 $\\overline{\\mathrm{F'D}}=\\left|\\overline{\\mathrm{PF'}}-\\overline{\\mathrm{QF'}}\\right|=3$ 이고, 삼각형 $\\mathrm{PQF}$ 의 넓이는 $18 \\times 3=54$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "접점"
   },
   {
    "n": 4,
    "text": "[관문 3: 초점거리] $\\theta=\\angle \\mathrm{PF'F}$ 라 하면 $\\angle \\mathrm{QF'F}=\\pi-\\theta$ 이다. 삼각형 $\\mathrm{PF'F}$ 에서 $\\overline{\\mathrm{PF}}=18-\\overline{\\mathrm{PF'}}$ 와 코사인법칙 $\\overline{\\mathrm{PF}}^{2}=\\overline{\\mathrm{PF'}}^{2}+4 c^{2}-4 c \\overline{\\mathrm{PF'}}\\cos \\theta$ 를 연립하면 $\\overline{\\mathrm{PF'}}=\\frac{81-c^{2}}{9-u}=\\frac{b^{2}}{9-u}$ ( $u=c \\cos \\theta$ )이고, 같은 방법으로 $\\overline{\\mathrm{QF'}}=\\frac{b^{2}}{9+u}$ 이다. 따라서",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "초점거리"
   },
   {
    "n": 5,
    "text": "$$\\overline{\\mathrm{PQ}}=\\frac{18 b^{2}}{81-u^{2}},\\,\\,\\,\\left|\\overline{\\mathrm{PF'}}-\\overline{\\mathrm{QF'}}\\right|=\\frac{2 b^{2}\\left|u \\right|}{81-u^{2}}=\\frac{\\left|u \\right|}{9}\\overline{\\mathrm{PQ}}$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "$u$"
   },
   {
    "n": 6,
    "text": "이다. $\\overline{\\mathrm{PQ}}=m$ 이라 하면 $\\left|u \\right|=\\frac{27}{m}$ 이다. 또 넓이를 직선 $\\mathrm{FF'}$ 로 나누어 구하면 $\\frac{1}{2}\\times 2 c \\times(\\overline{\\mathrm{PF'}}+\\overline{\\mathrm{QF'}})\\sin \\theta=c m \\sin \\theta=54$ 이므로 $c \\sin \\theta=\\frac{54}{m}$ 이고 $c^{2}=u^{2}+(c \\sin \\theta)^{2}=\\frac{3645}{m^{2}}$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "방정식"
   },
   {
    "n": 7,
    "text": "[관문 4: 현의 길이에 대한 방정식] $b^{2}=\\frac{m(81-u^{2})}{18}=\\frac{9 m}{2}-\\frac{81}{2 m}$ 와 $b^{2}+c^{2}=81$ 에서 $m^{3}-18 m^{2}-9 m+810=0$ 이고, 인수정리로 $(m-9)(m-15)(m+6)=0$ 이다. 따라서 $m=9$ 또는 $m=15$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "두 해"
   },
   {
    "n": 8,
    "text": "$m=9$ 이면 $c^{2}=45$ , $b^{2}=36$ 이고, $m=15$ 이면 $c^{2}=\\frac{81}{5}$ , $b^{2}=\\frac{324}{5}$ 이다. 두 경우 모두 $a>b>0$ , $c>0$ 이고, $\\tan \\theta=\\frac{54/m}{27/m}=2$ 인 직선에 대하여 $\\overline{\\mathrm{PF'}}$ , $\\overline{\\mathrm{QF'}}$ 가 각각 $6,\\,3$ 과 $9,\\,6$ 이 되어 $\\overline{\\mathrm{F'D}}=3$ , 반지름 $54 \\div 18=3$ 이 실제로 성립한다. 따라서 구하는 합은 $81+225=306$ 이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C4"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "$\\mathrm D$의 위치",
+   "cond": "C2",
+   "text": [
+    "$\\mathrm F'$와 현의 중점에 대하여 대칭."
+   ]
+  },
+  {
+   "h": "두 경우",
+   "cond": "C4",
+   "text": [
+    "$m=9$, $15$ 모두 실재."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $b^2$의 합",
+   "body": [
+    "(같은 조건에서) 가능한 모든 $b^2$의 값의 합을 $T$라 할 때, $5T$의 값을 구하시오."
+   ],
+   "answer": 504,
+   "hint": "$36+\\frac{324}5=\\frac{504}5$."
+  }
+ ],
+ "line": "초점 현 삼각형 = 둘레 $4a$ + 접점 대칭.",
  "note": ""
 }
