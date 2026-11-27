@@ -1,0 +1,125 @@
+{
+ "num": 1691,
+ "id": "매시간_5제_누적_최고난도-139",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12기하01-03]",
+  "[12대수02-03]"
+ ],
+ "source": "ShrekMath 창작 · 수능 30번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 54,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "양수 $b$ 에 대하여 두 초점이 $\\mathrm{F}(c,\\,0)$ , $\\mathrm{F'}(-c,\\,0)$ $(c>0)$ 인 쌍곡선 $\\frac{x^{2}}{4}-\\frac{y^{2}}{b^{2}}=1$ 이 있다.",
+    "중심이 $\\mathrm{F}$ 이고 반지름의 길이가 $10$ 인 원이 이 쌍곡선과 서로 다른 네 점에서 만나고, 이 네 점 중 어떤 두 점과 점 $\\mathrm{F'}$ 가 한 직선 위에 있다.",
+    "가능한 모든 $b^{2}$ 의 값의 합을 구하시오. [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "양수 $b$ 에 대하여 두 초점이 $\\mathrm{F}(c,\\,0)$ , $\\mathrm{F'}(-c,\\,0)$ $(c>0)$ 인 쌍곡선 $\\frac{x^{2}}{4}-\\frac{y^{2}}{b^{2}}=1$ 이 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "중심이 $\\mathrm{F}$ 이고 반지름의 길이가 $10$ 인 원이 이 쌍곡선과 서로 다른 네 점에서 만나고, 이 네 점 중 어떤 두 점과 점 $\\mathrm{F'}$ 가 한 직선 위에 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "가능한 모든 $b^{2}$ 의 값의 합을 구하시오. [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "쌍곡선의 한 초점을 중심으로 하는 원과의 네 교점 — 정의로 고정되는 다른 초점까지의 거리 14·6",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 초점 F 를 중심으로 하는 원과의 교점에서는 쌍곡선의 정의로 다른 초점 F′ 까지의 거리가 가지마다 14 와 6 으로 고정되므로, F′ 와 일직선인 두 교점은 '왼쪽 가지의 세로 쌍(F′ 를 지나는 세로선, c=4)' 과 '양 가지에 걸친 쌍(삼각부등식으로 F′ 가 바깥에 있음을 보이고 공통각의 코사인법칙 두 개, c²=46)' 두 경우뿐이며 둘 다 실재함을 찾는 것",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$c^{2}=4+b^{2}$ 이다. 쌍곡선 위의 점 $\\mathrm{X}(x,\\,y)$ 에 대하여 $\\overline{\\mathrm{XF'}}^{2}-\\overline{\\mathrm{XF}}^{2}=(x+c)^{2}-(x-c)^{2}=4 c x$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "[관문 1: 교점의 위치] 오른쪽 가지 위의 점은 쌍곡선의 정의에 의하여 $\\overline{\\mathrm{XF'}}-\\overline{\\mathrm{XF}}=4$ 이므로 $\\overline{\\mathrm{XF'}}+\\overline{\\mathrm{XF}}=c x$ , $\\overline{\\mathrm{XF}}=\\frac{c x-4}{2}$ 로 $x$ 에 대하여 증가하고 꼭짓점에서 최솟값 $c-2$ 를 갖는다. 왼쪽 가지 위의 점은 $\\overline{\\mathrm{XF}}-\\overline{\\mathrm{XF'}}=4$ 이므로 $\\overline{\\mathrm{XF}}=\\frac{-c x+4}{2}$ 로 $\\left|x \\right|$ 에 대하여 증가하고 최솟값은 $c+2$ 이다. 원 위의 점은 $\\overline{\\mathrm{XF}}=10$ 이므로 오른쪽 가지와는 $x=\\frac{24}{c}$ 인 두 점 $\\mathrm{P}$ , $\\mathrm{P'}$ ( $\\overline{\\mathrm{PF'}}=14$ ), 왼쪽 가지와는 $10>c+2$ 일 때 $x=-\\frac{16}{c}$ 인 두 점 $\\mathrm{Q}$ , $\\mathrm{Q'}$ ( $\\overline{\\mathrm{QF'}}=6$ )에서 만난다. 네 점에서 만날 조건은 $c<8$ 이다. ( $\\mathrm{P}$ , $\\mathrm{Q}$ 는 $y>0$ 인 점이라 하자.)",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "[관문 2: 어느 두 점인가] $\\mathrm{P}$ , $\\mathrm{P'}$ 는 직선 $x=\\frac{24}{c}$ 위에 있어 $\\mathrm{F'}$ 를 지나지 않는다. $\\mathrm{Q}$ , $\\mathrm{Q'}$ 를 지나는 직선 $x=-\\frac{16}{c}$ 가 $\\mathrm{F'}$ 를 지날 조건은 $\\frac{16}{c}=c$ , 즉 $c=4$ 이다(경우 ⅰ). 나머지는 서로 다른 가지의 두 점 $\\mathrm{X}$ (오른쪽, $\\overline{\\mathrm{XF'}}=14$ ), $\\mathrm{Y}$ (왼쪽, $\\overline{\\mathrm{YF'}}=6$ )와 $\\mathrm{F'}$ 가 한 직선 위에 있는 경우이다(경우 ⅱ). 이때 $\\mathrm{F'}$ 가 두 점 사이에 있으면 $\\overline{\\mathrm{XY}}=14+6=20$ 인데, $\\mathrm{X}$ , $\\mathrm{Y}$ 는 $x$ 축 위에 있지 않아 $\\mathrm{F}$ 는 직선 $\\mathrm{XY}$ 위에 없으므로 $\\overline{\\mathrm{XY}}<\\overline{\\mathrm{XF}}+\\overline{\\mathrm{YF}}=20$ 이 되어 모순이다. 따라서 $\\mathrm{F'}$ 는 선분 밖에 있고, $\\mathrm{Y}$ 쪽에 가까우므로 $\\mathrm{F'}$ , $\\mathrm{Y}$ , $\\mathrm{X}$ 가 이 순서로 한 반직선 위에 있다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "[관문 3: 코사인법칙] 경우 ⅱ에서 $\\theta=\\angle \\mathrm{FF'Y}=\\angle \\mathrm{FF'X}$ 라 하면 두 삼각형 $\\mathrm{FF'Y}$ , $\\mathrm{FF'X}$ 에서",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "$$100=36+4 c^{2}-24 c \\cos \\theta,\\,\\,\\,100=196+4 c^{2}-56 c \\cos \\theta$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "이다. 첫 식에서 $c \\cos \\theta=\\frac{c^{2}-16}{6}$ 이고 이를 둘째 식에 넣으면 $4 c^{2}+96=56 \\times \\frac{c^{2}-16}{6}$ , $c^{2}=46$ 이다. 역으로 $c^{2}=46$ 이면 $c \\cos \\theta=5$ 이고, 반직선 $\\mathrm{F'Q}$ 위에 $\\overline{\\mathrm{F'X}}=14$ 인 점 $\\mathrm{X}$ 를 잡으면 $\\overline{\\mathrm{FX}}^{2}=196+184-56 \\times 5=100$ 이므로 $\\overline{\\mathrm{XF'}}-\\overline{\\mathrm{XF}}=4$ 가 되어 $\\mathrm{X}$ 는 오른쪽 가지와 원의 교점, 곧 $\\mathrm{P}$ 이다. 즉 $\\mathrm{F'}$ , $\\mathrm{Q}$ , $\\mathrm{P}$ 가 실제로 한 직선 위에 있다. 또 $c=\\sqrt{46}<8$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 8,
+   "text": "[관문 4: 경우 ⅰ의 확인] $c=4<8$ 이면 $\\mathrm{Q}(-4,\\,y)$ 에서 $\\overline{\\mathrm{QF'}}=6$ 이 세로 방향 거리이고 $\\overline{\\mathrm{QF}}^{2}=6^{2}+8^{2}=100$ 이 성립한다. 따라서 $c^{2}=16$ 또는 $c^{2}=46$ 이 모두 가능하고, $b^{2}=c^{2}-4$ 는 $12$ 또는 $42$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 9,
+   "text": "따라서 가능한 모든 $b^{2}$ 의 값의 합은 $12+42=54$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

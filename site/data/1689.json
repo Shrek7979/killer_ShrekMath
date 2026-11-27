@@ -1,0 +1,165 @@
+{
+ "num": 1689,
+ "id": "매시간_5제_누적_최고난도-137",
+ "subject": "미적분Ⅱ",
+ "type": "29번형",
+ "typeDesc": "미적분Ⅱ · 수능 29번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12미적Ⅱ-03-04]",
+  "[12미적Ⅱ-03-02]",
+  "[12미적Ⅱ-02-02]",
+  "[12미적Ⅱ-02-03]"
+ ],
+ "source": "ShrekMath 창작 · 수능 29번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 21,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "자연수 $n$ 에 대하여 반원 $x^{2}+y^{2}=1 \\,(y \\ge 0)$ 위의 $n+1$ 개의 점 $\\mathrm{P}_{k}\\left(\\cos \\frac{k \\pi}{n},\\,\\sin \\frac{k \\pi}{n}\\right)$ $(k=0,\\,1,\\,2,\\,\\cdots,\\,n)$ 이 있다.",
+    "양수 $a$ 에 대하여 점 $\\mathrm{A}(0,\\,a)$ 와 직선 $\\mathrm{P}_{k-1}P_{k}$ 사이의 거리를 $l_{k}$ , 두 점 $\\mathrm{P}_{k-1}$ , $\\mathrm{P}_{k}$ 의 $y$ 좌표의 차를 $h_{k}$ 라 하자 $(k=1,\\,2,\\,\\cdots,\\,n)$ ."
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "\\lim_{n \\to \\infty}\\sum_{k=1}^{n}l_{k}h_{k}=\\frac{13}{10}"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "을 만족시키는 모든 $a$ 의 값의 합이 $\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오.",
+    "(단, $h_{k}\\ge 0$ 이고, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "자연수 $n$ 에 대하여 반원 $x^{2}+y^{2}=1 \\,(y \\ge 0)$ 위의 $n+1$ 개의 점 $\\mathrm{P}_{k}\\left(\\cos \\frac{k \\pi}{n},\\,\\sin \\frac{k \\pi}{n}\\right)$ $(k=0,\\,1,\\,2,\\,\\cdots,\\,n)$ 이 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "양수 $a$ 에 대하여 점 $\\mathrm{A}(0,\\,a)$ 와 직선 $\\mathrm{P}_{k-1}P_{k}$ 사이의 거리를 $l_{k}$ , 두 점 $\\mathrm{P}_{k-1}$ , $\\mathrm{P}_{k}$ 의 $y$ 좌표의 차를 $h_{k}$ 라 하자 $(k=1,\\,2,\\,\\cdots,\\,n)$ .",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$\\lim_{n \\to \\infty}\\sum_{k=1}^{n}l_{k}h_{k}=\\frac{13}{10}$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    0
+   ],
+   "text": "을 만족시키는 모든 $a$ 의 값의 합이 $\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    2,
+    1
+   ],
+   "text": "(단, $h_{k}\\ge 0$ 이고, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "정적분과 급수 — 반원의 현을 품은 직선과 y축 위 한 점 사이의 거리",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 현의 직선이 원점에서 cos(π/2n) 떨어져 있어 l_k=|cosδ−a sinα_k| 로 정확히 쓰이고 h_k=2sinδ|cosα_k| 가 y=sinθ 의 미분 요소가 되어 극한이 2∫₀¹|1−au|du 로 줄어들며, 점 A 가 원 밖이면 현의 직선이 A 를 넘나드는 각 sinθ=1/a 에서 식이 갈려, 원 밖 공식에서 나온 a=4/5 가 가짜 해임을 가려내는 것",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "$\\delta=\\frac{\\pi}{2 n}$ , $\\alpha_{k}=\\frac{(2 k-1)\\pi}{2 n}$ 이라 하자. [관문 1: 정확한 식] 현 $\\mathrm{P}_{k-1}P_{k}$ 의 중점 $\\mathrm{M}_{k}$ 는 원점에서 거리 $\\cos \\delta$ 이고 방향 $(\\cos \\alpha_{k},\\,\\sin \\alpha_{k})$ 에 있으며 $\\overline{\\mathrm{OM}_{k}}$ 는 현에 수직이다. 따라서 직선 $\\mathrm{P}_{k-1}P_{k}$ 는 $x \\cos \\alpha_{k}+y \\sin \\alpha_{k}=\\cos \\delta$ 이고",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$$l_{k}=\\left|\\cos \\delta-a \\sin \\alpha_{k}\\right|,\\,\\,\\,h_{k}=\\left|\\sin \\frac{k \\pi}{n}-\\sin \\frac{(k-1)\\pi}{n}\\right|=2 \\sin \\delta \\left|\\cos \\alpha_{k}\\right|$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "이다(뒤의 식은 덧셈정리). [관문 2: 극한] $\\left|\\left|x \\right|-\\left|y \\right|\\right|\\le \\left|x-y \\right|$ 이므로 $l_{k}$ 를 $\\left|1-a \\sin \\alpha_{k}\\right|$ 로 바꾼 합과의 차는 $2 n \\sin \\delta(1-\\cos \\delta)$ 이하이고 이는 $0$ 으로 수렴한다. 또 $\\frac{\\sin \\delta}{\\delta}\\to 1$ 이다. $g(\\theta)=\\left|1-a \\sin \\theta \\right|\\left|\\cos \\theta \\right|$ , $R_{m}=\\sum_{j=1}^{m}g \\left(\\frac{j \\pi}{m}\\right)\\frac{\\pi}{m}$ 이라 하면 가운데 점의 합 $\\sum_{k=1}^{n}g(\\alpha_{k})\\frac{\\pi}{n}$ 은 $2 R_{2 n}-R_{n}$ 과 같다( $2 R_{2 n}$ 은 $j$ 가 홀수인 항과 짝수인 항의 합이고 짝수인 항만 모은 것이 $R_{n}$ 이다). $g$ 는 연속이므로 정적분과 급수의 관계에 의하여 $R_{n}$ , $R_{2 n}$ 은 모두 $\\int_{0}^{\\pi}g(\\theta)d \\theta$ 로 수렴하고, 따라서 가운데 점의 합도 $2 \\int_{0}^{\\pi}g(\\theta)d \\theta-\\int_{0}^{\\pi}g(\\theta)d \\theta$ 로 수렴한다. 또 $\\sum_{k=1}^{n}l_{k}h_{k}$ 는 $\\frac{\\sin \\delta}{\\delta}\\times \\sum_{k=1}^{n}l_{k}\\left|\\cos \\alpha_{k}\\right|\\frac{\\pi}{n}$ 이므로",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$$L(a)=\\lim_{n \\to \\infty}\\sum_{k=1}^{n}l_{k}h_{k}=\\int_{0}^{\\pi}\\left|1-a \\sin \\theta \\right|\\left|\\cos \\theta \\right|d \\theta=2 \\int_{0}^{1}\\left|1-a u \\right|du$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "이다. [관문 3: 치환] 마지막 등호는 $\\theta$ 와 $\\pi-\\theta$ 의 대칭으로 $\\left[0,\\,\\frac{\\pi}{2}\\right]$ 의 두 배로 바꾼 뒤 $u=\\sin \\theta$ 로 치환한 것이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "[관문 4: 점 A 가 원 안인가 밖인가] $0<a \\le 1$ 이면 $0 \\le u \\le 1$ 에서 $1-a u \\ge 0$ 이므로 $L(a)=2-a$ 이다. $a>1$ 이면 $\\sin \\theta=\\frac{1}{a}$ 인 각(점 $\\mathrm{A}$ 에서 그은 접선의 접점)에서 부호가 바뀌어",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 8,
+   "text": "$$L(a)=2 \\left\\{\\int_{0}^{1/a}(1-a u)du+\\int_{1/a}^{1}(a u-1)du \\right\\}=a-2+\\frac{2}{a}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 9,
+   "text": "이다. $L(a)=\\frac{13}{10}$ 에서, $0<a \\le 1$ 인 경우 $a=\\frac{7}{10}$ 이고 이는 조건을 만족시킨다. $a>1$ 인 경우 $10 a^{2}-33 a+20=0$ , $(2 a-5)(5 a-4)=0$ 에서 $a=\\frac{5}{2}$ 또는 $a=\\frac{4}{5}$ 인데 $a=\\frac{4}{5}$ 는 $a>1$ 이 아니므로 버린다. (실제로 $L \\left(\\frac{4}{5}\\right)=\\frac{6}{5}$ 이다.)",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 10,
+   "text": "따라서 모든 $a$ 의 값의 합은 $\\frac{7}{10}+\\frac{5}{2}=\\frac{16}{5}$ 이고 $p+q=5+16=21$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}
