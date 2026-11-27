@@ -10,9 +10,9 @@
  ],
  "source": "ShrekMath 창작 · 수능 29번형",
  "rate": "",
- "wrong": "",
+ "wrong": "예상 오답 — 수직이등분선들이 덮는 영역을 원 $K$ 바깥으로 보거나, 타원 경계 위의 점까지 포함해 센 경우",
  "answer": 59,
- "full": false,
+ "full": true,
  "body": [
   {
    "t": "p",
@@ -31,9 +31,12 @@
     0
    ],
    "text": "좌표평면에서 원점 $\\mathrm{O}$ 를 중심으로 하고 반지름의 길이가 $10$ 인 원을 $K$ 라 하고, 점 $\\mathrm{A}(6,\\,0)$ 을 생각하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "원과 점",
+   "why": "$K$: 반지름 $10$, $\\mathrm A(6,0)$.",
+   "uses": [
+    3,
+    4
+   ]
   },
   {
    "id": "C2",
@@ -42,9 +45,12 @@
     1
    ],
    "text": "원 $K$ 위의 점 $\\mathrm{Q}$ 에 대하여 선분 $\\mathrm{AQ}$ 의 수직이등분선을 $l_{\\mathrm{Q}}$ 라 하자.",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "직선",
+   "why": "$\\mathrm{AQ}$의 수직이등분선 $l_{\\mathrm Q}$.",
+   "uses": [
+    1,
+    2
+   ]
   },
   {
    "id": "C3",
@@ -53,66 +59,127 @@
     2
    ],
    "text": "점 $\\mathrm{Q}$ 가 원 $K$ 위를 움직일 때 생기는 직선 $l_{\\mathrm{Q}}$ 중 어느 것도 지나지 않는 점 중에서 $x$ 좌표와 $y$ 좌표가 모두 정수인 점의 개수를 구하시오. [4점]",
-   "label": "",
-   "why": "",
-   "uses": []
+   "label": "묻는 것",
+   "why": "어느 $l_{\\mathrm Q}$도 지나지 않는 격자점의 수.",
+   "uses": [
+    5,
+    6,
+    7,
+    8
+   ]
   }
  ],
- "intro": [],
+ "intro": [
+  "$\\mathrm X$를 지나는 $l_{\\mathrm Q}$의 수 = $\\mathrm X$ 중심, $\\mathrm A$를 지나는 원과 $K$의 교점 수.",
+  "만날 조건은 $\\overline{\\mathrm{XO}}+\\overline{\\mathrm{XA}}\\ge10$ 하나 → 지나지 않는 점은 타원 내부."
+ ],
  "topic": "원 위의 점으로 접어 만든 수직이등분선들 — 한 직선도 지나가지 않는 격자점",
- "concepts": [],
+ "concepts": [
+  {
+   "h": "수직이등분선",
+   "p": [
+    "$\\overline{\\mathrm{XQ}}=\\overline{\\mathrm{XA}}$."
+   ]
+  },
+  {
+   "h": "두 원의 위치 관계",
+   "p": [
+    "$|r_1-r_2|\\le d\\le r_1+r_2$."
+   ]
+  }
+ ],
  "steps": [
   {
    "n": 1,
    "text": "출제 의도: 점 X를 지나는 수직이등분선의 개수를 'X를 중심으로 A를 지나는 원과 원 K의 교점의 개수'로 바꾸면, 두 원이 만날 조건 중 두 부등식은 A가 K 안에 있어 저절로 성립하고 XO+XA≥10 하나만 남아 '아무 직선도 지나지 않는 점'이 O, A를 초점으로 하는 타원의 내부(경계 제외)임을 찾는 것",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "의도"
   },
   {
    "n": 2,
    "text": "[관문 1: 직선의 개수를 원의 교점으로] 점 $\\mathrm{X}$ 가 $l_{\\mathrm{Q}}$ 위에 있을 필요충분조건은 $\\overline{\\mathrm{XQ}}=\\overline{\\mathrm{XA}}$ 이다. 또 $\\mathrm{Q}$ 는 $l_{\\mathrm{Q}}$ 에 대하여 $\\mathrm{A}$ 와 대칭인 점이므로 서로 다른 $\\mathrm{Q}$ 는 서로 다른 직선을 준다. 따라서 $\\mathrm{X}$ 를 지나는 직선 $l_{\\mathrm{Q}}$ 의 개수는 원 $K$ 와 '중심이 $\\mathrm{X}$ , 반지름의 길이가 $\\overline{\\mathrm{XA}}$ 인 원' $\\gamma$ 의 교점의 개수이다. ( $\\mathrm{X}=\\mathrm{A}$ 이면 $\\gamma$ 는 점 $\\mathrm{A}$ 하나이고 $\\mathrm{A}$ 는 $K$ 위에 있지 않으므로 지나는 직선이 없다.)",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C2"
+   ],
+   "title": "원으로"
   },
   {
    "n": 3,
    "text": "[관문 2: 두 원이 만날 조건] $\\mathrm{X}\\ne \\mathrm{A}$ 일 때 두 원이 만날 필요충분조건은 $\\left|10-\\overline{\\mathrm{XA}}\\right|\\le \\overline{\\mathrm{OX}}\\le 10+\\overline{\\mathrm{XA}}$ 이다. 그런데 $\\overline{\\mathrm{OX}}\\le \\overline{\\mathrm{OA}}+\\overline{\\mathrm{AX}}=6+\\overline{\\mathrm{XA}}<10+\\overline{\\mathrm{XA}}$ 이고, 같은 이유로 $\\overline{\\mathrm{XA}}-10 \\le \\overline{\\mathrm{OX}}-4<\\overline{\\mathrm{OX}}$ 이므로 두 부등식은 늘 성립한다. 남는 조건은 $10-\\overline{\\mathrm{XA}}\\le \\overline{\\mathrm{OX}}$ , 곧",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "조건"
   },
   {
    "n": 4,
    "text": "$$\\overline{\\mathrm{XO}}+\\overline{\\mathrm{XA}}\\ge 10$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C1"
+   ],
+   "title": "남는 조건"
   },
   {
    "n": 5,
    "text": "뿐이고, 등호일 때 두 원은 한 점에서 접하여 지나는 직선이 정확히 하나이다. 따라서 어떤 $l_{\\mathrm{Q}}$ 도 지나지 않는 점은 $\\overline{\\mathrm{XO}}+\\overline{\\mathrm{XA}}<10$ 인 점이다(점 $\\mathrm{A}$ 도 여기에 포함된다).",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "등호"
   },
   {
    "n": 6,
    "text": "[관문 3: 타원의 내부] 두 점 $\\mathrm{O}$ , $\\mathrm{A}$ 를 초점으로 하고 장축의 길이가 $10$ 인 타원은 중심 $(3,\\,0)$ , 장반축 $5$ , 초점과 중심 사이 거리 $3$ , 단반축 $\\sqrt{25-9}=4$ 이므로 $\\frac{(x-3)^{2}}{25}+\\frac{y^{2}}{16}=1$ 이고, 구하는 점은 이 타원의 내부, 곧 $\\frac{(x-3)^{2}}{25}+\\frac{y^{2}}{16}<1$ 인 점이다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "타원"
   },
   {
    "n": 7,
    "text": "$d=x-3$ 이라 하면 $y^{2}<\\frac{16(25-d^{2})}{25}$ 이다. $d=0$ 이면 $y^{2}<16$ 에서 $7$ 개, $d=\\pm 1$ 이면 $y^{2}<\\frac{384}{25}$ , $d=\\pm 2$ 이면 $y^{2}<\\frac{336}{25}$ , $d=\\pm 3$ 이면 $y^{2}<\\frac{256}{25}$ 에서 각각 $\\left|y \\right|\\le 3$ 인 $7$ 개, $d=\\pm 4$ 이면 $y^{2}<\\frac{144}{25}$ 에서 $\\left|y \\right|\\le 2$ 인 $5$ 개이고, $\\left|d \\right|\\ge 5$ 이면 없다. 타원 위의 격자점 $(3,\\,\\pm 4)$ , $(-2,\\,0)$ , $(8,\\,0)$ 은 직선이 하나씩 지나므로 제외된다.",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "세기"
   },
   {
    "n": 8,
    "text": "$$7+2 \\times(7+7+7+5)=59$$",
-   "uses": [],
-   "title": ""
+   "uses": [
+    "C3"
+   ],
+   "title": "답"
   }
  ],
- "traps": [],
- "variants": [],
- "line": "",
+ "traps": [
+  {
+   "h": "저절로 성립",
+   "cond": "C1",
+   "text": [
+    "$\\mathrm A$가 $K$ 안이라 다른 두 부등식은 자동."
+   ]
+  },
+  {
+   "h": "경계",
+   "cond": "C3",
+   "text": [
+    "등호면 접선 하나가 지남 — 제외."
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "h": "변형 · $\\mathrm A(8,0)$",
+   "body": [
+    "(같은 원 $K$에 대하여) 점 $\\mathrm A(8,\\,0)$과 $K$ 위의 점 $\\mathrm Q$에 대하여 선분 $\\mathrm{AQ}$의 수직이등분선을 $l_{\\mathrm Q}$라 하자. $\\mathrm Q$가 $K$ 위를 움직일 때 생기는 직선 $l_{\\mathrm Q}$ 중 어느 것도 지나지 않는 점 중에서 $x$좌표와 $y$좌표가 모두 정수인 점의 개수를 구하시오."
+   ],
+   "answer": 41,
+   "hint": "타원 $\\frac{(x-4)^2}{25}+\\frac{y^2}9<1$."
+  }
+ ],
+ "line": "접기로 만든 직선들의 포락선 = 타원.",
  "note": ""
 }
