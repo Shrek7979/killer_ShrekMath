@@ -1,0 +1,130 @@
+{
+ "num": 1722,
+ "id": "매시간_5제_누적_최고난도-170",
+ "subject": "대수",
+ "type": "30번형",
+ "typeDesc": "대수 · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12대수02-03]"
+ ],
+ "source": "ShrekMath 창작 · 수능 30번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 379,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "반지름의 길이가 $\\frac{7 \\sqrt{3}}{3}$ 인 원 위에 두 점 $\\mathrm{A}$ , $\\mathrm{B}$ 가 $\\overline{\\mathrm{AB}}=7$ 이 되도록 놓여 있다.",
+    "이 원 위의 점 $\\mathrm{C}$ $\\left(\\mathrm{C}\\ne \\mathrm{A},\\,\\mathrm{C}\\ne \\mathrm{B}\\right)$ 에 대하여, 직선 $\\mathrm{AB}$ 에 대하여 점 $\\mathrm{C}$ 와 반대쪽에 있는 이 원 위의 점 중에서 $\\overline{\\mathrm{AD}}=\\overline{\\mathrm{BD}}$ 인 점을 $\\mathrm{D}$ 라 하자.",
+    "$\\overline{\\mathrm{CD}}=8$ 이 되도록 하는 모든 점 $\\mathrm{C}$ 에 대하여 $\\overline{\\mathrm{CA}}\\times \\overline{\\mathrm{CB}}$ 의 값의 합은 $\\frac{q}{p}$ 이다.",
+    "$p+q$ 의 값을 구하시오.",
+    "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "반지름의 길이가 $\\frac{7 \\sqrt{3}}{3}$ 인 원 위에 두 점 $\\mathrm{A}$ , $\\mathrm{B}$ 가 $\\overline{\\mathrm{AB}}=7$ 이 되도록 놓여 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "이 원 위의 점 $\\mathrm{C}$ $\\left(\\mathrm{C}\\ne \\mathrm{A},\\,\\mathrm{C}\\ne \\mathrm{B}\\right)$ 에 대하여, 직선 $\\mathrm{AB}$ 에 대하여 점 $\\mathrm{C}$ 와 반대쪽에 있는 이 원 위의 점 중에서 $\\overline{\\mathrm{AD}}=\\overline{\\mathrm{BD}}$ 인 점을 $\\mathrm{D}$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "$\\overline{\\mathrm{CD}}=8$ 이 되도록 하는 모든 점 $\\mathrm{C}$ 에 대하여 $\\overline{\\mathrm{CA}}\\times \\overline{\\mathrm{CB}}$ 의 값의 합은 $\\frac{q}{p}$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    0,
+    3
+   ],
+   "text": "$p+q$ 의 값을 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    0,
+    4
+   ],
+   "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "원 위의 점과 고정된 현 — 반대쪽 호의 중점이 만드는 각의 이등분선",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 직선 AB 에 대하여 반대쪽 호의 중점 D 가 ∠ACB 의 이등분선 위에 있음을 원주각으로 찾고, 두 삼각형 ACD, BCD 의 코사인법칙을 빼서 CA+CB 를 CD 로 나타내되(CA=CB 이면 CD 가 지름이 되어 배제), 두 호에서 서로 다른 AD 와 각으로 CA·CB 를 구하는 것",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "반지름의 길이를 $R$ 라 하면 사인법칙에 의해 $\\sin(\\angle \\mathrm{ACB})=\\frac{7}{2 R}=\\frac{\\sqrt{3}}{2}$ 이고, 원주각의 성질에 의해 현 $\\mathrm{AB}$ 의 긴 호 위의 $\\mathrm{C}$ 에서는 $\\angle \\mathrm{ACB}=\\frac{\\pi}{3}$ , 짧은 호 위의 $\\mathrm{C}$ 에서는 $\\angle \\mathrm{ACB}=\\frac{2 \\pi}{3}$ 이다. 사각형 $\\mathrm{ACBD}$ 는 원에 내접하므로 $\\angle \\mathrm{ADB}=\\pi-\\angle \\mathrm{ACB}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "[관문 1: CD 는 각의 이등분선] 길이가 같은 현 $\\mathrm{AD}$ , $\\mathrm{BD}$ 에 대한 원주각은 같으므로 $\\angle \\mathrm{ACD}=\\angle \\mathrm{BCD}=\\frac{1}{2}\\angle \\mathrm{ACB}$ 이다. 긴 호의 경우 $\\angle \\mathrm{ACD}=\\frac{\\pi}{6}$ 이고, $\\angle \\mathrm{ADB}=\\frac{2 \\pi}{3}$ 인 이등변삼각형 $\\mathrm{ABD}$ 에서 코사인법칙으로 $49=3 \\overline{\\mathrm{AD}}^{2}$ , 즉 $\\overline{\\mathrm{AD}}^{2}=\\frac{49}{3}$ 이다. 짧은 호의 경우 $\\angle \\mathrm{ACD}=\\frac{\\pi}{3}$ 이고, $\\angle \\mathrm{ADB}=\\frac{\\pi}{3}$ 이므로 삼각형 $\\mathrm{ABD}$ 는 정삼각형, $\\overline{\\mathrm{AD}}=7$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "[관문 2: 두 코사인법칙의 차] $\\overline{\\mathrm{CA}}=m$ , $\\overline{\\mathrm{CB}}=n$ , $\\overline{\\mathrm{CD}}=s$ 라 하자. 긴 호의 경우 삼각형 $\\mathrm{ACD}$ , $\\mathrm{BCD}$ 에서 $\\frac{49}{3}=m^{2}+s^{2}-\\sqrt{3}m s=n^{2}+s^{2}-\\sqrt{3}n s$ 이고, 빼면 $(m-n)(m+n-\\sqrt{3}s)=0$ 이다. $m=n$ 이면 $\\mathrm{C}$ , $\\mathrm{D}$ 가 모두 선분 $\\mathrm{AB}$ 의 수직이등분선 위에 있어 $\\overline{\\mathrm{CD}}$ 는 지름 $\\frac{14 \\sqrt{3}}{3}$ 이고, $\\left(\\frac{14 \\sqrt{3}}{3}\\right)^{2}=\\frac{196}{3}\\ne 64$ 이므로 $s=8$ 일 수 없다. 따라서 $m+n=8 \\sqrt{3}$ 이고, $m^{2}-8 \\sqrt{3}m=\\frac{49}{3}-64$ 에서 $m(m-8 \\sqrt{3})=-m n$ 이므로 $m n=\\frac{143}{3}$ 이다. 짧은 호의 경우 같은 방법으로 $49=m^{2}+s^{2}-m s=n^{2}+s^{2}-n s$ 에서 $m+n=8$ , $m n=64-49=15$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "[관문 3: 존재와 개수] 긴 호에서 $m,\\,n$ 은 $x^{2}-8 \\sqrt{3}x+\\frac{143}{3}=0$ 의 두 근 $\\frac{13 \\sqrt{3}}{3}$ , $\\frac{11 \\sqrt{3}}{3}$ 이고, $m^{2}+n^{2}-m n=(m+n)^{2}-3 m n=192-143=49$ 이므로 세 변이 $7,\\,m,\\,n$ 이고 $\\angle \\mathrm{ACB}=\\frac{\\pi}{3}$ 인 삼각형이 직선 $\\mathrm{AB}$ 의 긴 호 쪽에 하나씩 정해진다. 그 점 $\\mathrm{C}$ 는 원주각의 성질로 원 위에 있고, 관문 2의 관계 $m+n=\\sqrt{3}s$ 에서 $\\overline{\\mathrm{CD}}=8$ 이다. $(m,\\,n)$ 의 순서를 바꾼 두 점이 있다. 짧은 호에서는 $x^{2}-8 x+15=0$ 에서 $\\left\\{m,\\,n \\right\\}=\\left\\{3,\\,5 \\right\\}$ 이고 $9+25+15=49$ 이므로 마찬가지로 두 점이 있다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "따라서 구하는 합은 $2 \\times \\frac{143}{3}+2 \\times 15=\\frac{376}{3}$ 이고 $p+q=3+376=379$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}
