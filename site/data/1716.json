@@ -1,0 +1,202 @@
+{
+ "num": 1716,
+ "id": "매시간_5제_누적_최고난도-164",
+ "subject": "기하",
+ "type": "29번형",
+ "typeDesc": "기하 · 수능 29번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12기하02-02]",
+  "[12기하02-03]",
+  "[12기하02-01]"
+ ],
+ "source": "ShrekMath 창작 · 수능 29번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 137,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "평면 $\\alpha$ 위에 $\\overline{\\mathrm{T}_{1}\\mathrm{T}_{2}}=8$ 인 두 점 $\\mathrm{T}_{1},\\,\\mathrm{T}_{2}$ 와 $\\overline{\\mathrm{AT}_{2}}=6$ , $\\angle \\mathrm{AT}_{2}\\mathrm{T}_{1}=\\frac{\\pi}{2}$ 인 점 $\\mathrm{A}$ 가 있다.",
+    "반지름의 길이가 각각 $2,\\,6$ 인 두 구 $S_{1},\\,S_{2}$ 가 평면 $\\alpha$ 의 같은 쪽에 있고, 평면 $\\alpha$ 와 각각 점 $\\mathrm{T}_{1},\\,\\mathrm{T}_{2}$ 에서 접한다.",
+    "점 $\\mathrm{A}$ 를 지나는 평면 $\\alpha$ 위의 직선 $l$ 과 직선 $l$ 을 포함하는 평면 $\\beta$ 가 다음 조건을 만족시킨다."
+   ]
+  },
+  {
+   "t": "box",
+   "items": [
+    "(가) 평면 $\\beta$ 는 두 구 $S_{1},\\,S_{2}$ 에 모두 접한다.",
+    "(나) 두 구 $S_{1},\\,S_{2}$ 는 평면 $\\beta$ 에 대하여 서로 반대쪽에 있다."
+   ]
+  },
+  {
+   "t": "p",
+   "sents": [
+    "평면 $\\beta$ 가 두 구 $S_{1},\\,S_{2}$ 와 접하는 점을 각각 $\\mathrm{U}_{1},\\,\\mathrm{U}_{2}$ 라 하고, 선분 $\\mathrm{U}_{1}\\mathrm{U}_{2}$ 의 평면 $\\alpha$ 위로의 정사영의 길이를 $k$ 라 하자.",
+    "$k^{2}=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오.",
+    "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "평면 $\\alpha$ 위에 $\\overline{\\mathrm{T}_{1}\\mathrm{T}_{2}}=8$ 인 두 점 $\\mathrm{T}_{1},\\,\\mathrm{T}_{2}$ 와 $\\overline{\\mathrm{AT}_{2}}=6$ , $\\angle \\mathrm{AT}_{2}\\mathrm{T}_{1}=\\frac{\\pi}{2}$ 인 점 $\\mathrm{A}$ 가 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "반지름의 길이가 각각 $2,\\,6$ 인 두 구 $S_{1},\\,S_{2}$ 가 평면 $\\alpha$ 의 같은 쪽에 있고, 평면 $\\alpha$ 와 각각 점 $\\mathrm{T}_{1},\\,\\mathrm{T}_{2}$ 에서 접한다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    0,
+    2
+   ],
+   "text": "점 $\\mathrm{A}$ 를 지나는 평면 $\\alpha$ 위의 직선 $l$ 과 직선 $l$ 을 포함하는 평면 $\\beta$ 가 다음 조건을 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    1,
+    0
+   ],
+   "text": "(가) 평면 $\\beta$ 는 두 구 $S_{1},\\,S_{2}$ 에 모두 접한다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    1,
+    1
+   ],
+   "text": "(나) 두 구 $S_{1},\\,S_{2}$ 는 평면 $\\beta$ 에 대하여 서로 반대쪽에 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C6",
+   "at": [
+    2,
+    0
+   ],
+   "text": "평면 $\\beta$ 가 두 구 $S_{1},\\,S_{2}$ 와 접하는 점을 각각 $\\mathrm{U}_{1},\\,\\mathrm{U}_{2}$ 라 하고, 선분 $\\mathrm{U}_{1}\\mathrm{U}_{2}$ 의 평면 $\\alpha$ 위로의 정사영의 길이를 $k$ 라 하자.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C7",
+   "at": [
+    2,
+    1
+   ],
+   "text": "$k^{2}=\\frac{q}{p}$ 일 때, $p+q$ 의 값을 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C8",
+   "at": [
+    2,
+    2
+   ],
+   "text": "(단, $p$ 와 $q$ 는 서로소인 자연수이다.) [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "평면에 접하는 두 구와 그 평면 위의 직선을 포함하는 공통접평면 — 두 구가 반대쪽이면 접점까지 거리의 곱이 반지름의 곱",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 평면에 접하는 두 구의 공통접평면이 그 평면 위의 직선을 품을 때 삼수선으로 잡은 단면에서 중심이 이면각의 이등분선 위에 있음을 보면, 두 구가 반대쪽이면 두 이면각의 합이 π 라서 '거리의 곱 = 반지름의 곱' 조건이 생기고(같은 쪽이면 비 조건), 점 A 를 지나는 직선이 이 조건을 중근으로 만족해 하나로 정해진 뒤 접선의 길이로 접점의 높이를 구하는 것",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "두 구의 중심을 $\\mathrm{O}_{1},\\,\\mathrm{O}_{2}$ 라 하면 $\\mathrm{O}_{i}\\mathrm{T}_{i}$ 는 평면 $\\alpha$ 에 수직이다. 직선 $l$ 이 $\\mathrm{T}_{i}$ 를 지나면 $l$ 을 포함하고 $S_{i}$ 에 접하는 평면은 $\\alpha$ 뿐이므로, $l$ 은 $\\mathrm{T}_{1},\\,\\mathrm{T}_{2}$ 를 지나지 않는다. $\\mathrm{T}_{i}$ 에서 $l$ 에 내린 수선의 발을 $\\mathrm{K}_{i}$ , $d_{i}=\\overline{\\mathrm{T}_{i}\\mathrm{K}_{i}}$ 라 하면 삼수선의 정리에 의하여 $\\mathrm{O}_{i}\\mathrm{K}_{i}⊥l$ 이므로, $\\mathrm{K}_{i}$ 를 지나고 $l$ 에 수직인 평면이 단면이 된다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "[관문 1: 두 구가 반대쪽인 경우] 평면 $\\alpha$ 의 위쪽 공간(두 구가 있는 쪽)은 직선 $l$ 을 경계로 하는 평면 $\\beta$ 의 위쪽 반평면에 의해 두 영역으로 나뉜다. 각 영역은 $\\alpha$ 의 한 반평면과 $\\beta$ 의 위쪽 반평면 사이에 있고, 두 영역의 이면각의 크기의 합은 $\\pi$ 이다. $S_{i}$ 는 $\\alpha$ 와 $\\beta$ 에 모두 접하므로 점 $\\mathrm{T}_{i}$ 를 포함하는 영역 안에 있다. 또 $\\mathrm{O}_{i}\\mathrm{U}_{i}$ 는 $\\beta$ 에 수직이므로 $l$ 에 수직이고, 점 $\\mathrm{U}_{i}$ 도 앞의 단면 위에 있다. 따라서 단면에서 $S_{i}$ 는 두 반직선 $\\mathrm{K}_{i}\\mathrm{T}_{i}$ , $\\mathrm{K}_{i}\\mathrm{U}_{i}$ 에 모두 접하고 반지름의 길이가 구 $S_{i}$ 와 같은 원으로 나타나고, 중심 $\\mathrm{O}_{i}$ 는 각 $\\mathrm{T}_{i}\\mathrm{K}_{i}\\mathrm{U}_{i}$ (이면각) 의 이등분선 위에 있다. (나)에서 두 구는 서로 다른 영역에 있으므로 $\\mathrm{T}_{1},\\,\\mathrm{T}_{2}$ 는 $l$ 의 서로 반대쪽에 있고 $\\angle \\mathrm{O}_{1}\\mathrm{K}_{1}\\mathrm{T}_{1}+\\angle \\mathrm{O}_{2}\\mathrm{K}_{2}\\mathrm{T}_{2}=\\frac{\\pi}{2}$ 이다. 두 직각삼각형 $\\mathrm{O}_{1}\\mathrm{K}_{1}\\mathrm{T}_{1}$ , $\\mathrm{T}_{2}\\mathrm{K}_{2}\\mathrm{O}_{2}$ 가 닮음이므로 $\\frac{2}{d_{1}}=\\frac{d_{2}}{6}$ , 곧 $d_{1}d_{2}=12$ 이다. (같은 쪽이면 $\\frac{2}{d_{1}}=\\frac{6}{d_{2}}$ 이 되어 다른 평면이 생기므로 (나)가 필요하다.)",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "[관문 2: 직선 $l$ ] 평면 $\\alpha$ 위에 $\\mathrm{T}_{1}(0,\\,0)$ , $\\mathrm{T}_{2}(8,\\,0)$ , $\\mathrm{A}(8,\\,6)$ 인 좌표를 잡는다. 직선 $x=8$ 은 $\\mathrm{T}_{2}$ 를 지나므로 $l$ 은 $y-6=m(x-8)$ 꼴이다. 두 점 $\\mathrm{T}_{1},\\,\\mathrm{T}_{2}$ 에서 $m x-y+6-8 m$ 의 값은 $6-8 m$ , $6$ 이므로 반대쪽일 조건은 $m>\\frac{3}{4}$ 이고",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "$$d_{1}d_{2}=\\frac{(8 m-6)\\times 6}{m^{2}+1}=12 \\,\\,\\to \\,\\,m^{2}-4 m+4=0 \\,\\,\\to \\,\\,m=2$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "이다. 따라서 $l$ 은 하나로 정해지고 $d_{1}=\\frac{10}{\\sqrt{5}}=2 \\sqrt{5}$ , $d_{2}=\\frac{6}{\\sqrt{5}}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "[관문 3: 이면각] 점 $\\mathrm{T}_{1}$ 을 포함하는 영역의 이면각의 크기, 곧 $\\angle \\mathrm{T}_{1}\\mathrm{K}_{1}\\mathrm{U}_{1}$ 을 $\\theta$ 라 하자. 삼각형 $\\mathrm{O}_{1}\\mathrm{K}_{1}\\mathrm{T}_{1}$ 에서 $\\overline{\\mathrm{O}_{1}\\mathrm{K}_{1}}=\\sqrt{4+20}=2 \\sqrt{6}$ 이고, $\\mathrm{K}_{1}$ 에서 $S_{1}$ 에 그은 두 접선의 길이 $\\overline{\\mathrm{K}_{1}\\mathrm{T}_{1}}=\\overline{\\mathrm{K}_{1}\\mathrm{U}_{1}}=2 \\sqrt{5}$ 이다. $\\overline{\\mathrm{T}_{1}\\mathrm{U}_{1}}$ 은 점 $\\mathrm{T}_{1}$ 과 직선 $\\mathrm{O}_{1}\\mathrm{K}_{1}$ 사이 거리 $\\frac{2 \\times 2 \\sqrt{5}}{2 \\sqrt{6}}$ 의 $2$ 배이므로 $\\overline{\\mathrm{T}_{1}\\mathrm{U}_{1}}^{2}=\\frac{40}{3}$ 이고, 코사인법칙에서 $\\cos \\theta=1-\\frac{40/3}{2 \\times 20}=\\frac{2}{3}$ , $\\sin \\theta=\\frac{\\sqrt{5}}{3}$ 이다. 점 $\\mathrm{T}_{2}$ 를 포함하는 영역의 이면각의 크기는 $\\pi-\\theta$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 8,
+   "text": "[관문 4: 접점의 높이와 거리] $\\mathrm{K}_{i}\\mathrm{U}_{i}$ 는 평면 $\\beta$ 위에서 $l$ 에 수직이고 길이가 $d_{i}$ 이므로, $\\mathrm{U}_{1},\\,\\mathrm{U}_{2}$ 와 평면 $\\alpha$ 사이 거리는 $d_{1}\\sin \\theta=\\frac{10}{3}$ , $d_{2}\\sin(\\pi-\\theta)=2$ 이다. 두 점은 $\\beta$ 의 위쪽 반평면, 곧 $l$ 의 같은 쪽에 있으므로 $\\overline{\\mathrm{U}_{1}\\mathrm{U}_{2}}^{2}=\\overline{\\mathrm{K}_{1}\\mathrm{K}_{2}}^{2}+(d_{1}-d_{2})^{2}$ 이고, $\\overline{\\mathrm{K}_{1}\\mathrm{K}_{2}}$ 는 $\\mathrm{T}_{1}\\mathrm{T}_{2}$ 의 직선 $l$ 위로의 정사영의 길이 $\\frac{8}{\\sqrt{5}}$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 9,
+   "text": "$$\\overline{\\mathrm{U}_{1}\\mathrm{U}_{2}}^{2}=\\frac{64}{5}+\\frac{16}{5}=16,\\,\\,\\,\\,k^{2}=16-\\left(\\frac{10}{3}-2 \\right)^{2}=\\frac{128}{9}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 10,
+   "text": "(확인: $\\mathrm{A}$ 는 $\\alpha,\\,\\beta$ 위에 모두 있으므로 $\\overline{\\mathrm{AU}_{1}}=\\overline{\\mathrm{AT}_{1}}=10$ , $\\overline{\\mathrm{AU}_{2}}=\\overline{\\mathrm{AT}_{2}}=6$ 이다.) 따라서 $p+q=9+128=137$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}

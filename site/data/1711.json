@@ -1,0 +1,217 @@
+{
+ "num": 1711,
+ "id": "매시간_5제_누적_최고난도-159",
+ "subject": "기하",
+ "type": "30번형",
+ "typeDesc": "기하 · 수능 30번형 자리의 고난도",
+ "stars": 5,
+ "standards": [
+  "[12기하03-03]",
+  "[12기하03-02]",
+  "[12기하01-02]",
+  "[12기하01-03]"
+ ],
+ "source": "ShrekMath 창작 · 수능 30번형",
+ "rate": "",
+ "wrong": "",
+ "answer": 195,
+ "full": false,
+ "body": [
+  {
+   "t": "p",
+   "sents": [
+    "좌표평면에서 중심이 $x$ 축 위에 있는 원 $C$ 가 있다.",
+    "원 $C$ 위의 모든 점 $\\mathrm{X}$ 에 대하여"
+   ]
+  },
+  {
+   "t": "eq",
+   "tex": "\\vec{\\mathrm{XO}}\\cdot \\vec{\\mathrm{XP}}\\ge 0"
+  },
+  {
+   "t": "p",
+   "sents": [
+    "을 만족시키는 점 $\\mathrm{P}$ 전체의 집합을 $S$ 라 할 때, $S$ 는 다음 조건을 만족시킨다."
+   ]
+  },
+  {
+   "t": "box",
+   "items": [
+    "(가) $S$ 에 속하는 점 $\\mathrm{P}$ 에 대하여 $\\left|\\vec{\\mathrm{OP}}\\right|$ 의 최댓값은 $15$ 이다.",
+    "(나) $S$ 에 속하는 점 중 $y$ 축 위에 있는 점의 $y$ 좌표의 최댓값은 $5$ 이다."
+   ]
+  },
+  {
+   "t": "p",
+   "sents": [
+    "$S$ 에 속하는 점 중 $x$ 좌표와 $y$ 좌표가 모두 정수인 점의 개수를 구하시오.",
+    "(단, $\\mathrm{O}$ 는 원점이다.) [4점]"
+   ]
+  }
+ ],
+ "conds": [
+  {
+   "id": "C1",
+   "at": [
+    0,
+    0
+   ],
+   "text": "좌표평면에서 중심이 $x$ 축 위에 있는 원 $C$ 가 있다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C2",
+   "at": [
+    0,
+    1
+   ],
+   "text": "원 $C$ 위의 모든 점 $\\mathrm{X}$ 에 대하여",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C3",
+   "at": [
+    1,
+    0
+   ],
+   "text": "$\\vec{\\mathrm{XO}}\\cdot \\vec{\\mathrm{XP}}\\ge 0$",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C4",
+   "at": [
+    2,
+    0
+   ],
+   "text": "을 만족시키는 점 $\\mathrm{P}$ 전체의 집합을 $S$ 라 할 때, $S$ 는 다음 조건을 만족시킨다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C5",
+   "at": [
+    3,
+    0
+   ],
+   "text": "(가) $S$ 에 속하는 점 $\\mathrm{P}$ 에 대하여 $\\left|\\vec{\\mathrm{OP}}\\right|$ 의 최댓값은 $15$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C6",
+   "at": [
+    3,
+    1
+   ],
+   "text": "(나) $S$ 에 속하는 점 중 $y$ 축 위에 있는 점의 $y$ 좌표의 최댓값은 $5$ 이다.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C7",
+   "at": [
+    4,
+    0
+   ],
+   "text": "$S$ 에 속하는 점 중 $x$ 좌표와 $y$ 좌표가 모두 정수인 점의 개수를 구하시오.",
+   "label": "",
+   "why": "",
+   "uses": []
+  },
+  {
+   "id": "C8",
+   "at": [
+    4,
+    1
+   ],
+   "text": "(단, $\\mathrm{O}$ 는 원점이다.) [4점]",
+   "label": "",
+   "why": "",
+   "uses": []
+  }
+ ],
+ "intro": [],
+ "topic": "원 위의 모든 점에 대한 내적 조건이 만드는 영역 — OP 의 중점까지의 거리로 바꾼 두 원의 위치 관계",
+ "concepts": [],
+ "steps": [
+  {
+   "n": 1,
+   "text": "출제 의도: 내적 조건을 OP 의 중점 M 에 대한 |MX| ≥ |MO| 로 바꾸면 '점 M 과 원 C 사이 거리 ≥ MO' 가 되어 원점이 C 의 안이면 타원(MO+MO'≤R), 밖이면 쌍곡선 한 가지 쪽(MO'−MO≥R) 영역으로 갈리고, (가)의 최댓값 존재가 타원 쪽을 고르며, 정의로 초점 O, G(2c,0)·장축 2R 인 타원을 얻어 (나)를 일차식으로 푸는 것",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 2,
+   "text": "원 $C$ 의 중심을 $\\mathrm{O'}(c,\\,0)$ , 반지름의 길이를 $R$ 라 하고, 점 $\\mathrm{P}$ 에 대하여 선분 $\\mathrm{OP}$ 의 중점을 $\\mathrm{M}$ 이라 하자. $\\vec{\\mathrm{MP}}=-\\vec{\\mathrm{MO}}$ 이므로",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 3,
+   "text": "$$\\vec{\\mathrm{XO}}\\cdot \\vec{\\mathrm{XP}}=(\\vec{\\mathrm{XM}}+\\vec{\\mathrm{MO}})\\cdot(\\vec{\\mathrm{XM}}-\\vec{\\mathrm{MO}})=\\left|\\vec{\\mathrm{XM}}\\right|^{2}-\\left|\\vec{\\mathrm{MO}}\\right|^{2}$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 4,
+   "text": "[관문 1: 원까지의 거리로 바꾸기] 따라서 조건은 원 $C$ 위의 모든 점 $\\mathrm{X}$ 에 대하여 $\\overline{\\mathrm{MX}}\\ge \\overline{\\mathrm{MO}}$ 인 것, 곧 점 $\\mathrm{M}$ 과 원 $C$ 위의 점 사이 거리의 최솟값 $\\left|\\overline{\\mathrm{MO'}}-R \\right|$ 가 $\\overline{\\mathrm{MO}}$ 이상인 것이다. $\\overline{\\mathrm{MO'}}\\le R$ 이면 조건은 $\\overline{\\mathrm{MO}}+\\overline{\\mathrm{MO'}}\\le R$ , $\\overline{\\mathrm{MO'}}\\ge R$ 이면 조건은 $\\overline{\\mathrm{MO'}}-\\overline{\\mathrm{MO}}\\ge R$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 5,
+   "text": "[관문 2: 원점의 위치에 따른 두 경우] 삼각형의 성질에서 $\\overline{\\mathrm{MO}}+\\overline{\\mathrm{MO'}}\\ge \\overline{\\mathrm{OO'}}=\\left|c \\right|$ , $\\overline{\\mathrm{MO'}}-\\overline{\\mathrm{MO}}\\le \\left|c \\right|$ 이다. $\\left|c \\right|\\ge R$ 이면 원점에서 $\\mathrm{O'}$ 의 반대쪽으로 뻗은 반직선 위의 모든 점 $\\mathrm{M}$ 은 $\\overline{\\mathrm{MO'}}=\\overline{\\mathrm{MO}}+\\left|c \\right|\\ge R$ 이고 $\\overline{\\mathrm{MO'}}-\\overline{\\mathrm{MO}}=\\left|c \\right|\\ge R$ 이므로 조건을 만족시킨다. 이때 $\\mathrm{P}=2 \\mathrm{M}$ 이 원점에서 한없이 멀어질 수 있어 (가)에 모순이다. 따라서 $\\left|c \\right|<R$ (원점이 원 $C$ 의 내부)이고, 이때 $\\overline{\\mathrm{MO'}}-\\overline{\\mathrm{MO}}\\le \\left|c \\right|<R$ 이므로 두 번째 경우는 일어나지 않는다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 6,
+   "text": "[관문 3: 타원의 정의] 그러므로 $S$ 는 $\\overline{\\mathrm{MO}}+\\overline{\\mathrm{MO'}}\\le R$ 인 점 $\\mathrm{P}$ 의 집합이다. 점 $\\mathrm{G}(2 c,\\,0)$ 에 대하여 $\\overline{\\mathrm{OP}}=2 \\overline{\\mathrm{OM}}$ , $\\overline{\\mathrm{PG}}=2 \\overline{\\mathrm{MO'}}$ 이므로 $S$ 는 $\\overline{\\mathrm{PO}}+\\overline{\\mathrm{PG}}\\le 2 R$ 인 점 전체, 곧 두 점 $\\mathrm{O}$ , $\\mathrm{G}$ 를 초점으로 하고 장축의 길이가 $2 R$ 인 타원과 그 내부이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 7,
+   "text": "(가): $S$ 의 점 $\\mathrm{P}$ 에 대하여 $\\overline{\\mathrm{PG}}\\ge \\overline{\\mathrm{PO}}-\\overline{\\mathrm{OG}}$ 이므로 $2 R \\ge 2 \\overline{\\mathrm{PO}}-2 \\left|c \\right|$ , 곧 $\\overline{\\mathrm{PO}}\\le R+\\left|c \\right|$ 이고, 반직선 $\\mathrm{OG}$ 위에서 $\\overline{\\mathrm{PO}}=R+\\left|c \\right|$ 인 점은 $\\overline{\\mathrm{PO}}+\\overline{\\mathrm{PG}}=2 R$ 이므로 최댓값은 $R+\\left|c \\right|=15$ 이다. (나): $y$ 축 위의 점 $(0,\\,y)$ 는 $\\left|y \\right|+\\sqrt{4 c^{2}+y^{2}}\\le 2 R$ 일 때 $S$ 에 속하고, 이는 $4 c^{2}+y^{2}\\le(2 R-\\left|y \\right|)^{2}$ , 곧 $\\left|y \\right|\\le \\frac{R^{2}-c^{2}}{R}$ 과 같다. 따라서 $R^{2}-c^{2}=5 R$ 이다.",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 8,
+   "text": "두 식에서 $(R-\\left|c \\right|)\\times 15=5 R$ 이므로 $R=\\frac{3}{2}\\left|c \\right|$ 이고 $R=9$ , $\\left|c \\right|=6$ 이다. 이때 $S$ 는 중심이 $(c,\\,0)$ , 장축의 길이가 $18$ , 중심과 초점 사이의 거리가 $6$ 인 타원과 그 내부이므로, 단축의 길이의 절반의 제곱은 $81-36=45$ 이다. 따라서 $S$ 는",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 9,
+   "text": "$$\\frac{(x-c)^{2}}{81}+\\frac{y^{2}}{45}\\le 1$$",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 10,
+   "text": "으로 나타내어진다. ( $c=6$ 또는 $c=-6$ 이고, 두 경우는 $y$ 축에 대하여 대칭이므로 격자점의 개수가 같다.)",
+   "uses": [],
+   "title": ""
+  },
+  {
+   "n": 11,
+   "text": "[관문 4: 격자점 세기] 조건의 부등식에 등호가 포함되므로 타원 위의 점도 $S$ 에 속한다. $u=x-c$ 라 하면 $y^{2}\\le 45-\\frac{5 u^{2}}{9}$ 이다. $\\left|u \\right|=0,\\,1,\\,2,\\,3,\\,4$ 이면 우변이 $36$ 이상 $49$ 미만이므로 $y$ 는 $13$ 개, $\\left|u \\right|=5,\\,6$ 이면 우변이 $25$ 이상 $36$ 미만 ( $u=\\pm 6$ 에서 정확히 $25$ ) 이므로 $11$ 개, $\\left|u \\right|=7$ 이면 우변이 $16$ 이상 $25$ 미만이므로 $9$ 개, $\\left|u \\right|=8$ 이면 $9$ 이상 $16$ 미만이므로 $7$ 개, $\\left|u \\right|=9$ 이면 $0$ 이므로 $1$ 개이다. 따라서 구하는 개수는 $13+2(13 \\times 4+11 \\times 2+9+7+1)=13+182=195$ 이다.",
+   "uses": [],
+   "title": ""
+  }
+ ],
+ "traps": [],
+ "variants": [],
+ "line": "",
+ "note": ""
+}
